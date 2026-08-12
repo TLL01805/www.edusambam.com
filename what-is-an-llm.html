@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>What Is a Large Language Model? How Chatbots Actually Work — EDUSAMBAM</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --red:       #8B0000;
+    --red-mid:   #A50000;
+    --red-lt:    #F9F0F0;
+    --navy:      #06244a;
+    --navy-mid:  #1C3151;
+    --gold:      #B8963E;
+    --gold-lt:   #F5EDD6;
+    --cream:     #FAF8F4;
+    --white:     #FFFFFF;
+    --ink:       #1A1A1A;
+    --slate:     #4A4A4A;
+    --muted:     #767676;
+    --border:    #D8D0C8;
+    --border-lt: #EDE8E0;
+    --radius:    4px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--ink);
+    background: var(--white);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── TOP BAR ── */
+  .top-bar {
+    background: var(--navy);
+    padding: 0.45rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .top-bar p {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.03em;
+  }
+  .top-bar-links { display: flex; gap: 1.5rem; list-style: none; }
+  .top-bar-links a {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+  .top-bar-links a:hover { color: white; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 200;
+    background: rgba(255,255,255,.97);
+    border-bottom: 3px solid var(--gold);
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    box-shadow: 0 2px 12px rgba(8,47,99,0.08);
+  }
+  .nav-brand { display: flex; flex-direction: column; line-height: 1; text-decoration: none; }
+  .nav-brand-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: 0.01em;
+  }
+  .nav-brand-name span { color: var(--red); }
+  .nav-brand-sub {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: rgba(13,27,42,0.6);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 0.25rem;
+  }
+  .nav-links { display: flex; gap: 0; list-style: none; }
+  .nav-links a {
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(13,27,42,0.75);
+    padding: 0 1.1rem;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--b, #0b4ea2); }
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+  }
+
+  /* ── ARTICLE HERO ── */
+  .article-hero {
+    background: linear-gradient(135deg,#06244a,#0b4ea2);
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+  }
+  .breadcrumb {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 1.1rem;
+    letter-spacing: 0.02em;
+  }
+  .breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--gold); }
+  .article-hero-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(184,150,62,0.4);
+    padding: 0.35rem 0.9rem;
+    border-radius: 30px;
+    margin-bottom: 1.25rem;
+  }
+  .article-hero h1 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 2.4rem;
+    color: white;
+    max-width: 760px;
+    margin: 0 auto 1rem;
+    line-height: 1.25;
+  }
+  .article-hero p.sub {
+    color: rgba(255,255,255,0.6);
+    max-width: 620px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.02rem;
+  }
+  .article-hero-meta {
+    display: flex; justify-content: center; gap: 0.9rem;
+    font-size: 0.8rem; color: rgba(255,255,255,0.45);
+    flex-wrap: wrap;
+  }
+
+  /* ── ARTICLE BODY ── */
+  .article-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+  .article-wrap h2 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 1.65rem;
+    color: var(--navy);
+    margin: 2.6rem 0 1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--border-lt);
+  }
+  .article-wrap h2 span.num {
+    color: var(--red);
+    margin-right: 0.5rem;
+    font-style: italic;
+  }
+  .article-wrap p { color: var(--slate); margin-bottom: 1rem; font-size: 1.02rem; }
+  .article-wrap ul { margin: 0 0 1.2rem 1.4rem; color: var(--slate); }
+  .article-wrap li { margin-bottom: 0.5rem; }
+  .article-wrap strong { color: var(--ink); }
+  .lead {
+    font-size: 1.15rem;
+    color: var(--ink);
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    border-left: 3px solid var(--gold);
+    padding-left: 1.2rem;
+    margin: 1.5rem 0 2rem;
+  }
+  .example-box {
+    background: var(--gold-lt);
+    border: 1px solid rgba(184,150,62,0.35);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 1.3rem 1.5rem;
+    margin: 1.3rem 0 1.8rem;
+  }
+  .example-box .ex-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.5rem;
+  }
+  .example-box p { color: var(--ink); margin-bottom: 0.4rem; font-size: 0.98rem; }
+  .example-box p:last-child { margin-bottom: 0; }
+
+  .real-world-box {
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 1.6rem 1.7rem;
+    margin: 2.4rem 0;
+  }
+  .real-world-box .rw-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.7rem;
+  }
+  .real-world-box p { color: rgba(255,255,255,0.8); margin-bottom: 0; font-size: 1rem; }
+
+  .table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+  table.pos-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+  table.pos-table th {
+    background: var(--navy);
+    color: white;
+    text-align: left;
+    padding: 0.7rem 0.9rem;
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+  }
+  table.pos-table td {
+    padding: 0.7rem 0.9rem;
+    border-bottom: 1px solid var(--border-lt);
+    color: var(--slate);
+  }
+  table.pos-table tr:nth-child(even) td { background: var(--cream); }
+
+  /* ── TOKEN FLOW ── */
+  .token-flow {
+    margin: 1.6rem 0 1.9rem;
+  }
+  .token-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 0.6rem;
+  }
+  .token-chip {
+    background: var(--gold-lt);
+    border: 1px solid var(--gold);
+    color: var(--ink);
+    font-family: 'Courier New', Consolas, monospace;
+    font-size: 0.85rem;
+    padding: 0.35rem 0.7rem;
+    border-radius: var(--radius);
+  }
+  .token-flow-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.4rem;
+  }
+
+  /* ── PROBABILITY BARS ── */
+  .prob-box {
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 1.4rem 1.5rem;
+    margin: 1.6rem 0 1.9rem;
+  }
+  .prob-prompt {
+    font-family: 'Courier New', Consolas, monospace;
+    font-size: 0.92rem;
+    color: white;
+    margin-bottom: 1.1rem;
+  }
+  .prob-prompt .prob-blank { color: var(--gold); }
+  .prob-row {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.6rem;
+  }
+  .prob-word {
+    font-family: 'Courier New', Consolas, monospace;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.85);
+    width: 70px;
+    flex-shrink: 0;
+  }
+  .prob-bar-track {
+    flex: 1;
+    background: rgba(255,255,255,0.08);
+    border-radius: 30px;
+    height: 10px;
+    overflow: hidden;
+  }
+  .prob-bar-fill {
+    background: var(--gold);
+    height: 100%;
+    border-radius: 30px;
+  }
+  .prob-pct {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.55);
+    width: 42px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  /* ── PROCESS COMPARE (traditional vs ML) ── */
+  .process-compare {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1.6rem 0 2rem;
+  }
+  .process-row {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+    background: var(--cream);
+    border-radius: var(--radius);
+    padding: 1rem 1.1rem;
+  }
+  .process-row-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--red);
+    width: 100%;
+    margin-bottom: 0.3rem;
+  }
+  .process-chip {
+    background: white;
+    border: 1.5px solid var(--navy);
+    color: var(--navy);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.55rem 1rem;
+    border-radius: 30px;
+    white-space: nowrap;
+  }
+  .process-chip.gold { border-color: var(--gold); background: var(--gold-lt); }
+  .process-arrow-h { color: var(--gold); font-size: 1.1rem; font-weight: 700; }
+
+  /* ── NETWORK DIAGRAM ── */
+  .network-diagram {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 2rem 1.5rem;
+    margin: 1.8rem 0 1rem;
+  }
+  .nd-layer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    align-items: center;
+  }
+  .nd-node {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--gold);
+    border: 2px solid rgba(255,255,255,0.5);
+    flex-shrink: 0;
+  }
+  .nd-node.nd-out { background: #C0392B; }
+  .nd-label {
+    font-size: 0.68rem;
+    color: rgba(255,255,255,0.55);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 0.6rem;
+    text-align: center;
+  }
+  @media (max-width: 560px) {
+    .network-diagram { padding: 1.5rem 0.8rem; }
+    .nd-node { width: 26px; height: 26px; }
+  }
+
+  /* ── FLOWCHART ── */
+  .flowchart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin: 1.8rem 0 2.2rem;
+  }
+  .fc-box {
+    background: var(--cream);
+    border: 1.5px solid var(--navy);
+    color: var(--navy);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 0.7rem 1.3rem;
+    border-radius: var(--radius);
+    max-width: 320px;
+  }
+  .fc-box.fc-start-end {
+    background: var(--navy);
+    color: white;
+    border-radius: 30px;
+    border-color: var(--navy);
+  }
+  .fc-diamond {
+    background: var(--gold-lt);
+    border: 1.5px solid var(--gold);
+    color: var(--ink);
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 0.9rem 1.6rem;
+    margin: 0;
+    max-width: 300px;
+    position: relative;
+  }
+  .fc-arrow {
+    color: var(--gold);
+    font-size: 1.3rem;
+    line-height: 1;
+    padding: 0.25rem 0;
+  }
+  .fc-branch {
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0.25rem 0;
+  }
+  .fc-branch-col { display: flex; flex-direction: column; align-items: center; }
+  .fc-branch-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.3rem;
+  }
+  @media (max-width: 560px) {
+    .fc-branch { flex-direction: column; gap: 0.6rem; }
+  }
+
+  /* ── CODE BLOCK ── */
+  .code-block {
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.4rem;
+    margin: 1.3rem 0 1.7rem;
+    overflow-x: auto;
+  }
+  .code-block .code-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.7rem;
+  }
+  .code-block pre {
+    font-family: 'Courier New', Consolas, monospace;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: #E8E8E8;
+    white-space: pre;
+  }
+  .code-block .cm { color: #8A9BAE; font-style: italic; }
+  .code-block .kw { color: #E8A94A; }
+  .code-block .st { color: #9FD68C; }
+  .code-block .fn { color: #7FB8DE; }
+  .code-block .nb { color: #D98E8E; }
+  .code-output {
+    background: rgba(255,255,255,0.04);
+    border: 1px dashed rgba(255,255,255,0.15);
+    border-radius: var(--radius);
+    padding: 0.7rem 1rem;
+    margin-top: 0.9rem;
+    font-family: 'Courier New', Consolas, monospace;
+    font-size: 0.85rem;
+    color: #B8D8B0;
+  }
+  .code-output .out-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 0.4rem;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+
+  /* ── STAT HIGHLIGHT ── */
+  .stat-highlight {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    background: var(--red-lt);
+    border: 1px solid rgba(139,0,0,0.15);
+    border-radius: var(--radius);
+    padding: 1.4rem 1.6rem;
+    margin: 1.6rem 0 1.9rem;
+  }
+  .stat-highlight .stat-num {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 2.3rem;
+    color: var(--red);
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .stat-highlight .stat-text {
+    color: var(--ink);
+    font-size: 0.95rem;
+    border-left: 1px solid rgba(139,0,0,0.2);
+    padding-left: 1.2rem;
+  }
+  @media (max-width: 500px) {
+    .stat-highlight { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+    .stat-highlight .stat-text { border-left: none; padding-left: 0; }
+  }
+
+  /* ── TIMELINE ── */
+  .timeline {
+    margin: 1.8rem 0 2.2rem;
+    position: relative;
+    padding-left: 1.6rem;
+    border-left: 2px solid var(--border);
+  }
+  .timeline-item { position: relative; padding-bottom: 1.6rem; }
+  .timeline-item:last-child { padding-bottom: 0; }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -1.95rem;
+    top: 0.25rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--gold);
+    border: 2px solid var(--white);
+    box-shadow: 0 0 0 2px var(--gold);
+  }
+  .timeline-year {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--red);
+    margin-bottom: 0.2rem;
+  }
+  .timeline-text { color: var(--slate); font-size: 0.95rem; }
+  .timeline-text strong { color: var(--ink); }
+
+  /* ── QUIZ ── */
+  .quiz-section {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem 1.7rem 1.5rem;
+    margin-top: 3rem;
+  }
+  .quiz-section .section-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.4rem;
+  }
+  .quiz-section h2 {
+    border: none; margin: 0 0 0.4rem; padding: 0;
+  }
+  .quiz-intro { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.6rem; }
+
+  @media (max-width: 700px) {
+    .article-hero h1 { font-size: 1.7rem; }
+    .article-wrap { padding: 2rem 1.25rem 3rem; }
+  }
+  @media (max-width: 680px) {
+    .top-bar { display: none; }
+    nav {
+      padding: 0 1rem;
+      height: 68px;
+      border-bottom-width: 2px;
+    }
+    .nav-links { display: none; }
+    .nav-brand-name {
+      font-size: 1.35rem;
+      white-space: nowrap;
+    }
+    .nav-brand-sub {
+      font-size: 0.62rem;
+      letter-spacing: 0.07em;
+    }
+    .footer-top { grid-template-columns: 1fr; gap: 2rem; padding: 2rem 1.25rem; }
+    footer { padding: 2rem 1.25rem 0; }
+  }
+
+  /* ── FOOTER (copied from site) ── */
+  footer { background: var(--navy); padding: 3.5rem 3rem 0; }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 2.5rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .footer-brand-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+  }
+  .footer-brand-name span { color: var(--red); }
+  .footer-desc { color: rgba(255,255,255,0.45); font-size: 0.9rem; margin-top: 0.8rem; max-width: 320px; }
+  .footer-col h4 {
+    font-family: 'EB Garamond', serif;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 0.7rem; }
+  .footer-col a {
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.2s;
+  }
+  .footer-col a:hover { color: var(--gold); }
+  .footer-bottom {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer-bottom p { color: rgba(255,255,255,0.35); font-size: 0.8rem; }
+  .footer-bottom-links { display: flex; gap: 1.3rem; list-style: none; }
+  .footer-bottom-links a { color: rgba(255,255,255,0.35); text-decoration: none; font-size: 0.8rem; }
+  .footer-bottom-links a:hover { color: rgba(255,255,255,0.6); }
+  @media (max-width: 900px) {
+    .footer-top { grid-template-columns: 1fr 1fr; }
+    footer { padding: 2rem 1.25rem 0; }
+  }
+
+  /* SCORED QUIZ (click-to-highlight + real scoring) */
+  .squiz-progress {
+    background: var(--cream);
+    border-radius: 30px;
+    height: 8px;
+    overflow: hidden;
+    margin-bottom: 0.4rem;
+  }
+  .squiz-progress-fill {
+    background: var(--gold);
+    height: 100%;
+    width: 0%;
+    transition: width 0.25s ease;
+  }
+  .squiz-progress-label {
+    font-size: 0.78rem;
+    color: var(--muted);
+    text-align: right;
+    margin-bottom: 1.3rem;
+  }
+  .squiz-item {
+    background: var(--white);
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .squiz-q {
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+  }
+  .squiz-q .qnum { color: var(--red); margin-right: 0.4rem; }
+  .squiz-option {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .squiz-option:hover { border-color: var(--gold); }
+  .squiz-option input[type="radio"] { accent-color: var(--red); width: 16px; height: 16px; flex-shrink: 0; }
+  .squiz-option label { cursor: pointer; font-size: 0.94rem; color: var(--slate); flex: 1; }
+  .squiz-option.selected { border-color: var(--red); background: rgba(139,0,0,0.04); }
+  .squiz-option.correct-answer { border-color: #2e7d32; background: rgba(46,125,50,0.08); }
+  .squiz-option.wrong-answer { border-color: var(--red); background: rgba(139,0,0,0.08); }
+  .squiz-submit-btn {
+    display: block;
+    width: 100%;
+    background: var(--red);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.98rem;
+    font-weight: 600;
+    padding: 0.9rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    margin-top: 0.6rem;
+    transition: background 0.2s;
+  }
+  .squiz-submit-btn:hover { background: var(--red-mid); }
+  .squiz-submit-btn:disabled { background: var(--border); cursor: not-allowed; }
+  .squiz-results {
+    display: none;
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 2rem 1.6rem;
+    text-align: center;
+    margin-bottom: 1.8rem;
+  }
+  .squiz-results.visible { display: block; }
+  .squiz-results .squiz-score-big {
+    font-family: 'EB Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .squiz-results .squiz-score-label { color: rgba(255,255,255,0.7); font-size: 0.98rem; margin-bottom: 1rem; }
+  .squiz-results .squiz-score-tier {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    border-radius: 30px;
+    background: rgba(184,150,62,0.15);
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+  }
+  .squiz-retake-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 0.65rem 1.4rem;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  .squiz-retake-btn:hover { background: rgba(255,255,255,0.1); }
+
+  .article-footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-lt);
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .article-footer-nav a {
+    text-decoration: none;
+    color: var(--red);
+    font-weight: 600;
+    font-size: 0.92rem;
+  }
+  .article-footer-nav a:hover { text-decoration: underline; }
+</style>
+<style id="edusambam-reader-style">
+.mark{width:48px;height:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px;border-radius:14px;background:#eef6ff;box-shadow:0 2px 7px rgba(8,47,99,.10);flex:0 0 48px}.mark i{display:block;border-radius:50%;background:#0b4ea2;min-width:0;min-height:0}.mark i:nth-child(5){background:#d4a017}.edusambam-reader{max-width:980px;margin:1.2rem auto 0;padding:1rem 1.1rem;border:1px solid #d7e4ef;border-radius:14px;background:linear-gradient(135deg,#f7fbff,#fff);box-shadow:0 6px 18px rgba(11,45,92,.08)}.edusambam-reader strong{display:block;color:#0b55a5;font-size:.9rem;letter-spacing:.04em}.edusambam-reader .reader-slogan{color:#b27e08;font-weight:900;margin-top:.25rem;font-size:.82rem}.edusambam-reader .reader-help{color:#607086;font-size:.8rem;margin:.3rem 0 .7rem}.edusambam-reader .reader-controls{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}.edusambam-reader button,.edusambam-reader select{border:1px solid #c9d9e8;background:#fff;color:#153b6e;border-radius:8px;padding:.48rem .65rem;font-weight:800;cursor:pointer}.edusambam-reader button:first-child{background:#0b55a5;color:#fff;border-color:#0b55a5}.edusambam-reader .reader-status{display:block;color:#607086;font-size:.75rem;margin-top:.55rem}.edusambam-reader .reader-progress{height:4px;background:#e4edf6;border-radius:99px;margin-top:.6rem;overflow:hidden}.edusambam-reader .reader-progress span{display:block;width:0;height:100%;background:#e1ad1c;transition:width .2s linear}@media(max-width:600px){.edusambam-reader{margin-left:0;margin-right:0}.edusambam-reader .reader-controls button,.edusambam-reader .reader-controls select{flex:1;min-width:75px}}
+</style></head>
+<body>
+<!-- TOP BAR -->
+<div class="top-bar">
+<p>Established 2026  ·  Free Educational Resources for All</p>
+<ul class="top-bar-links">
+<li><a href="index.html">Contact</a></li>
+<li><a href="index.html">About</a></li>
+<li><a href="index.html">Write for Us</a></li>
+</ul>
+</div>
+<!-- NAV -->
+<nav>
+<a class="nav-brand" href="index.html" style="display:flex; flex-direction:row; align-items:center; justify-content:flex-start; gap:0.6rem; text-decoration:none; overflow:hidden; flex:1; min-width:0;">
+<span aria-label="EDUSAMBAM six-circle logo" class="mark"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+<div style="display:flex; flex-direction:column; line-height:1.3; min-width:0;">
+<span class="nav-brand-name" style="white-space:nowrap;">EDUSAMBAM</span>
+<span class="nav-brand-sub">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM.</span>
+</div>
+</a>
+<ul class="nav-links">
+<li><a href="index.html#english">English</a></li>
+<li><a href="index.html">Science</a></li>
+<li><a href="index.html">Mathematics</a></li>
+<li><a href="index.html">Health</a></li>
+<li><a href="index.html">General Knowledge</a></li>
+<li><a href="index.html">Computer &amp; AI</a></li>
+<li><a href="index.html#resources">Resources</a></li>
+</ul>
+</nav>
+<!-- ARTICLE HERO -->
+<div class="article-hero">
+<div class="breadcrumb"><a href="index.html">Home</a>  /  <a href="index.html#computer-ai">Computer &amp; AI</a>  /  What Is a Large Language Model?</div>
+<div class="article-hero-tag">Computer &amp; AI · Artificial Intelligence</div>
+<h1>What Is a Large Language Model? How Chatbots Actually Work</h1>
+<p class="sub">A chatbot doesn't "know" the answer to your question the way a person does. It's predicting the most likely next word, one at a time, based on patterns learned from an enormous amount of text. Here's what's really happening behind the reply.</p>
+<div class="article-hero-meta">
+<span>EDUSAMBAM Editorial Team</span>
+<span>|</span>
+<span>13 min read</span>
+<span>|</span>
+<span>Artificial Intelligence</span>
+</div>
+</div><div aria-label="EDUSAMBAM article reader" class="edusambam-reader"><strong>🔊 LISTEN TO THIS ARTICLE</strong><div class="reader-slogan">SAVE YOUR EYES • IMPROVE YOUR LISTENING</div><div class="reader-help">Listen to the article instead of relying only on continuous screen reading.</div><div class="reader-controls"><button data-reader="play" type="button">▶ Play</button><button data-reader="pause" type="button">⏸ Pause</button><button data-reader="resume" type="button">▶ Resume</button><button data-reader="stop" type="button">■ Stop</button><select aria-label="Reading speed"><option value="1">1×</option><option value="0.8">0.8×</option><option value="1.2">1.2×</option></select></div><div aria-hidden="true" class="reader-progress"><span></span></div><small class="reader-status">Ready to read the article.</small></div>
+<!-- ARTICLE BODY -->
+<div class="article-wrap">
+<p class="lead">A large language model (LLM) is the technology behind modern AI chatbots — it is, at heart, a very large version of the prediction idea from the machine learning article in this series, applied to text. Given some text, it predicts what word is most likely to come next. Repeated over and over, one word at a time, that simple prediction is enough to write essays, hold conversations, and answer questions.</p>
+<h2><span class="num">1.</span>The Core Idea: Predicting the Next Word</h2>
+<p>Underneath a chatbot's reply is a model trained on an enormous amount of text — books, articles, websites, and more — learning to predict, for any given piece of text, what word (or part of a word) is statistically most likely to follow. That's the entire task the model is trained on. It never explicitly "knows" facts the way a person does; it has learned extremely detailed patterns about which words tend to follow which other words, across a staggering range of topics and contexts.</p>
+<div class="example-box">
+<div class="ex-label">Key Idea</div>
+<p>This is the same prediction loop from the house-price example in the previous article — predict, compare to the real answer, adjust — just scaled up enormously and applied to text instead of numbers, with the "answer" being the next word in billions of real sentences instead of a house price.</p>
+</div>
+<h2><span class="num">2.</span>Tokens: How Text Becomes Numbers a Model Can Use</h2>
+<p>Models don't work with letters and words directly — they work with numbers. Text is first broken into pieces called <strong>tokens</strong>, which might be a whole word, part of a word, or a punctuation mark, and each token is converted into a number the model can process mathematically.</p>
+<div class="token-flow">
+<div class="token-flow-label">The sentence "Learning to code is rewarding." broken into tokens</div>
+<div class="token-row">
+<div class="token-chip">Learning</div>
+<div class="token-chip">to</div>
+<div class="token-chip">code</div>
+<div class="token-chip">is</div>
+<div class="token-chip">reward</div>
+<div class="token-chip">ing</div>
+<div class="token-chip">.</div>
+</div>
+</div>
+<p>Notice that "rewarding" was split into two tokens. Breaking uncommon or longer words into smaller familiar pieces lets a model handle new or rare words it hasn't seen as a whole, by combining tokens it already recognises.</p>
+<h2><span class="num">3.</span>Generating a Reply, One Token at a Time</h2>
+<p>When a chatbot writes a response, it isn't planning the whole sentence in advance. It predicts one token at a time: given everything written so far, it calculates a probability for every token in its vocabulary, picks one (usually the most likely, sometimes with a bit of randomness for variety), adds it to the text, and repeats the entire process again for the next token.</p>
+<div class="prob-box">
+<div class="prob-prompt">Prompt: "The capital of France is <span class="prob-blank">___</span>"</div>
+<div class="prob-row"><div class="prob-word">Paris</div><div class="prob-bar-track"><div class="prob-bar-fill" style="width:92%;"></div></div><div class="prob-pct">92%</div></div>
+<div class="prob-row"><div class="prob-word">a</div><div class="prob-bar-track"><div class="prob-bar-fill" style="width:4%;"></div></div><div class="prob-pct">4%</div></div>
+<div class="prob-row"><div class="prob-word">located</div><div class="prob-bar-track"><div class="prob-bar-fill" style="width:2%;"></div></div><div class="prob-pct">2%</div></div>
+<div class="prob-row"><div class="prob-word">known</div><div class="prob-bar-track"><div class="prob-bar-fill" style="width:1%;"></div></div><div class="prob-pct">1%</div></div>
+</div>
+<p>This process, repeated hundreds of times for a long reply, is why longer responses take visibly more time to generate than short ones — the model is genuinely doing the same prediction step over and over, token by token.</p>
+<h2><span class="num">4.</span>Attention: How a Model Tracks Context</h2>
+<p>Predicting the next word well requires understanding context — in the sentence "The trophy didn't fit in the suitcase because <em>it</em> was too big," knowing whether "it" refers to the trophy or the suitcase requires weighing the whole sentence, not just the words immediately before "it." LLMs use a mechanism called <strong>attention</strong>, part of an architecture called the <strong>Transformer</strong>, which lets the model weigh the relevance of every earlier token against every other token when producing its prediction — effectively letting it "focus" more on the words that matter most for the current decision, regardless of how far back they appeared.</p>
+<p>This is the same layered, weighted structure introduced with neural networks in the previous article, adapted specifically to handle the order and relationships within language rather than fixed lists of numbers.</p>
+<h2><span class="num">5.</span>Training in Two Stages: Pretraining and Fine-Tuning</h2>
+<p>Building a modern chatbot generally happens in two broad stages:</p>
+<ul>
+<li><strong>Pretraining</strong> — the model is trained on a vast amount of general text, simply learning to predict the next token extremely well. This stage produces a model that is fluent but not yet well-behaved as an assistant.</li>
+<li><strong>Fine-tuning</strong> — the pretrained model is further trained on more targeted examples of good, helpful responses, often refined using human feedback (a process commonly called <strong>RLHF</strong>, Reinforcement Learning from Human Feedback) to make it more useful, honest, and appropriate to talk to.</li>
+</ul>
+<p>Pretraining is what gives a model its broad knowledge and fluency; fine-tuning is what shapes it into something that behaves like a helpful assistant rather than simply continuing text in any direction.</p>
+<div class="timeline">
+<div class="timeline-item">
+<div class="timeline-year">2017</div>
+<div class="timeline-text">The <strong>Transformer</strong> architecture is introduced, providing the attention mechanism nearly all modern LLMs are built on.</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-year">2018</div>
+<div class="timeline-text">Early large models such as <strong>GPT-1</strong> and <strong>BERT</strong> demonstrate the power of pretraining on large amounts of text.</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-year">2020</div>
+<div class="timeline-text"><strong>GPT-3</strong> shows a dramatic leap in capability from scaling up model and data size substantially.</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-year">2022</div>
+<div class="timeline-text"><strong>ChatGPT</strong> brings fine-tuned conversational LLMs to mainstream, everyday use for the first time.</div>
+</div>
+</div>
+<h2><span class="num">6.</span>What LLMs Can — and Can't — Do Well</h2>
+<p>Understanding an LLM's real limitations is essential to using one responsibly.</p>
+<ul>
+<li><strong>Hallucination:</strong> because a model is predicting plausible-sounding text rather than looking up verified facts, it can state incorrect information confidently and fluently — always worth verifying anything important independently.</li>
+<li><strong>Knowledge cutoff:</strong> a model's core knowledge comes from the text it was trained on up to a certain date, so it won't natively know about events after that point unless it's specifically given that information.</li>
+<li><strong>No true understanding:</strong> an LLM doesn't experience or comprehend meaning the way a person does — it's recognising and continuing extremely sophisticated statistical patterns, which is why it can occasionally fail in ways a person with real understanding wouldn't.</li>
+<li><strong>Inherited bias:</strong> like any model trained on real-world data (as covered in the previous article), an LLM can reflect biases present in its training text.</li>
+</ul>
+<div class="stat-highlight">
+<div class="stat-num">1 Token</div>
+<div class="stat-text">at a time — that's the full scope of a single prediction step. Every capability an LLM appears to have, from writing code to holding a conversation, emerges from repeating that one step, guided by everything generated so far.</div>
+</div>
+<div class="real-world-box">
+<div class="rw-label">Real-World Example</div>
+<p>When a chatbot helps debug code, summarise an article, or draft an email, it is applying the exact same next-token prediction process described above — just guided by a prompt that steers which patterns from its training are most relevant to continue.</p>
+</div>
+<h2><span class="num">7.</span>Getting Better Results: The Basics of Prompting</h2>
+<ul>
+<li><strong>Be specific.</strong> Clear, detailed prompts give the model more relevant context to predict from, generally producing more useful replies than vague ones.</li>
+<li><strong>State the format you want.</strong> Asking for a list, a table, or a specific length shapes the pattern the model continues.</li>
+<li><strong>Ask it to check its own work</strong> for anything factual and important, or verify independently — remembering the hallucination risk above.</li>
+<li><strong>Break big tasks into steps</strong>, the same way breaking a problem into a clear algorithm (from the earlier article) produces better code.</li>
+</ul>
+<h2>A Closing Thought</h2>
+<p>A large language model can feel like it's "thinking," but underneath every reply is the same mechanical loop: turn text into tokens, predict the most likely next token using patterns learned from enormous amounts of training text, add it, and repeat. It's a remarkable amount of capability to emerge from one repeated step — and understanding that step is what lets you use these tools well, instead of trusting them blindly.</p>
+<!-- QUIZ SECTION -->
+<div class="quiz-section">
+<div class="section-eyebrow">Test Your Understanding</div>
+<h2>Practice Quiz</h2>
+<p class="quiz-intro">10 questions. Select an answer for each, then submit to see your score instantly.</p>
+<div class="squiz-progress"><div class="squiz-progress-fill" id="squizProgressFill"></div></div>
+<div class="squiz-progress-label" id="squizProgressLabel">0 of 10 answered</div>
+<div class="squiz-results" id="squizResults">
+<div class="squiz-score-big" id="squizScoreBig">0/10</div>
+<div class="squiz-score-label" id="squizScoreLabel">You scored 0%</div>
+<div class="squiz-score-tier" id="squizScoreTier">Keep practicing</div>
+<div><button class="squiz-retake-btn" onclick="retakeQuiz()">Retake Quiz</button></div>
+</div>
+<form id="squizForm">
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">1.</span>What is the core task a large language model is trained to do?</div>
+<div class="squiz-option"><input id="sq1a" name="sq1" type="radio" value="0"/><label for="sq1a">A. Search the internet in real time for every answer</label></div>
+<div class="squiz-option"><input id="sq1b" name="sq1" type="radio" value="1"/><label for="sq1b">B. Store a fixed database of facts</label></div>
+<div class="squiz-option"><input id="sq1c" name="sq1" type="radio" value="2"/><label for="sq1c">C. Predict the most likely next word (token) given the text so far</label></div>
+<div class="squiz-option"><input id="sq1d" name="sq1" type="radio" value="3"/><label for="sq1d">D. Translate binary code into English</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">2.</span>What is a "token"?</div>
+<div class="squiz-option"><input id="sq2a" name="sq2" type="radio" value="0"/><label for="sq2a">A. A type of neural network</label></div>
+<div class="squiz-option"><input id="sq2b" name="sq2" type="radio" value="1"/><label for="sq2b">B. A piece of text — a word, part of a word, or punctuation — converted into a number the model can process</label></div>
+<div class="squiz-option"><input id="sq2c" name="sq2" type="radio" value="2"/><label for="sq2c">C. A password used to access a chatbot</label></div>
+<div class="squiz-option"><input id="sq2d" name="sq2" type="radio" value="3"/><label for="sq2d">D. A unit of internet speed</label></div>
+</div>
+<div class="squiz-item" data-correct="0">
+<div class="squiz-q"><span class="qnum">3.</span>Why might an uncommon word be split into more than one token?</div>
+<div class="squiz-option"><input id="sq3a" name="sq3" type="radio" value="0"/><label for="sq3a">A. So the model can handle new or rare words using smaller, familiar pieces</label></div>
+<div class="squiz-option"><input id="sq3b" name="sq3" type="radio" value="1"/><label for="sq3b">B. To make responses take less time</label></div>
+<div class="squiz-option"><input id="sq3c" name="sq3" type="radio" value="2"/><label for="sq3c">C. Because punctuation is not allowed in tokens</label></div>
+<div class="squiz-option"><input id="sq3d" name="sq3" type="radio" value="3"/><label for="sq3d">D. It never happens — every word is always one token</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">4.</span>How does a chatbot generate a long reply?</div>
+<div class="squiz-option"><input id="sq4a" name="sq4" type="radio" value="0"/><label for="sq4a">A. It writes the entire reply instantly in one step</label></div>
+<div class="squiz-option"><input id="sq4b" name="sq4" type="radio" value="1"/><label for="sq4b">B. It copies a pre-written answer from a database</label></div>
+<div class="squiz-option"><input id="sq4c" name="sq4" type="radio" value="2"/><label for="sq4c">C. It predicts and adds one token at a time, repeating the process for each new token</label></div>
+<div class="squiz-option"><input id="sq4d" name="sq4" type="radio" value="3"/><label for="sq4d">D. It asks a human to finish the sentence</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">5.</span>What does the "attention" mechanism in a Transformer help a model do?</div>
+<div class="squiz-option"><input id="sq5a" name="sq5" type="radio" value="0"/><label for="sq5a">A. Type faster</label></div>
+<div class="squiz-option"><input id="sq5b" name="sq5" type="radio" value="1"/><label for="sq5b">B. Weigh which earlier words are most relevant to the current prediction</label></div>
+<div class="squiz-option"><input id="sq5c" name="sq5" type="radio" value="2"/><label for="sq5c">C. Connect to the internet for live facts</label></div>
+<div class="squiz-option"><input id="sq5d" name="sq5" type="radio" value="3"/><label for="sq5d">D. Compress images for faster loading</label></div>
+</div>
+<div class="squiz-item" data-correct="0">
+<div class="squiz-q"><span class="qnum">6.</span>What is the difference between pretraining and fine-tuning?</div>
+<div class="squiz-option"><input id="sq6a" name="sq6" type="radio" value="0"/><label for="sq6a">A. Pretraining builds broad knowledge and fluency; fine-tuning shapes it into a helpful assistant</label></div>
+<div class="squiz-option"><input id="sq6b" name="sq6" type="radio" value="1"/><label for="sq6b">B. Fine-tuning happens before pretraining</label></div>
+<div class="squiz-option"><input id="sq6c" name="sq6" type="radio" value="2"/><label for="sq6c">C. They are two names for the exact same process</label></div>
+<div class="squiz-option"><input id="sq6d" name="sq6" type="radio" value="3"/><label for="sq6d">D. Pretraining only involves human feedback</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">7.</span>What is "hallucination" in the context of LLMs?</div>
+<div class="squiz-option"><input id="sq7a" name="sq7" type="radio" value="0"/><label for="sq7a">A. A model refusing to answer a question</label></div>
+<div class="squiz-option"><input id="sq7b" name="sq7" type="radio" value="1"/><label for="sq7b">B. A model running slower than expected</label></div>
+<div class="squiz-option"><input id="sq7c" name="sq7" type="radio" value="2"/><label for="sq7c">C. A model stating incorrect information confidently and fluently</label></div>
+<div class="squiz-option"><input id="sq7d" name="sq7" type="radio" value="3"/><label for="sq7d">D. A model translating between languages</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">8.</span>What does a model's "knowledge cutoff" refer to?</div>
+<div class="squiz-option"><input id="sq8a" name="sq8" type="radio" value="0"/><label for="sq8a">A. The maximum length of a reply it can generate</label></div>
+<div class="squiz-option"><input id="sq8b" name="sq8" type="radio" value="1"/><label for="sq8b">B. The date after which it has no built-in knowledge of events, based on its training data</label></div>
+<div class="squiz-option"><input id="sq8c" name="sq8" type="radio" value="2"/><label for="sq8c">C. A limit on how many users can talk to it at once</label></div>
+<div class="squiz-option"><input id="sq8d" name="sq8" type="radio" value="3"/><label for="sq8d">D. The amount of electricity it uses</label></div>
+</div>
+<div class="squiz-item" data-correct="0">
+<div class="squiz-q"><span class="qnum">9.</span>Which architecture introduced in 2017 underlies nearly all modern LLMs?</div>
+<div class="squiz-option"><input id="sq9a" name="sq9" type="radio" value="0"/><label for="sq9a">A. The Transformer</label></div>
+<div class="squiz-option"><input id="sq9b" name="sq9" type="radio" value="1"/><label for="sq9b">B. The Perceptron</label></div>
+<div class="squiz-option"><input id="sq9c" name="sq9" type="radio" value="2"/><label for="sq9c">C. TCP/IP</label></div>
+<div class="squiz-option"><input id="sq9d" name="sq9" type="radio" value="3"/><label for="sq9d">D. HTTP</label></div>
+</div>
+<div class="squiz-item" data-correct="3">
+<div class="squiz-q"><span class="qnum">10.</span>According to the article, what generally helps get better results from a chatbot?</div>
+<div class="squiz-option"><input id="sq10a" name="sq10" type="radio" value="0"/><label for="sq10a">A. Keeping prompts as vague as possible</label></div>
+<div class="squiz-option"><input id="sq10b" name="sq10" type="radio" value="1"/><label for="sq10b">B. Never specifying a format</label></div>
+<div class="squiz-option"><input id="sq10c" name="sq10" type="radio" value="2"/><label for="sq10c">C. Avoiding breaking large tasks into steps</label></div>
+<div class="squiz-option"><input id="sq10d" name="sq10" type="radio" value="3"/><label for="sq10d">D. Being specific, stating the format wanted, and verifying important facts</label></div>
+</div>
+<button class="squiz-submit-btn" disabled="" id="squizSubmitBtn" onclick="submitQuiz()" type="button">Answer all questions to submit</button>
+</form>
+</div>
+<div class="article-footer-nav">
+<a href="article-viewer.html#machine-learning-explained.html">← Previous: Machine Learning Explained</a>
+<a href="article-viewer.html#ai-ethics.html">Next: AI Ethics: Bias, Privacy and Misinformation →</a>
+</div>
+</div>
+<script>
+  (function() {
+    const form = document.getElementById('squizForm');
+    const submitBtn = document.getElementById('squizSubmitBtn');
+    const progressFill = document.getElementById('squizProgressFill');
+    const progressLabel = document.getElementById('squizProgressLabel');
+    const totalQuestions = document.querySelectorAll('.squiz-item').length;
+
+    function countAnswered() {
+      let count = 0;
+      for (let i = 1; i <= totalQuestions; i++) {
+        if (form.querySelector(`input[name="sq${i}"]:checked`)) count++;
+      }
+      return count;
+    }
+
+    function updateProgress() {
+      const answered = countAnswered();
+      progressFill.style.width = (answered / totalQuestions * 100) + '%';
+      progressLabel.textContent = answered + ' of ' + totalQuestions + ' answered';
+      submitBtn.disabled = answered < totalQuestions;
+      submitBtn.textContent = answered < totalQuestions ? 'Answer all questions to submit' : 'Submit Quiz';
+      document.querySelectorAll('.squiz-option').forEach(opt => opt.classList.remove('selected'));
+      form.querySelectorAll('input[type="radio"]:checked').forEach(input => {
+        input.closest('.squiz-option').classList.add('selected');
+      });
+    }
+
+    form.addEventListener('change', updateProgress);
+
+    window.submitQuiz = function() {
+      let score = 0;
+      const questions = document.querySelectorAll('.squiz-item');
+      questions.forEach((q, idx) => {
+        const qnum = idx + 1;
+        const correctIdx = q.getAttribute('data-correct');
+        const selected = form.querySelector(`input[name="sq${qnum}"]:checked`);
+        const options = q.querySelectorAll('.squiz-option');
+        options.forEach((opt, optIdx) => {
+          opt.querySelector('input').disabled = true;
+          if (String(optIdx) === correctIdx) opt.classList.add('correct-answer');
+        });
+        if (selected && selected.value === correctIdx) {
+          score++;
+        } else if (selected) {
+          selected.closest('.squiz-option').classList.add('wrong-answer');
+        }
+      });
+
+      const percent = Math.round((score / totalQuestions) * 100);
+      document.getElementById('squizScoreBig').textContent = score + '/' + totalQuestions;
+      document.getElementById('squizScoreLabel').textContent = 'You scored ' + percent + '%';
+
+      let tier = 'Keep practicing';
+      if (percent === 100) tier = 'Perfect score!';
+      else if (percent >= 80) tier = 'Excellent work';
+      else if (percent >= 60) tier = 'Good effort';
+      else if (percent >= 40) tier = 'Getting there';
+      document.getElementById('squizScoreTier').textContent = tier;
+
+      document.getElementById('squizResults').classList.add('visible');
+      submitBtn.style.display = 'none';
+      document.getElementById('squizResults').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    window.retakeQuiz = function() {
+      form.reset();
+      document.querySelectorAll('.squiz-option').forEach(opt => {
+        opt.classList.remove('selected', 'correct-answer', 'wrong-answer');
+        opt.querySelector('input').disabled = false;
+      });
+      document.getElementById('squizResults').classList.remove('visible');
+      submitBtn.style.display = 'block';
+      updateProgress();
+      document.getElementById('squizForm').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    updateProgress();
+  })();
+</script>
+<footer>
+<div class="footer-top">
+<div class="footer-brand">
+<div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.75rem;">
+<span aria-label="EDUSAMBAM six-circle logo" class="mark"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+<a class="footer-brand-name" href="index.html">EDUSAMBAM</a>
+</div>
+<p class="footer-desc">A trusted, anonymous source of knowledge for curious minds everywhere — learn, practise, grow and succeed.</p>
+</div>
+<div class="footer-col">
+<h4>Content</h4>
+<ul>
+<li><a href="index.html#english">English Language</a></li>
+<li><a href="index.html">Science</a></li>
+<li><a href="index.html">Mathematics</a></li>
+<li><a href="index.html">Health</a></li>
+<li><a href="index.html">General Knowledge</a></li>
+<li><a href="index.html#computer-ai">Computer &amp; AI</a></li>
+<li><a href="index.html#resources">Resources</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>About</h4>
+<ul>
+<li><a href="index.html">Our Mission</a></li>
+<li><a href="index.html">The Team</a></li>
+<li><a href="index.html">Write for Us</a></li>
+<li><a href="index.html">Contact Us</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Legal</h4>
+<ul>
+<li><a href="index.html">Privacy Policy</a></li>
+<li><a href="index.html">Terms of Use</a></li>
+<li><a href="index.html">Cookie Settings</a></li>
+<li><a href="index.html">Accessibility</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2026 EDUSAMBAM. All rights reserved. &nbsp;·&nbsp; EDUSAMBAM &middot; EduInfoAssessmentHub &middot; The Learners' Ladder.</p>
+<ul class="footer-bottom-links">
+<li><a href="index.html">Privacy</a></li>
+<li><a href="index.html">Terms</a></li>
+<li><a href="index.html">Sitemap</a></li>
+</ul>
+</div>
+<div class="back-home-wrap"><a class="back-home" href="index.html#top">← Back to Home</a></div>
+</footer>
+<script id="edusambam-reader-script">
+(function(){
+ const box=document.querySelector('.edusambam-reader'); if(!box)return;
+ const root=document.querySelector('.article-wrap, .article-wrapper');
+ if(!root)return;
+ const status=box.querySelector('.reader-status'), progress=box.querySelector('.reader-progress span'), rate=box.querySelector('select');
+ let utterance=null, chunks=[], index=0, total=0, paused=false, stopped=false;
+ function text(){
+   const clone=root.cloneNode(true);
+   clone.querySelectorAll('.quiz-section,.drill-section,.squiz-section,.activity-section,.assessment-section,form,button,input,select,textarea,script,style').forEach(el=>el.remove());
+   return clone.textContent.replace(/\s+/g,' ').trim();
+ }
+ function splitText(t){const out=[];const max=1200;for(let i=0;i<t.length;i+=max)out.push(t.slice(i,i+max));return out;}
+ function updateProgress(){progress.style.width=(total?Math.min(100,Math.round((index/total)*100)):0)+'%';}
+ function speakNext(){
+   if(stopped||index>=total){if(index>=total&&!stopped){status.textContent='Reading finished.';progress.style.width='100%';}return;}
+   utterance=new SpeechSynthesisUtterance(chunks[index]);
+   utterance.rate=Number(rate.value)||1;
+   utterance.onend=function(){if(stopped)return;index++;updateProgress();speakNext();};
+   utterance.onerror=function(){if(!stopped)status.textContent='The reader stopped unexpectedly. Tap Resume to continue.';};
+   status.textContent='Reading article…';
+   speechSynthesis.speak(utterance);
+ }
+ function play(){
+   if(!('speechSynthesis' in window)){status.textContent='Audio reading is not supported by this browser.';return;}
+   speechSynthesis.cancel();
+   chunks=splitText(text());index=0;total=chunks.length;paused=false;stopped=false;updateProgress();speakNext();
+ }
+ function pause(){
+   if(!('speechSynthesis' in window))return;
+   if(speechSynthesis.speaking){speechSynthesis.pause();paused=true;status.textContent='Reader paused.';}
+ }
+ function resume(){
+   if(!('speechSynthesis' in window))return;
+   stopped=false;
+   if(speechSynthesis.paused){speechSynthesis.resume();paused=false;status.textContent='Reader resumed.';return;}
+   if(!speechSynthesis.speaking && chunks.length && index<total){paused=false;status.textContent='Reader resumed.';speakNext();return;}
+   if(!chunks.length){status.textContent='Nothing to resume. Tap Play to start.';return;}
+   status.textContent='Reader is already playing.';
+ }
+ function stop(){
+   speechSynthesis.cancel();chunks=[];index=0;total=0;paused=false;stopped=true;progress.style.width='0';status.textContent='Reader stopped.';
+ }
+ box.querySelector('[data-reader="play"]').addEventListener('click',play);
+ box.querySelector('[data-reader="pause"]').addEventListener('click',pause);
+ box.querySelector('[data-reader="resume"]').addEventListener('click',resume);
+ box.querySelector('[data-reader="stop"]').addEventListener('click',stop);
+ window.addEventListener('beforeunload',()=>{stopped=true;speechSynthesis.cancel();});
+})();
+</script></body>
+</html>
