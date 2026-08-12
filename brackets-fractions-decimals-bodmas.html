@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Brackets, Fractions &amp; Decimals in BODMAS — EDUSAMBAM</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --red:       #8B0000;
+    --red-mid:   #A50000;
+    --red-lt:    #F9F0F0;
+    --navy:      #06244a;
+    --navy-mid:  #1C3151;
+    --gold:      #B8963E;
+    --gold-lt:   #F5EDD6;
+    --cream:     #FAF8F4;
+    --white:     #FFFFFF;
+    --ink:       #1A1A1A;
+    --slate:     #4A4A4A;
+    --muted:     #767676;
+    --border:    #D8D0C8;
+    --border-lt: #EDE8E0;
+    --radius:    4px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--ink);
+    background: var(--white);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── TOP BAR ── */
+  .top-bar {
+    background: var(--navy);
+    padding: 0.45rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .top-bar p {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.03em;
+  }
+  .top-bar-links { display: flex; gap: 1.5rem; list-style: none; }
+  .top-bar-links a {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+  .top-bar-links a:hover { color: white; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 200;
+    background: rgba(255,255,255,.97);
+    border-bottom: 3px solid var(--gold);
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    box-shadow: 0 2px 12px rgba(8,47,99,0.08);
+  }
+  .nav-brand { display: flex; flex-direction: column; line-height: 1; text-decoration: none; }
+  .nav-brand-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: 0.01em;
+  }
+  .nav-brand-name span { color: var(--red); }
+  .nav-brand-sub {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: rgba(13,27,42,0.6);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 0.25rem;
+  }
+  .nav-links { display: flex; gap: 0; list-style: none; }
+  .nav-links a {
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(13,27,42,0.75);
+    padding: 0 1.1rem;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--b, #0b4ea2); }
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+  }
+
+  /* ── ARTICLE HERO ── */
+  .article-hero {
+    background: linear-gradient(135deg,#06244a,#0b4ea2);
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+  }
+  .breadcrumb {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 1.1rem;
+    letter-spacing: 0.02em;
+  }
+  .breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--gold); }
+  .article-hero-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(184,150,62,0.4);
+    padding: 0.35rem 0.9rem;
+    border-radius: 30px;
+    margin-bottom: 1.25rem;
+  }
+  .article-hero h1 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 2.4rem;
+    color: white;
+    max-width: 760px;
+    margin: 0 auto 1rem;
+    line-height: 1.25;
+  }
+  .article-hero p.sub {
+    color: rgba(255,255,255,0.6);
+    max-width: 620px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.02rem;
+  }
+  .article-hero-meta {
+    display: flex; justify-content: center; gap: 0.9rem;
+    font-size: 0.8rem; color: rgba(255,255,255,0.45);
+    flex-wrap: wrap;
+  }
+
+  /* ── ARTICLE BODY ── */
+  .article-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+  .article-wrap h2 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 1.65rem;
+    color: var(--navy);
+    margin: 2.6rem 0 1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--border-lt);
+  }
+  .article-wrap h2 span.num {
+    color: var(--red);
+    margin-right: 0.5rem;
+    font-style: italic;
+  }
+  .article-wrap p { color: var(--slate); margin-bottom: 1rem; font-size: 1.02rem; }
+  .article-wrap ul { margin: 0 0 1.2rem 1.4rem; color: var(--slate); }
+  .article-wrap li { margin-bottom: 0.5rem; }
+  .article-wrap strong { color: var(--ink); }
+  .lead {
+    font-size: 1.15rem;
+    color: var(--ink);
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    border-left: 3px solid var(--gold);
+    padding-left: 1.2rem;
+    margin: 1.5rem 0 2rem;
+  }
+  .example-box {
+    background: var(--gold-lt);
+    border: 1px solid rgba(184,150,62,0.35);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 1.3rem 1.5rem;
+    margin: 1.3rem 0 1.8rem;
+  }
+  .example-box .ex-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.5rem;
+  }
+  .example-box p { color: var(--ink); margin-bottom: 0.4rem; font-size: 0.98rem; }
+  .example-box p:last-child { margin-bottom: 0; }
+
+  .real-world-box {
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 1.6rem 1.7rem;
+    margin: 2.4rem 0;
+  }
+  .real-world-box .rw-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.7rem;
+  }
+  .real-world-box p { color: rgba(255,255,255,0.8); margin-bottom: 0; font-size: 1rem; }
+
+  .table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+  table.pos-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+  table.pos-table th {
+    background: var(--navy);
+    color: white;
+    text-align: left;
+    padding: 0.7rem 0.9rem;
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+  }
+  table.pos-table td {
+    padding: 0.7rem 0.9rem;
+    border-bottom: 1px solid var(--border-lt);
+    color: var(--slate);
+  }
+  table.pos-table tr:nth-child(even) td { background: var(--cream); }
+
+  /* ── QUIZ ── */
+  .quiz-section {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem 1.7rem 1.5rem;
+    margin-top: 3rem;
+  }
+  .quiz-section .section-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.4rem;
+  }
+  .quiz-section h2 {
+    border: none; margin: 0 0 0.4rem; padding: 0;
+  }
+  .quiz-intro { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.6rem; }
+
+  /* SCORED QUIZ (click-to-highlight + real scoring) */
+  .squiz-progress {
+    background: var(--cream);
+    border-radius: 30px;
+    height: 8px;
+    overflow: hidden;
+    margin-bottom: 0.4rem;
+  }
+  .squiz-progress-fill {
+    background: var(--gold);
+    height: 100%;
+    width: 0%;
+    transition: width 0.25s ease;
+  }
+  .squiz-progress-label {
+    font-size: 0.78rem;
+    color: var(--muted);
+    text-align: right;
+    margin-bottom: 1.3rem;
+  }
+  .squiz-item {
+    background: var(--white);
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .squiz-q {
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+  }
+  .squiz-q .qnum { color: var(--red); margin-right: 0.4rem; }
+  .squiz-option {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .squiz-option:hover { border-color: var(--gold); }
+  .squiz-option input[type="radio"] { accent-color: var(--red); width: 16px; height: 16px; flex-shrink: 0; }
+  .squiz-option label { cursor: pointer; font-size: 0.94rem; color: var(--slate); flex: 1; }
+  .squiz-option.selected { border-color: var(--red); background: rgba(139,0,0,0.04); }
+  .squiz-option.correct-answer { border-color: #2e7d32; background: rgba(46,125,50,0.08); }
+  .squiz-option.wrong-answer { border-color: var(--red); background: rgba(139,0,0,0.08); }
+  .squiz-submit-btn {
+    display: block;
+    width: 100%;
+    background: var(--red);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.98rem;
+    font-weight: 600;
+    padding: 0.9rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    margin-top: 0.6rem;
+    transition: background 0.2s;
+  }
+  .squiz-submit-btn:hover { background: var(--red-mid); }
+  .squiz-submit-btn:disabled { background: var(--border); cursor: not-allowed; }
+  .squiz-results {
+    display: none;
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 2rem 1.6rem;
+    text-align: center;
+    margin-bottom: 1.8rem;
+  }
+  .squiz-results.visible { display: block; }
+  .squiz-results .squiz-score-big {
+    font-family: 'EB Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .squiz-results .squiz-score-label { color: rgba(255,255,255,0.7); font-size: 0.98rem; margin-bottom: 1rem; }
+  .squiz-results .squiz-score-tier {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    border-radius: 30px;
+    background: rgba(184,150,62,0.15);
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+  }
+  .squiz-retake-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 0.65rem 1.4rem;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  .squiz-retake-btn:hover { background: rgba(255,255,255,0.1); }
+
+  .article-footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-lt);
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .article-footer-nav a {
+    text-decoration: none;
+    color: var(--red);
+    font-weight: 600;
+    font-size: 0.92rem;
+  }
+  .article-footer-nav a:hover { text-decoration: underline; }
+
+  @media (max-width: 700px) {
+    .article-hero h1 { font-size: 1.7rem; }
+    .article-wrap { padding: 2rem 1.25rem 3rem; }
+  }
+  /* ── FUN FACT BOX (reusable) ── */
+  .fun-fact-box {
+    background: linear-gradient(135deg, rgba(212,175,55,0.12), rgba(212,175,55,0.04));
+    border: 1.5px dashed var(--gold);
+    border-radius: var(--radius);
+    padding: 1.3rem 1.5rem;
+    margin: 1.8rem 0;
+    position: relative;
+  }
+  .fun-fact-label {
+    font-weight: 700;
+    color: var(--red);
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+  .fun-fact-box p { margin: 0; }
+
+  /* ── FIX-IT CHALLENGE CARDS (reusable) ── */
+  .fixit-challenge {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-left: 5px solid var(--red);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.4rem;
+    margin: 1.2rem 0;
+  }
+  .fixit-wrong {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.15rem;
+    color: var(--red);
+    text-decoration: line-through;
+    margin-bottom: 0.4rem;
+  }
+  .fixit-toggle-btn {
+    background: none;
+    border: 1.5px solid var(--red);
+    color: var(--red);
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.4rem 0.9rem;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 0.3rem;
+  }
+  .fixit-explain { display: none; margin-top: 0.7rem; padding-top: 0.7rem; border-top: 1px dashed rgba(0,0,0,0.15); }
+  .fixit-explain.visible { display: block; }
+
+  /* ── PRACTICE ARENA / DRILL (reusable) ── */
+  .drill-section {
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 2rem 1.7rem;
+    margin-top: 3rem;
+  }
+  .drill-section .section-eyebrow { color: var(--gold); }
+  .drill-section h2 { border: none; margin: 0 0 0.4rem; padding: 0; color: white; }
+  .drill-intro { color: rgba(255,255,255,0.65); font-size: 0.95rem; margin-bottom: 1.5rem; }
+  .drill-controls { display: flex; gap: 0.8rem; align-items: center; margin-bottom: 1.3rem; flex-wrap: wrap; }
+  .drill-btn {
+    background: var(--red);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 0.55rem 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .drill-btn:hover { background: var(--red-mid); }
+  .drill-score { color: var(--gold); font-size: 0.88rem; font-weight: 600; }
+  .drill-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
+  @media (max-width: 600px) { .drill-grid { grid-template-columns: 1fr; } }
+  .drill-item {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: var(--radius);
+    padding: 0.8rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+  .drill-q { color: white; font-size: 1rem; font-weight: 500; }
+  .drill-fraction-inputs { display: flex; align-items: center; gap: 0.3rem; }
+  .drill-input {
+    width: 46px;
+    padding: 0.35rem 0.3rem;
+    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.95);
+    font-size: 0.95rem;
+    text-align: center;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  .drill-slash { color: white; font-size: 1.2rem; }
+  .drill-input.correct { outline: 3px solid #4CAF50; }
+  .drill-input.incorrect { outline: 3px solid #E57373; }
+  .drill-feedback { margin-top: 1.2rem; color: white; font-size: 0.95rem; min-height: 1.4rem; }
+
+  /* ── NUMBER LINE VISUAL (static, for examples) ── */
+  .number-line-visual {
+    position: relative;
+    height: 60px;
+    margin: 1.6rem 0.5rem 2.2rem;
+  }
+  .nl-track { position: absolute; top: 28px; left: 0; right: 0; height: 3px; background: var(--navy); }
+  .nl-tick { position: absolute; top: 21px; width: 2px; height: 17px; background: var(--navy); }
+  .nl-tick-label { position: absolute; top: 42px; transform: translateX(-50%); font-size: 0.8rem; color: var(--slate); }
+  .nl-point { position: absolute; top: 19px; width: 14px; height: 14px; border-radius: 50%; background: var(--red); transform: translateX(-50%); border: 2px solid white; box-shadow: 0 0 0 1.5px var(--red); }
+  .nl-point-label { position: absolute; top: -24px; transform: translateX(-50%); font-size: 0.85rem; font-weight: 700; color: var(--red); white-space: nowrap; }
+
+  /* ── NUMBER LINE JUMP VISUAL (static, for addition/subtraction examples) ── */
+  .nl-jump-visual { position: relative; height: 95px; margin: 2rem 0.5rem 2.4rem; }
+  .nl-jump-track { position: absolute; top: 55px; left: 0; right: 0; height: 3px; background: var(--navy); }
+  .nl-jump-tick { position: absolute; top: 48px; width: 2px; height: 17px; background: var(--navy); }
+  .nl-jump-tick-label { position: absolute; top: 76px; transform: translateX(-50%); font-size: 0.8rem; color: var(--slate); }
+  .nl-jump-arc { position: absolute; top: 30px; height: 3px; background: var(--red); border-radius: 2px; }
+  .nl-jump-arrowhead { position: absolute; top: 19px; font-size: 1.15rem; color: var(--red); font-weight: 700; transform: translateX(-50%); line-height: 1; }
+  .nl-jump-label { position: absolute; top: 0px; transform: translateX(-50%); font-size: 0.9rem; font-weight: 700; color: var(--red); white-space: nowrap; }
+  .nl-start-pt { position: absolute; top: 49px; width: 12px; height: 12px; border-radius: 50%; background: white; transform: translateX(-50%); border: 3px solid var(--navy); z-index: 2; }
+  .nl-end-pt { position: absolute; top: 48px; width: 14px; height: 14px; border-radius: 50%; background: var(--red); transform: translateX(-50%); border: 2px solid white; box-shadow: 0 0 0 1.5px var(--red); z-index: 3; }
+
+  /* ── NUMBER LINE DRILL: start-point reference marker ── */
+  .nl-drill-start-marker {
+    position: absolute; top: 27px; width: 14px; height: 14px;
+    border-radius: 50%; transform: translateX(-50%);
+    background: rgba(255,255,255,0.85); border: 3px solid var(--gold);
+    z-index: 1;
+  }
+
+  /* ── NUMBER LINE DRILL (interactive, click-to-place) ── */
+  .nl-drill-progress { color: var(--gold); text-align: center; font-size: 0.85rem; margin-bottom: 0.6rem; letter-spacing: 0.03em; }
+  .nl-drill-target { color: white; text-align: center; font-size: 1.25rem; font-weight: 700; margin-bottom: 1.8rem; }
+  .nl-drill-track {
+    position: relative;
+    height: 70px;
+    margin: 0 0.5rem 1.5rem;
+    cursor: crosshair;
+    touch-action: none;
+  }
+  .nl-drill-line { position: absolute; top: 34px; left: 0; right: 0; height: 3px; background: rgba(255,255,255,0.45); }
+  .nl-drill-tick { position: absolute; top: 27px; width: 2px; height: 17px; background: rgba(255,255,255,0.5); }
+  .nl-drill-tick-label { position: absolute; top: 46px; transform: translateX(-50%); font-size: 0.78rem; color: rgba(255,255,255,0.55); }
+  .nl-drill-marker {
+    position: absolute; top: 25px; width: 18px; height: 18px;
+    border-radius: 50%; transform: translateX(-50%);
+    border: 2px solid white;
+  }
+  .nl-drill-marker.user { background: var(--gold); }
+  .nl-drill-marker.correct-pos { background: #4CAF50; }
+  .nl-drill-marker.incorrect-pos { background: #E57373; }
+  .nl-drill-feedback-text { color: white; text-align: center; margin-top: 0.4rem; min-height: 1.4rem; font-size: 0.95rem; }
+  .nl-drill-actions { display: flex; justify-content: center; gap: 0.8rem; margin-top: 1rem; flex-wrap: wrap; }
+
+  /* ── PLACE VALUE: DIGIT DETECTIVE (reusable interactive) ── */
+  .pv-system-toggle { display: flex; gap: 0.6rem; justify-content: center; margin-bottom: 1.4rem; flex-wrap: wrap; }
+  .pv-toggle-btn {
+    background: #fff;
+    border: 1.5px solid var(--navy);
+    color: var(--navy);
+    padding: 0.5rem 1.1rem;
+    border-radius: 30px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .pv-toggle-btn.active { background: var(--navy); color: #fff; }
+  .pv-comma-display {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--red);
+    margin: 0.6rem 0 0.3rem;
+    font-family: 'EB Garamond', serif;
+    letter-spacing: 0.02em;
+  }
+  .pv-word-form { text-align: center; color: var(--slate); font-size: 0.92rem; margin-bottom: 1.3rem; font-style: italic; }
+  .pv-digit-row { display: flex; gap: 0.4rem; flex-wrap: wrap; justify-content: center; margin: 1.2rem 0; }
+  .pv-digit-box {
+    width: 44px; height: 54px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem; font-weight: 700;
+    font-family: 'Source Sans 3', sans-serif;
+    background: #fff; border: 2px solid var(--border);
+    border-radius: 8px; cursor: pointer; color: var(--navy);
+    transition: all 0.15s;
+  }
+  .pv-digit-box:hover { border-color: var(--gold); background: rgba(212,175,55,0.1); }
+  .pv-digit-box.active { background: var(--red); color: #fff; border-color: var(--red); transform: scale(1.08); }
+  .pv-info-panel {
+    background: var(--gold-lt);
+    border: 1px solid rgba(184,150,62,0.35);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.4rem;
+    margin-top: 1rem;
+    min-height: 34px;
+  }
+  .pv-info-placeholder { color: var(--slate); font-style: italic; margin: 0; }
+  .pv-info-result { margin: 0; font-size: 1rem; }
+  .pv-info-result strong { color: var(--red); }
+
+  /* ── PLACE VALUE: CLICK-CHOICE PRACTICE CARDS ── */
+  .pv-drill-question { color: white; font-size: 1.1rem; font-weight: 600; text-align: center; margin-bottom: 1.3rem; }
+  .pv-drill-choices { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.8rem; margin-bottom: 1rem; }
+  @media (max-width: 600px) { .pv-drill-choices { grid-template-columns: 1fr; } }
+  .pv-choice-btn {
+    background: rgba(255,255,255,0.08);
+    border: 1.5px solid rgba(255,255,255,0.25);
+    color: white;
+    padding: 0.8rem 1rem;
+    border-radius: var(--radius);
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.95rem;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.15s;
+  }
+  .pv-choice-btn:hover { background: rgba(212,175,55,0.18); border-color: var(--gold); }
+  .pv-choice-btn.correct { background: rgba(76,175,80,0.35); border-color: #4CAF50; }
+  .pv-choice-btn.incorrect { background: rgba(229,115,115,0.35); border-color: #E57373; }
+  .pv-choice-btn:disabled { cursor: default; }
+
+  /* ── NUMBER SYSTEMS: NESTED DIAGRAM ── */
+  .ns-real-box { border: 3px solid var(--navy); border-radius: 12px; padding: 2rem 1.2rem 1.2rem; position: relative; margin: 2rem 0; }
+  .ns-real-label { position: absolute; top: -14px; left: 16px; background: #fff; padding: 0 8px; font-weight: 700; color: var(--navy); font-size: 0.92rem; }
+  .ns-real-children { display: flex; gap: 1rem; flex-wrap: wrap; align-items: flex-start; }
+  .ns-rational-box { flex: 2; min-width: 220px; border: 3px solid var(--red); border-radius: 10px; padding: 1.7rem 1rem 1rem; position: relative; }
+  .ns-rational-label { position: absolute; top: -13px; left: 14px; background: #fff; padding: 0 6px; font-weight: 700; color: var(--red); font-size: 0.82rem; }
+  .ns-irrational-box { flex: 1; min-width: 140px; border: 3px solid var(--gold); border-radius: 10px; padding: 1.5rem 1rem; text-align: center; position: relative; display: flex; align-items: center; justify-content: center; }
+  .ns-irrational-label { position: absolute; top: -13px; left: 14px; background: #fff; padding: 0 6px; font-weight: 700; color: var(--gold); font-size: 0.82rem; }
+  .ns-irrational-box .ns-examples { font-size: 0.85rem; color: var(--slate); }
+  .ns-integers-box { border: 2px solid var(--navy); border-radius: 8px; padding: 1.5rem 0.9rem 0.9rem; position: relative; margin-top: 0.3rem; }
+  .ns-integers-label { position: absolute; top: -12px; left: 12px; background: #fff; padding: 0 6px; font-weight: 700; color: var(--navy); font-size: 0.78rem; }
+  .ns-whole-box { border: 2px solid var(--slate); border-radius: 6px; padding: 1.3rem 0.8rem 0.8rem; position: relative; margin-top: 0.3rem; }
+  .ns-whole-label { position: absolute; top: -11px; left: 10px; background: #fff; padding: 0 6px; font-weight: 700; color: var(--slate); font-size: 0.75rem; }
+  .ns-natural-box { border: 2px dashed var(--slate); border-radius: 6px; padding: 0.9rem; text-align: center; font-size: 0.8rem; color: var(--slate); }
+
+  /* ── NUMBER SYSTEMS: NUMBER EXPLORER (reusable interactive) ── */
+  .ns-chip-row { display: flex; gap: 0.6rem; flex-wrap: wrap; justify-content: center; margin: 1.3rem 0; }
+  .ns-chip {
+    background: #fff; border: 2px solid var(--border); border-radius: 30px;
+    padding: 0.5rem 1.1rem; font-size: 1.05rem; font-weight: 700;
+    font-family: 'Source Sans 3', sans-serif; color: var(--navy);
+    cursor: pointer; transition: all 0.15s;
+  }
+  .ns-chip:hover { border-color: var(--gold); background: rgba(212,175,55,0.1); }
+  .ns-chip.active { background: var(--red); color: #fff; border-color: var(--red); }
+  .ns-category-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; margin-top: 1rem; }
+  @media (max-width: 600px) { .ns-category-grid { grid-template-columns: repeat(2, 1fr); } }
+  .ns-category-item {
+    border-radius: var(--radius); padding: 0.6rem 0.7rem; font-size: 0.85rem; font-weight: 600;
+    text-align: center; border: 1.5px solid var(--border); color: var(--slate);
+    background: rgba(0,0,0,0.02);
+  }
+  .ns-category-item.yes { background: rgba(76,175,80,0.15); border-color: #4CAF50; color: #2e6b31; }
+  .ns-category-item.no { background: rgba(229,115,115,0.1); border-color: rgba(229,115,115,0.5); color: #a94442; opacity: 0.75; }
+  .ns-explorer-reason { text-align: center; color: var(--slate); font-size: 0.9rem; font-style: italic; margin-top: 0.9rem; min-height: 1.3rem; }
+
+  /* ── BASE SYSTEMS: CONVERSION GRID (reusable) ── */
+  .bs-base-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.6rem; margin-top: 1.2rem; }
+  @media (max-width: 680px) { .bs-base-grid { grid-template-columns: repeat(2, 1fr); } }
+  .bs-base-item {
+    border-radius: var(--radius); padding: 0.8rem 0.6rem; text-align: center;
+    border: 1.5px solid var(--gold); background: rgba(212,150,62,0.08);
+  }
+  .bs-base-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--slate); margin-bottom: 0.3rem; }
+  .bs-base-value { font-size: 1.25rem; font-weight: 700; color: var(--navy); font-family: 'Source Sans 3', sans-serif; word-break: break-all; }
+  .bs-breakdown { margin-top: 1rem; text-align: center; color: var(--slate); font-size: 0.9rem; font-style: italic; }
+
+  /* ── VINCULUM / BAR BRACKET (reusable) ── */
+  .vinculum { text-decoration: overline; text-decoration-thickness: 2px; padding-top: 2px; }
+
+  @media (max-width: 680px) {
+    .top-bar { display: none; }
+    nav {
+      padding: 0 1rem;
+      height: 68px;
+      border-bottom-width: 2px;
+    }
+    .nav-links { display: none; }
+    .nav-brand-name {
+      font-size: 1.35rem;
+      white-space: nowrap;
+    }
+    .nav-brand-sub {
+      font-size: 0.62rem;
+      letter-spacing: 0.07em;
+    }
+    .footer-top { grid-template-columns: 1fr; gap: 2rem; padding: 2rem 1.25rem; }
+    footer { padding: 2rem 1.25rem 0; }
+  }
+
+  /* ── FOOTER (copied from site) ── */
+  footer { background: var(--navy); padding: 3.5rem 3rem 0; }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 2.5rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .footer-brand-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+  }
+  .footer-brand-name span { color: var(--red); }
+  .footer-desc { color: rgba(255,255,255,0.45); font-size: 0.9rem; margin-top: 0.8rem; max-width: 320px; }
+  .footer-col h4 {
+    font-family: 'EB Garamond', serif;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 0.7rem; }
+  .footer-col a {
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.2s;
+  }
+  .footer-col a:hover { color: var(--gold); }
+  .footer-bottom {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer-bottom p { color: rgba(255,255,255,0.35); font-size: 0.8rem; }
+  .footer-bottom-links { display: flex; gap: 1.3rem; list-style: none; }
+  .footer-bottom-links a { color: rgba(255,255,255,0.35); text-decoration: none; font-size: 0.8rem; }
+  .footer-bottom-links a:hover { color: rgba(255,255,255,0.6); }
+  @media (max-width: 900px) {
+    .footer-top { grid-template-columns: 1fr 1fr; }
+    footer { padding: 2rem 1.25rem 0; }
+  }
+</style>
+<style id="edusambam-reader-style">
+.mark{width:48px;height:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px;border-radius:14px;background:#eef6ff;box-shadow:0 2px 7px rgba(8,47,99,.10);flex:0 0 48px}.mark i{display:block;border-radius:50%;background:#0b4ea2;min-width:0;min-height:0}.mark i:nth-child(5){background:#d4a017}.edusambam-reader{max-width:980px;margin:1.2rem auto 0;padding:1rem 1.1rem;border:1px solid #d7e4ef;border-radius:14px;background:linear-gradient(135deg,#f7fbff,#fff);box-shadow:0 6px 18px rgba(11,45,92,.08)}.edusambam-reader strong{display:block;color:#0b55a5;font-size:.9rem;letter-spacing:.04em}.edusambam-reader .reader-slogan{color:#b27e08;font-weight:900;margin-top:.25rem;font-size:.82rem}.edusambam-reader .reader-help{color:#607086;font-size:.8rem;margin:.3rem 0 .7rem}.edusambam-reader .reader-controls{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}.edusambam-reader button,.edusambam-reader select{border:1px solid #c9d9e8;background:#fff;color:#153b6e;border-radius:8px;padding:.48rem .65rem;font-weight:800;cursor:pointer}.edusambam-reader button:first-child{background:#0b55a5;color:#fff;border-color:#0b55a5}.edusambam-reader .reader-status{display:block;color:#607086;font-size:.75rem;margin-top:.55rem}.edusambam-reader .reader-progress{height:4px;background:#e4edf6;border-radius:99px;margin-top:.6rem;overflow:hidden}.edusambam-reader .reader-progress span{display:block;width:0;height:100%;background:#e1ad1c;transition:width .2s linear}@media(max-width:600px){.edusambam-reader{margin-left:0;margin-right:0}.edusambam-reader .reader-controls button,.edusambam-reader .reader-controls select{flex:1;min-width:75px}}
+</style></head>
+<body>
+<!-- TOP BAR -->
+<div class="top-bar">
+<p>Established 2026  ·  Free Educational Resources for All</p>
+<ul class="top-bar-links">
+<li><a href="index.html">Contact</a></li>
+<li><a href="index.html">About</a></li>
+<li><a href="index.html">Write for Us</a></li>
+</ul>
+</div>
+<!-- NAV -->
+<nav>
+<a class="nav-brand" href="index.html" style="display:flex; flex-direction:row; align-items:center; justify-content:flex-start; gap:0.6rem; text-decoration:none; overflow:hidden; flex:1; min-width:0;">
+<span aria-label="EDUSAMBAM six-circle logo" class="mark"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+<div style="display:flex; flex-direction:column; line-height:1.3; min-width:0;">
+<span class="nav-brand-name" style="white-space:nowrap;">EDUSAMBAM</span>
+<span class="nav-brand-sub">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM.</span>
+</div>
+</a>
+<ul class="nav-links">
+<li><a href="index.html#english">English</a></li>
+<li><a href="index.html">Science</a></li>
+<li><a href="index.html">Mathematics</a></li>
+<li><a href="index.html">Health</a></li>
+<li><a href="index.html">General Knowledge</a></li>
+<li><a href="index.html">Computer &amp; AI</a></li>
+<li><a href="index.html#resources">Resources</a></li>
+</ul>
+</nav>
+<div class="article-hero">
+<div class="breadcrumb"><a href="index.html">Home</a>  /  <a href="index.html">Mathematics</a>  /  Brackets, Fractions &amp; Decimals in BODMAS</div>
+<div class="article-hero-tag">Number Sense · Topic XIII</div>
+<h1>Brackets, Fractions &amp; Decimals in BODMAS</h1>
+<p class="sub">BODMAS covers four kinds of brackets, not just one — and once fractions and decimals join an expression, a few extra habits become essential. This guide fills in both gaps.</p>
+<div class="article-hero-meta">
+<span>EDUSAMBAM Editorial Team</span>
+<span>|</span>
+<span>17 min read</span>
+<span>|</span>
+<span>Mathematics</span>
+</div>
+</div><div aria-label="EDUSAMBAM article reader" class="edusambam-reader"><strong>🔊 LISTEN TO THIS ARTICLE</strong><div class="reader-slogan">SAVE YOUR EYES • IMPROVE YOUR LISTENING</div><div class="reader-help">Listen to the article instead of relying only on continuous screen reading.</div><div class="reader-controls"><button data-reader="play" type="button">▶ Play</button><button data-reader="pause" type="button">⏸ Pause</button><button data-reader="resume" type="button">▶ Resume</button><button data-reader="stop" type="button">■ Stop</button><select aria-label="Reading speed"><option value="1">1×</option><option value="0.8">0.8×</option><option value="1.2">1.2×</option></select></div><div aria-hidden="true" class="reader-progress"><span></span></div><small class="reader-status">Ready to read the article.</small></div>
+<div class="article-wrap">
+<p class="lead">Our <a href="article-viewer.html#bodmas-dmas-rules.html">BODMAS &amp; DMAS Rules</a> article covered the core order of operations. This companion guide goes deeper into two things that article only touched lightly: the four different kinds of brackets and the order they're removed in, and how fractions and decimals behave once they're dropped into a BODMAS expression.</p>
+<h2><span class="num">1.</span>Why Bracket Order Matters</h2>
+<p>The "B" in BODMAS is often taught as if there's only one kind of bracket. In fact, there are four, and textbooks that use several types in the same expression expect them to be removed in a specific, agreed order — not just "whichever looks innermost."</p>
+<h2><span class="num">2.</span>The Four Types of Brackets</h2>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Bracket</th><th>Symbol</th><th>Also Called</th></tr>
+<tr><td>Bar</td><td><span class="vinculum">4 − 2</span></td><td>Vinculum, line bracket</td></tr>
+<tr><td>Parentheses</td><td>( )</td><td>Round brackets, small brackets</td></tr>
+<tr><td>Curly Brackets</td><td>{ }</td><td>Braces</td></tr>
+<tr><td>Square Brackets</td><td>[ ]</td><td>Box brackets</td></tr>
+</table>
+</div>
+<p>The <strong>bar (vinculum)</strong> is the oldest and least common today — a line drawn directly over the terms it groups, instead of symbols on either side. It still appears in specific places: grouping a numerator over a fraction line, or marking a repeating decimal.</p>
+<h2><span class="num">3.</span>The Traditional Removal Order</h2>
+<p>When an expression mixes several bracket types together, the standard convention removes them in this fixed order:</p>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Order</th><th>Bracket</th></tr>
+<tr><td>1st</td><td>Bar (vinculum)</td></tr>
+<tr><td>2nd</td><td>Parentheses ( )</td></tr>
+<tr><td>3rd</td><td>Curly brackets { }</td></tr>
+<tr><td>4th</td><td>Square brackets [ ]</td></tr>
+</table>
+</div>
+<p>In practice, this order usually lines up with "innermost first" anyway, since textbooks nest brackets in exactly this sequence — square brackets on the outside, then curly, then parentheses, then a bar innermost of all.</p>
+<div class="example-box">
+<div class="ex-label">Example: Bar First</div>
+<p>8 + <span class="vinculum">4 − 2</span>: the bar groups "4 − 2" as if it were in its own brackets. Resolve the bar first: 4 − 2 = 2. Then: 8 + 2 = <strong>10</strong>.</p>
+</div>
+<div class="example-box">
+<div class="ex-label">Example: All Four Brackets Together</div>
+<p>100 − [20 + {10 − (6 ÷ 2)}] ÷ 2<br/>
+    Step 1 — parentheses (innermost): 6 ÷ 2 = 3<br/>
+    Step 2 — curly brackets: 10 − 3 = 7<br/>
+    Step 3 — square brackets: 20 + 7 = 27<br/>
+    Step 4 — division: 27 ÷ 2 = 13.5<br/>
+    Step 5 — subtraction: 100 − 13.5 = <strong>86.5</strong></p>
+</div>
+<div class="fixit-challenge">
+<div class="fixit-wrong">Removing square brackets before curly brackets because "square comes first alphabetically"</div>
+<p>The removal order has nothing to do with alphabetical order or which symbol looks more important — it follows the fixed bar → parentheses → curly → square sequence.</p>
+<button class="fixit-toggle-btn" onclick="toggleFix('fix1')">Show the Fix</button>
+<div class="fixit-explain" id="fix1">
+<p><strong>The fix:</strong> always work from the innermost bracket type outward: bar first, then ( ), then { }, then [ ] last. Square brackets are almost always the outermost layer, resolved last.</p>
+</div>
+</div>
+<h2><span class="num">4.</span>The Fraction Bar Is a Bracket Too</h2>
+<p>A fraction's horizontal bar does more than separate numerator from denominator — it silently groups everything written above it and everything written below it, exactly like a bracket. Only terms actually written on the fraction bar are grouped; anything sitting outside the fraction stays separate.</p>
+<div class="example-box">
+<div class="ex-label">Example</div>
+<p>(3+5) ÷ 4 = 8 ÷ 4 = <strong>2</strong> — both 3 and 5 sit "on the bar," so they're grouped together before dividing.<br/>
+    Compare: 3 + 5÷4 = 3 + 1.25 = <strong>4.25</strong> — here, only the 5 is written over the fraction bar, so only 5÷4 is grouped; the 3 stays separate.</p>
+</div>
+<div class="fixit-challenge">
+<div class="fixit-wrong">Treating "3 + 5/4" as if it means "(3+5)/4"</div>
+<p>Without brackets, only the term actually written as part of the fraction gets grouped by the fraction bar.</p>
+<button class="fixit-toggle-btn" onclick="toggleFix('fix2')">Show the Fix</button>
+<div class="fixit-explain" id="fix2">
+<p><strong>The fix:</strong> 3 + 5/4 means 3 + (5÷4) = 3 + 1.25 = 4.25. If both 3 and 5 were meant to be added before dividing by 4, the expression would need explicit brackets: (3+5)/4 = 2. Always check exactly what sits directly above and below the fraction bar.</p>
+</div>
+</div>
+<h2><span class="num">5.</span>Fractions in BODMAS Expressions</h2>
+<p>Once fractions appear inside a larger expression, BODMAS still applies exactly as before — brackets first, then multiplication/division, then addition/subtraction — just using fraction arithmetic at each step instead of whole numbers.</p>
+<div class="example-box">
+<div class="ex-label">Example A</div>
+<p>(1/2 + 1/4) × 8<br/>
+    Brackets first, common denominator: 1/2 + 1/4 = 2/4 + 1/4 = 3/4<br/>
+    Then multiply: 3/4 × 8 = <strong>6</strong></p>
+</div>
+<div class="example-box">
+<div class="ex-label">Example B</div>
+<p>3/4 × (2/3 + 1/6)<br/>
+    Brackets first: 2/3 + 1/6 = 4/6 + 1/6 = 5/6<br/>
+    Then multiply: 3/4 × 5/6 = 15/24 = <strong>5/8</strong></p>
+</div>
+<div class="example-box">
+<div class="ex-label">Example C</div>
+<p>2/3 + 1/3 × 3/5<br/>
+    Multiply first: 1/3 × 3/5 = 3/15 = 1/5<br/>
+    Then add: 2/3 + 1/5 = 10/15 + 3/15 = <strong>13/15</strong></p>
+</div>
+<h2><span class="num">6.</span>Decimals in BODMAS Expressions</h2>
+<p>Decimals follow BODMAS exactly the same way. The only extra care needed is keeping the decimal point aligned correctly through each multiplication, division, and addition step.</p>
+<div class="example-box">
+<div class="ex-label">Example A</div>
+<p>2.5 + 3 × 0.4<br/>
+    Multiply first: 3 × 0.4 = 1.2<br/>
+    Then add: 2.5 + 1.2 = <strong>3.7</strong></p>
+</div>
+<div class="example-box">
+<div class="ex-label">Example B</div>
+<p>2.5 + 3 × 0.4 − (1.2 ÷ 0.6)<br/>
+    Brackets first: 1.2 ÷ 0.6 = 2<br/>
+    Multiply: 3 × 0.4 = 1.2<br/>
+    Left to right: 2.5 + 1.2 = 3.7, then 3.7 − 2 = <strong>1.7</strong></p>
+</div>
+<div class="example-box">
+<div class="ex-label">Example C</div>
+<p>0.5 × (3.6 + 2.4) − 1.8<br/>
+    Brackets first: 3.6 + 2.4 = 6.0<br/>
+    Multiply: 0.5 × 6.0 = 3.0<br/>
+    Subtract: 3.0 − 1.8 = <strong>1.2</strong></p>
+</div>
+<div class="fixit-challenge">
+<div class="fixit-wrong">6.4 ÷ 0.8 + 1.5 × 2 solved as 6.4 ÷ (0.8+1.5) × 2</div>
+<p>Grouping terms that aren't actually in brackets is one of the most common decimal-BODMAS mistakes.</p>
+<button class="fixit-toggle-btn" onclick="toggleFix('fix3')">Show the Fix</button>
+<div class="fixit-explain" id="fix3">
+<p><strong>The fix:</strong> with no brackets present, division and multiplication are resolved left to right as separate steps: 6.4 ÷ 0.8 = 8, and 1.5 × 2 = 3. Then add: 8 + 3 = <strong>11</strong>. Never combine terms across an operation unless brackets say so.</p>
+</div>
+</div>
+<!-- BRACKET & FRACTION SOLVER INTERACTIVE -->
+<div class="drill-section">
+<div class="section-eyebrow">Try It Yourself</div>
+<h2>Bracket &amp; Fraction Solver</h2>
+<p class="drill-intro">Tap any expression below to see it solved step by step, including fraction and decimal expressions.</p>
+<div class="ns-chip-row" id="bfChipRow"></div>
+<div class="pv-info-panel">
+<p class="pv-info-placeholder" id="bfInfoPlaceholder">Tap an expression above to see the full step-by-step solution.</p>
+<p class="pv-info-result" id="bfInfoResult" style="display:none;"></p>
+</div>
+</div>
+<div class="real-world-box">
+<div class="rw-label">Real-World Example</div>
+<p>A recipe calls for (3/4 + 1/2) cups of flour per batch, tripled for a party: (3/4 + 1/2) × 3 = (5/4) × 3 = 15/4 = 3¾ cups. A shopping receipt calculating a discount uses decimals the same way: $45.00 − (0.20 × $45.00) = $45.00 − $9.00 = $36.00 — brackets, then multiplication, then subtraction, exactly as BODMAS requires.</p>
+</div>
+<div class="fun-fact-box">
+<div class="fun-fact-label">Did You Know?</div>
+<p>The vinculum bar is also used to mark repeating decimals — a bar drawn over the repeating digits, like 0.<span class="vinculum">3</span> to mean 0.333... forever. It's the same grouping symbol, used for a completely different purpose.</p>
+</div>
+<!-- PRACTICE ARENA -->
+<div class="drill-section">
+<div class="section-eyebrow">Practice Arena</div>
+<h2>Solve It</h2>
+<p class="drill-intro">Tap the correct answer for each question. Your score is tracked as you go, and your best score is saved on this device.</p>
+<div class="nl-drill-progress" id="bfProgress">Question 1 of 8  ·  Best score: <span id="bfBestScore">0</span> / 8</div>
+<div class="pv-drill-question" id="bfDrillQuestion"></div>
+<div class="pv-drill-choices" id="bfDrillChoices"></div>
+<div class="drill-feedback" id="bfDrillFeedback"></div>
+<div class="nl-drill-actions">
+<button class="drill-btn" id="bfNextBtn" onclick="nextBfQuestion()" style="display:none;">Next Question</button>
+<button class="drill-btn" id="bfNewSetBtn" onclick="newBfSet()" style="display:none;">Play Again</button>
+</div>
+</div>
+<h2><span class="num">7.</span>Why This Topic Matters</h2>
+<p>Real formulas — in recipes, finance, engineering, and science — almost never stick to whole numbers or a single bracket type. Being fluent with mixed brackets, fractions, and decimals together is what turns BODMAS from a classroom rule into a genuinely usable, everyday skill.</p>
+<!-- QUIZ SECTION -->
+<div class="quiz-section">
+<div class="section-eyebrow">Test Your Understanding</div>
+<h2>Practice Questions</h2>
+<p class="quiz-intro">12 questions. Select an answer for each, then submit to see your score instantly.</p>
+<div class="squiz-progress"><div class="squiz-progress-fill" id="squizProgressFill"></div></div>
+<div class="squiz-progress-label" id="squizProgressLabel">0 of 12 answered</div>
+<div class="squiz-results" id="squizResults">
+<div class="squiz-score-big" id="squizScoreBig">0/12</div>
+<div class="squiz-score-label" id="squizScoreLabel">You scored 0%</div>
+<div class="squiz-score-tier" id="squizScoreTier">Keep practicing</div>
+<div><button class="squiz-retake-btn" onclick="retakeQuiz()">Retake Quiz</button></div>
+</div>
+<form id="squizForm">
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">1.</span>Which bracket is traditionally removed first when several types appear together?</div>
+<div class="squiz-option"><input id="sq1a" name="sq1" type="radio" value="0"/><label for="sq1a">A. Square brackets [ ]</label></div>
+<div class="squiz-option"><input id="sq1b" name="sq1" type="radio" value="1"/><label for="sq1b">B. Curly brackets { }</label></div>
+<div class="squiz-option"><input id="sq1c" name="sq1" type="radio" value="2"/><label for="sq1c">C. Bar (vinculum)</label></div>
+<div class="squiz-option"><input id="sq1d" name="sq1" type="radio" value="3"/><label for="sq1d">D. Parentheses ( )</label></div>
+</div>
+<div class="squiz-item" data-correct="3">
+<div class="squiz-q"><span class="qnum">2.</span>Which bracket is typically removed last?</div>
+<div class="squiz-option"><input id="sq2a" name="sq2" type="radio" value="0"/><label for="sq2a">A. Bar (vinculum)</label></div>
+<div class="squiz-option"><input id="sq2b" name="sq2" type="radio" value="1"/><label for="sq2b">B. Parentheses ( )</label></div>
+<div class="squiz-option"><input id="sq2c" name="sq2" type="radio" value="2"/><label for="sq2c">C. Curly brackets { }</label></div>
+<div class="squiz-option"><input id="sq2d" name="sq2" type="radio" value="3"/><label for="sq2d">D. Square brackets [ ]</label></div>
+</div>
+<div class="squiz-item" data-correct="0">
+<div class="squiz-q"><span class="qnum">3.</span>What is 100 − [20 + {10 − (6 ÷ 2)}] ÷ 2?</div>
+<div class="squiz-option"><input id="sq3a" name="sq3" type="radio" value="0"/><label for="sq3a">A. 86.5</label></div>
+<div class="squiz-option"><input id="sq3b" name="sq3" type="radio" value="1"/><label for="sq3b">B. 63.5</label></div>
+<div class="squiz-option"><input id="sq3c" name="sq3" type="radio" value="2"/><label for="sq3c">C. 27</label></div>
+<div class="squiz-option"><input id="sq3d" name="sq3" type="radio" value="3"/><label for="sq3d">D. 13.5</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">4.</span>What is (3+5) ÷ 4?</div>
+<div class="squiz-option"><input id="sq4a" name="sq4" type="radio" value="0"/><label for="sq4a">A. 4.25</label></div>
+<div class="squiz-option"><input id="sq4b" name="sq4" type="radio" value="1"/><label for="sq4b">B. 2</label></div>
+<div class="squiz-option"><input id="sq4c" name="sq4" type="radio" value="2"/><label for="sq4c">C. 8</label></div>
+<div class="squiz-option"><input id="sq4d" name="sq4" type="radio" value="3"/><label for="sq4d">D. 1.25</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">5.</span>What is 3 + 5/4?</div>
+<div class="squiz-option"><input id="sq5a" name="sq5" type="radio" value="0"/><label for="sq5a">A. 2</label></div>
+<div class="squiz-option"><input id="sq5b" name="sq5" type="radio" value="1"/><label for="sq5b">B. 4.25</label></div>
+<div class="squiz-option"><input id="sq5c" name="sq5" type="radio" value="2"/><label for="sq5c">C. 8</label></div>
+<div class="squiz-option"><input id="sq5d" name="sq5" type="radio" value="3"/><label for="sq5d">D. 1</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">6.</span>What is (1/2 + 1/4) × 8?</div>
+<div class="squiz-option"><input id="sq6a" name="sq6" type="radio" value="0"/><label for="sq6a">A. 4</label></div>
+<div class="squiz-option"><input id="sq6b" name="sq6" type="radio" value="1"/><label for="sq6b">B. 5</label></div>
+<div class="squiz-option"><input id="sq6c" name="sq6" type="radio" value="2"/><label for="sq6c">C. 6</label></div>
+<div class="squiz-option"><input id="sq6d" name="sq6" type="radio" value="3"/><label for="sq6d">D. 8</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">7.</span>What is 2/3 + 1/3 × 3/5?</div>
+<div class="squiz-option"><input id="sq7a" name="sq7" type="radio" value="0"/><label for="sq7a">A. 3/5</label></div>
+<div class="squiz-option"><input id="sq7b" name="sq7" type="radio" value="1"/><label for="sq7b">B. 13/15</label></div>
+<div class="squiz-option"><input id="sq7c" name="sq7" type="radio" value="2"/><label for="sq7c">C. 1</label></div>
+<div class="squiz-option"><input id="sq7d" name="sq7" type="radio" value="3"/><label for="sq7d">D. 1/5</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">8.</span>What is 2.5 + 3 × 0.4?</div>
+<div class="squiz-option"><input id="sq8a" name="sq8" type="radio" value="0"/><label for="sq8a">A. 2.2</label></div>
+<div class="squiz-option"><input id="sq8b" name="sq8" type="radio" value="1"/><label for="sq8b">B. 11.6</label></div>
+<div class="squiz-option"><input id="sq8c" name="sq8" type="radio" value="2"/><label for="sq8c">C. 3.7</label></div>
+<div class="squiz-option"><input id="sq8d" name="sq8" type="radio" value="3"/><label for="sq8d">D. 1.9</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">9.</span>What is 6.4 ÷ 0.8 + 1.5 × 2?</div>
+<div class="squiz-option"><input id="sq9a" name="sq9" type="radio" value="0"/><label for="sq9a">A. 2.06</label></div>
+<div class="squiz-option"><input id="sq9b" name="sq9" type="radio" value="1"/><label for="sq9b">B. 11</label></div>
+<div class="squiz-option"><input id="sq9c" name="sq9" type="radio" value="2"/><label for="sq9c">C. 5.9</label></div>
+<div class="squiz-option"><input id="sq9d" name="sq9" type="radio" value="3"/><label for="sq9d">D. 8.9</label></div>
+</div>
+<div class="squiz-item" data-correct="0">
+<div class="squiz-q"><span class="qnum">10.</span>What is 0.5 × (3.6 + 2.4) − 1.8?</div>
+<div class="squiz-option"><input id="sq10a" name="sq10" type="radio" value="0"/><label for="sq10a">A. 1.2</label></div>
+<div class="squiz-option"><input id="sq10b" name="sq10" type="radio" value="1"/><label for="sq10b">B. 3.0</label></div>
+<div class="squiz-option"><input id="sq10c" name="sq10" type="radio" value="2"/><label for="sq10c">C. 4.8</label></div>
+<div class="squiz-option"><input id="sq10d" name="sq10" type="radio" value="3"/><label for="sq10d">D. 0.9</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">11.</span>What does a fraction bar do to the numbers written directly above and below it?</div>
+<div class="squiz-option"><input id="sq11a" name="sq11" type="radio" value="0"/><label for="sq11a">A. Nothing special</label></div>
+<div class="squiz-option"><input id="sq11b" name="sq11" type="radio" value="1"/><label for="sq11b">B. Groups them, exactly like a bracket</label></div>
+<div class="squiz-option"><input id="sq11c" name="sq11" type="radio" value="2"/><label for="sq11c">C. Makes them automatically negative</label></div>
+<div class="squiz-option"><input id="sq11d" name="sq11" type="radio" value="3"/><label for="sq11d">D. Rounds them to whole numbers</label></div>
+</div>
+<div class="squiz-item" data-correct="0">
+<div class="squiz-q"><span class="qnum">12.</span>What is 3/4 × (2/3 + 1/6)?</div>
+<div class="squiz-option"><input id="sq12a" name="sq12" type="radio" value="0"/><label for="sq12a">A. 5/8</label></div>
+<div class="squiz-option"><input id="sq12b" name="sq12" type="radio" value="1"/><label for="sq12b">B. 5/6</label></div>
+<div class="squiz-option"><input id="sq12c" name="sq12" type="radio" value="2"/><label for="sq12c">C. 3/4</label></div>
+<div class="squiz-option"><input id="sq12d" name="sq12" type="radio" value="3"/><label for="sq12d">D. 1/2</label></div>
+</div>
+<button class="squiz-submit-btn" disabled="" id="squizSubmitBtn" onclick="submitQuiz()" type="button">Answer all questions to submit</button>
+</form>
+</div>
+<div class="article-footer-nav">
+<a href="article-viewer.html#bodmas-dmas-rules.html">← Back to BODMAS &amp; DMAS Rules</a>
+<a href="article-viewer.html#divisibility-rules.html">Next: Divisibility Rules →</a>
+</div>
+</div>
+<script>
+  (function() {
+    const form = document.getElementById('squizForm');
+    const submitBtn = document.getElementById('squizSubmitBtn');
+    const progressFill = document.getElementById('squizProgressFill');
+    const progressLabel = document.getElementById('squizProgressLabel');
+    const totalQuestions = document.querySelectorAll('.squiz-item').length;
+
+    function countAnswered() {
+      let count = 0;
+      for (let i = 1; i <= totalQuestions; i++) {
+        if (form.querySelector(`input[name="sq${i}"]:checked`)) count++;
+      }
+      return count;
+    }
+
+    function updateProgress() {
+      const answered = countAnswered();
+      progressFill.style.width = (answered / totalQuestions * 100) + '%';
+      progressLabel.textContent = answered + ' of ' + totalQuestions + ' answered';
+      submitBtn.disabled = answered < totalQuestions;
+      submitBtn.textContent = answered < totalQuestions ? 'Answer all questions to submit' : 'Submit Quiz';
+      document.querySelectorAll('.squiz-option').forEach(opt => opt.classList.remove('selected'));
+      form.querySelectorAll('input[type="radio"]:checked').forEach(input => {
+        input.closest('.squiz-option').classList.add('selected');
+      });
+    }
+
+    form.addEventListener('change', updateProgress);
+
+    window.submitQuiz = function() {
+      let score = 0;
+      const questions = document.querySelectorAll('.squiz-item');
+      questions.forEach((q, idx) => {
+        const qnum = idx + 1;
+        const correctIdx = q.getAttribute('data-correct');
+        const selected = form.querySelector(`input[name="sq${qnum}"]:checked`);
+        const options = q.querySelectorAll('.squiz-option');
+        options.forEach((opt, optIdx) => {
+          opt.querySelector('input').disabled = true;
+          if (String(optIdx) === correctIdx) opt.classList.add('correct-answer');
+        });
+        if (selected && selected.value === correctIdx) {
+          score++;
+        } else if (selected) {
+          selected.closest('.squiz-option').classList.add('wrong-answer');
+        }
+      });
+
+      const percent = Math.round((score / totalQuestions) * 100);
+      document.getElementById('squizScoreBig').textContent = score + '/' + totalQuestions;
+      document.getElementById('squizScoreLabel').textContent = 'You scored ' + percent + '%';
+
+      let tier = 'Keep practicing';
+      if (percent === 100) tier = 'Perfect score!';
+      else if (percent >= 80) tier = 'Excellent work';
+      else if (percent >= 60) tier = 'Good effort';
+      else if (percent >= 40) tier = 'Getting there';
+      document.getElementById('squizScoreTier').textContent = tier;
+
+      document.getElementById('squizResults').classList.add('visible');
+      submitBtn.style.display = 'none';
+      document.getElementById('squizResults').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    window.retakeQuiz = function() {
+      form.reset();
+      document.querySelectorAll('.squiz-option').forEach(opt => {
+        opt.classList.remove('selected', 'correct-answer', 'wrong-answer');
+        opt.querySelector('input').disabled = false;
+      });
+      document.getElementById('squizResults').classList.remove('visible');
+      submitBtn.style.display = 'block';
+      updateProgress();
+      document.getElementById('squizForm').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    updateProgress();
+  })();
+</script>
+<footer>
+<div class="footer-top">
+<div class="footer-brand">
+<div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.75rem;">
+<span aria-label="EDUSAMBAM six-circle logo" class="mark"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+<a class="footer-brand-name" href="index.html">EDUSAMBAM</a>
+</div>
+<p>A trusted, anonymous source of knowledge for curious minds everywhere — learn, practise, grow and succeed.</p>
+</div>
+<div class="footer-col">
+<h4>Content</h4>
+<ul>
+<li><a href="index.html#english">English Language</a></li>
+<li><a href="index.html">Science</a></li>
+<li><a href="index.html">Mathematics</a></li>
+<li><a href="index.html">Health</a></li>
+<li><a href="index.html">General Knowledge</a></li>
+<li><a href="index.html">Computer &amp; AI</a></li>
+<li><a href="index.html#resources">Resources</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>About</h4>
+<ul>
+<li><a href="index.html">Our Mission</a></li>
+<li><a href="index.html">The Team</a></li>
+<li><a href="index.html">Write for Us</a></li>
+<li><a href="index.html">Contact Us</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Legal</h4>
+<ul>
+<li><a href="index.html">Privacy Policy</a></li>
+<li><a href="index.html">Terms of Use</a></li>
+<li><a href="index.html">Cookie Settings</a></li>
+<li><a href="index.html">Accessibility</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2026 EDUSAMBAM. All rights reserved. &nbsp;·&nbsp; EDUSAMBAM &middot; EduInfoAssessmentHub &middot; The Learners' Ladder.</p>
+<ul class="footer-bottom-links">
+<li><a href="index.html">Privacy</a></li>
+<li><a href="index.html">Terms</a></li>
+<li><a href="index.html">Sitemap</a></li>
+</ul>
+</div>
+<div class="back-home-wrap"><a class="back-home" href="index.html#top">← Back to Home</a></div>
+</footer>
+<script id="edusambam-reader-script">
+(function(){
+ const box=document.querySelector('.edusambam-reader'); if(!box)return;
+ const root=document.querySelector('.article-wrap, .article-wrapper');
+ if(!root)return;
+ const status=box.querySelector('.reader-status'), progress=box.querySelector('.reader-progress span'), rate=box.querySelector('select');
+ let utterance=null, chunks=[], index=0, total=0, paused=false, stopped=false;
+ function text(){
+   const clone=root.cloneNode(true);
+   clone.querySelectorAll('.quiz-section,.drill-section,.squiz-section,.activity-section,.assessment-section,form,button,input,select,textarea,script,style').forEach(el=>el.remove());
+   return clone.textContent.replace(/\s+/g,' ').trim();
+ }
+ function splitText(t){const out=[];const max=1200;for(let i=0;i<t.length;i+=max)out.push(t.slice(i,i+max));return out;}
+ function updateProgress(){progress.style.width=(total?Math.min(100,Math.round((index/total)*100)):0)+'%';}
+ function speakNext(){
+   if(stopped||index>=total){if(index>=total&&!stopped){status.textContent='Reading finished.';progress.style.width='100%';}return;}
+   utterance=new SpeechSynthesisUtterance(chunks[index]);
+   utterance.rate=Number(rate.value)||1;
+   utterance.onend=function(){if(stopped)return;index++;updateProgress();speakNext();};
+   utterance.onerror=function(){if(!stopped)status.textContent='The reader stopped unexpectedly. Tap Resume to continue.';};
+   status.textContent='Reading article…';
+   speechSynthesis.speak(utterance);
+ }
+ function play(){
+   if(!('speechSynthesis' in window)){status.textContent='Audio reading is not supported by this browser.';return;}
+   speechSynthesis.cancel();
+   chunks=splitText(text());index=0;total=chunks.length;paused=false;stopped=false;updateProgress();speakNext();
+ }
+ function pause(){
+   if(!('speechSynthesis' in window))return;
+   if(speechSynthesis.speaking){speechSynthesis.pause();paused=true;status.textContent='Reader paused.';}
+ }
+ function resume(){
+   if(!('speechSynthesis' in window))return;
+   stopped=false;
+   if(speechSynthesis.paused){speechSynthesis.resume();paused=false;status.textContent='Reader resumed.';return;}
+   if(!speechSynthesis.speaking && chunks.length && index<total){paused=false;status.textContent='Reader resumed.';speakNext();return;}
+   if(!chunks.length){status.textContent='Nothing to resume. Tap Play to start.';return;}
+   status.textContent='Reader is already playing.';
+ }
+ function stop(){
+   speechSynthesis.cancel();chunks=[];index=0;total=0;paused=false;stopped=true;progress.style.width='0';status.textContent='Reader stopped.';
+ }
+ box.querySelector('[data-reader="play"]').addEventListener('click',play);
+ box.querySelector('[data-reader="pause"]').addEventListener('click',pause);
+ box.querySelector('[data-reader="resume"]').addEventListener('click',resume);
+ box.querySelector('[data-reader="stop"]').addEventListener('click',stop);
+ window.addEventListener('beforeunload',()=>{stopped=true;speechSynthesis.cancel();});
+})();
+</script></body>
+</html>

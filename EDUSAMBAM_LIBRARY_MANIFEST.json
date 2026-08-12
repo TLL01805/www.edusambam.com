@@ -1,0 +1,40 @@
+{
+  "version": "2.7",
+  "articles": 130,
+  "subjects": {
+    "English": 47,
+    "GK": 15,
+    "Computer Fundamentals": 9,
+    "AI": 11,
+    "Maths": 24,
+    "Physics": 8,
+    "Chemistry": 0,
+    "Biology": 6,
+    "Optometry": 0,
+    "Nutrition": 10
+  },
+  "circles": {
+    "S": [
+      "English",
+      "GK"
+    ],
+    "A": [
+      "Computer Fundamentals",
+      "AI"
+    ],
+    "M": [
+      "Maths",
+      "Physics"
+    ],
+    "B": [
+      "Chemistry",
+      "Biology"
+    ],
+    "A2": [
+      "Optometry"
+    ],
+    "M2": [
+      "Nutrition"
+    ]
+  }
+}

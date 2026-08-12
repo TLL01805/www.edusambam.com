@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ecosystems &amp; Biodiversity — EDUSAMBAM</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --red:       #8B0000;
+    --red-mid:   #A50000;
+    --red-lt:    #F9F0F0;
+    --navy:      #06244a;
+    --navy-mid:  #1C3151;
+    --gold:      #B8963E;
+    --gold-lt:   #F5EDD6;
+    --cream:     #FAF8F4;
+    --white:     #FFFFFF;
+    --ink:       #1A1A1A;
+    --slate:     #4A4A4A;
+    --muted:     #767676;
+    --border:    #D8D0C8;
+    --border-lt: #EDE8E0;
+    --radius:    4px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--ink);
+    background: var(--white);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── TOP BAR ── */
+  .top-bar {
+    background: var(--navy);
+    padding: 0.45rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .top-bar p {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.03em;
+  }
+  .top-bar-links { display: flex; gap: 1.5rem; list-style: none; }
+  .top-bar-links a {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+  .top-bar-links a:hover { color: white; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 200;
+    background: rgba(255,255,255,.97);
+    border-bottom: 3px solid var(--gold);
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    box-shadow: 0 2px 12px rgba(8,47,99,0.08);
+  }
+  .nav-brand { display: flex; flex-direction: column; line-height: 1; text-decoration: none; }
+  .nav-brand-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: 0.01em;
+  }
+  .nav-brand-name span { color: var(--red); }
+  .nav-brand-sub {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: rgba(13,27,42,0.6);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 0.25rem;
+  }
+  .nav-links { display: flex; gap: 0; list-style: none; }
+  .nav-links a {
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(13,27,42,0.75);
+    padding: 0 1.1rem;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--b, #0b4ea2); }
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+  }
+
+  /* ── ARTICLE HERO ── */
+  .article-hero {
+    background: linear-gradient(135deg,#06244a,#0b4ea2);
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+  }
+  .breadcrumb {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 1.1rem;
+    letter-spacing: 0.02em;
+  }
+  .breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--gold); }
+  .article-hero-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(184,150,62,0.4);
+    padding: 0.35rem 0.9rem;
+    border-radius: 30px;
+    margin-bottom: 1.25rem;
+  }
+  .article-hero h1 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 2.4rem;
+    color: white;
+    max-width: 760px;
+    margin: 0 auto 1rem;
+    line-height: 1.25;
+  }
+  .article-hero p.sub {
+    color: rgba(255,255,255,0.6);
+    max-width: 620px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.02rem;
+  }
+  .article-hero-meta {
+    display: flex; justify-content: center; gap: 0.9rem;
+    font-size: 0.8rem; color: rgba(255,255,255,0.45);
+    flex-wrap: wrap;
+  }
+
+  /* ── ARTICLE BODY ── */
+  .article-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+  .article-wrap h2 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 1.65rem;
+    color: var(--navy);
+    margin: 2.6rem 0 1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--border-lt);
+  }
+  .article-wrap h2 span.num {
+    color: var(--red);
+    margin-right: 0.5rem;
+    font-style: italic;
+  }
+  .article-wrap p { color: var(--slate); margin-bottom: 1rem; font-size: 1.02rem; }
+  .article-wrap ul { margin: 0 0 1.2rem 1.4rem; color: var(--slate); }
+  .article-wrap li { margin-bottom: 0.5rem; }
+  .article-wrap strong { color: var(--ink); }
+  .lead {
+    font-size: 1.15rem;
+    color: var(--ink);
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    border-left: 3px solid var(--gold);
+    padding-left: 1.2rem;
+    margin: 1.5rem 0 2rem;
+  }
+  .example-box {
+    background: var(--gold-lt);
+    border: 1px solid rgba(184,150,62,0.35);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 1.3rem 1.5rem;
+    margin: 1.3rem 0 1.8rem;
+  }
+  .example-box .ex-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.5rem;
+  }
+  .example-box p { color: var(--ink); margin-bottom: 0.4rem; font-size: 0.98rem; }
+  .example-box p:last-child { margin-bottom: 0; }
+
+  .real-world-box {
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 1.6rem 1.7rem;
+    margin: 2.4rem 0;
+  }
+  .real-world-box .rw-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.7rem;
+  }
+  .real-world-box p { color: rgba(255,255,255,0.8); margin-bottom: 0; font-size: 1rem; }
+
+  .table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+  table.pos-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+  table.pos-table th {
+    background: var(--navy);
+    color: white;
+    text-align: left;
+    padding: 0.7rem 0.9rem;
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+  }
+  table.pos-table td {
+    padding: 0.7rem 0.9rem;
+    border-bottom: 1px solid var(--border-lt);
+    color: var(--slate);
+  }
+  table.pos-table tr:nth-child(even) td { background: var(--cream); }
+
+  /* ── QUIZ ── */
+  .quiz-section {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem 1.7rem 1.5rem;
+    margin-top: 3rem;
+  }
+  .quiz-section .section-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.4rem;
+  }
+  .quiz-section h2 {
+    border: none; margin: 0 0 0.4rem; padding: 0;
+  }
+  .quiz-intro { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.6rem; }
+  .quiz-item {
+    background: var(--white);
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .quiz-q {
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.7rem;
+    font-size: 1rem;
+  }
+  .quiz-q .qnum { color: var(--red); margin-right: 0.4rem; }
+  .quiz-options { list-style: none; margin: 0 0 0.9rem; }
+  .quiz-options li {
+    padding: 0.4rem 0;
+    color: var(--slate);
+    font-size: 0.96rem;
+    padding-left: 1.4rem;
+    position: relative;
+  }
+  .quiz-options li::before {
+    content: "";
+    position: absolute; left: 0; top: 0.85rem;
+    width: 6px; height: 6px;
+    background: var(--border);
+    border-radius: 50%;
+  }
+  .show-answer-btn {
+    background: var(--navy);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 0.5rem 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .show-answer-btn:hover { background: var(--navy-mid); }
+  .quiz-answer {
+    display: none;
+    margin-top: 0.9rem;
+    background: var(--gold-lt);
+    border-left: 3px solid var(--gold);
+    padding: 0.7rem 1rem;
+    font-size: 0.92rem;
+    color: var(--ink);
+    border-radius: var(--radius);
+  }
+  .quiz-answer.visible { display: block; }
+  .quiz-answer strong { color: var(--red); }
+
+  .answer-key-toggle {
+    display: block;
+    width: 100%;
+    background: var(--red);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding: 0.9rem 1rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    margin-top: 0.6rem;
+    transition: background 0.2s;
+  }
+  .answer-key-toggle:hover { background: var(--red-mid); }
+
+  .article-footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-lt);
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .article-footer-nav a {
+    text-decoration: none;
+    color: var(--red);
+    font-weight: 600;
+    font-size: 0.92rem;
+  }
+  .article-footer-nav a:hover { text-decoration: underline; }
+
+  @media (max-width: 700px) {
+    .article-hero h1 { font-size: 1.7rem; }
+    .article-wrap { padding: 2rem 1.25rem 3rem; }
+  }
+  @media (max-width: 680px) {
+    .top-bar { display: none; }
+    nav {
+      padding: 0 1rem;
+      height: 68px;
+      border-bottom-width: 2px;
+    }
+    .nav-links { display: none; }
+    .nav-brand-name {
+      font-size: 1.35rem;
+      white-space: nowrap;
+    }
+    .nav-brand-sub {
+      font-size: 0.62rem;
+      letter-spacing: 0.07em;
+    }
+    .footer-top { grid-template-columns: 1fr; gap: 2rem; padding: 2rem 1.25rem; }
+    footer { padding: 2rem 1.25rem 0; }
+  }
+
+  /* ── FOOTER (copied from site) ── */
+  footer { background: var(--navy); padding: 3.5rem 3rem 0; }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 2.5rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .footer-brand-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+  }
+  .footer-brand-name span { color: var(--red); }
+  .footer-desc { color: rgba(255,255,255,0.45); font-size: 0.9rem; margin-top: 0.8rem; max-width: 320px; }
+  .footer-col h4 {
+    font-family: 'EB Garamond', serif;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 0.7rem; }
+  .footer-col a {
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.2s;
+  }
+  .footer-col a:hover { color: var(--gold); }
+  .footer-bottom {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer-bottom p { color: rgba(255,255,255,0.35); font-size: 0.8rem; }
+  .footer-bottom-links { display: flex; gap: 1.3rem; list-style: none; }
+  .footer-bottom-links a { color: rgba(255,255,255,0.35); text-decoration: none; font-size: 0.8rem; }
+  .footer-bottom-links a:hover { color: rgba(255,255,255,0.6); }
+  @media (max-width: 900px) {
+    .footer-top { grid-template-columns: 1fr 1fr; }
+    footer { padding: 2rem 1.25rem 0; }
+  }
+
+  /* SCORED QUIZ (click-to-highlight + real scoring) */
+  .squiz-progress {
+    background: var(--cream);
+    border-radius: 30px;
+    height: 8px;
+    overflow: hidden;
+    margin-bottom: 0.4rem;
+  }
+  .squiz-progress-fill {
+    background: var(--gold);
+    height: 100%;
+    width: 0%;
+    transition: width 0.25s ease;
+  }
+  .squiz-progress-label {
+    font-size: 0.78rem;
+    color: var(--muted);
+    text-align: right;
+    margin-bottom: 1.3rem;
+  }
+  .squiz-item {
+    background: var(--white);
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .squiz-q {
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+  }
+  .squiz-q .qnum { color: var(--red); margin-right: 0.4rem; }
+  .squiz-option {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .squiz-option:hover { border-color: var(--gold); }
+  .squiz-option input[type="radio"] { accent-color: var(--red); width: 16px; height: 16px; flex-shrink: 0; }
+  .squiz-option label { cursor: pointer; font-size: 0.94rem; color: var(--slate); flex: 1; }
+  .squiz-option.selected { border-color: var(--red); background: rgba(139,0,0,0.04); }
+  .squiz-option.correct-answer { border-color: #2e7d32; background: rgba(46,125,50,0.08); }
+  .squiz-option.wrong-answer { border-color: var(--red); background: rgba(139,0,0,0.08); }
+  .squiz-submit-btn {
+    display: block;
+    width: 100%;
+    background: var(--red);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.98rem;
+    font-weight: 600;
+    padding: 0.9rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    margin-top: 0.6rem;
+    transition: background 0.2s;
+  }
+  .squiz-submit-btn:hover { background: var(--red-mid); }
+  .squiz-submit-btn:disabled { background: var(--border); cursor: not-allowed; }
+  .squiz-results {
+    display: none;
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 2rem 1.6rem;
+    text-align: center;
+    margin-bottom: 1.8rem;
+  }
+  .squiz-results.visible { display: block; }
+  .squiz-results .squiz-score-big {
+    font-family: 'EB Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .squiz-results .squiz-score-label { color: rgba(255,255,255,0.7); font-size: 0.98rem; margin-bottom: 1rem; }
+  .squiz-results .squiz-score-tier {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    border-radius: 30px;
+    background: rgba(184,150,62,0.15);
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+  }
+  .squiz-retake-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 0.65rem 1.4rem;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  .squiz-retake-btn:hover { background: rgba(255,255,255,0.1); }
+
+  /* ── SCIENTIFIC METHOD FLOW DIAGRAM ── */
+  .method-flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 0;
+    margin: 1.8rem 0;
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 1.6rem 1.2rem;
+  }
+  .method-step {
+    flex: 1 1 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.6rem 0.5rem;
+    position: relative;
+  }
+  .method-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--gold);
+    color: var(--navy);
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.6rem;
+    flex-shrink: 0;
+  }
+  .method-title {
+    color: white;
+    font-weight: 600;
+    font-size: 0.88rem;
+    margin-bottom: 0.35rem;
+  }
+  .method-desc {
+    color: rgba(255,255,255,0.55);
+    font-size: 0.78rem;
+    line-height: 1.4;
+  }
+  .method-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    font-size: 1.3rem;
+    flex: 0 0 auto;
+    padding: 0 0.2rem;
+    align-self: center;
+  }
+  .method-loop {
+    width: 100%;
+    text-align: center;
+    color: rgba(255,255,255,0.4);
+    font-size: 0.75rem;
+    font-style: italic;
+    margin-top: 0.8rem;
+    padding-top: 0.8rem;
+    border-top: 1px dashed rgba(255,255,255,0.15);
+  }
+  @media (max-width: 700px) {
+    .method-flow { flex-direction: column; }
+    .method-arrow { transform: rotate(90deg); padding: 0.3rem 0; }
+  }
+</style>
+<style id="edusambam-reader-style">
+.mark{width:48px;height:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px;border-radius:14px;background:#eef6ff;box-shadow:0 2px 7px rgba(8,47,99,.10);flex:0 0 48px}.mark i{display:block;border-radius:50%;background:#0b4ea2;min-width:0;min-height:0}.mark i:nth-child(5){background:#d4a017}.edusambam-reader{max-width:980px;margin:1.2rem auto 0;padding:1rem 1.1rem;border:1px solid #d7e4ef;border-radius:14px;background:linear-gradient(135deg,#f7fbff,#fff);box-shadow:0 6px 18px rgba(11,45,92,.08)}.edusambam-reader strong{display:block;color:#0b55a5;font-size:.9rem;letter-spacing:.04em}.edusambam-reader .reader-slogan{color:#b27e08;font-weight:900;margin-top:.25rem;font-size:.82rem}.edusambam-reader .reader-help{color:#607086;font-size:.8rem;margin:.3rem 0 .7rem}.edusambam-reader .reader-controls{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}.edusambam-reader button,.edusambam-reader select{border:1px solid #c9d9e8;background:#fff;color:#153b6e;border-radius:8px;padding:.48rem .65rem;font-weight:800;cursor:pointer}.edusambam-reader button:first-child{background:#0b55a5;color:#fff;border-color:#0b55a5}.edusambam-reader .reader-status{display:block;color:#607086;font-size:.75rem;margin-top:.55rem}.edusambam-reader .reader-progress{height:4px;background:#e4edf6;border-radius:99px;margin-top:.6rem;overflow:hidden}.edusambam-reader .reader-progress span{display:block;width:0;height:100%;background:#e1ad1c;transition:width .2s linear}@media(max-width:600px){.edusambam-reader{margin-left:0;margin-right:0}.edusambam-reader .reader-controls button,.edusambam-reader .reader-controls select{flex:1;min-width:75px}}
+</style></head>
+<body>
+<!-- TOP BAR -->
+<div class="top-bar">
+<p>Established 2026  ·  Free Educational Resources for All</p>
+<ul class="top-bar-links">
+<li><a href="index.html">Contact</a></li>
+<li><a href="index.html">About</a></li>
+<li><a href="index.html">Write for Us</a></li>
+</ul>
+</div>
+<!-- NAV -->
+<nav>
+<a class="nav-brand" href="index.html" style="display:flex; flex-direction:row; align-items:center; justify-content:flex-start; gap:0.6rem; text-decoration:none; overflow:hidden; flex:1; min-width:0;">
+<span aria-label="EDUSAMBAM six-circle logo" class="mark"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+<div style="display:flex; flex-direction:column; line-height:1.3; min-width:0;">
+<span class="nav-brand-name" style="white-space:nowrap;">EDUSAMBAM</span>
+<span class="nav-brand-sub">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM.</span>
+</div>
+</a>
+<ul class="nav-links">
+<li><a href="index.html#english">English</a></li>
+<li><a href="index.html#mathematics">Mathematics</a></li>
+<li><a href="index.html#science">Science</a></li>
+<li><a href="index.html#health">Health</a></li>
+<li><a href="index.html#general-knowledge">General Knowledge</a></li>
+<li><a href="index.html#computer-ai">Computer &amp; AI</a></li>
+<li><a href="index.html#resources">Resources</a></li>
+</ul>
+</nav>
+<!-- ARTICLE HERO -->
+<div class="article-hero">
+<div class="breadcrumb"><a href="index.html">Home</a>  /  <a href="index.html#science">Science</a>  /  Ecosystems &amp; Biodiversity</div>
+<div class="article-hero-tag">Science · Environmental Science</div>
+<h1>Ecosystems &amp; Biodiversity</h1>
+<p class="sub">Every forest, pond, and desert is a living system of connected relationships — organisms feeding on each other, competing for resources, and depending on one another to survive. This article explains how ecosystems function, what biodiversity means, and why the variety of life on Earth matters more than it might seem.</p>
+<div class="article-hero-meta">
+<span>EDUSAMBAM Editorial Team</span>
+<span>|</span>
+<span>12 min read</span>
+<span>|</span>
+<span>Environmental Science</span>
+</div>
+</div><div aria-label="EDUSAMBAM article reader" class="edusambam-reader"><strong>🔊 LISTEN TO THIS ARTICLE</strong><div class="reader-slogan">SAVE YOUR EYES • IMPROVE YOUR LISTENING</div><div class="reader-help">Listen to the article instead of relying only on continuous screen reading.</div><div class="reader-controls"><button data-reader="play" type="button">▶ Play</button><button data-reader="pause" type="button">⏸ Pause</button><button data-reader="resume" type="button">▶ Resume</button><button data-reader="stop" type="button">■ Stop</button><select aria-label="Reading speed"><option value="1">1×</option><option value="0.8">0.8×</option><option value="1.2">1.2×</option></select></div><div aria-hidden="true" class="reader-progress"><span></span></div><small class="reader-status">Ready to read the article.</small></div>
+<!-- ARTICLE BODY -->
+<div class="article-wrap">
+<p class="lead">A forest is not just a collection of trees. It's a web of relationships — trees feeding insects, insects feeding birds, fallen leaves feeding the soil that feeds the trees again. This constant exchange of energy and nutrients between living things and their surroundings is what makes an ecosystem, and the variety of life within it is what ecologists call biodiversity. This article explains how the two connect.</p>
+<h2><span class="num">1.</span>What Is an Ecosystem?</h2>
+<p>An ecosystem is a community of living organisms interacting with each other and with the non-living parts of their environment, within a defined area. It includes two broad categories of components:</p>
+<ul>
+<li><strong>Biotic factors</strong> — the living parts: plants, animals, fungi, and microorganisms</li>
+<li><strong>Abiotic factors</strong> — the non-living parts: sunlight, water, temperature, soil, and air</li>
+</ul>
+<p>Ecosystems exist at every scale, from a single rotting log crawling with insects to an entire rainforest or ocean. Common ecosystem types include forests, deserts, grasslands, wetlands, and coral reefs, each shaped by its own combination of abiotic conditions.</p>
+<h2><span class="num">2.</span>Producers, Consumers &amp; Decomposers</h2>
+<p>Every organism in an ecosystem plays a role in moving energy through it. These roles fall into three main categories:</p>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Role</th><th>What They Do</th><th>Example</th></tr>
+<tr><td>Producers</td><td>Make their own food using sunlight (photosynthesis)</td><td>Trees, grass, algae</td></tr>
+<tr><td>Consumers</td><td>Get energy by eating other organisms</td><td>Herbivores, carnivores, omnivores</td></tr>
+<tr><td>Decomposers</td><td>Break down dead organisms and waste, releasing nutrients back into the soil</td><td>Fungi, bacteria, earthworms</td></tr>
+</table>
+</div>
+<div class="example-box">
+<div class="ex-label">Example</div>
+<p>Consumers are further divided by what they eat: herbivores (like deer) eat only producers, carnivores (like wolves) eat other consumers, and omnivores (like bears) eat both.</p>
+</div>
+<h2><span class="num">3.</span>Food Chains and Food Webs</h2>
+<p>A food chain shows a single path of energy transfer, such as grass → rabbit → fox. In reality, most organisms eat more than one type of food and are eaten by more than one predator, so ecosystems are better represented as food webs — networks of many overlapping food chains.</p>
+<p>Energy is lost as heat at every step of a food chain, so only about 10% of the energy at one level typically transfers to the next. This is why food chains rarely extend beyond four or five links, and why there are always far more producers than top predators in any ecosystem.</p>
+<h2><span class="num">4.</span>What Is Biodiversity?</h2>
+<p>Biodiversity is the variety of life found in a particular ecosystem, region, or across the whole planet. It's usually described at three levels:</p>
+<ul>
+<li><strong>Species diversity</strong> — the number of different species living in an area</li>
+<li><strong>Genetic diversity</strong> — the variation in genes within a single species, which helps populations adapt to change</li>
+<li><strong>Ecosystem diversity</strong> — the variety of different ecosystems found within a region, such as forests, wetlands, and grasslands existing side by side</li>
+</ul>
+<div class="real-world-box">
+<div class="rw-label">Real-World Example</div>
+<p>Coral reefs cover less than 1% of the ocean floor but support roughly a quarter of all known marine species, making them one of the most biodiverse ecosystems on Earth — often called the "rainforests of the sea."</p>
+</div>
+<h2><span class="num">5.</span>Why Biodiversity Matters</h2>
+<p>A biodiverse ecosystem is generally a more stable and resilient one. When many different species fill different roles, the loss of any single species is less likely to collapse the whole system, since others can often fill the gap. Biodiversity also directly supports human life in several ways:</p>
+<ul>
+<li><strong>Food security</strong> — a wide range of crops and livestock reduces the risk of total failure from a single disease or pest</li>
+<li><strong>Medicine</strong> — many medicines are derived from compounds first discovered in wild plants, fungi, and animals</li>
+<li><strong>Pollination</strong> — bees, butterflies, and other pollinators are essential for a huge share of the food crops people rely on</li>
+<li><strong>Ecosystem services</strong> — biodiverse systems help purify water, enrich soil, and regulate climate</li>
+</ul>
+<h2><span class="num">6.</span>Threats to Biodiversity</h2>
+<p>Biodiversity is declining in many parts of the world, driven mainly by human activity:</p>
+<ul>
+<li><strong>Habitat destruction</strong> — deforestation, urban expansion, and farming remove the environments species depend on</li>
+<li><strong>Pollution</strong> — chemicals, plastics, and waste damage air, water, and soil quality</li>
+<li><strong>Climate change</strong> — shifting temperatures and weather patterns can make habitats unsuitable for the species that evolved there</li>
+<li><strong>Overexploitation</strong> — overhunting, overfishing, and illegal wildlife trade can reduce populations faster than they can recover</li>
+<li><strong>Invasive species</strong> — non-native species introduced to an area can outcompete or prey on native wildlife that has no natural defence against them</li>
+</ul>
+<h2>A Closing Thought</h2>
+<p>Ecosystems function as networks, not isolated pieces — every producer, consumer, and decomposer plays a role in keeping energy and nutrients flowing. Biodiversity is what gives those networks their strength, and protecting it is, in the end, about protecting the systems that support life itself, including our own.</p>
+<!-- QUIZ SECTION -->
+<div class="quiz-section">
+<div class="section-eyebrow">Test Your Understanding</div>
+<h2>Practice Quiz</h2>
+<p class="quiz-intro">10 questions. Select an answer for each, then submit to see your score instantly.</p>
+<div class="squiz-progress"><div class="squiz-progress-fill" id="squizProgressFill"></div></div>
+<div class="squiz-progress-label" id="squizProgressLabel">0 of 10 answered</div>
+<div class="squiz-results" id="squizResults">
+<div class="squiz-score-big" id="squizScoreBig">0/10</div>
+<div class="squiz-score-label" id="squizScoreLabel">You scored 0%</div>
+<div class="squiz-score-tier" id="squizScoreTier">Keep practicing</div>
+<div><button class="squiz-retake-btn" onclick="retakeQuiz()">Retake Quiz</button></div>
+</div>
+<form id="squizForm">
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">1.</span>What are abiotic factors in an ecosystem?</div>
+<div class="squiz-option"><input id="sq1a" name="sq1" type="radio" value="0"/><label for="sq1a">A. All the animals in the area</label></div>
+<div class="squiz-option"><input id="sq1b" name="sq1" type="radio" value="1"/><label for="sq1b">B. Only the plants</label></div>
+<div class="squiz-option"><input id="sq1c" name="sq1" type="radio" value="2"/><label for="sq1c">C. The non-living parts, like sunlight and water</label></div>
+<div class="squiz-option"><input id="sq1d" name="sq1" type="radio" value="3"/><label for="sq1d">D. Only decomposers</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">2.</span>Producers get their energy by:</div>
+<div class="squiz-option"><input id="sq2a" name="sq2" type="radio" value="0"/><label for="sq2a">A. Eating other organisms</label></div>
+<div class="squiz-option"><input id="sq2b" name="sq2" type="radio" value="1"/><label for="sq2b">B. Making their own food through photosynthesis</label></div>
+<div class="squiz-option"><input id="sq2c" name="sq2" type="radio" value="2"/><label for="sq2c">C. Breaking down dead matter</label></div>
+<div class="squiz-option"><input id="sq2d" name="sq2" type="radio" value="3"/><label for="sq2d">D. Absorbing energy from other producers</label></div>
+</div>
+<div class="squiz-item" data-correct="3">
+<div class="squiz-q"><span class="qnum">3.</span>What role do decomposers play?</div>
+<div class="squiz-option"><input id="sq3a" name="sq3" type="radio" value="0"/><label for="sq3a">A. They hunt herbivores</label></div>
+<div class="squiz-option"><input id="sq3b" name="sq3" type="radio" value="1"/><label for="sq3b">B. They produce oxygen only</label></div>
+<div class="squiz-option"><input id="sq3c" name="sq3" type="radio" value="2"/><label for="sq3c">C. They compete with producers for sunlight</label></div>
+<div class="squiz-option"><input id="sq3d" name="sq3" type="radio" value="3"/><label for="sq3d">D. They break down dead matter and recycle nutrients</label></div>
+</div>
+<div class="squiz-item" data-correct="0">
+<div class="squiz-q"><span class="qnum">4.</span>Why are food webs a more realistic model than simple food chains?</div>
+<div class="squiz-option"><input id="sq4a" name="sq4" type="radio" value="0"/><label for="sq4a">A. Most organisms eat more than one type of food</label></div>
+<div class="squiz-option"><input id="sq4b" name="sq4" type="radio" value="1"/><label for="sq4b">B. Food chains don't actually exist</label></div>
+<div class="squiz-option"><input id="sq4c" name="sq4" type="radio" value="2"/><label for="sq4c">C. Food webs only apply to oceans</label></div>
+<div class="squiz-option"><input id="sq4d" name="sq4" type="radio" value="3"/><label for="sq4d">D. Food webs have no producers</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">5.</span>Roughly how much energy transfers from one trophic level to the next?</div>
+<div class="squiz-option"><input id="sq5a" name="sq5" type="radio" value="0"/><label for="sq5a">A. About 90%</label></div>
+<div class="squiz-option"><input id="sq5b" name="sq5" type="radio" value="1"/><label for="sq5b">B. About 50%</label></div>
+<div class="squiz-option"><input id="sq5c" name="sq5" type="radio" value="2"/><label for="sq5c">C. About 10%</label></div>
+<div class="squiz-option"><input id="sq5d" name="sq5" type="radio" value="3"/><label for="sq5d">D. About 100%</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">6.</span>Genetic diversity refers to:</div>
+<div class="squiz-option"><input id="sq6a" name="sq6" type="radio" value="0"/><label for="sq6a">A. The number of ecosystems in a region</label></div>
+<div class="squiz-option"><input id="sq6b" name="sq6" type="radio" value="1"/><label for="sq6b">B. Variation in genes within a single species</label></div>
+<div class="squiz-option"><input id="sq6c" name="sq6" type="radio" value="2"/><label for="sq6c">C. The total number of species on Earth</label></div>
+<div class="squiz-option"><input id="sq6d" name="sq6" type="radio" value="3"/><label for="sq6d">D. The number of decomposers in an ecosystem</label></div>
+</div>
+<div class="squiz-item" data-correct="0">
+<div class="squiz-q"><span class="qnum">7.</span>Coral reefs are notable because they:</div>
+<div class="squiz-option"><input id="sq7a" name="sq7" type="radio" value="0"/><label for="sq7a">A. Support about a quarter of marine species despite covering under 1% of the ocean floor</label></div>
+<div class="squiz-option"><input id="sq7b" name="sq7" type="radio" value="1"/><label for="sq7b">B. Have no biodiversity at all</label></div>
+<div class="squiz-option"><input id="sq7c" name="sq7" type="radio" value="2"/><label for="sq7c">C. Only contain producers</label></div>
+<div class="squiz-option"><input id="sq7d" name="sq7" type="radio" value="3"/><label for="sq7d">D. Cover most of the ocean floor</label></div>
+</div>
+<div class="squiz-item" data-correct="3">
+<div class="squiz-q"><span class="qnum">8.</span>A biodiverse ecosystem tends to be more stable because:</div>
+<div class="squiz-option"><input id="sq8a" name="sq8" type="radio" value="0"/><label for="sq8a">A. It has fewer predators</label></div>
+<div class="squiz-option"><input id="sq8b" name="sq8" type="radio" value="1"/><label for="sq8b">B. It has no decomposers</label></div>
+<div class="squiz-option"><input id="sq8c" name="sq8" type="radio" value="2"/><label for="sq8c">C. All species eat the same food</label></div>
+<div class="squiz-option"><input id="sq8d" name="sq8" type="radio" value="3"/><label for="sq8d">D. The loss of one species is less likely to collapse the whole system</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">9.</span>Which of these is an example of a threat to biodiversity from habitat destruction?</div>
+<div class="squiz-option"><input id="sq9a" name="sq9" type="radio" value="0"/><label for="sq9a">A. Genetic diversity within a species</label></div>
+<div class="squiz-option"><input id="sq9b" name="sq9" type="radio" value="1"/><label for="sq9b">B. Clearing forest for farmland</label></div>
+<div class="squiz-option"><input id="sq9c" name="sq9" type="radio" value="2"/><label for="sq9c">C. Pollination by bees</label></div>
+<div class="squiz-option"><input id="sq9d" name="sq9" type="radio" value="3"/><label for="sq9d">D. A stable food web</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">10.</span>An invasive species threatens biodiversity mainly by:</div>
+<div class="squiz-option"><input id="sq10a" name="sq10" type="radio" value="0"/><label for="sq10a">A. Improving soil quality</label></div>
+<div class="squiz-option"><input id="sq10b" name="sq10" type="radio" value="1"/><label for="sq10b">B. Increasing genetic diversity</label></div>
+<div class="squiz-option"><input id="sq10c" name="sq10" type="radio" value="2"/><label for="sq10c">C. Outcompeting or preying on native species with no natural defence against it</label></div>
+<div class="squiz-option"><input id="sq10d" name="sq10" type="radio" value="3"/><label for="sq10d">D. Producing more oxygen than native species</label></div>
+</div>
+<button class="squiz-submit-btn" disabled="" id="squizSubmitBtn" onclick="submitQuiz()" type="button">Answer all questions to submit</button>
+</form>
+</div>
+<div class="article-footer-nav">
+<a href="index.html#science">← Back to Science</a>
+<a href="index.html#science">More Science Topics →</a>
+</div>
+</div>
+<script>
+  (function() {
+    const form = document.getElementById('squizForm');
+    const submitBtn = document.getElementById('squizSubmitBtn');
+    const progressFill = document.getElementById('squizProgressFill');
+    const progressLabel = document.getElementById('squizProgressLabel');
+    const totalQuestions = document.querySelectorAll('.squiz-item').length;
+
+    function countAnswered() {
+      let count = 0;
+      for (let i = 1; i <= totalQuestions; i++) {
+        if (form.querySelector(`input[name="sq${i}"]:checked`)) count++;
+      }
+      return count;
+    }
+
+    function updateProgress() {
+      const answered = countAnswered();
+      progressFill.style.width = (answered / totalQuestions * 100) + '%';
+      progressLabel.textContent = answered + ' of ' + totalQuestions + ' answered';
+      submitBtn.disabled = answered < totalQuestions;
+      submitBtn.textContent = answered < totalQuestions ? 'Answer all questions to submit' : 'Submit Quiz';
+      document.querySelectorAll('.squiz-option').forEach(opt => opt.classList.remove('selected'));
+      form.querySelectorAll('input[type="radio"]:checked').forEach(input => {
+        input.closest('.squiz-option').classList.add('selected');
+      });
+    }
+
+    form.addEventListener('change', updateProgress);
+
+    window.submitQuiz = function() {
+      let score = 0;
+      const questions = document.querySelectorAll('.squiz-item');
+      questions.forEach((q, idx) => {
+        const qnum = idx + 1;
+        const correctIdx = q.getAttribute('data-correct');
+        const selected = form.querySelector(`input[name="sq${qnum}"]:checked`);
+        const options = q.querySelectorAll('.squiz-option');
+        options.forEach((opt, optIdx) => {
+          opt.querySelector('input').disabled = true;
+          if (String(optIdx) === correctIdx) opt.classList.add('correct-answer');
+        });
+        if (selected && selected.value === correctIdx) {
+          score++;
+        } else if (selected) {
+          selected.closest('.squiz-option').classList.add('wrong-answer');
+        }
+      });
+
+      const percent = Math.round((score / totalQuestions) * 100);
+      document.getElementById('squizScoreBig').textContent = score + '/' + totalQuestions;
+      document.getElementById('squizScoreLabel').textContent = 'You scored ' + percent + '%';
+
+      let tier = 'Keep practicing';
+      if (percent === 100) tier = 'Perfect score!';
+      else if (percent >= 80) tier = 'Excellent work';
+      else if (percent >= 60) tier = 'Good effort';
+      else if (percent >= 40) tier = 'Getting there';
+      document.getElementById('squizScoreTier').textContent = tier;
+
+      document.getElementById('squizResults').classList.add('visible');
+      submitBtn.style.display = 'none';
+      document.getElementById('squizResults').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    window.retakeQuiz = function() {
+      form.reset();
+      document.querySelectorAll('.squiz-option').forEach(opt => {
+        opt.classList.remove('selected', 'correct-answer', 'wrong-answer');
+        opt.querySelector('input').disabled = false;
+      });
+      document.getElementById('squizResults').classList.remove('visible');
+      submitBtn.style.display = 'block';
+      updateProgress();
+      document.getElementById('squizForm').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    updateProgress();
+  })();
+</script>
+<footer>
+<div class="footer-top">
+<div class="footer-brand">
+<div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.75rem;">
+<span aria-label="EDUSAMBAM six-circle logo" class="mark"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+<a class="footer-brand-name" href="index.html">EDUSAMBAM</a>
+</div>
+<p>A trusted, anonymous source of knowledge for curious minds everywhere — learn, practise, grow and succeed.</p>
+</div>
+<div class="footer-col">
+<h4>Content</h4>
+<ul>
+<li><a href="index.html#english">English Language</a></li>
+<li><a href="index.html#mathematics">Mathematics</a></li>
+<li><a href="index.html#science">Science</a></li>
+<li><a href="index.html#health">Health</a></li>
+<li><a href="index.html#general-knowledge">General Knowledge</a></li>
+<li><a href="index.html#computer-ai">Computer &amp; AI</a></li>
+<li><a href="index.html#resources">Resources</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>About</h4>
+<ul>
+<li><a href="index.html">Our Mission</a></li>
+<li><a href="index.html">The Team</a></li>
+<li><a href="index.html">Write for Us</a></li>
+<li><a href="index.html">Contact Us</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Legal</h4>
+<ul>
+<li><a href="index.html">Privacy Policy</a></li>
+<li><a href="index.html">Terms of Use</a></li>
+<li><a href="index.html">Cookie Settings</a></li>
+<li><a href="index.html">Accessibility</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2026 EDUSAMBAM. All rights reserved. &nbsp;·&nbsp; EDUSAMBAM &middot; EduInfoAssessmentHub &middot; The Learners' Ladder.</p>
+<ul class="footer-bottom-links">
+<li><a href="index.html">Privacy</a></li>
+<li><a href="index.html">Terms</a></li>
+<li><a href="index.html">Sitemap</a></li>
+</ul>
+</div>
+<div class="back-home-wrap"><a class="back-home" href="index.html#top">← Back to Home</a></div>
+</footer>
+<script id="edusambam-reader-script">
+(function(){
+ const box=document.querySelector('.edusambam-reader'); if(!box)return;
+ const root=document.querySelector('.article-wrap, .article-wrapper');
+ if(!root)return;
+ const status=box.querySelector('.reader-status'), progress=box.querySelector('.reader-progress span'), rate=box.querySelector('select');
+ let utterance=null, chunks=[], index=0, total=0, paused=false, stopped=false;
+ function text(){
+   const clone=root.cloneNode(true);
+   clone.querySelectorAll('.quiz-section,.drill-section,.squiz-section,.activity-section,.assessment-section,form,button,input,select,textarea,script,style').forEach(el=>el.remove());
+   return clone.textContent.replace(/\s+/g,' ').trim();
+ }
+ function splitText(t){const out=[];const max=1200;for(let i=0;i<t.length;i+=max)out.push(t.slice(i,i+max));return out;}
+ function updateProgress(){progress.style.width=(total?Math.min(100,Math.round((index/total)*100)):0)+'%';}
+ function speakNext(){
+   if(stopped||index>=total){if(index>=total&&!stopped){status.textContent='Reading finished.';progress.style.width='100%';}return;}
+   utterance=new SpeechSynthesisUtterance(chunks[index]);
+   utterance.rate=Number(rate.value)||1;
+   utterance.onend=function(){if(stopped)return;index++;updateProgress();speakNext();};
+   utterance.onerror=function(){if(!stopped)status.textContent='The reader stopped unexpectedly. Tap Resume to continue.';};
+   status.textContent='Reading article…';
+   speechSynthesis.speak(utterance);
+ }
+ function play(){
+   if(!('speechSynthesis' in window)){status.textContent='Audio reading is not supported by this browser.';return;}
+   speechSynthesis.cancel();
+   chunks=splitText(text());index=0;total=chunks.length;paused=false;stopped=false;updateProgress();speakNext();
+ }
+ function pause(){
+   if(!('speechSynthesis' in window))return;
+   if(speechSynthesis.speaking){speechSynthesis.pause();paused=true;status.textContent='Reader paused.';}
+ }
+ function resume(){
+   if(!('speechSynthesis' in window))return;
+   stopped=false;
+   if(speechSynthesis.paused){speechSynthesis.resume();paused=false;status.textContent='Reader resumed.';return;}
+   if(!speechSynthesis.speaking && chunks.length && index<total){paused=false;status.textContent='Reader resumed.';speakNext();return;}
+   if(!chunks.length){status.textContent='Nothing to resume. Tap Play to start.';return;}
+   status.textContent='Reader is already playing.';
+ }
+ function stop(){
+   speechSynthesis.cancel();chunks=[];index=0;total=0;paused=false;stopped=true;progress.style.width='0';status.textContent='Reader stopped.';
+ }
+ box.querySelector('[data-reader="play"]').addEventListener('click',play);
+ box.querySelector('[data-reader="pause"]').addEventListener('click',pause);
+ box.querySelector('[data-reader="resume"]').addEventListener('click',resume);
+ box.querySelector('[data-reader="stop"]').addEventListener('click',stop);
+ window.addEventListener('beforeunload',()=>{stopped=true;speechSynthesis.cancel();});
+})();
+</script></body>
+</html>

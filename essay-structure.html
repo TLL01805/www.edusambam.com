@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Essay Structure &amp; the Five-Paragraph Essay: The Complete Guide — EDUSAMBAM</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --red:       #8B0000;
+    --red-mid:   #A50000;
+    --red-lt:    #F9F0F0;
+    --navy:      #06244a;
+    --navy-mid:  #1C3151;
+    --gold:      #B8963E;
+    --gold-lt:   #F5EDD6;
+    --cream:     #FAF8F4;
+    --white:     #FFFFFF;
+    --ink:       #1A1A1A;
+    --slate:     #4A4A4A;
+    --muted:     #767676;
+    --border:    #D8D0C8;
+    --border-lt: #EDE8E0;
+    --radius:    4px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--ink);
+    background: var(--white);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── TOP BAR ── */
+  .top-bar {
+    background: var(--navy);
+    padding: 0.45rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .top-bar p {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.03em;
+  }
+  .top-bar-links { display: flex; gap: 1.5rem; list-style: none; }
+  .top-bar-links a {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+  .top-bar-links a:hover { color: white; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 200;
+    background: rgba(255,255,255,.97);
+    border-bottom: 3px solid var(--gold);
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    box-shadow: 0 2px 12px rgba(8,47,99,0.08);
+  }
+  .nav-brand { display: flex; flex-direction: column; line-height: 1; text-decoration: none; }
+  .nav-brand-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: 0.01em;
+  }
+  .nav-brand-name span { color: var(--red); }
+  .nav-brand-sub {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: rgba(13,27,42,0.6);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 0.25rem;
+  }
+  .nav-links { display: flex; gap: 0; list-style: none; }
+  .nav-links a {
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(13,27,42,0.75);
+    padding: 0 1.1rem;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--b, #0b4ea2); }
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+  }
+
+  /* ── ARTICLE HERO ── */
+  .article-hero {
+    background: linear-gradient(135deg,#06244a,#0b4ea2);
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+  }
+  .breadcrumb {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 1.1rem;
+    letter-spacing: 0.02em;
+  }
+  .breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--gold); }
+  .article-hero-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(184,150,62,0.4);
+    padding: 0.35rem 0.9rem;
+    border-radius: 30px;
+    margin-bottom: 1.25rem;
+  }
+  .article-hero h1 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 2.4rem;
+    color: white;
+    max-width: 760px;
+    margin: 0 auto 1rem;
+    line-height: 1.25;
+  }
+  .article-hero p.sub {
+    color: rgba(255,255,255,0.6);
+    max-width: 620px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.02rem;
+  }
+  .article-hero-meta {
+    display: flex; justify-content: center; gap: 0.9rem;
+    font-size: 0.8rem; color: rgba(255,255,255,0.45);
+    flex-wrap: wrap;
+  }
+
+  /* ── ARTICLE BODY ── */
+  .article-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+  .article-wrap h2 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 1.65rem;
+    color: var(--navy);
+    margin: 2.6rem 0 1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--border-lt);
+  }
+  .article-wrap h2 span.num {
+    color: var(--red);
+    margin-right: 0.5rem;
+    font-style: italic;
+  }
+  .article-wrap p { color: var(--slate); margin-bottom: 1rem; font-size: 1.02rem; }
+  .article-wrap ul { margin: 0 0 1.2rem 1.4rem; color: var(--slate); }
+  .article-wrap li { margin-bottom: 0.5rem; }
+  .article-wrap strong { color: var(--ink); }
+  .lead {
+    font-size: 1.15rem;
+    color: var(--ink);
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    border-left: 3px solid var(--gold);
+    padding-left: 1.2rem;
+    margin: 1.5rem 0 2rem;
+  }
+  .example-box {
+    background: var(--gold-lt);
+    border: 1px solid rgba(184,150,62,0.35);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 1.3rem 1.5rem;
+    margin: 1.3rem 0 1.8rem;
+  }
+  .example-box .ex-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.5rem;
+  }
+  .example-box p { color: var(--ink); margin-bottom: 0.4rem; font-size: 0.98rem; }
+  .example-box p:last-child { margin-bottom: 0; }
+
+  .real-world-box {
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 1.6rem 1.7rem;
+    margin: 2.4rem 0;
+  }
+  .real-world-box .rw-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.7rem;
+  }
+  .real-world-box p { color: rgba(255,255,255,0.8); margin-bottom: 0; font-size: 1rem; }
+
+  .table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+  table.pos-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+  table.pos-table th {
+    background: var(--navy);
+    color: white;
+    text-align: left;
+    padding: 0.7rem 0.9rem;
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+  }
+  table.pos-table td {
+    padding: 0.7rem 0.9rem;
+    border-bottom: 1px solid var(--border-lt);
+    color: var(--slate);
+  }
+  table.pos-table tr:nth-child(even) td { background: var(--cream); }
+
+  /* ── QUIZ ── */
+  .quiz-section {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem 1.7rem 1.5rem;
+    margin-top: 3rem;
+  }
+  .quiz-section .section-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.4rem;
+  }
+  .quiz-section h2 {
+    border: none; margin: 0 0 0.4rem; padding: 0;
+  }
+  .quiz-intro { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.6rem; }
+
+  /* SCORED QUIZ (click-to-highlight + real scoring) */
+  .squiz-progress {
+    background: var(--cream);
+    border-radius: 30px;
+    height: 8px;
+    overflow: hidden;
+    margin-bottom: 0.4rem;
+  }
+  .squiz-progress-fill {
+    background: var(--gold);
+    height: 100%;
+    width: 0%;
+    transition: width 0.25s ease;
+  }
+  .squiz-progress-label {
+    font-size: 0.78rem;
+    color: var(--muted);
+    text-align: right;
+    margin-bottom: 1.3rem;
+  }
+  .squiz-item {
+    background: var(--white);
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .squiz-q {
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+  }
+  .squiz-q .qnum { color: var(--red); margin-right: 0.4rem; }
+  .squiz-option {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .squiz-option:hover { border-color: var(--gold); }
+  .squiz-option input[type="radio"] { accent-color: var(--red); width: 16px; height: 16px; flex-shrink: 0; }
+  .squiz-option label { cursor: pointer; font-size: 0.94rem; color: var(--slate); flex: 1; }
+  .squiz-option.selected { border-color: var(--red); background: rgba(139,0,0,0.04); }
+  .squiz-option.correct-answer { border-color: #2e7d32; background: rgba(46,125,50,0.08); }
+  .squiz-option.wrong-answer { border-color: var(--red); background: rgba(139,0,0,0.08); }
+  .squiz-submit-btn {
+    display: block;
+    width: 100%;
+    background: var(--red);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.98rem;
+    font-weight: 600;
+    padding: 0.9rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    margin-top: 0.6rem;
+    transition: background 0.2s;
+  }
+  .squiz-submit-btn:hover { background: var(--red-mid); }
+  .squiz-submit-btn:disabled { background: var(--border); cursor: not-allowed; }
+  .squiz-results {
+    display: none;
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 2rem 1.6rem;
+    text-align: center;
+    margin-bottom: 1.8rem;
+  }
+  .squiz-results.visible { display: block; }
+  .squiz-results .squiz-score-big {
+    font-family: 'EB Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .squiz-results .squiz-score-label { color: rgba(255,255,255,0.7); font-size: 0.98rem; margin-bottom: 1rem; }
+  .squiz-results .squiz-score-tier {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    border-radius: 30px;
+    background: rgba(184,150,62,0.15);
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+  }
+  .squiz-retake-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 0.65rem 1.4rem;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  .squiz-retake-btn:hover { background: rgba(255,255,255,0.1); }
+
+  .article-footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-lt);
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .article-footer-nav a {
+    text-decoration: none;
+    color: var(--red);
+    font-weight: 600;
+    font-size: 0.92rem;
+  }
+  .article-footer-nav a:hover { text-decoration: underline; }
+
+  @media (max-width: 700px) {
+    .article-hero h1 { font-size: 1.7rem; }
+    .article-wrap { padding: 2rem 1.25rem 3rem; }
+  }
+  @media (max-width: 680px) {
+    .top-bar { display: none; }
+    nav {
+      padding: 0 1rem;
+      height: 68px;
+      border-bottom-width: 2px;
+    }
+    .nav-links { display: none; }
+    .nav-brand-name {
+      font-size: 1.35rem;
+      white-space: nowrap;
+    }
+    .nav-brand-sub {
+      font-size: 0.62rem;
+      letter-spacing: 0.07em;
+    }
+    .footer-top { grid-template-columns: 1fr; gap: 2rem; padding: 2rem 1.25rem; }
+    footer { padding: 2rem 1.25rem 0; }
+  }
+
+  /* ── FOOTER (copied from site) ── */
+  footer { background: var(--navy); padding: 3.5rem 3rem 0; }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 2.5rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .footer-brand-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+  }
+  .footer-brand-name span { color: var(--red); }
+  .footer-desc { color: rgba(255,255,255,0.45); font-size: 0.9rem; margin-top: 0.8rem; max-width: 320px; }
+  .footer-col h4 {
+    font-family: 'EB Garamond', serif;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 0.7rem; }
+  .footer-col a {
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.2s;
+  }
+  .footer-col a:hover { color: var(--gold); }
+  .footer-bottom {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer-bottom p { color: rgba(255,255,255,0.35); font-size: 0.8rem; }
+  .footer-bottom-links { display: flex; gap: 1.3rem; list-style: none; }
+  .footer-bottom-links a { color: rgba(255,255,255,0.35); text-decoration: none; font-size: 0.8rem; }
+  .footer-bottom-links a:hover { color: rgba(255,255,255,0.6); }
+  @media (max-width: 900px) {
+    .footer-top { grid-template-columns: 1fr 1fr; }
+    footer { padding: 2rem 1.25rem 0; }
+  }
+</style>
+<style id="edusambam-reader-style">
+.mark{width:48px;height:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px;border-radius:14px;background:#eef6ff;box-shadow:0 2px 7px rgba(8,47,99,.10);flex:0 0 48px}.mark i{display:block;border-radius:50%;background:#0b4ea2;min-width:0;min-height:0}.mark i:nth-child(5){background:#d4a017}.edusambam-reader{max-width:980px;margin:1.2rem auto 0;padding:1rem 1.1rem;border:1px solid #d7e4ef;border-radius:14px;background:linear-gradient(135deg,#f7fbff,#fff);box-shadow:0 6px 18px rgba(11,45,92,.08)}.edusambam-reader strong{display:block;color:#0b55a5;font-size:.9rem;letter-spacing:.04em}.edusambam-reader .reader-slogan{color:#b27e08;font-weight:900;margin-top:.25rem;font-size:.82rem}.edusambam-reader .reader-help{color:#607086;font-size:.8rem;margin:.3rem 0 .7rem}.edusambam-reader .reader-controls{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}.edusambam-reader button,.edusambam-reader select{border:1px solid #c9d9e8;background:#fff;color:#153b6e;border-radius:8px;padding:.48rem .65rem;font-weight:800;cursor:pointer}.edusambam-reader button:first-child{background:#0b55a5;color:#fff;border-color:#0b55a5}.edusambam-reader .reader-status{display:block;color:#607086;font-size:.75rem;margin-top:.55rem}.edusambam-reader .reader-progress{height:4px;background:#e4edf6;border-radius:99px;margin-top:.6rem;overflow:hidden}.edusambam-reader .reader-progress span{display:block;width:0;height:100%;background:#e1ad1c;transition:width .2s linear}@media(max-width:600px){.edusambam-reader{margin-left:0;margin-right:0}.edusambam-reader .reader-controls button,.edusambam-reader .reader-controls select{flex:1;min-width:75px}}
+</style></head>
+<body>
+<!-- TOP BAR -->
+<div class="top-bar">
+<p>Established 2026  ·  Free Educational Resources for All</p>
+<ul class="top-bar-links">
+<li><a href="index.html">Contact</a></li>
+<li><a href="index.html">About</a></li>
+<li><a href="index.html">Write for Us</a></li>
+</ul>
+</div>
+<!-- NAV -->
+<nav>
+<a class="nav-brand" href="index.html" style="display:flex; flex-direction:row; align-items:center; justify-content:flex-start; gap:0.6rem; text-decoration:none; overflow:hidden; flex:1; min-width:0;">
+<span aria-label="EDUSAMBAM six-circle logo" class="mark"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+<div style="display:flex; flex-direction:column; line-height:1.3; min-width:0;">
+<span class="nav-brand-name" style="white-space:nowrap;">EDUSAMBAM</span>
+<span class="nav-brand-sub">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM.</span>
+</div>
+</a>
+<ul class="nav-links">
+<li><a href="index.html#english">English</a></li>
+<li><a href="index.html">Science</a></li>
+<li><a href="index.html">Mathematics</a></li>
+<li><a href="index.html">Health</a></li>
+<li><a href="index.html">General Knowledge</a></li>
+<li><a href="index.html">Computer &amp; AI</a></li>
+<li><a href="index.html#resources">Resources</a></li>
+</ul>
+</nav>
+<!-- ARTICLE HERO -->
+<div class="article-hero">
+<div class="breadcrumb"><a href="index.html">Home</a>  /  <a href="index.html#english">English Language</a>  /  Essay Structure</div>
+<div class="article-hero-tag">Academic &amp; Essay Writing · Topic I</div>
+<h1>Essay Structure &amp; the Five-Paragraph Essay</h1>
+<p class="sub">Every strong essay is built on a skeleton — introduction, body, conclusion. Master that skeleton first, and everything else in academic writing becomes easier.</p>
+<div class="article-hero-meta">
+<span>EDUSAMBAM Editorial Team</span>
+<span>|</span>
+<span>17 min read</span>
+<span>|</span>
+<span>Academic Writing</span>
+</div>
+</div><div aria-label="EDUSAMBAM article reader" class="edusambam-reader"><strong>🔊 LISTEN TO THIS ARTICLE</strong><div class="reader-slogan">SAVE YOUR EYES • IMPROVE YOUR LISTENING</div><div class="reader-help">Listen to the article instead of relying only on continuous screen reading.</div><div class="reader-controls"><button data-reader="play" type="button">▶ Play</button><button data-reader="pause" type="button">⏸ Pause</button><button data-reader="resume" type="button">▶ Resume</button><button data-reader="stop" type="button">■ Stop</button><select aria-label="Reading speed"><option value="1">1×</option><option value="0.8">0.8×</option><option value="1.2">1.2×</option></select></div><div aria-hidden="true" class="reader-progress"><span></span></div><small class="reader-status">Ready to read the article.</small></div>
+<!-- ARTICLE BODY -->
+<div class="article-wrap">
+<p class="lead">Before an essay can be persuasive, insightful, or elegant, it first needs to be organized. Structure is the scaffolding that lets an argument build logically from start to finish, without losing the reader along the way.</p>
+<p>This guide opens our Academic &amp; Essay Writing series with the foundational structure nearly every essay is built on: the introduction, body, and conclusion — and specifically, the five-paragraph essay format most students learn first, along with exactly when and how to move beyond it.</p>
+<h2><span class="num">1.</span>The Three Core Parts of Any Essay</h2>
+<p>Regardless of length or subject, almost every essay is built from the same three structural parts.</p>
+<ul>
+<li><strong>Introduction:</strong> introduces the topic and states the essay's central argument (the thesis).</li>
+<li><strong>Body:</strong> develops that argument through a series of organized paragraphs, each backed by evidence.</li>
+<li><strong>Conclusion:</strong> restates the argument's significance and brings the essay to a close.</li>
+</ul>
+<h2><span class="num">2.</span>The Five-Paragraph Essay</h2>
+<p>The <strong>five-paragraph essay</strong> is the most common structure taught to beginning writers: one introduction, three body paragraphs, and one conclusion. Its rigid, predictable shape makes it an excellent starting point for learning to organize an argument clearly.</p>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Paragraph</th><th>Purpose</th></tr>
+<tr><td>1. Introduction</td><td>Hook, background, thesis statement</td></tr>
+<tr><td>2. Body Paragraph 1</td><td>First supporting point, with evidence</td></tr>
+<tr><td>3. Body Paragraph 2</td><td>Second supporting point, with evidence</td></tr>
+<tr><td>4. Body Paragraph 3</td><td>Third supporting point, with evidence</td></tr>
+<tr><td>5. Conclusion</td><td>Restated thesis, summary, closing thought</td></tr>
+</table>
+</div>
+<h2><span class="num">3.</span>Writing a Strong Introduction</h2>
+<p>A strong introduction accomplishes three things, usually in this order:</p>
+<div class="example-box">
+<div class="ex-label">1. The Hook</div>
+<p>An opening line designed to capture the reader's attention — a striking fact, a question, a brief anecdote, or a relevant quotation. <em>"Every year, roughly a third of all food produced globally is thrown away — enough to feed two billion people."</em></p>
+</div>
+<div class="example-box">
+<div class="ex-label">2. Background/Context</div>
+<p>A few sentences narrowing from the hook toward the specific topic, giving the reader enough context to understand the argument that follows.</p>
+</div>
+<div class="example-box">
+<div class="ex-label">3. The Thesis Statement</div>
+<p>The essay's central, arguable claim, typically placed as the final sentence of the introduction. Covered in full depth in Topic II of this series.</p>
+</div>
+<h2><span class="num">4.</span>Writing Strong Body Paragraphs: The PEEL Method</h2>
+<p>Each body paragraph should follow a consistent internal structure, often remembered with the acronym <strong>PEEL</strong>.</p>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Step</th><th>What It Does</th></tr>
+<tr><td>Point</td><td>States the paragraph's main idea, connected to the thesis</td></tr>
+<tr><td>Evidence</td><td>Provides a fact, quotation, statistic, or example supporting the point</td></tr>
+<tr><td>Explain</td><td>Analyzes the evidence, showing how it supports the point</td></tr>
+<tr><td>Link</td><td>Transitions to the next paragraph or back to the thesis</td></tr>
+</table>
+</div>
+<div class="example-box">
+<div class="ex-label">Example</div>
+<p><strong>Point:</strong> "Reducing food waste at the household level requires better planning tools." <strong>Evidence:</strong> "A 2023 study found that households using meal-planning apps reduced food waste by 27% within three months." <strong>Explain:</strong> "This suggests that the core problem isn't a lack of willingness to reduce waste, but a lack of practical tools to plan around it." <strong>Link:</strong> "Beyond individual habits, however, larger structural changes are needed at the retail level as well."</p>
+</div>
+<h2><span class="num">5.</span>Writing a Strong Conclusion</h2>
+<p>A conclusion should never simply repeat the introduction word for word. Instead, it should:</p>
+<ul>
+<li><strong>Restate the thesis</strong> in fresh wording, reflecting the argument as it was actually developed.</li>
+<li><strong>Briefly summarize</strong> the key supporting points, without repeating them in full detail.</li>
+<li><strong>End with a closing thought</strong> — a broader implication, a call to action, or a final insight that gives the essay a sense of resolution.</li>
+</ul>
+<h2><span class="num">6.</span>Beyond Five Paragraphs: When to Break the Mold</h2>
+<p>The five-paragraph essay is a training structure, not a permanent rule. As arguments grow more complex, rigidly forcing them into exactly three body paragraphs often weakens the writing rather than strengthening it.</p>
+<ul>
+<li><strong>Longer essays</strong> may need five, six, or more body paragraphs to fully develop a complex argument.</li>
+<li><strong>Some points need more than one paragraph</strong> to develop properly — splitting a dense idea across two paragraphs is often clearer than cramming it into one.</li>
+<li><strong>Counterarguments</strong> often deserve their own dedicated paragraph, addressing and refuting an opposing view before returning to the main argument.</li>
+<li><strong>Academic and professional essays</strong> are rarely exactly five paragraphs — length should be driven by the argument's needs, not a fixed formula.</li>
+</ul>
+<h2><span class="num">7.</span>Addressing Counterarguments</h2>
+<p>Strong essays, especially argumentative ones, often acknowledge an opposing viewpoint before refuting it — a technique that makes an argument more persuasive, not weaker, by showing the writer has considered other perspectives.</p>
+<div class="example-box">
+<div class="ex-label">Example</div>
+<p>"Critics argue that mandatory recycling programs are too costly for municipalities to sustain. However, a 2022 city-level analysis found that recycling programs paying for themselves through material resale offset up to 80% of program costs within five years — suggesting the long-term savings outweigh the initial investment."</p>
+</div>
+<h2><span class="num">8.</span>Common Structural Mistakes</h2>
+<ul>
+<li><strong>Introductions that are too long:</strong> background context should orient the reader quickly, not delay the thesis for several paragraphs.</li>
+<li><strong>Body paragraphs without a clear point:</strong> a paragraph packed with evidence but no clear governing idea confuses rather than persuades.</li>
+<li><strong>Conclusions that introduce new arguments:</strong> new points should never appear for the first time in the conclusion — that evidence belongs in the body.</li>
+<li><strong>Weak transitions:</strong> body paragraphs that don't connect to each other read as a disconnected list rather than a unified argument.</li>
+</ul>
+<div class="real-world-box">
+<div class="rw-label">Real-World Example</div>
+<p>Consider a short essay arguing that public libraries remain essential in the digital age. The introduction hooks with a surprising statistic about library visits actually rising post-2020, narrows to the topic of libraries' evolving role, and ends with a thesis: "Public libraries remain vital community institutions, not because of the books they lend, but because of the equitable access to technology, education, and public space they provide." Each of three body paragraphs then develops one of those three points — technology access, educational programming, and public space — using the PEEL method, before a conclusion ties them together around the idea that libraries have adapted rather than become obsolete. This is the five-paragraph structure functioning exactly as intended: not a rigid cage, but a clear, logical skeleton for a real argument.</p>
+</div>
+<h2>Why This Matters</h2>
+<p>Structure is what allows a reader to follow an argument without getting lost — no matter how insightful the content, a poorly organized essay struggles to persuade. Mastering the five-paragraph essay first, then learning when and how to expand beyond it, is the foundation every other skill in this Academic &amp; Essay Writing series builds on.</p>
+<!-- QUIZ SECTION -->
+<!-- QUIZ SECTION -->
+<div class="quiz-section">
+<div class="section-eyebrow">Test Your Understanding</div>
+<h2>Practice Questions</h2>
+<p class="quiz-intro">12 questions. Select an answer for each, then submit to see your score instantly.</p>
+<div class="squiz-progress"><div class="squiz-progress-fill" id="squizProgressFill"></div></div>
+<div class="squiz-progress-label" id="squizProgressLabel">0 of 12 answered</div>
+<div class="squiz-results" id="squizResults">
+<div class="squiz-score-big" id="squizScoreBig">0/12</div>
+<div class="squiz-score-label" id="squizScoreLabel">You scored 0%</div>
+<div class="squiz-score-tier" id="squizScoreTier">Keep practicing</div>
+<div><button class="squiz-retake-btn" onclick="retakeQuiz()">Retake Quiz</button></div>
+</div>
+<form id="squizForm">
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">1.</span>What are the three core parts of almost any essay?</div>
+<div class="squiz-option"><input id="sq1a" name="sq1" type="radio" value="0"/><label for="sq1a">A. Hook, evidence, citation</label></div>
+<div class="squiz-option"><input id="sq1b" name="sq1" type="radio" value="1"/><label for="sq1b">B. Introduction, body, conclusion</label></div>
+<div class="squiz-option"><input id="sq1c" name="sq1" type="radio" value="2"/><label for="sq1c">C. Title, thesis, summary</label></div>
+<div class="squiz-option"><input id="sq1d" name="sq1" type="radio" value="3"/><label for="sq1d">D. Quote, analysis, transition</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">2.</span>How many body paragraphs does a traditional five-paragraph essay contain?</div>
+<div class="squiz-option"><input id="sq2a" name="sq2" type="radio" value="0"/><label for="sq2a">A. One</label></div>
+<div class="squiz-option"><input id="sq2b" name="sq2" type="radio" value="1"/><label for="sq2b">B. Two</label></div>
+<div class="squiz-option"><input id="sq2c" name="sq2" type="radio" value="2"/><label for="sq2c">C. Three</label></div>
+<div class="squiz-option"><input id="sq2d" name="sq2" type="radio" value="3"/><label for="sq2d">D. Five</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">3.</span>What does the "hook" in an introduction do?</div>
+<div class="squiz-option"><input id="sq3a" name="sq3" type="radio" value="0"/><label for="sq3a">A. States the thesis</label></div>
+<div class="squiz-option"><input id="sq3b" name="sq3" type="radio" value="1"/><label for="sq3b">B. Captures the reader's attention at the start</label></div>
+<div class="squiz-option"><input id="sq3c" name="sq3" type="radio" value="2"/><label for="sq3c">C. Summarizes the conclusion</label></div>
+<div class="squiz-option"><input id="sq3d" name="sq3" type="radio" value="3"/><label for="sq3d">D. Cites a source</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">4.</span>What does the "E" in the PEEL method stand for?</div>
+<div class="squiz-option"><input id="sq4a" name="sq4" type="radio" value="0"/><label for="sq4a">A. Essay</label></div>
+<div class="squiz-option"><input id="sq4b" name="sq4" type="radio" value="1"/><label for="sq4b">B. Evidence</label></div>
+<div class="squiz-option"><input id="sq4c" name="sq4" type="radio" value="2"/><label for="sq4c">C. Ending</label></div>
+<div class="squiz-option"><input id="sq4d" name="sq4" type="radio" value="3"/><label for="sq4d">D. Explanation only</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">5.</span>Where does the thesis statement typically appear?</div>
+<div class="squiz-option"><input id="sq5a" name="sq5" type="radio" value="0"/><label for="sq5a">A. As the essay's title</label></div>
+<div class="squiz-option"><input id="sq5b" name="sq5" type="radio" value="1"/><label for="sq5b">B. At the end of the introduction</label></div>
+<div class="squiz-option"><input id="sq5c" name="sq5" type="radio" value="2"/><label for="sq5c">C. In the middle of the conclusion</label></div>
+<div class="squiz-option"><input id="sq5d" name="sq5" type="radio" value="3"/><label for="sq5d">D. In every body paragraph equally</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">6.</span>What should a strong conclusion avoid doing?</div>
+<div class="squiz-option"><input id="sq6a" name="sq6" type="radio" value="0"/><label for="sq6a">A. Restating the thesis in fresh wording</label></div>
+<div class="squiz-option"><input id="sq6b" name="sq6" type="radio" value="1"/><label for="sq6b">B. Introducing brand-new arguments</label></div>
+<div class="squiz-option"><input id="sq6c" name="sq6" type="radio" value="2"/><label for="sq6c">C. Ending with a closing thought</label></div>
+<div class="squiz-option"><input id="sq6d" name="sq6" type="radio" value="3"/><label for="sq6d">D. Briefly summarizing key points</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">7.</span>When is it appropriate to move beyond the five-paragraph structure?</div>
+<div class="squiz-option"><input id="sq7a" name="sq7" type="radio" value="0"/><label for="sq7a">A. Never — it must always be exactly five paragraphs</label></div>
+<div class="squiz-option"><input id="sq7b" name="sq7" type="radio" value="1"/><label for="sq7b">B. When the argument is complex enough to need more development</label></div>
+<div class="squiz-option"><input id="sq7c" name="sq7" type="radio" value="2"/><label for="sq7c">C. Only in fiction writing</label></div>
+<div class="squiz-option"><input id="sq7d" name="sq7" type="radio" value="3"/><label for="sq7d">D. Only if the essay has no thesis</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">8.</span>Why might a strong essay address a counterargument?</div>
+<div class="squiz-option"><input id="sq8a" name="sq8" type="radio" value="0"/><label for="sq8a">A. To weaken its own position</label></div>
+<div class="squiz-option"><input id="sq8b" name="sq8" type="radio" value="1"/><label for="sq8b">B. To make the argument more persuasive by showing other views were considered</label></div>
+<div class="squiz-option"><input id="sq8c" name="sq8" type="radio" value="2"/><label for="sq8c">C. Counterarguments are never appropriate in essays</label></div>
+<div class="squiz-option"><input id="sq8d" name="sq8" type="radio" value="3"/><label for="sq8d">D. To replace the thesis statement</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">9.</span>What does the "L" in PEEL stand for, and what does it do?</div>
+<div class="squiz-option"><input id="sq9a" name="sq9" type="radio" value="0"/><label for="sq9a">A. Line — starts a new sentence</label></div>
+<div class="squiz-option"><input id="sq9b" name="sq9" type="radio" value="1"/><label for="sq9b">B. Link — connects to the next paragraph or the thesis</label></div>
+<div class="squiz-option"><input id="sq9c" name="sq9" type="radio" value="2"/><label for="sq9c">C. List — enumerates evidence</label></div>
+<div class="squiz-option"><input id="sq9d" name="sq9" type="radio" value="3"/><label for="sq9d">D. Length — controls paragraph size</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">10.</span>What is a common mistake involving body paragraphs?</div>
+<div class="squiz-option"><input id="sq10a" name="sq10" type="radio" value="0"/><label for="sq10a">A. Including too much evidence</label></div>
+<div class="squiz-option"><input id="sq10b" name="sq10" type="radio" value="1"/><label for="sq10b">B. Having a clear governing point</label></div>
+<div class="squiz-option"><input id="sq10c" name="sq10" type="radio" value="2"/><label for="sq10c">C. Packing in evidence with no clear point tying it together</label></div>
+<div class="squiz-option"><input id="sq10d" name="sq10" type="radio" value="3"/><label for="sq10d">D. Using the PEEL method</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">11.</span>What is the role of background/context in an introduction?</div>
+<div class="squiz-option"><input id="sq11a" name="sq11" type="radio" value="0"/><label for="sq11a">A. To restate the conclusion in advance</label></div>
+<div class="squiz-option"><input id="sq11b" name="sq11" type="radio" value="1"/><label for="sq11b">B. To narrow from the hook toward the specific topic</label></div>
+<div class="squiz-option"><input id="sq11c" name="sq11" type="radio" value="2"/><label for="sq11c">C. To provide the full bibliography</label></div>
+<div class="squiz-option"><input id="sq11d" name="sq11" type="radio" value="3"/><label for="sq11d">D. To introduce a counterargument</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">12.</span>Why is the five-paragraph essay considered a useful starting structure?</div>
+<div class="squiz-option"><input id="sq12a" name="sq12" type="radio" value="0"/><label for="sq12a">A. It is the only structure ever used professionally</label></div>
+<div class="squiz-option"><input id="sq12b" name="sq12" type="radio" value="1"/><label for="sq12b">B. Its predictable shape helps beginners learn to organize an argument clearly</label></div>
+<div class="squiz-option"><input id="sq12c" name="sq12" type="radio" value="2"/><label for="sq12c">C. It requires no thesis statement</label></div>
+<div class="squiz-option"><input id="sq12d" name="sq12" type="radio" value="3"/><label for="sq12d">D. It eliminates the need for evidence</label></div>
+</div>
+<button class="squiz-submit-btn" disabled="" id="squizSubmitBtn" onclick="submitQuiz()" type="button">Answer all questions to submit</button>
+</form>
+</div>
+<div class="article-footer-nav">
+<a href="index.html#english">← Back to English Language</a>
+<a href="article-viewer.html#thesis-statements.html">Next: Thesis Statements →</a>
+</div>
+</div>
+<script>
+  (function() {
+    const form = document.getElementById('squizForm');
+    const submitBtn = document.getElementById('squizSubmitBtn');
+    const progressFill = document.getElementById('squizProgressFill');
+    const progressLabel = document.getElementById('squizProgressLabel');
+    const totalQuestions = document.querySelectorAll('.squiz-item').length;
+
+    function countAnswered() {
+      let count = 0;
+      for (let i = 1; i <= totalQuestions; i++) {
+        if (form.querySelector(`input[name="sq${i}"]:checked`)) count++;
+      }
+      return count;
+    }
+
+    function updateProgress() {
+      const answered = countAnswered();
+      progressFill.style.width = (answered / totalQuestions * 100) + '%';
+      progressLabel.textContent = answered + ' of ' + totalQuestions + ' answered';
+      submitBtn.disabled = answered < totalQuestions;
+      submitBtn.textContent = answered < totalQuestions ? 'Answer all questions to submit' : 'Submit Quiz';
+      document.querySelectorAll('.squiz-option').forEach(opt => opt.classList.remove('selected'));
+      form.querySelectorAll('input[type="radio"]:checked').forEach(input => {
+        input.closest('.squiz-option').classList.add('selected');
+      });
+    }
+
+    form.addEventListener('change', updateProgress);
+
+    window.submitQuiz = function() {
+      let score = 0;
+      const questions = document.querySelectorAll('.squiz-item');
+      questions.forEach((q, idx) => {
+        const qnum = idx + 1;
+        const correctIdx = q.getAttribute('data-correct');
+        const selected = form.querySelector(`input[name="sq${qnum}"]:checked`);
+        const options = q.querySelectorAll('.squiz-option');
+        options.forEach((opt, optIdx) => {
+          opt.querySelector('input').disabled = true;
+          if (String(optIdx) === correctIdx) opt.classList.add('correct-answer');
+        });
+        if (selected && selected.value === correctIdx) {
+          score++;
+        } else if (selected) {
+          selected.closest('.squiz-option').classList.add('wrong-answer');
+        }
+      });
+
+      const percent = Math.round((score / totalQuestions) * 100);
+      document.getElementById('squizScoreBig').textContent = score + '/' + totalQuestions;
+      document.getElementById('squizScoreLabel').textContent = 'You scored ' + percent + '%';
+
+      let tier = 'Keep practicing';
+      if (percent === 100) tier = 'Perfect score!';
+      else if (percent >= 80) tier = 'Excellent work';
+      else if (percent >= 60) tier = 'Good effort';
+      else if (percent >= 40) tier = 'Getting there';
+      document.getElementById('squizScoreTier').textContent = tier;
+
+      document.getElementById('squizResults').classList.add('visible');
+      submitBtn.style.display = 'none';
+      document.getElementById('squizResults').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    window.retakeQuiz = function() {
+      form.reset();
+      document.querySelectorAll('.squiz-option').forEach(opt => {
+        opt.classList.remove('selected', 'correct-answer', 'wrong-answer');
+        opt.querySelector('input').disabled = false;
+      });
+      document.getElementById('squizResults').classList.remove('visible');
+      submitBtn.style.display = 'block';
+      updateProgress();
+      document.getElementById('squizForm').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    updateProgress();
+  })();
+</script>
+<footer>
+<div class="footer-top">
+<div class="footer-brand">
+<div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.75rem;">
+<span aria-label="EDUSAMBAM six-circle logo" class="mark"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+<a class="footer-brand-name" href="index.html">EDUSAMBAM</a>
+</div>
+<p>A trusted, anonymous source of knowledge for curious minds everywhere — learn, practise, grow and succeed.</p>
+</div>
+<div class="footer-col">
+<h4>Content</h4>
+<ul>
+<li><a href="index.html#english">English Language</a></li>
+<li><a href="index.html">Science</a></li>
+<li><a href="index.html">Mathematics</a></li>
+<li><a href="index.html">Health</a></li>
+<li><a href="index.html">General Knowledge</a></li>
+<li><a href="index.html">Computer &amp; AI</a></li>
+<li><a href="index.html#resources">Resources</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>About</h4>
+<ul>
+<li><a href="index.html">Our Mission</a></li>
+<li><a href="index.html">The Team</a></li>
+<li><a href="index.html">Write for Us</a></li>
+<li><a href="index.html">Contact Us</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Legal</h4>
+<ul>
+<li><a href="index.html">Privacy Policy</a></li>
+<li><a href="index.html">Terms of Use</a></li>
+<li><a href="index.html">Cookie Settings</a></li>
+<li><a href="index.html">Accessibility</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2026 EDUSAMBAM. All rights reserved. &nbsp;·&nbsp; EDUSAMBAM &middot; EduInfoAssessmentHub &middot; The Learners' Ladder.</p>
+<ul class="footer-bottom-links">
+<li><a href="index.html">Privacy</a></li>
+<li><a href="index.html">Terms</a></li>
+<li><a href="index.html">Sitemap</a></li>
+</ul>
+</div>
+<div class="back-home-wrap"><a class="back-home" href="index.html#top">← Back to Home</a></div>
+</footer>
+<script id="edusambam-reader-script">
+(function(){
+ const box=document.querySelector('.edusambam-reader'); if(!box)return;
+ const root=document.querySelector('.article-wrap, .article-wrapper');
+ if(!root)return;
+ const status=box.querySelector('.reader-status'), progress=box.querySelector('.reader-progress span'), rate=box.querySelector('select');
+ let utterance=null, chunks=[], index=0, total=0, paused=false, stopped=false;
+ function text(){
+   const clone=root.cloneNode(true);
+   clone.querySelectorAll('.quiz-section,.drill-section,.squiz-section,.activity-section,.assessment-section,form,button,input,select,textarea,script,style').forEach(el=>el.remove());
+   return clone.textContent.replace(/\s+/g,' ').trim();
+ }
+ function splitText(t){const out=[];const max=1200;for(let i=0;i<t.length;i+=max)out.push(t.slice(i,i+max));return out;}
+ function updateProgress(){progress.style.width=(total?Math.min(100,Math.round((index/total)*100)):0)+'%';}
+ function speakNext(){
+   if(stopped||index>=total){if(index>=total&&!stopped){status.textContent='Reading finished.';progress.style.width='100%';}return;}
+   utterance=new SpeechSynthesisUtterance(chunks[index]);
+   utterance.rate=Number(rate.value)||1;
+   utterance.onend=function(){if(stopped)return;index++;updateProgress();speakNext();};
+   utterance.onerror=function(){if(!stopped)status.textContent='The reader stopped unexpectedly. Tap Resume to continue.';};
+   status.textContent='Reading article…';
+   speechSynthesis.speak(utterance);
+ }
+ function play(){
+   if(!('speechSynthesis' in window)){status.textContent='Audio reading is not supported by this browser.';return;}
+   speechSynthesis.cancel();
+   chunks=splitText(text());index=0;total=chunks.length;paused=false;stopped=false;updateProgress();speakNext();
+ }
+ function pause(){
+   if(!('speechSynthesis' in window))return;
+   if(speechSynthesis.speaking){speechSynthesis.pause();paused=true;status.textContent='Reader paused.';}
+ }
+ function resume(){
+   if(!('speechSynthesis' in window))return;
+   stopped=false;
+   if(speechSynthesis.paused){speechSynthesis.resume();paused=false;status.textContent='Reader resumed.';return;}
+   if(!speechSynthesis.speaking && chunks.length && index<total){paused=false;status.textContent='Reader resumed.';speakNext();return;}
+   if(!chunks.length){status.textContent='Nothing to resume. Tap Play to start.';return;}
+   status.textContent='Reader is already playing.';
+ }
+ function stop(){
+   speechSynthesis.cancel();chunks=[];index=0;total=0;paused=false;stopped=true;progress.style.width='0';status.textContent='Reader stopped.';
+ }
+ box.querySelector('[data-reader="play"]').addEventListener('click',play);
+ box.querySelector('[data-reader="pause"]').addEventListener('click',pause);
+ box.querySelector('[data-reader="resume"]').addEventListener('click',resume);
+ box.querySelector('[data-reader="stop"]').addEventListener('click',stop);
+ window.addEventListener('beforeunload',()=>{stopped=true;speechSynthesis.cancel();});
+})();
+</script></body>
+</html>

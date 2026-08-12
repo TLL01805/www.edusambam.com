@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Continents &amp; Oceans: The Basic Map of the World — EDUSAMBAM</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --red:       #8B0000;
+    --red-mid:   #A50000;
+    --red-lt:    #F9F0F0;
+    --navy:      #06244a;
+    --navy-mid:  #1C3151;
+    --gold:      #B8963E;
+    --gold-lt:   #F5EDD6;
+    --cream:     #FAF8F4;
+    --white:     #FFFFFF;
+    --ink:       #1A1A1A;
+    --slate:     #4A4A4A;
+    --muted:     #767676;
+    --border:    #D8D0C8;
+    --border-lt: #EDE8E0;
+    --radius:    4px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--ink);
+    background: var(--white);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── TOP BAR ── */
+  .top-bar {
+    background: var(--navy);
+    padding: 0.45rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .top-bar p {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.03em;
+  }
+  .top-bar-links { display: flex; gap: 1.5rem; list-style: none; }
+  .top-bar-links a {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+  .top-bar-links a:hover { color: white; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 200;
+    background: rgba(255,255,255,.97);
+    border-bottom: 3px solid var(--gold);
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    box-shadow: 0 2px 12px rgba(8,47,99,0.08);
+  }
+  .nav-brand { display: flex; flex-direction: column; line-height: 1; text-decoration: none; }
+  .nav-brand-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: 0.01em;
+  }
+  .nav-brand-name span { color: var(--red); }
+  .nav-brand-sub {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: rgba(13,27,42,0.6);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 0.25rem;
+  }
+  .nav-links { display: flex; gap: 0; list-style: none; }
+  .nav-links a {
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(13,27,42,0.75);
+    padding: 0 1.1rem;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--b, #0b4ea2); }
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+  }
+
+  /* ── ARTICLE HERO ── */
+  .article-hero {
+    background: linear-gradient(135deg,#06244a,#0b4ea2);
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+  }
+  .breadcrumb {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 1.1rem;
+    letter-spacing: 0.02em;
+  }
+  .breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--gold); }
+  .article-hero-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(184,150,62,0.4);
+    padding: 0.35rem 0.9rem;
+    border-radius: 30px;
+    margin-bottom: 1.25rem;
+  }
+  .article-hero h1 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 2.4rem;
+    color: white;
+    max-width: 760px;
+    margin: 0 auto 1rem;
+    line-height: 1.25;
+  }
+  .article-hero p.sub {
+    color: rgba(255,255,255,0.6);
+    max-width: 620px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.02rem;
+  }
+  .article-hero-meta {
+    display: flex; justify-content: center; gap: 0.9rem;
+    font-size: 0.8rem; color: rgba(255,255,255,0.45);
+    flex-wrap: wrap;
+  }
+
+  /* ── ARTICLE BODY ── */
+  .article-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+  .article-wrap h2 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 1.65rem;
+    color: var(--navy);
+    margin: 2.6rem 0 1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--border-lt);
+  }
+  .article-wrap h2 span.num {
+    color: var(--red);
+    margin-right: 0.5rem;
+    font-style: italic;
+  }
+  .article-wrap p { color: var(--slate); margin-bottom: 1rem; font-size: 1.02rem; }
+  .article-wrap ul { margin: 0 0 1.2rem 1.4rem; color: var(--slate); }
+  .article-wrap li { margin-bottom: 0.5rem; }
+  .article-wrap strong { color: var(--ink); }
+  .lead {
+    font-size: 1.15rem;
+    color: var(--ink);
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    border-left: 3px solid var(--gold);
+    padding-left: 1.2rem;
+    margin: 1.5rem 0 2rem;
+  }
+  .example-box {
+    background: var(--gold-lt);
+    border: 1px solid rgba(184,150,62,0.35);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 1.3rem 1.5rem;
+    margin: 1.3rem 0 1.8rem;
+  }
+  .example-box .ex-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.5rem;
+  }
+  .example-box p { color: var(--ink); margin-bottom: 0.4rem; font-size: 0.98rem; }
+  .example-box p:last-child { margin-bottom: 0; }
+
+  .real-world-box {
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 1.6rem 1.7rem;
+    margin: 2.4rem 0;
+  }
+  .real-world-box .rw-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.7rem;
+  }
+  .real-world-box p { color: rgba(255,255,255,0.8); margin-bottom: 0; font-size: 1rem; }
+
+  .table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+  table.pos-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+  table.pos-table th {
+    background: var(--navy);
+    color: white;
+    text-align: left;
+    padding: 0.7rem 0.9rem;
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+  }
+  table.pos-table td {
+    padding: 0.7rem 0.9rem;
+    border-bottom: 1px solid var(--border-lt);
+    color: var(--slate);
+  }
+  table.pos-table tr:nth-child(even) td { background: var(--cream); }
+
+  /* ── HEIGHT COMPARISON CHART ── */
+  .chart-box {
+    background: var(--cream);
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    padding: 1.7rem 1.7rem 1.4rem;
+    margin: 2rem 0;
+  }
+  .chart-box .chart-title {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 1.2rem;
+  }
+  .chart-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.85rem;
+  }
+  .chart-bar-label {
+    width: 118px;
+    flex-shrink: 0;
+    font-size: 0.82rem;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+  .chart-bar-track {
+    flex: 1;
+    background: rgba(0,0,0,0.06);
+    border-radius: 6px;
+    overflow: hidden;
+    height: 22px;
+  }
+  .chart-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--navy), var(--red));
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 8px;
+    box-sizing: border-box;
+  }
+  .chart-bar-fill span {
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .chart-note { font-size: 0.82rem; color: var(--slate); margin: 1rem 0 0; }
+
+  /* ── TIMELINE ── */
+  .timeline-box {
+    margin: 2rem 0;
+    padding: 0.4rem 0 0.4rem 1.4rem;
+    border-left: 3px solid var(--gold);
+  }
+  .timeline-item { position: relative; padding-bottom: 1.4rem; }
+  .timeline-item:last-child { padding-bottom: 0; }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -1.85rem;
+    top: 0.3rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--red);
+    border: 2px solid var(--gold);
+  }
+  .timeline-date {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.15rem;
+  }
+  .timeline-label { font-size: 0.95rem; color: var(--ink); }
+  .timeline-label em { color: var(--slate); font-style: italic; }
+
+  /* ── QUIZ ── */
+  .quiz-section {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem 1.7rem 1.5rem;
+    margin-top: 3rem;
+  }
+  .quiz-section .section-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.4rem;
+  }
+  .quiz-section h2 {
+    border: none; margin: 0 0 0.4rem; padding: 0;
+  }
+  .quiz-intro { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.6rem; }
+
+  .article-footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-lt);
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .article-footer-nav a {
+    text-decoration: none;
+    color: var(--red);
+    font-weight: 600;
+    font-size: 0.92rem;
+  }
+  .article-footer-nav a:hover { text-decoration: underline; }
+
+  @media (max-width: 700px) {
+    .article-hero h1 { font-size: 1.7rem; }
+    .article-wrap { padding: 2rem 1.25rem 3rem; }
+  }
+  /* ── FUN FACT BOX (reusable) ── */
+  .fun-fact-box {
+    background: linear-gradient(135deg, rgba(212,175,55,0.12), rgba(212,175,55,0.04));
+    border: 1.5px dashed var(--gold);
+    border-radius: var(--radius);
+    padding: 1.3rem 1.5rem;
+    margin: 1.8rem 0;
+    position: relative;
+  }
+  .fun-fact-label {
+    font-weight: 700;
+    color: var(--red);
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+  .fun-fact-box p { margin: 0; }
+
+  /* ── FIX-IT CHALLENGE CARDS (reusable) ── */
+  .fixit-challenge {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-left: 5px solid var(--red);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.4rem;
+    margin: 1.2rem 0;
+  }
+  .fixit-wrong {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.15rem;
+    color: var(--red);
+    text-decoration: line-through;
+    margin-bottom: 0.4rem;
+  }
+  .fixit-toggle-btn {
+    background: none;
+    border: 1.5px solid var(--red);
+    color: var(--red);
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.4rem 0.9rem;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 0.3rem;
+  }
+  .fixit-explain { display: none; margin-top: 0.7rem; padding-top: 0.7rem; border-top: 1px dashed rgba(0,0,0,0.15); }
+  .fixit-explain.visible { display: block; }
+
+  /* ── PRACTICE ARENA / DRILL (reusable) ── */
+  .drill-section {
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 2rem 1.7rem;
+    margin-top: 3rem;
+  }
+  .drill-section .section-eyebrow { color: var(--gold); }
+  .drill-section h2 { border: none; margin: 0 0 0.4rem; padding: 0; color: white; }
+  .drill-intro { color: rgba(255,255,255,0.65); font-size: 0.95rem; margin-bottom: 1.5rem; }
+  .drill-controls { display: flex; gap: 0.8rem; align-items: center; margin-bottom: 1.3rem; flex-wrap: wrap; }
+  .drill-btn {
+    background: var(--red);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 0.55rem 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .drill-btn:hover { background: var(--red-mid); }
+  .drill-score { color: var(--gold); font-size: 0.88rem; font-weight: 600; }
+  .drill-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
+  @media (max-width: 600px) { .drill-grid { grid-template-columns: 1fr; } }
+  .drill-item {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: var(--radius);
+    padding: 0.8rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+  .drill-q { color: white; font-size: 1rem; font-weight: 500; }
+  .drill-fraction-inputs { display: flex; align-items: center; gap: 0.3rem; }
+  .drill-input {
+    width: 46px;
+    padding: 0.35rem 0.3rem;
+    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.95);
+    font-size: 0.95rem;
+    text-align: center;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  .drill-slash { color: white; font-size: 1.2rem; }
+  .drill-input.correct { outline: 3px solid #4CAF50; }
+  .drill-input.incorrect { outline: 3px solid #E57373; }
+  .drill-feedback { margin-top: 1.2rem; color: white; font-size: 0.95rem; min-height: 1.4rem; }
+
+  /* ── NUMBER LINE VISUAL (static, for examples) ── */
+  .number-line-visual {
+    position: relative;
+    height: 60px;
+    margin: 1.6rem 0.5rem 2.2rem;
+  }
+  .nl-track { position: absolute; top: 28px; left: 0; right: 0; height: 3px; background: var(--navy); }
+  .nl-tick { position: absolute; top: 21px; width: 2px; height: 17px; background: var(--navy); }
+  .nl-tick-label { position: absolute; top: 42px; transform: translateX(-50%); font-size: 0.8rem; color: var(--slate); }
+  .nl-point { position: absolute; top: 19px; width: 14px; height: 14px; border-radius: 50%; background: var(--red); transform: translateX(-50%); border: 2px solid white; box-shadow: 0 0 0 1.5px var(--red); }
+  .nl-point-label { position: absolute; top: -24px; transform: translateX(-50%); font-size: 0.85rem; font-weight: 700; color: var(--red); white-space: nowrap; }
+
+  /* ── NUMBER LINE JUMP VISUAL (static, for addition/subtraction examples) ── */
+  .nl-jump-visual { position: relative; height: 95px; margin: 2rem 0.5rem 2.4rem; }
+  .nl-jump-track { position: absolute; top: 55px; left: 0; right: 0; height: 3px; background: var(--navy); }
+  .nl-jump-tick { position: absolute; top: 48px; width: 2px; height: 17px; background: var(--navy); }
+  .nl-jump-tick-label { position: absolute; top: 76px; transform: translateX(-50%); font-size: 0.8rem; color: var(--slate); }
+  .nl-jump-arc { position: absolute; top: 30px; height: 3px; background: var(--red); border-radius: 2px; }
+  .nl-jump-arrowhead { position: absolute; top: 19px; font-size: 1.15rem; color: var(--red); font-weight: 700; transform: translateX(-50%); line-height: 1; }
+  .nl-jump-label { position: absolute; top: 0px; transform: translateX(-50%); font-size: 0.9rem; font-weight: 700; color: var(--red); white-space: nowrap; }
+  .nl-start-pt { position: absolute; top: 49px; width: 12px; height: 12px; border-radius: 50%; background: white; transform: translateX(-50%); border: 3px solid var(--navy); z-index: 2; }
+  .nl-end-pt { position: absolute; top: 48px; width: 14px; height: 14px; border-radius: 50%; background: var(--red); transform: translateX(-50%); border: 2px solid white; box-shadow: 0 0 0 1.5px var(--red); z-index: 3; }
+
+  /* ── NUMBER LINE DRILL: start-point reference marker ── */
+  .nl-drill-start-marker {
+    position: absolute; top: 27px; width: 14px; height: 14px;
+    border-radius: 50%; transform: translateX(-50%);
+    background: rgba(255,255,255,0.85); border: 3px solid var(--gold);
+    z-index: 1;
+  }
+
+  /* ── NUMBER LINE DRILL (interactive, click-to-place) ── */
+  .nl-drill-progress { color: var(--gold); text-align: center; font-size: 0.85rem; margin-bottom: 0.6rem; letter-spacing: 0.03em; }
+  .nl-drill-target { color: white; text-align: center; font-size: 1.25rem; font-weight: 700; margin-bottom: 1.8rem; }
+  .nl-drill-track {
+    position: relative;
+    height: 70px;
+    margin: 0 0.5rem 1.5rem;
+    cursor: crosshair;
+    touch-action: none;
+  }
+  .nl-drill-line { position: absolute; top: 34px; left: 0; right: 0; height: 3px; background: rgba(255,255,255,0.45); }
+  .nl-drill-tick { position: absolute; top: 27px; width: 2px; height: 17px; background: rgba(255,255,255,0.5); }
+  .nl-drill-tick-label { position: absolute; top: 46px; transform: translateX(-50%); font-size: 0.78rem; color: rgba(255,255,255,0.55); }
+  .nl-drill-marker {
+    position: absolute; top: 25px; width: 18px; height: 18px;
+    border-radius: 50%; transform: translateX(-50%);
+    border: 2px solid white;
+  }
+  .nl-drill-marker.user { background: var(--gold); }
+  .nl-drill-marker.correct-pos { background: #4CAF50; }
+  .nl-drill-marker.incorrect-pos { background: #E57373; }
+  .nl-drill-feedback-text { color: white; text-align: center; margin-top: 0.4rem; min-height: 1.4rem; font-size: 0.95rem; }
+  .nl-drill-actions { display: flex; justify-content: center; gap: 0.8rem; margin-top: 1rem; flex-wrap: wrap; }
+
+  /* ── PLACE VALUE: DIGIT DETECTIVE (reusable interactive) ── */
+  .pv-system-toggle { display: flex; gap: 0.6rem; justify-content: center; margin-bottom: 1.4rem; flex-wrap: wrap; }
+  .pv-toggle-btn {
+    background: #fff;
+    border: 1.5px solid var(--navy);
+    color: var(--navy);
+    padding: 0.5rem 1.1rem;
+    border-radius: 30px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .pv-toggle-btn.active { background: var(--navy); color: #fff; }
+  .pv-comma-display {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--red);
+    margin: 0.6rem 0 0.3rem;
+    font-family: 'EB Garamond', serif;
+    letter-spacing: 0.02em;
+  }
+  .pv-word-form { text-align: center; color: var(--slate); font-size: 0.92rem; margin-bottom: 1.3rem; font-style: italic; }
+  .pv-digit-row { display: flex; gap: 0.4rem; flex-wrap: wrap; justify-content: center; margin: 1.2rem 0; }
+  .pv-digit-box {
+    width: 44px; height: 54px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem; font-weight: 700;
+    font-family: 'Source Sans 3', sans-serif;
+    background: #fff; border: 2px solid var(--border);
+    border-radius: 8px; cursor: pointer; color: var(--navy);
+    transition: all 0.15s;
+  }
+  .pv-digit-box:hover { border-color: var(--gold); background: rgba(212,175,55,0.1); }
+  .pv-digit-box.active { background: var(--red); color: #fff; border-color: var(--red); transform: scale(1.08); }
+  .pv-info-panel {
+    background: var(--gold-lt);
+    border: 1px solid rgba(184,150,62,0.35);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.4rem;
+    margin-top: 1rem;
+    min-height: 34px;
+  }
+  .pv-info-placeholder { color: var(--slate); font-style: italic; margin: 0; }
+  .pv-info-result { margin: 0; font-size: 1rem; }
+  .pv-info-result strong { color: var(--red); }
+
+  /* ── PLACE VALUE: CLICK-CHOICE PRACTICE CARDS ── */
+  .pv-drill-question { color: white; font-size: 1.1rem; font-weight: 600; text-align: center; margin-bottom: 1.3rem; }
+  .pv-drill-choices { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.8rem; margin-bottom: 1rem; }
+  @media (max-width: 600px) { .pv-drill-choices { grid-template-columns: 1fr; } }
+  .pv-choice-btn {
+    background: rgba(255,255,255,0.08);
+    border: 1.5px solid rgba(255,255,255,0.25);
+    color: white;
+    padding: 0.8rem 1rem;
+    border-radius: var(--radius);
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.95rem;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.15s;
+  }
+  .pv-choice-btn:hover { background: rgba(212,175,55,0.18); border-color: var(--gold); }
+  .pv-choice-btn.correct { background: rgba(76,175,80,0.35); border-color: #4CAF50; }
+  .pv-choice-btn.incorrect { background: rgba(229,115,115,0.35); border-color: #E57373; }
+  .pv-choice-btn:disabled { cursor: default; }
+
+  /* ── NUMBER SYSTEMS: NESTED DIAGRAM ── */
+  .ns-real-box { border: 3px solid var(--navy); border-radius: 12px; padding: 2rem 1.2rem 1.2rem; position: relative; margin: 2rem 0; }
+  .ns-real-label { position: absolute; top: -14px; left: 16px; background: #fff; padding: 0 8px; font-weight: 700; color: var(--navy); font-size: 0.92rem; }
+  .ns-real-children { display: flex; gap: 1rem; flex-wrap: wrap; align-items: flex-start; }
+  .ns-rational-box { flex: 2; min-width: 220px; border: 3px solid var(--red); border-radius: 10px; padding: 1.7rem 1rem 1rem; position: relative; }
+  .ns-rational-label { position: absolute; top: -13px; left: 14px; background: #fff; padding: 0 6px; font-weight: 700; color: var(--red); font-size: 0.82rem; }
+  .ns-irrational-box { flex: 1; min-width: 140px; border: 3px solid var(--gold); border-radius: 10px; padding: 1.5rem 1rem; text-align: center; position: relative; display: flex; align-items: center; justify-content: center; }
+  .ns-irrational-label { position: absolute; top: -13px; left: 14px; background: #fff; padding: 0 6px; font-weight: 700; color: var(--gold); font-size: 0.82rem; }
+  .ns-irrational-box .ns-examples { font-size: 0.85rem; color: var(--slate); }
+  .ns-integers-box { border: 2px solid var(--navy); border-radius: 8px; padding: 1.5rem 0.9rem 0.9rem; position: relative; margin-top: 0.3rem; }
+  .ns-integers-label { position: absolute; top: -12px; left: 12px; background: #fff; padding: 0 6px; font-weight: 700; color: var(--navy); font-size: 0.78rem; }
+  .ns-whole-box { border: 2px solid var(--slate); border-radius: 6px; padding: 1.3rem 0.8rem 0.8rem; position: relative; margin-top: 0.3rem; }
+  .ns-whole-label { position: absolute; top: -11px; left: 10px; background: #fff; padding: 0 6px; font-weight: 700; color: var(--slate); font-size: 0.75rem; }
+  .ns-natural-box { border: 2px dashed var(--slate); border-radius: 6px; padding: 0.9rem; text-align: center; font-size: 0.8rem; color: var(--slate); }
+
+  /* ── NUMBER SYSTEMS: NUMBER EXPLORER (reusable interactive) ── */
+  .ns-chip-row { display: flex; gap: 0.6rem; flex-wrap: wrap; justify-content: center; margin: 1.3rem 0; }
+  .ns-chip {
+    background: #fff; border: 2px solid var(--border); border-radius: 30px;
+    padding: 0.5rem 1.1rem; font-size: 1.05rem; font-weight: 700;
+    font-family: 'Source Sans 3', sans-serif; color: var(--navy);
+    cursor: pointer; transition: all 0.15s;
+  }
+  .ns-chip:hover { border-color: var(--gold); background: rgba(212,175,55,0.1); }
+  .ns-chip.active { background: var(--red); color: #fff; border-color: var(--red); }
+  .ns-category-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; margin-top: 1rem; }
+  @media (max-width: 600px) { .ns-category-grid { grid-template-columns: repeat(2, 1fr); } }
+  .ns-category-item {
+    border-radius: var(--radius); padding: 0.6rem 0.7rem; font-size: 0.85rem; font-weight: 600;
+    text-align: center; border: 1.5px solid var(--border); color: var(--slate);
+    background: rgba(0,0,0,0.02);
+  }
+  .ns-category-item.yes { background: rgba(76,175,80,0.15); border-color: #4CAF50; color: #2e6b31; }
+  .ns-category-item.no { background: rgba(229,115,115,0.1); border-color: rgba(229,115,115,0.5); color: #a94442; opacity: 0.75; }
+  .ns-explorer-reason { text-align: center; color: var(--slate); font-size: 0.9rem; font-style: italic; margin-top: 0.9rem; min-height: 1.3rem; }
+
+  /* ── BASE SYSTEMS: CONVERSION GRID (reusable) ── */
+  .bs-base-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.6rem; margin-top: 1.2rem; }
+  @media (max-width: 680px) { .bs-base-grid { grid-template-columns: repeat(2, 1fr); } }
+  .bs-base-item {
+    border-radius: var(--radius); padding: 0.8rem 0.6rem; text-align: center;
+    border: 1.5px solid var(--gold); background: rgba(212,150,62,0.08);
+  }
+  .bs-base-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--slate); margin-bottom: 0.3rem; }
+  .bs-base-value { font-size: 1.25rem; font-weight: 700; color: var(--navy); font-family: 'Source Sans 3', sans-serif; word-break: break-all; }
+  .bs-breakdown { margin-top: 1rem; text-align: center; color: var(--slate); font-size: 0.9rem; font-style: italic; }
+
+  /* ── VINCULUM / BAR BRACKET (reusable) ── */
+  .vinculum { text-decoration: overline; text-decoration-thickness: 2px; padding-top: 2px; }
+
+  /* ── WORD PROBLEM CARD (reusable, hidden/reveal solution) ── */
+  .word-problem-card {
+    background: #fff; border: 1px solid var(--border);
+    border-left: 4px solid var(--navy); border-radius: var(--radius);
+    padding: 1.3rem 1.5rem; margin: 1.3rem 0;
+  }
+  .wp-label { font-weight: 700; color: var(--navy); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem; }
+  .wp-statement { margin-bottom: 0.9rem; }
+  .wp-reveal-btn {
+    background: var(--navy); color: #fff; border: none;
+    font-family: 'Source Sans 3', sans-serif; font-size: 0.82rem; font-weight: 600;
+    padding: 0.55rem 1.1rem; border-radius: 30px; cursor: pointer;
+  }
+  .wp-reveal-btn:hover { background: var(--navy-mid); }
+  .wp-solution { display: none; margin-top: 1rem; padding-top: 1rem; border-top: 1px dashed var(--border); }
+  .wp-solution.visible { display: block; }
+  .wp-solution p { margin: 0.4rem 0; }
+
+  @media (max-width: 680px) {
+    .top-bar { display: none; }
+    nav {
+      padding: 0 1rem;
+      height: 68px;
+      border-bottom-width: 2px;
+    }
+    .nav-links { display: none; }
+    .nav-brand-name {
+      font-size: 1.35rem;
+      white-space: nowrap;
+    }
+    .nav-brand-sub {
+      font-size: 0.62rem;
+      letter-spacing: 0.07em;
+    }
+    .footer-top { grid-template-columns: 1fr; gap: 2rem; padding: 2rem 1.25rem; }
+    footer { padding: 2rem 1.25rem 0; }
+  }
+
+  /* ── FOOTER (copied from site) ── */
+  footer { background: var(--navy); padding: 3.5rem 3rem 0; }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 2.5rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .footer-brand-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+  }
+  .footer-brand-name span { color: var(--red); }
+  .footer-desc { color: rgba(255,255,255,0.45); font-size: 0.9rem; margin-top: 0.8rem; max-width: 320px; }
+  .footer-col h4 {
+    font-family: 'EB Garamond', serif;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 0.7rem; }
+  .footer-col a {
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.2s;
+  }
+  .footer-col a:hover { color: var(--gold); }
+  .footer-bottom {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer-bottom p { color: rgba(255,255,255,0.35); font-size: 0.8rem; }
+  .footer-bottom-links { display: flex; gap: 1.3rem; list-style: none; }
+  .footer-bottom-links a { color: rgba(255,255,255,0.35); text-decoration: none; font-size: 0.8rem; }
+  .footer-bottom-links a:hover { color: rgba(255,255,255,0.6); }
+  @media (max-width: 900px) {
+    .footer-top { grid-template-columns: 1fr 1fr; }
+    footer { padding: 2rem 1.25rem 0; }
+  }
+  .squiz-progress {
+    background: var(--cream);
+    border-radius: 30px;
+    height: 8px;
+    overflow: hidden;
+    margin-bottom: 0.4rem;
+  }
+  .squiz-progress-fill {
+    background: var(--gold);
+    height: 100%;
+    width: 0%;
+    transition: width 0.25s ease;
+  }
+  .squiz-progress-label {
+    font-size: 0.78rem;
+    color: var(--muted, var(--slate));
+    text-align: right;
+    margin-bottom: 1.3rem;
+  }
+  .squiz-item {
+    background: var(--white, #fff);
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .squiz-q {
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+  }
+  .squiz-q .qnum { color: var(--red); margin-right: 0.4rem; }
+  .squiz-option {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .squiz-option:hover { border-color: var(--gold); }
+  .squiz-option input[type="radio"] { accent-color: var(--red); width: 16px; height: 16px; flex-shrink: 0; }
+  .squiz-option label { cursor: pointer; font-size: 0.94rem; color: var(--slate); flex: 1; }
+  .squiz-option.selected { border-color: var(--red); background: rgba(139,0,0,0.04); }
+  .squiz-option.correct-answer { border-color: #2e7d32; background: rgba(46,125,50,0.08); }
+  .squiz-option.wrong-answer { border-color: var(--red); background: rgba(139,0,0,0.08); }
+  .squiz-submit-btn {
+    display: block;
+    width: 100%;
+    background: var(--red);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.98rem;
+    font-weight: 600;
+    padding: 0.9rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    margin-top: 0.6rem;
+    transition: background 0.2s;
+  }
+  .squiz-submit-btn:hover { background: var(--red-mid); }
+  .squiz-submit-btn:disabled { background: var(--border); cursor: not-allowed; }
+  .squiz-results {
+    display: none;
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 2rem 1.6rem;
+    text-align: center;
+    margin-bottom: 1.8rem;
+  }
+  .squiz-results.visible { display: block; }
+  .squiz-results .squiz-score-big {
+    font-family: 'EB Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .squiz-results .squiz-score-label { color: rgba(255,255,255,0.7); font-size: 0.98rem; margin-bottom: 1rem; }
+  .squiz-results .squiz-score-tier {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    border-radius: 30px;
+    background: rgba(184,150,62,0.15);
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+  }
+  .squiz-retake-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 0.65rem 1.4rem;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  .squiz-retake-btn:hover { background: rgba(255,255,255,0.1); }
+</style>
+<style id="edusambam-reader-style">
+.mark{width:48px;height:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px;border-radius:14px;background:#eef6ff;box-shadow:0 2px 7px rgba(8,47,99,.10);flex:0 0 48px}.mark i{display:block;border-radius:50%;background:#0b4ea2;min-width:0;min-height:0}.mark i:nth-child(5){background:#d4a017}.edusambam-reader{max-width:980px;margin:1.2rem auto 0;padding:1rem 1.1rem;border:1px solid #d7e4ef;border-radius:14px;background:linear-gradient(135deg,#f7fbff,#fff);box-shadow:0 6px 18px rgba(11,45,92,.08)}.edusambam-reader strong{display:block;color:#0b55a5;font-size:.9rem;letter-spacing:.04em}.edusambam-reader .reader-slogan{color:#b27e08;font-weight:900;margin-top:.25rem;font-size:.82rem}.edusambam-reader .reader-help{color:#607086;font-size:.8rem;margin:.3rem 0 .7rem}.edusambam-reader .reader-controls{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}.edusambam-reader button,.edusambam-reader select{border:1px solid #c9d9e8;background:#fff;color:#153b6e;border-radius:8px;padding:.48rem .65rem;font-weight:800;cursor:pointer}.edusambam-reader button:first-child{background:#0b55a5;color:#fff;border-color:#0b55a5}.edusambam-reader .reader-status{display:block;color:#607086;font-size:.75rem;margin-top:.55rem}.edusambam-reader .reader-progress{height:4px;background:#e4edf6;border-radius:99px;margin-top:.6rem;overflow:hidden}.edusambam-reader .reader-progress span{display:block;width:0;height:100%;background:#e1ad1c;transition:width .2s linear}@media(max-width:600px){.edusambam-reader{margin-left:0;margin-right:0}.edusambam-reader .reader-controls button,.edusambam-reader .reader-controls select{flex:1;min-width:75px}}
+</style></head>
+<body>
+<!-- TOP BAR -->
+<div class="top-bar">
+<p>Established 2026  ·  Free Educational Resources for All</p>
+<ul class="top-bar-links">
+<li><a href="index.html">Contact</a></li>
+<li><a href="index.html">About</a></li>
+<li><a href="index.html">Write for Us</a></li>
+</ul>
+</div>
+<!-- NAV -->
+<nav>
+<a class="nav-brand" href="index.html" style="display:flex; flex-direction:row; align-items:center; justify-content:flex-start; gap:0.6rem; text-decoration:none; overflow:hidden; flex:1; min-width:0;">
+<span aria-label="EDUSAMBAM six-circle logo" class="mark"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+<div style="display:flex; flex-direction:column; line-height:1.3; min-width:0;">
+<span class="nav-brand-name" style="white-space:nowrap;">EDUSAMBAM</span>
+<span class="nav-brand-sub">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM.</span>
+</div>
+</a>
+<ul class="nav-links">
+<li><a href="index.html#english">English</a></li>
+<li><a href="index.html">Science</a></li>
+<li><a href="index.html">Mathematics</a></li>
+<li><a href="index.html">Health</a></li>
+<li><a href="index.html">General Knowledge</a></li>
+<li><a href="index.html">Computer &amp; AI</a></li>
+<li><a href="index.html#resources">Resources</a></li>
+</ul>
+</nav>
+<div class="article-hero">
+<div class="breadcrumb"><a href="index.html">Home</a>  /  <a href="index.html">General Knowledge</a>  /  Continents &amp; Oceans</div>
+<div class="article-hero-tag">World Geography · Topic II</div>
+<h1>Continents &amp; Oceans: The Basic Map of the World</h1>
+<p class="sub">Seven continents, five oceans, and one supercontinent that broke apart to form them all — the foundation every other geography topic builds on.</p>
+<div class="article-hero-meta">
+<span>EDUSAMBAM Editorial Team</span>
+<span>|</span>
+<span>25 min read</span>
+<span>|</span>
+<span>General Knowledge</span>
+</div>
+</div><div aria-label="EDUSAMBAM article reader" class="edusambam-reader"><strong>🔊 LISTEN TO THIS ARTICLE</strong><div class="reader-slogan">SAVE YOUR EYES • IMPROVE YOUR LISTENING</div><div class="reader-help">Listen to the article instead of relying only on continuous screen reading.</div><div class="reader-controls"><button data-reader="play" type="button">▶ Play</button><button data-reader="pause" type="button">⏸ Pause</button><button data-reader="resume" type="button">▶ Resume</button><button data-reader="stop" type="button">■ Stop</button><select aria-label="Reading speed"><option value="1">1×</option><option value="0.8">0.8×</option><option value="1.2">1.2×</option></select></div><div aria-hidden="true" class="reader-progress"><span></span></div><small class="reader-status">Ready to read the article.</small></div>
+<div class="article-wrap">
+<p class="lead">This is the second topic in our World Geography strand, following on from <a href="article-viewer.html#famous-world-landmarks-wonders.html">Famous World Landmarks &amp; Wonders</a>. Before you can place any landmark, country, or capital on a map, you need the basic frame everything else sits inside: seven continents and five oceans. This article covers each one in detail, how they came to be shaped the way they are, and a couple of common misconceptions worth clearing up early.</p>
+<h2><span class="num">1.</span>What Makes a "Continent"?</h2>
+<p>A <strong>continent</strong> is one of Earth's several very large, continuous landmasses. There's no single official scientific rulebook for what counts — the divisions we use today are a mix of geography, geology (plate tectonics), and historical convention. That's why different countries teach slightly different models: some teach seven continents, others teach six (merging Europe and Asia into "Eurasia," or North and South America into "the Americas"), and Olympic tradition even uses a five-ring model. This article uses the seven-continent model, the most widely taught internationally and in Pakistani and Indian curricula.</p>
+<h2><span class="num">2.</span>The Seven Continents at a Glance</h2>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Continent</th><th>Approx. Area</th><th>Approx. Population</th><th>Rank by Size</th></tr>
+<tr><td>Asia</td><td>44.6 million km²</td><td>~4.7 billion</td><td>1st</td></tr>
+<tr><td>Africa</td><td>30.3 million km²</td><td>~1.4 billion</td><td>2nd</td></tr>
+<tr><td>North America</td><td>24.7 million km²</td><td>~600 million</td><td>3rd</td></tr>
+<tr><td>South America</td><td>17.8 million km²</td><td>~430 million</td><td>4th</td></tr>
+<tr><td>Antarctica</td><td>14.2 million km²</td><td>No permanent residents</td><td>5th</td></tr>
+<tr><td>Europe</td><td>10.2 million km²</td><td>~745 million</td><td>6th</td></tr>
+<tr><td>Australia / Oceania</td><td>8.6 million km²</td><td>~45 million</td><td>7th</td></tr>
+</table>
+</div>
+<p>Population figures are approximate and change year to year, but the relative order — Asia far ahead, then Africa, then the rest — has stayed consistent for decades.</p>
+<div class="chart-box">
+<div class="chart-title">Continents by Area</div>
+<div class="chart-bar-row">
+<div class="chart-bar-label">Asia</div>
+<div class="chart-bar-track"><div class="chart-bar-fill" style="width:100%;"><span>44.6M km²</span></div></div>
+</div>
+<div class="chart-bar-row">
+<div class="chart-bar-label">Africa</div>
+<div class="chart-bar-track"><div class="chart-bar-fill" style="width:68%;"><span>30.3M km²</span></div></div>
+</div>
+<div class="chart-bar-row">
+<div class="chart-bar-label">North America</div>
+<div class="chart-bar-track"><div class="chart-bar-fill" style="width:55%;"><span>24.7M km²</span></div></div>
+</div>
+<div class="chart-bar-row">
+<div class="chart-bar-label">South America</div>
+<div class="chart-bar-track"><div class="chart-bar-fill" style="width:40%;"><span>17.8M km²</span></div></div>
+</div>
+<div class="chart-bar-row">
+<div class="chart-bar-label">Antarctica</div>
+<div class="chart-bar-track"><div class="chart-bar-fill" style="width:32%;"><span>14.2M km²</span></div></div>
+</div>
+<div class="chart-bar-row">
+<div class="chart-bar-label">Europe</div>
+<div class="chart-bar-track"><div class="chart-bar-fill" style="width:23%;"><span>10.2M km²</span></div></div>
+</div>
+<div class="chart-bar-row">
+<div class="chart-bar-label">Australia / Oceania</div>
+<div class="chart-bar-track"><div class="chart-bar-fill" style="width:19%;"><span>8.6M km²</span></div></div>
+</div>
+</div>
+<h2><span class="num">3.</span>Asia</h2>
+<p>Asia is the largest and most populous continent, home to roughly 60% of the world's people. It stretches from Turkey's edge in the west to Japan and Indonesia in the east, and includes Pakistan and India. It contains both the world's <strong>highest point</strong> (Mount Everest, 8,849m, on the Nepal-China border) and one of its <strong>lowest land points</strong> (the Dead Sea shoreline, about 430m below sea level).</p>
+<h2><span class="num">4.</span>Africa</h2>
+<p>Africa is the second-largest continent and home to 54 recognised countries — more countries than any other continent. It contains the world's <strong>longest river</strong>, the Nile (about 6,650 km), and its <strong>largest hot desert</strong>, the Sahara, which covers roughly 9.2 million km² — nearly the size of the entire United States.</p>
+<h2><span class="num">5.</span>North America</h2>
+<p>North America includes Canada, the United States, Mexico, and the countries of Central America and the Caribbean. It's home to the <strong>Great Lakes</strong>, the largest group of freshwater lakes on Earth by total area, and the Mississippi–Missouri river system, one of the world's longest.</p>
+<h2><span class="num">6.</span>South America</h2>
+<p>South America contains the <strong>Amazon Rainforest</strong>, the largest tropical rainforest on Earth, producing so much oxygen and absorbing so much carbon dioxide it's sometimes called "the lungs of the planet." It's also home to the <strong>Andes</strong>, the longest continental mountain range in the world, stretching about 7,000 km along the continent's western edge.</p>
+<h2><span class="num">7.</span>Antarctica</h2>
+<p>Antarctica is Earth's coldest, windiest, and driest continent, with no permanent population — only rotating groups of scientists at research stations. It holds about <strong>70% of the world's fresh water</strong>, locked up as ice, and its ice sheet is, in places, over 4.5 km thick.</p>
+<h2><span class="num">8.</span>Europe</h2>
+<p>Europe is physically the western part of the same landmass as Asia — together they're sometimes called <strong>Eurasia</strong> — but is treated as a separate continent for historical and cultural reasons. Despite being the second-smallest continent, it's home to over 40 countries, many of them quite small in area compared to countries elsewhere.</p>
+<h2><span class="num">9.</span>Australia / Oceania</h2>
+<p>Australia is the only continent that is also a single country. "Oceania" is the broader region that also includes New Zealand and thousands of Pacific islands grouped into Melanesia, Micronesia, and Polynesia. It's the smallest and least populated continent, and home to unique wildlife found nowhere else, like kangaroos and koalas.</p>
+<div class="fixit-challenge">
+<div class="fixit-wrong">"Europe and Asia are separated by ocean, just like other continents"</div>
+<p>Students often assume every continent boundary looks like a coastline.</p>
+<button class="fixit-toggle-btn" onclick="toggleFix('fix1')">Show the Fix</button>
+<div class="fixit-explain" id="fix1">
+<p><strong>The fix:</strong> Europe and Asia sit on one continuous landmass with no ocean between them. The boundary is conventional, running roughly along the Ural Mountains, the Ural River, and the Caucasus region — a line agreed on by historians and geographers rather than one drawn by nature the way the Atlantic Ocean separates the Americas from Europe and Africa.</p>
+</div>
+</div>
+<!-- WONDER EXPLORER INTERACTIVE -->
+<div class="drill-section">
+<div class="section-eyebrow">Try It Yourself</div>
+<h2>Continent Explorer</h2>
+<p class="drill-intro">Tap any continent below for quick facts you can use to check your memory.</p>
+<div class="ns-chip-row" id="pcChipRow"></div>
+<div class="pv-info-panel">
+<p class="pv-info-placeholder" id="pcInfoPlaceholder">Tap a continent above to see its key facts.</p>
+<p class="pv-info-result" id="pcInfoResult" style="display:none;"></p>
+</div>
+</div>
+<h2><span class="num">10.</span>What Is an Ocean, and How Many Are There?</h2>
+<p>An <strong>ocean</strong> is one of Earth's major bodies of salt water. All the world's oceans are actually connected into one continuous body of water — the divisions between them are drawn using continents, underwater ridges, and agreed-upon boundary lines, not physical walls. For most of the 20th century, geographers taught <strong>four</strong> oceans. In June 2021, the <strong>Southern Ocean</strong> (surrounding Antarctica) was formally recognised as the fifth by National Geographic, matching what many oceanographers had already been using for years.</p>
+<h2><span class="num">11.</span>The Five Oceans at a Glance</h2>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Ocean</th><th>Approx. Area</th><th>Deepest Point</th></tr>
+<tr><td>Pacific</td><td>165.2 million km²</td><td>Challenger Deep, ~10,935 m</td></tr>
+<tr><td>Atlantic</td><td>106.5 million km²</td><td>Puerto Rico Trench, ~8,376 m</td></tr>
+<tr><td>Indian</td><td>70.6 million km²</td><td>Java Trench, ~7,290 m</td></tr>
+<tr><td>Southern</td><td>20.3 million km²</td><td>South Sandwich Trench, ~7,236 m</td></tr>
+<tr><td>Arctic</td><td>14.1 million km²</td><td>Molloy Deep, ~5,550 m</td></tr>
+</table>
+</div>
+<div class="chart-box">
+<div class="chart-title">Oceans by Area</div>
+<div class="chart-bar-row">
+<div class="chart-bar-label">Pacific</div>
+<div class="chart-bar-track"><div class="chart-bar-fill" style="width:100%;"><span>165.2M km²</span></div></div>
+</div>
+<div class="chart-bar-row">
+<div class="chart-bar-label">Atlantic</div>
+<div class="chart-bar-track"><div class="chart-bar-fill" style="width:64%;"><span>106.5M km²</span></div></div>
+</div>
+<div class="chart-bar-row">
+<div class="chart-bar-label">Indian</div>
+<div class="chart-bar-track"><div class="chart-bar-fill" style="width:43%;"><span>70.6M km²</span></div></div>
+</div>
+<div class="chart-bar-row">
+<div class="chart-bar-label">Southern</div>
+<div class="chart-bar-track"><div class="chart-bar-fill" style="width:12%;"><span>20.3M km²</span></div></div>
+</div>
+<div class="chart-bar-row">
+<div class="chart-bar-label">Arctic</div>
+<div class="chart-bar-track"><div class="chart-bar-fill" style="width:9%;"><span>14.1M km²</span></div></div>
+</div>
+<p class="chart-note">The Pacific alone is larger than all of Earth's landmasses combined.</p>
+</div>
+<h2><span class="num">12.</span>The Pacific Ocean</h2>
+<p>The Pacific is by far the largest and deepest ocean, covering about a third of the Earth's entire surface. It contains the <strong>Mariana Trench</strong>, home to the <strong>Challenger Deep</strong> — at roughly 10,935 metres below the surface, the deepest known point in any ocean. If Mount Everest were dropped into it, its peak would still sit over 2 km underwater.</p>
+<h2><span class="num">13.</span>The Atlantic, Indian, Southern &amp; Arctic Oceans</h2>
+<p>The <strong>Atlantic Ocean</strong> separates the Americas from Europe and Africa and is the world's saltiest major ocean. The <strong>Indian Ocean</strong>, bordered by Africa, Asia, and Australia, is the warmest ocean overall and historically the centre of ancient maritime trade routes connecting the Middle East, South Asia, and East Africa. The <strong>Southern Ocean</strong> encircles Antarctica and drives the powerful Antarctic Circumpolar Current. The <strong>Arctic Ocean</strong> is the smallest and shallowest, largely covered in sea ice for much of the year, though that ice cover has been shrinking due to climate change.</p>
+<div class="fixit-challenge">
+<div class="fixit-wrong">"There have always been exactly four oceans"</div>
+<p>Many textbooks (and adults!) still learned only four oceans in school.</p>
+<button class="fixit-toggle-btn" onclick="toggleFix('fix2')">Show the Fix</button>
+<div class="fixit-explain" id="fix2">
+<p><strong>The fix:</strong> The Southern Ocean has existed as a distinct body of water around Antarctica all along, but it was only formally recognised as Earth's fifth ocean by National Geographic in June 2021. Many oceanographers had already treated it as separate for decades because of its unique current system, so if you learned "four oceans," that's not wrong for its time — geography knowledge updates as understanding improves.</p>
+</div>
+</div>
+<h2><span class="num">14.</span>How the Continents Formed: Pangaea &amp; Plate Tectonics</h2>
+<p>Around 335 million years ago, almost all of Earth's land was joined into a single supercontinent called <strong>Pangaea</strong>. About 175 million years ago, Pangaea began splitting apart due to <strong>plate tectonics</strong> — the slow movement of the huge rocky plates that make up Earth's crust, drifting at roughly the speed your fingernails grow. Over tens of millions of years, those pieces drifted into the continents we recognise today, and they're still moving — North America and Europe drift apart by about 2.5 cm every year.</p>
+<div class="example-box">
+<div class="ex-label">Fast Fact</div>
+<p>The idea was proposed as "continental drift" by German scientist <strong>Alfred Wegener</strong> in 1912. He was widely dismissed at the time because he couldn't explain <em>how</em> continents moved — the mechanism (plate tectonics) wasn't confirmed until decades later, in the 1960s.</p>
+</div>
+<div class="real-world-box">
+<div class="rw-label">Real-World Example</div>
+<p>Look at a world map: the eastern coastline of South America and the western coastline of Africa fit together almost like puzzle pieces. That's not a coincidence — it's a visible leftover of the two continents once being joined as part of Pangaea.</p>
+</div>
+<div class="fun-fact-box">
+<div class="fun-fact-label">Did You Know?</div>
+<p>Because tectonic plates are still moving, in roughly 250 million years scientists predict the continents will collide again into a new supercontinent — some researchers have already nicknamed it "Pangaea Proxima."</p>
+</div>
+<!-- PRACTICE ARENA -->
+<div class="drill-section">
+<div class="section-eyebrow">Practice Arena</div>
+<h2>Match It</h2>
+<p class="drill-intro">Tap the correct answer for each question. Your score is tracked as you go, and your best score is saved on this device.</p>
+<div class="nl-drill-progress" id="pcProgress">Question 1 of 8  ·  Best score: <span id="pcBestScore">0</span> / 8</div>
+<div class="pv-drill-question" id="pcDrillQuestion"></div>
+<div class="pv-drill-choices" id="pcDrillChoices"></div>
+<div class="drill-feedback" id="pcDrillFeedback"></div>
+<div class="nl-drill-actions">
+<button class="drill-btn" id="pcNextBtn" onclick="nextPcQuestion()" style="display:none;">Next Question</button>
+<button class="drill-btn" id="pcNewSetBtn" onclick="newPcSet()" style="display:none;">Play Again</button>
+</div>
+</div>
+<h2><span class="num">15.</span>Why This Topic Matters</h2>
+<p>Continents and oceans are the skeleton every other geography fact hangs on — you can't learn countries, capitals, climates, or landmarks without first knowing where the major landmasses and bodies of water actually are. This topic also connects directly to science (plate tectonics, climate systems) and history (how oceans shaped trade, exploration, and the spread of cultures) — making it one of the most cross-curricular topics in this entire strand.</p>
+<!-- QUIZ SECTION -->
+<div class="quiz-section">
+<div class="section-eyebrow">Test Your Understanding</div>
+<h2>Practice Quiz</h2>
+<p class="quiz-intro">15 questions. Select an answer for each, then submit to see your score instantly.</p>
+<div class="squiz-progress"><div class="squiz-progress-fill" id="squizProgressFill"></div></div>
+<div class="squiz-progress-label" id="squizProgressLabel">0 of 15 answered</div>
+<div class="squiz-results" id="squizResults">
+<div class="squiz-score-big" id="squizScoreBig">0/15</div>
+<div class="squiz-score-label" id="squizScoreLabel">You scored 0%</div>
+<div class="squiz-score-tier" id="squizScoreTier">Keep practicing</div>
+<div><button class="squiz-retake-btn" onclick="retakeQuiz()">Retake Quiz</button></div>
+</div>
+<form id="squizForm">
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">1.</span>Which is the largest continent by area?</div>
+<div class="squiz-option"><input id="sq1a" name="sq1" type="radio" value="0"/><label for="sq1a">A. Africa</label></div>
+<div class="squiz-option"><input id="sq1b" name="sq1" type="radio" value="1"/><label for="sq1b">B. North America</label></div>
+<div class="squiz-option"><input id="sq1c" name="sq1" type="radio" value="2"/><label for="sq1c">C. Asia</label></div>
+<div class="squiz-option"><input id="sq1d" name="sq1" type="radio" value="3"/><label for="sq1d">D. Europe</label></div>
+</div>
+<div class="squiz-item" data-correct="0">
+<div class="squiz-q"><span class="qnum">2.</span>Which continent has no permanent population?</div>
+<div class="squiz-option"><input id="sq2a" name="sq2" type="radio" value="0"/><label for="sq2a">A. Antarctica</label></div>
+<div class="squiz-option"><input id="sq2b" name="sq2" type="radio" value="1"/><label for="sq2b">B. Australia</label></div>
+<div class="squiz-option"><input id="sq2c" name="sq2" type="radio" value="2"/><label for="sq2c">C. South America</label></div>
+<div class="squiz-option"><input id="sq2d" name="sq2" type="radio" value="3"/><label for="sq2d">D. Europe</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">3.</span>The world's longest river, the Nile, is on which continent?</div>
+<div class="squiz-option"><input id="sq3a" name="sq3" type="radio" value="0"/><label for="sq3a">A. Asia</label></div>
+<div class="squiz-option"><input id="sq3b" name="sq3" type="radio" value="1"/><label for="sq3b">B. South America</label></div>
+<div class="squiz-option"><input id="sq3c" name="sq3" type="radio" value="2"/><label for="sq3c">C. Africa</label></div>
+<div class="squiz-option"><input id="sq3d" name="sq3" type="radio" value="3"/><label for="sq3d">D. Australia</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">4.</span>Which is the only continent that is also a single country?</div>
+<div class="squiz-option"><input id="sq4a" name="sq4" type="radio" value="0"/><label for="sq4a">A. Africa</label></div>
+<div class="squiz-option"><input id="sq4b" name="sq4" type="radio" value="1"/><label for="sq4b">B. Australia</label></div>
+<div class="squiz-option"><input id="sq4c" name="sq4" type="radio" value="2"/><label for="sq4c">C. South America</label></div>
+<div class="squiz-option"><input id="sq4d" name="sq4" type="radio" value="3"/><label for="sq4d">D. Antarctica</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">5.</span>Europe and Asia are separated by which kind of boundary?</div>
+<div class="squiz-option"><input id="sq5a" name="sq5" type="radio" value="0"/><label for="sq5a">A. An ocean</label></div>
+<div class="squiz-option"><input id="sq5b" name="sq5" type="radio" value="1"/><label for="sq5b">B. A conventional line, roughly along the Ural Mountains</label></div>
+<div class="squiz-option"><input id="sq5c" name="sq5" type="radio" value="2"/><label for="sq5c">C. A mountain range that fully separates the landmasses</label></div>
+<div class="squiz-option"><input id="sq5d" name="sq5" type="radio" value="3"/><label for="sq5d">D. There is no boundary at all</label></div>
+</div>
+<div class="squiz-item" data-correct="3">
+<div class="squiz-q"><span class="qnum">6.</span>Which is the largest ocean?</div>
+<div class="squiz-option"><input id="sq6a" name="sq6" type="radio" value="0"/><label for="sq6a">A. Atlantic</label></div>
+<div class="squiz-option"><input id="sq6b" name="sq6" type="radio" value="1"/><label for="sq6b">B. Indian</label></div>
+<div class="squiz-option"><input id="sq6c" name="sq6" type="radio" value="2"/><label for="sq6c">C. Arctic</label></div>
+<div class="squiz-option"><input id="sq6d" name="sq6" type="radio" value="3"/><label for="sq6d">D. Pacific</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">7.</span>What is the name of the deepest known point in any ocean?</div>
+<div class="squiz-option"><input id="sq7a" name="sq7" type="radio" value="0"/><label for="sq7a">A. Puerto Rico Trench</label></div>
+<div class="squiz-option"><input id="sq7b" name="sq7" type="radio" value="1"/><label for="sq7b">B. Java Trench</label></div>
+<div class="squiz-option"><input id="sq7c" name="sq7" type="radio" value="2"/><label for="sq7c">C. Challenger Deep</label></div>
+<div class="squiz-option"><input id="sq7d" name="sq7" type="radio" value="3"/><label for="sq7d">D. Molloy Deep</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">8.</span>When was the Southern Ocean formally recognised as Earth's fifth ocean by National Geographic?</div>
+<div class="squiz-option"><input id="sq8a" name="sq8" type="radio" value="0"/><label for="sq8a">A. 1957</label></div>
+<div class="squiz-option"><input id="sq8b" name="sq8" type="radio" value="1"/><label for="sq8b">B. 1999</label></div>
+<div class="squiz-option"><input id="sq8c" name="sq8" type="radio" value="2"/><label for="sq8c">C. 2021</label></div>
+<div class="squiz-option"><input id="sq8d" name="sq8" type="radio" value="3"/><label for="sq8d">D. It has never been formally recognised</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">9.</span>Which ocean is bordered by Africa, Asia, and Australia, and is the warmest ocean overall?</div>
+<div class="squiz-option"><input id="sq9a" name="sq9" type="radio" value="0"/><label for="sq9a">A. Atlantic</label></div>
+<div class="squiz-option"><input id="sq9b" name="sq9" type="radio" value="1"/><label for="sq9b">B. Indian</label></div>
+<div class="squiz-option"><input id="sq9c" name="sq9" type="radio" value="2"/><label for="sq9c">C. Arctic</label></div>
+<div class="squiz-option"><input id="sq9d" name="sq9" type="radio" value="3"/><label for="sq9d">D. Southern</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">10.</span>What is the name of the supercontinent that existed around 335 million years ago?</div>
+<div class="squiz-option"><input id="sq10a" name="sq10" type="radio" value="0"/><label for="sq10a">A. Laurasia</label></div>
+<div class="squiz-option"><input id="sq10b" name="sq10" type="radio" value="1"/><label for="sq10b">B. Gondwana</label></div>
+<div class="squiz-option"><input id="sq10c" name="sq10" type="radio" value="2"/><label for="sq10c">C. Pangaea</label></div>
+<div class="squiz-option"><input id="sq10d" name="sq10" type="radio" value="3"/><label for="sq10d">D. Eurasia</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">11.</span>Who first proposed the idea of continental drift, in 1912?</div>
+<div class="squiz-option"><input id="sq11a" name="sq11" type="radio" value="0"/><label for="sq11a">A. Charles Darwin</label></div>
+<div class="squiz-option"><input id="sq11b" name="sq11" type="radio" value="1"/><label for="sq11b">B. Alfred Wegener</label></div>
+<div class="squiz-option"><input id="sq11c" name="sq11" type="radio" value="2"/><label for="sq11c">C. Isaac Newton</label></div>
+<div class="squiz-option"><input id="sq11d" name="sq11" type="radio" value="3"/><label for="sq11d">D. Hiram Bingham</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">12.</span>What force causes continents to slowly drift apart over millions of years?</div>
+<div class="squiz-option"><input id="sq12a" name="sq12" type="radio" value="0"/><label for="sq12a">A. Ocean currents</label></div>
+<div class="squiz-option"><input id="sq12b" name="sq12" type="radio" value="1"/><label for="sq12b">B. Wind erosion</label></div>
+<div class="squiz-option"><input id="sq12c" name="sq12" type="radio" value="2"/><label for="sq12c">C. Plate tectonics</label></div>
+<div class="squiz-option"><input id="sq12d" name="sq12" type="radio" value="3"/><label for="sq12d">D. Earth's rotation</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">13.</span>Which continent contains both Mount Everest and the Dead Sea?</div>
+<div class="squiz-option"><input id="sq13a" name="sq13" type="radio" value="0"/><label for="sq13a">A. Africa</label></div>
+<div class="squiz-option"><input id="sq13b" name="sq13" type="radio" value="1"/><label for="sq13b">B. Europe</label></div>
+<div class="squiz-option"><input id="sq13c" name="sq13" type="radio" value="2"/><label for="sq13c">C. Asia</label></div>
+<div class="squiz-option"><input id="sq13d" name="sq13" type="radio" value="3"/><label for="sq13d">D. South America</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">14.</span>Which continent contains the Amazon Rainforest and the Andes mountain range?</div>
+<div class="squiz-option"><input id="sq14a" name="sq14" type="radio" value="0"/><label for="sq14a">A. North America</label></div>
+<div class="squiz-option"><input id="sq14b" name="sq14" type="radio" value="1"/><label for="sq14b">B. South America</label></div>
+<div class="squiz-option"><input id="sq14c" name="sq14" type="radio" value="2"/><label for="sq14c">C. Africa</label></div>
+<div class="squiz-option"><input id="sq14d" name="sq14" type="radio" value="3"/><label for="sq14d">D. Australia</label></div>
+</div>
+<div class="squiz-item" data-correct="3">
+<div class="squiz-q"><span class="qnum">15.</span>Which ocean is the smallest and shallowest, and largely covered in sea ice?</div>
+<div class="squiz-option"><input id="sq15a" name="sq15" type="radio" value="0"/><label for="sq15a">A. Southern</label></div>
+<div class="squiz-option"><input id="sq15b" name="sq15" type="radio" value="1"/><label for="sq15b">B. Indian</label></div>
+<div class="squiz-option"><input id="sq15c" name="sq15" type="radio" value="2"/><label for="sq15c">C. Atlantic</label></div>
+<div class="squiz-option"><input id="sq15d" name="sq15" type="radio" value="3"/><label for="sq15d">D. Arctic</label></div>
+</div>
+<button class="squiz-submit-btn" disabled="" id="squizSubmitBtn" onclick="submitQuiz()" type="button">Answer all questions to submit</button>
+</form>
+</div>
+<div class="article-footer-nav">
+<a href="article-viewer.html#famous-world-landmarks-wonders.html">← Back to Famous World Landmarks &amp; Wonders</a>
+<a href="article-viewer.html#countries-and-capitals.html">Next: Countries &amp; Capitals →</a>
+</div>
+</div>
+<script>
+  (function() {
+    const form = document.getElementById('squizForm');
+    const submitBtn = document.getElementById('squizSubmitBtn');
+    const progressFill = document.getElementById('squizProgressFill');
+    const progressLabel = document.getElementById('squizProgressLabel');
+    const totalQuestions = document.querySelectorAll('.squiz-item').length;
+
+    function countAnswered() {
+      let count = 0;
+      for (let i = 1; i <= totalQuestions; i++) {
+        if (form.querySelector(`input[name="sq${i}"]:checked`)) count++;
+      }
+      return count;
+    }
+
+    function updateProgress() {
+      const answered = countAnswered();
+      progressFill.style.width = (answered / totalQuestions * 100) + '%';
+      progressLabel.textContent = answered + ' of ' + totalQuestions + ' answered';
+      submitBtn.disabled = answered < totalQuestions;
+      submitBtn.textContent = answered < totalQuestions ? 'Answer all questions to submit' : 'Submit Quiz';
+      document.querySelectorAll('.squiz-option').forEach(opt => opt.classList.remove('selected'));
+      form.querySelectorAll('input[type="radio"]:checked').forEach(input => {
+        input.closest('.squiz-option').classList.add('selected');
+      });
+    }
+
+    form.addEventListener('change', updateProgress);
+
+    window.submitQuiz = function() {
+      let score = 0;
+      const questions = document.querySelectorAll('.squiz-item');
+      questions.forEach((q, idx) => {
+        const qnum = idx + 1;
+        const correctIdx = q.getAttribute('data-correct');
+        const selected = form.querySelector(`input[name="sq${qnum}"]:checked`);
+        const options = q.querySelectorAll('.squiz-option');
+        options.forEach((opt, optIdx) => {
+          opt.querySelector('input').disabled = true;
+          if (String(optIdx) === correctIdx) opt.classList.add('correct-answer');
+        });
+        if (selected && selected.value === correctIdx) {
+          score++;
+        } else if (selected) {
+          selected.closest('.squiz-option').classList.add('wrong-answer');
+        }
+      });
+
+      const percent = Math.round((score / totalQuestions) * 100);
+      document.getElementById('squizScoreBig').textContent = score + '/' + totalQuestions;
+      document.getElementById('squizScoreLabel').textContent = 'You scored ' + percent + '%';
+
+      let tier = 'Keep practicing';
+      if (percent === 100) tier = 'Perfect score!';
+      else if (percent >= 80) tier = 'Excellent work';
+      else if (percent >= 60) tier = 'Good effort';
+      else if (percent >= 40) tier = 'Getting there';
+      document.getElementById('squizScoreTier').textContent = tier;
+
+      document.getElementById('squizResults').classList.add('visible');
+      submitBtn.style.display = 'none';
+      document.getElementById('squizResults').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    window.retakeQuiz = function() {
+      form.reset();
+      document.querySelectorAll('.squiz-option').forEach(opt => {
+        opt.classList.remove('selected', 'correct-answer', 'wrong-answer');
+        opt.querySelector('input').disabled = false;
+      });
+      document.getElementById('squizResults').classList.remove('visible');
+      submitBtn.style.display = 'block';
+      updateProgress();
+      document.getElementById('squizForm').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    updateProgress();
+  })();
+  function toggleFix(id) {
+    document.getElementById(id).classList.toggle('visible');
+  }
+
+  /* ── WONDER EXPLORER ── */
+  var PC_CHIPS = [
+    {label: "Asia", steps: ["Area: ~44.6 million km\u00b2 (largest)", "Population: ~4.7 billion (~60% of the world)", "Fact: Home to both Mount Everest and the Dead Sea shoreline"]},
+    {label: "Africa", steps: ["Area: ~30.3 million km\u00b2", "Countries: 54 \u2014 more than any other continent", "Fact: Home to the Nile (longest river) and the Sahara (largest hot desert)"]},
+    {label: "North America", steps: ["Area: ~24.7 million km\u00b2", "Includes: Canada, USA, Mexico, Central America, Caribbean", "Fact: Home to the Great Lakes, the largest group of freshwater lakes on Earth"]},
+    {label: "South America", steps: ["Area: ~17.8 million km\u00b2", "Home to: The Amazon Rainforest and the Andes mountains", "Fact: The Andes is the longest continental mountain range, ~7,000 km"]},
+    {label: "Antarctica", steps: ["Area: ~14.2 million km\u00b2", "Population: No permanent residents", "Fact: Holds about 70% of the world's fresh water, as ice"]},
+    {label: "Europe", steps: ["Area: ~10.2 million km\u00b2", "Countries: Over 40", "Fact: Forms one continuous landmass with Asia, called Eurasia"]},
+    {label: "Australia / Oceania", steps: ["Area: ~8.6 million km\u00b2 (smallest)", "Population: ~45 million (least populated)", "Fact: Australia is the only continent that is also a single country"]}
+  ];
+  var pcActiveChip = null;
+
+  function renderPcChips() {
+    var row = document.getElementById('pcChipRow');
+    row.innerHTML = '';
+    PC_CHIPS.forEach(function(chip, i) {
+      var el = document.createElement('div');
+      el.className = 'ns-chip';
+      el.textContent = chip.label;
+      if (i === pcActiveChip) el.classList.add('active');
+      el.onclick = (function(idx) { return function() { selectPcChip(idx); }; })(i);
+      row.appendChild(el);
+    });
+  }
+
+  function selectPcChip(idx) {
+    pcActiveChip = idx;
+    renderPcChips();
+    var chip = PC_CHIPS[idx];
+    document.getElementById('pcInfoPlaceholder').style.display = 'none';
+    var resultEl = document.getElementById('pcInfoResult');
+    resultEl.style.display = 'block';
+    var stepsHtml = chip.steps.map(function(s, i) { return (i+1) + '. ' + s; }).join('<br>');
+    resultEl.innerHTML = '<strong>' + chip.label + '</strong><br>' + stepsHtml;
+  }
+
+  renderPcChips();
+
+  /* ── PRACTICE ARENA: Match It ── */
+  var PC_QUESTION_POOL = [
+    {q: "Which is the largest continent by area?", choices: ["Africa", "Asia", "North America", "Europe"], correct: 1},
+    {q: "Which continent has no permanent population?", choices: ["Antarctica", "Australia", "Europe", "South America"], correct: 0},
+    {q: "Which ocean is the largest?", choices: ["Atlantic", "Indian", "Pacific", "Arctic"], correct: 2},
+    {q: "The Amazon Rainforest is located on which continent?", choices: ["Africa", "South America", "Asia", "Australia"], correct: 1},
+    {q: "What is the name of the supercontinent that broke apart into today's continents?", choices: ["Eurasia", "Gondwana", "Pangaea", "Laurasia"], correct: 2},
+    {q: "Which is the smallest and shallowest ocean?", choices: ["Southern", "Indian", "Atlantic", "Arctic"], correct: 3},
+    {q: "The Sahara, the world's largest hot desert, is on which continent?", choices: ["Asia", "Africa", "Australia", "South America"], correct: 1},
+    {q: "Which scientist first proposed continental drift in 1912?", choices: ["Isaac Newton", "Charles Darwin", "Alfred Wegener", "Hiram Bingham"], correct: 2}
+  ];
+  var PC_TOTAL_QUESTIONS = 8;
+  var PC_STORAGE_KEY = 'gk_continents_oceans_best_score';
+  var pcQuestions = [];
+  var pcIndex = 0;
+  var pcCorrectCount = 0;
+
+  function shufflePcArray(arr) {
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+    }
+    return a;
+  }
+
+  function newPcSet() {
+    pcQuestions = shufflePcArray(PC_QUESTION_POOL).slice(0, PC_TOTAL_QUESTIONS);
+    pcIndex = 0;
+    pcCorrectCount = 0;
+    document.getElementById('pcNewSetBtn').style.display = 'none';
+    renderPcQuestion();
+    updatePcBestScoreDisplay();
+  }
+
+  function renderPcQuestion() {
+    var q = pcQuestions[pcIndex];
+    document.getElementById('pcProgress').innerHTML = 'Question ' + (pcIndex + 1) + ' of ' + pcQuestions.length + ' &nbsp;\u00b7&nbsp; Best score: <span id="pcBestScore">' + getPcBestScore() + '</span> / ' + PC_TOTAL_QUESTIONS;
+    document.getElementById('pcDrillQuestion').textContent = q.q;
+    document.getElementById('pcDrillFeedback').textContent = '';
+    document.getElementById('pcNextBtn').style.display = 'none';
+
+    var choicesEl = document.getElementById('pcDrillChoices');
+    choicesEl.innerHTML = '';
+    q.choices.forEach(function(choice, i) {
+      var btn = document.createElement('button');
+      btn.className = 'pv-choice-btn';
+      btn.textContent = choice;
+      btn.onclick = function() { checkPcAnswer(i, btn); };
+      choicesEl.appendChild(btn);
+    });
+  }
+
+  function checkPcAnswer(selectedIdx, btnEl) {
+    var q = pcQuestions[pcIndex];
+    var allBtns = document.querySelectorAll('#pcDrillChoices .pv-choice-btn');
+    allBtns.forEach(function(b) { b.disabled = true; });
+
+    var isCorrect = selectedIdx === q.correct;
+    if (isCorrect) {
+      pcCorrectCount++;
+      btnEl.classList.add('correct');
+    } else {
+      btnEl.classList.add('incorrect');
+      allBtns[q.correct].classList.add('correct');
+    }
+
+    document.getElementById('pcDrillFeedback').textContent = isCorrect ? 'Correct!' : 'Not quite — the correct answer is highlighted.';
+
+    if (pcIndex < pcQuestions.length - 1) {
+      document.getElementById('pcNextBtn').style.display = 'inline-block';
+    } else {
+      finishPcSet();
+    }
+  }
+
+  function nextPcQuestion() {
+    pcIndex++;
+    renderPcQuestion();
+  }
+
+  function finishPcSet() {
+    document.getElementById('pcProgress').textContent = 'Finished! You got ' + pcCorrectCount + ' out of ' + pcQuestions.length + ' correct.';
+    document.getElementById('pcDrillQuestion').textContent = '';
+    document.getElementById('pcDrillChoices').innerHTML = '';
+    var best = getPcBestScore();
+    if (pcCorrectCount > best) {
+      localStorage.setItem(PC_STORAGE_KEY, pcCorrectCount);
+    }
+    document.getElementById('pcNewSetBtn').style.display = 'inline-block';
+    updatePcBestScoreDisplay();
+  }
+
+  function getPcBestScore() {
+    return parseInt(localStorage.getItem(PC_STORAGE_KEY) || '0', 10);
+  }
+
+  function updatePcBestScoreDisplay() {
+    var el = document.getElementById('pcBestScore');
+    if (el) el.textContent = getPcBestScore();
+  }
+
+  newPcSet();
+</script>
+<footer>
+<div class="footer-top">
+<div class="footer-brand">
+<div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.75rem;">
+<span aria-label="EDUSAMBAM six-circle logo" class="mark"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+<a class="footer-brand-name" href="index.html">EDUSAMBAM</a>
+</div>
+<p>A trusted, anonymous source of knowledge for curious minds everywhere — learn, practise, grow and succeed.</p>
+</div>
+<div class="footer-col">
+<h4>Content</h4>
+<ul>
+<li><a href="index.html#english">English Language</a></li>
+<li><a href="index.html">Science</a></li>
+<li><a href="index.html">Mathematics</a></li>
+<li><a href="index.html">Health</a></li>
+<li><a href="index.html">General Knowledge</a></li>
+<li><a href="index.html">Computer &amp; AI</a></li>
+<li><a href="index.html#resources">Resources</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>About</h4>
+<ul>
+<li><a href="index.html">Our Mission</a></li>
+<li><a href="index.html">The Team</a></li>
+<li><a href="index.html">Write for Us</a></li>
+<li><a href="index.html">Contact Us</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Legal</h4>
+<ul>
+<li><a href="index.html">Privacy Policy</a></li>
+<li><a href="index.html">Terms of Use</a></li>
+<li><a href="index.html">Cookie Settings</a></li>
+<li><a href="index.html">Accessibility</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2026 EDUSAMBAM. All rights reserved. &nbsp;·&nbsp; EDUSAMBAM &middot; EduInfoAssessmentHub &middot; The Learners' Ladder.</p>
+<ul class="footer-bottom-links">
+<li><a href="index.html">Privacy</a></li>
+<li><a href="index.html">Terms</a></li>
+<li><a href="index.html">Sitemap</a></li>
+</ul>
+</div>
+<div class="back-home-wrap"><a class="back-home" href="index.html#top">← Back to Home</a></div>
+</footer>
+<script id="edusambam-reader-script">
+(function(){
+ const box=document.querySelector('.edusambam-reader'); if(!box)return;
+ const root=document.querySelector('.article-wrap, .article-wrapper');
+ if(!root)return;
+ const status=box.querySelector('.reader-status'), progress=box.querySelector('.reader-progress span'), rate=box.querySelector('select');
+ let utterance=null, chunks=[], index=0, total=0, paused=false, stopped=false;
+ function text(){
+   const clone=root.cloneNode(true);
+   clone.querySelectorAll('.quiz-section,.drill-section,.squiz-section,.activity-section,.assessment-section,form,button,input,select,textarea,script,style').forEach(el=>el.remove());
+   return clone.textContent.replace(/\s+/g,' ').trim();
+ }
+ function splitText(t){const out=[];const max=1200;for(let i=0;i<t.length;i+=max)out.push(t.slice(i,i+max));return out;}
+ function updateProgress(){progress.style.width=(total?Math.min(100,Math.round((index/total)*100)):0)+'%';}
+ function speakNext(){
+   if(stopped||index>=total){if(index>=total&&!stopped){status.textContent='Reading finished.';progress.style.width='100%';}return;}
+   utterance=new SpeechSynthesisUtterance(chunks[index]);
+   utterance.rate=Number(rate.value)||1;
+   utterance.onend=function(){if(stopped)return;index++;updateProgress();speakNext();};
+   utterance.onerror=function(){if(!stopped)status.textContent='The reader stopped unexpectedly. Tap Resume to continue.';};
+   status.textContent='Reading article…';
+   speechSynthesis.speak(utterance);
+ }
+ function play(){
+   if(!('speechSynthesis' in window)){status.textContent='Audio reading is not supported by this browser.';return;}
+   speechSynthesis.cancel();
+   chunks=splitText(text());index=0;total=chunks.length;paused=false;stopped=false;updateProgress();speakNext();
+ }
+ function pause(){
+   if(!('speechSynthesis' in window))return;
+   if(speechSynthesis.speaking){speechSynthesis.pause();paused=true;status.textContent='Reader paused.';}
+ }
+ function resume(){
+   if(!('speechSynthesis' in window))return;
+   stopped=false;
+   if(speechSynthesis.paused){speechSynthesis.resume();paused=false;status.textContent='Reader resumed.';return;}
+   if(!speechSynthesis.speaking && chunks.length && index<total){paused=false;status.textContent='Reader resumed.';speakNext();return;}
+   if(!chunks.length){status.textContent='Nothing to resume. Tap Play to start.';return;}
+   status.textContent='Reader is already playing.';
+ }
+ function stop(){
+   speechSynthesis.cancel();chunks=[];index=0;total=0;paused=false;stopped=true;progress.style.width='0';status.textContent='Reader stopped.';
+ }
+ box.querySelector('[data-reader="play"]').addEventListener('click',play);
+ box.querySelector('[data-reader="pause"]').addEventListener('click',pause);
+ box.querySelector('[data-reader="resume"]').addEventListener('click',resume);
+ box.querySelector('[data-reader="stop"]').addEventListener('click',stop);
+ window.addEventListener('beforeunload',()=>{stopped=true;speechSynthesis.cancel();});
+})();
+</script></body>
+</html>
