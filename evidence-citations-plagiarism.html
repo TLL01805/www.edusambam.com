@@ -2,13 +2,13 @@
 
 <html lang="en">
 <head>
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon"/>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Evidence, Citations &amp; Avoiding Plagiarism: The Complete Guide — EDUSAMBAM</title>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -40,7 +40,11 @@
     background: var(--white);
     line-height: 1.7;
     overflow-x: hidden;
-  }
+
+    border: 3px solid #d4a017;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
 
   /* ── TOP BAR ── */
   .top-bar {
@@ -476,7 +480,7 @@
 </style>
 <style id="edusambam-reader-style">
 .mark{width:48px;height:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px;border-radius:14px;background:#eef6ff;box-shadow:0 2px 7px rgba(8,47,99,.10);flex:0 0 48px}.mark i{display:block;border-radius:50%;background:#0b4ea2;min-width:0;min-height:0}.mark i:nth-child(5){background:#d4a017}.edusambam-reader{max-width:980px;margin:1.2rem auto 0;padding:1rem 1.1rem;border:1px solid #d7e4ef;border-radius:14px;background:linear-gradient(135deg,#f7fbff,#fff);box-shadow:0 6px 18px rgba(11,45,92,.08)}.edusambam-reader strong{display:block;color:#0b55a5;font-size:.9rem;letter-spacing:.04em}.edusambam-reader .reader-slogan{color:#b27e08;font-weight:900;margin-top:.25rem;font-size:.82rem}.edusambam-reader .reader-help{color:#607086;font-size:.8rem;margin:.3rem 0 .7rem}.edusambam-reader .reader-controls{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}.edusambam-reader button,.edusambam-reader select{border:1px solid #c9d9e8;background:#fff;color:#153b6e;border-radius:8px;padding:.48rem .65rem;font-weight:800;cursor:pointer}.edusambam-reader button:first-child{background:#0b55a5;color:#fff;border-color:#0b55a5}.edusambam-reader .reader-status{display:block;color:#607086;font-size:.75rem;margin-top:.55rem}.edusambam-reader .reader-progress{height:4px;background:#e4edf6;border-radius:99px;margin-top:.6rem;overflow:hidden}.edusambam-reader .reader-progress span{display:block;width:0;height:100%;background:#e1ad1c;transition:width .2s linear}@media(max-width:600px){.edusambam-reader{margin-left:0;margin-right:0}.edusambam-reader .reader-controls button,.edusambam-reader .reader-controls select{flex:1;min-width:75px}}
-</style></head>
+</style><style id="edusambam-edge-fix">.article-wrap,.article-hero,.nav-brand{min-width:0;overflow:visible}.article-wrap h1,.article-wrap h2,.article-wrap h3,.article-hero h1,.article-hero .sub{overflow-wrap:anywhere;word-break:normal}.article-wrap{padding-left:max(1.25rem,3vw);padding-right:max(1.25rem,3vw)}@media(max-width:600px){.article-wrap{padding-left:1rem;padding-right:1rem}.article-hero{padding-left:1rem;padding-right:1rem}.nav-brand{overflow:visible!important}.nav-brand-name,.nav-brand-sub{overflow-wrap:anywhere}}</style></link><style id="edusambam-frame-final">html{box-sizing:border-box;max-width:100%;overflow-x:hidden}*,*:before,*:after{box-sizing:inherit}body{max-width:100%;min-width:0;overflow-x:hidden;border:3px solid #d4a017;box-sizing:border-box}img,svg,video,iframe{max-width:100%;height:auto}h1,h2,h3,h4,p,a,span,small,b,strong{overflow-wrap:anywhere}section,header,footer,main,nav{max-width:100%;box-sizing:border-box}@media(max-width:600px){body{border-width:3px}h1,h2,h3{margin-left:0!important;margin-right:0!important}}</style></head>
 <body>
 <!-- TOP BAR -->
 <div class="top-bar">
@@ -831,7 +835,7 @@
 </div>
 </div>
 <div class="footer-bottom">
-<p>© 2026 EDUSAMBAM. All rights reserved. &nbsp;·&nbsp; EDUSAMBAM &middot; EduInfoAssessmentHub &middot; The Learners' Ladder.</p>
+<p>© 2026 EDUSAMBAM. All rights reserved.  ·  EDUSAMBAM · EduInfoAssessmentHub · The Learners' Ladder.</p>
 <ul class="footer-bottom-links">
 <li><a href="index.html">Privacy</a></li>
 <li><a href="index.html">Terms</a></li>
@@ -845,11 +849,12 @@
  const box=document.querySelector('.edusambam-reader'); if(!box)return;
  const root=document.querySelector('.article-wrap, .article-wrapper');
  if(!root)return;
+ const bodySource=root.querySelector('.article-content, .article-body, .content-body') || root;
  const status=box.querySelector('.reader-status'), progress=box.querySelector('.reader-progress span'), rate=box.querySelector('select');
  let utterance=null, chunks=[], index=0, total=0, paused=false, stopped=false;
  function text(){
-   const clone=root.cloneNode(true);
-   clone.querySelectorAll('.quiz-section,.drill-section,.squiz-section,.activity-section,.assessment-section,form,button,input,select,textarea,script,style').forEach(el=>el.remove());
+   const clone=bodySource.cloneNode(true);
+   clone.querySelectorAll('.quiz-section,.drill-section,.squiz-section,.squiz-item,.activity-section,.assessment-section,.article-footer-nav,form,button,input,select,textarea,script,style,.edusambam-reader,.breadcrumb,.article-hero-meta,.article-hero-tag,nav,header,footer').forEach(el=>el.remove());
    return clone.textContent.replace(/\s+/g,' ').trim();
  }
  function splitText(t){const out=[];const max=1200;for(let i=0;i<t.length;i+=max)out.push(t.slice(i,i+max));return out;}

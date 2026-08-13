@@ -1,0 +1,25 @@
+{
+  "package": "EDUSAMBAM homepage, article libraries and ASSESSMENT ARENA",
+  "homepage": "index.html",
+  "scored_papers": {
+    "total": 38,
+    "categories": {
+      "English Language": 10,
+      "Mathematics": 10,
+      "Computer & AI": 15,
+      "General Knowledge": 3
+    }
+  },
+  "changes": [
+    "removed public development version references",
+    "exact homepage tagline",
+    "concepts and methodology mission message",
+    "EDUSAMBAM AT A GLANCE",
+    "separate ASSESSMENT ARENA with subcategories and navigation",
+    "detailed ASSESSMENT ARENA educational article",
+    "integrated newly supplied Chemistry, Physics and Optometry articles",
+    "removed subject article counts from public subject headings",
+    "golden site boundary and edge clipping protections",
+    "learner-facing homepage copy replacing technical implementation explanation"
+  ]
+}

@@ -1,16 +1,15 @@
 {
-  "version": "2.7",
-  "articles": 130,
+  "articles": 151,
   "subjects": {
     "English": 47,
     "GK": 15,
     "Computer Fundamentals": 9,
     "AI": 11,
     "Maths": 24,
-    "Physics": 8,
-    "Chemistry": 0,
+    "Physics": 12,
+    "Chemistry": 12,
     "Biology": 6,
-    "Optometry": 0,
+    "Optometry": 5,
     "Nutrition": 10
   },
   "circles": {
