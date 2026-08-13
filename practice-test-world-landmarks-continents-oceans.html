@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Practice Test: World Landmarks &amp; Continents and Oceans | EDUSAMBAM</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --navy: #06244a; --navy-mid: #1C3151;
+    --red: #0b4ea2; --red-mid: #0b55a5; --red-lt: #F9F0F0;
+    --gold: #B8963E; --gold-lt: #F5EDD6;
+    --green: #2f6b3a; --green-lt: rgba(47,107,58,0.08);
+    --ink: #1A1A1A; --slate: #4A4A4A; --muted: #767676;
+    --border: #D8D0C8; --border-lt: #EDE8E0;
+    --cream: #FAF8F4; --white: #FFFFFF; --radius: 4px;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Source Sans 3', sans-serif; color:var(--ink); background:var(--white); line-height:1.7; }
+  a { color:inherit; }
+  h1,h2 { font-family:'EB Garamond', serif; }
+
+  .top-bar { background:var(--navy); font-size:0.78rem; padding:0.45rem 3rem; display:flex; justify-content:space-between; align-items:center; }
+  .top-bar p { color:rgba(255,255,255,0.6); letter-spacing:0.03em; }
+  .top-bar-links { display:flex; gap:1.5rem; list-style:none; }
+  .top-bar-links a { color:rgba(255,255,255,0.6); text-decoration:none; letter-spacing:0.03em; transition:color 0.2s; }
+  .top-bar-links a:hover { color:white; }
+
+  nav { position:sticky; top:0; z-index:200; background:rgba(255,255,255,.97); border-bottom:3px solid var(--gold); padding:0 3rem; display:flex; align-items:center; justify-content:space-between; height:72px; box-shadow:0 2px 12px rgba(8,47,99,0.08); }
+  .nav-brand { display:flex; flex-direction:column; line-height:1; text-decoration:none; }
+  .nav-brand-name { font-family:'EB Garamond', serif; font-size:1.6rem; font-weight:600; color:var(--navy); letter-spacing:0.01em; }
+  .nav-brand-sub { font-size:0.7rem; font-weight:500; color:rgba(13,27,42,0.6); letter-spacing:0.1em; text-transform:uppercase; margin-top:0.25rem; }
+  .nav-links { display:flex; gap:0; list-style:none; }
+  .nav-links a { text-decoration:none; font-size:0.85rem; font-weight:500; color:rgba(13,27,42,0.75); padding:0 1.1rem; height:72px; display:flex; align-items:center; transition:color 0.2s; }
+  .nav-links a:hover { color:#0b4ea2; }
+  @media (max-width: 900px) { .nav-links { display:none; } }
+  .mark{width:48px;height:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px;border-radius:14px;background:#eef5fc;box-shadow:0 2px 7px rgba(8,47,99,.10);flex:0 0 48px}
+  .mark i{display:block;border-radius:50%;background:#0b4ea2;min-width:0;min-height:0}
+  .mark i:nth-child(5){background:#d4a017}
+
+  .article-hero { background: linear-gradient(135deg,#06244a,#0b4ea2); padding: 3rem 1.5rem 2.5rem; text-align: center; }
+  .breadcrumb { font-size: 0.78rem; color: rgba(255,255,255,0.45); margin-bottom: 1.1rem; letter-spacing: 0.02em; }
+  .breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--gold); }
+  .article-hero-tag { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(184,150,62,0.4); padding: 0.35rem 0.9rem; border-radius: 30px; margin-bottom: 1.25rem; }
+  .article-hero h1 { font-family: 'EB Garamond', serif; font-weight: 600; font-size: 2.2rem; color: white; max-width: 760px; margin: 0 auto 1rem; line-height: 1.25; }
+  .article-hero .sub { color: rgba(255,255,255,0.6); max-width: 620px; margin: 0 auto 1.5rem; font-size: 1.02rem; }
+  .article-hero-meta { display: flex; justify-content: center; gap: 0.9rem; font-size: 0.8rem; color: rgba(255,255,255,0.45); flex-wrap: wrap; }
+
+  .article-wrap { max-width:820px; margin:0 auto; padding:2.6rem 1.5rem 4rem; }
+
+  .test-info-box { display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:1.4rem; margin-bottom:1.8rem; }
+  .info-item { text-align:center; }
+  .info-num { font-family:'EB Garamond', serif; font-size:1.7rem; font-weight:700; color:var(--red); }
+  .info-label { font-size:0.78rem; color:var(--slate); text-transform:uppercase; letter-spacing:0.05em; }
+
+  .paper-pattern { margin-bottom:1.5rem; }
+  .pattern-table { width:100%; border-collapse:collapse; background:var(--white); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; font-size:0.9rem; }
+  .pattern-table th, .pattern-table td { padding:0.65rem 1rem; text-align:left; border-bottom:1px solid var(--border-lt); }
+  .pattern-table th { background:var(--navy); color:white; font-weight:600; }
+  .pattern-table tr:last-child td { font-weight:700; border-bottom:none; }
+
+  .squiz-progress { height:8px; background:var(--cream); border-radius:30px; overflow:hidden; margin-bottom:0.4rem; position:sticky; top:72px; z-index:40; }
+  .squiz-progress-fill { height:100%; width:0%; background:var(--gold); transition:width 0.25s ease; }
+  .squiz-progress-label { font-size:0.78rem; color:var(--muted); text-align:right; margin-bottom:1.3rem; }
+
+  .section-heading { display:flex; justify-content:space-between; align-items:baseline; margin:2.4rem 0 0.3rem; padding-bottom:0.5rem; border-bottom:2px solid var(--navy); }
+  .section-heading h2 { font-size:1.35rem; color:var(--navy); font-weight:600; }
+  .section-marks { font-size:0.85rem; color:var(--red); font-weight:600; }
+  .section-note { color:var(--slate); font-size:0.88rem; margin-bottom:1.2rem; }
+
+  .squiz-item { background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:1.2rem 1.3rem; margin-bottom:1rem; }
+  .squiz-q { display:flex; justify-content:space-between; align-items:flex-start; gap:1rem; font-weight:600; margin-bottom:0.9rem; font-size:0.98rem; }
+  .qnum { color:var(--red); margin-right:0.4rem; }
+  .q-tags { display:flex; gap:0.4rem; flex-shrink:0; }
+  .q-diff { font-size:0.7rem; font-weight:600; padding:0.2rem 0.55rem; border-radius:30px; text-transform:uppercase; letter-spacing:0.03em; white-space:nowrap; }
+  .q-diff.basic { background:rgba(47,107,58,0.1); color:var(--green); }
+  .q-diff.intermediate { background:rgba(184,150,62,0.15); color:var(--gold); }
+  .q-diff.advanced { background:rgba(139,0,0,0.08); color:var(--red); }
+  .q-marks { font-size:0.75rem; color:var(--slate); background:var(--border-lt); padding:0.2rem 0.55rem; border-radius:30px; white-space:nowrap; }
+
+  .squiz-option { display:flex; align-items:center; gap:0.65rem; padding:0.6rem 0.8rem; border:1px solid var(--border-lt); border-radius:var(--radius); margin-bottom:0.5rem; cursor:pointer; transition:border-color 0.15s, background 0.15s; }
+  .squiz-option:hover { border-color:var(--gold); }
+  .squiz-option.selected { border-color:var(--red); background:rgba(139,0,0,0.04); }
+  .squiz-option input { accent-color:var(--red); width:16px; height:16px; flex-shrink:0; }
+  .squiz-option label { font-size:0.94rem; color:var(--slate); cursor:pointer; }
+  .squiz-option.correct-answer { border-color:#2e7d32; background:rgba(46,125,50,0.08); }
+  .squiz-option.wrong-answer { border-color:var(--red); background:rgba(139,0,0,0.08); }
+  .tf-row { display:flex; gap:1rem; }
+  .tf-row .squiz-option { flex:1; justify-content:center; border:1px solid var(--border); }
+
+  .match-columns { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:0.6rem; }
+  .match-col-label { font-size:0.78rem; font-weight:700; color:var(--slate); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.5rem; }
+  .match-a-item { background:var(--cream); border:1px solid var(--border-lt); border-radius:6px; padding:0.6rem 0.75rem; margin-bottom:0.5rem; font-size:0.88rem; font-weight:600; min-height:44px; display:flex; align-items:center; }
+  .match-b-item { display:flex; align-items:center; gap:0.5rem; background:var(--white); border:1px solid var(--border); border-radius:6px; padding:0.5rem 0.6rem; margin-bottom:0.5rem; min-height:44px; }
+  .match-move { display:flex; flex-direction:column; gap:0.1rem; }
+  .move-btn { background:var(--border-lt); border:none; border-radius:4px; width:22px; height:18px; font-size:0.7rem; cursor:pointer; color:var(--slate); }
+  .move-btn:hover { background:var(--gold); color:white; }
+  .match-b-text { font-size:0.86rem; color:var(--slate); flex:1; }
+  .match-b-item.correct-answer { border-color:var(--green); background:var(--green-lt); }
+  .match-b-item.wrong-answer { border-color:var(--red); background:var(--red-lt); }
+
+  .text-answer input[type="text"], .text-answer textarea {
+    width:100%; border:1px solid var(--border); border-radius:var(--radius);
+    padding:0.65rem 0.85rem; font-family:'Source Sans 3', sans-serif; font-size:0.92rem;
+    color:var(--ink); background:var(--white); transition:border-color 0.15s;
+  }
+  .text-answer textarea { resize:vertical; min-height:65px; }
+  .text-answer input[type="text"]:focus, .text-answer textarea:focus { outline:none; border-color:var(--red); }
+  .text-answer.correct-answer input, .text-answer.correct-answer textarea { border-color:var(--green); background:var(--green-lt); }
+  .text-answer.wrong-answer input, .text-answer.wrong-answer textarea { border-color:var(--red); background:var(--red-lt); }
+  .answer-feedback { font-size:0.83rem; margin-top:0.45rem; display:none; }
+  .answer-feedback.visible { display:block; }
+  .answer-feedback.is-correct { color:var(--green); }
+  .answer-feedback.is-wrong { color:var(--red); }
+
+  .squiz-submit-btn {
+    display:block; width:100%; background:var(--red); color:white; border:none;
+    font-family:'Source Sans 3', sans-serif; font-size:1rem; font-weight:600;
+    padding:1rem; border-radius:var(--radius); cursor:pointer; margin-top:1rem; transition:background 0.2s;
+  }
+  .squiz-submit-btn:hover:not(:disabled) { background:var(--red-mid); }
+  .squiz-submit-btn:disabled { background:var(--border); cursor:not-allowed; }
+
+  .squiz-results { display:none; background:var(--navy); border-radius:var(--radius); padding:2.2rem 1.8rem; text-align:center; margin-top:2.6rem; }
+  .squiz-results.visible { display:block; }
+  .squiz-results .squiz-score-big { font-family:'EB Garamond', serif; font-size:3rem; font-weight:600; color:var(--gold); line-height:1; margin-bottom:0.3rem; }
+  .squiz-results .squiz-score-label { color:rgba(255,255,255,0.7); font-size:1rem; margin-bottom:0.4rem; }
+  .squiz-results .squiz-score-breakdown { color:rgba(255,255,255,0.45); font-size:0.82rem; margin-bottom:1.2rem; line-height:1.6; }
+  .squiz-results .squiz-score-tier { display:inline-block; font-size:0.85rem; font-weight:600; padding:0.4rem 1.1rem; border-radius:30px; background:rgba(184,150,62,0.15); color:var(--gold); margin-bottom:1.3rem; }
+  .squiz-retake-btn { background:transparent; border:1px solid rgba(255,255,255,0.3); color:white; font-family:'Source Sans 3', sans-serif; font-size:0.9rem; font-weight:600; padding:0.7rem 1.5rem; border-radius:30px; cursor:pointer; }
+  .squiz-retake-btn:hover { background:rgba(255,255,255,0.1); }
+
+  .article-footer-nav { display:flex; justify-content:space-between; align-items:center; margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--border-lt); flex-wrap:wrap; gap:1rem; }
+  .article-footer-nav a { text-decoration:none; color:var(--red); font-weight:600; font-size:0.92rem; }
+  .article-footer-nav a:hover { text-decoration:underline; }
+
+  @media (max-width: 700px) { .article-hero h1 { font-size:1.6rem; } .article-wrap { padding:2rem 1.25rem 3rem; } }
+  @media (max-width: 680px) {
+    .top-bar { display:none; }
+    nav { padding:0 1rem; height:64px; }
+    .nav-links { display:none; }
+    .nav-brand-name { font-size:1.35rem; white-space:nowrap; }
+    .nav-brand-sub { font-size:0.62rem; letter-spacing:0.07em; }
+    .footer-top { grid-template-columns:1fr; gap:2rem; padding:2rem 1.25rem; }
+    footer { padding:2rem 1.25rem 0; }
+  }
+
+  footer { background:var(--navy); padding:3.5rem 3rem 0; }
+  .footer-top { display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:2.5rem; max-width:1280px; margin:0 auto; padding-bottom:2.5rem; border-bottom:1px solid rgba(255,255,255,0.08); }
+  .footer-brand-name { font-family:'EB Garamond', serif; font-size:1.4rem; font-weight:600; color:white; text-decoration:none; }
+  .footer-desc { color:rgba(255,255,255,0.45); font-size:0.9rem; margin-top:0.8rem; max-width:320px; }
+  .footer-col h4 { font-family:'EB Garamond', serif; color:white; font-size:1rem; margin-bottom:1rem; font-weight:600; }
+  .footer-col ul { list-style:none; }
+  .footer-col li { margin-bottom:0.7rem; }
+  .footer-col a { color:rgba(255,255,255,0.45); text-decoration:none; font-size:0.88rem; transition:color 0.2s; }
+  .footer-col a:hover { color:var(--gold); }
+  .footer-bottom { max-width:1280px; margin:0 auto; padding:1.5rem 0; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; }
+  .footer-bottom p { color:rgba(255,255,255,0.35); font-size:0.8rem; }
+  .footer-bottom-links { display:flex; gap:1.3rem; list-style:none; }
+  .footer-bottom-links a { color:rgba(255,255,255,0.35); text-decoration:none; font-size:0.8rem; }
+  .footer-bottom-links a:hover { color:rgba(255,255,255,0.6); }
+  @media (max-width: 900px) { .footer-top { grid-template-columns:1fr 1fr; } footer { padding:2rem 1.25rem 0; } }
+</style>
+<style id="edusambam-frame-final">html{box-sizing:border-box;max-width:100%;overflow-x:hidden}*,*:before,*:after{box-sizing:inherit}body{max-width:100%;min-width:0;overflow-x:hidden;border:3px solid #d4a017;box-sizing:border-box}img,svg,video,iframe{max-width:100%;height:auto}h1,h2,h3,h4,p,a,span,small,b,strong{overflow-wrap:anywhere}section,header,footer,main,nav{max-width:100%;box-sizing:border-box}@media(max-width:600px){body{border-width:3px}h1,h2,h3{margin-left:0!important;margin-right:0!important}}</style></head>
+<body>
+<div class="top-bar">
+<p>Established 2026  ·  Free Educational Resources for All</p>
+<ul class="top-bar-links">
+<li><a href="index.html">Contact</a></li>
+<li><a href="index.html">About</a></li>
+<li><a href="index.html">Write for Us</a></li>
+</ul>
+</div>
+<nav>
+<a class="nav-brand" href="index.html" style="display:flex; flex-direction:row; align-items:center; justify-content:flex-start; gap:0.6rem; text-decoration:none; overflow:hidden; flex:1; min-width:0;">
+<span aria-label="EDUSAMBAM six-circle logo" class="mark"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+<div style="display:flex; flex-direction:column; line-height:1.3; min-width:0;">
+<span class="nav-brand-name" style="white-space:nowrap;">EDUSAMBAM</span>
+<span class="nav-brand-sub">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM.</span>
+</div>
+</a>
+<ul class="nav-links">
+<li><a href="index.html#english">English</a></li>
+<li><a href="index.html">Science</a></li>
+<li><a href="index.html">Mathematics</a></li>
+<li><a href="index.html">Health</a></li>
+<li><a href="index.html">General Knowledge</a></li>
+<li><a href="index.html">Computer &amp; AI</a></li>
+<li><a href="index.html#resources">Resources</a></li>
+</ul>
+</nav>
+<div class="article-hero">
+<div class="breadcrumb"><a href="index.html">Home</a>  /  <a href="index.html">General Knowledge</a>  /  Practice Test: World Landmarks &amp; Continents and Oceans</div>
+<span class="article-hero-tag">General Knowledge · Self Assessment</span>
+<h1>Practice Test: World Landmarks &amp; Continents and Oceans</h1>
+<p class="sub">A 100-mark paper covering "Famous World Landmarks &amp; Wonders" and "Continents &amp; Oceans" — multiple choice, true/false, fill-in-the-blank, column matching, and short answer, all auto-graded instantly.</p>
+<div class="article-hero-meta">
+<span>EDUSAMBAM Editorial Team</span>
+<span>·</span>
+<span>45 questions · 100 marks</span>
+<span>·</span>
+<span>Instant self-assessment</span>
+</div>
+</div>
+<div class="article-wrap">
+<div class="test-info-box">
+<div class="info-item"><div class="info-num">45</div><div class="info-label">Questions</div></div>
+<div class="info-item"><div class="info-num">100</div><div class="info-label">Marks</div></div>
+<div class="info-item"><div class="info-num">5</div><div class="info-label">Sections</div></div>
+<div class="info-item"><div class="info-num">100%</div><div class="info-label">Auto-Graded</div></div>
+</div>
+<div class="paper-pattern">
+<table class="pattern-table">
+<tr><th>Section</th><th>Questions</th><th>Marks Each</th><th>Total</th></tr>
+<tr><td>A — Multiple Choice</td><td>15</td><td>2</td><td>30</td></tr>
+<tr><td>B — True / False</td><td>10</td><td>2</td><td>20</td></tr>
+<tr><td>C — Fill in the Blank</td><td>10</td><td>2</td><td>20</td></tr>
+<tr><td>D — Column Matching</td><td>5 pairs</td><td>2</td><td>10</td></tr>
+<tr><td>E — Short Answer</td><td>5</td><td>4</td><td>20</td></tr>
+<tr><td>Total</td><td>45</td><td>—</td><td>100</td></tr>
+</table>
+</div>
+<p style="color:var(--slate); margin-bottom: 1.5rem; font-size: 1.02rem;">Fill-in-the-blank and short-answer questions are checked automatically against accepted answers — exact wording doesn't need to match, but the key term should be present.</p>
+<div class="squiz-progress"><div class="squiz-progress-fill" id="squizProgressFill"></div></div>
+<div class="squiz-progress-label" id="squizProgressLabel">0 of 45 answered</div>
+<div class="squiz-results" id="squizResults">
+<div class="squiz-score-big" id="squizScoreBig">0/100</div>
+<div class="squiz-score-label" id="squizScoreLabel">You scored 0%</div>
+<div class="squiz-score-breakdown" id="squizScoreBreakdown"></div>
+<div class="squiz-score-tier" id="squizScoreTier">Keep practicing</div>
+<div><button class="squiz-retake-btn" onclick="retakeQuiz()">Retake Test</button></div>
+</div>
+<form id="squizForm">
+<div class="section-heading"><h2>Section A — Multiple Choice</h2><span class="section-marks">30 marks</span></div>
+<p class="section-note">15 questions · 2 marks each.</p>
+<div class="squiz-item" data-correct="1" data-points="2" data-type="mcq">
+<div class="squiz-q"><span><span class="qnum">1.</span>In which city is the Eiffel Tower located?</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div>
+<div class="squiz-option"><input id="sq1a" name="sq1" type="radio" value="0"/><label for="sq1a">A. London</label></div>
+<div class="squiz-option"><input id="sq1b" name="sq1" type="radio" value="1"/><label for="sq1b">B. Paris</label></div>
+<div class="squiz-option"><input id="sq1c" name="sq1" type="radio" value="2"/><label for="sq1c">C. Rome</label></div>
+<div class="squiz-option"><input id="sq1d" name="sq1" type="radio" value="3"/><label for="sq1d">D. Berlin</label></div>
+</div>
+<div class="squiz-item" data-correct="2" data-points="2" data-type="mcq">
+<div class="squiz-q"><span><span class="qnum">2.</span>Who designed the Eiffel Tower?</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div>
+<div class="squiz-option"><input id="sq2a" name="sq2" type="radio" value="0"/><label for="sq2a">A. Jørn Utzon</label></div>
+<div class="squiz-option"><input id="sq2b" name="sq2" type="radio" value="1"/><label for="sq2b">B. Antoni Gaudí</label></div>
+<div class="squiz-option"><input id="sq2c" name="sq2" type="radio" value="2"/><label for="sq2c">C. Gustave Eiffel</label></div>
+<div class="squiz-option"><input id="sq2d" name="sq2" type="radio" value="3"/><label for="sq2d">D. Christopher Wren</label></div>
+</div>
+<div class="squiz-item" data-correct="0" data-points="2" data-type="mcq">
+<div class="squiz-q"><span><span class="qnum">3.</span>The Statue of Liberty stands in the harbour of which US city?</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div>
+<div class="squiz-option"><input id="sq3a" name="sq3" type="radio" value="0"/><label for="sq3a">A. New York</label></div>
+<div class="squiz-option"><input id="sq3b" name="sq3" type="radio" value="1"/><label for="sq3b">B. Boston</label></div>
+<div class="squiz-option"><input id="sq3c" name="sq3" type="radio" value="2"/><label for="sq3c">C. Miami</label></div>
+<div class="squiz-option"><input id="sq3d" name="sq3" type="radio" value="3"/><label for="sq3d">D. Chicago</label></div>
+</div>
+<div class="squiz-item" data-correct="1" data-points="2" data-type="mcq">
+<div class="squiz-q"><span><span class="qnum">4.</span>Big Ben is found in which city?</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div>
+<div class="squiz-option"><input id="sq4a" name="sq4" type="radio" value="0"/><label for="sq4a">A. Edinburgh</label></div>
+<div class="squiz-option"><input id="sq4b" name="sq4" type="radio" value="1"/><label for="sq4b">B. London</label></div>
+<div class="squiz-option"><input id="sq4c" name="sq4" type="radio" value="2"/><label for="sq4c">C. Dublin</label></div>
+<div class="squiz-option"><input id="sq4d" name="sq4" type="radio" value="3"/><label for="sq4d">D. Manchester</label></div>
+</div>
+<div class="squiz-item" data-correct="3" data-points="2" data-type="mcq">
+<div class="squiz-q"><span><span class="qnum">5.</span>The Sydney Opera House is best known for its distinctive what?</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div>
+<div class="squiz-option"><input id="sq5a" name="sq5" type="radio" value="0"/><label for="sq5a">A. Glass dome</label></div>
+<div class="squiz-option"><input id="sq5b" name="sq5" type="radio" value="1"/><label for="sq5b">B. Stone columns</label></div>
+<div class="squiz-option"><input id="sq5c" name="sq5" type="radio" value="2"/><label for="sq5c">C. Clock tower</label></div>
+<div class="squiz-option"><input id="sq5d" name="sq5" type="radio" value="3"/><label for="sq5d">D. Sail-shaped roof shells</label></div>
+</div>
+<div class="squiz-item" data-correct="0" data-points="2" data-type="mcq">
+<div class="squiz-q"><span><span class="qnum">6.</span>The Leaning Tower of Pisa is located in which country?</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div>
+<div class="squiz-option"><input id="sq6a" name="sq6" type="radio" value="0"/><label for="sq6a">A. Italy</label></div>
+<div class="squiz-option"><input id="sq6b" name="sq6" type="radio" value="1"/><label for="sq6b">B. Spain</label></div>
+<div class="squiz-option"><input id="sq6c" name="sq6" type="radio" value="2"/><label for="sq6c">C. Greece</label></div>
+<div class="squiz-option"><input id="sq6d" name="sq6" type="radio" value="3"/><label for="sq6d">D. Portugal</label></div>
+</div>
+<div class="squiz-item" data-correct="2" data-points="2" data-type="mcq">
+<div class="squiz-q"><span><span class="qnum">7.</span>The Golden Gate Bridge is located in which US city?</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div>
+<div class="squiz-option"><input id="sq7a" name="sq7" type="radio" value="0"/><label for="sq7a">A. Los Angeles</label></div>
+<div class="squiz-option"><input id="sq7b" name="sq7" type="radio" value="1"/><label for="sq7b">B. Seattle</label></div>
+<div class="squiz-option"><input id="sq7c" name="sq7" type="radio" value="2"/><label for="sq7c">C. San Francisco</label></div>
+<div class="squiz-option"><input id="sq7d" name="sq7" type="radio" value="3"/><label for="sq7d">D. San Diego</label></div>
+</div>
+<div class="squiz-item" data-correct="1" data-points="2" data-type="mcq">
+<div class="squiz-q"><span><span class="qnum">8.</span>The Burj Khalifa, the world's tallest building, is located in which city?</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div>
+<div class="squiz-option"><input id="sq8a" name="sq8" type="radio" value="0"/><label for="sq8a">A. Doha</label></div>
+<div class="squiz-option"><input id="sq8b" name="sq8" type="radio" value="1"/><label for="sq8b">B. Dubai</label></div>
+<div class="squiz-option"><input id="sq8c" name="sq8" type="radio" value="2"/><label for="sq8c">C. Abu Dhabi</label></div>
+<div class="squiz-option"><input id="sq8d" name="sq8" type="radio" value="3"/><label for="sq8d">D. Riyadh</label></div>
+</div>
+<div class="squiz-item" data-correct="3" data-points="2" data-type="mcq">
+<div class="squiz-q"><span><span class="qnum">9.</span>Mount Rushmore features carved faces of how many US presidents?</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div>
+<div class="squiz-option"><input id="sq9a" name="sq9" type="radio" value="0"/><label for="sq9a">A. Two</label></div>
+<div class="squiz-option"><input id="sq9b" name="sq9" type="radio" value="1"/><label for="sq9b">B. Three</label></div>
+<div class="squiz-option"><input id="sq9c" name="sq9" type="radio" value="2"/><label for="sq9c">C. Five</label></div>
+<div class="squiz-option"><input id="sq9d" name="sq9" type="radio" value="3"/><label for="sq9d">D. Four</label></div>
+</div>
+<div class="squiz-item" data-correct="2" data-points="2" data-type="mcq">
+<div class="squiz-q"><span><span class="qnum">10.</span>How many continents are there?</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div>
+<div class="squiz-option"><input id="sq10a" name="sq10" type="radio" value="0"/><label for="sq10a">A. Five</label></div>
+<div class="squiz-option"><input id="sq10b" name="sq10" type="radio" value="1"/><label for="sq10b">B. Six</label></div>
+<div class="squiz-option"><input id="sq10c" name="sq10" type="radio" value="2"/><label for="sq10c">C. Seven</label></div>
+<div class="squiz-option"><input id="sq10d" name="sq10" type="radio" value="3"/><label for="sq10d">D. Eight</label></div>
+</div>
+<div class="squiz-item" data-correct="0" data-points="2" data-type="mcq">
+<div class="squiz-q"><span><span class="qnum">11.</span>Which is the largest continent by area?</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div>
+<div class="squiz-option"><input id="sq11a" name="sq11" type="radio" value="0"/><label for="sq11a">A. Asia</label></div>
+<div class="squiz-option"><input id="sq11b" name="sq11" type="radio" value="1"/><label for="sq11b">B. Africa</label></div>
+<div class="squiz-option"><input id="sq11c" name="sq11" type="radio" value="2"/><label for="sq11c">C. Europe</label></div>
+<div class="squiz-option"><input id="sq11d" name="sq11" type="radio" value="3"/><label for="sq11d">D. North America</label></div>
+</div>
+<div class="squiz-item" data-correct="3" data-points="2" data-type="mcq">
+<div class="squiz-q"><span><span class="qnum">12.</span>Which is the smallest continent?</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div>
+<div class="squiz-option"><input id="sq12a" name="sq12" type="radio" value="0"/><label for="sq12a">A. Europe</label></div>
+<div class="squiz-option"><input id="sq12b" name="sq12" type="radio" value="1"/><label for="sq12b">B. Antarctica</label></div>
+<div class="squiz-option"><input id="sq12c" name="sq12" type="radio" value="2"/><label for="sq12c">C. South America</label></div>
+<div class="squiz-option"><input id="sq12d" name="sq12" type="radio" value="3"/><label for="sq12d">D. Australia</label></div>
+</div>
+<div class="squiz-item" data-correct="1" data-points="2" data-type="mcq">
+<div class="squiz-q"><span><span class="qnum">13.</span>Which is the largest and deepest ocean?</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div>
+<div class="squiz-option"><input id="sq13a" name="sq13" type="radio" value="0"/><label for="sq13a">A. Atlantic Ocean</label></div>
+<div class="squiz-option"><input id="sq13b" name="sq13" type="radio" value="1"/><label for="sq13b">B. Pacific Ocean</label></div>
+<div class="squiz-option"><input id="sq13c" name="sq13" type="radio" value="2"/><label for="sq13c">C. Indian Ocean</label></div>
+<div class="squiz-option"><input id="sq13d" name="sq13" type="radio" value="3"/><label for="sq13d">D. Arctic Ocean</label></div>
+</div>
+<div class="squiz-item" data-correct="3" data-points="2" data-type="mcq">
+<div class="squiz-q"><span><span class="qnum">14.</span>Which is the smallest and shallowest ocean?</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div>
+<div class="squiz-option"><input id="sq14a" name="sq14" type="radio" value="0"/><label for="sq14a">A. Southern Ocean</label></div>
+<div class="squiz-option"><input id="sq14b" name="sq14" type="radio" value="1"/><label for="sq14b">B. Indian Ocean</label></div>
+<div class="squiz-option"><input id="sq14c" name="sq14" type="radio" value="2"/><label for="sq14c">C. Atlantic Ocean</label></div>
+<div class="squiz-option"><input id="sq14d" name="sq14" type="radio" value="3"/><label for="sq14d">D. Arctic Ocean</label></div>
+</div>
+<div class="squiz-item" data-correct="1" data-points="2" data-type="mcq">
+<div class="squiz-q"><span><span class="qnum">15.</span>Antarctica is best known for being covered mostly in what?</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div>
+<div class="squiz-option"><input id="sq15a" name="sq15" type="radio" value="0"/><label for="sq15a">A. Sand</label></div>
+<div class="squiz-option"><input id="sq15b" name="sq15" type="radio" value="1"/><label for="sq15b">B. Ice and snow</label></div>
+<div class="squiz-option"><input id="sq15c" name="sq15" type="radio" value="2"/><label for="sq15c">C. Forest</label></div>
+<div class="squiz-option"><input id="sq15d" name="sq15" type="radio" value="3"/><label for="sq15d">D. Grassland</label></div>
+</div>
+<div class="section-heading"><h2>Section B — True / False</h2><span class="section-marks">20 marks</span></div>
+<p class="section-note">10 questions · 2 marks each.</p>
+<div class="squiz-item" data-correct="0" data-points="2" data-type="mcq">
+<div class="squiz-q"><span><span class="qnum">16.</span>The Eiffel Tower was built for the 1889 World's Fair in Paris.</span><span class="q-tags"><span class="q-diff intermediate">Intermediate</span><span class="q-marks">2 pts</span></span></div>
+<div class="tf-row">
+<div class="squiz-option"><input id="sq16a" name="sq16" type="radio" value="0"/><label for="sq16a">True</label></div>
+<div class="squiz-option"><input id="sq16b" name="sq16" type="radio" value="1"/><label for="sq16b">False</label></div>
+</div>
+</div>
+<div class="squiz-item" data-correct="1" data-points="2" data-type="mcq">
+<div class="squiz-q"><span><span class="qnum">17.</span>The Statue of Liberty was a gift from the United Kingdom.</span><span class="q-tags"><span class="q-diff intermediate">Intermediate</span><span class="q-marks">2 pts</span></span></div>
+<div class="tf-row">
+<div class="squiz-option"><input id="sq17a" name="sq17" type="radio" value="0"/><label for="sq17a">True</label></div>
+<div class="squiz-option"><input id="sq17b" name="sq17" type="radio" value="1"/><label for="sq17b">False</label></div>
+</div>
+</div>
+<div class="squiz-item" data-correct="1" data-points="2" data-type="mcq">
+<div class="squiz-q"><span><span class="qnum">18.</span>Big Ben is officially the name of the entire clock tower in London.</span><span class="q-tags"><span class="q-diff intermediate">Intermediate</span><span class="q-marks">2 pts</span></span></div>
+<div class="tf-row">
+<div class="squiz-option"><input id="sq18a" name="sq18" type="radio" value="0"/><label for="sq18a">True</label></div>
+<div class="squiz-option"><input id="sq18b" name="sq18" type="radio" value="1"/><label for="sq18b">False</label></div>
+</div>
+</div>
+<div class="squiz-item" data-correct="0" data-points="2" data-type="mcq">
+<div class="squiz-q"><span><span class="qnum">19.</span>Stonehenge is located in England.</span><span class="q-tags"><span class="q-diff intermediate">Intermediate</span><span class="q-marks">2 pts</span></span></div>
+<div class="tf-row">
+<div class="squiz-option"><input id="sq19a" name="sq19" type="radio" value="0"/><label for="sq19a">True</label></div>
+<div class="squiz-option"><input id="sq19b" name="sq19" type="radio" value="1"/><label for="sq19b">False</label></div>
+</div>
+</div>
+<div class="squiz-item" data-correct="0" data-points="2" data-type="mcq">
+<div class="squiz-q"><span><span class="qnum">20.</span>There are five major oceans.</span><span class="q-tags"><span class="q-diff intermediate">Intermediate</span><span class="q-marks">2 pts</span></span></div>
+<div class="tf-row">
+<div class="squiz-option"><input id="sq20a" name="sq20" type="radio" value="0"/><label for="sq20a">True</label></div>
+<div class="squiz-option"><input id="sq20b" name="sq20" type="radio" value="1"/><label for="sq20b">False</label></div>
+</div>
+</div>
+<div class="squiz-item" data-correct="1" data-points="2" data-type="mcq">
+<div class="squiz-q"><span><span class="qnum">21.</span>Africa is the largest continent.</span><span class="q-tags"><span class="q-diff intermediate">Intermediate</span><span class="q-marks">2 pts</span></span></div>
+<div class="tf-row">
+<div class="squiz-option"><input id="sq21a" name="sq21" type="radio" value="0"/><label for="sq21a">True</label></div>
+<div class="squiz-option"><input id="sq21b" name="sq21" type="radio" value="1"/><label for="sq21b">False</label></div>
+</div>
+</div>
+<div class="squiz-item" data-correct="0" data-points="2" data-type="mcq">
+<div class="squiz-q"><span><span class="qnum">22.</span>The equator passes through part of South America.</span><span class="q-tags"><span class="q-diff intermediate">Intermediate</span><span class="q-marks">2 pts</span></span></div>
+<div class="tf-row">
+<div class="squiz-option"><input id="sq22a" name="sq22" type="radio" value="0"/><label for="sq22a">True</label></div>
+<div class="squiz-option"><input id="sq22b" name="sq22" type="radio" value="1"/><label for="sq22b">False</label></div>
+</div>
+</div>
+<div class="squiz-item" data-correct="1" data-points="2" data-type="mcq">
+<div class="squiz-q"><span><span class="qnum">23.</span>The Mariana Trench, the deepest point in the ocean, is in the Atlantic Ocean.</span><span class="q-tags"><span class="q-diff intermediate">Intermediate</span><span class="q-marks">2 pts</span></span></div>
+<div class="tf-row">
+<div class="squiz-option"><input id="sq23a" name="sq23" type="radio" value="0"/><label for="sq23a">True</label></div>
+<div class="squiz-option"><input id="sq23b" name="sq23" type="radio" value="1"/><label for="sq23b">False</label></div>
+</div>
+</div>
+<div class="squiz-item" data-correct="0" data-points="2" data-type="mcq">
+<div class="squiz-q"><span><span class="qnum">24.</span>The Sydney Opera House was designed by a Danish architect.</span><span class="q-tags"><span class="q-diff intermediate">Intermediate</span><span class="q-marks">2 pts</span></span></div>
+<div class="tf-row">
+<div class="squiz-option"><input id="sq24a" name="sq24" type="radio" value="0"/><label for="sq24a">True</label></div>
+<div class="squiz-option"><input id="sq24b" name="sq24" type="radio" value="1"/><label for="sq24b">False</label></div>
+</div>
+</div>
+<div class="squiz-item" data-correct="1" data-points="2" data-type="mcq">
+<div class="squiz-q"><span><span class="qnum">25.</span>Antarctica has a large permanent population.</span><span class="q-tags"><span class="q-diff intermediate">Intermediate</span><span class="q-marks">2 pts</span></span></div>
+<div class="tf-row">
+<div class="squiz-option"><input id="sq25a" name="sq25" type="radio" value="0"/><label for="sq25a">True</label></div>
+<div class="squiz-option"><input id="sq25b" name="sq25" type="radio" value="1"/><label for="sq25b">False</label></div>
+</div>
+</div>
+<div class="section-heading"><h2>Section C — Fill in the Blank</h2><span class="section-marks">20 marks</span></div>
+<p class="section-note">10 questions · 2 marks each. Type the missing word or term.</p>
+<div class="squiz-item" data-answers="tablet" data-points="2" data-type="fill">
+<div class="squiz-q"><span><span class="qnum">26.</span>The Statue of Liberty holds a torch and a ______.</span><span class="q-tags"><span class="q-diff intermediate">Intermediate</span><span class="q-marks">2 pts</span></span></div>
+<div class="text-answer"><input id="sq26" name="sq26" placeholder="Type your answer" type="text"/></div>
+<div class="answer-feedback" id="sq26-fb"></div>
+</div>
+<div class="squiz-item" data-answers="orange" data-points="2" data-type="fill">
+<div class="squiz-q"><span><span class="qnum">27.</span>The Golden Gate Bridge is famous for its International ______ colour.</span><span class="q-tags"><span class="q-diff intermediate">Intermediate</span><span class="q-marks">2 pts</span></span></div>
+<div class="text-answer"><input id="sq27" name="sq27" placeholder="Type your answer" type="text"/></div>
+<div class="answer-feedback" id="sq27-fb"></div>
+</div>
+<div class="squiz-item" data-answers="australia" data-points="2" data-type="fill">
+<div class="squiz-q"><span><span class="qnum">28.</span>______ is both a country and a continent.</span><span class="q-tags"><span class="q-diff intermediate">Intermediate</span><span class="q-marks">2 pts</span></span></div>
+<div class="text-answer"><input id="sq28" name="sq28" placeholder="Type your answer" type="text"/></div>
+<div class="answer-feedback" id="sq28-fb"></div>
+</div>
+<div class="squiz-item" data-answers="ural" data-points="2" data-type="fill">
+<div class="squiz-q"><span><span class="qnum">29.</span>The ______ Mountains form part of the boundary between Europe and Asia.</span><span class="q-tags"><span class="q-diff intermediate">Intermediate</span><span class="q-marks">2 pts</span></span></div>
+<div class="text-answer"><input id="sq29" name="sq29" placeholder="Type your answer" type="text"/></div>
+<div class="answer-feedback" id="sq29-fb"></div>
+</div>
+<div class="squiz-item" data-answers="soil|foundation|ground" data-points="2" data-type="fill">
+<div class="squiz-q"><span><span class="qnum">30.</span>The Leaning Tower of Pisa tilts because of unstable ______.</span><span class="q-tags"><span class="q-diff intermediate">Intermediate</span><span class="q-marks">2 pts</span></span></div>
+<div class="text-answer"><input id="sq30" name="sq30" placeholder="Type your answer" type="text"/></div>
+<div class="answer-feedback" id="sq30-fb"></div>
+</div>
+<div class="squiz-item" data-answers="wrought iron|iron" data-points="2" data-type="fill">
+<div class="squiz-q"><span><span class="qnum">31.</span>The Eiffel Tower is primarily built from ______.</span><span class="q-tags"><span class="q-diff advanced">Advanced</span><span class="q-marks">2 pts</span></span></div>
+<div class="text-answer"><input id="sq31" name="sq31" placeholder="Type your answer" type="text"/></div>
+<div class="answer-feedback" id="sq31-fb"></div>
+</div>
+<div class="squiz-item" data-answers="granite" data-points="2" data-type="fill">
+<div class="squiz-q"><span><span class="qnum">32.</span>Mount Rushmore is carved into a mountain made of ______.</span><span class="q-tags"><span class="q-diff advanced">Advanced</span><span class="q-marks">2 pts</span></span></div>
+<div class="text-answer"><input id="sq32" name="sq32" placeholder="Type your answer" type="text"/></div>
+<div class="answer-feedback" id="sq32-fb"></div>
+</div>
+<div class="squiz-item" data-answers="2010" data-points="2" data-type="fill">
+<div class="squiz-q"><span><span class="qnum">33.</span>The Burj Khalifa was completed in the year ______.</span><span class="q-tags"><span class="q-diff advanced">Advanced</span><span class="q-marks">2 pts</span></span></div>
+<div class="text-answer"><input id="sq33" name="sq33" placeholder="Type your answer" type="text"/></div>
+<div class="answer-feedback" id="sq33-fb"></div>
+</div>
+<div class="squiz-item" data-answers="1973" data-points="2" data-type="fill">
+<div class="squiz-q"><span><span class="qnum">34.</span>The Sydney Opera House officially opened in the year ______.</span><span class="q-tags"><span class="q-diff advanced">Advanced</span><span class="q-marks">2 pts</span></span></div>
+<div class="text-answer"><input id="sq34" name="sq34" placeholder="Type your answer" type="text"/></div>
+<div class="answer-feedback" id="sq34-fb"></div>
+</div>
+<div class="squiz-item" data-answers="pacific" data-points="2" data-type="fill">
+<div class="squiz-q"><span><span class="qnum">35.</span>The Mariana Trench, the deepest part of the ocean, lies in the ______ Ocean.</span><span class="q-tags"><span class="q-diff advanced">Advanced</span><span class="q-marks">2 pts</span></span></div>
+<div class="text-answer"><input id="sq35" name="sq35" placeholder="Type your answer" type="text"/></div>
+<div class="answer-feedback" id="sq35-fb"></div>
+</div>
+<div class="section-heading"><h2>Section D — Column Matching</h2><span class="section-marks">10 marks</span></div>
+<p class="section-note">Use the ▲ ▼ buttons to reorder Column B until each row lines up with the correct country in Column A. 2 marks per correct pair.</p>
+<div class="squiz-item" data-points="2" data-type="match-group">
+<div class="squiz-q"><span><span class="qnum">36–40.</span>Match each landmark to the country where it is located.</span><span class="q-tags"><span class="q-diff advanced">Advanced</span><span class="q-marks">10 pts</span></span></div>
+<div class="match-columns">
+<div class="match-col">
+<div class="match-col-label">Column A</div>
+<div class="match-a-item">Eiffel Tower</div>
+<div class="match-a-item">Big Ben</div>
+<div class="match-a-item">Sydney Opera House</div>
+<div class="match-a-item">Leaning Tower of Pisa</div>
+<div class="match-a-item">Burj Khalifa</div>
+</div>
+<div class="match-col">
+<div class="match-col-label">Column B</div>
+<div class="match-col-b" id="matchColB1">
+<div class="match-b-item" data-correct="1">
+<span class="match-move"><button class="move-btn" data-dir="up" type="button">▲</button><button class="move-btn" data-dir="down" type="button">▼</button></span>
+<span class="match-b-text">United Kingdom</span>
+</div>
+<div class="match-b-item" data-correct="2">
+<span class="match-move"><button class="move-btn" data-dir="up" type="button">▲</button><button class="move-btn" data-dir="down" type="button">▼</button></span>
+<span class="match-b-text">Australia</span>
+</div>
+<div class="match-b-item" data-correct="3">
+<span class="match-move"><button class="move-btn" data-dir="up" type="button">▲</button><button class="move-btn" data-dir="down" type="button">▼</button></span>
+<span class="match-b-text">Italy</span>
+</div>
+<div class="match-b-item" data-correct="4">
+<span class="match-move"><button class="move-btn" data-dir="up" type="button">▲</button><button class="move-btn" data-dir="down" type="button">▼</button></span>
+<span class="match-b-text">United Arab Emirates</span>
+</div>
+<div class="match-b-item" data-correct="0">
+<span class="match-move"><button class="move-btn" data-dir="up" type="button">▲</button><button class="move-btn" data-dir="down" type="button">▼</button></span>
+<span class="match-b-text">France</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section-heading"><h2>Section E — Short Answer</h2><span class="section-marks">20 marks</span></div>
+<p class="section-note">5 questions · 4 marks each. Answer in one or two sentences.</p>
+<div class="squiz-item" data-answers="bell|not the tower|elizabeth tower" data-points="4" data-type="short">
+<div class="squiz-q"><span><span class="qnum">41.</span>Why is "Big Ben" technically an inaccurate name for the whole clock tower?</span><span class="q-tags"><span class="q-diff advanced">Advanced</span><span class="q-marks">4 pts</span></span></div>
+<div class="text-answer"><textarea id="sq41" name="sq41" placeholder="Type your answer"></textarea></div>
+<div class="answer-feedback" id="sq41-fb"></div>
+</div>
+<div class="squiz-item" data-answers="washington|jefferson|roosevelt|lincoln" data-points="4" data-type="short">
+<div class="squiz-q"><span><span class="qnum">42.</span>Name at least two of the four US presidents carved into Mount Rushmore.</span><span class="q-tags"><span class="q-diff advanced">Advanced</span><span class="q-marks">4 pts</span></span></div>
+<div class="text-answer"><textarea id="sq42" name="sq42" placeholder="Type your answer"></textarea></div>
+<div class="answer-feedback" id="sq42-fb"></div>
+</div>
+<div class="squiz-item" data-answers="ice|cold|no permanent population|uninhabited" data-points="4" data-type="short">
+<div class="squiz-q"><span><span class="qnum">43.</span>Why is Antarctica considered unique among the seven continents?</span><span class="q-tags"><span class="q-diff advanced">Advanced</span><span class="q-marks">4 pts</span></span></div>
+<div class="text-answer"><textarea id="sq43" name="sq43" placeholder="Type your answer"></textarea></div>
+<div class="answer-feedback" id="sq43-fb"></div>
+</div>
+<div class="squiz-item" data-answers="islands|pacific|ocean|surrounded by" data-points="4" data-type="short">
+<div class="squiz-q"><span><span class="qnum">44.</span>Australia's region is sometimes called Oceania — why might that name be used?</span><span class="q-tags"><span class="q-diff advanced">Advanced</span><span class="q-marks">4 pts</span></span></div>
+<div class="text-answer"><textarea id="sq44" name="sq44" placeholder="Type your answer"></textarea></div>
+<div class="answer-feedback" id="sq44-fb"></div>
+</div>
+<div class="squiz-item" data-answers="largest|deepest|mariana trench|biggest" data-points="4" data-type="short">
+<div class="squiz-q"><span><span class="qnum">45.</span>Give one reason the Pacific Ocean is significant among the world's oceans.</span><span class="q-tags"><span class="q-diff advanced">Advanced</span><span class="q-marks">4 pts</span></span></div>
+<div class="text-answer"><textarea id="sq45" name="sq45" placeholder="Type your answer"></textarea></div>
+<div class="answer-feedback" id="sq45-fb"></div>
+</div>
+<button class="squiz-submit-btn" disabled="" id="squizSubmitBtn" onclick="submitQuiz()" type="button">Answer all questions to submit</button>
+</form>
+<div class="article-footer-nav">
+<a href="famous-world-landmarks-wonders.html">← Back to Famous World Landmarks &amp; Wonders</a>
+<a href="index.html">More Topics →</a>
+</div>
+</div>
+<footer>
+<div class="footer-top">
+<div>
+<div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.75rem;">
+<span aria-label="EDUSAMBAM six-circle logo" class="mark"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+<a class="footer-brand-name" href="index.html">EDUSAMBAM</a>
+</div>
+<p class="footer-desc">A trusted, anonymous source of knowledge for curious minds everywhere — learn, practise, grow and succeed.</p>
+</div>
+<div class="footer-col">
+<h4>Content</h4>
+<ul>
+<li><a href="index.html#english">English Language</a></li>
+<li><a href="index.html">Science</a></li>
+<li><a href="index.html">Mathematics</a></li>
+<li><a href="index.html">Health</a></li>
+<li><a href="index.html">General Knowledge</a></li>
+<li><a href="index.html">Computer &amp; AI</a></li>
+<li><a href="index.html#resources">Resources</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>About</h4>
+<ul>
+<li><a href="index.html">Our Mission</a></li>
+<li><a href="index.html">The Team</a></li>
+<li><a href="index.html">Write for Us</a></li>
+<li><a href="index.html">Contact Us</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Legal</h4>
+<ul>
+<li><a href="index.html">Privacy Policy</a></li>
+<li><a href="index.html">Terms of Use</a></li>
+<li><a href="index.html">Cookie Settings</a></li>
+<li><a href="index.html">Accessibility</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2026 EDUSAMBAM. All rights reserved.</p>
+<ul class="footer-bottom-links">
+<li><a href="index.html">Privacy</a></li>
+<li><a href="index.html">Terms</a></li>
+<li><a href="index.html">Sitemap</a></li>
+</ul>
+</div>
+<div class="back-home-wrap" style="text-align:center; padding:1.2rem 0 2rem;"><a class="back-home" href="index.html#top" style="color:rgba(255,255,255,0.5); text-decoration:none; font-size:0.85rem;">← Back to Home</a></div>
+</footer>
+<script>
+  (function() {
+    const form = document.getElementById('squizForm');
+    const submitBtn = document.getElementById('squizSubmitBtn');
+    const progressFill = document.getElementById('squizProgressFill');
+    const progressLabel = document.getElementById('squizProgressLabel');
+    const items = Array.from(document.querySelectorAll('.squiz-item'));
+    const totalQuestions = 45;
+    const totalMarks = 100;
+
+    const sectionRanges = [
+      { name: 'MCQ', start: 0, end: 15, max: 30 },
+      { name: 'True/False', start: 15, end: 25, max: 20 },
+      { name: 'Fill-in-Blank', start: 25, end: 35, max: 20 },
+      { name: 'Matching', start: 35, end: 36, max: 10 },
+      { name: 'Short Answer', start: 36, end: 41, max: 20 }
+    ];
+
+    function syncMatchHeights(groupItem) {
+      const aItems = Array.from(groupItem.querySelectorAll('.match-a-item'));
+      const bItems = Array.from(groupItem.querySelectorAll('.match-b-item'));
+      aItems.forEach(el => { el.style.minHeight = '44px'; });
+      bItems.forEach(el => { el.style.minHeight = '44px'; });
+      aItems.forEach((a, i) => {
+        const b = bItems[i];
+        if (!b) return;
+        const h = Math.max(a.offsetHeight, b.offsetHeight);
+        a.style.minHeight = h + 'px';
+        b.style.minHeight = h + 'px';
+      });
+    }
+
+    document.querySelectorAll('.squiz-item[data-type="match-group"]').forEach(groupItem => {
+      syncMatchHeights(groupItem);
+    });
+    window.addEventListener('resize', () => {
+      document.querySelectorAll('.squiz-item[data-type="match-group"]').forEach(groupItem => {
+        syncMatchHeights(groupItem);
+      });
+    });
+
+    document.querySelectorAll('.match-col-b').forEach(col => {
+      col.querySelectorAll('.move-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const row = btn.closest('.match-b-item');
+          const dir = btn.getAttribute('data-dir');
+          const groupItem = btn.closest('.squiz-item');
+          if (dir === 'up' && row.previousElementSibling) {
+            col.insertBefore(row, row.previousElementSibling);
+          } else if (dir === 'down' && row.nextElementSibling) {
+            col.insertBefore(row.nextElementSibling, row);
+          }
+          groupItem.dataset.touched = 'true';
+          syncMatchHeights(groupItem);
+          updateProgress();
+        });
+      });
+    });
+
+    function normalize(str) {
+      return (str || '').toLowerCase().trim().replace(/[.,!?;:'"]/g, '').replace(/\s+/g, ' ');
+    }
+
+    function questionWeight(item) {
+      return item.getAttribute('data-type') === 'match-group' ? 5 : 1;
+    }
+
+    function isAnswered(item) {
+      const type = item.getAttribute('data-type');
+      if (type === 'mcq') {
+        const name = item.querySelector('input[type="radio"]').name;
+        return !!form.querySelector(`input[name="${name}"]:checked`);
+      } else if (type === 'match-group') {
+        return item.dataset.touched === 'true';
+      } else {
+        const input = item.querySelector('input[type="text"], textarea');
+        return normalize(input.value).length > 0;
+      }
+    }
+
+    function countAnswered() {
+      let sum = 0;
+      items.forEach(it => { if (isAnswered(it)) sum += questionWeight(it); });
+      return sum;
+    }
+
+    function updateProgress() {
+      const answered = countAnswered();
+      progressFill.style.width = (answered / totalQuestions * 100) + '%';
+      progressLabel.textContent = answered + ' of ' + totalQuestions + ' answered';
+      submitBtn.disabled = answered < totalQuestions;
+      submitBtn.textContent = answered < totalQuestions ? 'Answer all questions to submit' : 'Submit Test';
+      document.querySelectorAll('.squiz-option').forEach(opt => opt.classList.remove('selected'));
+      form.querySelectorAll('input[type="radio"]:checked').forEach(input => {
+        input.closest('.squiz-option').classList.add('selected');
+      });
+    }
+
+    form.addEventListener('input', updateProgress);
+    form.addEventListener('change', updateProgress);
+
+    window.submitQuiz = function() {
+      let totalScore = 0;
+      const sectionScores = [0, 0, 0, 0, 0];
+
+      items.forEach((item, idx) => {
+        const type = item.getAttribute('data-type');
+        let earned = 0;
+
+        if (type === 'mcq') {
+          const points = Number(item.getAttribute('data-points'));
+          const name = item.querySelector('input[type="radio"]').name;
+          const correctIdx = item.getAttribute('data-correct');
+          const checked = form.querySelector(`input[name="${name}"]:checked`);
+          const selectedVal = checked ? checked.value : null;
+          item.querySelectorAll('.squiz-option').forEach(opt => {
+            const input = opt.querySelector('input');
+            if (input.value === correctIdx) opt.classList.add('correct-answer');
+            else if (input.value === selectedVal) opt.classList.add('wrong-answer');
+          });
+          if (selectedVal === correctIdx) { earned = points; }
+        } else if (type === 'fill' || type === 'short') {
+          const points = Number(item.getAttribute('data-points'));
+          const answers = item.getAttribute('data-answers').split('|').map(normalize);
+          const input = item.querySelector('input[type="text"], textarea');
+          const userVal = normalize(input.value);
+          const wrap = item.querySelector('.text-answer');
+          const fb = item.querySelector('.answer-feedback');
+          const isCorrect = answers.some(a => userVal.includes(a));
+          if (isCorrect) {
+            earned = points;
+            wrap.classList.add('correct-answer');
+            fb.textContent = 'Correct.';
+            fb.classList.add('visible', 'is-correct');
+          } else {
+            wrap.classList.add('wrong-answer');
+            fb.textContent = 'Model answer: ' + item.getAttribute('data-answers').split('|')[0];
+            fb.classList.add('visible', 'is-wrong');
+          }
+        } else if (type === 'match-group') {
+          const col = item.querySelector('.match-col-b');
+          const rows = Array.from(col.children);
+          let correctCount = 0;
+          rows.forEach((row, i) => {
+            if (Number(row.getAttribute('data-correct')) === i) {
+              row.classList.add('correct-answer');
+              correctCount++;
+            } else {
+              row.classList.add('wrong-answer');
+            }
+          });
+          earned = correctCount * 2;
+        }
+
+        totalScore += earned;
+
+        sectionRanges.forEach((sec, si) => {
+          if (idx >= sec.start && idx < sec.end) sectionScores[si] += earned;
+        });
+      });
+
+      document.getElementById('squizScoreBig').textContent = totalScore + '/' + totalMarks;
+      document.getElementById('squizScoreLabel').textContent = 'You scored ' + Math.round(totalScore / totalMarks * 100) + '%';
+
+      const breakdown = sectionRanges.map((sec, si) => sec.name + ': ' + sectionScores[si] + '/' + sec.max).join(' &nbsp;·&nbsp; ');
+      document.getElementById('squizScoreBreakdown').innerHTML = breakdown;
+
+      const pct = totalScore / totalMarks * 100;
+      let tier = 'Keep practicing';
+      if (pct >= 90) tier = 'Outstanding';
+      else if (pct >= 75) tier = 'Strong grasp';
+      else if (pct >= 60) tier = 'Good progress';
+      else if (pct >= 40) tier = 'Getting there';
+      document.getElementById('squizScoreTier').textContent = tier;
+
+      document.getElementById('squizResults').classList.add('visible');
+      submitBtn.style.display = 'none';
+      document.getElementById('squizResults').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    };
+
+    window.retakeQuiz = function() {
+      form.reset();
+      document.querySelectorAll('.squiz-option').forEach(o => o.classList.remove('correct-answer', 'wrong-answer', 'selected'));
+      document.querySelectorAll('.text-answer').forEach(t => t.classList.remove('correct-answer', 'wrong-answer'));
+      document.querySelectorAll('.answer-feedback').forEach(f => { f.classList.remove('visible', 'is-correct', 'is-wrong'); f.textContent = ''; });
+      document.querySelectorAll('.match-b-item').forEach(m => m.classList.remove('correct-answer', 'wrong-answer'));
+      document.querySelectorAll('.squiz-item[data-type="match-group"]').forEach(g => g.dataset.touched = 'false');
+      document.getElementById('squizResults').classList.remove('visible');
+      submitBtn.style.display = 'block';
+      updateProgress();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    updateProgress();
+  })();
+</script>
+</body>
+</html>
