@@ -2,11 +2,17 @@
 
 <html lang="en">
 <head>
+<!-- Google Analytics 4 — EDUSAMBAM -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Y35DW0V4HQ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-Y35DW0V4HQ');
+</script>
 <meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>EDUSAMBAM — Global Learning, Knowledge &amp; Wellbeing</title>
 <meta content="EDUSAMBAM is a global learning platform with ten connected subject libraries, six SAMBAM gateways, articles and scored quizzes." name="description"/>
-<link href="favicon.ico" rel="icon" sizes="any"/>
-<link href="apple-touch-icon.png" rel="apple-touch-icon"/>
 <style>
 :root{--b:#0b4ea2;--d:#06244a;--g:#d4a017;--ink:#142033;--muted:#607086;--bg:#f7faff;--line:#dce7f4;--w:#fff;--shadow:0 12px 34px rgba(8,47,99,.10)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font:16px/1.6 Arial,Helvetica,sans-serif;color:var(--ink);background:var(--bg);border:3px solid var(--g);min-height:100vh;overflow-x:hidden}a{text-decoration:none;color:inherit}
@@ -116,20 +122,438 @@ section,header,footer,main,nav,.wrap,.container{max-width:100%;box-sizing:border
   .learn-way-section h2, .info-section h2 { font-size: 1.75rem; }
 }
 </style>
-</head>
+<style id="edusambam-unified-nav-css">
+/* EDUSAMBAM unified navigation */
+.edusambam-nav{
+  position:sticky;top:0;z-index:10000;
+  min-height:72px;box-sizing:border-box;
+  display:flex;align-items:center;
+  padding:10px 20px;
+  background:#fff;border-bottom:1px solid #e5e7eb;
+  font-family:inherit;
+}
+.edusambam-nav-inner{
+  width:100%;max-width:1400px;margin:0 auto;
+  display:flex;align-items:center;gap:18px;min-width:0;
+}
+.edusambam-brand{
+  display:flex;align-items:center;gap:10px;min-width:0;
+  text-decoration:none;color:#0b3b66;flex:0 0 auto;
+}
+.edusambam-brand-copy{display:flex;flex-direction:column;line-height:1;min-width:0}
+.edusambam-brand-name{
+  font-family:"EB Garamond",Georgia,serif;
+  font-size:1.6rem;font-weight:600;letter-spacing:.01em;
+  color:#0b3b66;white-space:nowrap;
+}
+.edusambam-brand-subtitle{
+  margin-top:4px;
+  font-size:.62rem;font-weight:600;letter-spacing:.08em;
+  color:#64748b;white-space:nowrap;
+}
+.edusambam-nav-links{
+  display:flex;align-items:center;gap:14px;margin-left:auto;
+  list-style:none;padding:0;margin-top:0;margin-bottom:0;
+}
+.edusambam-nav-links a{
+  color:#334155;text-decoration:none;font-size:.9rem;
+  padding:8px 5px;border-radius:7px;white-space:nowrap;
+}
+.edusambam-nav-links a:hover,.edusambam-nav-links a:focus-visible{
+  color:#0b3b66;background:#f3f6f9;outline:none;
+}
+.edusambam-search-btn,.edusambam-menu-btn{
+  appearance:none;border:1px solid #d8dee6;background:#fff;
+  color:#0b3b66;border-radius:9px;min-width:40px;height:40px;
+  display:inline-flex;align-items:center;justify-content:center;
+  cursor:pointer;font-size:1.15rem;flex:0 0 auto;
+}
+.edusambam-search-btn:hover,.edusambam-menu-btn:hover,
+.edusambam-search-btn:focus-visible,.edusambam-menu-btn:focus-visible{
+  background:#f3f6f9;border-color:#b9c6d4;outline:2px solid rgba(214,162,58,.35);
+  outline-offset:2px;
+}
+.edusambam-menu-btn{display:none;font-size:1.2rem}
+.edusambam-mobile-menu{
+  display:none;position:fixed;top:72px;left:0;right:0;
+  z-index:9999;background:#fff;border-bottom:1px solid #e5e7eb;
+  box-shadow:0 8px 24px rgba(15,23,42,.12);
+  max-height:calc(100vh - 72px);overflow:auto;
+}
+.edusambam-mobile-menu.open{display:block}
+.edusambam-mobile-menu ul{list-style:none;margin:0;padding:10px 16px 16px}
+.edusambam-mobile-menu a{
+  display:block;padding:12px 10px;color:#0b3b66;text-decoration:none;
+  border-radius:8px;font-size:.98rem;
+}
+.edusambam-mobile-menu a:hover,.edusambam-mobile-menu a:focus-visible{
+  background:#f3f6f9;outline:none;
+}
+.edusambam-search-panel{
+  display:none;position:fixed;top:72px;left:0;right:0;z-index:9998;
+  background:#fff;border-bottom:1px solid #e5e7eb;
+  box-shadow:0 8px 24px rgba(15,23,42,.10);padding:12px 16px;
+}
+.edusambam-search-panel.open{display:block}
+.edusambam-search-wrap{max-width:900px;margin:0 auto;position:relative}
+.edusambam-search-input{
+  width:100%;box-sizing:border-box;padding:12px 14px;
+  border:1px solid #cbd5e1;border-radius:9px;font-size:1rem;
+}
+.edusambam-search-results{margin-top:8px;max-height:50vh;overflow:auto}
+.edusambam-search-results a{
+  display:block;padding:9px 10px;border-radius:7px;color:#0b3b66;text-decoration:none;
+}
+.edusambam-search-results a:hover{background:#f3f6f9}
+@media (max-width:1100px){
+  .edusambam-nav-links{gap:8px}
+  .edusambam-nav-links a{font-size:.84rem;padding-inline:3px}
+}
+@media (max-width:900px){
+  .edusambam-nav{min-height:68px;padding:8px 14px}
+  .edusambam-brand-mark{width:44px;height:44px;flex-basis:44px}
+  .edusambam-brand-mark span{width:12px;height:12px}
+  .edusambam-brand-mark .c3,.edusambam-brand-mark .c6{left:16px}
+  .edusambam-brand-name{font-size:1.42rem}
+  .edusambam-brand-subtitle{font-size:.52rem;letter-spacing:.06em}
+  .edusambam-nav-links{display:none}
+  .edusambam-menu-btn{display:inline-flex}
+  .edusambam-search-btn{margin-left:auto}
+  .edusambam-mobile-menu{top:68px;max-height:calc(100vh - 68px)}
+  .edusambam-search-panel{top:68px}
+}
+@media (max-width:480px){
+  .edusambam-nav-inner{gap:8px}
+  .edusambam-brand{gap:7px}
+  .edusambam-brand-mark{width:40px;height:40px;flex-basis:40px}
+  .edusambam-brand-mark span{width:11px;height:11px}
+  .edusambam-brand-mark .c3,.edusambam-brand-mark .c6{left:14.5px}
+  .edusambam-brand-name{font-size:1.28rem}
+  .edusambam-brand-subtitle{font-size:.46rem;letter-spacing:.045em}
+  .edusambam-search-btn,.edusambam-menu-btn{min-width:38px;height:38px}
+}
+</style><style id="edusambam-logo-visibility-fix">
+/* EDUSAMBAM logo visibility fix */
+.edusambam-brand-mark{
+  position:relative !important;
+  display:inline-block !important;
+  width:48px !important;
+  height:48px !important;
+  min-width:48px !important;
+  flex:0 0 48px !important;
+  overflow:visible !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+.edusambam-brand-mark > span{
+  position:absolute !important;
+  display:block !important;
+  width:13px !important;
+  height:13px !important;
+  min-width:13px !important;
+  min-height:13px !important;
+  padding:0 !important;
+  margin:0 !important;
+  border:0 !important;
+  border-radius:50% !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  box-sizing:border-box !important;
+}
+.edusambam-brand-mark > .c1{left:0 !important;top:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c2{right:0 !important;top:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c3{left:17.5px !important;top:8px !important;background:#d6a23a !important;}
+.edusambam-brand-mark > .c4{left:0 !important;bottom:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c5{right:0 !important;bottom:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c6{left:17.5px !important;bottom:8px !important;background:#d6a23a !important;}
+
+@media (max-width:900px){
+  .edusambam-brand-mark{
+    width:44px !important;height:44px !important;min-width:44px !important;flex-basis:44px !important;
+  }
+  .edusambam-brand-mark > span{
+    width:12px !important;height:12px !important;min-width:12px !important;min-height:12px !important;
+  }
+  .edusambam-brand-mark > .c3,.edusambam-brand-mark > .c6{left:16px !important;}
+}
+@media (max-width:480px){
+  .edusambam-brand-mark{
+    width:40px !important;height:40px !important;min-width:40px !important;flex-basis:40px !important;
+  }
+  .edusambam-brand-mark > span{
+    width:11px !important;height:11px !important;min-width:11px !important;min-height:11px !important;
+  }
+  .edusambam-brand-mark > .c3,.edusambam-brand-mark > .c6{left:14.5px !important;}
+}
+</style>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<style id="edusambam-menu-extra-css">
+.edusambam-mobile-menu .edusambam-menu-extra:first-of-type{
+  margin-top:8px;padding-top:8px;border-top:1px solid #e5e7eb;
+}
+.edusambam-mobile-menu .edusambam-menu-extra a{
+  font-weight:600;
+}
+</style>
+<style id="edusambam-responsive-nav-fix">
+/* Responsive navigation safeguard: prevent desktop links from being clipped. */
+@media (max-width:1450px) and (min-width:1101px){
+  .edusambam-nav{padding:8px 14px}
+  .edusambam-nav-inner{gap:10px}
+  .edusambam-brand{gap:8px}
+  .edusambam-brand-name{font-size:1.45rem}
+  .edusambam-brand-subtitle{font-size:.50rem;letter-spacing:.055em}
+  .edusambam-nav-links{gap:6px}
+  .edusambam-nav-links a{font-size:.80rem;padding-inline:3px}
+  .edusambam-search-btn,.edusambam-menu-btn{min-width:38px;height:38px}
+}
+@media (max-width:1100px){
+  .edusambam-nav-links{display:none}
+  .edusambam-menu-btn{display:inline-flex}
+  .edusambam-search-btn{margin-left:auto}
+  .edusambam-nav{min-height:68px;padding:8px 14px}
+  .edusambam-mobile-menu{top:68px;max-height:calc(100vh - 68px)}
+  .edusambam-search-panel{top:68px}
+}
+</style>
+<style id="edusambam-unified-footer-fix">
+/* EDUSAMBAM unified footer: same visual language and neutral brand statement across all pages. */
+.edusambam-unified-footer,
+.edusambam-article-footer,
+footer.footer {
+  background: linear-gradient(135deg, #06244a, #0b4ea2) !important;
+  color: #fff !important;
+  border-top: 3px solid #d4a017 !important;
+  box-sizing: border-box;
+}
+.edusambam-footer-statement{margin:.25rem 0 0 !important;color:rgba(255,255,255,.88) !important;font-size:.78rem !important;letter-spacing:.08em !important;text-transform:uppercase !important}
+.edusambam-unified-footer .footer-brand-name,.edusambam-article-footer .footer-brand-name{color:#fff !important}
+</style>
+<style id="edusambam-final-unified-footer">
+/* Final unified footer — same structure, visual language, and approved nav logo on every page. */
+.edusambam-unified-footer{
+  width:100% !important;
+  margin:0 !important;
+  padding:44px 0 0 !important;
+  background:linear-gradient(135deg,#06244a,#0b4ea2) !important;
+  color:#d6e4f2 !important;
+  border-top:4px solid #d4a017 !important;
+  box-sizing:border-box !important;
+  overflow:hidden !important;
+}
+.edusambam-unified-footer .footer-top{
+  width:min(1180px,92%) !important;
+  max-width:1180px !important;
+  margin:0 auto !important;
+  padding:0 0 34px !important;
+  display:grid !important;
+  grid-template-columns:1.5fr repeat(3,1fr) !important;
+  gap:34px !important;
+  box-sizing:border-box !important;
+}
+.edusambam-unified-footer .footer-brand{min-width:0 !important;}
+.edusambam-footer-brand-row{margin:0 0 10px !important;}
+.edusambam-footer-logo-link{
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:12px !important;
+  min-width:0 !important;
+  color:#fff !important;
+  text-decoration:none !important;
+}
+.edusambam-footer-logo{
+  width:48px !important;
+  height:48px !important;
+  min-width:48px !important;
+  flex:0 0 48px !important;
+}
+.edusambam-footer-logo > span{width:13px !important;height:13px !important;min-width:13px !important;min-height:13px !important;}
+.edusambam-footer-logo > .c3,.edusambam-footer-logo > .c6{left:17.5px !important;}
+.edusambam-footer-brand-name{
+  color:#fff !important;
+  font-family:"EB Garamond",Georgia,serif !important;
+  font-size:1.65rem !important;
+  font-weight:600 !important;
+  letter-spacing:.01em !important;
+  line-height:1 !important;
+  white-space:nowrap !important;
+}
+.edusambam-unified-footer .edusambam-footer-statement{
+  margin:0 !important;
+  max-width:360px !important;
+  color:rgba(255,255,255,.88) !important;
+  font-size:.78rem !important;
+  line-height:1.7 !important;
+  letter-spacing:.08em !important;
+  text-transform:uppercase !important;
+}
+.edusambam-unified-footer .footer-col{min-width:0 !important;}
+.edusambam-unified-footer .footer-col h4{
+  margin:0 0 12px !important;
+  color:#fff !important;
+  font-family:"EB Garamond",Georgia,serif !important;
+  font-size:1rem !important;
+  font-weight:600 !important;
+  line-height:1.25 !important;
+}
+.edusambam-unified-footer .footer-col ul{
+  list-style:none !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+.edusambam-unified-footer .footer-col li{margin:0 0 8px !important;padding:0 !important;}
+.edusambam-unified-footer .footer-col a{
+  color:rgba(255,255,255,.68) !important;
+  text-decoration:none !important;
+  font-size:.84rem !important;
+  line-height:1.5 !important;
+  overflow-wrap:anywhere !important;
+}
+.edusambam-unified-footer .footer-col a:hover,
+.edusambam-unified-footer .footer-col a:focus-visible{color:#fff !important;}
+.edusambam-unified-footer .footer-bottom{
+  width:min(1180px,92%) !important;
+  max-width:1180px !important;
+  margin:0 auto !important;
+  padding:18px 0 22px !important;
+  border-top:1px solid rgba(255,255,255,.12) !important;
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:center !important;
+  gap:20px !important;
+  box-sizing:border-box !important;
+}
+.edusambam-unified-footer .footer-bottom p{
+  margin:0 !important;
+  color:rgba(255,255,255,.55) !important;
+  font-size:.8rem !important;
+  line-height:1.5 !important;
+}
+.edusambam-unified-footer .footer-bottom-links{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:18px !important;
+  list-style:none !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+.edusambam-unified-footer .footer-bottom-links a{
+  color:rgba(255,255,255,.55) !important;
+  font-size:.78rem !important;
+  line-height:1.5 !important;
+  text-decoration:none !important;
+}
+.edusambam-unified-footer .footer-bottom-links a:hover,
+.edusambam-unified-footer .footer-bottom-links a:focus-visible{color:#fff !important;}
+@media(max-width:900px){
+  .edusambam-unified-footer{padding-top:32px !important;}
+  .edusambam-unified-footer .footer-top{grid-template-columns:1fr 1fr !important;gap:28px 22px !important;}
+  .edusambam-unified-footer .footer-brand{grid-column:1/-1 !important;}
+}
+@media(max-width:600px){
+  .edusambam-unified-footer{padding-top:30px !important;}
+  .edusambam-unified-footer .footer-top{width:calc(100% - 28px) !important;grid-template-columns:1fr 1fr !important;gap:26px 20px !important;padding-bottom:28px !important;}
+  .edusambam-unified-footer .footer-bottom{width:calc(100% - 28px) !important;display:block !important;padding:16px 0 20px !important;}
+  .edusambam-unified-footer .footer-bottom-links{margin-top:10px !important;gap:16px !important;}
+  .edusambam-footer-logo{width:44px !important;height:44px !important;min-width:44px !important;flex-basis:44px !important;}
+  .edusambam-footer-logo > span{width:12px !important;height:12px !important;min-width:12px !important;min-height:12px !important;}
+  .edusambam-footer-logo > .c3,.edusambam-footer-logo > .c6{left:16px !important;}
+  .edusambam-footer-brand-name{font-size:1.48rem !important;}
+}
+@media(max-width:430px){
+  .edusambam-unified-footer .footer-top{grid-template-columns:1fr !important;gap:22px !important;}
+  .edusambam-unified-footer .footer-brand{grid-column:auto !important;}
+}
+</style>
+<style id="edusambam-footer-final-alignment">
+/* Final EDUSAMBAM footer consistency pass: identical royal-blue footer and left alignment on every page. */
+.edusambam-unified-footer {
+  background: linear-gradient(135deg,#06244a,#0b4ea2) !important;
+  color:#d6e4f2 !important;
+  text-align:left !important;
+  width:100% !important;
+  box-sizing:border-box !important;
+}
+.edusambam-unified-footer,
+.edusambam-unified-footer *,
+.edusambam-unified-footer h1,
+.edusambam-unified-footer h2,
+.edusambam-unified-footer h3,
+.edusambam-unified-footer h4,
+.edusambam-unified-footer p,
+.edusambam-unified-footer ul,
+.edusambam-unified-footer li,
+.edusambam-unified-footer a,
+.edusambam-unified-footer span {
+  text-align:left !important;
+}
+.edusambam-unified-footer .footer-top,
+.edusambam-unified-footer .footer-brand,
+.edusambam-unified-footer .footer-col,
+.edusambam-unified-footer .footer-bottom {
+  margin-left:0 !important;
+}
+.edusambam-unified-footer .footer-top {
+  margin-right:auto !important;
+}
+.edusambam-unified-footer .edusambam-footer-brand-row {
+  text-align:left !important;
+}
+.edusambam-unified-footer .edusambam-footer-logo-link {
+  justify-content:flex-start !important;
+  text-align:left !important;
+}
+.edusambam-unified-footer .footer-bottom {
+  justify-content:flex-start !important;
+  align-items:flex-start !important;
+  flex-direction:column !important;
+}
+.edusambam-unified-footer .footer-bottom-links {
+  justify-content:flex-start !important;
+  align-items:flex-start !important;
+}
+@media (max-width:600px) {
+  .edusambam-unified-footer .footer-top,
+  .edusambam-unified-footer .footer-bottom {
+    margin-left:0 !important;
+    margin-right:auto !important;
+  }
+}
+</style></head>
 <body id="top">
-<div class="top"><div class="wrap"><span>EDUSAMBAM · Global Learning Platform</span><span>Learn · Practise · Test · Grow</span></div></div>
-<nav><div class="wrap nav">
-<a class="brand" href="#top"><span aria-label="EDUSAMBAM six-circle logo" class="mark"><i></i><i></i><i></i><i></i><i></i><i></i></span><span><b>EDUSAMBAM</b><small>AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM.</small></span></a>
-<div class="navlinks"><a href="#gateways">Six Circles</a><a href="#subjects">Subjects</a><a href="#interactive-activities">Interactive Activities</a><a href="#assessment-arena">Assessment Arena</a><a href="#about">About</a></div>
-<div style="display:flex;gap:7px;align-items:center"><button aria-label="Global search" class="search-btn" onclick="openSearch()">⌕</button><button aria-label="Open subject menu" class="menu-btn" onclick="toggleMenu()">☰</button></div>
-</div></nav>
-<div class="mobile-menu" id="mobileMenu">
-<a href="#subject-english">English Language</a>
-<a href="#english-foundational" class="menu-sub">↳ Foundational Concepts</a><a href="#english-grammar" class="menu-sub">↳ Grammar Basics</a><a href="#english-vocabulary" class="menu-sub">↳ Vocabulary Building</a><a href="#english-reading" class="menu-sub">↳ Reading Comprehension</a><a href="#english-literary" class="menu-sub">↳ Literary Forms</a><a href="#english-creative" class="menu-sub">↳ Creative Writing</a><a href="#english-academic" class="menu-sub">↳ Academic &amp; Essay Writing</a><a href="#english-speaking" class="menu-sub">↳ Speaking &amp; Pronunciation</a><a href="#english-practical" class="menu-sub">↳ Practical Writing</a>
-<a href="#subject-gk">General Knowledge</a><a href="#subject-computer">Computer Fundamentals</a><a href="#subject-ai">Artificial Intelligence (AI)</a><a href="#subject-maths">Mathematics (Maths)</a><a href="#subject-physics">Physics</a><a href="#subject-chemistry">Chemistry</a><a href="#subject-biology">Biology</a><a href="#subject-optometry">Optometry</a><a href="#subject-nutrition">Nutrition</a>
-<a class="menu-major" href="#interactive-activities">INTERACTIVE ACTIVITIES</a>
-<a class="menu-major" href="assessment-arena.html">ASSESSMENT ARENA</a><a class="menu-sub" href="assessment-arena.html">↳ About ASSESSMENT ARENA</a><a class="menu-sub" href="assessment-arena.html#english-assessments">↳ English Language</a><a class="menu-sub" href="assessment-arena.html#maths-assessments">↳ Mathematics</a><a class="menu-sub" href="assessment-arena.html#computer-ai-assessments">↳ Computer &amp; AI</a><a class="menu-sub" href="assessment-arena.html#gk-assessments">↳ General Knowledge</a>
+<nav aria-label="Primary navigation" class="edusambam-nav">
+<div class="edusambam-nav-inner">
+<a aria-label="EDUSAMBAM home" class="edusambam-brand" href="index.html">
+<span aria-hidden="true" class="edusambam-brand-mark">
+<span class="c1"></span><span class="c2"></span><span class="c3"></span>
+<span class="c4"></span><span class="c5"></span><span class="c6"></span>
+</span>
+<span class="edusambam-brand-copy">
+<span class="edusambam-brand-name">EDUSAMBAM</span>
+<span class="edusambam-brand-subtitle">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM.</span>
+</span>
+</a>
+<ul class="edusambam-nav-links"><li><a href="index.html">Home</a></li><li><a href="index.html#english">English</a></li><li><a href="index.html#mathematics">Mathematics</a></li><li><a href="index.html#science">Science</a></li><li><a href="index.html#health">Health</a></li><li><a href="index.html#general-knowledge">General Knowledge</a></li><li><a href="index.html#computer-ai">Computer &amp; AI</a></li><li><a href="index.html#resources">Resources</a></li></ul>
+<button aria-label="Search" class="edusambam-search-btn" title="Search" type="button">⌕</button>
+<button aria-expanded="false" aria-label="Open menu" class="edusambam-menu-btn" title="Menu" type="button">☰</button>
+</div>
+</nav>
+<div aria-label="Mobile navigation" class="edusambam-mobile-menu">
+<ul><li><a href="index.html">Home</a></li><li><a href="index.html#english">English</a></li><li><a href="index.html#mathematics">Mathematics</a></li><li><a href="index.html#science">Science</a></li><li><a href="index.html#health">Health</a></li><li><a href="index.html#general-knowledge">General Knowledge</a></li><li><a href="index.html#computer-ai">Computer &amp; AI</a></li><li><a href="index.html#resources">Resources</a></li>
+<li class="edusambam-menu-extra"><a href="interactive-activities.html">Interactive Activities</a></li>
+<li class="edusambam-menu-extra"><a href="assessment-arena.html">Assessment Arena</a></li>
+<li class="edusambam-menu-extra"><a href="about.html">About</a></li>
+<li class="edusambam-menu-extra"><a href="mission.html">Mission</a></li>
+<li class="edusambam-menu-extra"><a href="team.html">Team</a></li>
+</ul>
+</div>
+<div aria-label="Site search" class="edusambam-search-panel">
+<div class="edusambam-search-wrap">
+<input aria-label="Search EDUSAMBAM" class="edusambam-search-input" placeholder="Search EDUSAMBAM…" type="search"/>
+<div class="edusambam-search-results"></div>
+</div>
 </div>
 <header class="hero"><div class="wrap hero-grid"><div>
 <div class="hero-eyebrow">EDUSAMBAM</div><h1>WHERE KNOWLEDGE BECOMES UNDERSTANDING</h1>
@@ -146,7 +570,7 @@ section,header,footer,main,nav,.wrap,.container{max-width:100%;box-sizing:border
 <section class="assessment-arena-section" id="assessment-arena"><div class="wrap"><div class="assessment-arena-card"><div class="eyebrow">EDUSAMBAM</div><h2>ASSESSMENT ARENA</h2><p>A dedicated space to practise, self-assess, measure understanding and build confidence through meaningful assessment.</p><a class="assessment-article-link" href="assessment-arena.html">Read: What Is Assessment Arena? →</a><div class="assessment-grid"><a class="assessment-card" href="assessment-arena.html#english-assessments"><strong>English Language</strong><span>Explore scored papers</span></a><a class="assessment-card" href="assessment-arena.html#maths-assessments"><strong>Mathematics</strong><span>Explore scored papers</span></a><a class="assessment-card" href="assessment-arena.html#computer-ai-assessments"><strong>Computer &amp; AI</strong><span>Explore scored papers</span></a><a class="assessment-card" href="assessment-arena.html#gk-assessments"><strong>General Knowledge</strong><span>Explore scored papers</span></a></div><a class="assessment-more" href="assessment-arena.html">Explore ASSESSMENT ARENA →</a></div></div></section><div id="subjects">
 <section class="subject-section" id="subject-english">
 <div class="section-head"><div><h2>English Language</h2><p>Build language understanding step by step through clearly organised areas of learning.</p></div></div>
-<div class="english-category" id="english-foundational"><div class="english-category-head"><h3>Foundational Concepts</h3></div><div class="article-grid"><a class="article-card" href="what-is-language.html"><span class="article-dot">●</span><span>What is Language?</span></a><a class="article-card" href="language-and-its-need.html"><span class="article-dot">●</span><span>Language and Its Need</span></a><a class="article-card" href="english-international-language.html"><span class="article-dot">●</span><span>English as an International Language</span></a><a class="article-card" href="importance-of-english.html"><span class="article-dot">●</span><span>The Importance of the English Language</span></a></div></div><div class="english-category" id="english-grammar"><div class="english-category-head"><h3>Grammar Basics</h3></div><div class="article-grid"><a class="article-card" href="parts-of-speech.html"><span class="article-dot">●</span><span>Parts of Speech: The Building Blocks of English</span></a><a class="article-card" href="sentence-structure.html"><span class="article-dot">●</span><span>Sentence Structure: From Basic to Advanced</span></a><a class="article-card" href="punctuation-rules.html"><span class="article-dot">●</span><span>Punctuation Rules: The Complete Guide</span></a><a class="article-card" href="tenses-verb-forms.html"><span class="article-dot">●</span><span>Tenses &amp; Verb Forms: The Complete Guide</span></a><a class="article-card" href="common-errors.html"><span class="article-dot">●</span><span>Common Errors in English: A Complete Guide</span></a><a class="article-card" href="grammar-article.html"><span class="article-dot">●</span><span>The Grammar Trap: 10 Mistakes That Make Smart People Look Careless</span></a></div></div><div class="english-category" id="english-vocabulary"><div class="english-category-head"><h3>Vocabulary Building</h3></div><div class="article-grid"><a class="article-card" href="prefixes-suffixes-root-words.html"><span class="article-dot">●</span><span>Prefixes, Suffixes &amp; Root Words: The Complete Guide</span></a><a class="article-card" href="synonyms-antonyms.html"><span class="article-dot">●</span><span>Synonyms &amp; Antonyms: The Complete Guide</span></a><a class="article-card" href="idioms-phrases.html"><span class="article-dot">●</span><span>Idioms &amp; Phrases: The Complete Guide</span></a><a class="article-card" href="formal-informal-english.html"><span class="article-dot">●</span><span>Formal vs. Informal English: The Complete Guide</span></a></div></div><div class="english-category" id="english-reading"><div class="english-category-head"><h3>Reading Comprehension</h3></div><div class="article-grid"><a class="article-card" href="main-idea-supporting-details.html"><span class="article-dot">●</span><span>Main Idea &amp; Supporting Details: The Complete Guide</span></a><a class="article-card" href="making-inferences.html"><span class="article-dot">●</span><span>Making Inferences &amp; Drawing Conclusions: The Complete Guide</span></a><a class="article-card" href="context-clues.html"><span class="article-dot">●</span><span>Context Clues: The Complete Guide</span></a><a class="article-card" href="text-structure-organization.html"><span class="article-dot">●</span><span>Text Structure &amp; Organization: The Complete Guide</span></a><a class="article-card" href="authors-purpose-tone-pov.html"><span class="article-dot">●</span><span>Author's Purpose, Tone &amp; Point of View: The Complete Guide</span></a></div></div><div class="english-category" id="english-literary"><div class="english-category-head"><h3>Literary Forms</h3></div><div class="article-grid"><a class="article-card" href="prose.html"><span class="article-dot">●</span><span>Prose: The Complete Guide</span></a><a class="article-card" href="poetry.html"><span class="article-dot">●</span><span>Poetry: The Complete Guide</span></a></div></div><div class="english-category" id="english-creative"><div class="english-category-head"><h3>Creative Writing</h3></div><div class="article-grid"><a class="article-card" href="how-to-write-a-perfect-paragraph.html"><span class="article-dot">●</span><span>How to Write a Perfect Paragraph</span></a><a class="article-card" href="story-structure.html"><span class="article-dot">●</span><span>Story Structure: Beginning, Middle and End</span></a><a class="article-card" href="character-development.html"><span class="article-dot">●</span><span>Character Development: Writing People Readers Care About</span></a><a class="article-card" href="show-dont-tell.html"><span class="article-dot">●</span><span>Show, Don't Tell: The Principle of Vivid Writing</span></a><a class="article-card" href="dialogue-and-voice.html"><span class="article-dot">●</span><span>Dialogue &amp; Voice: Writing Conversation That Sounds Real</span></a><a class="article-card" href="self-editing-process.html"><span class="article-dot">●</span><span>Editing Your Own Work: A Step-by-Step Process</span></a></div></div><div class="english-category" id="english-academic"><div class="english-category-head"><h3>Academic &amp; Essay Writing</h3></div><div class="article-grid"><a class="article-card" href="essay-structure.html"><span class="article-dot">●</span><span>Essay Structure &amp; the Five-Paragraph Essay: The Complete Guide</span></a><a class="article-card" href="thesis-statements.html"><span class="article-dot">●</span><span>Thesis Statements: The Complete Guide</span></a><a class="article-card" href="types-of-essays.html"><span class="article-dot">●</span><span>Types of Essays: The Complete Guide</span></a><a class="article-card" href="evidence-citations-plagiarism.html"><span class="article-dot">●</span><span>Evidence, Citations &amp; Avoiding Plagiarism: The Complete Guide</span></a><a class="article-card" href="transitions-cohesion.html"><span class="article-dot">●</span><span>Transitions &amp; Cohesion: The Complete Guide</span></a></div></div><div class="english-category" id="english-speaking"><div class="english-category-head"><h3>Speaking &amp; Pronunciation</h3></div><div class="article-grid"><a class="article-card" href="spoken-english-pronunciation.html"><span class="article-dot">●</span><span>Spoken English &amp; Pronunciation: Mistakes, Stress and Fluency</span></a><a class="article-card" href="fluency-building-techniques.html"><span class="article-dot">●</span><span>Fluency Building Techniques</span></a><a class="article-card" href="word-and-sentence-stress.html"><span class="article-dot">●</span><span>Word &amp; Sentence Stress Patterns</span></a><a class="article-card" href="intonation-in-conversation.html"><span class="article-dot">●</span><span>Intonation in Conversation</span></a><a class="article-card" href="common-pronunciation-mistakes.html"><span class="article-dot">●</span><span>Common Pronunciation Mistakes</span></a></div></div><div class="english-category" id="english-practical"><div class="english-category-head"><h3>Practical Writing</h3></div><div class="article-grid"><a class="article-card" href="formal-letter-writing.html"><span class="article-dot">●</span><span>Formal Letter Writing</span></a><a class="article-card" href="informal-letter-writing.html"><span class="article-dot">●</span><span>Informal Letter Writing</span></a><a class="article-card" href="job-applications-cover-letters.html"><span class="article-dot">●</span><span>Job Applications &amp; Cover Letters</span></a><a class="article-card" href="professional-email-etiquette.html"><span class="article-dot">●</span><span>Professional Email Etiquette</span></a><a class="article-card" href="complaint-request-letters.html"><span class="article-dot">●</span><span>Complaint &amp; Request Letters</span></a></div></div></section>
+<div class="english-category" id="english-foundational"><div class="english-category-head"><h3>Foundational Concepts</h3></div><div class="article-grid"><a class="article-card" href="what-is-language.html"><span class="article-dot">●</span><span>What is Language?</span></a><a class="article-card" href="language-and-its-need.html"><span class="article-dot">●</span><span>Language and Its Need</span></a><a class="article-card" href="english-international-language.html"><span class="article-dot">●</span><span>English as an International Language</span></a><a class="article-card" href="importance-of-english.html"><span class="article-dot">●</span><span>The Importance of the English Language</span></a></div></div><div class="english-category" id="english-grammar"><div class="english-category-head"><h3>Grammar Basics</h3></div><div class="article-grid"><a class="article-card" href="parts-of-speech.html"><span class="article-dot">●</span><span>Parts of Speech: The Building Blocks of English</span></a><a class="article-card" href="sentence-structure.html"><span class="article-dot">●</span><span>Sentence Structure: From Basic to Advanced</span></a><a class="article-card" href="punctuation-rules.html"><span class="article-dot">●</span><span>Punctuation Rules: The Complete Guide</span></a><a class="article-card" href="tenses-verb-forms.html"><span class="article-dot">●</span><span>Tenses &amp; Verb Forms: The Complete Guide</span></a><a class="article-card" href="common-errors.html"><span class="article-dot">●</span><span>Common Errors in English: A Complete Guide</span></a><a class="article-card" href="grammar-article.html"><span class="article-dot">●</span><span>The Grammar Trap: 10 Mistakes That Make Smart People Look Careless</span></a></div></div><div class="english-category" id="english-vocabulary"><div class="english-category-head"><h3>Vocabulary Building</h3></div><div class="article-grid"><a class="article-card" href="prefixes-suffixes-root-words.html"><span class="article-dot">●</span><span>Prefixes, Suffixes &amp; Root Words: The Complete Guide</span></a><a class="article-card" href="synonyms-antonyms.html"><span class="article-dot">●</span><span>Synonyms &amp; Antonyms: The Complete Guide</span></a><a class="article-card" href="idioms-phrases.html"><span class="article-dot">●</span><span>Idioms &amp; Phrases: The Complete Guide</span></a><a class="article-card" href="formal-informal-english.html"><span class="article-dot">●</span><span>Formal vs. Informal English: The Complete Guide</span></a></div></div><div class="english-category" id="english-reading"><div class="english-category-head"><h3>Reading Comprehension</h3></div><div class="article-grid"><a class="article-card" href="main-idea-supporting-details.html"><span class="article-dot">●</span><span>Main Idea &amp; Supporting Details: The Complete Guide</span></a><a class="article-card" href="making-inferences.html"><span class="article-dot">●</span><span>Making Inferences &amp; Drawing Conclusions: The Complete Guide</span></a><a class="article-card" href="context-clues.html"><span class="article-dot">●</span><span>Context Clues: The Complete Guide</span></a><a class="article-card" href="text-structure-organization.html"><span class="article-dot">●</span><span>Text Structure &amp; Organization: The Complete Guide</span></a><a class="article-card" href="authors-purpose-tone-pov.html"><span class="article-dot">●</span><span>Author's Purpose, Tone &amp; Point of View: The Complete Guide</span></a></div></div><div class="english-category" id="english-literary"><div class="english-category-head"><h3>Literary Forms</h3></div><div class="article-grid"><a class="article-card" href="prose.html"><span class="article-dot">●</span><span>Prose: The Complete Guide</span></a><a class="article-card" href="poetry.html"><span class="article-dot">●</span><span>Poetry: The Complete Guide</span></a></div></div><div class="english-category" id="english-creative"><div class="english-category-head"><h3>Creative Writing</h3></div><div class="article-grid"><a class="article-card" href="how-to-write-a-perfect-paragraph.html"><span class="article-dot">●</span><span>How to Write a Perfect Paragraph</span></a><a class="article-card" href="story-structure.html"><span class="article-dot">●</span><span>Story Structure: Beginning, Middle and End</span></a><a class="article-card" href="character-development.html"><span class="article-dot">●</span><span>Character Development: Writing People Readers Care About</span></a><a class="article-card" href="show-dont-tell.html"><span class="article-dot">●</span><span>Show, Don't Tell: The Principle of Vivid Writing</span></a><a class="article-card" href="dialogue-and-voice.html"><span class="article-dot">●</span><span>Dialogue &amp; Voice: Writing Conversation That Sounds Real</span></a><a class="article-card" href="self-editing-process.html"><span class="article-dot">●</span><span>Editing Your Own Work: A Step-by-Step Process</span></a></div></div><div class="english-category" id="english-academic"><div class="english-category-head"><h3>Academic &amp; Essay Writing</h3></div><div class="article-grid"><a class="article-card" href="essay-structure.html"><span class="article-dot">●</span><span>Essay Structure &amp; the Five-Paragraph Essay: The Complete Guide</span></a><a class="article-card" href="thesis-statements.html"><span class="article-dot">●</span><span>Thesis Statements: The Complete Guide</span></a><a class="article-card" href="types-of-essays.html"><span class="article-dot">●</span><span>Types of Essays: The Complete Guide</span></a><a class="article-card" href="evidence-citations-plagiarism.html"><span class="article-dot">●</span><span>Evidence, Citations &amp; Avoiding Plagiarism: The Complete Guide</span></a><a class="article-card" href="transitions-cohesion.html"><span class="article-dot">●</span><span>Transitions &amp; Cohesion: The Complete Guide</span></a></div></div><div class="english-category" id="english-speaking"><div class="english-category-head"><h3>Speaking &amp; Pronunciation</h3></div><div class="article-grid"><a class="article-card" href="spoken-english-pronunciation.html"><span class="article-dot">●</span><span>Spoken English &amp; Pronunciation: Mistakes, Stress and Fluency</span></a><a class="article-card" href="fluency-building-techniques.html"><span class="article-dot">●</span><span>Fluency Building Techniques</span></a><a class="article-card" href="word-and-sentence-stress.html"><span class="article-dot">●</span><span>Word &amp; Sentence Stress Patterns</span></a><a class="article-card" href="intonation-in-conversation.html"><span class="article-dot">●</span><span>Intonation in Conversation</span></a><a class="article-card" href="common-pronunciation-mistakes.html"><span class="article-dot">●</span><span>Common Pronunciation Mistakes</span></a></div></div><div class="english-category" id="english-practical"><div class="english-category-head"><h3>Practical Writing</h3></div><div class="article-grid"><a class="article-card" href="formal-letter-writing.html"><span class="article-dot">●</span><span>Formal Letter Writing</span></a><a class="article-card" href="informal-letter-writing.html"><span class="article-dot">●</span><span>Informal Letter Writing</span></a><a class="article-card" href="job-applications-cover-letters.html"><span class="article-dot">●</span><span>Job Applications &amp; Cover Letters</span></a><a class="article-card" href="professional-email-etiquette.html"><span class="article-dot">●</span><span>Professional Email Etiquette</span></a><a class="article-card" href="complaint-request-letters.html"><span class="article-dot">●</span><span>Complaint &amp; Request Letters</span></a></div></div><a class="article-card" href="practice-test-foundational-concepts-english.html"><span class="article-dot">●</span><span>Practice Test: Foundational Concepts of English · 100 Marks</span></a><a class="article-card" href="practice-test-grammar-basics.html"><span class="article-dot">●</span><span>Practice Test: Grammar Basics · 100 Marks</span></a><a class="article-card" href="practice-test-vocabulary-building.html"><span class="article-dot">●</span><span>Practice Test: Vocabulary Building · 100 Marks</span></a><a class="article-card" href="practice-test-reading-comprehension.html"><span class="article-dot">●</span><span>Practice Test: Reading Comprehension · 100 Marks</span></a><a class="article-card" href="practice-test-literary-forms.html"><span class="article-dot">●</span><span>Practice Test: Literary Forms · 100 Marks</span></a><a class="article-card" href="practice-test-creative-writing-part.html"><span class="article-dot">●</span><span>Practice Test: Creative Writing — Part 1 · 100 Marks</span></a><a class="article-card" href="practice-test-creative-writing-part-1.html"><span class="article-dot">●</span><span>Practice Test: Creative Writing — Part 2 · 100 Marks</span></a><a class="article-card" href="practice-test-academic-essay-writing.html"><span class="article-dot">●</span><span>Practice Test: Academic &amp; Essay Writing · 100 Marks</span></a><a class="article-card" href="practice-test-speaking-pronunciation.html"><span class="article-dot">●</span><span>Practice Test: Speaking &amp; Pronunciation · 100 Marks</span></a><a class="article-card" href="practice-test-practical-writing.html"><span class="article-dot">●</span><span>Practice Test: Practical Writing · 100 Marks</span></a></section>
 <section class="subject-section interactive-section" id="interactive-activities">
 <div class="wrap">
 <div class="section-head"><div><h2>INTERACTIVE ACTIVITIES</h2><p class="interactive-intro">Learn by doing. These hands-on activities give learners a separate space to practise language skills, receive immediate feedback and build confidence at their own pace.</p></div></div>
@@ -155,18 +579,18 @@ section,header,footer,main,nav,.wrap,.container{max-width:100%;box-sizing:border
 </section>
 <section class="subject-section" id="subject-gk">
 <div class="section-head"><div><h2>General Knowledge</h2></div></div>
-<div class="article-grid"><a class="article-card" href="animals-and-ecosystems.html"><span class="article-dot">●</span><span>Animals &amp; Ecosystems: Wildlife GK</span></a><a class="article-card" href="continents-and-oceans.html"><span class="article-dot">●</span><span>Continents &amp; Oceans: The Basic Map of the World</span></a><a class="article-card" href="countries-and-capitals.html"><span class="article-dot">●</span><span>Countries &amp; Capitals: Major Nations Around the World</span></a><a class="article-card" href="famous-personalities.html"><span class="article-dot">●</span><span>Famous Personalities: Leaders, Scientists &amp; Nobel Laureates</span></a><a class="article-card" href="famous-world-landmarks-wonders.html"><span class="article-dot">●</span><span>Famous World Landmarks &amp; Wonders</span></a><a class="article-card" href="flags-of-the-world.html"><span class="article-dot">●</span><span>Flags of the World: Reading the Symbols</span></a><a class="article-card" href="great-inventions-and-inventors.html"><span class="article-dot">●</span><span>Great Inventions &amp; Inventors</span></a><a class="article-card" href="india-national-symbols.html"><span class="article-dot">●</span><span>India: National Symbols, Founders &amp; Key Facts</span></a><a class="article-card" href="pakistan-national-symbols.html"><span class="article-dot">●</span><span>Pakistan: National Symbols, Founders &amp; Key Facts</span></a><a class="article-card" href="science-vs-pseudoscience.html"><span class="article-dot">●</span><span>Science vs Pseudoscience: How to Tell the Difference</span></a><a class="article-card" href="sports-of-the-world.html"><span class="article-dot">●</span><span>Sports of the World: Rules, Terms &amp; Records</span></a><a class="article-card" href="scientific-revolution.html"><span class="article-dot">●</span><span>The Scientific Revolution: How Modern Science Began</span></a><a class="article-card" href="seven-wonders-of-the-world.html"><span class="article-dot">●</span><span>The Seven Wonders of the Modern World</span></a><a class="article-card" href="the-solar-system-planets-moons-and-the-sun.html"><span class="article-dot">●</span><span>The Solar System: Planets, Moons &amp; the Sun</span></a><a class="article-card" href="weather-and-climate-how-the-atmosphere-works.html"><span class="article-dot">●</span><span>Weather &amp; Climate: How the Atmosphere Works</span></a></div></section>
+<div class="article-grid"><a class="article-card" href="animals-and-ecosystems.html"><span class="article-dot">●</span><span>Animals &amp; Ecosystems: Wildlife GK</span></a><a class="article-card" href="continents-and-oceans.html"><span class="article-dot">●</span><span>Continents &amp; Oceans: The Basic Map of the World</span></a><a class="article-card" href="countries-and-capitals.html"><span class="article-dot">●</span><span>Countries &amp; Capitals: Major Nations Around the World</span></a><a class="article-card" href="famous-personalities.html"><span class="article-dot">●</span><span>Famous Personalities: Leaders, Scientists &amp; Nobel Laureates</span></a><a class="article-card" href="famous-world-landmarks-wonders.html"><span class="article-dot">●</span><span>Famous World Landmarks &amp; Wonders</span></a><a class="article-card" href="flags-of-the-world.html"><span class="article-dot">●</span><span>Flags of the World: Reading the Symbols</span></a><a class="article-card" href="great-inventions-and-inventors.html"><span class="article-dot">●</span><span>Great Inventions &amp; Inventors</span></a><a class="article-card" href="india-national-symbols.html"><span class="article-dot">●</span><span>India: National Symbols, Founders &amp; Key Facts</span></a><a class="article-card" href="pakistan-national-symbols.html"><span class="article-dot">●</span><span>Pakistan: National Symbols, Founders &amp; Key Facts</span></a><a class="article-card" href="science-vs-pseudoscience.html"><span class="article-dot">●</span><span>Science vs Pseudoscience: How to Tell the Difference</span></a><a class="article-card" href="sports-of-the-world.html"><span class="article-dot">●</span><span>Sports of the World: Rules, Terms &amp; Records</span></a><a class="article-card" href="scientific-revolution.html"><span class="article-dot">●</span><span>The Scientific Revolution: How Modern Science Began</span></a><a class="article-card" href="seven-wonders-of-the-world.html"><span class="article-dot">●</span><span>The Seven Wonders of the Modern World</span></a><a class="article-card" href="the-solar-system-planets-moons-and-the-sun.html"><span class="article-dot">●</span><span>The Solar System: Planets, Moons &amp; the Sun</span></a><a class="article-card" href="weather-and-climate-how-the-atmosphere-works.html"><span class="article-dot">●</span><span>Weather &amp; Climate: How the Atmosphere Works</span></a></div><a class="article-card" href="practice-test-countries-capitals-flags.html"><span class="article-dot">●</span><span>Practice Test: Countries, Capitals &amp; Flags of the World · 100 Marks</span></a><a class="article-card" href="practice-test-world-landmarks-continents-oceans.html"><span class="article-dot">●</span><span>Practice Test: World Landmarks &amp; Continents and Oceans · 100 Marks</span></a><a class="article-card" href="practice-test-seven-wonders-of-the-world.html"><span class="article-dot">●</span><span>Practice Test: The Seven Wonders of the Modern World · 100 Marks</span></a></section>
 <section class="subject-section" id="subject-computer">
 <div class="section-head"><div><h2>Computer Fundamentals</h2></div></div>
-<div class="article-grid"><a class="article-card" href="cloud-computing.html"><span class="article-dot">●</span><span>Cloud Computing: What "The Cloud" Actually Is</span></a><a class="article-card" href="cybersecurity-basics.html"><span class="article-dot">●</span><span>Cybersecurity Basics: Threats, Defences and Good Digital Habits</span></a><a class="article-card" href="digital-footprint-privacy.html"><span class="article-dot">●</span><span>Digital Footprint &amp; Online Privacy: What Gets Tracked, and Why It Matters</span></a><a class="article-card" href="how-computers-work.html"><span class="article-dot">●</span><span>How Computers Work: Hardware, Software and Binary Code</span></a><a class="article-card" href="operating-systems.html"><span class="article-dot">●</span><span>Operating Systems: The Software Behind Every Device</span></a><a class="article-card" href="search-engines-browsers.html"><span class="article-dot">●</span><span>Search Engines &amp; Web Browsers: How the Internet Finds Things</span></a><a class="article-card" href="history-of-computing.html"><span class="article-dot">●</span><span>The History of Computing: Babbage to Smartphones</span></a><a class="article-card" href="what-is-coding.html"><span class="article-dot">●</span><span>What Is Coding? Programming Languages Explained, From Basics to Advanced</span></a><a class="article-card" href="what-is-the-internet.html"><span class="article-dot">●</span><span>What Is the Internet, Really? Servers, Packets and How Data Travels</span></a></div></section>
+<div class="article-grid"><a class="article-card" href="cloud-computing.html"><span class="article-dot">●</span><span>Cloud Computing: What "The Cloud" Actually Is</span></a><a class="article-card" href="cybersecurity-basics.html"><span class="article-dot">●</span><span>Cybersecurity Basics: Threats, Defences and Good Digital Habits</span></a><a class="article-card" href="digital-footprint-privacy.html"><span class="article-dot">●</span><span>Digital Footprint &amp; Online Privacy: What Gets Tracked, and Why It Matters</span></a><a class="article-card" href="how-computers-work.html"><span class="article-dot">●</span><span>How Computers Work: Hardware, Software and Binary Code</span></a><a class="article-card" href="operating-systems.html"><span class="article-dot">●</span><span>Operating Systems: The Software Behind Every Device</span></a><a class="article-card" href="search-engines-browsers.html"><span class="article-dot">●</span><span>Search Engines &amp; Web Browsers: How the Internet Finds Things</span></a><a class="article-card" href="history-of-computing.html"><span class="article-dot">●</span><span>The History of Computing: Babbage to Smartphones</span></a><a class="article-card" href="what-is-coding.html"><span class="article-dot">●</span><span>What Is Coding? Programming Languages Explained, From Basics to Advanced</span></a><a class="article-card" href="what-is-the-internet.html"><span class="article-dot">●</span><span>What Is the Internet, Really? Servers, Packets and How Data Travels</span></a></div><a class="article-card" href="practice-test-parts-of-a-computer.html"><span class="article-dot">●</span><span>Practice Test: Parts of a Computer · 100 Marks</span></a><a class="article-card" href="practice-test-what-is-coding.html"><span class="article-dot">●</span><span>Practice Test: What Is Coding? · 100 Marks</span></a><a class="article-card" href="practice-test-what-is-an-algorithm.html"><span class="article-dot">●</span><span>Practice Test: What Is an Algorithm? · 100 Marks</span></a><a class="article-card" href="practice-test-how-the-internet-works.html"><span class="article-dot">●</span><span>Practice Test: How the Internet Works · 100 Marks</span></a><a class="article-card" href="practice-test-search-engines-browsers.html"><span class="article-dot">●</span><span>Practice Test: Search Engines &amp; Web Browsers · 100 Marks</span></a><a class="article-card" href="practice-test-history-of-computing.html"><span class="article-dot">●</span><span>Practice Test: The History of Computing · 100 Marks</span></a><a class="article-card" href="practice-test-cloud-computing.html"><span class="article-dot">●</span><span>Practice Test: Cloud Computing · 100 Marks</span></a><a class="article-card" href="practice-test-software-apps-operating-systems.html"><span class="article-dot">●</span><span>Practice Test: Software, Apps &amp; Operating Systems · 100 Marks</span></a><a class="article-card" href="practice-test-digital-footprint-privacy.html"><span class="article-dot">●</span><span>Practice Test: Digital Footprint &amp; Online Privacy · 100 Marks</span></a><a class="article-card" href="practice-test-staying-safe-online.html"><span class="article-dot">●</span><span>Practice Test: Staying Safe Online · 100 Marks</span></a><a class="article-card" href="practice-test-ai-and-machine-learning.html"><span class="article-dot">●</span><span>Practice Test: What Is AI &amp; Machine Learning? · 100 Marks</span></a><a class="article-card" href="practice-test-generative-ai-and-prompt-engineering.html"><span class="article-dot">●</span><span>Practice Test: Generative AI &amp; Prompt Engineering · 100 Marks</span></a><a class="article-card" href="practice-test-llm-and-ai-ethics.html"><span class="article-dot">●</span><span>Practice Test: What Is an LLM &amp; AI Ethics? · 100 Marks</span></a><a class="article-card" href="practice-test-ai-agents-and-nlp.html"><span class="article-dot">●</span><span>Practice Test: AI Agents &amp; Natural Language Processing · 100 Marks</span></a><a class="article-card" href="practice-test-computer-vision-and-recommendation-systems.html"><span class="article-dot">●</span><span>Practice Test: Computer Vision &amp; Recommendation Systems · 100 Marks</span></a></section>
 <section class="subject-section" id="subject-ai">
 <div class="section-head"><div><h2>Artificial Intelligence (AI)</h2></div></div>
 <div class="article-grid"><a class="article-card" href="ai-agents.html"><span class="article-dot">●</span><span>AI Agents: When AI Takes Action, Not Just Talks</span></a><a class="article-card" href="ai-ethics.html"><span class="article-dot">●</span><span>AI Ethics: Bias, Privacy and Misinformation Explained</span></a><a class="article-card" href="computer-vision.html"><span class="article-dot">●</span><span>Computer Vision: How Machines Learn to See</span></a><a class="article-card" href="generative-ai.html"><span class="article-dot">●</span><span>Generative AI: Images, Text and Where the Line Is</span></a><a class="article-card" href="machine-learning-explained.html"><span class="article-dot">●</span><span>Machine Learning Explained: How Computers Learn From Data</span></a><a class="article-card" href="natural-language-processing.html"><span class="article-dot">●</span><span>Natural Language Processing: How Computers Understand Text</span></a><a class="article-card" href="prompt-engineering.html"><span class="article-dot">●</span><span>Prompt Engineering: Getting Better Results From AI Tools</span></a><a class="article-card" href="recommendation-systems.html"><span class="article-dot">●</span><span>Recommendation Systems: How Netflix and Spotify "Know" What You Like</span></a><a class="article-card" href="what-is-an-llm.html"><span class="article-dot">●</span><span>What Is a Large Language Model? How Chatbots Actually Work</span></a><a class="article-card" href="what-is-an-algorithm.html"><span class="article-dot">●</span><span>What Is an Algorithm? Thinking Like a Computer</span></a><a class="article-card" href="what-is-artificial-intelligence.html"><span class="article-dot">●</span><span>What is Artificial Intelligence and How Does It Work?</span></a></div></section>
 <section class="subject-section" id="subject-maths">
 <div class="section-head"><div><h2>Mathematics (Maths)</h2></div></div>
-<div class="article-grid"><a class="article-card" href="number-line-addition-subtraction.html"><span class="article-dot">●</span><span>Addition &amp; Subtraction on the Number Line</span></a><a class="article-card" href="basic-data-statistics.html"><span class="article-dot">●</span><span>Basic Data &amp; Statistics: Mean, Median, and Mode</span></a><a class="article-card" href="bodmas-dmas-rules.html"><span class="article-dot">●</span><span>BODMAS &amp; DMAS Rules: The Correct Order of Operations</span></a><a class="article-card" href="brackets-fractions-decimals-bodmas.html"><span class="article-dot">●</span><span>Brackets, Fractions &amp; Decimals in BODMAS</span></a><a class="article-card" href="divisibility-rules.html"><span class="article-dot">●</span><span>Divisibility Rules: Quick Tests for 2 Through 12</span></a><a class="article-card" href="exponents-and-powers.html"><span class="article-dot">●</span><span>Exponents &amp; Powers: The Laws of Indices</span></a><a class="article-card" href="factors-and-multiples.html"><span class="article-dot">●</span><span>Factors &amp; Multiples: Prime, Composite, and Common</span></a><a class="article-card" href="fraction-fix-it.html"><span class="article-dot">●</span><span>Fraction Fix-It: Strategies for Confident Fraction Sense</span></a><a class="article-card" href="hcf-lcm-word-problems.html"><span class="article-dot">●</span><span>HCF &amp; LCM Word Problems: Real-Life Applications</span></a><a class="article-card" href="hcf-and-lcm.html"><span class="article-dot">●</span><span>HCF &amp; LCM: Highest Common Factor &amp; Lowest Common Multiple</span></a><a class="article-card" href="number-line-multiplication-division.html"><span class="article-dot">●</span><span>Multiplication &amp; Division on the Number Line</span></a><a class="article-card" href="fraction-multiply-divide.html"><span class="article-dot">●</span><span>Multiply &amp; Divide Fractions: Cross, Flip, and Fly</span></a><a class="article-card" href="number-base-systems.html"><span class="article-dot">●</span><span>Number Base Systems: Binary, Base 5, Base 7, Octal &amp; Decimal</span></a><a class="article-card" href="number-lines.html"><span class="article-dot">●</span><span>Number Lines: Placing Whole Numbers, Fractions, and Decimals</span></a><a class="article-card" href="number-systems.html"><span class="article-dot">●</span><span>Number Systems: Natural, Whole, Integer, Rational &amp; Real Numbers</span></a><a class="article-card" href="operations-of-integers.html"><span class="article-dot">●</span><span>Operations of Integers: Addition, Subtraction, Multiplication &amp; Division</span></a><a class="article-card" href="percentages.html"><span class="article-dot">●</span><span>Percentages: Averages, Profit &amp; Loss, Discounts &amp; Interest</span></a><a class="article-card" href="place-value-face-value.html"><span class="article-dot">●</span><span>Place Value &amp; Face Value: International, Indian &amp; Pakistani Systems</span></a><a class="article-card" href="ratio-and-proportion.html"><span class="article-dot">●</span><span>Ratio &amp; Proportion: Complete Guide with All Question Types</span></a><a class="article-card" href="roman-numerals.html"><span class="article-dot">●</span><span>Roman Numerals: Reading and Writing an Ancient Number System</span></a><a class="article-card" href="scientific-notation.html"><span class="article-dot">●</span><span>Scientific Notation: Writing Very Large and Very Small Numbers</span></a><a class="article-card" href="squares-cubes-roots.html"><span class="article-dot">●</span><span>Squares, Square Roots, Cubes &amp; Cube Roots</span></a><a class="article-card" href="times-tables-trainer.html"><span class="article-dot">●</span><span>Times Tables Trainer: Strategies for Fast, Confident Multiplication</span></a><a class="article-card" href="why-do-we-need-mathematics.html"><span class="article-dot">●</span><span>Why Do We Need Mathematics in Daily Life?</span></a></div></section>
-<section class="subject-section" id="subject-physics"><div class="section-head"><div><h2>Physics</h2></div></div><div class="article-grid"><a class="article-card" href="electricity-and-magnetism-the-basics.html"><span class="article-dot">●</span><span>Electricity and Magnetism: The Basics</span></a><a class="article-card" href="energy-types-sources-transformations.html"><span class="article-dot">●</span><span>Energy: Types, Sources, and Transformations</span></a><a class="article-card" href="force-newtons-laws-of-motion.html"><span class="article-dot">●</span><span>Force and Newton's Laws of Motion</span></a><a class="article-card" href="gravity-and-space.html"><span class="article-dot">●</span><span>Gravity and Space: Why Things Fall and Planets Orbit</span></a><a class="article-card" href="heat-and-temperature.html"><span class="article-dot">●</span><span>Heat and Temperature: How They Differ</span></a><a class="article-card" href="light-reflection-refraction-color.html"><span class="article-dot">●</span><span>Light: Reflection, Refraction, and Color</span></a><a class="article-card" href="matter-and-its-states.html"><span class="article-dot">●</span><span>Matter and Its States: Solid, Liquid, and Gas</span></a><a class="article-card" href="motion-speed-velocity-distance.html"><span class="article-dot">●</span><span>Motion: Speed, Velocity, and Distance</span></a><a class="article-card" href="pressure-and-buoyancy.html"><span class="article-dot">●</span><span>Pressure and Buoyancy: Why Some Things Float and Others Sink</span></a><a class="article-card" href="sound-how-we-hear-the-world.html"><span class="article-dot">●</span><span>Sound: How We Hear the World</span></a><a class="article-card" href="what-is-physics.html"><span class="article-dot">●</span><span>What is Physics? The Study of How Things Work</span></a><a class="article-card" href="work-power-simple-machines.html"><span class="article-dot">●</span><span>Work, Power, and Simple Machines</span></a></div></section>
-<section class="subject-section" id="subject-chemistry"><div class="section-head"><div><h2>Chemistry</h2></div></div><div class="article-grid"><a class="article-card" href="acids-bases-salts.html"><span class="article-dot">●</span><span>Acids, Bases and Salts: The Chemistry of Sour, Bitter, and Neutral</span></a><a class="article-card" href="atoms-and-periodic-table.html"><span class="article-dot">●</span><span>Atoms and the Periodic Table: The Building Blocks of Everything</span></a><a class="article-card" href="chemical-bonding.html"><span class="article-dot">●</span><span>Chemical Bonding: How Atoms Connect to Form Everything</span></a><a class="article-card" href="chemical-reactions-equations.html"><span class="article-dot">●</span><span>Chemical Reactions and Equations: The Language of Change</span></a><a class="article-card" href="chemistry-in-everyday-life.html"><span class="article-dot">●</span><span>Chemistry in Everyday Life: The Science Hiding in Plain Sight</span></a><a class="article-card" href="electrochemistry.html"><span class="article-dot">●</span><span>Electrochemistry: Where Chemistry Meets Electricity</span></a><a class="article-card" href="metals-nonmetals-chemistry.html"><span class="article-dot">●</span><span>Chemistry of Metals and Non-Metals: A Tale of Two Families</span></a><a class="article-card" href="mixtures-and-solutions.html"><span class="article-dot">●</span><span>Mixtures and Solutions: How Substances Combine Without Reacting</span></a><a class="article-card" href="mole-chemical-calculations.html"><span class="article-dot">●</span><span>The Mole and Chemical Calculations: Counting the Uncountable</span></a><a class="article-card" href="organic-chemistry-basics.html"><span class="article-dot">●</span><span>Organic Chemistry Basics: The Chemistry of Carbon</span></a><a class="article-card" href="states-of-matter-changes.html"><span class="article-dot">●</span><span>States of Matter and Changes: Why Substances Transform</span></a><a class="article-card" href="what-is-chemistry.html"><span class="article-dot">●</span><span>What is Chemistry? The Science of Matter and Change</span></a></div></section>
+<div class="article-grid"><a class="article-card" href="number-line-addition-subtraction.html"><span class="article-dot">●</span><span>Addition &amp; Subtraction on the Number Line</span></a><a class="article-card" href="basic-data-statistics.html"><span class="article-dot">●</span><span>Basic Data &amp; Statistics: Mean, Median, and Mode</span></a><a class="article-card" href="bodmas-dmas-rules.html"><span class="article-dot">●</span><span>BODMAS &amp; DMAS Rules: The Correct Order of Operations</span></a><a class="article-card" href="brackets-fractions-decimals-bodmas.html"><span class="article-dot">●</span><span>Brackets, Fractions &amp; Decimals in BODMAS</span></a><a class="article-card" href="divisibility-rules.html"><span class="article-dot">●</span><span>Divisibility Rules: Quick Tests for 2 Through 12</span></a><a class="article-card" href="exponents-and-powers.html"><span class="article-dot">●</span><span>Exponents &amp; Powers: The Laws of Indices</span></a><a class="article-card" href="factors-and-multiples.html"><span class="article-dot">●</span><span>Factors &amp; Multiples: Prime, Composite, and Common</span></a><a class="article-card" href="fraction-fix-it.html"><span class="article-dot">●</span><span>Fraction Fix-It: Strategies for Confident Fraction Sense</span></a><a class="article-card" href="hcf-lcm-word-problems.html"><span class="article-dot">●</span><span>HCF &amp; LCM Word Problems: Real-Life Applications</span></a><a class="article-card" href="hcf-and-lcm.html"><span class="article-dot">●</span><span>HCF &amp; LCM: Highest Common Factor &amp; Lowest Common Multiple</span></a><a class="article-card" href="number-line-multiplication-division.html"><span class="article-dot">●</span><span>Multiplication &amp; Division on the Number Line</span></a><a class="article-card" href="fraction-multiply-divide.html"><span class="article-dot">●</span><span>Multiply &amp; Divide Fractions: Cross, Flip, and Fly</span></a><a class="article-card" href="number-base-systems.html"><span class="article-dot">●</span><span>Number Base Systems: Binary, Base 5, Base 7, Octal &amp; Decimal</span></a><a class="article-card" href="number-lines.html"><span class="article-dot">●</span><span>Number Lines: Placing Whole Numbers, Fractions, and Decimals</span></a><a class="article-card" href="number-systems.html"><span class="article-dot">●</span><span>Number Systems: Natural, Whole, Integer, Rational &amp; Real Numbers</span></a><a class="article-card" href="operations-of-integers.html"><span class="article-dot">●</span><span>Operations of Integers: Addition, Subtraction, Multiplication &amp; Division</span></a><a class="article-card" href="percentages.html"><span class="article-dot">●</span><span>Percentages: Averages, Profit &amp; Loss, Discounts &amp; Interest</span></a><a class="article-card" href="place-value-face-value.html"><span class="article-dot">●</span><span>Place Value &amp; Face Value: International, Indian &amp; Pakistani Systems</span></a><a class="article-card" href="ratio-and-proportion.html"><span class="article-dot">●</span><span>Ratio &amp; Proportion: Complete Guide with All Question Types</span></a><a class="article-card" href="roman-numerals.html"><span class="article-dot">●</span><span>Roman Numerals: Reading and Writing an Ancient Number System</span></a><a class="article-card" href="scientific-notation.html"><span class="article-dot">●</span><span>Scientific Notation: Writing Very Large and Very Small Numbers</span></a><a class="article-card" href="squares-cubes-roots.html"><span class="article-dot">●</span><span>Squares, Square Roots, Cubes &amp; Cube Roots</span></a><a class="article-card" href="times-tables-trainer.html"><span class="article-dot">●</span><span>Times Tables Trainer: Strategies for Fast, Confident Multiplication</span></a><a class="article-card" href="why-do-we-need-mathematics.html"><span class="article-dot">●</span><span>Why Do We Need Mathematics in Daily Life?</span></a></div><a class="article-card" href="practice-test-factors-multiples.html"><span class="article-dot">●</span><span>Practice Test: Factors &amp; Multiples · 100 Marks</span></a><a class="article-card" href="practice-test-fractions.html"><span class="article-dot">●</span><span>Practice Test: Fractions · 100 Marks</span></a><a class="article-card" href="practice-test-number-line-skills.html"><span class="article-dot">●</span><span>Practice Test: Number Line Skills · 100 Marks</span></a><a class="article-card" href="practice-test-number-systems.html"><span class="article-dot">●</span><span>Practice Test: Number Systems · 100 Marks</span></a><a class="article-card" href="practice-test-operations-bodmas.html"><span class="article-dot">●</span><span>Practice Test: Operations &amp; BODMAS · 100 Marks</span></a><a class="article-card" href="practice-test-powers-roots.html"><span class="article-dot">●</span><span>Practice Test: Powers &amp; Roots · 100 Marks</span></a><a class="article-card" href="practice-test-ratio-percentages.html"><span class="article-dot">●</span><span>Practice Test: Ratio &amp; Percentages · 100 Marks</span></a><a class="article-card" href="practice-test-times-tables.html"><span class="article-dot">●</span><span>Practice Test: Times Tables · 100 Marks</span></a><a class="article-card" href="practice-test-why-we-need-mathematics.html"><span class="article-dot">●</span><span>Practice Test: Why Do We Need Mathematics? · 100 Marks</span></a><a class="article-card" href="practice-test-measurement.html"><span class="article-dot">●</span><span>Practice Test: Measurement · 100 Marks</span></a></section>
+<section class="subject-section" id="subject-physics"><div class="section-head"><div><h2>Physics</h2></div></div><div class="article-grid"><a class="article-card" href="electricity-and-magnetism-the-basics.html"><span class="article-dot">●</span><span>Electricity and Magnetism: The Basics</span></a><a class="article-card" href="energy-types-sources-transformations.html"><span class="article-dot">●</span><span>Energy: Types, Sources, and Transformations</span></a><a class="article-card" href="force-newtons-laws-of-motion.html"><span class="article-dot">●</span><span>Force and Newton's Laws of Motion</span></a><a class="article-card" href="gravity-and-space.html"><span class="article-dot">●</span><span>Gravity and Space: Why Things Fall and Planets Orbit</span></a><a class="article-card" href="heat-and-temperature.html"><span class="article-dot">●</span><span>Heat and Temperature: How They Differ</span></a><a class="article-card" href="light-reflection-refraction-color.html"><span class="article-dot">●</span><span>Light: Reflection, Refraction, and Color</span></a><a class="article-card" href="matter-and-its-states.html"><span class="article-dot">●</span><span>Matter and Its States: Solid, Liquid, and Gas</span></a><a class="article-card" href="motion-speed-velocity-distance.html"><span class="article-dot">●</span><span>Motion: Speed, Velocity, and Distance</span></a><a class="article-card" href="pressure-and-buoyancy.html"><span class="article-dot">●</span><span>Pressure and Buoyancy: Why Some Things Float and Others Sink</span></a><a class="article-card" href="sound-how-we-hear-the-world.html"><span class="article-dot">●</span><span>Sound: How We Hear the World</span></a><a class="article-card" href="what-is-physics.html"><span class="article-dot">●</span><span>What is Physics? The Study of How Things Work</span></a><a class="article-card" href="work-power-simple-machines.html"><span class="article-dot">●</span><span>Work, Power, and Simple Machines</span></a></div><a class="article-card" href="practice-test-physics-comprehensive-1.html"><span class="article-dot">●</span><span>Physics Comprehensive Practice Test 1 · 100 Marks</span></a><a class="article-card" href="practice-test-physics-comprehensive-2.html"><span class="article-dot">●</span><span>Physics Comprehensive Practice Test 2 · 100 Marks</span></a><a class="article-card" href="practice-test-physics-comprehensive-3.html"><span class="article-dot">●</span><span>Physics Comprehensive Practice Test 3 · 100 Marks</span></a><a class="article-card" href="practice-test-physics-comprehensive-4.html"><span class="article-dot">●</span><span>Physics Comprehensive Practice Test 4 · 100 Marks</span></a><a class="article-card" href="practice-test-physics-comprehensive-5.html"><span class="article-dot">●</span><span>Physics Comprehensive Practice Test 5 · 100 Marks</span></a><a class="article-card" href="practice-test-physics-comprehensive-6.html"><span class="article-dot">●</span><span>Physics Comprehensive Practice Test 6 · 100 Marks</span></a></section>
+<section class="subject-section" id="subject-chemistry"><div class="section-head"><div><h2>Chemistry</h2></div></div><div class="article-grid"><a class="article-card" href="acids-bases-salts.html"><span class="article-dot">●</span><span>Acids, Bases and Salts: The Chemistry of Sour, Bitter, and Neutral</span></a><a class="article-card" href="atoms-and-periodic-table.html"><span class="article-dot">●</span><span>Atoms and the Periodic Table: The Building Blocks of Everything</span></a><a class="article-card" href="chemical-bonding.html"><span class="article-dot">●</span><span>Chemical Bonding: How Atoms Connect to Form Everything</span></a><a class="article-card" href="chemical-reactions-equations.html"><span class="article-dot">●</span><span>Chemical Reactions and Equations: The Language of Change</span></a><a class="article-card" href="chemistry-in-everyday-life.html"><span class="article-dot">●</span><span>Chemistry in Everyday Life: The Science Hiding in Plain Sight</span></a><a class="article-card" href="electrochemistry.html"><span class="article-dot">●</span><span>Electrochemistry: Where Chemistry Meets Electricity</span></a><a class="article-card" href="metals-nonmetals-chemistry.html"><span class="article-dot">●</span><span>Chemistry of Metals and Non-Metals: A Tale of Two Families</span></a><a class="article-card" href="mixtures-and-solutions.html"><span class="article-dot">●</span><span>Mixtures and Solutions: How Substances Combine Without Reacting</span></a><a class="article-card" href="mole-chemical-calculations.html"><span class="article-dot">●</span><span>The Mole and Chemical Calculations: Counting the Uncountable</span></a><a class="article-card" href="organic-chemistry-basics.html"><span class="article-dot">●</span><span>Organic Chemistry Basics: The Chemistry of Carbon</span></a><a class="article-card" href="states-of-matter-changes.html"><span class="article-dot">●</span><span>States of Matter and Changes: Why Substances Transform</span></a><a class="article-card" href="what-is-chemistry.html"><span class="article-dot">●</span><span>What is Chemistry? The Science of Matter and Change</span></a></div><a class="article-card" href="practice-test-chemistry-comprehensive-1.html"><span class="article-dot">●</span><span>Chemistry Comprehensive Practice Test 1 · 100 Marks</span></a><a class="article-card" href="practice-test-chemistry-comprehensive-2.html"><span class="article-dot">●</span><span>Chemistry Comprehensive Practice Test 2 · 100 Marks</span></a><a class="article-card" href="practice-test-chemistry-comprehensive-3.html"><span class="article-dot">●</span><span>Chemistry Comprehensive Practice Test 3 · 100 Marks</span></a><a class="article-card" href="practice-test-chemistry-comprehensive-4.html"><span class="article-dot">●</span><span>Chemistry Comprehensive Practice Test 4 · 100 Marks</span></a><a class="article-card" href="practice-test-chemistry-comprehensive-5.html"><span class="article-dot">●</span><span>Chemistry Comprehensive Practice Test 5 · 100 Marks</span></a><a class="article-card" href="practice-test-chemistry-comprehensive-6.html"><span class="article-dot">●</span><span>Chemistry Comprehensive Practice Test 6 · 100 Marks</span></a></section>
 <section class="subject-section" id="subject-biology">
 <div class="section-head"><div><h2>Biology</h2></div></div>
 <div class="article-grid"><a class="article-card" href="cells-the-building-blocks-of-life.html"><span class="article-dot">●</span><span>Cells: The Building Blocks of Life</span></a><a class="article-card" href="ecosystems-and-biodiversity.html"><span class="article-dot">●</span><span>Ecosystems &amp; Biodiversity</span></a><a class="article-card" href="human-immune-system.html"><span class="article-dot">●</span><span>The Human Body's Immune System</span></a><a class="article-card" href="vaccines-and-immunization.html"><span class="article-dot">●</span><span>Understanding Vaccines and Immunization</span></a><a class="article-card" href="what-is-biology.html"><span class="article-dot">●</span><span>What is Biology?</span></a><a class="article-card" href="what-is-the-human-cell.html"><span class="article-dot">●</span><span>What is the Human Cell? A Simple Guide</span></a></div></section>
@@ -175,26 +599,11 @@ section,header,footer,main,nav,.wrap,.container{max-width:100%;box-sizing:border
 <div class="section-head"><div><h2>Nutrition</h2></div></div>
 <div class="article-grid"><a class="article-card" href="effects-of-substance-abuse.html"><span class="article-dot">●</span><span>Effects of Substance Abuse</span></a><a class="article-card" href="first-aid-basic-safety.html"><span class="article-dot">●</span><span>First Aid and Basic Safety</span></a><a class="article-card" href="food-groups-healthy-eating.html"><span class="article-dot">●</span><span>Food Groups and Healthy Eating Habits</span></a><a class="article-card" href="personal-hygiene-disease-prevention.html"><span class="article-dot">●</span><span>Personal Hygiene and Disease Prevention</span></a><a class="article-card" href="physical-fitness-exercise-basics.html"><span class="article-dot">●</span><span>Physical Fitness and Exercise Basics</span></a><a class="article-card" href="importance-of-sleep-and-rest.html"><span class="article-dot">●</span><span>The Importance of Sleep and Rest</span></a><a class="article-card" href="the-water-cycle-and-earths-water-systems.html"><span class="article-dot">●</span><span>The Water Cycle &amp; Earth's Water Systems</span></a><a class="article-card" href="understanding-mental-health-emotions.html"><span class="article-dot">●</span><span>Understanding Mental Health and Emotions</span></a><a class="article-card" href="what-is-a-balanced-diet.html"><span class="article-dot">●</span><span>What is a Balanced Diet and Why Does It Matter?</span></a><a class="article-card" href="what-is-health.html"><span class="article-dot">●</span><span>What is Health? Physical, Mental &amp; Social Wellbeing</span></a></div></section>
 </div>
-<section id="about" class="learn-way-section"><div class="wrap"><div class="eyebrow">One library · Many routes</div><h2>Learn Your Way</h2><p>Explore connected learning pathways, build understanding through concepts and methodology, practise what you learn, and assess your progress with confidence.</p></div></section>
-<section id="resources" class="info-section"><div class="wrap info-narrow"><div class="eyebrow">Study Materials</div><h2>Free Resources &amp; Downloads</h2><p>EDUSAMBAM is building a growing collection of supporting study materials, practice resources and learning aids to complement the main article libraries.</p><div class="info-card"><h3>More resources are coming</h3><p>For now, explore the article libraries, interactive activities and ASSESSMENT ARENA. New supporting resources will be added carefully as the platform grows.</p></div></div></section>
-<section id="about-edusambam" class="info-section info-section-alt"><div class="wrap info-narrow"><div class="eyebrow">About EDUSAMBAM</div><h2>What EDUSAMBAM Is</h2><p>EDUSAMBAM is a global educational resource and assessment platform built for learners who want to understand, practise and assess what they learn. It brings connected subject libraries, interactive activities, quizzes and structured assessments into one learning environment.</p><p>It is designed for self-paced learners, while also giving parents useful learning support and teachers clear educational resources they can use and recommend.</p></div></section>
-<section id="mission" class="info-section"><div class="wrap info-narrow"><div class="eyebrow">Our Mission</div><h2>Why EDUSAMBAM Exists</h2><p class="mission-highlight">EDUSAMBAM teaches concepts and methodology, not syllabus.</p><p>Our purpose is to make meaningful learning easier to understand, practise and assess — so learners can build real understanding instead of simply memorising content for a syllabus or examination.</p><p>For self-paced learners, EDUSAMBAM provides connected resources that support independent learning at their own pace. For parents, it provides clear, trustworthy learning support that can help them guide and encourage their children. For teachers, it provides explanations, interactive activities, quizzes and assessment resources that can strengthen classroom and independent learning.</p><p>EDUSAMBAM brings these routes together in one global learning platform so that knowledge can become understanding, practice can become confidence, and assessment can become a tool for improvement.</p></div></section>
-<section id="team" class="info-section info-section-alt"><div class="wrap info-narrow"><div class="eyebrow">The Team</div><h2>How EDUSAMBAM Is Built</h2><p class="mission-highlight">Human educational direction, supported by AI-assisted development.</p><p>The platform is organised around the SAMBAM team gateways and a connected set of subject libraries. Content and features are developed with the aim of keeping explanations clear, useful, engaging and appropriate for a global learning audience.</p><p>The goal is simple: make knowledge easier to understand, practice easier to access, and assessment more meaningful.</p></div></section>
-<footer>
-<div class="footer-top">
-<div class="footer-brand">
-<h3>EDUSAMBAM</h3>
-<p>A global educational resource and assessment platform helping learners understand concepts, practise meaningfully, assess progress and keep improving.</p>
-</div>
-<div class="footer-col"><h4>Learning</h4><ul>
-<li><a href="#subject-english">English Language</a></li><li><a href="#subject-gk">General Knowledge</a></li><li><a href="#subject-computer">Computer Fundamentals</a></li><li><a href="#subject-ai">Artificial Intelligence</a></li><li><a href="#subject-maths">Mathematics</a></li><li><a href="#subject-physics">Physics</a></li><li><a href="#subject-chemistry">Chemistry</a></li><li><a href="#subject-biology">Biology</a></li><li><a href="#subject-optometry">Optometry</a></li><li><a href="#subject-nutrition">Nutrition</a></li></ul></div>
-<div class="footer-col"><h4>Practice &amp; Assessment</h4><ul>
-<li><a href="#interactive-activities">Interactive Activities</a></li><li><a href="assessment-arena.html">ASSESSMENT ARENA</a></li><li><a href="assessment-arena.html">What Is Assessment?</a></li><li><a href="#about">Learn Your Way</a></li><li><a href="#resources">Free Resources &amp; Downloads</a></li></ul></div>
-<div class="footer-col"><h4>About EDUSAMBAM</h4><ul>
-<li><a href="#about-edusambam">What EDUSAMBAM Is</a></li><li><a href="#mission">Our Mission</a></li><li><a href="#team">The Team</a></li><li><a href="mailto:info.edusambam@gmail.com">Contact Us</a></li><li><a href="mailto:feedback.edusambam@gmail.com?subject=EDUSAMBAM%20Feedback">Give Feedback</a></li><li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li></ul></div>
-</div>
-<div class="footer-bottom"><p>© 2026 EDUSAMBAM · Global learning, knowledge and wellbeing.</p><ul class="footer-bottom-links"><li><a href="#top">Back to Top</a></li><li><a href="#mission">Mission</a></li><li><a href="#team">Team</a></li><li><a href="#resources">Resources</a></li></ul></div>
-</footer>
+<section class="learn-way-section" id="about"><div class="wrap"><div class="eyebrow">One library · Many routes</div><h2>Learn Your Way</h2><p>Explore connected learning pathways, build understanding through concepts and methodology, practise what you learn, and assess your progress with confidence.</p></div></section>
+<section class="info-section" id="resources"><div class="wrap info-narrow"><div class="eyebrow">Study Materials</div><h2>Free Resources &amp; Downloads</h2><p>EDUSAMBAM is building a growing collection of supporting study materials, practice resources and learning aids to complement the main article libraries.</p><div class="info-card"><h3>More resources are coming</h3><p>For now, explore the article libraries, interactive activities and ASSESSMENT ARENA. New supporting resources will be added carefully as the platform grows.</p></div></div></section>
+<section class="info-section info-section-alt" id="about-edusambam"><div class="wrap info-narrow"><div class="eyebrow">About EDUSAMBAM</div><h2>What EDUSAMBAM Is</h2><p>EDUSAMBAM is a global educational resource and assessment platform built for learners who want to understand, practise and assess what they learn. It brings connected subject libraries, interactive activities, quizzes and structured assessments into one learning environment.</p><p>It is designed for self-paced learners, while also giving parents useful learning support and teachers clear educational resources they can use and recommend.</p></div></section>
+<section class="info-section" id="mission"><div class="wrap info-narrow"><div class="eyebrow">Our Mission</div><h2>Why EDUSAMBAM Exists</h2><p class="mission-highlight">EDUSAMBAM teaches concepts and methodology, not syllabus.</p><p>Our purpose is to make meaningful learning easier to understand, practise and assess — so learners can build real understanding instead of simply memorising content for a syllabus or examination.</p><p>For self-paced learners, EDUSAMBAM provides connected resources that support independent learning at their own pace. For parents, it provides clear, trustworthy learning support that can help them guide and encourage their children. For teachers, it provides explanations, interactive activities, quizzes and assessment resources that can strengthen classroom and independent learning.</p><p>EDUSAMBAM brings these routes together in one global learning platform so that knowledge can become understanding, practice can become confidence, and assessment can become a tool for improvement.</p></div></section>
+<section class="info-section info-section-alt" id="team"><div class="wrap info-narrow"><div class="eyebrow">The Team</div><h2>How EDUSAMBAM Is Built</h2><p class="mission-highlight">Human educational direction, supported by AI-assisted development.</p><p>The platform is organised around the SAMBAM team gateways and a connected set of subject libraries. Content and features are developed with the aim of keeping explanations clear, useful, engaging and appropriate for a global learning audience.</p><p>The goal is simple: make knowledge easier to understand, practice easier to access, and assessment more meaningful.</p></div></section>
 <div aria-label="Global article search" aria-modal="true" class="search-panel" id="searchPanel" role="dialog">
 <div class="search-box"><div class="search-row"><input autofocus="" id="globalSearch" oninput="doSearch(this.value)" placeholder="Search all learning resources…"/><button class="close" onclick="closeSearch()">Close</button></div><div id="results"></div></div></div>
 <script>
@@ -207,4 +616,99 @@ document.getElementById('searchPanel').addEventListener('click',e=>{if(e.target.
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeSearch()});
 function doSearch(term=''){const q=term.trim().toLowerCase();const r=document.getElementById('results');if(!q){r.innerHTML='<p style="color:#607086">Type a word or topic to search all subjects.</p>';return}const found=DATA.filter(x=>(x.title+' '+x.subject+' '+x.file).toLowerCase().includes(q));r.innerHTML=found.length?found.map(x=>`<a class="result" href="${x.file}"><strong>${x.title}</strong><small>${x.subject} · Article + scored quiz →</small></a>`).join(''):'<p style="color:#607086">No matching article found.</p>'}
 </script>
-</body></html>
+<script id="edusambam-unified-nav-js">
+(function(){
+  const pages=[{"title":"Acids, Bases and Salts: The Chemistry of Sour, Bitter, and Neutral — EDUSAMBAM","url":"acids-bases-salts.html"},{"title":"AI Agents: When AI Takes Action, Not Just Talks — EDUSAMBAM","url":"ai-agents.html"},{"title":"AI Ethics: Bias, Privacy and Misinformation Explained — EDUSAMBAM","url":"ai-ethics.html"},{"title":"The Anatomy of the Eye in Depth — EDUSAMBAM","url":"anatomy-of-the-eye-in-depth.html"},{"title":"Animals &amp; Ecosystems: Wildlife GK — EDUSAMBAM","url":"animals-and-ecosystems.html"},{"title":"EDUSAMBAM Article Reader","url":"article-viewer.html"},{"title":"ASSESSMENT ARENA — EDUSAMBAM","url":"assessment-arena.html"},{"title":"Atoms and the Periodic Table: The Building Blocks of Everything — EDUSAMBAM","url":"atoms-and-periodic-table.html"},{"title":"Author's Purpose, Tone &amp; Point of View: The Complete Guide — EDUSAMBAM","url":"authors-purpose-tone-pov.html"},{"title":"Basic Data &amp; Statistics: Mean, Median, and Mode — EDUSAMBAM","url":"basic-data-statistics.html"},{"title":"BODMAS &amp; DMAS Rules: The Correct Order of Operations — EDUSAMBAM","url":"bodmas-dmas-rules.html"},{"title":"Brackets, Fractions &amp; Decimals in BODMAS — EDUSAMBAM","url":"brackets-fractions-decimals-bodmas.html"},{"title":"Cells: The Building Blocks of Life — EDUSAMBAM","url":"cells-the-building-blocks-of-life.html"},{"title":"Character Development: Writing People Readers Care About — EDUSAMBAM","url":"character-development.html"},{"title":"Chemical Bonding: How Atoms Connect to Form Everything — EDUSAMBAM","url":"chemical-bonding.html"},{"title":"Chemical Reactions and Equations: The Language of Change — EDUSAMBAM","url":"chemical-reactions-equations.html"},{"title":"Chemistry in Everyday Life: The Science Hiding in Plain Sight — EDUSAMBAM","url":"chemistry-in-everyday-life.html"},{"title":"Cloud Computing: What \"The Cloud\" Actually Is — EDUSAMBAM","url":"cloud-computing.html"},{"title":"Colour Vision and Colour Blindness Explained — EDUSAMBAM","url":"colour-vision-and-colour-blindness-explained.html"},{"title":"Common Errors in English: A Complete Guide — EDUSAMBAM","url":"common-errors.html"},{"title":"Common Pronunciation Mistakes — EDUSAMBAM","url":"common-pronunciation-mistakes.html"},{"title":"Complaint &amp; Request Letters — EDUSAMBAM","url":"complaint-request-letters.html"},{"title":"Computer Vision: How Machines Learn to See — EDUSAMBAM","url":"computer-vision.html"},{"title":"Context Clues: The Complete Guide — EDUSAMBAM","url":"context-clues.html"},{"title":"Continents &amp; Oceans: The Basic Map of the World — EDUSAMBAM","url":"continents-and-oceans.html"},{"title":"Countries &amp; Capitals: Major Nations Around the World — EDUSAMBAM","url":"countries-and-capitals.html"},{"title":"Cybersecurity Basics: Threats, Defences and Good Digital Habits — EDUSAMBAM","url":"cybersecurity-basics.html"},{"title":"Designing a Fair Experiment: Variables, Repeat Trials &amp; Reliability — EDUSAMBAM","url":"designing-a-fair-experiment.html"},{"title":"Dialogue &amp; Voice: Writing Conversation That Sounds Real — EDUSAMBAM","url":"dialogue-and-voice.html"},{"title":"Digital Footprint &amp; Online Privacy: What Gets Tracked, and Why It Matters — EDUSAMBAM","url":"digital-footprint-privacy.html"},{"title":"Divisibility Rules: Quick Tests for 2 Through 12 — EDUSAMBAM","url":"divisibility-rules.html"},{"title":"Earth's Structure: Layers, Plates &amp; Earthquakes — EDUSAMBAM","url":"earths-structure-layers-plates-and-earthquakes.html"},{"title":"Ecosystems &amp; Biodiversity — EDUSAMBAM","url":"ecosystems-and-biodiversity.html"},{"title":"Effects of Substance Abuse — EDUSAMBAM","url":"effects-of-substance-abuse.html"},{"title":"Electricity and Magnetism: The Basics — EDUSAMBAM","url":"electricity-and-magnetism-the-basics.html"},{"title":"Electrochemistry: Where Chemistry Meets Electricity — EDUSAMBAM","url":"electrochemistry.html"},{"title":"Energy: Types, Sources, and Transformations — EDUSAMBAM","url":"energy-types-sources-transformations.html"},{"title":"English as an International Language — EDUSAMBAM","url":"english-international-language.html"},{"title":"Essay Structure &amp; the Five-Paragraph Essay: The Complete Guide — EDUSAMBAM","url":"essay-structure.html"},{"title":"Evidence, Citations &amp; Avoiding Plagiarism: The Complete Guide — EDUSAMBAM","url":"evidence-citations-plagiarism.html"},{"title":"Exponents &amp; Powers: The Laws of Indices — EDUSAMBAM","url":"exponents-and-powers.html"},{"title":"Factors &amp; Multiples: Prime, Composite, and Common — EDUSAMBAM","url":"factors-and-multiples.html"},{"title":"Famous Personalities: Leaders, Scientists &amp; Nobel Laureates — EDUSAMBAM","url":"famous-personalities.html"},{"title":"Famous World Landmarks &amp; Wonders — EDUSAMBAM","url":"famous-world-landmarks-wonders.html"},{"title":"First Aid and Basic Safety — EDUSAMBAM","url":"first-aid-basic-safety.html"},{"title":"Flags of the World: Reading the Symbols — EDUSAMBAM","url":"flags-of-the-world.html"},{"title":"Fluency Building Techniques — EDUSAMBAM","url":"fluency-building-techniques.html"},{"title":"Food Groups and Healthy Eating Habits — EDUSAMBAM","url":"food-groups-healthy-eating.html"},{"title":"Force and Newton's Laws of Motion — EDUSAMBAM","url":"force-newtons-laws-of-motion.html"},{"title":"Formal vs. Informal English: The Complete Guide — EDUSAMBAM","url":"formal-informal-english.html"},{"title":"Formal Letter Writing — EDUSAMBAM","url":"formal-letter-writing.html"},{"title":"Fraction Fix-It: Strategies for Confident Fraction Sense — EDUSAMBAM","url":"fraction-fix-it.html"},{"title":"Multiply &amp; Divide Fractions: Cross, Flip, and Fly — EDUSAMBAM","url":"fraction-multiply-divide.html"},{"title":"Generative AI: Images, Text and Where the Line Is — EDUSAMBAM","url":"generative-ai.html"},{"title":"The Grammar Trap: 10 Mistakes That Make Smart People Look Careless — EDUSAMBAM","url":"grammar-article.html"},{"title":"Grammar Fix-It — EDUSAMBAM","url":"grammar-fix-it.html"},{"title":"Gravity and Space: Why Things Fall and Planets Orbit — EDUSAMBAM","url":"gravity-and-space.html"},{"title":"Great Inventions &amp; Inventors — EDUSAMBAM","url":"great-inventions-and-inventors.html"},{"title":"HCF &amp; LCM: Highest Common Factor &amp; Lowest Common Multiple — EDUSAMBAM","url":"hcf-and-lcm.html"},{"title":"HCF &amp; LCM Word Problems: Real-Life Applications — EDUSAMBAM","url":"hcf-lcm-word-problems.html"},{"title":"Heat and Temperature: How They Differ — EDUSAMBAM","url":"heat-and-temperature.html"},{"title":"The History of Computing: Babbage to Smartphones — EDUSAMBAM","url":"history-of-computing.html"},{"title":"How Computers Work: Hardware, Software and Binary Code — EDUSAMBAM","url":"how-computers-work.html"},{"title":"How to Write a Perfect Paragraph — EDUSAMBAM","url":"how-to-write-a-perfect-paragraph.html"},{"title":"How We See: Light, Focus, and the Brain's Role in Vision — EDUSAMBAM","url":"how-we-see-light-focus-and-the-brain.html"},{"title":"The Human Body's Immune System — EDUSAMBAM","url":"human-immune-system.html"},{"title":"Idiom Matcher — EDUSAMBAM","url":"idiom-matcher.html"},{"title":"Idioms &amp; Phrases: The Complete Guide — EDUSAMBAM","url":"idioms-phrases.html"},{"title":"The Importance of the English Language — EDUSAMBAM","url":"importance-of-english.html"},{"title":"The Importance of Sleep and Rest — EDUSAMBAM","url":"importance-of-sleep-and-rest.html"},{"title":"EDUSAMBAM — Global Learning, Knowledge &amp; Wellbeing","url":"index.html"},{"title":"India: National Symbols, Founders &amp; Key Facts — EDUSAMBAM","url":"india-national-symbols.html"},{"title":"Informal Letter Writing — EDUSAMBAM","url":"informal-letter-writing.html"},{"title":"Intonation in Conversation — EDUSAMBAM","url":"intonation-in-conversation.html"},{"title":"Job Applications &amp; Cover Letters — EDUSAMBAM","url":"job-applications-cover-letters.html"},{"title":"Lab Safety &amp; Scientific Equipment: The Basics Every Scientist Needs — EDUSAMBAM","url":"lab-safety-scientific-equipment.html"},{"title":"Language and Its Need — EDUSAMBAM","url":"language-and-its-need.html"},{"title":"EDUSAMBAM Learning Hub — Six SAMBAM Pathways","url":"learning-hub.html"},{"title":"Light: Reflection, Refraction, and Color — EDUSAMBAM","url":"light-reflection-refraction-color.html"},{"title":"Machine Learning Explained: How Computers Learn From Data — EDUSAMBAM","url":"machine-learning-explained.html"},{"title":"Main Idea &amp; Supporting Details: The Complete Guide — EDUSAMBAM","url":"main-idea-supporting-details.html"},{"title":"Making Inferences &amp; Drawing Conclusions: The Complete Guide — EDUSAMBAM","url":"making-inferences.html"},{"title":"Matter and Its States: Solid, Liquid, and Gas — EDUSAMBAM","url":"matter-and-its-states.html"},{"title":"Chemistry of Metals and Non-Metals: A Tale of Two Families — EDUSAMBAM","url":"metals-nonmetals-chemistry.html"},{"title":"Mixtures and Solutions: How Substances Combine Without Reacting — EDUSAMBAM","url":"mixtures-and-solutions.html"},{"title":"Models &amp; Simulations in Science — EDUSAMBAM","url":"models-and-simulations.html"},{"title":"The Mole and Chemical Calculations: Counting the Uncountable — EDUSAMBAM","url":"mole-chemical-calculations.html"},{"title":"Motion: Speed, Velocity, and Distance — EDUSAMBAM","url":"motion-speed-velocity-distance.html"},{"title":"Natural Language Processing: How Computers Understand Text — EDUSAMBAM","url":"natural-language-processing.html"},{"title":"Number Base Systems: Binary, Base 5, Base 7, Octal &amp; Decimal — EDUSAMBAM","url":"number-base-systems.html"},{"title":"Addition &amp; Subtraction on the Number Line — EDUSAMBAM","url":"number-line-addition-subtraction.html"},{"title":"Multiplication &amp; Division on the Number Line — EDUSAMBAM","url":"number-line-multiplication-division.html"},{"title":"Number Lines: Placing Whole Numbers, Fractions, and Decimals — EDUSAMBAM","url":"number-lines.html"},{"title":"Number Systems: Natural, Whole, Integer, Rational &amp; Real Numbers — EDUSAMBAM","url":"number-systems.html"},{"title":"Observation vs Inference: Reading Data Like a Scientist — EDUSAMBAM","url":"observation-vs-inference.html"},{"title":"Operating Systems: The Software Behind Every Device — EDUSAMBAM","url":"operating-systems.html"},{"title":"Operations of Integers: Addition, Subtraction, Multiplication &amp; Division — EDUSAMBAM","url":"operations-of-integers.html"},{"title":"Organic Chemistry Basics: The Chemistry of Carbon — EDUSAMBAM","url":"organic-chemistry-basics.html"},{"title":"Pakistan: National Symbols, Founders &amp; Key Facts — EDUSAMBAM","url":"pakistan-national-symbols.html"},{"title":"Parts of Speech: The Building Blocks of English — EDUSAMBAM","url":"parts-of-speech.html"},{"title":"Percentages: Averages, Profit &amp; Loss, Discounts &amp; Interest — EDUSAMBAM","url":"percentages.html"},{"title":"Personal Hygiene and Disease Prevention — EDUSAMBAM","url":"personal-hygiene-disease-prevention.html"},{"title":"Physical Fitness and Exercise Basics — EDUSAMBAM","url":"physical-fitness-exercise-basics.html"},{"title":"Place Value &amp; Face Value: International, Indian &amp; Pakistani Systems — EDUSAMBAM","url":"place-value-face-value.html"},{"title":"Poetry: The Complete Guide — EDUSAMBAM","url":"poetry.html"},{"title":"Practice Test: Academic &amp; Essay Writing — EDUSAMBAM","url":"practice-test-academic-essay-writing.html"},{"title":"Practice Test: AI Agents &amp; Natural Language Processing — EDUSAMBAM","url":"practice-test-ai-agents-and-nlp.html"},{"title":"Practice Test: What Is AI &amp; Machine Learning? — EDUSAMBAM","url":"practice-test-ai-and-machine-learning.html"},{"title":"Chemistry Comprehensive Practice Test 1 — EDUSAMBAM","url":"practice-test-chemistry-comprehensive-1.html"},{"title":"Chemistry Comprehensive Practice Test 2 — EDUSAMBAM","url":"practice-test-chemistry-comprehensive-2.html"},{"title":"Chemistry Comprehensive Practice Test 3 — EDUSAMBAM","url":"practice-test-chemistry-comprehensive-3.html"},{"title":"Chemistry Comprehensive Practice Test 4 — EDUSAMBAM","url":"practice-test-chemistry-comprehensive-4.html"},{"title":"Chemistry Comprehensive Practice Test 5 — EDUSAMBAM","url":"practice-test-chemistry-comprehensive-5.html"},{"title":"Chemistry Comprehensive Practice Test 6 — EDUSAMBAM","url":"practice-test-chemistry-comprehensive-6.html"},{"title":"Practice Test: Cloud Computing — EDUSAMBAM","url":"practice-test-cloud-computing.html"},{"title":"Practice Test: Computer Vision &amp; Recommendation Systems — EDUSAMBAM","url":"practice-test-computer-vision-and-recommendation-systems.html"},{"title":"Practice Test: Countries, Capitals &amp; Flags of the World | EDUSAMBAM","url":"practice-test-countries-capitals-flags.html"},{"title":"Practice Test: Creative Writing — Part 2 — EDUSAMBAM","url":"practice-test-creative-writing-part-1.html"},{"title":"Practice Test: Creative Writing — Part 1 — EDUSAMBAM","url":"practice-test-creative-writing-part.html"},{"title":"Practice Test: Digital Footprint &amp; Online Privacy — EDUSAMBAM","url":"practice-test-digital-footprint-privacy.html"},{"title":"Practice Test: Factors &amp; Multiples — EDUSAMBAM","url":"practice-test-factors-multiples.html"},{"title":"Practice Test: Foundational Concepts of English — EDUSAMBAM","url":"practice-test-foundational-concepts-english.html"},{"title":"Practice Test: Fractions — EDUSAMBAM","url":"practice-test-fractions.html"},{"title":"Practice Test: Generative AI &amp; Prompt Engineering — EDUSAMBAM","url":"practice-test-generative-ai-and-prompt-engineering.html"},{"title":"Practice Test: Grammar Basics — EDUSAMBAM","url":"practice-test-grammar-basics.html"},{"title":"Practice Test: The History of Computing — EDUSAMBAM","url":"practice-test-history-of-computing.html"},{"title":"Practice Test: How the Internet Works — EDUSAMBAM","url":"practice-test-how-the-internet-works.html"},{"title":"Practice Test: Literary Forms — EDUSAMBAM","url":"practice-test-literary-forms.html"},{"title":"Practice Test: What Is an LLM &amp; AI Ethics? — EDUSAMBAM","url":"practice-test-llm-and-ai-ethics.html"},{"title":"Practice Test: Measurement — EDUSAMBAM","url":"practice-test-measurement.html"},{"title":"Practice Test: Number Line Skills — EDUSAMBAM","url":"practice-test-number-line-skills.html"},{"title":"Practice Test: Number Systems — EDUSAMBAM","url":"practice-test-number-systems.html"},{"title":"Practice Test: Operations &amp; BODMAS — EDUSAMBAM","url":"practice-test-operations-bodmas.html"},{"title":"Practice Test: Parts of a Computer — EDUSAMBAM","url":"practice-test-parts-of-a-computer.html"},{"title":"Physics Comprehensive Practice Test 1 — EDUSAMBAM","url":"practice-test-physics-comprehensive-1.html"},{"title":"Physics Comprehensive Practice Test 2 — EDUSAMBAM","url":"practice-test-physics-comprehensive-2.html"},{"title":"Physics Comprehensive Practice Test 3 — EDUSAMBAM","url":"practice-test-physics-comprehensive-3.html"},{"title":"Physics Comprehensive Practice Test 4 — EDUSAMBAM","url":"practice-test-physics-comprehensive-4.html"},{"title":"Physics Comprehensive Practice Test 5 — EDUSAMBAM","url":"practice-test-physics-comprehensive-5.html"},{"title":"Physics Comprehensive Practice Test 6 — EDUSAMBAM","url":"practice-test-physics-comprehensive-6.html"},{"title":"Practice Test: Powers &amp; Roots — EDUSAMBAM","url":"practice-test-powers-roots.html"},{"title":"Practice Test: Practical Writing — EDUSAMBAM","url":"practice-test-practical-writing.html"},{"title":"Practice Test: Ratio &amp; Percentages — EDUSAMBAM","url":"practice-test-ratio-percentages.html"},{"title":"Practice Test: Reading Comprehension — EDUSAMBAM","url":"practice-test-reading-comprehension.html"},{"title":"Practice Test: Search Engines &amp; Web Browsers — EDUSAMBAM","url":"practice-test-search-engines-browsers.html"},{"title":"Practice Test: The Seven Wonders of the Modern World | EDUSAMBAM","url":"practice-test-seven-wonders-of-the-world.html"},{"title":"Practice Test: Software, Apps &amp; Operating Systems — EDUSAMBAM","url":"practice-test-software-apps-operating-systems.html"},{"title":"Practice Test: Speaking &amp; Pronunciation — EDUSAMBAM","url":"practice-test-speaking-pronunciation.html"},{"title":"Practice Test: Staying Safe Online — EDUSAMBAM","url":"practice-test-staying-safe-online.html"},{"title":"Practice Test: Times Tables — EDUSAMBAM","url":"practice-test-times-tables.html"},{"title":"Practice Test: Vocabulary Building — EDUSAMBAM","url":"practice-test-vocabulary-building.html"},{"title":"Practice Test: What Is an Algorithm? — EDUSAMBAM","url":"practice-test-what-is-an-algorithm.html"},{"title":"Practice Test: What Is Coding? — EDUSAMBAM","url":"practice-test-what-is-coding.html"},{"title":"Practice Test: Why Do We Need Mathematics? — EDUSAMBAM","url":"practice-test-why-we-need-mathematics.html"},{"title":"Practice Test: World Landmarks &amp; Continents and Oceans | EDUSAMBAM","url":"practice-test-world-landmarks-continents-oceans.html"},{"title":"Prefixes, Suffixes &amp; Root Words: The Complete Guide — EDUSAMBAM","url":"prefixes-suffixes-root-words.html"},{"title":"Pressure and Buoyancy: Why Some Things Float and Others Sink — EDUSAMBAM","url":"pressure-and-buoyancy.html"},{"title":"Professional Email Etiquette — EDUSAMBAM","url":"professional-email-etiquette.html"},{"title":"Prompt Engineering: Getting Better Results From AI Tools — EDUSAMBAM","url":"prompt-engineering.html"},{"title":"Prose: The Complete Guide — EDUSAMBAM","url":"prose.html"},{"title":"Punctuation Practice — EDUSAMBAM","url":"punctuation-practice.html"},{"title":"Punctuation Rules: The Complete Guide — EDUSAMBAM","url":"punctuation-rules.html"},{"title":"Ratio &amp; Proportion: Complete Guide with All Question Types — EDUSAMBAM","url":"ratio-and-proportion.html"},{"title":"Recommendation Systems: How Netflix and Spotify \"Know\" What You Like — EDUSAMBAM","url":"recommendation-systems.html"},{"title":"The Role of an Optometrist in Vision Health and Treatment — EDUSAMBAM","url":"role-of-an-optometrist-in-vision-health-and-treatment.html"},{"title":"Roman Numerals: Reading and Writing an Ancient Number System — EDUSAMBAM","url":"roman-numerals.html"},{"title":"Science vs Pseudoscience: How to Tell the Difference — EDUSAMBAM","url":"science-vs-pseudoscience.html"},{"title":"Scientific Measurement &amp; SI Units: The Language of Data — EDUSAMBAM","url":"scientific-measurement-si-units.html"},{"title":"Scientific Notation: Writing Very Large and Very Small Numbers — EDUSAMBAM","url":"scientific-notation.html"},{"title":"The Scientific Revolution: How Modern Science Began — EDUSAMBAM","url":"scientific-revolution.html"},{"title":"Search Engines &amp; Web Browsers: How the Internet Finds Things — EDUSAMBAM","url":"search-engines-browsers.html"},{"title":"Editing Your Own Work: A Step-by-Step Process — EDUSAMBAM","url":"self-editing-process.html"},{"title":"Sentence Scramble — EDUSAMBAM","url":"sentence-scramble.html"},{"title":"Sentence Structure: From Basic to Advanced — EDUSAMBAM","url":"sentence-structure.html"},{"title":"The Seven Wonders of the Modern World — EDUSAMBAM","url":"seven-wonders-of-the-world.html"},{"title":"Show, Don't Tell: The Principle of Vivid Writing — EDUSAMBAM","url":"show-dont-tell.html"},{"title":"Software, Apps &amp; Operating Systems — EDUSAMBAM","url":"software-apps-operating-systemsoverlaps.html"},{"title":"Sound: How We Hear the World — EDUSAMBAM","url":"sound-how-we-hear-the-world.html"},{"title":"Spoken English &amp; Pronunciation: Mistakes, Stress and Fluency — EDUSAMBAM","url":"spoken-english-pronunciation.html"},{"title":"Sports of the World: Rules, Terms &amp; Records — EDUSAMBAM","url":"sports-of-the-world.html"},{"title":"Squares, Square Roots, Cubes &amp; Cube Roots — EDUSAMBAM","url":"squares-cubes-roots.html"},{"title":"States of Matter and Changes: Why Substances Transform — EDUSAMBAM","url":"states-of-matter-changes.html"},{"title":"Story Structure: Beginning, Middle and End — EDUSAMBAM","url":"story-structure.html"},{"title":"Synonyms &amp; Antonyms: The Complete Guide — EDUSAMBAM","url":"synonyms-antonyms.html"},{"title":"Tenses &amp; Verb Forms: The Complete Guide — EDUSAMBAM","url":"tenses-verb-forms.html"},{"title":"Text Structure &amp; Organization: The Complete Guide — EDUSAMBAM","url":"text-structure-organization.html"},{"title":"The Solar System: Planets, Moons &amp; the Sun — EDUSAMBAM","url":"the-solar-system-planets-moons-and-the-sun.html"},{"title":"The Water Cycle &amp; Earth's Water Systems — EDUSAMBAM","url":"the-water-cycle-and-earths-water-systems.html"},{"title":"Thesis Statements: The Complete Guide — EDUSAMBAM","url":"thesis-statements.html"},{"title":"Times Tables Trainer: Strategies for Fast, Confident Multiplication — EDUSAMBAM","url":"times-tables-trainer.html"},{"title":"Transitions &amp; Cohesion: The Complete Guide — EDUSAMBAM","url":"transitions-cohesion.html"},{"title":"Types of Essays: The Complete Guide — EDUSAMBAM","url":"types-of-essays.html"},{"title":"Understanding Mental Health and Emotions — EDUSAMBAM","url":"understanding-mental-health-emotions.html"},{"title":"Units of Measurement: Length, Mass, Capacity, Time &amp; Area — EDUSAMBAM","url":"units-of-measurement.html"},{"title":"Understanding Vaccines and Immunization — EDUSAMBAM","url":"vaccines-and-immunization.html"},{"title":"Vision Science and Optometry: An Introduction — EDUSAMBAM","url":"vision-science-and-optometry-an-introduction.html"},{"title":"Vocabulary Flashcards — EDUSAMBAM","url":"vocabulary-flashcards.html"},{"title":"Weather &amp; Climate: How the Atmosphere Works — EDUSAMBAM","url":"weather-and-climate-how-the-atmosphere-works.html"},{"title":"What is a Balanced Diet and Why Does It Matter? — EDUSAMBAM","url":"what-is-a-balanced-diet.html"},{"title":"What Is an Algorithm? Thinking Like a Computer — EDUSAMBAM","url":"what-is-an-algorithm.html"},{"title":"What Is a Large Language Model? How Chatbots Actually Work — EDUSAMBAM","url":"what-is-an-llm.html"},{"title":"What is Artificial Intelligence and How Does It Work? — EDUSAMBAM","url":"what-is-artificial-intelligence.html"},{"title":"What is Biology? — EDUSAMBAM","url":"what-is-biology.html"},{"title":"What is Chemistry? The Science of Matter and Change — EDUSAMBAM","url":"what-is-chemistry.html"},{"title":"What Is Coding? Programming Languages Explained, From Basics to Advanced — EDUSAMBAM","url":"what-is-coding.html"},{"title":"What is Health? Physical, Mental &amp; Social Wellbeing — EDUSAMBAM","url":"what-is-health.html"},{"title":"What is Language? — EDUSAMBAM","url":"what-is-language.html"},{"title":"What is Physics? The Study of How Things Work — EDUSAMBAM","url":"what-is-physics.html"},{"title":"What is Science? The Scientific Method — EDUSAMBAM","url":"what-is-science-scientific-method.html"},{"title":"What is the Human Cell? A Simple Guide — EDUSAMBAM","url":"what-is-the-human-cell.html"},{"title":"What Is the Internet, Really? Servers, Packets and How Data Travels — EDUSAMBAM","url":"what-is-the-internet.html"},{"title":"Why Do We Need Mathematics in Daily Life? — EDUSAMBAM","url":"why-do-we-need-mathematics.html"},{"title":"Word &amp; Sentence Stress Patterns — EDUSAMBAM","url":"word-and-sentence-stress.html"},{"title":"Work, Power, and Simple Machines — EDUSAMBAM","url":"work-power-simple-machines.html"}];
+  function closeAll(except){
+    document.querySelectorAll('.edusambam-mobile-menu,.edusambam-search-panel').forEach(el=>{
+      if(el!==except) el.classList.remove('open');
+    });
+    const b=document.querySelector('.edusambam-menu-btn');
+    if(b) b.setAttribute('aria-expanded', String(document.querySelector('.edusambam-mobile-menu')?.classList.contains('open')||false));
+  }
+  function setup(){
+    const menu=document.querySelector('.edusambam-mobile-menu');
+    const mb=document.querySelector('.edusambam-menu-btn');
+    const sb=document.querySelector('.edusambam-search-btn');
+    const panel=document.querySelector('.edusambam-search-panel');
+    const input=document.querySelector('.edusambam-search-input');
+    const results=document.querySelector('.edusambam-search-results');
+    if(mb && menu){
+      mb.addEventListener('click',()=>{
+        const open=menu.classList.toggle('open'); closeAll(open?menu:null);
+        mb.setAttribute('aria-expanded',String(open));
+        if(open) panel?.classList.remove('open');
+      });
+    }
+    if(sb && panel){
+      sb.addEventListener('click',()=>{
+        const open=panel.classList.toggle('open'); closeAll(open?panel:null);
+        if(open) setTimeout(()=>input?.focus(),30);
+      });
+    }
+    if(input && results){
+      const render=()=>{
+        const q=input.value.trim().toLowerCase();
+        const hits=q?pages.filter(x=>(x.title+' '+x.url).toLowerCase().includes(q)).slice(0,20):[];
+        results.innerHTML=hits.map(x=>'<a href="'+x.url.replace(/"/g,'&quot;')+'">'+
+          x.title.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</a>').join('') ||
+          (q?'<div style="padding:10px;color:#64748b">No matching pages found.</div>':'');
+      };
+      input.addEventListener('input',render);
+    }
+    document.addEventListener('keydown',e=>{
+      if(e.key==='Escape') closeAll(null);
+    });
+    document.addEventListener('click',e=>{
+      if(!e.target.closest('.edusambam-nav') && !e.target.closest('.edusambam-mobile-menu') && !e.target.closest('.edusambam-search-panel')) closeAll(null);
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',setup); else setup();
+})();
+</script>
+<footer aria-label="EDUSAMBAM site footer" class="edusambam-unified-footer">
+<div class="footer-top">
+<div class="footer-brand">
+<div class="edusambam-footer-brand-row">
+<a aria-label="EDUSAMBAM home" class="edusambam-footer-logo-link" href="index.html">
+<span aria-hidden="true" class="edusambam-brand-mark edusambam-footer-logo">
+<span class="c1"></span><span class="c2"></span><span class="c3"></span>
+<span class="c4"></span><span class="c5"></span><span class="c6"></span>
+</span>
+<span class="edusambam-footer-brand-name">EDUSAMBAM</span>
+</a>
+</div>
+<p class="edusambam-footer-statement">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM.</p>
+</div>
+<div class="footer-col"><h4>Learning</h4><ul>
+<li><a href="index.html#english">English Language</a></li>
+<li><a href="index.html#general-knowledge">General Knowledge</a></li>
+<li><a href="index.html#computer-ai">Computer &amp; AI</a></li>
+<li><a href="index.html#mathematics">Mathematics</a></li>
+<li><a href="index.html#science">Science</a></li>
+<li><a href="index.html#health">Health</a></li>
+<li><a href="index.html#resources">Resources</a></li>
+</ul></div>
+<div class="footer-col"><h4>Practice &amp; Assessment</h4><ul>
+<li><a href="index.html#interactive-activities">Interactive Activities</a></li>
+<li><a href="assessment-arena.html">ASSESSMENT ARENA</a></li>
+<li><a href="assessment-arena.html">What Is Assessment?</a></li>
+<li><a href="index.html#about">Learn Your Way</a></li>
+<li><a href="index.html#resources">Free Resources &amp; Downloads</a></li>
+</ul></div>
+<div class="footer-col"><h4>About EDUSAMBAM</h4><ul>
+<li><a href="index.html#about-edusambam">What EDUSAMBAM Is</a></li>
+<li><a href="index.html#mission">Our Mission</a></li>
+<li><a href="index.html#team">The Team</a></li>
+<li><a href="mailto:info.edusambam@gmail.com">Contact Us</a></li>
+<li><a href="mailto:feedback.edusambam@gmail.com?subject=EDUSAMBAM%20Feedback">Give Feedback</a></li>
+<li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+</ul></div>
+</div>
+<div class="footer-bottom"><p>© 2026 EDUSAMBAM · Learning resources, practice and assessment.</p><ul class="footer-bottom-links">
+<li><a href="#top">Back to Top</a></li>
+<li><a href="index.html#mission">Mission</a></li>
+<li><a href="index.html#team">Team</a></li>
+<li><a href="index.html#resources">Resources</a></li>
+</ul></div>
+</footer></body></html>
