@@ -1,0 +1,724 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physics Comprehensive Practice Test 1 — EDUSAMBAM</title>
+<!-- Google Analytics 4 — EDUSAMBAM --><script async src="https://www.googletagmanager.com/gtag/js?id=G-Y35DW0V4HQ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Y35DW0V4HQ');</script>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #06244a; --red: #0b4ea2; --red-mid: #0b55a5; --gold: #d4a017;
+    --green: #2f6b3a; --green-lt: rgba(47,107,58,0.08);
+    --ink: #142033; --slate: #607086; --border: #dce7f4; --border-lt: #eef5fc;
+    --cream: #f7faff; --white: #ffffff; --radius: 8px;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Source Sans 3', sans-serif; color:var(--ink); background:var(--cream); line-height:1.6; }
+  a { color:inherit; }
+  h1,h2 { font-family:'EB Garamond', serif; }
+
+  .top-bar { background:var(--navy); color:rgba(255,255,255,0.55); font-size:0.78rem; padding:0.5rem 3rem; display:flex; justify-content:space-between; align-items:center; }
+  .top-bar-links { display:flex; gap:1.2rem; list-style:none; }
+  .top-bar-links a { color:rgba(255,255,255,0.55); text-decoration:none; }
+  .top-bar-links a:hover { color:var(--gold); }
+
+  nav { background:var(--white); border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:space-between; padding:0 3rem; height:76px; position:sticky; top:0; z-index:50; }
+  .nav-brand-name { font-family:'EB Garamond', serif; font-size:1.55rem; font-weight:700; color:var(--navy); }
+  .nav-brand-name span { color:var(--red); }
+  .nav-brand-sub { font-size:0.68rem; color:var(--slate); letter-spacing:0.08em; text-transform:uppercase; }
+  .nav-links { display:flex; gap:1.8rem; list-style:none; }
+  .nav-links a { text-decoration:none; color:var(--ink); font-weight:600; font-size:0.92rem; }
+  .nav-links a:hover { color:var(--red); }
+
+  .article-hero { background: linear-gradient(135deg,#06244a,#0b4ea2); padding:2.6rem 3rem 2.2rem; color:white; }
+  .breadcrumb { color:rgba(255,255,255,0.5); font-size:0.85rem; margin-bottom:0.9rem; }
+  .breadcrumb a { text-decoration:none; color:rgba(255,255,255,0.5); }
+  .breadcrumb a:hover { color:var(--gold); }
+  .article-hero-tag { display:inline-block; background:rgba(184,150,62,0.15); color:var(--gold); font-size:0.78rem; font-weight:600; padding:0.3rem 0.8rem; border-radius:30px; margin-bottom:0.9rem; }
+  .article-hero h1 { font-size:2.1rem; font-weight:600; margin-bottom:0.7rem; max-width:820px; }
+  .article-hero .sub { color:rgba(255,255,255,0.65); font-size:1.02rem; max-width:700px; margin-bottom:1rem; }
+  .article-hero-meta { display:flex; gap:0.8rem; color:rgba(255,255,255,0.5); font-size:0.85rem; flex-wrap:wrap; align-items:center; }
+
+  .article-wrap { max-width:820px; margin:0 auto; padding:2.6rem 1.5rem 4rem; }
+
+  .test-info-box { display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:1.4rem; margin-bottom:1.8rem; }
+  .info-item { text-align:center; }
+  .info-num { font-family:'EB Garamond', serif; font-size:1.7rem; font-weight:700; color:var(--red); }
+  .info-label { font-size:0.78rem; color:var(--slate); text-transform:uppercase; letter-spacing:0.05em; }
+
+  .paper-pattern { margin-bottom:1.5rem; }
+  .pattern-table { width:100%; border-collapse:collapse; background:var(--white); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; font-size:0.9rem; }
+  .pattern-table th, .pattern-table td { padding:0.65rem 1rem; text-align:left; border-bottom:1px solid var(--border-lt); }
+  .pattern-table th { background:var(--navy); color:white; font-weight:600; }
+  .pattern-table tr:last-child td { font-weight:700; border-bottom:none; }
+
+  .squiz-progress { height:8px; background:var(--border-lt); border-radius:10px; overflow:hidden; margin-bottom:0.4rem; position:sticky; top:76px; z-index:40; }
+  .squiz-progress-fill { height:100%; width:0%; background:var(--red); transition:width 0.2s; }
+  .squiz-progress-label { font-size:0.82rem; color:var(--slate); margin-bottom:1.8rem; }
+
+  .section-heading { display:flex; justify-content:space-between; align-items:baseline; margin:2.4rem 0 0.3rem; padding-bottom:0.5rem; border-bottom:2px solid var(--navy); }
+  .section-heading h2 { font-size:1.35rem; color:var(--navy); font-weight:600; }
+  .section-marks { font-size:0.85rem; color:var(--red); font-weight:600; }
+  .section-note { color:var(--slate); font-size:0.88rem; margin-bottom:1.2rem; }
+
+  .squiz-item { background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:1.2rem 1.3rem; margin-bottom:1rem; }
+  .squiz-q { display:flex; justify-content:space-between; align-items:flex-start; gap:1rem; font-weight:600; margin-bottom:0.9rem; font-size:0.98rem; }
+  .qnum { color:var(--red); margin-right:0.4rem; }
+  .q-tags { display:flex; gap:0.4rem; flex-shrink:0; }
+  .q-diff { font-size:0.7rem; font-weight:600; padding:0.2rem 0.55rem; border-radius:30px; text-transform:uppercase; letter-spacing:0.03em; white-space:nowrap; }
+  .q-diff.basic { background:rgba(47,107,58,0.1); color:var(--green); }
+  .q-diff.intermediate { background:rgba(184,150,62,0.15); color:var(--gold); }
+  .q-diff.advanced { background:rgba(139,0,0,0.08); color:var(--red); }
+  .q-marks { font-size:0.75rem; color:var(--slate); background:var(--border-lt); padding:0.2rem 0.55rem; border-radius:30px; white-space:nowrap; }
+
+  .squiz-option { display:flex; align-items:center; gap:0.6rem; padding:0.55rem 0.7rem; border-radius:6px; margin-bottom:0.4rem; cursor:pointer; transition:background 0.15s; }
+  .squiz-option:hover { background:var(--cream); }
+  .squiz-option.selected { background:rgba(184,150,62,0.1); }
+  .squiz-option input { accent-color:var(--red); width:16px; height:16px; flex-shrink:0; }
+  .squiz-option label { font-size:0.92rem; cursor:pointer; }
+  .squiz-option.correct-answer { background:var(--green-lt); }
+  .squiz-option.wrong-answer { background:rgba(139,0,0,0.06); }
+  .tf-row { display:flex; gap:1rem; }
+  .tf-row .squiz-option { flex:1; justify-content:center; border:1px solid var(--border); }
+
+  .match-columns { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:0.6rem; }
+  .match-col-label { font-size:0.78rem; font-weight:700; color:var(--slate); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.5rem; }
+  .match-subnum { font-weight:800; margin-right:0.35rem; flex:0 0 auto; }
+ .match-a-item { background:var(--cream); border:1px solid var(--border-lt); border-radius:6px; padding:0.6rem 0.75rem; margin-bottom:0.5rem; font-size:0.88rem; font-weight:600; min-height:44px; display:flex; align-items:center; }
+  .match-b-item { display:flex; align-items:center; gap:0.5rem; background:var(--white); border:1px solid var(--border); border-radius:6px; padding:0.5rem 0.6rem; margin-bottom:0.5rem; min-height:44px; }
+  .match-move { display:flex; flex-direction:column; gap:0.1rem; }
+  .move-btn { background:var(--border-lt); border:none; border-radius:4px; width:22px; height:18px; font-size:0.7rem; cursor:pointer; color:var(--slate); }
+  .move-btn:hover { background:var(--gold); color:white; }
+  .match-b-text { font-size:0.86rem; color:var(--slate); flex:1; }
+  .match-b-item.correct-answer { border-color:var(--green); background:var(--green-lt); }
+  .match-b-item.wrong-answer { border-color:var(--red); background:rgba(139,0,0,0.06); }
+
+  .text-answer input[type="text"], .text-answer textarea {
+    width:100%; border:1px solid var(--border); border-radius:var(--radius);
+    padding:0.65rem 0.85rem; font-family:'Source Sans 3', sans-serif; font-size:0.92rem;
+    color:var(--ink); background:var(--white); transition:border-color 0.15s;
+  }
+  .text-answer textarea { resize:vertical; min-height:65px; }
+  .text-answer input[type="text"]:focus, .text-answer textarea:focus { outline:none; border-color:var(--gold); }
+  .text-answer.correct-answer input, .text-answer.correct-answer textarea { border-color:var(--green); background:var(--green-lt); }
+  .text-answer.wrong-answer input, .text-answer.wrong-answer textarea { border-color:var(--red); background:rgba(139,0,0,0.06); }
+  .answer-feedback { font-size:0.83rem; margin-top:0.45rem; display:none; }
+  .answer-feedback.visible { display:block; }
+  .answer-feedback.is-correct { color:var(--green); }
+  .answer-feedback.is-wrong { color:var(--red); }
+
+  .squiz-submit-btn {
+    display:block; width:100%; background:var(--red); color:white; border:none;
+    font-family:'Source Sans 3', sans-serif; font-size:1rem; font-weight:600;
+    padding:1rem; border-radius:var(--radius); cursor:pointer; margin-top:1rem; transition:background 0.2s;
+  }
+  .squiz-submit-btn:hover:not(:disabled) { background:var(--red-mid); }
+  .squiz-submit-btn:disabled { background:var(--border); cursor:not-allowed; }
+
+  .squiz-results { display:none; background:var(--navy); border-radius:var(--radius); padding:2.2rem 1.8rem; text-align:center; margin-top:2.6rem; }
+  .squiz-results.visible { display:block; }
+  .squiz-results .squiz-score-big { font-family:'EB Garamond', serif; font-size:3rem; font-weight:600; color:var(--gold); line-height:1; margin-bottom:0.3rem; }
+  .squiz-results .squiz-score-label { color:rgba(255,255,255,0.7); font-size:1rem; margin-bottom:0.4rem; }
+  .squiz-results .squiz-score-breakdown { color:rgba(255,255,255,0.45); font-size:0.82rem; margin-bottom:1.2rem; line-height:1.6; }
+  .squiz-results .squiz-score-tier { display:inline-block; font-size:0.85rem; font-weight:600; padding:0.4rem 1.1rem; border-radius:30px; background:rgba(184,150,62,0.15); color:var(--gold); margin-bottom:1.3rem; }
+  .squiz-retake-btn { background:transparent; border:1px solid rgba(255,255,255,0.3); color:white; font-family:'Source Sans 3', sans-serif; font-size:0.9rem; font-weight:600; padding:0.7rem 1.5rem; border-radius:30px; cursor:pointer; }
+  .squiz-retake-btn:hover { background:rgba(255,255,255,0.1); }
+
+  .article-footer-nav { display:flex; justify-content:space-between; align-items:center; margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--border-lt); flex-wrap:wrap; gap:1rem; }
+  .article-footer-nav a { text-decoration:none; color:var(--red); font-weight:600; font-size:0.92rem; }
+  .article-footer-nav a:hover { text-decoration:underline; }
+
+  @media (max-width: 700px) { .article-hero h1 { font-size:1.6rem; } .article-wrap { padding:2rem 1.25rem 3rem; } }
+  @media (max-width: 680px) {
+    .top-bar { display:none; }
+    nav { padding:0 1rem; height:68px; border-bottom-width:2px; }
+    .nav-links { display:none; }
+    .nav-brand-name { font-size:1.35rem; white-space:nowrap; }
+    .nav-brand-sub { font-size:0.62rem; letter-spacing:0.07em; }
+    .footer-top { grid-template-columns:1fr; gap:2rem; padding:2rem 1.25rem; }
+    footer { padding:2rem 1.25rem 0; }
+  }
+
+  footer { background:var(--navy); padding:3.5rem 3rem 0; }
+  .footer-top { display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:2.5rem; max-width:1280px; margin:0 auto; padding-bottom:2.5rem; border-bottom:1px solid rgba(255,255,255,0.08); }
+  .footer-brand-name { font-family:'EB Garamond', serif; font-size:1.4rem; font-weight:600; color:white; text-decoration:none; }
+  .footer-brand-name span { color:var(--red); }
+  .footer-desc { color:rgba(255,255,255,0.45); font-size:0.9rem; margin-top:0.8rem; max-width:320px; }
+  .footer-col h4 { font-family:'EB Garamond', serif; color:white; font-size:1rem; margin-bottom:1rem; font-weight:600; }
+  .footer-col ul { list-style:none; }
+  .footer-col li { margin-bottom:0.7rem; }
+  .footer-col a { color:rgba(255,255,255,0.45); text-decoration:none; font-size:0.88rem; transition:color 0.2s; }
+  .footer-col a:hover { color:var(--gold); }
+  .footer-bottom { max-width:1280px; margin:0 auto; padding:1.5rem 0; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; }
+  .footer-bottom p { color:rgba(255,255,255,0.35); font-size:0.8rem; }
+  .footer-bottom-links { display:flex; gap:1.3rem; list-style:none; }
+  .footer-bottom-links a { color:rgba(255,255,255,0.35); text-decoration:none; font-size:0.8rem; }
+  .footer-bottom-links a:hover { color:rgba(255,255,255,0.6); }
+  @media (max-width: 900px) { .footer-top { grid-template-columns:1fr 1fr; } footer { padding:2rem 1.25rem 0; } }
+</style><style id="edusambam-mark-style">
+.mark{width:48px;height:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px;border-radius:14px;background:#eef5fc;box-shadow:0 2px 7px rgba(8,47,99,.10);flex:0 0 48px}
+.mark i{display:block;border-radius:50%;background:#0b4ea2;min-width:0;min-height:0}
+.mark i:nth-child(5){background:#d4a017}
+</style><style id="edusambam-frame-final">html{box-sizing:border-box;max-width:100%;overflow-x:hidden}*,*:before,*:after{box-sizing:inherit}body{max-width:100%;min-width:0;overflow-x:hidden;border:3px solid #d4a017;box-sizing:border-box}img,svg,video,iframe{max-width:100%;height:auto}h1,h2,h3,h4,p,a,span,small,b,strong{overflow-wrap:anywhere}section,header,footer,main,nav{max-width:100%;box-sizing:border-box}@media(max-width:600px){body{border-width:3px}h1,h2,h3{margin-left:0!important;margin-right:0!important}}</style>
+<style id="edusambam-unified-nav-css">
+/* EDUSAMBAM unified navigation */
+.edusambam-nav{
+  position:sticky;top:0;z-index:10000;
+  min-height:72px;box-sizing:border-box;
+  display:flex;align-items:center;
+  padding:10px 20px;
+  background:#fff;border-bottom:1px solid #e5e7eb;
+  font-family:inherit;
+}
+.edusambam-nav-inner{
+  width:100%;max-width:1400px;margin:0 auto;
+  display:flex;align-items:center;gap:18px;min-width:0;
+}
+.edusambam-brand{
+  display:flex;align-items:center;gap:10px;min-width:0;
+  text-decoration:none;color:#0b3b66;flex:0 0 auto;
+}
+.edusambam-brand-copy{display:flex;flex-direction:column;line-height:1;min-width:0}
+.edusambam-brand-name{
+  font-family:"EB Garamond",Georgia,serif;
+  font-size:1.6rem;font-weight:600;letter-spacing:.01em;
+  color:#0b3b66;white-space:nowrap;
+}
+.edusambam-brand-subtitle{
+  margin-top:4px;
+  font-size:.62rem;font-weight:600;letter-spacing:.08em;
+  color:#64748b;white-space:nowrap;
+}
+.edusambam-nav-links{
+  display:flex;align-items:center;gap:14px;margin-left:auto;
+  list-style:none;padding:0;margin-top:0;margin-bottom:0;
+}
+.edusambam-nav-links a{
+  color:#334155;text-decoration:none;font-size:.9rem;
+  padding:8px 5px;border-radius:7px;white-space:nowrap;
+}
+.edusambam-nav-links a:hover,.edusambam-nav-links a:focus-visible{
+  color:#0b3b66;background:#f3f6f9;outline:none;
+}
+.edusambam-search-btn,.edusambam-menu-btn{
+  appearance:none;border:1px solid #d8dee6;background:#fff;
+  color:#0b3b66;border-radius:9px;min-width:40px;height:40px;
+  display:inline-flex;align-items:center;justify-content:center;
+  cursor:pointer;font-size:1.15rem;flex:0 0 auto;
+}
+.edusambam-search-btn:hover,.edusambam-menu-btn:hover,
+.edusambam-search-btn:focus-visible,.edusambam-menu-btn:focus-visible{
+  background:#f3f6f9;border-color:#b9c6d4;outline:2px solid rgba(214,162,58,.35);
+  outline-offset:2px;
+}
+.edusambam-menu-btn{display:none;font-size:1.2rem}
+.edusambam-mobile-menu{
+  display:none;position:fixed;top:72px;left:0;right:0;
+  z-index:9999;background:#fff;border-bottom:1px solid #e5e7eb;
+  box-shadow:0 8px 24px rgba(15,23,42,.12);
+  max-height:calc(100vh - 72px);overflow:auto;
+}
+.edusambam-mobile-menu.open{display:block}
+.edusambam-mobile-menu ul{list-style:none;margin:0;padding:10px 16px 16px}
+.edusambam-mobile-menu a{
+  display:block;padding:12px 10px;color:#0b3b66;text-decoration:none;
+  border-radius:8px;font-size:.98rem;
+}
+.edusambam-mobile-menu a:hover,.edusambam-mobile-menu a:focus-visible{
+  background:#f3f6f9;outline:none;
+}
+.edusambam-search-panel{
+  display:none;position:fixed;top:72px;left:0;right:0;z-index:9998;
+  background:#fff;border-bottom:1px solid #e5e7eb;
+  box-shadow:0 8px 24px rgba(15,23,42,.10);padding:12px 16px;
+}
+.edusambam-search-panel.open{display:block}
+.edusambam-search-wrap{max-width:900px;margin:0 auto;position:relative}
+.edusambam-search-input{
+  width:100%;box-sizing:border-box;padding:12px 14px;
+  border:1px solid #cbd5e1;border-radius:9px;font-size:1rem;
+}
+.edusambam-search-results{margin-top:8px;max-height:50vh;overflow:auto}
+.edusambam-search-results a{
+  display:block;padding:9px 10px;border-radius:7px;color:#0b3b66;text-decoration:none;
+}
+.edusambam-search-results a:hover{background:#f3f6f9}
+@media (max-width:1100px){
+  .edusambam-nav-links{gap:8px}
+  .edusambam-nav-links a{font-size:.84rem;padding-inline:3px}
+}
+@media (max-width:900px){
+  .edusambam-nav{min-height:68px;padding:8px 14px}
+  .edusambam-brand-mark{width:44px;height:44px;flex-basis:44px}
+  .edusambam-brand-mark span{width:12px;height:12px}
+  .edusambam-brand-mark .c3,.edusambam-brand-mark .c6{left:16px}
+  .edusambam-brand-name{font-size:1.42rem}
+  .edusambam-brand-subtitle{font-size:.52rem;letter-spacing:.06em}
+  .edusambam-nav-links{display:none}
+  .edusambam-menu-btn{display:inline-flex}
+  .edusambam-search-btn{margin-left:auto}
+  .edusambam-mobile-menu{top:68px;max-height:calc(100vh - 68px)}
+  .edusambam-search-panel{top:68px}
+}
+@media (max-width:480px){
+  .edusambam-nav-inner{gap:8px}
+  .edusambam-brand{gap:7px}
+  .edusambam-brand-mark{width:40px;height:40px;flex-basis:40px}
+  .edusambam-brand-mark span{width:11px;height:11px}
+  .edusambam-brand-mark .c3,.edusambam-brand-mark .c6{left:14.5px}
+  .edusambam-brand-name{font-size:1.28rem}
+  .edusambam-brand-subtitle{font-size:.46rem;letter-spacing:.045em}
+  .edusambam-search-btn,.edusambam-menu-btn{min-width:38px;height:38px}
+}
+</style><style id="edusambam-logo-visibility-fix">
+/* EDUSAMBAM logo visibility fix */
+.edusambam-brand-mark{
+  position:relative !important;
+  display:inline-block !important;
+  width:48px !important;
+  height:48px !important;
+  min-width:48px !important;
+  flex:0 0 48px !important;
+  overflow:visible !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+.edusambam-brand-mark > span{
+  position:absolute !important;
+  display:block !important;
+  width:13px !important;
+  height:13px !important;
+  min-width:13px !important;
+  min-height:13px !important;
+  padding:0 !important;
+  margin:0 !important;
+  border:0 !important;
+  border-radius:50% !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  box-sizing:border-box !important;
+}
+.edusambam-brand-mark > .c1{left:0 !important;top:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c2{right:0 !important;top:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c3{left:17.5px !important;top:8px !important;background:#d6a23a !important;}
+.edusambam-brand-mark > .c4{left:0 !important;bottom:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c5{right:0 !important;bottom:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c6{left:17.5px !important;bottom:8px !important;background:#d6a23a !important;}
+
+@media (max-width:900px){
+  .edusambam-brand-mark{
+    width:44px !important;height:44px !important;min-width:44px !important;flex-basis:44px !important;
+  }
+  .edusambam-brand-mark > span{
+    width:12px !important;height:12px !important;min-width:12px !important;min-height:12px !important;
+  }
+  .edusambam-brand-mark > .c3,.edusambam-brand-mark > .c6{left:16px !important;}
+}
+@media (max-width:480px){
+  .edusambam-brand-mark{
+    width:40px !important;height:40px !important;min-width:40px !important;flex-basis:40px !important;
+  }
+  .edusambam-brand-mark > span{
+    width:11px !important;height:11px !important;min-width:11px !important;min-height:11px !important;
+  }
+  .edusambam-brand-mark > .c3,.edusambam-brand-mark > .c6{left:14.5px !important;}
+}
+</style>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+
+<style id="edusambam-menu-extra-css">
+.edusambam-mobile-menu .edusambam-menu-extra:first-of-type{
+  margin-top:8px;padding-top:8px;border-top:1px solid #e5e7eb;
+}
+.edusambam-mobile-menu .edusambam-menu-extra a{
+  font-weight:600;
+}
+</style>
+<style id="edusambam-article-footer-theme">
+.edusambam-article-footer{
+  background:linear-gradient(135deg,#06244a,#0b4ea2)!important;
+}
+</style>
+
+<style id="edusambam-unified-footer-fix">
+/* EDUSAMBAM unified footer: same visual language and neutral brand statement across all pages. */
+.edusambam-unified-footer,
+.edusambam-article-footer,
+footer.footer {
+  background: linear-gradient(135deg, #06244a, #0b4ea2) !important;
+  color: #fff !important;
+  border-top: 3px solid #d4a017 !important;
+  box-sizing: border-box;
+}
+.edusambam-footer-statement{margin:.25rem 0 0 !important;color:rgba(255,255,255,.88) !important;font-size:.78rem !important;letter-spacing:.08em !important;text-transform:uppercase !important}
+.edusambam-unified-footer .footer-brand-name,.edusambam-article-footer .footer-brand-name{color:#fff !important}
+</style>
+
+<style id="edusambam-final-unified-footer">
+/* Final unified footer — same structure, visual language, and approved nav logo on every page. */
+.edusambam-unified-footer{
+  width:100% !important;
+  margin:0 !important;
+  padding:44px 0 0 !important;
+  background:linear-gradient(135deg,#06244a,#0b4ea2) !important;
+  color:#d6e4f2 !important;
+  border-top:4px solid #d4a017 !important;
+  box-sizing:border-box !important;
+  overflow:hidden !important;
+}
+.edusambam-unified-footer .footer-top{
+  width:min(1180px,92%) !important;
+  max-width:1180px !important;
+  margin:0 auto !important;
+  padding:0 0 34px !important;
+  display:grid !important;
+  grid-template-columns:1.5fr repeat(3,1fr) !important;
+  gap:34px !important;
+  box-sizing:border-box !important;
+}
+.edusambam-unified-footer .footer-brand{min-width:0 !important;}
+.edusambam-footer-brand-row{margin:0 0 10px !important;}
+.edusambam-footer-logo-link{
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:12px !important;
+  min-width:0 !important;
+  color:#fff !important;
+  text-decoration:none !important;
+}
+.edusambam-footer-logo{
+  width:48px !important;
+  height:48px !important;
+  min-width:48px !important;
+  flex:0 0 48px !important;
+}
+.edusambam-footer-logo > span{width:13px !important;height:13px !important;min-width:13px !important;min-height:13px !important;}
+.edusambam-footer-logo > .c3,.edusambam-footer-logo > .c6{left:17.5px !important;}
+.edusambam-footer-brand-name{
+  color:#fff !important;
+  font-family:"EB Garamond",Georgia,serif !important;
+  font-size:1.65rem !important;
+  font-weight:600 !important;
+  letter-spacing:.01em !important;
+  line-height:1 !important;
+  white-space:nowrap !important;
+}
+.edusambam-unified-footer .edusambam-footer-statement{
+  margin:0 !important;
+  max-width:360px !important;
+  color:rgba(255,255,255,.88) !important;
+  font-size:.78rem !important;
+  line-height:1.7 !important;
+  letter-spacing:.08em !important;
+  text-transform:uppercase !important;
+}
+.edusambam-unified-footer .footer-col{min-width:0 !important;}
+.edusambam-unified-footer .footer-col h4{
+  margin:0 0 12px !important;
+  color:#fff !important;
+  font-family:"EB Garamond",Georgia,serif !important;
+  font-size:1rem !important;
+  font-weight:600 !important;
+  line-height:1.25 !important;
+}
+.edusambam-unified-footer .footer-col ul{
+  list-style:none !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+.edusambam-unified-footer .footer-col li{margin:0 0 8px !important;padding:0 !important;}
+.edusambam-unified-footer .footer-col a{
+  color:rgba(255,255,255,.68) !important;
+  text-decoration:none !important;
+  font-size:.84rem !important;
+  line-height:1.5 !important;
+  overflow-wrap:anywhere !important;
+}
+.edusambam-unified-footer .footer-col a:hover,
+.edusambam-unified-footer .footer-col a:focus-visible{color:#fff !important;}
+.edusambam-unified-footer .footer-bottom{
+  width:min(1180px,92%) !important;
+  max-width:1180px !important;
+  margin:0 auto !important;
+  padding:18px 0 22px !important;
+  border-top:1px solid rgba(255,255,255,.12) !important;
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:center !important;
+  gap:20px !important;
+  box-sizing:border-box !important;
+}
+.edusambam-unified-footer .footer-bottom p{
+  margin:0 !important;
+  color:rgba(255,255,255,.55) !important;
+  font-size:.8rem !important;
+  line-height:1.5 !important;
+}
+.edusambam-unified-footer .footer-bottom-links{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:18px !important;
+  list-style:none !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+.edusambam-unified-footer .footer-bottom-links a{
+  color:rgba(255,255,255,.55) !important;
+  font-size:.78rem !important;
+  line-height:1.5 !important;
+  text-decoration:none !important;
+}
+.edusambam-unified-footer .footer-bottom-links a:hover,
+.edusambam-unified-footer .footer-bottom-links a:focus-visible{color:#fff !important;}
+@media(max-width:900px){
+  .edusambam-unified-footer{padding-top:32px !important;}
+  .edusambam-unified-footer .footer-top{grid-template-columns:1fr 1fr !important;gap:28px 22px !important;}
+  .edusambam-unified-footer .footer-brand{grid-column:1/-1 !important;}
+}
+@media(max-width:600px){
+  .edusambam-unified-footer{padding-top:30px !important;}
+  .edusambam-unified-footer .footer-top{width:calc(100% - 28px) !important;grid-template-columns:1fr 1fr !important;gap:26px 20px !important;padding-bottom:28px !important;}
+  .edusambam-unified-footer .footer-bottom{width:calc(100% - 28px) !important;display:block !important;padding:16px 0 20px !important;}
+  .edusambam-unified-footer .footer-bottom-links{margin-top:10px !important;gap:16px !important;}
+  .edusambam-footer-logo{width:44px !important;height:44px !important;min-width:44px !important;flex-basis:44px !important;}
+  .edusambam-footer-logo > span{width:12px !important;height:12px !important;min-width:12px !important;min-height:12px !important;}
+  .edusambam-footer-logo > .c3,.edusambam-footer-logo > .c6{left:16px !important;}
+  .edusambam-footer-brand-name{font-size:1.48rem !important;}
+}
+@media(max-width:430px){
+  .edusambam-unified-footer .footer-top{grid-template-columns:1fr !important;gap:22px !important;}
+  .edusambam-unified-footer .footer-brand{grid-column:auto !important;}
+}
+</style>
+
+
+<style id="edusambam-footer-final-correction">
+/* Final footer correction: identical footer on every page, approved navigation logo, royal-blue visual language, left-aligned content. */
+.edusambam-unified-footer{
+  display:block !important;
+  width:100% !important;
+  max-width:none !important;
+  margin:0 !important;
+  padding:44px 0 0 !important;
+  background:linear-gradient(135deg,#06244a 0%,#0b4ea2 100%) !important;
+  color:#d6e4f2 !important;
+  border-top:4px solid #d4a017 !important;
+  border-right:0 !important; border-bottom:0 !important; border-left:0 !important;
+  box-sizing:border-box !important;
+  overflow:hidden !important;
+  text-align:left !important;
+}
+.edusambam-unified-footer *{box-sizing:border-box !important;text-align:left !important;}
+.edusambam-unified-footer .footer-top{
+  width:min(1180px,92%) !important; max-width:1180px !important;
+  margin:0 auto !important; padding:0 0 34px !important;
+  display:grid !important; grid-template-columns:1.5fr repeat(3,1fr) !important;
+  gap:34px !important; align-items:start !important;
+}
+.edusambam-unified-footer .footer-brand,.edusambam-unified-footer .footer-col{min-width:0 !important;margin:0 !important;}
+.edusambam-unified-footer .edusambam-footer-brand-row{margin:0 0 12px !important;padding:0 !important;}
+.edusambam-unified-footer .edusambam-footer-logo-link{display:inline-flex !important;align-items:center !important;justify-content:flex-start !important;gap:12px !important;margin:0 !important;padding:0 !important;text-align:left !important;text-decoration:none !important;color:#fff !important;}
+.edusambam-unified-footer .edusambam-footer-logo{position:relative !important;display:inline-block !important;width:48px !important;height:48px !important;min-width:48px !important;flex:0 0 48px !important;margin:0 !important;padding:0 !important;}
+.edusambam-unified-footer .edusambam-footer-logo>span{position:absolute !important;display:block !important;width:13px !important;height:13px !important;min-width:13px !important;min-height:13px !important;margin:0 !important;padding:0 !important;border:0 !important;border-radius:50% !important;opacity:1 !important;visibility:visible !important;}
+.edusambam-unified-footer .edusambam-footer-logo>.c1{left:0 !important;top:0 !important;background:#0b3b66 !important;}
+.edusambam-unified-footer .edusambam-footer-logo>.c2{right:0 !important;top:0 !important;background:#0b3b66 !important;}
+.edusambam-unified-footer .edusambam-footer-logo>.c3{left:17.5px !important;top:8px !important;background:#d6a23a !important;}
+.edusambam-unified-footer .edusambam-footer-logo>.c4{left:0 !important;bottom:0 !important;background:#0b3b66 !important;}
+.edusambam-unified-footer .edusambam-footer-logo>.c5{right:0 !important;bottom:0 !important;background:#0b3b66 !important;}
+.edusambam-unified-footer .edusambam-footer-logo>.c6{left:17.5px !important;bottom:8px !important;background:#d6a23a !important;}
+.edusambam-unified-footer .edusambam-footer-brand-name{display:inline-block !important;color:#fff !important;font-family:"EB Garamond",Georgia,serif !important;font-size:1.65rem !important;font-weight:600 !important;line-height:1 !important;white-space:nowrap !important;margin:0 !important;padding:0 !important;}
+.edusambam-unified-footer .edusambam-footer-statement{display:block !important;margin:0 !important;padding:0 !important;max-width:360px !important;color:rgba(255,255,255,.88) !important;font-size:.78rem !important;line-height:1.7 !important;letter-spacing:.08em !important;text-transform:uppercase !important;}
+.edusambam-unified-footer .footer-col h4{margin:0 0 12px !important;padding:0 !important;color:#fff !important;font-family:"EB Garamond",Georgia,serif !important;font-size:1rem !important;font-weight:600 !important;line-height:1.25 !important;}
+.edusambam-unified-footer .footer-col ul,.edusambam-unified-footer .footer-bottom-links{list-style:none !important;margin:0 !important;padding:0 !important;}
+.edusambam-unified-footer .footer-col li{margin:0 0 8px !important;padding:0 !important;}
+.edusambam-unified-footer .footer-col a{color:rgba(255,255,255,.68) !important;text-decoration:none !important;font-size:.84rem !important;line-height:1.5 !important;overflow-wrap:anywhere !important;}
+.edusambam-unified-footer .footer-bottom{width:min(1180px,92%) !important;max-width:1180px !important;margin:0 auto !important;padding:18px 0 22px !important;border-top:1px solid rgba(255,255,255,.12) !important;display:block !important;}
+.edusambam-unified-footer .footer-bottom p{margin:0 !important;padding:0 !important;color:rgba(255,255,255,.55) !important;font-size:.8rem !important;line-height:1.5 !important;}
+.edusambam-unified-footer .footer-bottom-links{display:flex !important;flex-wrap:wrap !important;justify-content:flex-start !important;align-items:flex-start !important;gap:18px !important;margin:10px 0 0 !important;padding:0 !important;}
+.edusambam-unified-footer .footer-bottom-links li{margin:0 !important;padding:0 !important;}
+.edusambam-unified-footer .footer-bottom-links a{color:rgba(255,255,255,.55) !important;font-size:.78rem !important;line-height:1.5 !important;text-decoration:none !important;}
+@media (max-width:900px){
+ .edusambam-unified-footer{padding-top:32px !important;}
+ .edusambam-unified-footer .footer-top{width:calc(100% - 28px) !important;grid-template-columns:1fr 1fr !important;gap:28px 22px !important;padding-bottom:28px !important;}
+ .edusambam-unified-footer .footer-brand{grid-column:1/-1 !important;}
+}
+@media (max-width:480px){
+ .edusambam-unified-footer{padding-top:30px !important;}
+ .edusambam-unified-footer .footer-top,.edusambam-unified-footer .footer-bottom{width:calc(100% - 28px) !important;}
+ .edusambam-unified-footer .footer-top{grid-template-columns:1fr !important;gap:22px !important;}
+ .edusambam-unified-footer .footer-brand{grid-column:auto !important;}
+ .edusambam-unified-footer .edusambam-footer-logo{width:40px !important;height:40px !important;min-width:40px !important;flex-basis:40px !important;}
+ .edusambam-unified-footer .edusambam-footer-logo>span{width:11px !important;height:11px !important;min-width:11px !important;min-height:11px !important;}
+ .edusambam-unified-footer .edusambam-footer-logo>.c3,.edusambam-unified-footer .edusambam-footer-logo>.c6{left:14.5px !important;}
+ .edusambam-unified-footer .edusambam-footer-logo>.c3{top:7px !important;}
+ .edusambam-unified-footer .edusambam-footer-logo>.c6{bottom:7px !important;}
+ .edusambam-unified-footer .edusambam-footer-brand-name{font-size:1.45rem !important;}
+ .edusambam-unified-footer .footer-bottom-links{gap:14px !important;}
+}
+</style>
+</head><body><div class="top-bar"><p>Established 2026 · Free Educational Resources for All</p><ul class="top-bar-links"><li><a href="index.html">Contact</a></li><li><a href="index.html">About</a></li><li><a href="index.html">Write for Us</a></li></ul></div>
+
+<nav class="edusambam-nav" aria-label="Primary navigation">
+  <div class="edusambam-nav-inner">
+    <a class="edusambam-brand" href="index.html" aria-label="EDUSAMBAM home">
+      <span class="edusambam-brand-mark" aria-hidden="true">
+        <span class="c1"></span><span class="c2"></span><span class="c3"></span>
+        <span class="c4"></span><span class="c5"></span><span class="c6"></span>
+      </span>
+      <span class="edusambam-brand-copy">
+        <span class="edusambam-brand-name">EDUSAMBAM</span>
+        <span class="edusambam-brand-subtitle">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM.</span>
+      </span>
+    </a>
+    <ul class="edusambam-nav-links"><li><a href="index.html">Home</a></li><li><a href="index.html#english">English</a></li><li><a href="index.html#mathematics">Mathematics</a></li><li><a href="index.html#science">Science</a></li><li><a href="index.html#health">Health</a></li><li><a href="index.html#general-knowledge">General Knowledge</a></li><li><a href="index.html#computer-ai">Computer & AI</a></li><li><a href="index.html#resources">Resources</a></li></ul>
+    <button class="edusambam-search-btn" type="button" aria-label="Search" title="Search">⌕</button>
+    <button class="edusambam-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" title="Menu">☰</button>
+  </div>
+</nav>
+<div class="edusambam-mobile-menu" aria-label="Mobile navigation">
+  <ul><li><a href="index.html">Home</a></li><li><a href="index.html#english">English</a></li><li><a href="index.html#mathematics">Mathematics</a></li><li><a href="index.html#science">Science</a></li><li><a href="index.html#health">Health</a></li><li><a href="index.html#general-knowledge">General Knowledge</a></li><li><a href="index.html#computer-ai">Computer & AI</a></li><li><a href="index.html#resources">Resources</a></li>
+<li class="edusambam-menu-extra"><a href="interactive-activities.html">Interactive Activities</a></li>
+<li class="edusambam-menu-extra"><a href="assessment-arena.html">Assessment Arena</a></li>
+<li class="edusambam-menu-extra"><a href="about.html">About</a></li>
+<li class="edusambam-menu-extra"><a href="mission.html">Mission</a></li>
+<li class="edusambam-menu-extra"><a href="team.html">Team</a></li>
+</ul>
+</div>
+<div class="edusambam-search-panel" aria-label="Site search">
+  <div class="edusambam-search-wrap">
+    <input class="edusambam-search-input" type="search" placeholder="Search EDUSAMBAM…" aria-label="Search EDUSAMBAM">
+    <div class="edusambam-search-results"></div>
+  </div>
+</div>
+
+<header class="article-hero"><div class="breadcrumb"><a href="index.html">Home</a> / <a href="assessment-arena.html">Assessment Arena</a> / Physics</div><span class="article-hero-tag">Physics · 100-Mark Scored Paper</span><h1>Physics Comprehensive Practice Test 1</h1><p class="sub">Foundations, Motion, Forces, Energy, and Everyday Physics</p><div class="article-hero-meta"><span>EDUSAMBAM Editorial Team</span><span>·</span><span>45 questions · 100 marks</span><span>·</span><span>Instant self-assessment</span></div></header>
+<main class="article-wrap">
+<div class="test-info-box"><div class="info-item"><div class="info-num">45</div><div class="info-label">Questions</div></div><div class="info-item"><div class="info-num">100</div><div class="info-label">Marks</div></div><div class="info-item"><div class="info-num">5</div><div class="info-label">Sections</div></div><div class="info-item"><div class="info-num">100%</div><div class="info-label">Auto-Graded</div></div></div>
+<div class="paper-pattern"><table class="pattern-table"><thead><tr><th>Section</th><th>Questions</th><th>Marks Each</th><th>Total</th></tr></thead><tbody><tr><td>A — Multiple Choice</td><td>15</td><td>2</td><td>30</td></tr><tr><td>B — True / False</td><td>10</td><td>2</td><td>20</td></tr><tr><td>C — Fill in the Blank</td><td>10</td><td>2</td><td>20</td></tr><tr><td>D — Column Matching</td><td>5 sub-questions</td><td>2</td><td>10</td></tr><tr><td>E — Short Answer</td><td>5</td><td>4</td><td>20</td></tr><tr><td>Total</td><td>45</td><td>—</td><td>100</td></tr></tbody></table></div>
+<p class="section-note"><strong>Source scope:</strong> This paper is based only on the 12 Physics articles currently in the EDUSAMBAM master library: Energy: Types, Sources, and Transformations; Electricity and Magnetism: The Basics; Force and Newton&#x27;s Laws of Motion; Gravity and Space; Heat and Temperature; Light: Reflection, Refraction, and Color; Matter and Its States; Motion: Speed, Velocity, and Distance; Pressure and Buoyancy; Sound: How We Hear the World; What is Physics?; Work, Power, and Simple Machines</p>
+<div class="squiz-progress"><div class="squiz-progress-fill" id="squizProgressFill"></div></div><div class="squiz-progress-label" id="squizProgressLabel">0 of 45 answered</div>
+<div class="squiz-results" id="squizResults"><div class="squiz-score-big" id="squizScoreBig">0/100</div><div class="squiz-score-label" id="squizScoreLabel">You scored 0%</div><div class="squiz-score-breakdown" id="squizScoreBreakdown"></div><div class="squiz-score-tier" id="squizScoreTier">Keep practicing</div><div><button class="squiz-retake-btn" onclick="retakeQuiz()">Retake Test</button></div></div>
+<form id="squizForm">
+<div class="section-heading"><h2>Section A — Multiple Choice</h2><span class="section-marks">30 marks</span></div><p class="section-note">15 questions · 2 marks each. Select the best answer.</p><div class="squiz-item" data-points="2" data-type="mcq" data-correct="1"><div class="squiz-q"><span><span class="qnum">1.</span>What is energy?</span><span class="q-tags"><span class="q-diff intermediate">Intermediate</span><span class="q-marks">2 pts</span></span></div><div class="squiz-option"><input id="sq1a" name="sq1" type="radio" value="0"/><label for="sq1a">A. A type of force</label></div><div class="squiz-option"><input id="sq1b" name="sq1" type="radio" value="1"/><label for="sq1b">B. The capacity to do work</label></div><div class="squiz-option"><input id="sq1c" name="sq1" type="radio" value="2"/><label for="sq1c">C. Only heat and light combined</label></div><div class="squiz-option"><input id="sq1d" name="sq1" type="radio" value="3"/><label for="sq1d">D. A unit of mass</label></div></div><div class="squiz-item" data-points="2" data-type="mcq" data-correct="2"><div class="squiz-q"><span><span class="qnum">2.</span>What is an electric current?</span><span class="q-tags"><span class="q-diff advanced">Advanced</span><span class="q-marks">2 pts</span></span></div><div class="squiz-option"><input id="sq2a" name="sq2" type="radio" value="0"/><label for="sq2a">A. The resistance in a wire</label></div><div class="squiz-option"><input id="sq2b" name="sq2" type="radio" value="1"/><label for="sq2b">B. A type of magnetic pole</label></div><div class="squiz-option"><input id="sq2c" name="sq2" type="radio" value="2"/><label for="sq2c">C. The flow of electric charge through a conductor</label></div><div class="squiz-option"><input id="sq2d" name="sq2" type="radio" value="3"/><label for="sq2d">D. A form of light</label></div></div><div class="squiz-item" data-points="2" data-type="mcq" data-correct="1"><div class="squiz-q"><span><span class="qnum">3.</span>What is a force?</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div><div class="squiz-option"><input id="sq3a" name="sq3" type="radio" value="0"/><label for="sq3a">A. A type of energy that never changes</label></div><div class="squiz-option"><input id="sq3b" name="sq3" type="radio" value="1"/><label for="sq3b">B. A push or a pull on an object</label></div><div class="squiz-option"><input id="sq3c" name="sq3" type="radio" value="2"/><label for="sq3c">C. The speed of an object</label></div><div class="squiz-option"><input id="sq3d" name="sq3" type="radio" value="3"/><label for="sq3d">D. A measurement of mass only</label></div></div><div class="squiz-item" data-points="2" data-type="mcq" data-correct="1"><div class="squiz-q"><span><span class="qnum">4.</span>What is gravity?</span><span class="q-tags"><span class="q-diff intermediate">Intermediate</span><span class="q-marks">2 pts</span></span></div><div class="squiz-option"><input id="sq4a" name="sq4" type="radio" value="0"/><label for="sq4a">A. A force that only exists on Earth</label></div><div class="squiz-option"><input id="sq4b" name="sq4" type="radio" value="1"/><label for="sq4b">B. A force of attraction between any two objects with mass</label></div><div class="squiz-option"><input id="sq4c" name="sq4" type="radio" value="2"/><label for="sq4c">C. A type of electromagnetic wave</label></div><div class="squiz-option"><input id="sq4d" name="sq4" type="radio" value="3"/><label for="sq4d">D. A force that repels objects apart</label></div></div><div class="squiz-item" data-points="2" data-type="mcq" data-correct="0"><div class="squiz-q"><span><span class="qnum">5.</span>What does temperature actually measure?</span><span class="q-tags"><span class="q-diff advanced">Advanced</span><span class="q-marks">2 pts</span></span></div><div class="squiz-option"><input id="sq5a" name="sq5" type="radio" value="0"/><label for="sq5a">A. The average kinetic energy of particles</label></div><div class="squiz-option"><input id="sq5b" name="sq5" type="radio" value="1"/><label for="sq5b">B. The total amount of thermal energy in an object</label></div><div class="squiz-option"><input id="sq5c" name="sq5" type="radio" value="2"/><label for="sq5c">C. The mass of a substance</label></div><div class="squiz-option"><input id="sq5d" name="sq5" type="radio" value="3"/><label for="sq5d">D. The colour of an object</label></div></div><div class="squiz-item" data-points="2" data-type="mcq" data-correct="1"><div class="squiz-q"><span><span class="qnum">6.</span>What is light?</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div><div class="squiz-option"><input id="sq6a" name="sq6" type="radio" value="0"/><label for="sq6a">A. A liquid substance</label></div><div class="squiz-option"><input id="sq6b" name="sq6" type="radio" value="1"/><label for="sq6b">B. A form of electromagnetic energy that travels as a wave</label></div><div class="squiz-option"><input id="sq6c" name="sq6" type="radio" value="2"/><label for="sq6c">C. A type of sound wave</label></div><div class="squiz-option"><input id="sq6d" name="sq6" type="radio" value="3"/><label for="sq6d">D. Only visible during the day</label></div></div><div class="squiz-item" data-points="2" data-type="mcq" data-correct="1"><div class="squiz-q"><span><span class="qnum">7.</span>What is matter?</span><span class="q-tags"><span class="q-diff intermediate">Intermediate</span><span class="q-marks">2 pts</span></span></div><div class="squiz-option"><input id="sq7a" name="sq7" type="radio" value="0"/><label for="sq7a">A. Anything that is alive</label></div><div class="squiz-option"><input id="sq7b" name="sq7" type="radio" value="1"/><label for="sq7b">B. Anything that has mass and takes up space</label></div><div class="squiz-option"><input id="sq7c" name="sq7" type="radio" value="2"/><label for="sq7c">C. Only solids and liquids</label></div><div class="squiz-option"><input id="sq7d" name="sq7" type="radio" value="3"/><label for="sq7d">D. Only things you can see</label></div></div><div class="squiz-item" data-points="2" data-type="mcq" data-correct="1"><div class="squiz-q"><span><span class="qnum">8.</span>What is the key difference between distance and displacement?</span><span class="q-tags"><span class="q-diff advanced">Advanced</span><span class="q-marks">2 pts</span></span></div><div class="squiz-option"><input id="sq8a" name="sq8" type="radio" value="0"/><label for="sq8a">A. They are exactly the same thing</label></div><div class="squiz-option"><input id="sq8b" name="sq8" type="radio" value="1"/><label for="sq8b">B. Displacement includes direction; distance is only total path length</label></div><div class="squiz-option"><input id="sq8c" name="sq8" type="radio" value="2"/><label for="sq8c">C. Distance includes direction; displacement does not</label></div><div class="squiz-option"><input id="sq8d" name="sq8" type="radio" value="3"/><label for="sq8d">D. Displacement is always larger than distance</label></div></div><div class="squiz-item" data-points="2" data-type="mcq" data-correct="1"><div class="squiz-q"><span><span class="qnum">9.</span>What is pressure?</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div><div class="squiz-option"><input id="sq9a" name="sq9" type="radio" value="0"/><label for="sq9a">A. The total weight of an object</label></div><div class="squiz-option"><input id="sq9b" name="sq9" type="radio" value="1"/><label for="sq9b">B. Force spread over an area</label></div><div class="squiz-option"><input id="sq9c" name="sq9" type="radio" value="2"/><label for="sq9c">C. The speed at which fluid moves</label></div><div class="squiz-option"><input id="sq9d" name="sq9" type="radio" value="3"/><label for="sq9d">D. A type of buoyant force</label></div></div><div class="squiz-item" data-points="2" data-type="mcq" data-correct="2"><div class="squiz-q"><span><span class="qnum">10.</span>What is sound?</span><span class="q-tags"><span class="q-diff intermediate">Intermediate</span><span class="q-marks">2 pts</span></span></div><div class="squiz-option"><input id="sq10a" name="sq10" type="radio" value="0"/><label for="sq10a">A. A form of light</label></div><div class="squiz-option"><input id="sq10b" name="sq10" type="radio" value="1"/><label for="sq10b">B. An electromagnetic wave</label></div><div class="squiz-option"><input id="sq10c" name="sq10" type="radio" value="2"/><label for="sq10c">C. A mechanical wave created by a vibrating object</label></div><div class="squiz-option"><input id="sq10d" name="sq10" type="radio" value="3"/><label for="sq10d">D. A type of force</label></div></div><div class="squiz-item" data-points="2" data-type="mcq" data-correct="0"><div class="squiz-q"><span><span class="qnum">11.</span>What does the word &quot;physics&quot; originally come from, and what does it mean?</span><span class="q-tags"><span class="q-diff advanced">Advanced</span><span class="q-marks">2 pts</span></span></div><div class="squiz-option"><input id="sq11a" name="sq11" type="radio" value="0"/><label for="sq11a">A. Greek &quot;physika,&quot; meaning &quot;natural things&quot;</label></div><div class="squiz-option"><input id="sq11b" name="sq11" type="radio" value="1"/><label for="sq11b">B. Latin &quot;physicus,&quot; meaning &quot;doctor&quot;</label></div><div class="squiz-option"><input id="sq11c" name="sq11" type="radio" value="2"/><label for="sq11c">C. Arabic &quot;fizik,&quot; meaning &quot;number&quot;</label></div><div class="squiz-option"><input id="sq11d" name="sq11" type="radio" value="3"/><label for="sq11d">D. French &quot;physique,&quot; meaning &quot;body&quot;</label></div></div><div class="squiz-item" data-points="2" data-type="mcq" data-correct="2"><div class="squiz-q"><span><span class="qnum">12.</span>In physics, when is work actually being done on an object?</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div><div class="squiz-option"><input id="sq12a" name="sq12" type="radio" value="0"/><label for="sq12a">A. Whenever you feel tired</label></div><div class="squiz-option"><input id="sq12b" name="sq12" type="radio" value="1"/><label for="sq12b">B. Whenever a force is applied, moving or not</label></div><div class="squiz-option"><input id="sq12c" name="sq12" type="radio" value="2"/><label for="sq12c">C. When a force causes an object to move in the direction of that force</label></div><div class="squiz-option"><input id="sq12d" name="sq12" type="radio" value="3"/><label for="sq12d">D. Only when electricity is involved</label></div></div><div class="squiz-item" data-points="2" data-type="mcq" data-correct="0"><div class="squiz-q"><span><span class="qnum">13.</span>What does the Law of Conservation of Energy state?</span><span class="q-tags"><span class="q-diff intermediate">Intermediate</span><span class="q-marks">2 pts</span></span></div><div class="squiz-option"><input id="sq13a" name="sq13" type="radio" value="0"/><label for="sq13a">A. Energy cannot be created or destroyed, only transformed</label></div><div class="squiz-option"><input id="sq13b" name="sq13" type="radio" value="1"/><label for="sq13b">B. Energy always increases over time</label></div><div class="squiz-option"><input id="sq13c" name="sq13" type="radio" value="2"/><label for="sq13c">C. Energy can be destroyed but never created</label></div><div class="squiz-option"><input id="sq13d" name="sq13" type="radio" value="3"/><label for="sq13d">D. Only living things can create energy</label></div></div><div class="squiz-item" data-points="2" data-type="mcq" data-correct="2"><div class="squiz-q"><span><span class="qnum">14.</span>What is the scattering of sunlight by gas molecules in the atmosphere called?</span><span class="q-tags"><span class="q-diff advanced">Advanced</span><span class="q-marks">2 pts</span></span></div><div class="squiz-option"><input id="sq14a" name="sq14" type="radio" value="0"/><label for="sq14a">A. Refraction</label></div><div class="squiz-option"><input id="sq14b" name="sq14" type="radio" value="1"/><label for="sq14b">B. Reflection</label></div><div class="squiz-option"><input id="sq14c" name="sq14" type="radio" value="2"/><label for="sq14c">C. Rayleigh scattering</label></div><div class="squiz-option"><input id="sq14d" name="sq14" type="radio" value="3"/><label for="sq14d">D. Diffusion scattering</label></div></div><div class="squiz-item" data-points="2" data-type="mcq" data-correct="1"><div class="squiz-q"><span><span class="qnum">15.</span>Doing 100 joules of work in 2 seconds gives how much power?</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div><div class="squiz-option"><input id="sq15a" name="sq15" type="radio" value="0"/><label for="sq15a">A. 200 watts</label></div><div class="squiz-option"><input id="sq15b" name="sq15" type="radio" value="1"/><label for="sq15b">B. 50 watts</label></div><div class="squiz-option"><input id="sq15c" name="sq15" type="radio" value="2"/><label for="sq15c">C. 100 watts</label></div><div class="squiz-option"><input id="sq15d" name="sq15" type="radio" value="3"/><label for="sq15d">D. 2 watts</label></div></div>
+<div class="section-heading"><h2>Section B — True / False</h2><span class="section-marks">20 marks</span></div><p class="section-note">10 questions · 2 marks each. Select True or False.</p><div class="squiz-item" data-points="2" data-type="mcq" data-correct="1"><div class="squiz-q"><span><span class="qnum">16.</span>Energy cannot be created or destroyed, but it can be transformed from one form to another.</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div><div class="tf-row"><div class="squiz-option"><input id="sq16a" name="sq16" type="radio" value="0"/><label for="sq16a">False</label></div><div class="squiz-option"><input id="sq16b" name="sq16" type="radio" value="1"/><label for="sq16b">True</label></div></div></div><div class="squiz-item" data-points="2" data-type="mcq" data-correct="1"><div class="squiz-q"><span><span class="qnum">17.</span>A solar panel transforms light energy into electrical energy.</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div><div class="tf-row"><div class="squiz-option"><input id="sq17a" name="sq17" type="radio" value="0"/><label for="sq17a">False</label></div><div class="squiz-option"><input id="sq17b" name="sq17" type="radio" value="1"/><label for="sq17b">True</label></div></div></div><div class="squiz-item" data-points="2" data-type="mcq" data-correct="0"><div class="squiz-q"><span><span class="qnum">18.</span>In a series circuit, each component has a separate independent path for current.</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div><div class="tf-row"><div class="squiz-option"><input id="sq18a" name="sq18" type="radio" value="0"/><label for="sq18a">False</label></div><div class="squiz-option"><input id="sq18b" name="sq18" type="radio" value="1"/><label for="sq18b">True</label></div></div></div><div class="squiz-item" data-points="2" data-type="mcq" data-correct="1"><div class="squiz-q"><span><span class="qnum">19.</span>Newton’s First Law is also called the law of inertia.</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div><div class="tf-row"><div class="squiz-option"><input id="sq19a" name="sq19" type="radio" value="0"/><label for="sq19a">False</label></div><div class="squiz-option"><input id="sq19b" name="sq19" type="radio" value="1"/><label for="sq19b">True</label></div></div></div><div class="squiz-item" data-points="2" data-type="mcq" data-correct="0"><div class="squiz-q"><span><span class="qnum">20.</span>If the distance between two masses triples, their gravitational force becomes one-third as large.</span><span class="q-tags"><span class="q-diff intermediate">Intermediate</span><span class="q-marks">2 pts</span></span></div><div class="tf-row"><div class="squiz-option"><input id="sq20a" name="sq20" type="radio" value="0"/><label for="sq20a">False</label></div><div class="squiz-option"><input id="sq20b" name="sq20" type="radio" value="1"/><label for="sq20b">True</label></div></div></div><div class="squiz-item" data-points="2" data-type="mcq" data-correct="0"><div class="squiz-q"><span><span class="qnum">21.</span>Temperature and heat mean exactly the same thing in physics.</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div><div class="tf-row"><div class="squiz-option"><input id="sq21a" name="sq21" type="radio" value="0"/><label for="sq21a">False</label></div><div class="squiz-option"><input id="sq21b" name="sq21" type="radio" value="1"/><label for="sq21b">True</label></div></div></div><div class="squiz-item" data-points="2" data-type="mcq" data-correct="1"><div class="squiz-q"><span><span class="qnum">22.</span>Refraction is the bending of light as it changes speed when entering a different medium.</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div><div class="tf-row"><div class="squiz-option"><input id="sq22a" name="sq22" type="radio" value="0"/><label for="sq22a">False</label></div><div class="squiz-option"><input id="sq22b" name="sq22" type="radio" value="1"/><label for="sq22b">True</label></div></div></div><div class="squiz-item" data-points="2" data-type="mcq" data-correct="0"><div class="squiz-q"><span><span class="qnum">23.</span>Sound can travel through the vacuum of outer space.</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div><div class="tf-row"><div class="squiz-option"><input id="sq23a" name="sq23" type="radio" value="0"/><label for="sq23a">False</label></div><div class="squiz-option"><input id="sq23b" name="sq23" type="radio" value="1"/><label for="sq23b">True</label></div></div></div><div class="squiz-item" data-points="2" data-type="mcq" data-correct="1"><div class="squiz-q"><span><span class="qnum">24.</span>An object can have zero displacement after travelling a non-zero distance.</span><span class="q-tags"><span class="q-diff intermediate">Intermediate</span><span class="q-marks">2 pts</span></span></div><div class="tf-row"><div class="squiz-option"><input id="sq24a" name="sq24" type="radio" value="0"/><label for="sq24a">False</label></div><div class="squiz-option"><input id="sq24b" name="sq24" type="radio" value="1"/><label for="sq24b">True</label></div></div></div><div class="squiz-item" data-points="2" data-type="mcq" data-correct="0"><div class="squiz-q"><span><span class="qnum">25.</span>A simple machine can reduce the total amount of work required by creating extra energy.</span><span class="q-tags"><span class="q-diff intermediate">Intermediate</span><span class="q-marks">2 pts</span></span></div><div class="tf-row"><div class="squiz-option"><input id="sq25a" name="sq25" type="radio" value="0"/><label for="sq25a">False</label></div><div class="squiz-option"><input id="sq25b" name="sq25" type="radio" value="1"/><label for="sq25b">True</label></div></div></div>
+<div class="section-heading"><h2>Section C — Fill in the Blank</h2><span class="section-marks">20 marks</span></div><p class="section-note">10 questions · 2 marks each. Type the missing term or value.</p><div class="squiz-item" data-points="2" data-type="fill" data-answers="joule|joules"><div class="squiz-q"><span><span class="qnum">26.</span>The SI unit of energy is the ____.</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div><div class="text-answer"><input id="sq26" name="sq26" type="text" placeholder="Type the missing word"/></div><div class="answer-feedback" id="sq26-fb"></div></div><div class="squiz-item" data-points="2" data-type="fill" data-answers="amperes|ampere|a"><div class="squiz-q"><span><span class="qnum">27.</span>Electric current is measured in ____.</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div><div class="text-answer"><input id="sq27" name="sq27" type="text" placeholder="Type the missing word"/></div><div class="answer-feedback" id="sq27-fb"></div></div><div class="squiz-item" data-points="2" data-type="fill" data-answers="a|acceleration"><div class="squiz-q"><span><span class="qnum">28.</span>Newton’s Second Law is written as F = m____.</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div><div class="text-answer"><input id="sq28" name="sq28" type="text" placeholder="Type the missing word"/></div><div class="answer-feedback" id="sq28-fb"></div></div><div class="squiz-item" data-points="2" data-type="fill" data-answers="gravity|gravitational force"><div class="squiz-q"><span><span class="qnum">29.</span>The force that attracts masses toward one another is called ____.</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div><div class="text-answer"><input id="sq29" name="sq29" type="text" placeholder="Type the missing word"/></div><div class="answer-feedback" id="sq29-fb"></div></div><div class="squiz-item" data-points="2" data-type="fill" data-answers="radiation"><div class="squiz-q"><span><span class="qnum">30.</span>The three main methods of heat transfer are conduction, convection, and ____.</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div><div class="text-answer"><input id="sq30" name="sq30" type="text" placeholder="Type the missing word"/></div><div class="answer-feedback" id="sq30-fb"></div></div><div class="squiz-item" data-points="2" data-type="fill" data-answers="refraction"><div class="squiz-q"><span><span class="qnum">31.</span>The bending of light when it passes from one medium into another is called ____.</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div><div class="text-answer"><input id="sq31" name="sq31" type="text" placeholder="Type the missing word"/></div><div class="answer-feedback" id="sq31-fb"></div></div><div class="squiz-item" data-points="2" data-type="fill" data-answers="vaporization|evaporation|boiling"><div class="squiz-q"><span><span class="qnum">32.</span>The change from liquid to gas is called ____.</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div><div class="text-answer"><input id="sq32" name="sq32" type="text" placeholder="Type the missing word"/></div><div class="answer-feedback" id="sq32-fb"></div></div><div class="squiz-item" data-points="2" data-type="fill" data-answers="time"><div class="squiz-q"><span><span class="qnum">33.</span>Average speed is calculated as total distance divided by total ____.</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div><div class="text-answer"><input id="sq33" name="sq33" type="text" placeholder="Type the missing word"/></div><div class="answer-feedback" id="sq33-fb"></div></div><div class="squiz-item" data-points="2" data-type="fill" data-answers="buoyancy|buoyant force"><div class="squiz-q"><span><span class="qnum">34.</span>The upward force exerted by a fluid on an immersed object is called ____.</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">2 pts</span></span></div><div class="text-answer"><input id="sq34" name="sq34" type="text" placeholder="Type the missing word"/></div><div class="answer-feedback" id="sq34-fb"></div></div><div class="squiz-item" data-points="2" data-type="fill" data-answers="work"><div class="squiz-q"><span><span class="qnum">35.</span>Power is the rate at which ____ is done or energy is transferred.</span><span class="q-tags"><span class="q-diff intermediate">Intermediate</span><span class="q-marks">2 pts</span></span></div><div class="text-answer"><input id="sq35" name="sq35" type="text" placeholder="Type the missing word"/></div><div class="answer-feedback" id="sq35-fb"></div></div>
+<div class="section-heading"><h2>Section D — Matching</h2><span class="section-marks">10 marks</span></div><p class="section-note">5 sub-questions · 2 marks each. Match each sub-question in Column A with the correct entry in Column B.</p><div class="squiz-item" data-points="10" data-type="match-group"><div class="squiz-q"><span><span class="qnum">36.</span>Match each term in Column A with the correct description in Column B.</span><span class="q-tags"><span class="q-diff advanced">Advanced</span><span class="q-marks">10 pts</span></span></div><div class="match-columns"><div class="match-col"><div class="match-col-label">Column A</div><div class="match-a-item"><span class="match-subnum">36(a).</span> Kinetic energy</div><div class="match-a-item"><span class="match-subnum">36(b).</span> Inertia</div><div class="match-a-item"><span class="match-subnum">36(c).</span> Refraction</div><div class="match-a-item"><span class="match-subnum">36(d).</span> Buoyancy</div><div class="match-a-item"><span class="match-subnum">36(e).</span> Power</div></div><div class="match-col"><div class="match-col-label">Column B</div><div class="match-col-b" id="matchColB36"><div class="match-b-item" data-correct="2"><span class="match-move"><button class="move-btn" data-dir="up" type="button">▲</button><button class="move-btn" data-dir="down" type="button">▼</button></span><span class="match-b-text">Bending of light between media</span></div><div class="match-b-item" data-correct="4"><span class="match-move"><button class="move-btn" data-dir="up" type="button">▲</button><button class="move-btn" data-dir="down" type="button">▼</button></span><span class="match-b-text">Rate of doing work</span></div><div class="match-b-item" data-correct="0"><span class="match-move"><button class="move-btn" data-dir="up" type="button">▲</button><button class="move-btn" data-dir="down" type="button">▼</button></span><span class="match-b-text">Energy due to motion</span></div><div class="match-b-item" data-correct="3"><span class="match-move"><button class="move-btn" data-dir="up" type="button">▲</button><button class="move-btn" data-dir="down" type="button">▼</button></span><span class="match-b-text">Upward force from a fluid</span></div><div class="match-b-item" data-correct="1"><span class="match-move"><button class="move-btn" data-dir="up" type="button">▲</button><button class="move-btn" data-dir="down" type="button">▼</button></span><span class="match-b-text">Resistance to a change in motion</span></div></div></div></div></div>
+<div class="section-heading"><h2>Section E — Short Answer</h2><span class="section-marks">20 marks</span></div><p class="section-note">5 questions · 4 marks each. Answer in one or two clear sentences.</p><div class="squiz-item" data-points="4" data-type="short" data-answers="kinetic|motion|potential|height"><div class="squiz-q"><span><span class="qnum">41.</span>Explain the difference between kinetic energy and gravitational potential energy.</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">4 pts</span></span></div><div class="text-answer"><textarea id="sq37" name="sq37" placeholder="Write your answer in one or two sentences"></textarea></div><div class="answer-feedback" id="sq37-fb"></div></div><div class="squiz-item" data-points="4" data-type="short" data-answers="inertia|force|slow|stop"><div class="squiz-q"><span><span class="qnum">42.</span>Why does a seatbelt protect a passenger when a car stops suddenly?</span><span class="q-tags"><span class="q-diff intermediate">Intermediate</span><span class="q-marks">4 pts</span></span></div><div class="text-answer"><textarea id="sq38" name="sq38" placeholder="Write your answer in one or two sentences"></textarea></div><div class="answer-feedback" id="sq38-fb"></div></div><div class="squiz-item" data-points="4" data-type="short" data-answers="mass|weight|gravity"><div class="squiz-q"><span><span class="qnum">43.</span>State the difference between mass and weight.</span><span class="q-tags"><span class="q-diff basic">Basic</span><span class="q-marks">4 pts</span></span></div><div class="text-answer"><textarea id="sq39" name="sq39" placeholder="Write your answer in one or two sentences"></textarea></div><div class="answer-feedback" id="sq39-fb"></div></div><div class="squiz-item" data-points="4" data-type="short" data-answers="hollow|displace|water|density|buoyant"><div class="squiz-q"><span><span class="qnum">44.</span>Why does a steel ship float even though solid steel is denser than water?</span><span class="q-tags"><span class="q-diff intermediate">Intermediate</span><span class="q-marks">4 pts</span></span></div><div class="text-answer"><textarea id="sq40" name="sq40" placeholder="Write your answer in one or two sentences"></textarea></div><div class="answer-feedback" id="sq40-fb"></div></div><div class="squiz-item" data-points="4" data-type="short" data-answers="less force|longer distance|work|trade"><div class="squiz-q"><span><span class="qnum">45.</span>Explain why a ramp makes lifting a load easier without reducing the total work in the ideal case.</span><span class="q-tags"><span class="q-diff advanced">Advanced</span><span class="q-marks">4 pts</span></span></div><div class="text-answer"><textarea id="sq41" name="sq41" placeholder="Write your answer in one or two sentences"></textarea></div><div class="answer-feedback" id="sq41-fb"></div></div>
+<button class="squiz-submit-btn" disabled id="squizSubmitBtn" onclick="submitQuiz()" type="button">Answer all questions to submit</button></form>
+<div class="article-footer-nav"><a href="assessment-arena.html">← Back to Assessment Arena</a><a href="index.html#subject-maths">Physics & Maths →</a></div>
+</main><footer class="edusambam-unified-footer" aria-label="EDUSAMBAM site footer">
+<div class="footer-top">
+<div class="footer-brand">
+<div class="edusambam-footer-brand-row">
+<a class="edusambam-footer-logo-link" href="index.html" aria-label="EDUSAMBAM home">
+<span class="edusambam-brand-mark edusambam-footer-logo" aria-hidden="true">
+<span class="c1"></span><span class="c2"></span><span class="c3"></span>
+<span class="c4"></span><span class="c5"></span><span class="c6"></span>
+</span>
+<span class="edusambam-footer-brand-name">EDUSAMBAM</span>
+</a>
+</div>
+<p class="edusambam-footer-statement">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM.</p>
+</div>
+<div class="footer-col"><h4>Learning</h4><ul>
+<li><a href="index.html#english">English Language</a></li>
+<li><a href="index.html#general-knowledge">General Knowledge</a></li>
+<li><a href="index.html#computer-ai">Computer &amp; AI</a></li>
+<li><a href="index.html#mathematics">Mathematics</a></li>
+<li><a href="index.html#science">Science</a></li>
+<li><a href="index.html#health">Health</a></li>
+<li><a href="index.html#resources">Resources</a></li>
+</ul></div>
+<div class="footer-col"><h4>Practice &amp; Assessment</h4><ul>
+<li><a href="index.html#interactive-activities">Interactive Activities</a></li>
+<li><a href="assessment-arena.html">ASSESSMENT ARENA</a></li>
+<li><a href="assessment-arena.html">What Is Assessment?</a></li>
+<li><a href="index.html#about">Learn Your Way</a></li>
+<li><a href="index.html#resources">Free Resources &amp; Downloads</a></li>
+</ul></div>
+<div class="footer-col"><h4>About EDUSAMBAM</h4><ul>
+<li><a href="index.html#about-edusambam">What EDUSAMBAM Is</a></li>
+<li><a href="index.html#mission">Our Mission</a></li>
+<li><a href="index.html#team">The Team</a></li>
+<li><a href="mailto:info.edusambam@gmail.com">Contact Us</a></li>
+<li><a href="mailto:feedback.edusambam@gmail.com?subject=EDUSAMBAM%20Feedback">Give Feedback</a></li>
+<li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+</ul></div>
+</div>
+<div class="footer-bottom"><p>© 2026 EDUSAMBAM · Learning resources, practice and assessment.</p><ul class="footer-bottom-links">
+<li><a href="#top">Back to Top</a></li>
+<li><a href="index.html#mission">Mission</a></li>
+<li><a href="index.html#team">Team</a></li>
+<li><a href="index.html#resources">Resources</a></li>
+</ul></div>
+</footer><script>
+(function(){
+const form=document.getElementById('squizForm'), submitBtn=document.getElementById('squizSubmitBtn'), progressFill=document.getElementById('squizProgressFill'), progressLabel=document.getElementById('squizProgressLabel'), items=Array.from(document.querySelectorAll('.squiz-item'));
+const totalQuestions=45,totalMarks=100;
+const sectionRanges=[{name:'MCQ',start:0,end:15,max:30},{name:'True/False',start:15,end:25,max:20},{name:'Fill-in-Blank',start:25,end:35,max:20},{name:'Matching',start:35,end:36,max:10},{name:'Short Answer',start:36,end:41,max:20}];
+function syncMatchHeights(g){const a=Array.from(g.querySelectorAll('.match-a-item')),b=Array.from(g.querySelectorAll('.match-b-item'));a.forEach(e=>e.style.minHeight='44px');b.forEach(e=>e.style.minHeight='44px');a.forEach((x,i)=>{if(b[i]){const h=Math.max(x.offsetHeight,b[i].offsetHeight);x.style.minHeight=h+'px';b[i].style.minHeight=h+'px';}})}
+document.querySelectorAll('.match-group').forEach(syncMatchHeights);
+document.querySelectorAll('.squiz-item[data-type="match-group"]').forEach(g=>{syncMatchHeights(g);g.querySelectorAll('.move-btn').forEach(btn=>btn.addEventListener('click',()=>{const row=btn.closest('.match-b-item'),col=btn.closest('.match-col-b');const dir=btn.dataset.dir;if(dir==='up'&&row.previousElementSibling)col.insertBefore(row,row.previousElementSibling);if(dir==='down'&&row.nextElementSibling)col.insertBefore(row.nextElementSibling,row);g.dataset.touched='true';syncMatchHeights(g);updateProgress();}));});
+function normalize(s){return(s||'').toLowerCase().trim().replace(/[.,!?;:'"“”’]/g,'').replace(/\s+/g,' ')}
+function isAnswered(item){const type=item.dataset.type;if(type==='mcq'){const inp=item.querySelector('input[type="radio"]');return !!form.querySelector('input[name="'+inp.name+'"]:checked')}if(type==='match-group')return item.dataset.touched==='true';const input=item.querySelector('input[type="text"],textarea');return normalize(input.value).length>0}
+function countAnswered(){let n=0;items.forEach(it=>{if(isAnswered(it))n+=it.dataset.type==='match-group'?5:1});return n}
+function updateProgress(){const a=countAnswered();progressFill.style.width=(a/totalQuestions*100)+'%';progressLabel.textContent=a+' of '+totalQuestions+' answered';submitBtn.disabled=a<totalQuestions;submitBtn.textContent=a<totalQuestions?'Answer all questions to submit':'Submit Test';document.querySelectorAll('.squiz-option').forEach(o=>o.classList.remove('selected'));form.querySelectorAll('input[type="radio"]:checked').forEach(i=>i.closest('.squiz-option').classList.add('selected'));}
+form.addEventListener('input',updateProgress);form.addEventListener('change',updateProgress);
+window.submitQuiz=function(){let total=0;const sectionScores=[0,0,0,0,0];items.forEach((item,idx)=>{let earned=0;const type=item.dataset.type;if(type==='mcq'){const points=Number(item.dataset.points),name=item.querySelector('input[type="radio"]').name,correct=item.dataset.correct,checked=form.querySelector('input[name="'+name+'"]:checked'),selected=checked?checked.value:null;item.querySelectorAll('.squiz-option').forEach(opt=>{const input=opt.querySelector('input');if(input.value===correct)opt.classList.add('correct-answer');else if(input.value===selected)opt.classList.add('wrong-answer');});if(selected===correct)earned=points;}else if(type==='fill'||type==='short'){const points=Number(item.dataset.points),answers=item.dataset.answers.split('|').map(normalize),input=item.querySelector('input[type="text"],textarea'),userVal=normalize(input.value),wrap=item.querySelector('.text-answer'),fb=item.querySelector('.answer-feedback'),ok=answers.some(a=>a&&userVal.includes(a));if(ok){earned=points;wrap.classList.add('correct-answer');fb.textContent='Correct.';fb.classList.add('visible','is-correct')}else{wrap.classList.add('wrong-answer');fb.textContent='Model answer: '+item.dataset.answers.split('|')[0];fb.classList.add('visible','is-wrong')}}else if(type==='match-group'){const rows=Array.from(item.querySelector('.match-col-b').children);let c=0;rows.forEach((row,i)=>{if(Number(row.dataset.correct)===i){row.classList.add('correct-answer');c++}else row.classList.add('wrong-answer')});earned=c*2;}
+total+=earned;sectionRanges.forEach((sec,si)=>{if(idx>=sec.start&&idx<sec.end)sectionScores[si]+=earned;});});
+document.getElementById('squizScoreBig').textContent=total+'/'+totalMarks;document.getElementById('squizScoreLabel').textContent='You scored '+Math.round(total/totalMarks*100)+'%';document.getElementById('squizScoreBreakdown').innerHTML=sectionRanges.map((s,i)=>s.name+': '+sectionScores[i]+'/'+s.max).join(' &nbsp;·&nbsp; ');const pct=total/totalMarks*100;let tier='Keep practicing';if(pct>=90)tier='Outstanding';else if(pct>=75)tier='Strong grasp';else if(pct>=60)tier='Good progress';else if(pct>=40)tier='Getting there';document.getElementById('squizScoreTier').textContent=tier;document.getElementById('squizResults').classList.add('visible');submitBtn.style.display='none';document.getElementById('squizResults').scrollIntoView({behavior:'smooth',block:'center'});};
+window.retakeQuiz=function(){form.reset();document.querySelectorAll('.squiz-option').forEach(o=>o.classList.remove('correct-answer','wrong-answer','selected'));document.querySelectorAll('.text-answer').forEach(t=>t.classList.remove('correct-answer','wrong-answer'));document.querySelectorAll('.answer-feedback').forEach(f=>{f.classList.remove('visible','is-correct','is-wrong');f.textContent=''});document.querySelectorAll('.match-b-item').forEach(m=>m.classList.remove('correct-answer','wrong-answer'));document.querySelectorAll('.squiz-item[data-type="match-group"]').forEach(g=>g.dataset.touched='false');document.getElementById('squizResults').classList.remove('visible');submitBtn.style.display='block';updateProgress();window.scrollTo({top:0,behavior:'smooth'});};updateProgress();
+})();
+</script>
+<script id="edusambam-unified-nav-js">
+(function(){
+  const pages=[{"title":"Acids, Bases and Salts: The Chemistry of Sour, Bitter, and Neutral — EDUSAMBAM","url":"acids-bases-salts.html"},{"title":"AI Agents: When AI Takes Action, Not Just Talks — EDUSAMBAM","url":"ai-agents.html"},{"title":"AI Ethics: Bias, Privacy and Misinformation Explained — EDUSAMBAM","url":"ai-ethics.html"},{"title":"The Anatomy of the Eye in Depth — EDUSAMBAM","url":"anatomy-of-the-eye-in-depth.html"},{"title":"Animals &amp; Ecosystems: Wildlife GK — EDUSAMBAM","url":"animals-and-ecosystems.html"},{"title":"EDUSAMBAM Article Reader","url":"article-viewer.html"},{"title":"ASSESSMENT ARENA — EDUSAMBAM","url":"assessment-arena.html"},{"title":"Atoms and the Periodic Table: The Building Blocks of Everything — EDUSAMBAM","url":"atoms-and-periodic-table.html"},{"title":"Author's Purpose, Tone &amp; Point of View: The Complete Guide — EDUSAMBAM","url":"authors-purpose-tone-pov.html"},{"title":"Basic Data &amp; Statistics: Mean, Median, and Mode — EDUSAMBAM","url":"basic-data-statistics.html"},{"title":"BODMAS &amp; DMAS Rules: The Correct Order of Operations — EDUSAMBAM","url":"bodmas-dmas-rules.html"},{"title":"Brackets, Fractions &amp; Decimals in BODMAS — EDUSAMBAM","url":"brackets-fractions-decimals-bodmas.html"},{"title":"Cells: The Building Blocks of Life — EDUSAMBAM","url":"cells-the-building-blocks-of-life.html"},{"title":"Character Development: Writing People Readers Care About — EDUSAMBAM","url":"character-development.html"},{"title":"Chemical Bonding: How Atoms Connect to Form Everything — EDUSAMBAM","url":"chemical-bonding.html"},{"title":"Chemical Reactions and Equations: The Language of Change — EDUSAMBAM","url":"chemical-reactions-equations.html"},{"title":"Chemistry in Everyday Life: The Science Hiding in Plain Sight — EDUSAMBAM","url":"chemistry-in-everyday-life.html"},{"title":"Cloud Computing: What \"The Cloud\" Actually Is — EDUSAMBAM","url":"cloud-computing.html"},{"title":"Colour Vision and Colour Blindness Explained — EDUSAMBAM","url":"colour-vision-and-colour-blindness-explained.html"},{"title":"Common Errors in English: A Complete Guide — EDUSAMBAM","url":"common-errors.html"},{"title":"Common Pronunciation Mistakes — EDUSAMBAM","url":"common-pronunciation-mistakes.html"},{"title":"Complaint &amp; Request Letters — EDUSAMBAM","url":"complaint-request-letters.html"},{"title":"Computer Vision: How Machines Learn to See — EDUSAMBAM","url":"computer-vision.html"},{"title":"Context Clues: The Complete Guide — EDUSAMBAM","url":"context-clues.html"},{"title":"Continents &amp; Oceans: The Basic Map of the World — EDUSAMBAM","url":"continents-and-oceans.html"},{"title":"Countries &amp; Capitals: Major Nations Around the World — EDUSAMBAM","url":"countries-and-capitals.html"},{"title":"Cybersecurity Basics: Threats, Defences and Good Digital Habits — EDUSAMBAM","url":"cybersecurity-basics.html"},{"title":"Designing a Fair Experiment: Variables, Repeat Trials &amp; Reliability — EDUSAMBAM","url":"designing-a-fair-experiment.html"},{"title":"Dialogue &amp; Voice: Writing Conversation That Sounds Real — EDUSAMBAM","url":"dialogue-and-voice.html"},{"title":"Digital Footprint &amp; Online Privacy: What Gets Tracked, and Why It Matters — EDUSAMBAM","url":"digital-footprint-privacy.html"},{"title":"Divisibility Rules: Quick Tests for 2 Through 12 — EDUSAMBAM","url":"divisibility-rules.html"},{"title":"Earth's Structure: Layers, Plates &amp; Earthquakes — EDUSAMBAM","url":"earths-structure-layers-plates-and-earthquakes.html"},{"title":"Ecosystems &amp; Biodiversity — EDUSAMBAM","url":"ecosystems-and-biodiversity.html"},{"title":"Effects of Substance Abuse — EDUSAMBAM","url":"effects-of-substance-abuse.html"},{"title":"Electricity and Magnetism: The Basics — EDUSAMBAM","url":"electricity-and-magnetism-the-basics.html"},{"title":"Electrochemistry: Where Chemistry Meets Electricity — EDUSAMBAM","url":"electrochemistry.html"},{"title":"Energy: Types, Sources, and Transformations — EDUSAMBAM","url":"energy-types-sources-transformations.html"},{"title":"English as an International Language — EDUSAMBAM","url":"english-international-language.html"},{"title":"Essay Structure &amp; the Five-Paragraph Essay: The Complete Guide — EDUSAMBAM","url":"essay-structure.html"},{"title":"Evidence, Citations &amp; Avoiding Plagiarism: The Complete Guide — EDUSAMBAM","url":"evidence-citations-plagiarism.html"},{"title":"Exponents &amp; Powers: The Laws of Indices — EDUSAMBAM","url":"exponents-and-powers.html"},{"title":"Factors &amp; Multiples: Prime, Composite, and Common — EDUSAMBAM","url":"factors-and-multiples.html"},{"title":"Famous Personalities: Leaders, Scientists &amp; Nobel Laureates — EDUSAMBAM","url":"famous-personalities.html"},{"title":"Famous World Landmarks &amp; Wonders — EDUSAMBAM","url":"famous-world-landmarks-wonders.html"},{"title":"First Aid and Basic Safety — EDUSAMBAM","url":"first-aid-basic-safety.html"},{"title":"Flags of the World: Reading the Symbols — EDUSAMBAM","url":"flags-of-the-world.html"},{"title":"Fluency Building Techniques — EDUSAMBAM","url":"fluency-building-techniques.html"},{"title":"Food Groups and Healthy Eating Habits — EDUSAMBAM","url":"food-groups-healthy-eating.html"},{"title":"Force and Newton's Laws of Motion — EDUSAMBAM","url":"force-newtons-laws-of-motion.html"},{"title":"Formal vs. Informal English: The Complete Guide — EDUSAMBAM","url":"formal-informal-english.html"},{"title":"Formal Letter Writing — EDUSAMBAM","url":"formal-letter-writing.html"},{"title":"Fraction Fix-It: Strategies for Confident Fraction Sense — EDUSAMBAM","url":"fraction-fix-it.html"},{"title":"Multiply &amp; Divide Fractions: Cross, Flip, and Fly — EDUSAMBAM","url":"fraction-multiply-divide.html"},{"title":"Generative AI: Images, Text and Where the Line Is — EDUSAMBAM","url":"generative-ai.html"},{"title":"The Grammar Trap: 10 Mistakes That Make Smart People Look Careless — EDUSAMBAM","url":"grammar-article.html"},{"title":"Grammar Fix-It — EDUSAMBAM","url":"grammar-fix-it.html"},{"title":"Gravity and Space: Why Things Fall and Planets Orbit — EDUSAMBAM","url":"gravity-and-space.html"},{"title":"Great Inventions &amp; Inventors — EDUSAMBAM","url":"great-inventions-and-inventors.html"},{"title":"HCF &amp; LCM: Highest Common Factor &amp; Lowest Common Multiple — EDUSAMBAM","url":"hcf-and-lcm.html"},{"title":"HCF &amp; LCM Word Problems: Real-Life Applications — EDUSAMBAM","url":"hcf-lcm-word-problems.html"},{"title":"Heat and Temperature: How They Differ — EDUSAMBAM","url":"heat-and-temperature.html"},{"title":"The History of Computing: Babbage to Smartphones — EDUSAMBAM","url":"history-of-computing.html"},{"title":"How Computers Work: Hardware, Software and Binary Code — EDUSAMBAM","url":"how-computers-work.html"},{"title":"How to Write a Perfect Paragraph — EDUSAMBAM","url":"how-to-write-a-perfect-paragraph.html"},{"title":"How We See: Light, Focus, and the Brain's Role in Vision — EDUSAMBAM","url":"how-we-see-light-focus-and-the-brain.html"},{"title":"The Human Body's Immune System — EDUSAMBAM","url":"human-immune-system.html"},{"title":"Idiom Matcher — EDUSAMBAM","url":"idiom-matcher.html"},{"title":"Idioms &amp; Phrases: The Complete Guide — EDUSAMBAM","url":"idioms-phrases.html"},{"title":"The Importance of the English Language — EDUSAMBAM","url":"importance-of-english.html"},{"title":"The Importance of Sleep and Rest — EDUSAMBAM","url":"importance-of-sleep-and-rest.html"},{"title":"EDUSAMBAM — Global Learning, Knowledge &amp; Wellbeing","url":"index.html"},{"title":"India: National Symbols, Founders &amp; Key Facts — EDUSAMBAM","url":"india-national-symbols.html"},{"title":"Informal Letter Writing — EDUSAMBAM","url":"informal-letter-writing.html"},{"title":"Intonation in Conversation — EDUSAMBAM","url":"intonation-in-conversation.html"},{"title":"Job Applications &amp; Cover Letters — EDUSAMBAM","url":"job-applications-cover-letters.html"},{"title":"Lab Safety &amp; Scientific Equipment: The Basics Every Scientist Needs — EDUSAMBAM","url":"lab-safety-scientific-equipment.html"},{"title":"Language and Its Need — EDUSAMBAM","url":"language-and-its-need.html"},{"title":"EDUSAMBAM Learning Hub — Six SAMBAM Pathways","url":"learning-hub.html"},{"title":"Light: Reflection, Refraction, and Color — EDUSAMBAM","url":"light-reflection-refraction-color.html"},{"title":"Machine Learning Explained: How Computers Learn From Data — EDUSAMBAM","url":"machine-learning-explained.html"},{"title":"Main Idea &amp; Supporting Details: The Complete Guide — EDUSAMBAM","url":"main-idea-supporting-details.html"},{"title":"Making Inferences &amp; Drawing Conclusions: The Complete Guide — EDUSAMBAM","url":"making-inferences.html"},{"title":"Matter and Its States: Solid, Liquid, and Gas — EDUSAMBAM","url":"matter-and-its-states.html"},{"title":"Chemistry of Metals and Non-Metals: A Tale of Two Families — EDUSAMBAM","url":"metals-nonmetals-chemistry.html"},{"title":"Mixtures and Solutions: How Substances Combine Without Reacting — EDUSAMBAM","url":"mixtures-and-solutions.html"},{"title":"Models &amp; Simulations in Science — EDUSAMBAM","url":"models-and-simulations.html"},{"title":"The Mole and Chemical Calculations: Counting the Uncountable — EDUSAMBAM","url":"mole-chemical-calculations.html"},{"title":"Motion: Speed, Velocity, and Distance — EDUSAMBAM","url":"motion-speed-velocity-distance.html"},{"title":"Natural Language Processing: How Computers Understand Text — EDUSAMBAM","url":"natural-language-processing.html"},{"title":"Number Base Systems: Binary, Base 5, Base 7, Octal &amp; Decimal — EDUSAMBAM","url":"number-base-systems.html"},{"title":"Addition &amp; Subtraction on the Number Line — EDUSAMBAM","url":"number-line-addition-subtraction.html"},{"title":"Multiplication &amp; Division on the Number Line — EDUSAMBAM","url":"number-line-multiplication-division.html"},{"title":"Number Lines: Placing Whole Numbers, Fractions, and Decimals — EDUSAMBAM","url":"number-lines.html"},{"title":"Number Systems: Natural, Whole, Integer, Rational &amp; Real Numbers — EDUSAMBAM","url":"number-systems.html"},{"title":"Observation vs Inference: Reading Data Like a Scientist — EDUSAMBAM","url":"observation-vs-inference.html"},{"title":"Operating Systems: The Software Behind Every Device — EDUSAMBAM","url":"operating-systems.html"},{"title":"Operations of Integers: Addition, Subtraction, Multiplication &amp; Division — EDUSAMBAM","url":"operations-of-integers.html"},{"title":"Organic Chemistry Basics: The Chemistry of Carbon — EDUSAMBAM","url":"organic-chemistry-basics.html"},{"title":"Pakistan: National Symbols, Founders &amp; Key Facts — EDUSAMBAM","url":"pakistan-national-symbols.html"},{"title":"Parts of Speech: The Building Blocks of English — EDUSAMBAM","url":"parts-of-speech.html"},{"title":"Percentages: Averages, Profit &amp; Loss, Discounts &amp; Interest — EDUSAMBAM","url":"percentages.html"},{"title":"Personal Hygiene and Disease Prevention — EDUSAMBAM","url":"personal-hygiene-disease-prevention.html"},{"title":"Physical Fitness and Exercise Basics — EDUSAMBAM","url":"physical-fitness-exercise-basics.html"},{"title":"Place Value &amp; Face Value: International, Indian &amp; Pakistani Systems — EDUSAMBAM","url":"place-value-face-value.html"},{"title":"Poetry: The Complete Guide — EDUSAMBAM","url":"poetry.html"},{"title":"Practice Test: Academic &amp; Essay Writing — EDUSAMBAM","url":"practice-test-academic-essay-writing.html"},{"title":"Practice Test: AI Agents &amp; Natural Language Processing — EDUSAMBAM","url":"practice-test-ai-agents-and-nlp.html"},{"title":"Practice Test: What Is AI &amp; Machine Learning? — EDUSAMBAM","url":"practice-test-ai-and-machine-learning.html"},{"title":"Chemistry Comprehensive Practice Test 1 — EDUSAMBAM","url":"practice-test-chemistry-comprehensive-1.html"},{"title":"Chemistry Comprehensive Practice Test 2 — EDUSAMBAM","url":"practice-test-chemistry-comprehensive-2.html"},{"title":"Chemistry Comprehensive Practice Test 3 — EDUSAMBAM","url":"practice-test-chemistry-comprehensive-3.html"},{"title":"Chemistry Comprehensive Practice Test 4 — EDUSAMBAM","url":"practice-test-chemistry-comprehensive-4.html"},{"title":"Chemistry Comprehensive Practice Test 5 — EDUSAMBAM","url":"practice-test-chemistry-comprehensive-5.html"},{"title":"Chemistry Comprehensive Practice Test 6 — EDUSAMBAM","url":"practice-test-chemistry-comprehensive-6.html"},{"title":"Practice Test: Cloud Computing — EDUSAMBAM","url":"practice-test-cloud-computing.html"},{"title":"Practice Test: Computer Vision &amp; Recommendation Systems — EDUSAMBAM","url":"practice-test-computer-vision-and-recommendation-systems.html"},{"title":"Practice Test: Countries, Capitals &amp; Flags of the World | EDUSAMBAM","url":"practice-test-countries-capitals-flags.html"},{"title":"Practice Test: Creative Writing — Part 2 — EDUSAMBAM","url":"practice-test-creative-writing-part-1.html"},{"title":"Practice Test: Creative Writing — Part 1 — EDUSAMBAM","url":"practice-test-creative-writing-part.html"},{"title":"Practice Test: Digital Footprint &amp; Online Privacy — EDUSAMBAM","url":"practice-test-digital-footprint-privacy.html"},{"title":"Practice Test: Factors &amp; Multiples — EDUSAMBAM","url":"practice-test-factors-multiples.html"},{"title":"Practice Test: Foundational Concepts of English — EDUSAMBAM","url":"practice-test-foundational-concepts-english.html"},{"title":"Practice Test: Fractions — EDUSAMBAM","url":"practice-test-fractions.html"},{"title":"Practice Test: Generative AI &amp; Prompt Engineering — EDUSAMBAM","url":"practice-test-generative-ai-and-prompt-engineering.html"},{"title":"Practice Test: Grammar Basics — EDUSAMBAM","url":"practice-test-grammar-basics.html"},{"title":"Practice Test: The History of Computing — EDUSAMBAM","url":"practice-test-history-of-computing.html"},{"title":"Practice Test: How the Internet Works — EDUSAMBAM","url":"practice-test-how-the-internet-works.html"},{"title":"Practice Test: Literary Forms — EDUSAMBAM","url":"practice-test-literary-forms.html"},{"title":"Practice Test: What Is an LLM &amp; AI Ethics? — EDUSAMBAM","url":"practice-test-llm-and-ai-ethics.html"},{"title":"Practice Test: Measurement — EDUSAMBAM","url":"practice-test-measurement.html"},{"title":"Practice Test: Number Line Skills — EDUSAMBAM","url":"practice-test-number-line-skills.html"},{"title":"Practice Test: Number Systems — EDUSAMBAM","url":"practice-test-number-systems.html"},{"title":"Practice Test: Operations &amp; BODMAS — EDUSAMBAM","url":"practice-test-operations-bodmas.html"},{"title":"Practice Test: Parts of a Computer — EDUSAMBAM","url":"practice-test-parts-of-a-computer.html"},{"title":"Physics Comprehensive Practice Test 1 — EDUSAMBAM","url":"practice-test-physics-comprehensive-1.html"},{"title":"Physics Comprehensive Practice Test 2 — EDUSAMBAM","url":"practice-test-physics-comprehensive-2.html"},{"title":"Physics Comprehensive Practice Test 3 — EDUSAMBAM","url":"practice-test-physics-comprehensive-3.html"},{"title":"Physics Comprehensive Practice Test 4 — EDUSAMBAM","url":"practice-test-physics-comprehensive-4.html"},{"title":"Physics Comprehensive Practice Test 5 — EDUSAMBAM","url":"practice-test-physics-comprehensive-5.html"},{"title":"Physics Comprehensive Practice Test 6 — EDUSAMBAM","url":"practice-test-physics-comprehensive-6.html"},{"title":"Practice Test: Powers &amp; Roots — EDUSAMBAM","url":"practice-test-powers-roots.html"},{"title":"Practice Test: Practical Writing — EDUSAMBAM","url":"practice-test-practical-writing.html"},{"title":"Practice Test: Ratio &amp; Percentages — EDUSAMBAM","url":"practice-test-ratio-percentages.html"},{"title":"Practice Test: Reading Comprehension — EDUSAMBAM","url":"practice-test-reading-comprehension.html"},{"title":"Practice Test: Search Engines &amp; Web Browsers — EDUSAMBAM","url":"practice-test-search-engines-browsers.html"},{"title":"Practice Test: The Seven Wonders of the Modern World | EDUSAMBAM","url":"practice-test-seven-wonders-of-the-world.html"},{"title":"Practice Test: Software, Apps &amp; Operating Systems — EDUSAMBAM","url":"practice-test-software-apps-operating-systems.html"},{"title":"Practice Test: Speaking &amp; Pronunciation — EDUSAMBAM","url":"practice-test-speaking-pronunciation.html"},{"title":"Practice Test: Staying Safe Online — EDUSAMBAM","url":"practice-test-staying-safe-online.html"},{"title":"Practice Test: Times Tables — EDUSAMBAM","url":"practice-test-times-tables.html"},{"title":"Practice Test: Vocabulary Building — EDUSAMBAM","url":"practice-test-vocabulary-building.html"},{"title":"Practice Test: What Is an Algorithm? — EDUSAMBAM","url":"practice-test-what-is-an-algorithm.html"},{"title":"Practice Test: What Is Coding? — EDUSAMBAM","url":"practice-test-what-is-coding.html"},{"title":"Practice Test: Why Do We Need Mathematics? — EDUSAMBAM","url":"practice-test-why-we-need-mathematics.html"},{"title":"Practice Test: World Landmarks &amp; Continents and Oceans | EDUSAMBAM","url":"practice-test-world-landmarks-continents-oceans.html"},{"title":"Prefixes, Suffixes &amp; Root Words: The Complete Guide — EDUSAMBAM","url":"prefixes-suffixes-root-words.html"},{"title":"Pressure and Buoyancy: Why Some Things Float and Others Sink — EDUSAMBAM","url":"pressure-and-buoyancy.html"},{"title":"Professional Email Etiquette — EDUSAMBAM","url":"professional-email-etiquette.html"},{"title":"Prompt Engineering: Getting Better Results From AI Tools — EDUSAMBAM","url":"prompt-engineering.html"},{"title":"Prose: The Complete Guide — EDUSAMBAM","url":"prose.html"},{"title":"Punctuation Practice — EDUSAMBAM","url":"punctuation-practice.html"},{"title":"Punctuation Rules: The Complete Guide — EDUSAMBAM","url":"punctuation-rules.html"},{"title":"Ratio &amp; Proportion: Complete Guide with All Question Types — EDUSAMBAM","url":"ratio-and-proportion.html"},{"title":"Recommendation Systems: How Netflix and Spotify \"Know\" What You Like — EDUSAMBAM","url":"recommendation-systems.html"},{"title":"The Role of an Optometrist in Vision Health and Treatment — EDUSAMBAM","url":"role-of-an-optometrist-in-vision-health-and-treatment.html"},{"title":"Roman Numerals: Reading and Writing an Ancient Number System — EDUSAMBAM","url":"roman-numerals.html"},{"title":"Science vs Pseudoscience: How to Tell the Difference — EDUSAMBAM","url":"science-vs-pseudoscience.html"},{"title":"Scientific Measurement &amp; SI Units: The Language of Data — EDUSAMBAM","url":"scientific-measurement-si-units.html"},{"title":"Scientific Notation: Writing Very Large and Very Small Numbers — EDUSAMBAM","url":"scientific-notation.html"},{"title":"The Scientific Revolution: How Modern Science Began — EDUSAMBAM","url":"scientific-revolution.html"},{"title":"Search Engines &amp; Web Browsers: How the Internet Finds Things — EDUSAMBAM","url":"search-engines-browsers.html"},{"title":"Editing Your Own Work: A Step-by-Step Process — EDUSAMBAM","url":"self-editing-process.html"},{"title":"Sentence Scramble — EDUSAMBAM","url":"sentence-scramble.html"},{"title":"Sentence Structure: From Basic to Advanced — EDUSAMBAM","url":"sentence-structure.html"},{"title":"The Seven Wonders of the Modern World — EDUSAMBAM","url":"seven-wonders-of-the-world.html"},{"title":"Show, Don't Tell: The Principle of Vivid Writing — EDUSAMBAM","url":"show-dont-tell.html"},{"title":"Software, Apps &amp; Operating Systems — EDUSAMBAM","url":"software-apps-operating-systemsoverlaps.html"},{"title":"Sound: How We Hear the World — EDUSAMBAM","url":"sound-how-we-hear-the-world.html"},{"title":"Spoken English &amp; Pronunciation: Mistakes, Stress and Fluency — EDUSAMBAM","url":"spoken-english-pronunciation.html"},{"title":"Sports of the World: Rules, Terms &amp; Records — EDUSAMBAM","url":"sports-of-the-world.html"},{"title":"Squares, Square Roots, Cubes &amp; Cube Roots — EDUSAMBAM","url":"squares-cubes-roots.html"},{"title":"States of Matter and Changes: Why Substances Transform — EDUSAMBAM","url":"states-of-matter-changes.html"},{"title":"Story Structure: Beginning, Middle and End — EDUSAMBAM","url":"story-structure.html"},{"title":"Synonyms &amp; Antonyms: The Complete Guide — EDUSAMBAM","url":"synonyms-antonyms.html"},{"title":"Tenses &amp; Verb Forms: The Complete Guide — EDUSAMBAM","url":"tenses-verb-forms.html"},{"title":"Text Structure &amp; Organization: The Complete Guide — EDUSAMBAM","url":"text-structure-organization.html"},{"title":"The Solar System: Planets, Moons &amp; the Sun — EDUSAMBAM","url":"the-solar-system-planets-moons-and-the-sun.html"},{"title":"The Water Cycle &amp; Earth's Water Systems — EDUSAMBAM","url":"the-water-cycle-and-earths-water-systems.html"},{"title":"Thesis Statements: The Complete Guide — EDUSAMBAM","url":"thesis-statements.html"},{"title":"Times Tables Trainer: Strategies for Fast, Confident Multiplication — EDUSAMBAM","url":"times-tables-trainer.html"},{"title":"Transitions &amp; Cohesion: The Complete Guide — EDUSAMBAM","url":"transitions-cohesion.html"},{"title":"Types of Essays: The Complete Guide — EDUSAMBAM","url":"types-of-essays.html"},{"title":"Understanding Mental Health and Emotions — EDUSAMBAM","url":"understanding-mental-health-emotions.html"},{"title":"Units of Measurement: Length, Mass, Capacity, Time &amp; Area — EDUSAMBAM","url":"units-of-measurement.html"},{"title":"Understanding Vaccines and Immunization — EDUSAMBAM","url":"vaccines-and-immunization.html"},{"title":"Vision Science and Optometry: An Introduction — EDUSAMBAM","url":"vision-science-and-optometry-an-introduction.html"},{"title":"Vocabulary Flashcards — EDUSAMBAM","url":"vocabulary-flashcards.html"},{"title":"Weather &amp; Climate: How the Atmosphere Works — EDUSAMBAM","url":"weather-and-climate-how-the-atmosphere-works.html"},{"title":"What is a Balanced Diet and Why Does It Matter? — EDUSAMBAM","url":"what-is-a-balanced-diet.html"},{"title":"What Is an Algorithm? Thinking Like a Computer — EDUSAMBAM","url":"what-is-an-algorithm.html"},{"title":"What Is a Large Language Model? How Chatbots Actually Work — EDUSAMBAM","url":"what-is-an-llm.html"},{"title":"What is Artificial Intelligence and How Does It Work? — EDUSAMBAM","url":"what-is-artificial-intelligence.html"},{"title":"What is Biology? — EDUSAMBAM","url":"what-is-biology.html"},{"title":"What is Chemistry? The Science of Matter and Change — EDUSAMBAM","url":"what-is-chemistry.html"},{"title":"What Is Coding? Programming Languages Explained, From Basics to Advanced — EDUSAMBAM","url":"what-is-coding.html"},{"title":"What is Health? Physical, Mental &amp; Social Wellbeing — EDUSAMBAM","url":"what-is-health.html"},{"title":"What is Language? — EDUSAMBAM","url":"what-is-language.html"},{"title":"What is Physics? The Study of How Things Work — EDUSAMBAM","url":"what-is-physics.html"},{"title":"What is Science? The Scientific Method — EDUSAMBAM","url":"what-is-science-scientific-method.html"},{"title":"What is the Human Cell? A Simple Guide — EDUSAMBAM","url":"what-is-the-human-cell.html"},{"title":"What Is the Internet, Really? Servers, Packets and How Data Travels — EDUSAMBAM","url":"what-is-the-internet.html"},{"title":"Why Do We Need Mathematics in Daily Life? — EDUSAMBAM","url":"why-do-we-need-mathematics.html"},{"title":"Word &amp; Sentence Stress Patterns — EDUSAMBAM","url":"word-and-sentence-stress.html"},{"title":"Work, Power, and Simple Machines — EDUSAMBAM","url":"work-power-simple-machines.html"}];
+  function closeAll(except){
+    document.querySelectorAll('.edusambam-mobile-menu,.edusambam-search-panel').forEach(el=>{
+      if(el!==except) el.classList.remove('open');
+    });
+    const b=document.querySelector('.edusambam-menu-btn');
+    if(b) b.setAttribute('aria-expanded', String(document.querySelector('.edusambam-mobile-menu')?.classList.contains('open')||false));
+  }
+  function setup(){
+    const menu=document.querySelector('.edusambam-mobile-menu');
+    const mb=document.querySelector('.edusambam-menu-btn');
+    const sb=document.querySelector('.edusambam-search-btn');
+    const panel=document.querySelector('.edusambam-search-panel');
+    const input=document.querySelector('.edusambam-search-input');
+    const results=document.querySelector('.edusambam-search-results');
+    if(mb && menu){
+      mb.addEventListener('click',()=>{
+        const open=menu.classList.toggle('open'); closeAll(open?menu:null);
+        mb.setAttribute('aria-expanded',String(open));
+        if(open) panel?.classList.remove('open');
+      });
+    }
+    if(sb && panel){
+      sb.addEventListener('click',()=>{
+        const open=panel.classList.toggle('open'); closeAll(open?panel:null);
+        if(open) setTimeout(()=>input?.focus(),30);
+      });
+    }
+    if(input && results){
+      const render=()=>{
+        const q=input.value.trim().toLowerCase();
+        const hits=q?pages.filter(x=>(x.title+' '+x.url).toLowerCase().includes(q)).slice(0,20):[];
+        results.innerHTML=hits.map(x=>'<a href="'+x.url.replace(/"/g,'&quot;')+'">'+
+          x.title.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</a>').join('') ||
+          (q?'<div style="padding:10px;color:#64748b">No matching pages found.</div>':'');
+      };
+      input.addEventListener('input',render);
+    }
+    document.addEventListener('keydown',e=>{
+      if(e.key==='Escape') closeAll(null);
+    });
+    document.addEventListener('click',e=>{
+      if(!e.target.closest('.edusambam-nav') && !e.target.closest('.edusambam-mobile-menu') && !e.target.closest('.edusambam-search-panel')) closeAll(null);
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',setup); else setup();
+})();
+</script>
+
+</body></html>

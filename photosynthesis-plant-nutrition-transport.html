@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<!-- Google Analytics 4 — EDUSAMBAM -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Y35DW0V4HQ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-Y35DW0V4HQ');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Photosynthesis, Plant Nutrition &amp; Transport — EDUSAMBAM</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --red:       #8B0000;
+    --red-mid:   #A50000;
+    --red-lt:    #F9F0F0;
+    --navy:      #06244a;
+    --navy-mid:  #1C3151;
+    --gold:      #B8963E;
+    --gold-lt:   #F5EDD6;
+    --cream:     #FAF8F4;
+    --white:     #FFFFFF;
+    --ink:       #1A1A1A;
+    --slate:     #4A4A4A;
+    --muted:     #767676;
+    --border:    #D8D0C8;
+    --border-lt: #EDE8E0;
+    --radius:    4px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--ink);
+    background: var(--white);
+    line-height: 1.7;
+    overflow-x: hidden;
+
+    border: 3px solid #d4a017;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+  /* ── TOP BAR ── */
+  .top-bar {
+    background: var(--navy);
+    padding: 0.45rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .top-bar p {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.03em;
+  }
+  .top-bar-links { display: flex; gap: 1.5rem; list-style: none; }
+  .top-bar-links a {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+  .top-bar-links a:hover { color: white; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 200;
+    background: rgba(255,255,255,.97);
+    border-bottom: 3px solid var(--gold);
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    box-shadow: 0 2px 12px rgba(8,47,99,0.08);
+  }
+  .nav-brand { display: flex; flex-direction: column; line-height: 1; text-decoration: none; }
+  .nav-brand-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: 0.01em;
+  }
+  .nav-brand-name span { color: var(--red); }
+  .nav-brand-sub {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: rgba(13,27,42,0.6);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 0.25rem;
+  }
+  .nav-links { display: flex; gap: 0; list-style: none; }
+  .nav-links a {
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(13,27,42,0.75);
+    padding: 0 1.1rem;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--b, #0b4ea2); }
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+  }
+
+  /* ── DIAGRAM BOX (for CSS/SVG illustrations) ── */
+  .diagram-box {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin: 1.5rem 0 2rem;
+    text-align: center;
+  }
+  .diagram-box svg { max-width: 100%; height: auto; }
+  .diagram-caption {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 0.8rem;
+    font-style: italic;
+  }
+  .bar-chart { display: flex; align-items: flex-end; gap: 0.9rem; height: 180px; padding: 0 0.5rem; justify-content: center; }
+  .bar-chart .bar-col { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; width: 60px; }
+  .bar-chart .bar { width: 100%; background: var(--gold); border-radius: 3px 3px 0 0; position: relative; }
+  .bar-chart .bar.red { background: var(--red); }
+  .bar-chart .bar-val { font-size: 0.75rem; font-weight: 600; color: var(--ink); margin-bottom: 0.3rem; }
+  .bar-chart .bar-label { font-size: 0.72rem; color: var(--slate); margin-top: 0.5rem; text-align: center; }
+
+  /* ── ARTICLE HERO ── */
+  .article-hero {
+    background: linear-gradient(135deg,#06244a,#0b4ea2);
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+  }
+  .breadcrumb {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 1.1rem;
+    letter-spacing: 0.02em;
+  }
+  .breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--gold); }
+  .article-hero-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(184,150,62,0.4);
+    padding: 0.35rem 0.9rem;
+    border-radius: 30px;
+    margin-bottom: 1.25rem;
+  }
+  .article-hero h1 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 2.4rem;
+    color: white;
+    max-width: 760px;
+    margin: 0 auto 1rem;
+    line-height: 1.25;
+  }
+  .article-hero p.sub {
+    color: rgba(255,255,255,0.6);
+    max-width: 620px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.02rem;
+  }
+  .article-hero-meta {
+    display: flex; justify-content: center; gap: 0.9rem;
+    font-size: 0.8rem; color: rgba(255,255,255,0.45);
+    flex-wrap: wrap;
+  }
+
+  /* ── ARTICLE BODY ── */
+  .article-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+  .article-wrap h2 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 1.65rem;
+    color: var(--navy);
+    margin: 2.6rem 0 1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--border-lt);
+  }
+  .article-wrap h2 span.num {
+    color: var(--red);
+    margin-right: 0.5rem;
+    font-style: italic;
+  }
+  .article-wrap p { color: var(--slate); margin-bottom: 1rem; font-size: 1.02rem; }
+  .article-wrap ul { margin: 0 0 1.2rem 1.4rem; color: var(--slate); }
+  .article-wrap li { margin-bottom: 0.5rem; }
+  .article-wrap strong { color: var(--ink); }
+  .lead {
+    font-size: 1.15rem;
+    color: var(--ink);
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    border-left: 3px solid var(--gold);
+    padding-left: 1.2rem;
+    margin: 1.5rem 0 2rem;
+  }
+  .example-box {
+    background: var(--gold-lt);
+    border: 1px solid rgba(184,150,62,0.35);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 1.3rem 1.5rem;
+    margin: 1.3rem 0 1.8rem;
+  }
+  .example-box .ex-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.5rem;
+  }
+  .example-box p { color: var(--ink); margin-bottom: 0.4rem; font-size: 0.98rem; }
+  .example-box p:last-child { margin-bottom: 0; }
+
+  .real-world-box {
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 1.6rem 1.7rem;
+    margin: 2.4rem 0;
+  }
+  .real-world-box .rw-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.7rem;
+  }
+  .real-world-box p { color: rgba(255,255,255,0.8); margin-bottom: 0; font-size: 1rem; }
+
+  .table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+  table.pos-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+  table.pos-table th {
+    background: var(--navy);
+    color: white;
+    text-align: left;
+    padding: 0.7rem 0.9rem;
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+  }
+  table.pos-table td {
+    padding: 0.7rem 0.9rem;
+    border-bottom: 1px solid var(--border-lt);
+    color: var(--slate);
+  }
+  table.pos-table tr:nth-child(even) td { background: var(--cream); }
+
+  /* ── QUIZ ── */
+  .quiz-section {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem 1.7rem 1.5rem;
+    margin-top: 3rem;
+  }
+  .quiz-section .section-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.4rem;
+  }
+  .quiz-section h2 {
+    border: none; margin: 0 0 0.4rem; padding: 0;
+  }
+  .quiz-intro { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.6rem; }
+  .quiz-item {
+    background: var(--white);
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .quiz-q {
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.7rem;
+    font-size: 1rem;
+  }
+  .quiz-q .qnum { color: var(--red); margin-right: 0.4rem; }
+  .quiz-options { list-style: none; margin: 0 0 0.9rem; }
+  .quiz-options li {
+    padding: 0.4rem 0;
+    color: var(--slate);
+    font-size: 0.96rem;
+    padding-left: 1.4rem;
+    position: relative;
+  }
+  .quiz-options li::before {
+    content: "";
+    position: absolute; left: 0; top: 0.85rem;
+    width: 6px; height: 6px;
+    background: var(--border);
+    border-radius: 50%;
+  }
+  .show-answer-btn {
+    background: var(--navy);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 0.5rem 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .show-answer-btn:hover { background: var(--navy-mid); }
+  .quiz-answer {
+    display: none;
+    margin-top: 0.9rem;
+    background: var(--gold-lt);
+    border-left: 3px solid var(--gold);
+    padding: 0.7rem 1rem;
+    font-size: 0.92rem;
+    color: var(--ink);
+    border-radius: var(--radius);
+  }
+  .quiz-answer.visible { display: block; }
+  .quiz-answer strong { color: var(--red); }
+
+  .answer-key-toggle {
+    display: block;
+    width: 100%;
+    background: var(--red);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding: 0.9rem 1rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    margin-top: 0.6rem;
+    transition: background 0.2s;
+  }
+  .answer-key-toggle:hover { background: var(--red-mid); }
+
+  .article-footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-lt);
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .article-footer-nav a {
+    text-decoration: none;
+    color: var(--red);
+    font-weight: 600;
+    font-size: 0.92rem;
+  }
+  .article-footer-nav a:hover { text-decoration: underline; }
+
+  @media (max-width: 700px) {
+    .article-hero h1 { font-size: 1.7rem; }
+    .article-wrap { padding: 2rem 1.25rem 3rem; }
+  }
+  @media (max-width: 680px) {
+    .top-bar { display: none; }
+    nav {
+      padding: 0 1rem;
+      height: 68px;
+      border-bottom-width: 2px;
+    }
+    .nav-links { display: none; }
+    .nav-brand-name {
+      font-size: 1.35rem;
+      white-space: nowrap;
+    }
+    .nav-brand-sub {
+      font-size: 0.62rem;
+      letter-spacing: 0.07em;
+    }
+    .footer-top { grid-template-columns: 1fr; gap: 2rem; padding: 2rem 1.25rem; }
+    footer { padding: 2rem 1.25rem 0; }
+  }
+
+  /* ── FOOTER (copied from site) ── */
+  footer { background: var(--navy); padding: 3.5rem 3rem 0; }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 2.5rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .footer-brand-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+  }
+  .footer-brand-name span { color: var(--red); }
+  .footer-desc { color: rgba(255,255,255,0.45); font-size: 0.9rem; margin-top: 0.8rem; max-width: 320px; }
+  .footer-col h4 {
+    font-family: 'EB Garamond', serif;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 0.7rem; }
+  .footer-col a {
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.2s;
+  }
+  .footer-col a:hover { color: var(--gold); }
+  .footer-bottom {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer-bottom p { color: rgba(255,255,255,0.35); font-size: 0.8rem; }
+  .footer-bottom-links { display: flex; gap: 1.3rem; list-style: none; }
+  .footer-bottom-links a { color: rgba(255,255,255,0.35); text-decoration: none; font-size: 0.8rem; }
+  .footer-bottom-links a:hover { color: rgba(255,255,255,0.6); }
+  @media (max-width: 900px) {
+    .footer-top { grid-template-columns: 1fr 1fr; }
+    footer { padding: 2rem 1.25rem 0; }
+  }
+
+  /* SCORED QUIZ (click-to-highlight + real scoring) */
+  .squiz-progress {
+    background: var(--cream);
+    border-radius: 30px;
+    height: 8px;
+    overflow: hidden;
+    margin-bottom: 0.4rem;
+  }
+  .squiz-progress-fill {
+    background: var(--gold);
+    height: 100%;
+    width: 0%;
+    transition: width 0.25s ease;
+  }
+  .squiz-progress-label {
+    font-size: 0.78rem;
+    color: var(--muted);
+    text-align: right;
+    margin-bottom: 1.3rem;
+  }
+  .squiz-item {
+    background: var(--white);
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .squiz-q {
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+  }
+  .squiz-q .qnum { color: var(--red); margin-right: 0.4rem; }
+  .squiz-option {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .squiz-option:hover { border-color: var(--gold); }
+  .squiz-option input[type="radio"] { accent-color: var(--red); width: 16px; height: 16px; flex-shrink: 0; }
+  .squiz-option label { cursor: pointer; font-size: 0.94rem; color: var(--slate); flex: 1; }
+  .squiz-option.selected { border-color: var(--red); background: rgba(139,0,0,0.04); }
+  .squiz-option.correct-answer { border-color: #2e7d32; background: rgba(46,125,50,0.08); }
+  .squiz-option.wrong-answer { border-color: var(--red); background: rgba(139,0,0,0.08); }
+  .squiz-submit-btn {
+    display: block;
+    width: 100%;
+    background: var(--red);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.98rem;
+    font-weight: 600;
+    padding: 0.9rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    margin-top: 0.6rem;
+    transition: background 0.2s;
+  }
+  .squiz-submit-btn:hover { background: var(--red-mid); }
+  .squiz-submit-btn:disabled { background: var(--border); cursor: not-allowed; }
+  .squiz-results {
+    display: none;
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 2rem 1.6rem;
+    text-align: center;
+    margin-bottom: 1.8rem;
+  }
+  .squiz-results.visible { display: block; }
+  .squiz-results .squiz-score-big {
+    font-family: 'EB Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .squiz-results .squiz-score-label { color: rgba(255,255,255,0.7); font-size: 0.98rem; margin-bottom: 1rem; }
+  .squiz-results .squiz-score-tier {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    border-radius: 30px;
+    background: rgba(184,150,62,0.15);
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+  }
+  .squiz-retake-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 0.65rem 1.4rem;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  .squiz-retake-btn:hover { background: rgba(255,255,255,0.1); }
+</style>
+<style id="edusambam-reader-style">
+.mark{width:48px;height:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px;border-radius:14px;background:#eef6ff;box-shadow:0 2px 7px rgba(8,47,99,.10);flex:0 0 48px}.mark i{display:block;border-radius:50%;background:#0b4ea2;min-width:0;min-height:0}.mark i:nth-child(5){background:#d4a017}.edusambam-reader{max-width:980px;margin:1.2rem auto 0;padding:1rem 1.1rem;border:1px solid #d7e4ef;border-radius:14px;background:linear-gradient(135deg,#f7fbff,#fff);box-shadow:0 6px 18px rgba(11,45,92,.08)}.edusambam-reader strong{display:block;color:#0b55a5;font-size:.9rem;letter-spacing:.04em}.edusambam-reader .reader-slogan{color:#b27e08;font-weight:900;margin-top:.25rem;font-size:.82rem}.edusambam-reader .reader-help{color:#607086;font-size:.8rem;margin:.3rem 0 .7rem}.edusambam-reader .reader-controls{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}.edusambam-reader button,.edusambam-reader select{border:1px solid #c9d9e8;background:#fff;color:#153b6e;border-radius:8px;padding:.48rem .65rem;font-weight:800;cursor:pointer}.edusambam-reader button:first-child{background:#0b55a5;color:#fff;border-color:#0b55a5}.edusambam-reader .reader-status{display:block;color:#607086;font-size:.75rem;margin-top:.55rem}.edusambam-reader .reader-progress{height:4px;background:#e4edf6;border-radius:99px;margin-top:.6rem;overflow:hidden}.edusambam-reader .reader-progress span{display:block;width:0;height:100%;background:#e1ad1c;transition:width .2s linear}@media(max-width:600px){.edusambam-reader{margin-left:0;margin-right:0}.edusambam-reader .reader-controls button,.edusambam-reader .reader-controls select{flex:1;min-width:75px}}
+</style><style id="edusambam-edge-fix">.article-wrap,.article-hero,.nav-brand{min-width:0;overflow:visible}.article-wrap h1,.article-wrap h2,.article-wrap h3,.article-hero h1,.article-hero .sub{overflow-wrap:anywhere;word-break:normal}.article-wrap{padding-left:max(1.25rem,3vw);padding-right:max(1.25rem,3vw)}@media(max-width:600px){.article-wrap{padding-left:1rem;padding-right:1rem}.article-hero{padding-left:1rem;padding-right:1rem}.nav-brand{overflow:visible!important}.nav-brand-name,.nav-brand-sub{overflow-wrap:anywhere}}</style><style id="edusambam-frame-final">html{box-sizing:border-box;max-width:100%;overflow-x:hidden}*,*:before,*:after{box-sizing:inherit}body{max-width:100%;min-width:0;overflow-x:hidden;border:3px solid #d4a017;box-sizing:border-box}img,svg,video,iframe{max-width:100%;height:auto}h1,h2,h3,h4,p,a,span,small,b,strong{overflow-wrap:anywhere}section,header,footer,main,nav{max-width:100%;box-sizing:border-box}@media(max-width:600px){body{border-width:3px}h1,h2,h3{margin-left:0!important;margin-right:0!important}}</style><style id="edusambam-unified-nav-css">
+/* EDUSAMBAM unified navigation */
+.edusambam-nav{
+  position:sticky;top:0;z-index:10000;
+  min-height:72px;box-sizing:border-box;
+  display:flex;align-items:center;
+  padding:10px 20px;
+  background:#fff;border-bottom:1px solid #e5e7eb;
+  font-family:inherit;
+}
+.edusambam-nav-inner{
+  width:100%;max-width:1400px;margin:0 auto;
+  display:flex;align-items:center;gap:18px;min-width:0;
+}
+.edusambam-brand{
+  display:flex;align-items:center;gap:10px;min-width:0;
+  text-decoration:none;color:#0b3b66;flex:0 0 auto;
+}
+.edusambam-brand-copy{display:flex;flex-direction:column;line-height:1;min-width:0}
+.edusambam-brand-name{
+  font-family:"EB Garamond",Georgia,serif;
+  font-size:1.6rem;font-weight:600;letter-spacing:.01em;
+  color:#0b3b66;white-space:nowrap;
+}
+.edusambam-brand-subtitle{
+  margin-top:4px;
+  font-size:.62rem;font-weight:600;letter-spacing:.08em;
+  color:#64748b;white-space:nowrap;
+}
+.edusambam-nav-links{
+  display:flex;align-items:center;gap:14px;margin-left:auto;
+  list-style:none;padding:0;margin-top:0;margin-bottom:0;
+}
+.edusambam-nav-links a{
+  color:#334155;text-decoration:none;font-size:.9rem;
+  padding:8px 5px;border-radius:7px;white-space:nowrap;
+}
+.edusambam-nav-links a:hover,.edusambam-nav-links a:focus-visible{
+  color:#0b3b66;background:#f3f6f9;outline:none;
+}
+.edusambam-search-btn,.edusambam-menu-btn{
+  appearance:none;border:1px solid #d8dee6;background:#fff;
+  color:#0b3b66;border-radius:9px;min-width:40px;height:40px;
+  display:inline-flex;align-items:center;justify-content:center;
+  cursor:pointer;font-size:1.15rem;flex:0 0 auto;
+}
+.edusambam-search-btn:hover,.edusambam-menu-btn:hover,
+.edusambam-search-btn:focus-visible,.edusambam-menu-btn:focus-visible{
+  background:#f3f6f9;border-color:#b9c6d4;outline:2px solid rgba(214,162,58,.35);
+  outline-offset:2px;
+}
+.edusambam-menu-btn{display:none;font-size:1.2rem}
+.edusambam-mobile-menu{
+  display:none;position:fixed;top:72px;left:0;right:0;
+  z-index:9999;background:#fff;border-bottom:1px solid #e5e7eb;
+  box-shadow:0 8px 24px rgba(15,23,42,.12);
+  max-height:calc(100vh - 72px);overflow:auto;
+}
+.edusambam-mobile-menu.open{display:block}
+.edusambam-mobile-menu ul{list-style:none;margin:0;padding:10px 16px 16px}
+.edusambam-mobile-menu a{
+  display:block;padding:12px 10px;color:#0b3b66;text-decoration:none;
+  border-radius:8px;font-size:.98rem;
+}
+.edusambam-mobile-menu a:hover,.edusambam-mobile-menu a:focus-visible{
+  background:#f3f6f9;outline:none;
+}
+.edusambam-search-panel{
+  display:none;position:fixed;top:72px;left:0;right:0;z-index:9998;
+  background:#fff;border-bottom:1px solid #e5e7eb;
+  box-shadow:0 8px 24px rgba(15,23,42,.10);padding:12px 16px;
+}
+.edusambam-search-panel.open{display:block}
+.edusambam-search-wrap{max-width:900px;margin:0 auto;position:relative}
+.edusambam-search-input{
+  width:100%;box-sizing:border-box;padding:12px 14px;
+  border:1px solid #cbd5e1;border-radius:9px;font-size:1rem;
+}
+.edusambam-search-results{margin-top:8px;max-height:50vh;overflow:auto}
+.edusambam-search-results a{
+  display:block;padding:9px 10px;border-radius:7px;color:#0b3b66;text-decoration:none;
+}
+.edusambam-search-results a:hover{background:#f3f6f9}
+@media (max-width:1100px){
+  .edusambam-nav-links{gap:8px}
+  .edusambam-nav-links a{font-size:.84rem;padding-inline:3px}
+}
+@media (max-width:900px){
+  .edusambam-nav{min-height:68px;padding:8px 14px}
+  .edusambam-brand-mark{width:44px;height:44px;flex-basis:44px}
+  .edusambam-brand-mark span{width:12px;height:12px}
+  .edusambam-brand-mark .c3,.edusambam-brand-mark .c6{left:16px}
+  .edusambam-brand-name{font-size:1.42rem}
+  .edusambam-brand-subtitle{font-size:.52rem;letter-spacing:.06em}
+  .edusambam-nav-links{display:none}
+  .edusambam-menu-btn{display:inline-flex}
+  .edusambam-search-btn{margin-left:auto}
+  .edusambam-mobile-menu{top:68px;max-height:calc(100vh - 68px)}
+  .edusambam-search-panel{top:68px}
+}
+@media (max-width:480px){
+  .edusambam-nav-inner{gap:8px}
+  .edusambam-brand{gap:7px}
+  .edusambam-brand-mark{width:40px;height:40px;flex-basis:40px}
+  .edusambam-brand-mark span{width:11px;height:11px}
+  .edusambam-brand-mark .c3,.edusambam-brand-mark .c6{left:14.5px}
+  .edusambam-brand-name{font-size:1.28rem}
+  .edusambam-brand-subtitle{font-size:.46rem;letter-spacing:.045em}
+  .edusambam-search-btn,.edusambam-menu-btn{min-width:38px;height:38px}
+}
+</style><style id="edusambam-new-article-mobile-fixed-nav">
+/* New EDUSAMBAM article: keep the approved mobile header continuously available while scrolling. */
+@media (max-width:900px){
+  body{padding-top:68px !important;}
+  .edusambam-nav{position:fixed !important;top:0 !important;left:0 !important;right:0 !important;width:100% !important;}
+}
+</style><style id="edusambam-logo-visibility-fix">
+/* EDUSAMBAM logo visibility fix */
+.edusambam-brand-mark{
+  position:relative !important;
+  display:inline-block !important;
+  width:48px !important;
+  height:48px !important;
+  min-width:48px !important;
+  flex:0 0 48px !important;
+  overflow:visible !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+.edusambam-brand-mark > span{
+  position:absolute !important;
+  display:block !important;
+  width:13px !important;
+  height:13px !important;
+  min-width:13px !important;
+  min-height:13px !important;
+  padding:0 !important;
+  margin:0 !important;
+  border:0 !important;
+  border-radius:50% !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  box-sizing:border-box !important;
+}
+.edusambam-brand-mark > .c1{left:0 !important;top:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c2{right:0 !important;top:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c3{left:17.5px !important;top:8px !important;background:#d6a23a !important;}
+.edusambam-brand-mark > .c4{left:0 !important;bottom:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c5{right:0 !important;bottom:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c6{left:17.5px !important;bottom:8px !important;background:#d6a23a !important;}
+
+@media (max-width:900px){
+  .edusambam-brand-mark{
+    width:44px !important;height:44px !important;min-width:44px !important;flex-basis:44px !important;
+  }
+  .edusambam-brand-mark > span{
+    width:12px !important;height:12px !important;min-width:12px !important;min-height:12px !important;
+  }
+  .edusambam-brand-mark > .c3,.edusambam-brand-mark > .c6{left:16px !important;}
+}
+@media (max-width:480px){
+  .edusambam-brand-mark{
+    width:40px !important;height:40px !important;min-width:40px !important;flex-basis:40px !important;
+  }
+  .edusambam-brand-mark > span{
+    width:11px !important;height:11px !important;min-width:11px !important;min-height:11px !important;
+  }
+  .edusambam-brand-mark > .c3,.edusambam-brand-mark > .c6{left:14.5px !important;}
+}
+</style>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<style id="edusambam-menu-extra-css">
+.edusambam-mobile-menu .edusambam-menu-extra:first-of-type{
+  margin-top:8px;padding-top:8px;border-top:1px solid #e5e7eb;
+}
+.edusambam-mobile-menu .edusambam-menu-extra a{
+  font-weight:600;
+}
+</style>
+<style id="edusambam-article-footer-theme">
+.edusambam-article-footer{
+  background:linear-gradient(135deg,#06244a,#0b4ea2)!important;
+}
+</style>
+<style id="edusambam-unified-footer-fix">
+/* EDUSAMBAM unified footer: same visual language and neutral brand statement across all pages. */
+.edusambam-unified-footer,
+.edusambam-article-footer,
+footer.footer {
+  background: linear-gradient(135deg, #06244a, #0b4ea2) !important;
+  color: #fff !important;
+  border-top: 3px solid #d4a017 !important;
+  box-sizing: border-box;
+}
+.edusambam-footer-statement{margin:.25rem 0 0 !important;color:rgba(255,255,255,.88) !important;font-size:.78rem !important;letter-spacing:.08em !important;text-transform:uppercase !important}
+.edusambam-unified-footer .footer-brand-name,.edusambam-article-footer .footer-brand-name{color:#fff !important}
+</style>
+<style id="edusambam-final-unified-footer">
+/* Final unified footer — same structure, visual language, and approved nav logo on every page. */
+.edusambam-unified-footer{
+  width:100% !important;
+  margin:0 !important;
+  padding:44px 0 0 !important;
+  background:linear-gradient(135deg,#06244a,#0b4ea2) !important;
+  color:#d6e4f2 !important;
+  border-top:4px solid #d4a017 !important;
+  box-sizing:border-box !important;
+  overflow:hidden !important;
+}
+.edusambam-unified-footer .footer-top{
+  width:min(1180px,92%) !important;
+  max-width:1180px !important;
+  margin:0 auto !important;
+  padding:0 0 34px !important;
+  display:grid !important;
+  grid-template-columns:1.5fr repeat(3,1fr) !important;
+  gap:34px !important;
+  box-sizing:border-box !important;
+}
+.edusambam-unified-footer .footer-brand{min-width:0 !important;}
+.edusambam-footer-brand-row{margin:0 0 10px !important;}
+.edusambam-footer-logo-link{
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:12px !important;
+  min-width:0 !important;
+  color:#fff !important;
+  text-decoration:none !important;
+}
+.edusambam-footer-logo{
+  width:48px !important;
+  height:48px !important;
+  min-width:48px !important;
+  flex:0 0 48px !important;
+}
+.edusambam-footer-logo > span{width:13px !important;height:13px !important;min-width:13px !important;min-height:13px !important;}
+.edusambam-footer-logo > .c3,.edusambam-footer-logo > .c6{left:17.5px !important;}
+.edusambam-footer-brand-name{
+  color:#fff !important;
+  font-family:"EB Garamond",Georgia,serif !important;
+  font-size:1.65rem !important;
+  font-weight:600 !important;
+  letter-spacing:.01em !important;
+  line-height:1 !important;
+  white-space:nowrap !important;
+}
+.edusambam-unified-footer .edusambam-footer-statement{
+  margin:0 !important;
+  max-width:360px !important;
+  color:rgba(255,255,255,.88) !important;
+  font-size:.78rem !important;
+  line-height:1.7 !important;
+  letter-spacing:.08em !important;
+  text-transform:uppercase !important;
+}
+.edusambam-unified-footer .footer-col{min-width:0 !important;}
+.edusambam-unified-footer .footer-col h4{
+  margin:0 0 12px !important;
+  color:#fff !important;
+  font-family:"EB Garamond",Georgia,serif !important;
+  font-size:1rem !important;
+  font-weight:600 !important;
+  line-height:1.25 !important;
+}
+.edusambam-unified-footer .footer-col ul{
+  list-style:none !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+.edusambam-unified-footer .footer-col li{margin:0 0 8px !important;padding:0 !important;}
+.edusambam-unified-footer .footer-col a{
+  color:rgba(255,255,255,.68) !important;
+  text-decoration:none !important;
+  font-size:.84rem !important;
+  line-height:1.5 !important;
+  overflow-wrap:anywhere !important;
+}
+.edusambam-unified-footer .footer-col a:hover,
+.edusambam-unified-footer .footer-col a:focus-visible{color:#fff !important;}
+.edusambam-unified-footer .footer-bottom{
+  width:min(1180px,92%) !important;
+  max-width:1180px !important;
+  margin:0 auto !important;
+  padding:18px 0 22px !important;
+  border-top:1px solid rgba(255,255,255,.12) !important;
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:center !important;
+  gap:20px !important;
+  box-sizing:border-box !important;
+}
+.edusambam-unified-footer .footer-bottom p{
+  margin:0 !important;
+  color:rgba(255,255,255,.55) !important;
+  font-size:.8rem !important;
+  line-height:1.5 !important;
+}
+.edusambam-unified-footer .footer-bottom-links{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:18px !important;
+  list-style:none !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+.edusambam-unified-footer .footer-bottom-links a{
+  color:rgba(255,255,255,.55) !important;
+  font-size:.78rem !important;
+  line-height:1.5 !important;
+  text-decoration:none !important;
+}
+.edusambam-unified-footer .footer-bottom-links a:hover,
+.edusambam-unified-footer .footer-bottom-links a:focus-visible{color:#fff !important;}
+@media(max-width:900px){
+  .edusambam-unified-footer{padding-top:32px !important;}
+  .edusambam-unified-footer .footer-top{grid-template-columns:1fr 1fr !important;gap:28px 22px !important;}
+  .edusambam-unified-footer .footer-brand{grid-column:1/-1 !important;}
+}
+@media(max-width:600px){
+  .edusambam-unified-footer{padding-top:30px !important;}
+  .edusambam-unified-footer .footer-top{width:calc(100% - 28px) !important;grid-template-columns:1fr 1fr !important;gap:26px 20px !important;padding-bottom:28px !important;}
+  .edusambam-unified-footer .footer-bottom{width:calc(100% - 28px) !important;display:block !important;padding:16px 0 20px !important;}
+  .edusambam-unified-footer .footer-bottom-links{margin-top:10px !important;gap:16px !important;}
+  .edusambam-footer-logo{width:44px !important;height:44px !important;min-width:44px !important;flex-basis:44px !important;}
+  .edusambam-footer-logo > span{width:12px !important;height:12px !important;min-width:12px !important;min-height:12px !important;}
+  .edusambam-footer-logo > .c3,.edusambam-footer-logo > .c6{left:16px !important;}
+  .edusambam-footer-brand-name{font-size:1.48rem !important;}
+}
+@media(max-width:430px){
+  .edusambam-unified-footer .footer-top{grid-template-columns:1fr !important;gap:22px !important;}
+  .edusambam-unified-footer .footer-brand{grid-column:auto !important;}
+}
+</style>
+<style id="edusambam-footer-final-alignment">
+/* Final EDUSAMBAM footer consistency pass: identical royal-blue footer and left alignment on every page. */
+.edusambam-unified-footer {
+  background: linear-gradient(135deg,#06244a,#0b4ea2) !important;
+  color:#d6e4f2 !important;
+  text-align:left !important;
+  width:100% !important;
+  box-sizing:border-box !important;
+}
+.edusambam-unified-footer,
+.edusambam-unified-footer *,
+.edusambam-unified-footer h1,
+.edusambam-unified-footer h2,
+.edusambam-unified-footer h3,
+.edusambam-unified-footer h4,
+.edusambam-unified-footer p,
+.edusambam-unified-footer ul,
+.edusambam-unified-footer li,
+.edusambam-unified-footer a,
+.edusambam-unified-footer span {
+  text-align:left !important;
+}
+.edusambam-unified-footer .footer-top,
+.edusambam-unified-footer .footer-brand,
+.edusambam-unified-footer .footer-col,
+.edusambam-unified-footer .footer-bottom {
+  margin-left:0 !important;
+}
+.edusambam-unified-footer .footer-top {
+  margin-right:auto !important;
+}
+.edusambam-unified-footer .edusambam-footer-brand-row {
+  text-align:left !important;
+}
+.edusambam-unified-footer .edusambam-footer-logo-link {
+  justify-content:flex-start !important;
+  text-align:left !important;
+}
+.edusambam-unified-footer .footer-bottom {
+  justify-content:flex-start !important;
+  align-items:flex-start !important;
+  flex-direction:column !important;
+}
+.edusambam-unified-footer .footer-bottom-links {
+  justify-content:flex-start !important;
+  align-items:flex-start !important;
+}
+@media (max-width:600px) {
+  .edusambam-unified-footer .footer-top,
+  .edusambam-unified-footer .footer-bottom {
+    margin-left:0 !important;
+    margin-right:auto !important;
+  }
+}
+</style></head>
+<body id="top">
+<!-- TOP BAR -->
+<div class="top-bar">
+<p>Established 2026  ·  Free Educational Resources for All</p>
+<ul class="top-bar-links">
+<li><a href="index.html">Contact</a></li>
+<li><a href="index.html">About</a></li>
+<li><a href="index.html">Write for Us</a></li>
+</ul>
+</div>
+<!-- NAV -->
+<nav aria-label="Primary navigation" class="edusambam-nav">
+<div class="edusambam-nav-inner">
+<a aria-label="EDUSAMBAM home" class="edusambam-brand" href="index.html">
+<span aria-hidden="true" class="edusambam-brand-mark">
+<span class="c1"></span><span class="c2"></span><span class="c3"></span>
+<span class="c4"></span><span class="c5"></span><span class="c6"></span>
+</span>
+<span class="edusambam-brand-copy">
+<span class="edusambam-brand-name">EDUSAMBAM</span>
+<span class="edusambam-brand-subtitle">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM.</span>
+</span>
+</a>
+<ul class="edusambam-nav-links"><li><a href="index.html">Home</a></li><li><a href="index.html#english">English</a></li><li><a href="index.html#mathematics">Mathematics</a></li><li><a href="index.html#science">Science</a></li><li><a href="index.html#health">Health</a></li><li><a href="index.html#general-knowledge">General Knowledge</a></li><li><a href="index.html#computer-ai">Computer &amp; AI</a></li><li><a href="index.html#resources">Resources</a></li></ul>
+<button aria-label="Search" class="edusambam-search-btn" title="Search" type="button">⌕</button>
+<button aria-expanded="false" aria-label="Open menu" class="edusambam-menu-btn" title="Menu" type="button">☰</button>
+</div>
+</nav>
+<div aria-label="Mobile navigation" class="edusambam-mobile-menu">
+<ul><li><a href="index.html">Home</a></li><li><a href="index.html#english">English</a></li><li><a href="index.html#mathematics">Mathematics</a></li><li><a href="index.html#science">Science</a></li><li><a href="index.html#health">Health</a></li><li><a href="index.html#general-knowledge">General Knowledge</a></li><li><a href="index.html#computer-ai">Computer &amp; AI</a></li><li><a href="index.html#resources">Resources</a></li>
+<li class="edusambam-menu-extra"><a href="interactive-activities.html">Interactive Activities</a></li>
+<li class="edusambam-menu-extra"><a href="assessment-arena.html">Assessment Arena</a></li>
+<li class="edusambam-menu-extra"><a href="about.html">About</a></li>
+<li class="edusambam-menu-extra"><a href="mission.html">Mission</a></li>
+<li class="edusambam-menu-extra"><a href="team.html">Team</a></li>
+</ul>
+</div>
+<div aria-label="Site search" class="edusambam-search-panel">
+<div class="edusambam-search-wrap">
+<input aria-label="Search EDUSAMBAM" class="edusambam-search-input" placeholder="Search EDUSAMBAM…" type="search"/>
+<div class="edusambam-search-results"></div>
+</div>
+</div>
+<!-- ARTICLE HERO -->
+<div class="article-hero">
+<div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; <a href="index.html#science">Biology</a> &nbsp;/&nbsp; Photosynthesis, Plant Nutrition &amp; Transport</div>
+<div class="article-hero-tag">Biology · Plant Processes</div>
+<h1>Photosynthesis, Plant Nutrition &amp; Transport</h1>
+<p class="sub">A comprehensive guide from foundational plant biology to advanced ideas about carbon fixation, mineral nutrition, transpiration, xylem and phloem transport.</p>
+<div class="article-hero-meta">
+<span>EDUSAMBAM Editorial Team</span><span>|</span><span>25 min read</span><span>|</span><span>Biology</span>
+</div>
+</div><div aria-label="EDUSAMBAM article reader" class="edusambam-reader"><strong>🔊 LISTEN TO THIS ARTICLE</strong><div class="reader-slogan">SAVE YOUR EYES • IMPROVE YOUR LISTENING</div><div class="reader-help">Listen to the article instead of relying only on continuous screen reading.</div><div class="reader-controls"><button data-reader="play" type="button">▶ Play</button><button data-reader="pause" type="button">⏸ Pause</button><button data-reader="resume" type="button">▶ Resume</button><button data-reader="stop" type="button">■ Stop</button><select aria-label="Reading speed"><option value="1">1×</option><option value="0.8">0.8×</option><option value="1.2">1.2×</option></select></div><div aria-hidden="true" class="reader-progress"><span></span></div><small class="reader-status">Ready to read the article.</small></div>
+<!-- ARTICLE BODY -->
+
+<div class="article-wrap">
+<p class="lead">Plants are living systems that must capture energy, obtain mineral nutrients, move water and solutes, exchange gases, and distribute the substances needed for growth. Photosynthesis connects several of these processes: light energy is converted into chemical energy, carbon dioxide supplies carbon for organic molecules, and water supplies electrons while contributing to the release of oxygen. Roots absorb water and mineral ions, xylem carries water and dissolved minerals, and phloem distributes sugars and other transported substances. Understanding these processes together turns plant biology from a collection of facts into one connected system.</p>
+
+<div class="diagram-box">
+<svg viewBox="0 0 760 330" role="img" aria-labelledby="plantFlowTitle plantFlowDesc">
+<title id="plantFlowTitle">Integrated overview of photosynthesis, plant nutrition and transport</title>
+<desc id="plantFlowDesc">An original schematic showing light and carbon dioxide entering leaves, water and minerals entering roots, xylem moving water upward, photosynthesis producing sugars, and phloem distributing sugars to growing and storage tissues.</desc>
+<rect x="0" y="0" width="760" height="330" rx="18" fill="#faf8f4"/>
+<text x="380" y="30" text-anchor="middle" fill="#06244a" font-size="19" font-weight="700">How the major plant processes connect</text>
+<circle cx="380" cy="150" r="65" fill="#0b4ea2"/>
+<text x="380" y="145" text-anchor="middle" fill="white" font-size="17" font-weight="700">LEAF</text>
+<text x="380" y="166" text-anchor="middle" fill="#d4a017" font-size="13">photosynthesis</text>
+<g stroke="#d4a017" stroke-width="3" fill="none">
+<path d="M100 90 L315 132"/><path d="M100 250 L320 177"/>
+<path d="M660 90 L445 132"/><path d="M660 250 L445 178"/>
+</g>
+<g font-family="Arial, sans-serif">
+<rect x="25" y="50" width="170" height="72" rx="12" fill="white" stroke="#d4a017"/>
+<text x="110" y="77" text-anchor="middle" fill="#06244a" font-size="16" font-weight="700">LIGHT</text>
+<text x="110" y="99" text-anchor="middle" fill="#4a4a4a" font-size="13">energy input</text>
+<rect x="25" y="215" width="170" height="72" rx="12" fill="white" stroke="#d4a017"/>
+<text x="110" y="242" text-anchor="middle" fill="#06244a" font-size="16" font-weight="700">ROOTS</text>
+<text x="110" y="264" text-anchor="middle" fill="#4a4a4a" font-size="13">water + mineral ions</text>
+<rect x="565" y="50" width="170" height="72" rx="12" fill="white" stroke="#d4a017"/>
+<text x="650" y="77" text-anchor="middle" fill="#06244a" font-size="16" font-weight="700">CO₂</text>
+<text x="650" y="99" text-anchor="middle" fill="#4a4a4a" font-size="13">carbon source</text>
+<rect x="565" y="215" width="170" height="72" rx="12" fill="white" stroke="#d4a017"/>
+<text x="650" y="242" text-anchor="middle" fill="#06244a" font-size="16" font-weight="700">PHLOEM</text>
+<text x="650" y="264" text-anchor="middle" fill="#4a4a4a" font-size="13">sugars → sinks</text>
+</g>
+<text x="380" y="300" text-anchor="middle" fill="#4a4a4a" font-size="14">Xylem supplies water/minerals; photosynthesis makes organic carbon; phloem distributes assimilates.</text>
+</svg>
+<div class="diagram-caption">Figure 1. Original EDUSAMBAM schematic showing how light capture, mineral nutrition, water transport, photosynthesis and sugar transport operate as a connected system.</div>
+</div>
+
+<h2><span class="num">1.</span>Why Photosynthesis Matters</h2>
+<p><strong>Photosynthesis</strong> is the process by which photosynthetic organisms use light energy to drive the formation of organic molecules from carbon dioxide and water. In green plants, the process occurs mainly in chloroplasts of photosynthetic cells. The overall equation is commonly represented as:</p>
+<div class="example-box"><div class="ex-label">Core equation</div><p><strong>6CO₂ + 6H₂O + light energy → C₆H₁₂O₆ + 6O₂</strong></p><p>This is a simplified summary rather than a complete description of every intermediate reaction. The oxygen released during oxygenic photosynthesis comes from water, while the carbon in newly fixed organic molecules comes from carbon dioxide.</p></div>
+<p>Photosynthesis is important because it converts radiant energy into chemical energy stored in organic molecules. Those molecules can be used for respiration, growth, repair, storage and the synthesis of many other compounds. Photosynthesis therefore links the energy entering many ecosystems with the biological processes of plants and the organisms that depend on them.</p>
+<p>A useful distinction is that <strong>photosynthesis is not simply “making food from sunlight.”</strong> Light energy is captured by pigments and converted into chemical energy, while carbon dioxide is incorporated into organic compounds. The products can then enter many metabolic pathways rather than remaining as one simple molecule called “food.”</p>
+
+<h2><span class="num">2.</span>The Chloroplast: Where the Process Is Organised</h2>
+<p>In most green plant cells, photosynthesis is associated with the <strong>chloroplast</strong>. The chloroplast has an outer envelope and an internal membrane system. Flattened membrane sacs called <strong>thylakoids</strong> are often arranged in stacks called <strong>grana</strong>. The fluid surrounding the thylakoids is the <strong>stroma</strong>.</p>
+<table class="pos-table"><tr><th>Structure</th><th>Key role</th><th>Why it matters</th></tr>
+<tr><td>Thylakoid membrane</td><td>Contains photosynthetic pigments, electron carriers and ATP-forming machinery</td><td>Site of the light-dependent reactions</td></tr>
+<tr><td>Thylakoid lumen</td><td>Internal aqueous space where protons accumulate during the light reactions</td><td>Helps establish a proton gradient used to make ATP</td></tr>
+<tr><td>Stroma</td><td>Fluid region containing enzymes and other molecules</td><td>Site of the Calvin cycle reactions</td></tr>
+<tr><td>Chloroplast envelope</td><td>Double membrane surrounding the organelle</td><td>Separates chloroplast chemistry from the cytoplasm</td></tr></table>
+<p>This division of labour is important. The light-dependent reactions use the thylakoid membrane system to convert light energy into chemical energy stored in <strong>ATP</strong> and <strong>NADPH</strong>. The Calvin cycle occurs in the stroma and uses ATP and NADPH to help convert carbon dioxide into organic carbon compounds.</p>
+
+<div class="diagram-box">
+<svg viewBox="0 0 760 300" role="img" aria-labelledby="chlTitle">
+<title id="chlTitle">Simplified chloroplast showing thylakoids, grana and stroma</title>
+<rect x="0" y="0" width="760" height="300" rx="18" fill="#faf8f4"/>
+<ellipse cx="380" cy="150" rx="290" ry="105" fill="white" stroke="#06244a" stroke-width="4"/>
+<text x="120" y="65" fill="#06244a" font-size="17" font-weight="700">CHLOROPLAST</text>
+<text x="530" y="75" fill="#4a4a4a" font-size="14">stroma</text>
+<g fill="#0b4ea2" stroke="#06244a" stroke-width="2">
+<rect x="170" y="95" width="90" height="14" rx="7"/><rect x="170" y="115" width="90" height="14" rx="7"/><rect x="170" y="135" width="90" height="14" rx="7"/><rect x="170" y="155" width="90" height="14" rx="7"/><rect x="170" y="175" width="90" height="14" rx="7"/>
+<rect x="330" y="90" width="90" height="14" rx="7"/><rect x="330" y="110" width="90" height="14" rx="7"/><rect x="330" y="130" width="90" height="14" rx="7"/><rect x="330" y="150" width="90" height="14" rx="7"/><rect x="330" y="170" width="90" height="14" rx="7"/>
+</g>
+<text x="215" y="220" text-anchor="middle" fill="#4a4a4a" font-size="14">granum</text>
+<text x="375" y="220" text-anchor="middle" fill="#4a4a4a" font-size="14">granum</text>
+<text x="520" y="150" text-anchor="middle" fill="#4a4a4a" font-size="14">fluid stroma</text>
+</svg>
+<div class="diagram-caption">Figure 2. Simplified chloroplast organisation. The diagram is an original educational schematic.</div>
+</div>
+
+<h2><span class="num">3.</span>Light, Pigments and the First Stage of Photosynthesis</h2>
+<p>Light is electromagnetic radiation. Photosynthetic pigments absorb particular wavelengths more effectively than others. <strong>Chlorophyll a</strong> is the primary photosynthetic pigment in oxygenic photosynthesis, while chlorophyll b and other pigments broaden the range of usable light and help protect photosynthetic systems.</p>
+<p>When a suitable pigment absorbs light, electrons can be raised to a higher-energy state. In the light-dependent reactions, this captured energy is used to drive electron-transfer processes. Water is split in oxygenic photosynthesis, providing electrons and contributing protons; oxygen is released as a by-product. Electron transport helps establish a proton gradient across the thylakoid membrane, and the movement of protons through <strong>ATP synthase</strong> supports ATP production. Electrons also contribute to the reduction of NADP⁺ to NADPH.</p>
+<table class="pos-table"><tr><th>Input</th><th>Immediate role</th><th>Important output</th></tr>
+<tr><td>Light energy</td><td>Excites electrons in photosynthetic pigments</td><td>Drives the light-dependent electron-transfer system</td></tr>
+<tr><td>Water</td><td>Provides electrons and protons during water splitting</td><td>Oxygen is released</td></tr>
+<tr><td>ADP + Pi</td><td>Accepts energy through ATP synthase</td><td>ATP</td></tr>
+<tr><td>NADP⁺</td><td>Accepts high-energy electrons and hydrogen equivalents</td><td>NADPH</td></tr></table>
+<p>At advanced level, it is useful to think of the light reactions as an <strong>energy-conversion chain</strong>, not a single reaction. The system transfers electrons through protein complexes and uses the resulting proton gradient to make ATP. The exact arrangement includes two photosystems in oxygenic photosynthesis, commonly called <strong>Photosystem II</strong> and <strong>Photosystem I</strong>.</p>
+
+<div class="diagram-box">
+<svg viewBox="0 0 760 280" role="img" aria-labelledby="lightTitle">
+<title id="lightTitle">Simplified light-dependent reactions</title>
+<rect x="0" y="0" width="760" height="280" rx="18" fill="#faf8f4"/>
+<line x1="70" y1="155" x2="690" y2="155" stroke="#06244a" stroke-width="5"/>
+<text x="380" y="48" text-anchor="middle" fill="#06244a" font-size="19" font-weight="700">Light-dependent reactions</text>
+<circle cx="170" cy="155" r="45" fill="#d4a017"/><text x="170" y="151" text-anchor="middle" fill="#06244a" font-size="15" font-weight="700">PSII</text><text x="170" y="174" text-anchor="middle" fill="#4a4a4a" font-size="12">water split</text>
+<circle cx="380" cy="155" r="45" fill="#d4a017"/><text x="380" y="151" text-anchor="middle" fill="#06244a" font-size="15" font-weight="700">ETC</text><text x="380" y="174" text-anchor="middle" fill="#4a4a4a" font-size="12">proton gradient</text>
+<circle cx="590" cy="155" r="45" fill="#d4a017"/><text x="590" y="151" text-anchor="middle" fill="#06244a" font-size="15" font-weight="700">PSI</text><text x="590" y="174" text-anchor="middle" fill="#4a4a4a" font-size="12">NADPH formed</text>
+<path d="M215 155 H330" stroke="#0b4ea2" stroke-width="4"/><path d="M425 155 H540" stroke="#0b4ea2" stroke-width="4"/>
+<path d="M380 105 V75" stroke="#8b0000" stroke-width="4"/><path d="M380 205 V235" stroke="#0b4ea2" stroke-width="4"/>
+<text x="380" y="68" text-anchor="middle" fill="#8b0000" font-size="14">H⁺ accumulation</text>
+<text x="380" y="257" text-anchor="middle" fill="#4a4a4a" font-size="14">H⁺ flow through ATP synthase → ATP</text>
+<text x="170" y="95" text-anchor="middle" fill="#4a4a4a" font-size="13">light</text>
+<text x="590" y="95" text-anchor="middle" fill="#4a4a4a" font-size="13">light</text>
+</svg>
+<div class="diagram-caption">Figure 3. Simplified sequence of the light-dependent reactions. The schematic emphasises electron flow, proton-gradient formation, ATP production and NADPH formation without reproducing a textbook figure.</div>
+</div>
+
+<h2><span class="num">4.</span>The Calvin Cycle: Fixing Carbon</h2>
+<p>The <strong>Calvin cycle</strong> uses ATP and NADPH generated by the light-dependent reactions to drive carbon-fixation chemistry in the chloroplast stroma. Carbon dioxide is incorporated into an organic molecule through a reaction catalysed by the enzyme <strong>RuBisCO</strong>. The cycle can be organised into three broad stages: <strong>carbon fixation, reduction, and regeneration of RuBP</strong>.</p>
+<table class="pos-table"><tr><th>Stage</th><th>What happens</th><th>Key idea</th></tr>
+<tr><td>Carbon fixation</td><td>CO₂ is attached to RuBP through RuBisCO</td><td>Inorganic carbon enters an organic pathway</td></tr>
+<tr><td>Reduction</td><td>ATP and NADPH provide energy and reducing power</td><td>Carbon compounds are converted toward G3P</td></tr>
+<tr><td>Regeneration</td><td>Most G3P-derived carbon is rearranged to regenerate RuBP</td><td>The cycle can accept more CO₂</td></tr></table>
+<p>The Calvin cycle does <strong>not</strong> simply produce a complete glucose molecule every time it turns. A key product is <strong>glyceraldehyde-3-phosphate (G3P)</strong>, a three-carbon compound that can be used to build carbohydrates and many other organic molecules. Some G3P is exported from the cycle while the rest contributes to regeneration of the carbon acceptor.</p>
+<p>The phrase “dark reaction” can be misleading. The Calvin cycle does not use light photons directly, but it depends on ATP and NADPH made by the light-dependent reactions and on enzyme systems influenced by light conditions. It is therefore better described as the <strong>light-independent reactions</strong> or Calvin cycle rather than a process that simply occurs in darkness.</p>
+
+<div class="example-box"><div class="ex-label">Advanced connection</div><p><strong>Carbon fixation</strong> means that inorganic carbon from CO₂ becomes incorporated into an organic molecule. This is why photosynthesis is more than energy capture: it also changes the chemical form of carbon so that it can enter biological metabolism.</p></div>
+
+<h2><span class="num">5.</span>Factors Affecting the Rate of Photosynthesis</h2>
+<p>The rate of photosynthesis is influenced by several environmental and internal factors. A <strong>limiting factor</strong> is a factor that is sufficiently scarce to restrict the rate of a process. Increasing a non-limiting factor may produce little or no further increase until another factor becomes limiting.</p>
+<table class="pos-table"><tr><th>Factor</th><th>Typical effect when limiting</th><th>Important qualification</th></tr>
+<tr><td>Light intensity</td><td>Increasing light can increase photosynthetic rate</td><td>Only until another factor becomes limiting; very strong light can also cause stress</td></tr>
+<tr><td>Carbon dioxide concentration</td><td>Higher CO₂ can increase carbon fixation</td><td>Effect eventually levels off when another factor limits the process</td></tr>
+<tr><td>Temperature</td><td>Rate of enzyme-controlled reactions may rise toward an optimum</td><td>Excessive temperature can damage enzymes and increase water stress</td></tr>
+<tr><td>Water availability</td><td>Water shortage can reduce photosynthesis</td><td>Stomatal closure can restrict CO₂ entry and conserve water</td></tr></table>
+<p>These relationships are often represented with graphs. The most important skill is not memorising a particular curve but explaining <strong>why the curve changes</strong>. For example, if light intensity increases while carbon dioxide, temperature and water remain suitable, the rate may initially rise because more light energy is available. Eventually another requirement becomes limiting, so the graph levels off.</p>
+
+<div class="diagram-box">
+<svg viewBox="0 0 760 300" role="img" aria-labelledby="limitTitle">
+<title id="limitTitle">Generalised limiting-factor curve for light intensity and photosynthesis</title>
+<rect x="0" y="0" width="760" height="300" rx="18" fill="#faf8f4"/>
+<line x1="80" y1="245" x2="700" y2="245" stroke="#06244a" stroke-width="3"/>
+<line x1="80" y1="245" x2="80" y2="55" stroke="#06244a" stroke-width="3"/>
+<path d="M90 235 C180 210,235 135,315 95 C375 65,430 62,500 62 C585 62,630 62,690 62" fill="none" stroke="#0b4ea2" stroke-width="6"/>
+<line x1="480" y1="65" x2="480" y2="245" stroke="#d4a017" stroke-width="2" stroke-dasharray="7 6"/>
+<text x="480" y="50" text-anchor="middle" fill="#06244a" font-size="15" font-weight="700">another factor becomes limiting</text>
+<text x="390" y="278" text-anchor="middle" fill="#4a4a4a" font-size="14">Increasing light intensity →</text>
+<text x="25" y="150" transform="rotate(-90 25 150)" text-anchor="middle" fill="#4a4a4a" font-size="14">Rate of photosynthesis</text>
+</svg>
+<div class="diagram-caption">Figure 4. Generalised limiting-factor curve. The exact shape depends on the organism and experimental conditions; this graph is illustrative.</div>
+</div>
+
+<h2><span class="num">6.</span>Mineral Nutrition: Plants Need More Than Light and Water</h2>
+<p>Plants obtain carbon largely from atmospheric CO₂, but they also require mineral elements from their surroundings. Some are needed in relatively large amounts and are called <strong>macronutrients</strong>; others are needed in smaller quantities and are called <strong>micronutrients</strong>. The distinction is about quantity required, not importance.</p>
+<table class="pos-table"><tr><th>Element</th><th>Why plants need it</th><th>Possible consequence of deficiency</th></tr>
+<tr><td>Nitrogen</td><td>Needed for amino acids, proteins, nucleic acids and chlorophyll-related metabolism</td><td>Reduced growth and often yellowing of older leaves</td></tr>
+<tr><td>Magnesium</td><td>Central atom in chlorophyll and important in enzyme activity</td><td>Chlorosis, often beginning in older leaves</td></tr>
+<tr><td>Phosphorus</td><td>Part of ATP, nucleic acids and phospholipids</td><td>Poor growth and impaired energy-transfer processes</td></tr>
+<tr><td>Potassium</td><td>Important in enzyme regulation, ion balance and stomatal function</td><td>Disrupted growth and water/ion regulation</td></tr>
+<tr><td>Iron</td><td>Required for important electron-transfer proteins and chloroplast function</td><td>Chlorosis, often more obvious in younger leaves</td></tr></table>
+<p>Plants absorb mineral ions mainly through roots from the soil solution. Some ions can move into roots through passive processes when concentration and electrochemical gradients permit, while others require active transport involving membrane proteins and cellular energy. The precise pathway depends on the ion and environmental conditions.</p>
+<p>At advanced level, plant nutrition also connects to <strong>nitrogen cycling</strong>. Atmospheric nitrogen gas (N₂) is abundant but cannot simply be used directly by most plants. Nitrogen must enter biologically available forms through processes involving microorganisms and other transformations. Nitrogen is then incorporated into compounds such as amino acids and nucleotides.</p>
+
+<h2><span class="num">7.</span>Roots, Root Hairs and Uptake</h2>
+<p>Roots anchor plants and provide a large interface with the soil. <strong>Root hair cells</strong> extend into the spaces around soil particles, increasing the surface area available for absorption. Their thin extensions reduce the distance across which water and dissolved ions must move.</p>
+<p>Water enters root cells largely because of differences in water potential. In a simple school-level model, water moves by osmosis from a region with higher water potential to one with lower water potential across partially permeable membranes. Mineral ions can enter through specific membrane transport proteins. Once inside the root, water and solutes can move through tissues toward the vascular system.</p>
+<div class="example-box"><div class="ex-label">Exam-ready distinction</div><p><strong>Osmosis</strong> describes the net movement of water across a partially permeable membrane. <strong>Active transport</strong> describes movement of a substance against its concentration or electrochemical gradient using cellular energy. Do not use the two terms as if they were interchangeable.</p></div>
+
+<h2><span class="num">8.</span>Xylem: Transporting Water and Mineral Ions</h2>
+<p><strong>Xylem</strong> is vascular tissue specialised for the long-distance movement of water and dissolved mineral nutrients from roots toward shoots. The main conducting cells in flowering plants include vessel elements and tracheids. Their thickened, lignified walls help them withstand the tension associated with water transport and also provide structural support.</p>
+<p>Water movement through xylem is closely connected to <strong>transpiration</strong>, the loss of water vapour from plant surfaces, especially through stomata. Evaporation of water from leaf surfaces lowers the water potential of the leaf and creates tension that helps pull water upward through the xylem. The cohesion of water molecules and adhesion between water and xylem walls help maintain a continuous water column.</p>
+<table class="pos-table"><tr><th>Process or property</th><th>Contribution to water transport</th></tr>
+<tr><td>Transpiration</td><td>Water loss from leaves creates a driving force for upward movement</td></tr>
+<tr><td>Cohesion</td><td>Water molecules attract one another, helping maintain a continuous column</td></tr>
+<tr><td>Adhesion</td><td>Water interacts with xylem walls, supporting the water column</td></tr>
+<tr><td>Lignified xylem walls</td><td>Provide strength and help prevent collapse under tension</td></tr></table>
+<p>Modern descriptions can express this in terms of <strong>water potential</strong>: water tends to move from a region of higher water potential toward a region of lower water potential. The water-potential framework provides a more complete explanation than saying simply that “roots push water upward.” Root pressure can contribute under some conditions, but transpiration-driven tension is a major mechanism for long-distance water transport.</p>
+
+<div class="diagram-box">
+<svg viewBox="0 0 760 330" role="img" aria-labelledby="xylemTitle">
+<title id="xylemTitle">Water movement from roots through xylem to leaves</title>
+<rect x="0" y="0" width="760" height="330" rx="18" fill="#faf8f4"/>
+<path d="M300 290 C310 230,325 205,335 165 L335 70" fill="none" stroke="#0b4ea2" stroke-width="30" stroke-linecap="round"/>
+<path d="M335 160 C370 145,405 125,445 90" fill="none" stroke="#0b4ea2" stroke-width="20" stroke-linecap="round"/>
+<path d="M335 70 C290 45,240 45,195 60" fill="none" stroke="#0b4ea2" stroke-width="10"/>
+<path d="M195 60 C170 45,145 40,120 48" fill="none" stroke="#0b4ea2" stroke-width="8"/>
+<g fill="#d4a017">
+<path d="M290 285 q-60 10 -95 30" fill="none" stroke="#d4a017" stroke-width="7"/>
+<path d="M290 285 q-45 25 -70 45" fill="none" stroke="#d4a017" stroke-width="7"/>
+<path d="M290 285 q-20 25 -35 45" fill="none" stroke="#d4a017" stroke-width="7"/>
+</g>
+<path d="M335 270 V95" stroke="#d4a017" stroke-width="4" stroke-dasharray="9 7"/>
+<path d="M335 95 L327 110 L343 110 Z" fill="#d4a017"/>
+<text x="335" y="305" text-anchor="middle" fill="#06244a" font-size="16" font-weight="700">roots</text>
+<text x="515" y="78" fill="#06244a" font-size="17" font-weight="700">leaf</text>
+<text x="515" y="100" fill="#4a4a4a" font-size="13">transpiration</text>
+<text x="360" y="185" fill="#4a4a4a" font-size="13">xylem: water + mineral ions</text>
+<text x="40" y="270" fill="#4a4a4a" font-size="13">root hairs</text>
+<text x="40" y="290" fill="#4a4a4a" font-size="13">increase surface area</text>
+</svg>
+<div class="diagram-caption">Figure 5. Simplified water-transport pathway. Water enters through roots and moves through xylem toward leaves, where evaporation contributes to the transpiration stream.</div>
+</div>
+
+<h2><span class="num">9.</span>Stomata: Balancing Carbon Dioxide and Water Loss</h2>
+<p><strong>Stomata</strong> are pores, usually found in the epidermis of leaves, that regulate gas exchange. Each pore is controlled by a pair of <strong>guard cells</strong>. When stomata open, carbon dioxide can enter the leaf for photosynthesis, but water vapour can also escape. When stomata close, water loss is reduced, but carbon dioxide entry is restricted.</p>
+<p>Guard cells respond to changes in ion concentrations, water status and environmental signals. In many situations, accumulation of solutes in guard cells lowers their water potential, water enters, the cells become more turgid, and the pore opens. During water stress, hormonal and other signalling pathways can promote stomatal closure.</p>
+<div class="real-world-box"><div class="rw-label">Think Like a Plant</div><p>A plant cannot maximise every process at once. Wide-open stomata favour carbon dioxide entry but increase the opportunity for water loss. Narrow or closed stomata conserve water but restrict CO₂ entry. Plant physiology is full of these trade-offs.</p></div>
+
+<h2><span class="num">10.</span>Phloem: Moving Sugars from Source to Sink</h2>
+<p><strong>Phloem</strong> transports organic solutes, especially sucrose, from producing or releasing tissues to regions where substances are used or stored. A photosynthesising leaf can act as a <strong>source</strong>, while a growing root, developing fruit or storage organ can act as a <strong>sink</strong>.</p>
+<p>The movement of sugars is called <strong>translocation</strong>. In the pressure-flow model, sucrose is loaded into phloem sieve-tube elements at a source. The increased solute concentration lowers water potential, causing water to enter from nearby xylem by osmosis. This raises pressure in the phloem. At a sink, sucrose is unloaded and used or stored, helping maintain the concentration and pressure differences that support bulk flow.</p>
+<table class="pos-table"><tr><th>Feature</th><th>Xylem</th><th>Phloem</th></tr>
+<tr><td>Main transported material</td><td>Water and dissolved mineral ions</td><td>Sucrose and other organic solutes</td></tr>
+<tr><td>Typical direction</td><td>Root → shoot</td><td>Source → sink; direction varies with source and sink locations</td></tr>
+<tr><td>Major conducting cells</td><td>Vessel elements and tracheids</td><td>Sieve-tube elements with companion cells</td></tr>
+<tr><td>Driving concept</td><td>Water potential, transpiration and cohesion–tension</td><td>Pressure-flow generated by source loading and sink unloading</td></tr></table>
+<p>A common misconception is that phloem always carries food downward. It does not. Phloem transport is determined by the locations of sources and sinks, so the direction can vary within different parts of the same plant. Xylem water transport is generally described as moving from roots toward leaves and the atmosphere.</p>
+
+<div class="diagram-box">
+<svg viewBox="0 0 760 300" role="img" aria-labelledby="phloemTitle">
+<title id="phloemTitle">Source-to-sink phloem translocation</title>
+<rect x="0" y="0" width="760" height="300" rx="18" fill="#faf8f4"/>
+<rect x="325" y="45" width="110" height="210" rx="30" fill="#f4f1e9" stroke="#06244a" stroke-width="3"/>
+<line x1="380" y1="55" x2="380" y2="245" stroke="#8b0000" stroke-width="9"/>
+<circle cx="180" cy="115" r="55" fill="#0b4ea2"/><text x="180" y="110" text-anchor="middle" fill="white" font-size="16" font-weight="700">SOURCE</text><text x="180" y="132" text-anchor="middle" fill="#d4a017" font-size="13">leaf</text>
+<circle cx="580" cy="190" r="55" fill="#d4a017"/><text x="580" y="185" text-anchor="middle" fill="#06244a" font-size="16" font-weight="700">SINK</text><text x="580" y="207" text-anchor="middle" fill="#4a4a4a" font-size="13">root/fruit</text>
+<path d="M235 120 C285 120,300 105,325 105" fill="none" stroke="#0b4ea2" stroke-width="5"/>
+<path d="M435 205 C485 205,510 190,525 190" fill="none" stroke="#0b4ea2" stroke-width="5"/>
+<text x="380" y="145" text-anchor="middle" fill="#4a4a4a" font-size="13">phloem</text>
+<text x="380" y="165" text-anchor="middle" fill="#4a4a4a" font-size="13">sucrose-rich sap</text>
+<text x="380" y="282" text-anchor="middle" fill="#4a4a4a" font-size="13">loading → water entry → pressure-driven bulk flow → unloading</text>
+</svg>
+<div class="diagram-caption">Figure 6. Original EDUSAMBAM source-to-sink schematic for phloem translocation.</div>
+</div>
+
+<h2><span class="num">11.</span>Photosynthesis, Respiration and Transport Work Together</h2>
+<p>Plant metabolism becomes much easier to understand when the processes are connected. Photosynthesis makes carbon compounds and stores energy in chemical form. <strong>Cellular respiration</strong> can then release usable energy from organic molecules. Xylem supplies water and mineral ions needed for growth and metabolism. Phloem distributes sugars and other transported substances to tissues that cannot produce enough photosynthate themselves.</p>
+<table class="pos-table"><tr><th>Process</th><th>Main purpose</th><th>Connection to the others</th></tr>
+<tr><td>Photosynthesis</td><td>Capture light energy and fix carbon</td><td>Produces organic compounds that can be respired, stored or used for growth</td></tr>
+<tr><td>Respiration</td><td>Release usable energy from organic molecules</td><td>Supplies ATP for cellular work, including active transport</td></tr>
+<tr><td>Xylem transport</td><td>Move water and mineral ions</td><td>Supplies leaves and growing tissues</td></tr>
+<tr><td>Phloem translocation</td><td>Distribute organic solutes</td><td>Moves products of photosynthesis from sources to sinks</td></tr>
+<tr><td>Stomatal regulation</td><td>Balance gas exchange and water conservation</td><td>Links CO₂ supply for photosynthesis with transpiration</td></table>
+<p>This is a powerful example of <strong>systems thinking</strong>. A change in one process can affect several others. For instance, drought can reduce water availability, causing stomata to close. Less CO₂ then enters the leaf, which can reduce carbon fixation. At the same time, transport and growth may be affected. The plant response is therefore not one isolated reaction but a network of linked processes.</p>
+
+<h2><span class="num">12.</span>Investigating Photosynthesis and Transport</h2>
+<p>Biology practical work is strongest when the question, variables, controls and measurements are clearly defined. Photosynthesis can be investigated by measuring oxygen production, carbon dioxide uptake, changes in dissolved gases, or accumulation of starch under suitable experimental conditions. Transport can be explored through water-loss measurements, dye movement, or controlled comparisons of environmental factors.</p>
+<ol>
+<li><strong>Define the independent variable.</strong> For example, light intensity or carbon dioxide concentration.</li>
+<li><strong>Choose a measurable dependent variable.</strong> For example, oxygen bubbles per minute, gas volume, or another validated proxy for photosynthetic rate.</li>
+<li><strong>Control important variables.</strong> Temperature, plant material, duration, water availability and other relevant factors should be kept as constant as practical.</li>
+<li><strong>Use repeats.</strong> Repeated measurements help identify anomalous values and improve confidence in the pattern.</li>
+<li><strong>Include controls when appropriate.</strong> A control helps distinguish the effect of the variable under investigation from background changes.</li>
+<li><strong>Interpret cautiously.</strong> A proxy such as bubble count is an indirect measure and may not be perfectly proportional to photosynthetic rate.</li>
+</ol>
+<div class="example-box"><div class="ex-label">Practical reasoning</div><p>If increasing light intensity causes oxygen production to rise and then level off, the most reasonable interpretation is that light was initially limiting but another factor became limiting at higher intensities. The plateau does not mean that light has stopped existing; it means that more light is no longer the factor controlling the measured rate.</p></div>
+
+<h2><span class="num">13.</span>Common Mistakes and Misconceptions</h2>
+<ul>
+<li><strong>“Plants get their food from the soil.”</strong> Soil supplies water and mineral nutrients, but the carbon skeletons of most plant organic matter are largely built from carbon dioxide fixed during photosynthesis.</li>
+<li><strong>“Photosynthesis happens only in leaves.”</strong> Leaves are major photosynthetic organs, but other green tissues can also photosynthesise.</li>
+<li><strong>“The Calvin cycle happens only in darkness.”</strong> The term “light-independent” does not mean “night-only.” The cycle depends on products of the light-dependent reactions.</li>
+<li><strong>“Xylem carries food and phloem carries water.”</strong> In the standard school-level model, xylem mainly carries water and mineral ions, while phloem transports organic solutes such as sucrose.</li>
+<li><strong>“Phloem always moves downward.”</strong> Transport is source-to-sink and can occur in different directions in different parts of a plant.</li>
+<li><strong>“More light always means more photosynthesis.”</strong> Light can stop being limiting once another requirement becomes limiting.</li>
+<li><strong>“Stomata are just holes.”</strong> They are regulated pores controlled by guard cells and are central to the balance between CO₂ uptake and water loss.</li>
+<li><strong>“All mineral nutrients are needed in equal quantities.”</strong> Plants require different elements in different amounts, but micronutrients are still essential.</li>
+</ul>
+
+<h2><span class="num">14.</span>Putting the Ideas Together</h2>
+<p>The strongest way to revise this topic is to follow the movement of matter and energy through the plant:</p>
+<table class="pos-table"><tr><th>Question</th><th>Concept</th><th>Example</th></tr>
+<tr><td>Where does photosynthetic energy come from?</td><td>Light</td><td>Pigments absorb suitable wavelengths</td></tr>
+<tr><td>Where does photosynthetic carbon come from?</td><td>Carbon dioxide</td><td>CO₂ enters through stomata and is fixed in the Calvin cycle</td></tr>
+<tr><td>Where does water enter?</td><td>Roots</td><td>Root hairs provide a large absorptive surface</td></tr>
+<tr><td>How does water reach leaves?</td><td>Xylem transport</td><td>Transpiration and water potential contribute to upward movement</td></tr>
+<tr><td>Where are sugars produced?</td><td>Photosynthetic tissues</td><td>Leaves can act as sources</td></tr>
+<tr><td>Where do sugars go?</td><td>Phloem translocation</td><td>Growing roots, fruits and storage organs can act as sinks</td></tr>
+<tr><td>Why does the rate change?</td><td>Limiting factors</td><td>Light, CO₂, temperature and water can restrict photosynthesis</td></tr></table>
+<p>The central pattern is <strong>energy capture → carbon fixation → growth and metabolism → transport → regulation</strong>. Once this sequence is understood, later topics such as plant reproduction, ecology, cellular respiration and plant responses become easier to connect.</p>
+
+<h2><span class="num">15.</span>Sources and Further Reading</h2>
+<p>The explanations in this article are original EDUSAMBAM educational writing based on established biological principles. The sources below were consulted for factual verification and further study. No textbook passage, diagram or illustration has been reproduced.</p>
+<ul>
+<li><strong>OpenStax, Biology 2e:</strong> Overview of photosynthesis, chloroplast structure, light-dependent reactions and the Calvin cycle. <a href="https://openstax.org/books/biology-2e/pages/8-1-overview-of-photosynthesis" target="_blank" rel="noopener">OpenStax — Overview of Photosynthesis</a>.</li>
+<li><strong>OpenStax, Biology for AP® Courses:</strong> Carbon fixation and the three broad stages of the Calvin cycle. <a href="https://openstax.org/books/biology-ap-courses/pages/8-3-using-light-to-make-organic-molecules" target="_blank" rel="noopener">OpenStax — Using Light to Make Organic Molecules</a>.</li>
+<li><strong>OpenStax, Biology 2e:</strong> Mineral requirements and nutritional needs of plants. <a href="https://openstax.org/books/biology-2e/pages/31-1-nutritional-requirements-of-plants" target="_blank" rel="noopener">OpenStax — Nutritional Requirements of Plants</a>.</li>
+<li><strong>OpenStax, Biology 2e:</strong> Water transport, transpiration, xylem and phloem translocation. <a href="https://openstax.org/books/biology-2e/pages/30-5-transport-of-water-and-solutes-in-plants" target="_blank" rel="noopener">OpenStax — Transport of Water and Solutes in Plants</a>.</li>
+<li><strong>OpenStax, Biology 2e:</strong> Vascular tissue and the structure of xylem and phloem. <a href="https://openstax.org/books/biology-2e/pages/30-2-stems" target="_blank" rel="noopener">OpenStax — Stems</a>.</li>
+</ul>
+<p><strong>Copyright note:</strong> The diagrams in this article were created as original inline SVG schematics for EDUSAMBAM. They are not copied from the referenced sources. The article text is newly written and should still be reviewed by the site's editorial team before publication.</p>
+
+<!-- QUIZ SECTION -->
+<div class="quiz-section">
+<div class="section-eyebrow">Test Your Understanding</div>
+<h2>Practice Quiz</h2>
+<p class="quiz-intro">15 questions. Select an answer for each, then submit to see your score instantly.</p>
+<div class="squiz-progress"><div class="squiz-progress-fill" id="squizProgressFill"></div></div>
+<div class="squiz-progress-label" id="squizProgressLabel">0 of 15 answered</div>
+<div class="squiz-results" id="squizResults"><div class="squiz-score-big" id="squizScoreBig">0/15</div><div class="squiz-score-label" id="squizScoreLabel">You scored 0%</div><div class="squiz-score-tier" id="squizScoreTier">Keep practicing</div><div><button class="squiz-retake-btn" onclick="retakeQuiz()">Retake Quiz</button></div></div>
+<form id="squizForm">
+<div class="squiz-item" data-correct="1"><div class="squiz-q"><span class="qnum">1.</span>Where do the light-dependent reactions mainly occur?</div><div class="squiz-option"><input id="sq1a" name="sq1" type="radio" value="0"/><label for="sq1a">A. In the nucleus</label></div><div class="squiz-option"><input id="sq1b" name="sq1" type="radio" value="1"/><label for="sq1b">B. In the thylakoid membrane system</label></div><div class="squiz-option"><input id="sq1c" name="sq1" type="radio" value="2"/><label for="sq1c">C. In the cell wall</label></div><div class="squiz-option"><input id="sq1d" name="sq1" type="radio" value="3"/><label for="sq1d">D. In the vacuole only</label></div></div>
+<div class="squiz-item" data-correct="2"><div class="squiz-q"><span class="qnum">2.</span>Which substance supplies carbon for carbon fixation in the Calvin cycle?</div><div class="squiz-option"><input id="sq2a" name="sq2" type="radio" value="0"/><label for="sq2a">A. Oxygen</label></div><div class="squiz-option"><input id="sq2b" name="sq2" type="radio" value="1"/><label for="sq2b">B. Water vapour</label></div><div class="squiz-option"><input id="sq2c" name="sq2" type="radio" value="2"/><label for="sq2c">C. Carbon dioxide</label></div><div class="squiz-option"><input id="sq2d" name="sq2" type="radio" value="3"/><label for="sq2d">D. Nitrogen gas</label></div></div>
+<div class="squiz-item" data-correct="0"><div class="squiz-q"><span class="qnum">3.</span>Which molecules carry chemical energy from the light-dependent reactions to the Calvin cycle?</div><div class="squiz-option"><input id="sq3a" name="sq3" type="radio" value="0"/><label for="sq3a">A. ATP and NADPH</label></div><div class="squiz-option"><input id="sq3b" name="sq3" type="radio" value="1"/><label for="sq3b">B. DNA and RNA</label></div><div class="squiz-option"><input id="sq3c" name="sq3" type="radio" value="2"/><label for="sq3c">C. Starch and cellulose</label></div><div class="squiz-option"><input id="sq3d" name="sq3" type="radio" value="3"/><label for="sq3d">D. Oxygen and carbon dioxide</label></div></div>
+<div class="squiz-item" data-correct="3"><div class="squiz-q"><span class="qnum">4.</span>What is a limiting factor?</div><div class="squiz-option"><input id="sq4a" name="sq4" type="radio" value="0"/><label for="sq4a">A. A factor that is always present in excess</label></div><div class="squiz-option"><input id="sq4b" name="sq4" type="radio" value="1"/><label for="sq4b">B. A factor that can never change</label></div><div class="squiz-option"><input id="sq4c" name="sq4" type="radio" value="2"/><label for="sq4c">C. A factor that only affects roots</label></div><div class="squiz-option"><input id="sq4d" name="sq4" type="radio" value="3"/><label for="sq4d">D. A factor whose scarcity restricts the rate of a process</label></div></div>
+<div class="squiz-item" data-correct="0"><div class="squiz-q"><span class="qnum">5.</span>Which mineral element is a central component of chlorophyll?</div><div class="squiz-option"><input id="sq5a" name="sq5" type="radio" value="0"/><label for="sq5a">A. Magnesium</label></div><div class="squiz-option"><input id="sq5b" name="sq5" type="radio" value="1"/><label for="sq5b">B. Sodium</label></div><div class="squiz-option"><input id="sq5c" name="sq5" type="radio" value="2"/><label for="sq5c">C. Chlorine only</label></div><div class="squiz-option"><input id="sq5d" name="sq5" type="radio" value="3"/><label for="sq5d">D. Silicon only</label></div></div>
+<div class="squiz-item" data-correct="2"><div class="squiz-q"><span class="qnum">6.</span>What is the main function of xylem?</div><div class="squiz-option"><input id="sq6a" name="sq6" type="radio" value="0"/><label for="sq6a">A. Carry genetic information</label></div><div class="squiz-option"><input id="sq6b" name="sq6" type="radio" value="1"/><label for="sq6b">B. Produce all plant hormones</label></div><div class="squiz-option"><input id="sq6c" name="sq6" type="radio" value="2"/><label for="sq6c">C. Conduct water and dissolved mineral ions</label></div><div class="squiz-option"><input id="sq6d" name="sq6" type="radio" value="3"/><label for="sq6d">D. Carry only sucrose from leaves</label></div></div>
+<div class="squiz-item" data-correct="1"><div class="squiz-q"><span class="qnum">7.</span>What is transpiration?</div><div class="squiz-option"><input id="sq7a" name="sq7" type="radio" value="0"/><label for="sq7a">A. Uptake of mineral ions by roots</label></div><div class="squiz-option"><input id="sq7b" name="sq7" type="radio" value="1"/><label for="sq7b">B. Loss of water vapour from plant surfaces</label></div><div class="squiz-option"><input id="sq7c" name="sq7" type="radio" value="2"/><label for="sq7c">C. Production of glucose in mitochondria</label></div><div class="squiz-option"><input id="sq7d" name="sq7" type="radio" value="3"/><label for="sq7d">D. Movement of sucrose into the roots only</label></div></div>
+<div class="squiz-item" data-correct="3"><div class="squiz-q"><span class="qnum">8.</span>Why do stomata create a trade-off for plants?</div><div class="squiz-option"><input id="sq8a" name="sq8" type="radio" value="0"/><label for="sq8a">A. Opening stomata stops all gas exchange</label></div><div class="squiz-option"><input id="sq8b" name="sq8" type="radio" value="1"/><label for="sq8b">B. Closing stomata always increases CO₂ entry</label></div><div class="squiz-option"><input id="sq8c" name="sq8" type="radio" value="2"/><label for="sq8c">C. Stomata control only mineral uptake</label></div><div class="squiz-option"><input id="sq8d" name="sq8" type="radio" value="3"/><label for="sq8d">D. Opening favours CO₂ entry but can increase water loss</label></div></div>
+<div class="squiz-item" data-correct="0"><div class="squiz-q"><span class="qnum">9.</span>Which tissue mainly transports sucrose and other organic solutes?</div><div class="squiz-option"><input id="sq9a" name="sq9" type="radio" value="0"/><label for="sq9a">A. Phloem</label></div><div class="squiz-option"><input id="sq9b" name="sq9" type="radio" value="1"/><label for="sq9b">B. Xylem</label></div><div class="squiz-option"><input id="sq9c" name="sq9" type="radio" value="2"/><label for="sq9c">C. Epidermis only</label></div><div class="squiz-option"><input id="sq9d" name="sq9" type="radio" value="3"/><label for="sq9d">D. Cuticle</label></div></div>
+<div class="squiz-item" data-correct="2"><div class="squiz-q"><span class="qnum">10.</span>In the source-to-sink model, a sink is best described as:</div><div class="squiz-option"><input id="sq10a" name="sq10" type="radio" value="0"/><label for="sq10a">A. A tissue that always releases oxygen</label></div><div class="squiz-option"><input id="sq10b" name="sq10" type="radio" value="1"/><label for="sq10b">B. A chloroplast that absorbs light</label></div><div class="squiz-option"><input id="sq10c" name="sq10" type="radio" value="2"/><label for="sq10c">C. A region that uses or stores transported organic solutes</label></div><div class="squiz-option"><input id="sq10d" name="sq10" type="radio" value="3"/><label for="sq10d">D. A xylem vessel filled with air</label></div></div>
+<div class="squiz-item" data-correct="1"><div class="squiz-q"><span class="qnum">11.</span>Which statement about the Calvin cycle is most accurate?</div><div class="squiz-option"><input id="sq11a" name="sq11" type="radio" value="0"/><label for="sq11a">A. It directly uses photons as a reactant in every step</label></div><div class="squiz-option"><input id="sq11b" name="sq11" type="radio" value="1"/><label for="sq11b">B. It uses ATP and NADPH to help convert CO₂-derived carbon into organic compounds</label></div><div class="squiz-option"><input id="sq11c" name="sq11" type="radio" value="2"/><label for="sq11c">C. It occurs in the xylem</label></div><div class="squiz-option"><input id="sq11d" name="sq11" type="radio" value="3"/><label for="sq11d">D. It produces only oxygen</label></div></div>
+<div class="squiz-item" data-correct="3"><div class="squiz-q"><span class="qnum">12.</span>Why can photosynthetic rate stop increasing when light intensity continues to rise?</div><div class="squiz-option"><input id="sq12a" name="sq12" type="radio" value="0"/><label for="sq12a">A. Light disappears at high intensity</label></div><div class="squiz-option"><input id="sq12b" name="sq12" type="radio" value="1"/><label for="sq12b">B. Chloroplasts immediately turn into roots</label></div><div class="squiz-option"><input id="sq12c" name="sq12" type="radio" value="2"/><label for="sq12c">C. Water becomes a carbohydrate</label></div><div class="squiz-option"><input id="sq12d" name="sq12" type="radio" value="3"/><label for="sq12d">D. Another factor becomes limiting</label></div></div>
+<div class="squiz-item" data-correct="0"><div class="squiz-q"><span class="qnum">13.</span>Which statement best describes cohesion in the xylem water column?</div><div class="squiz-option"><input id="sq13a" name="sq13" type="radio" value="0"/><label for="sq13a">A. Water molecules attract one another, helping maintain continuity</label></div><div class="squiz-option"><input id="sq13b" name="sq13" type="radio" value="1"/><label for="sq13b">B. Sucrose molecules break water into oxygen</label></div><div class="squiz-option"><input id="sq13c" name="sq13" type="radio" value="2"/><label for="sq13c">C. Chlorophyll pulls water through the nucleus</label></div><div class="squiz-option"><input id="sq13d" name="sq13" type="radio" value="3"/><label for="sq13d">D. Cohesion closes every stoma</label></div></div>
+<div class="squiz-item" data-correct="2"><div class="squiz-q"><span class="qnum">14.</span>Which practical design is most appropriate for testing the effect of light intensity on photosynthesis?</div><div class="squiz-option"><input id="sq14a" name="sq14" type="radio" value="0"/><label for="sq14a">A. Change light, temperature and CO₂ concentration together</label></div><div class="squiz-option"><input id="sq14b" name="sq14" type="radio" value="1"/><label for="sq14b">B. Record only the best-looking result</label></div><div class="squiz-option"><input id="sq14c" name="sq14" type="radio" value="2"/><label for="sq14c">C. Vary light while controlling other important variables and repeat measurements</label></div><div class="squiz-option"><input id="sq14d" name="sq14" type="radio" value="3"/><label for="sq14d">D. Remove all controls to make the experiment faster</label></div></div>
+<div class="squiz-item" data-correct="1"><div class="squiz-q"><span class="qnum">15.</span>Which statement best connects photosynthesis and phloem transport?</div><div class="squiz-option"><input id="sq15a" name="sq15" type="radio" value="0"/><label for="sq15a">A. Photosynthesis produces water that phloem always carries downward</label></div><div class="squiz-option"><input id="sq15b" name="sq15" type="radio" value="1"/><label for="sq15b">B. Photosynthetic tissues can act as sources of sugars that are translocated to sinks</label></div><div class="squiz-option"><input id="sq15c" name="sq15" type="radio" value="2"/><label for="sq15c">C. Phloem makes light energy inside chloroplasts</label></div><div class="squiz-option"><input id="sq15d" name="sq15" type="radio" value="3"/><label for="sq15d">D. Photosynthesis and phloem transport are unrelated</label></div></div>
+<button class="squiz-submit-btn" disabled="" id="squizSubmitBtn" onclick="submitQuiz()" type="button">Answer all questions to submit</button>
+</form></div>
+<div class="article-footer-nav"><a href="index.html#science">← Back to Biology</a><a href="index.html#science">More Biology Topics →</a></div>
+</div>
+<script>
+  (function() {
+    const form = document.getElementById('squizForm');
+    const submitBtn = document.getElementById('squizSubmitBtn');
+    const progressFill = document.getElementById('squizProgressFill');
+    const progressLabel = document.getElementById('squizProgressLabel');
+    const totalQuestions = document.querySelectorAll('.squiz-item').length;
+
+    function countAnswered() {
+      let count = 0;
+      for (let i = 1; i <= totalQuestions; i++) {
+        if (form.querySelector(`input[name="sq${i}"]:checked`)) count++;
+      }
+      return count;
+    }
+
+    function updateProgress() {
+      const answered = countAnswered();
+      progressFill.style.width = (answered / totalQuestions * 100) + '%';
+      progressLabel.textContent = answered + ' of ' + totalQuestions + ' answered';
+      submitBtn.disabled = answered < totalQuestions;
+      submitBtn.textContent = answered < totalQuestions ? 'Answer all questions to submit' : 'Submit Quiz';
+      document.querySelectorAll('.squiz-option').forEach(opt => opt.classList.remove('selected'));
+      form.querySelectorAll('input[type="radio"]:checked').forEach(input => {
+        input.closest('.squiz-option').classList.add('selected');
+      });
+    }
+
+    form.addEventListener('change', updateProgress);
+
+    window.submitQuiz = function() {
+      let score = 0;
+      const questions = document.querySelectorAll('.squiz-item');
+      questions.forEach((q, idx) => {
+        const qnum = idx + 1;
+        const correctIdx = q.getAttribute('data-correct');
+        const selected = form.querySelector(`input[name="sq${qnum}"]:checked`);
+        const options = q.querySelectorAll('.squiz-option');
+        options.forEach((opt, optIdx) => {
+          opt.querySelector('input').disabled = true;
+          if (String(optIdx) === correctIdx) opt.classList.add('correct-answer');
+        });
+        if (selected && selected.value === correctIdx) {
+          score++;
+        } else if (selected) {
+          selected.closest('.squiz-option').classList.add('wrong-answer');
+        }
+      });
+
+      const percent = Math.round((score / totalQuestions) * 100);
+      document.getElementById('squizScoreBig').textContent = score + '/' + totalQuestions;
+      document.getElementById('squizScoreLabel').textContent = 'You scored ' + percent + '%';
+
+      let tier = 'Keep practicing';
+      if (percent === 100) tier = 'Perfect score!';
+      else if (percent >= 80) tier = 'Excellent work';
+      else if (percent >= 60) tier = 'Good effort';
+      else if (percent >= 40) tier = 'Getting there';
+      document.getElementById('squizScoreTier').textContent = tier;
+
+      document.getElementById('squizResults').classList.add('visible');
+      submitBtn.style.display = 'none';
+      document.getElementById('squizResults').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    window.retakeQuiz = function() {
+      form.reset();
+      document.querySelectorAll('.squiz-option').forEach(opt => {
+        opt.classList.remove('selected', 'correct-answer', 'wrong-answer');
+        opt.querySelector('input').disabled = false;
+      });
+      document.getElementById('squizResults').classList.remove('visible');
+      submitBtn.style.display = 'block';
+      updateProgress();
+      document.getElementById('squizForm').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    updateProgress();
+  })();
+</script>
+
+<script id="edusambam-reader-script">
+(function(){
+ const box=document.querySelector('.edusambam-reader'); if(!box)return;
+ const root=document.querySelector('.article-wrap, .article-wrapper');
+ if(!root)return;
+ const bodySource=root.querySelector('.article-content, .article-body, .content-body') || root;
+ const status=box.querySelector('.reader-status'), progress=box.querySelector('.reader-progress span'), rate=box.querySelector('select');
+ let utterance=null, chunks=[], index=0, total=0, paused=false, stopped=false;
+ function text(){
+   const clone=bodySource.cloneNode(true);
+   clone.querySelectorAll('.quiz-section,.drill-section,.squiz-section,.squiz-item,.activity-section,.assessment-section,.article-footer-nav,form,button,input,select,textarea,script,style,.edusambam-reader,.breadcrumb,.article-hero-meta,.article-hero-tag,nav,header,footer').forEach(el=>el.remove());
+   return clone.textContent.replace(/\s+/g,' ').trim();
+ }
+ function splitText(t){const out=[];const max=1200;for(let i=0;i<t.length;i+=max)out.push(t.slice(i,i+max));return out;}
+ function updateProgress(){progress.style.width=(total?Math.min(100,Math.round((index/total)*100)):0)+'%';}
+ function speakNext(){
+   if(stopped||index>=total){if(index>=total&&!stopped){status.textContent='Reading finished.';progress.style.width='100%';}return;}
+   utterance=new SpeechSynthesisUtterance(chunks[index]);
+   utterance.rate=Number(rate.value)||1;
+   utterance.onend=function(){if(stopped)return;index++;updateProgress();speakNext();};
+   utterance.onerror=function(){if(!stopped)status.textContent='The reader stopped unexpectedly. Tap Resume to continue.';};
+   status.textContent='Reading article…';
+   speechSynthesis.speak(utterance);
+ }
+ function play(){
+   if(!('speechSynthesis' in window)){status.textContent='Audio reading is not supported by this browser.';return;}
+   speechSynthesis.cancel();
+   chunks=splitText(text());index=0;total=chunks.length;paused=false;stopped=false;updateProgress();speakNext();
+ }
+ function pause(){
+   if(!('speechSynthesis' in window))return;
+   if(speechSynthesis.speaking){speechSynthesis.pause();paused=true;status.textContent='Reader paused.';}
+ }
+ function resume(){
+   if(!('speechSynthesis' in window))return;
+   stopped=false;
+   if(speechSynthesis.paused){speechSynthesis.resume();paused=false;status.textContent='Reader resumed.';return;}
+   if(!speechSynthesis.speaking && chunks.length && index<total){paused=false;status.textContent='Reader resumed.';speakNext();return;}
+   if(!chunks.length){status.textContent='Nothing to resume. Tap Play to start.';return;}
+   status.textContent='Reader is already playing.';
+ }
+ function stop(){
+   speechSynthesis.cancel();chunks=[];index=0;total=0;paused=false;stopped=true;progress.style.width='0';status.textContent='Reader stopped.';
+ }
+ box.querySelector('[data-reader="play"]').addEventListener('click',play);
+ box.querySelector('[data-reader="pause"]').addEventListener('click',pause);
+ box.querySelector('[data-reader="resume"]').addEventListener('click',resume);
+ box.querySelector('[data-reader="stop"]').addEventListener('click',stop);
+ window.addEventListener('beforeunload',()=>{stopped=true;speechSynthesis.cancel();});
+})();
+</script>
+<script id="edusambam-unified-nav-js">
+(function(){
+  const pages=[{"title":"Photosynthesis, Plant Nutrition &amp; Transport — EDUSAMBAM","url":"photosynthesis-plant-nutrition-transport.html"},{"title":"Acids, Bases and Salts: The Chemistry of Sour, Bitter, and Neutral — EDUSAMBAM","url":"acids-bases-salts.html"},{"title":"AI Agents: When AI Takes Action, Not Just Talks — EDUSAMBAM","url":"ai-agents.html"},{"title":"AI Ethics: Bias, Privacy and Misinformation Explained — EDUSAMBAM","url":"ai-ethics.html"},{"title":"The Anatomy of the Eye in Depth — EDUSAMBAM","url":"anatomy-of-the-eye-in-depth.html"},{"title":"Animals &amp; Ecosystems: Wildlife GK — EDUSAMBAM","url":"animals-and-ecosystems.html"},{"title":"EDUSAMBAM Article Reader","url":"article-viewer.html"},{"title":"ASSESSMENT ARENA — EDUSAMBAM","url":"assessment-arena.html"},{"title":"Atoms and the Periodic Table: The Building Blocks of Everything — EDUSAMBAM","url":"atoms-and-periodic-table.html"},{"title":"Author's Purpose, Tone &amp; Point of View: The Complete Guide — EDUSAMBAM","url":"authors-purpose-tone-pov.html"},{"title":"Basic Data &amp; Statistics: Mean, Median, and Mode — EDUSAMBAM","url":"basic-data-statistics.html"},{"title":"BODMAS &amp; DMAS Rules: The Correct Order of Operations — EDUSAMBAM","url":"bodmas-dmas-rules.html"},{"title":"Brackets, Fractions &amp; Decimals in BODMAS — EDUSAMBAM","url":"brackets-fractions-decimals-bodmas.html"},{"title":"Cells: The Building Blocks of Life — EDUSAMBAM","url":"cells-the-building-blocks-of-life.html"},{"title":"Character Development: Writing People Readers Care About — EDUSAMBAM","url":"character-development.html"},{"title":"Chemical Bonding: How Atoms Connect to Form Everything — EDUSAMBAM","url":"chemical-bonding.html"},{"title":"Chemical Reactions and Equations: The Language of Change — EDUSAMBAM","url":"chemical-reactions-equations.html"},{"title":"Chemistry in Everyday Life: The Science Hiding in Plain Sight — EDUSAMBAM","url":"chemistry-in-everyday-life.html"},{"title":"Cloud Computing: What \"The Cloud\" Actually Is — EDUSAMBAM","url":"cloud-computing.html"},{"title":"Colour Vision and Colour Blindness Explained — EDUSAMBAM","url":"colour-vision-and-colour-blindness-explained.html"},{"title":"Common Errors in English: A Complete Guide — EDUSAMBAM","url":"common-errors.html"},{"title":"Common Pronunciation Mistakes — EDUSAMBAM","url":"common-pronunciation-mistakes.html"},{"title":"Complaint &amp; Request Letters — EDUSAMBAM","url":"complaint-request-letters.html"},{"title":"Computer Vision: How Machines Learn to See — EDUSAMBAM","url":"computer-vision.html"},{"title":"Context Clues: The Complete Guide — EDUSAMBAM","url":"context-clues.html"},{"title":"Continents &amp; Oceans: The Basic Map of the World — EDUSAMBAM","url":"continents-and-oceans.html"},{"title":"Countries &amp; Capitals: Major Nations Around the World — EDUSAMBAM","url":"countries-and-capitals.html"},{"title":"Cybersecurity Basics: Threats, Defences and Good Digital Habits — EDUSAMBAM","url":"cybersecurity-basics.html"},{"title":"Designing a Fair Experiment: Variables, Repeat Trials &amp; Reliability — EDUSAMBAM","url":"designing-a-fair-experiment.html"},{"title":"Dialogue &amp; Voice: Writing Conversation That Sounds Real — EDUSAMBAM","url":"dialogue-and-voice.html"},{"title":"Digital Footprint &amp; Online Privacy: What Gets Tracked, and Why It Matters — EDUSAMBAM","url":"digital-footprint-privacy.html"},{"title":"Divisibility Rules: Quick Tests for 2 Through 12 — EDUSAMBAM","url":"divisibility-rules.html"},{"title":"Earth's Structure: Layers, Plates &amp; Earthquakes — EDUSAMBAM","url":"earths-structure-layers-plates-and-earthquakes.html"},{"title":"Ecosystems &amp; Biodiversity — EDUSAMBAM","url":"ecosystems-and-biodiversity.html"},{"title":"Effects of Substance Abuse — EDUSAMBAM","url":"effects-of-substance-abuse.html"},{"title":"Electricity and Magnetism: The Basics — EDUSAMBAM","url":"electricity-and-magnetism-the-basics.html"},{"title":"Electrochemistry: Where Chemistry Meets Electricity — EDUSAMBAM","url":"electrochemistry.html"},{"title":"Energy: Types, Sources, and Transformations — EDUSAMBAM","url":"energy-types-sources-transformations.html"},{"title":"English as an International Language — EDUSAMBAM","url":"english-international-language.html"},{"title":"Essay Structure &amp; the Five-Paragraph Essay: The Complete Guide — EDUSAMBAM","url":"essay-structure.html"},{"title":"Evidence, Citations &amp; Avoiding Plagiarism: The Complete Guide — EDUSAMBAM","url":"evidence-citations-plagiarism.html"},{"title":"Exponents &amp; Powers: The Laws of Indices — EDUSAMBAM","url":"exponents-and-powers.html"},{"title":"Factors &amp; Multiples: Prime, Composite, and Common — EDUSAMBAM","url":"factors-and-multiples.html"},{"title":"Famous Personalities: Leaders, Scientists &amp; Nobel Laureates — EDUSAMBAM","url":"famous-personalities.html"},{"title":"Famous World Landmarks &amp; Wonders — EDUSAMBAM","url":"famous-world-landmarks-wonders.html"},{"title":"First Aid and Basic Safety — EDUSAMBAM","url":"first-aid-basic-safety.html"},{"title":"Flags of the World: Reading the Symbols — EDUSAMBAM","url":"flags-of-the-world.html"},{"title":"Fluency Building Techniques — EDUSAMBAM","url":"fluency-building-techniques.html"},{"title":"Food Groups and Healthy Eating Habits — EDUSAMBAM","url":"food-groups-healthy-eating.html"},{"title":"Force and Newton's Laws of Motion — EDUSAMBAM","url":"force-newtons-laws-of-motion.html"},{"title":"Formal vs. Informal English: The Complete Guide — EDUSAMBAM","url":"formal-informal-english.html"},{"title":"Formal Letter Writing — EDUSAMBAM","url":"formal-letter-writing.html"},{"title":"Fraction Fix-It: Strategies for Confident Fraction Sense — EDUSAMBAM","url":"fraction-fix-it.html"},{"title":"Multiply &amp; Divide Fractions: Cross, Flip, and Fly — EDUSAMBAM","url":"fraction-multiply-divide.html"},{"title":"Generative AI: Images, Text and Where the Line Is — EDUSAMBAM","url":"generative-ai.html"},{"title":"The Grammar Trap: 10 Mistakes That Make Smart People Look Careless — EDUSAMBAM","url":"grammar-article.html"},{"title":"Grammar Fix-It — EDUSAMBAM","url":"grammar-fix-it.html"},{"title":"Gravity and Space: Why Things Fall and Planets Orbit — EDUSAMBAM","url":"gravity-and-space.html"},{"title":"Great Inventions &amp; Inventors — EDUSAMBAM","url":"great-inventions-and-inventors.html"},{"title":"HCF &amp; LCM: Highest Common Factor &amp; Lowest Common Multiple — EDUSAMBAM","url":"hcf-and-lcm.html"},{"title":"HCF &amp; LCM Word Problems: Real-Life Applications — EDUSAMBAM","url":"hcf-lcm-word-problems.html"},{"title":"Heat and Temperature: How They Differ — EDUSAMBAM","url":"heat-and-temperature.html"},{"title":"The History of Computing: Babbage to Smartphones — EDUSAMBAM","url":"history-of-computing.html"},{"title":"How Computers Work: Hardware, Software and Binary Code — EDUSAMBAM","url":"how-computers-work.html"},{"title":"How to Write a Perfect Paragraph — EDUSAMBAM","url":"how-to-write-a-perfect-paragraph.html"},{"title":"How We See: Light, Focus, and the Brain's Role in Vision — EDUSAMBAM","url":"how-we-see-light-focus-and-the-brain.html"},{"title":"The Human Body's Immune System — EDUSAMBAM","url":"human-immune-system.html"},{"title":"Idiom Matcher — EDUSAMBAM","url":"idiom-matcher.html"},{"title":"Idioms &amp; Phrases: The Complete Guide — EDUSAMBAM","url":"idioms-phrases.html"},{"title":"The Importance of the English Language — EDUSAMBAM","url":"importance-of-english.html"},{"title":"The Importance of Sleep and Rest — EDUSAMBAM","url":"importance-of-sleep-and-rest.html"},{"title":"EDUSAMBAM — Global Learning, Knowledge &amp; Wellbeing","url":"index.html"},{"title":"India: National Symbols, Founders &amp; Key Facts — EDUSAMBAM","url":"india-national-symbols.html"},{"title":"Informal Letter Writing — EDUSAMBAM","url":"informal-letter-writing.html"},{"title":"Intonation in Conversation — EDUSAMBAM","url":"intonation-in-conversation.html"},{"title":"Job Applications &amp; Cover Letters — EDUSAMBAM","url":"job-applications-cover-letters.html"},{"title":"Lab Safety &amp; Scientific Equipment: The Basics Every Scientist Needs — EDUSAMBAM","url":"lab-safety-scientific-equipment.html"},{"title":"Language and Its Need — EDUSAMBAM","url":"language-and-its-need.html"},{"title":"EDUSAMBAM Learning Hub — Six SAMBAM Pathways","url":"learning-hub.html"},{"title":"Light: Reflection, Refraction, and Color — EDUSAMBAM","url":"light-reflection-refraction-color.html"},{"title":"Machine Learning Explained: How Computers Learn From Data — EDUSAMBAM","url":"machine-learning-explained.html"},{"title":"Main Idea &amp; Supporting Details: The Complete Guide — EDUSAMBAM","url":"main-idea-supporting-details.html"},{"title":"Making Inferences &amp; Drawing Conclusions: The Complete Guide — EDUSAMBAM","url":"making-inferences.html"},{"title":"Matter and Its States: Solid, Liquid, and Gas — EDUSAMBAM","url":"matter-and-its-states.html"},{"title":"Chemistry of Metals and Non-Metals: A Tale of Two Families — EDUSAMBAM","url":"metals-nonmetals-chemistry.html"},{"title":"Mixtures and Solutions: How Substances Combine Without Reacting — EDUSAMBAM","url":"mixtures-and-solutions.html"},{"title":"Models &amp; Simulations in Science — EDUSAMBAM","url":"models-and-simulations.html"},{"title":"The Mole and Chemical Calculations: Counting the Uncountable — EDUSAMBAM","url":"mole-chemical-calculations.html"},{"title":"Motion: Speed, Velocity, and Distance — EDUSAMBAM","url":"motion-speed-velocity-distance.html"},{"title":"Natural Language Processing: How Computers Understand Text — EDUSAMBAM","url":"natural-language-processing.html"},{"title":"Number Base Systems: Binary, Base 5, Base 7, Octal &amp; Decimal — EDUSAMBAM","url":"number-base-systems.html"},{"title":"Addition &amp; Subtraction on the Number Line — EDUSAMBAM","url":"number-line-addition-subtraction.html"},{"title":"Multiplication &amp; Division on the Number Line — EDUSAMBAM","url":"number-line-multiplication-division.html"},{"title":"Number Lines: Placing Whole Numbers, Fractions, and Decimals — EDUSAMBAM","url":"number-lines.html"},{"title":"Number Systems: Natural, Whole, Integer, Rational &amp; Real Numbers — EDUSAMBAM","url":"number-systems.html"},{"title":"Observation vs Inference: Reading Data Like a Scientist — EDUSAMBAM","url":"observation-vs-inference.html"},{"title":"Operating Systems: The Software Behind Every Device — EDUSAMBAM","url":"operating-systems.html"},{"title":"Operations of Integers: Addition, Subtraction, Multiplication &amp; Division — EDUSAMBAM","url":"operations-of-integers.html"},{"title":"Organic Chemistry Basics: The Chemistry of Carbon — EDUSAMBAM","url":"organic-chemistry-basics.html"},{"title":"Pakistan: National Symbols, Founders &amp; Key Facts — EDUSAMBAM","url":"pakistan-national-symbols.html"},{"title":"Parts of Speech: The Building Blocks of English — EDUSAMBAM","url":"parts-of-speech.html"},{"title":"Percentages: Averages, Profit &amp; Loss, Discounts &amp; Interest — EDUSAMBAM","url":"percentages.html"},{"title":"Personal Hygiene and Disease Prevention — EDUSAMBAM","url":"personal-hygiene-disease-prevention.html"},{"title":"Physical Fitness and Exercise Basics — EDUSAMBAM","url":"physical-fitness-exercise-basics.html"},{"title":"Place Value &amp; Face Value: International, Indian &amp; Pakistani Systems — EDUSAMBAM","url":"place-value-face-value.html"},{"title":"Poetry: The Complete Guide — EDUSAMBAM","url":"poetry.html"},{"title":"Practice Test: Academic &amp; Essay Writing — EDUSAMBAM","url":"practice-test-academic-essay-writing.html"},{"title":"Practice Test: AI Agents &amp; Natural Language Processing — EDUSAMBAM","url":"practice-test-ai-agents-and-nlp.html"},{"title":"Practice Test: What Is AI &amp; Machine Learning? — EDUSAMBAM","url":"practice-test-ai-and-machine-learning.html"},{"title":"Chemistry Comprehensive Practice Test 1 — EDUSAMBAM","url":"practice-test-chemistry-comprehensive-1.html"},{"title":"Chemistry Comprehensive Practice Test 2 — EDUSAMBAM","url":"practice-test-chemistry-comprehensive-2.html"},{"title":"Chemistry Comprehensive Practice Test 3 — EDUSAMBAM","url":"practice-test-chemistry-comprehensive-3.html"},{"title":"Chemistry Comprehensive Practice Test 4 — EDUSAMBAM","url":"practice-test-chemistry-comprehensive-4.html"},{"title":"Chemistry Comprehensive Practice Test 5 — EDUSAMBAM","url":"practice-test-chemistry-comprehensive-5.html"},{"title":"Chemistry Comprehensive Practice Test 6 — EDUSAMBAM","url":"practice-test-chemistry-comprehensive-6.html"},{"title":"Practice Test: Cloud Computing — EDUSAMBAM","url":"practice-test-cloud-computing.html"},{"title":"Practice Test: Computer Vision &amp; Recommendation Systems — EDUSAMBAM","url":"practice-test-computer-vision-and-recommendation-systems.html"},{"title":"Practice Test: Countries, Capitals &amp; Flags of the World | EDUSAMBAM","url":"practice-test-countries-capitals-flags.html"},{"title":"Practice Test: Creative Writing — Part 2 — EDUSAMBAM","url":"practice-test-creative-writing-part-1.html"},{"title":"Practice Test: Creative Writing — Part 1 — EDUSAMBAM","url":"practice-test-creative-writing-part.html"},{"title":"Practice Test: Digital Footprint &amp; Online Privacy — EDUSAMBAM","url":"practice-test-digital-footprint-privacy.html"},{"title":"Practice Test: Factors &amp; Multiples — EDUSAMBAM","url":"practice-test-factors-multiples.html"},{"title":"Practice Test: Foundational Concepts of English — EDUSAMBAM","url":"practice-test-foundational-concepts-english.html"},{"title":"Practice Test: Fractions — EDUSAMBAM","url":"practice-test-fractions.html"},{"title":"Practice Test: Generative AI &amp; Prompt Engineering — EDUSAMBAM","url":"practice-test-generative-ai-and-prompt-engineering.html"},{"title":"Practice Test: Grammar Basics — EDUSAMBAM","url":"practice-test-grammar-basics.html"},{"title":"Practice Test: The History of Computing — EDUSAMBAM","url":"practice-test-history-of-computing.html"},{"title":"Practice Test: How the Internet Works — EDUSAMBAM","url":"practice-test-how-the-internet-works.html"},{"title":"Practice Test: Literary Forms — EDUSAMBAM","url":"practice-test-literary-forms.html"},{"title":"Practice Test: What Is an LLM &amp; AI Ethics? — EDUSAMBAM","url":"practice-test-llm-and-ai-ethics.html"},{"title":"Practice Test: Measurement — EDUSAMBAM","url":"practice-test-measurement.html"},{"title":"Practice Test: Number Line Skills — EDUSAMBAM","url":"practice-test-number-line-skills.html"},{"title":"Practice Test: Number Systems — EDUSAMBAM","url":"practice-test-number-systems.html"},{"title":"Practice Test: Operations &amp; BODMAS — EDUSAMBAM","url":"practice-test-operations-bodmas.html"},{"title":"Practice Test: Parts of a Computer — EDUSAMBAM","url":"practice-test-parts-of-a-computer.html"},{"title":"Physics Comprehensive Practice Test 1 — EDUSAMBAM","url":"practice-test-physics-comprehensive-1.html"},{"title":"Physics Comprehensive Practice Test 2 — EDUSAMBAM","url":"practice-test-physics-comprehensive-2.html"},{"title":"Physics Comprehensive Practice Test 3 — EDUSAMBAM","url":"practice-test-physics-comprehensive-3.html"},{"title":"Physics Comprehensive Practice Test 4 — EDUSAMBAM","url":"practice-test-physics-comprehensive-4.html"},{"title":"Physics Comprehensive Practice Test 5 — EDUSAMBAM","url":"practice-test-physics-comprehensive-5.html"},{"title":"Physics Comprehensive Practice Test 6 — EDUSAMBAM","url":"practice-test-physics-comprehensive-6.html"},{"title":"Practice Test: Powers &amp; Roots — EDUSAMBAM","url":"practice-test-powers-roots.html"},{"title":"Practice Test: Practical Writing — EDUSAMBAM","url":"practice-test-practical-writing.html"},{"title":"Practice Test: Ratio &amp; Percentages — EDUSAMBAM","url":"practice-test-ratio-percentages.html"},{"title":"Practice Test: Reading Comprehension — EDUSAMBAM","url":"practice-test-reading-comprehension.html"},{"title":"Practice Test: Search Engines &amp; Web Browsers — EDUSAMBAM","url":"practice-test-search-engines-browsers.html"},{"title":"Practice Test: The Seven Wonders of the Modern World | EDUSAMBAM","url":"practice-test-seven-wonders-of-the-world.html"},{"title":"Practice Test: Software, Apps &amp; Operating Systems — EDUSAMBAM","url":"practice-test-software-apps-operating-systems.html"},{"title":"Practice Test: Speaking &amp; Pronunciation — EDUSAMBAM","url":"practice-test-speaking-pronunciation.html"},{"title":"Practice Test: Staying Safe Online — EDUSAMBAM","url":"practice-test-staying-safe-online.html"},{"title":"Practice Test: Times Tables — EDUSAMBAM","url":"practice-test-times-tables.html"},{"title":"Practice Test: Vocabulary Building — EDUSAMBAM","url":"practice-test-vocabulary-building.html"},{"title":"Practice Test: What Is an Algorithm? — EDUSAMBAM","url":"practice-test-what-is-an-algorithm.html"},{"title":"Practice Test: What Is Coding? — EDUSAMBAM","url":"practice-test-what-is-coding.html"},{"title":"Practice Test: Why Do We Need Mathematics? — EDUSAMBAM","url":"practice-test-why-we-need-mathematics.html"},{"title":"Practice Test: World Landmarks &amp; Continents and Oceans | EDUSAMBAM","url":"practice-test-world-landmarks-continents-oceans.html"},{"title":"Prefixes, Suffixes &amp; Root Words: The Complete Guide — EDUSAMBAM","url":"prefixes-suffixes-root-words.html"},{"title":"Pressure and Buoyancy: Why Some Things Float and Others Sink — EDUSAMBAM","url":"pressure-and-buoyancy.html"},{"title":"Professional Email Etiquette — EDUSAMBAM","url":"professional-email-etiquette.html"},{"title":"Prompt Engineering: Getting Better Results From AI Tools — EDUSAMBAM","url":"prompt-engineering.html"},{"title":"Prose: The Complete Guide — EDUSAMBAM","url":"prose.html"},{"title":"Punctuation Practice — EDUSAMBAM","url":"punctuation-practice.html"},{"title":"Punctuation Rules: The Complete Guide — EDUSAMBAM","url":"punctuation-rules.html"},{"title":"Ratio &amp; Proportion: Complete Guide with All Question Types — EDUSAMBAM","url":"ratio-and-proportion.html"},{"title":"Recommendation Systems: How Netflix and Spotify \"Know\" What You Like — EDUSAMBAM","url":"recommendation-systems.html"},{"title":"The Role of an Optometrist in Vision Health and Treatment — EDUSAMBAM","url":"role-of-an-optometrist-in-vision-health-and-treatment.html"},{"title":"Roman Numerals: Reading and Writing an Ancient Number System — EDUSAMBAM","url":"roman-numerals.html"},{"title":"Science vs Pseudoscience: How to Tell the Difference — EDUSAMBAM","url":"science-vs-pseudoscience.html"},{"title":"Scientific Measurement &amp; SI Units: The Language of Data — EDUSAMBAM","url":"scientific-measurement-si-units.html"},{"title":"Scientific Notation: Writing Very Large and Very Small Numbers — EDUSAMBAM","url":"scientific-notation.html"},{"title":"The Scientific Revolution: How Modern Science Began — EDUSAMBAM","url":"scientific-revolution.html"},{"title":"Search Engines &amp; Web Browsers: How the Internet Finds Things — EDUSAMBAM","url":"search-engines-browsers.html"},{"title":"Editing Your Own Work: A Step-by-Step Process — EDUSAMBAM","url":"self-editing-process.html"},{"title":"Sentence Scramble — EDUSAMBAM","url":"sentence-scramble.html"},{"title":"Sentence Structure: From Basic to Advanced — EDUSAMBAM","url":"sentence-structure.html"},{"title":"The Seven Wonders of the Modern World — EDUSAMBAM","url":"seven-wonders-of-the-world.html"},{"title":"Show, Don't Tell: The Principle of Vivid Writing — EDUSAMBAM","url":"show-dont-tell.html"},{"title":"Software, Apps &amp; Operating Systems — EDUSAMBAM","url":"software-apps-operating-systemsoverlaps.html"},{"title":"Sound: How We Hear the World — EDUSAMBAM","url":"sound-how-we-hear-the-world.html"},{"title":"Spoken English &amp; Pronunciation: Mistakes, Stress and Fluency — EDUSAMBAM","url":"spoken-english-pronunciation.html"},{"title":"Sports of the World: Rules, Terms &amp; Records — EDUSAMBAM","url":"sports-of-the-world.html"},{"title":"Squares, Square Roots, Cubes &amp; Cube Roots — EDUSAMBAM","url":"squares-cubes-roots.html"},{"title":"States of Matter and Changes: Why Substances Transform — EDUSAMBAM","url":"states-of-matter-changes.html"},{"title":"Story Structure: Beginning, Middle and End — EDUSAMBAM","url":"story-structure.html"},{"title":"Synonyms &amp; Antonyms: The Complete Guide — EDUSAMBAM","url":"synonyms-antonyms.html"},{"title":"Tenses &amp; Verb Forms: The Complete Guide — EDUSAMBAM","url":"tenses-verb-forms.html"},{"title":"Text Structure &amp; Organization: The Complete Guide — EDUSAMBAM","url":"text-structure-organization.html"},{"title":"The Solar System: Planets, Moons &amp; the Sun — EDUSAMBAM","url":"the-solar-system-planets-moons-and-the-sun.html"},{"title":"The Water Cycle &amp; Earth's Water Systems — EDUSAMBAM","url":"the-water-cycle-and-earths-water-systems.html"},{"title":"Thesis Statements: The Complete Guide — EDUSAMBAM","url":"thesis-statements.html"},{"title":"Times Tables Trainer: Strategies for Fast, Confident Multiplication — EDUSAMBAM","url":"times-tables-trainer.html"},{"title":"Transitions &amp; Cohesion: The Complete Guide — EDUSAMBAM","url":"transitions-cohesion.html"},{"title":"Types of Essays: The Complete Guide — EDUSAMBAM","url":"types-of-essays.html"},{"title":"Understanding Mental Health and Emotions — EDUSAMBAM","url":"understanding-mental-health-emotions.html"},{"title":"Units of Measurement: Length, Mass, Capacity, Time &amp; Area — EDUSAMBAM","url":"units-of-measurement.html"},{"title":"Understanding Vaccines and Immunization — EDUSAMBAM","url":"vaccines-and-immunization.html"},{"title":"Vision Science and Optometry: An Introduction — EDUSAMBAM","url":"vision-science-and-optometry-an-introduction.html"},{"title":"Vocabulary Flashcards — EDUSAMBAM","url":"vocabulary-flashcards.html"},{"title":"Weather &amp; Climate: How the Atmosphere Works — EDUSAMBAM","url":"weather-and-climate-how-the-atmosphere-works.html"},{"title":"What is a Balanced Diet and Why Does It Matter? — EDUSAMBAM","url":"what-is-a-balanced-diet.html"},{"title":"What Is an Algorithm? Thinking Like a Computer — EDUSAMBAM","url":"what-is-an-algorithm.html"},{"title":"What Is a Large Language Model? How Chatbots Actually Work — EDUSAMBAM","url":"what-is-an-llm.html"},{"title":"What is Artificial Intelligence and How Does It Work? — EDUSAMBAM","url":"what-is-artificial-intelligence.html"},{"title":"What is Biology? — EDUSAMBAM","url":"what-is-biology.html"},{"title":"What is Chemistry? The Science of Matter and Change — EDUSAMBAM","url":"what-is-chemistry.html"},{"title":"What Is Coding? Programming Languages Explained, From Basics to Advanced — EDUSAMBAM","url":"what-is-coding.html"},{"title":"What is Health? Physical, Mental &amp; Social Wellbeing — EDUSAMBAM","url":"what-is-health.html"},{"title":"What is Language? — EDUSAMBAM","url":"what-is-language.html"},{"title":"What is Physics? The Study of How Things Work — EDUSAMBAM","url":"what-is-physics.html"},{"title":"What is Science? The Scientific Method — EDUSAMBAM","url":"what-is-science-scientific-method.html"},{"title":"What is the Human Cell? A Simple Guide — EDUSAMBAM","url":"what-is-the-human-cell.html"},{"title":"What Is the Internet, Really? Servers, Packets and How Data Travels — EDUSAMBAM","url":"what-is-the-internet.html"},{"title":"Why Do We Need Mathematics in Daily Life? — EDUSAMBAM","url":"why-do-we-need-mathematics.html"},{"title":"Word &amp; Sentence Stress Patterns — EDUSAMBAM","url":"word-and-sentence-stress.html"},{"title":"Work, Power, and Simple Machines — EDUSAMBAM","url":"work-power-simple-machines.html"}];
+  function closeAll(except){
+    document.querySelectorAll('.edusambam-mobile-menu,.edusambam-search-panel').forEach(el=>{
+      if(el!==except) el.classList.remove('open');
+    });
+    const b=document.querySelector('.edusambam-menu-btn');
+    if(b){
+      const isOpen=!!document.querySelector('.edusambam-mobile-menu')?.classList.contains('open');
+      b.setAttribute('aria-expanded', String(isOpen));
+      b.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+      b.setAttribute('title', isOpen ? 'Close menu' : 'Menu');
+      b.textContent = isOpen ? '×' : '☰';
+    }
+  }
+  function setup(){
+    const menu=document.querySelector('.edusambam-mobile-menu');
+    const mb=document.querySelector('.edusambam-menu-btn');
+    const sb=document.querySelector('.edusambam-search-btn');
+    const panel=document.querySelector('.edusambam-search-panel');
+    const input=document.querySelector('.edusambam-search-input');
+    const results=document.querySelector('.edusambam-search-results');
+    if(mb && menu){
+      mb.addEventListener('click',()=>{
+        const open=menu.classList.toggle('open'); closeAll(open?menu:null);
+        mb.setAttribute('aria-expanded',String(open));
+        mb.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        mb.setAttribute('title', open ? 'Close menu' : 'Menu');
+        mb.textContent = open ? '×' : '☰';
+        if(open) panel?.classList.remove('open');
+      });
+    }
+    if(sb && panel){
+      sb.addEventListener('click',()=>{
+        const open=panel.classList.toggle('open'); closeAll(open?panel:null);
+        if(open) setTimeout(()=>input?.focus(),30);
+      });
+    }
+    if(input && results){
+      const render=()=>{
+        const q=input.value.trim().toLowerCase();
+        const hits=q?pages.filter(x=>(x.title+' '+x.url).toLowerCase().includes(q)).slice(0,20):[];
+        results.innerHTML=hits.map(x=>'<a href="'+x.url.replace(/"/g,'&quot;')+'">'+
+          x.title.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</a>').join('') ||
+          (q?'<div style="padding:10px;color:#64748b">No matching pages found.</div>':'');
+      };
+      input.addEventListener('input',render);
+    }
+    document.addEventListener('keydown',e=>{
+      if(e.key==='Escape') closeAll(null);
+    });
+    document.addEventListener('click',e=>{
+      if(!e.target.closest('.edusambam-nav') && !e.target.closest('.edusambam-mobile-menu') && !e.target.closest('.edusambam-search-panel')) closeAll(null);
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',setup); else setup();
+})();
+</script>
+<footer aria-label="EDUSAMBAM site footer" class="edusambam-unified-footer">
+<div class="footer-top">
+<div class="footer-brand">
+<div class="edusambam-footer-brand-row">
+<a aria-label="EDUSAMBAM home" class="edusambam-footer-logo-link" href="index.html">
+<span aria-hidden="true" class="edusambam-brand-mark edusambam-footer-logo">
+<span class="c1"></span><span class="c2"></span><span class="c3"></span>
+<span class="c4"></span><span class="c5"></span><span class="c6"></span>
+</span>
+<span class="edusambam-footer-brand-name">EDUSAMBAM</span>
+</a>
+</div>
+<p class="edusambam-footer-statement">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM.</p>
+</div>
+<div class="footer-col"><h4>Learning</h4><ul>
+<li><a href="index.html#english">English Language</a></li>
+<li><a href="index.html#general-knowledge">General Knowledge</a></li>
+<li><a href="index.html#computer-ai">Computer &amp; AI</a></li>
+<li><a href="index.html#mathematics">Mathematics</a></li>
+<li><a href="index.html#science">Science</a></li>
+<li><a href="index.html#health">Health</a></li>
+<li><a href="index.html#resources">Resources</a></li>
+</ul></div>
+<div class="footer-col"><h4>Practice &amp; Assessment</h4><ul>
+<li><a href="index.html#interactive-activities">Interactive Activities</a></li>
+<li><a href="assessment-arena.html">ASSESSMENT ARENA</a></li>
+<li><a href="assessment-arena.html">What Is Assessment?</a></li>
+<li><a href="index.html#about">Learn Your Way</a></li>
+<li><a href="index.html#resources">Free Resources &amp; Downloads</a></li>
+</ul></div>
+<div class="footer-col"><h4>About EDUSAMBAM</h4><ul>
+<li><a href="index.html#about-edusambam">What EDUSAMBAM Is</a></li>
+<li><a href="index.html#mission">Our Mission</a></li>
+<li><a href="index.html#team">The Team</a></li>
+<li><a href="mailto:info.edusambam@gmail.com">Contact Us</a></li>
+<li><a href="mailto:feedback.edusambam@gmail.com?subject=EDUSAMBAM%20Feedback">Give Feedback</a></li>
+<li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+</ul></div>
+</div>
+<div class="footer-bottom"><p>© 2026 EDUSAMBAM · Learning resources, practice and assessment.</p><ul class="footer-bottom-links">
+<li><a href="#top">Back to Top</a></li>
+<li><a href="index.html#mission">Mission</a></li>
+<li><a href="index.html#team">Team</a></li>
+<li><a href="index.html#resources">Resources</a></li>
+</ul></div>
+</footer></body>
+</html>
