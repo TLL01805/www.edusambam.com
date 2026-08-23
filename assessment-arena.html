@@ -585,6 +585,10 @@ footer.footer {
       if(total > 0){
         mount.innerHTML = '<h2 style="margin-top:36px">All Practice Tests, by Subject</h2>' +
           '<p>This list updates automatically as new practice tests are added to EDUSAMBAM.</p>' + html;
+        if(location.hash){
+          var target = document.getElementById(location.hash.slice(1));
+          if(target){ target.scrollIntoView({behavior:'smooth', block:'start'}); }
+        }
       }
     }).catch(function(err){
       console.error('EDUSAMBAM: could not load live practice test list.', err);
