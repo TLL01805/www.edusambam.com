@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Analytics 4 — EDUSAMBAM -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Y35DW0V4HQ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-Y35DW0V4HQ');
+</script>
+
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Reading Practice &amp; Comprehension: RSVP — EDUSAMBAM</title>
+<meta name="description" content="Build reading speed and concentration for IELTS-style reading — one to three words flash at a time at an adjustable pace, with everything else hidden, followed by a scored comprehension quiz on every passage."/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --red:       #8B0000;
+  --red-mid:   #A50000;
+  --red-lt:    #F9F0F0;
+  --navy:      #06244a;
+  --navy-mid:  #1C3151;
+  --gold:      #B8963E;
+  --gold-lt:   #F5EDD6;
+  --cream:     #FAF8F4;
+  --white:     #FFFFFF;
+  --ink:       #1A1A1A;
+  --slate:     #4A4A4A;
+  --muted:     #767676;
+  --border:    #D8D0C8;
+  --border-lt: #EDE8E0;
+  --radius:    4px;
+}
+html { scroll-behavior: smooth; }
+[onclick] { -webkit-tap-highlight-color: transparent; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; user-select: none; touch-action: manipulation; }
+body { font-family:'Source Sans 3', sans-serif; font-weight:400; font-size:16px; color:var(--ink); background:var(--cream); line-height:1.7; overflow-x:hidden; }
+h1,h2,h3 { font-family:'EB Garamond', serif; font-weight:600; color:var(--navy); }
+a { color:inherit; }
+
+/* ── NAV (matches site-wide header exactly) ── */
+nav {
+  position: sticky; top: 0; z-index: 200;
+  background: var(--navy);
+  border-bottom: 3px solid var(--red);
+  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+}
+.nav-brand { display:flex; flex-direction:row; align-items:center; justify-content:flex-start; gap:0.6rem; text-decoration:none; overflow:hidden; flex:1; min-width:0; padding:0.6rem 0; }
+.nav-brand img { width:48px; height:48px; object-fit:contain; flex-shrink:0; display:block; }
+.nav-brand-text { display:flex; flex-direction:column; line-height:1.3; min-width:0; }
+.nav-brand-name { font-family:'EB Garamond', serif; font-size:1.6rem; font-weight:600; color:white; letter-spacing:0.01em; white-space:nowrap; }
+.nav-brand-name span { color:var(--red); }
+.nav-brand-sub { font-size:0.7rem; font-weight:500; color:rgba(255,255,255,0.65); letter-spacing:0.1em; text-transform:uppercase; margin-top:0.25rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:100%; }
+.nav-back { color:rgba(255,255,255,0.75); font-size:0.85rem; font-weight:500; text-decoration:none; border:1px solid rgba(255,255,255,0.25); padding:0.5rem 1.1rem; border-radius:var(--radius); transition:all 0.2s; white-space:nowrap; flex-shrink:0; display:inline-flex; align-items:center; gap:0.35rem; }
+.nav-back:hover { color:var(--white); border-color:var(--gold); }
+@media (max-width:680px){
+  nav { padding:0 1rem; min-height:68px; border-bottom-width:2px; }
+  .nav-brand-name { font-size:1.35rem; }
+  .nav-brand-sub { font-size:0.62rem; letter-spacing:0.07em; }
+  .nav-back { font-size:0.78rem; padding:0.4rem 0.7rem; }
+}
+@media (max-width:480px){
+  .nav-brand img { width:36px; height:36px; }
+  .nav-brand { gap:0.4rem; }
+  .nav-brand-name { font-size:1rem; }
+  .nav-brand-sub { font-size:0.56rem; letter-spacing:0.05em; }
+  .nav-back { padding:0.5rem 0.65rem; }
+  .nav-back-text { display:none; }
+}
+
+/* ── HERO ── */
+.article-hero { background: linear-gradient(135deg,#06244a,#0b4ea2); padding:3rem 1.5rem 2.5rem; text-align:center; }
+.breadcrumb { font-size:0.78rem; color:rgba(255,255,255,0.45); margin-bottom:1.1rem; letter-spacing:0.02em; }
+.breadcrumb a { color:rgba(255,255,255,0.6); text-decoration:none; }
+.breadcrumb a:hover { color:var(--gold); }
+.article-hero-tag { display:inline-block; font-size:0.75rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--gold); border:1px solid rgba(184,150,62,0.4); padding:0.35rem 0.9rem; border-radius:30px; margin-bottom:1.25rem; }
+.article-hero h1 { font-family:'EB Garamond', serif; font-weight:600; font-size:2.4rem; color:white; max-width:760px; margin:0 auto 0.6rem; line-height:1.25; }
+.hero-technique { font-size:0.82rem; font-weight:600; letter-spacing:0.04em; color:var(--gold); margin:0 auto 1.3rem; }
+.hero-technique span { color:rgba(255,255,255,0.55); font-weight:400; }
+.article-hero p.sub { color:rgba(255,255,255,0.6); max-width:620px; margin:0 auto 1.5rem; font-size:1.02rem; }
+.article-hero-meta { display:flex; justify-content:center; gap:0.9rem; font-size:0.8rem; color:rgba(255,255,255,0.45); flex-wrap:wrap; }
+@media (max-width:640px){ .article-hero h1{ font-size:1.7rem; } }
+
+/* ── CONTAINER ── */
+.wrap { max-width:880px; margin:0 auto; padding:2.6rem 2rem 4rem; }
+@media (max-width:640px){ .wrap{ padding:2rem 1.1rem 3rem; } }
+
+/* ── HOW IT WORKS ── */
+.how-box { background:var(--white); border:1px solid var(--border-lt); border-left:4px solid var(--gold); border-radius:var(--radius); padding:1.4rem 1.6rem; margin-bottom:2.2rem; }
+.how-box h3 { font-size:1.05rem; margin-bottom:0.6rem; }
+.how-box ol { margin-left:1.2rem; color:var(--slate); font-size:0.95rem; }
+.how-box li { margin-bottom:0.3rem; }
+
+/* ── PASSAGE PICKER ── */
+.picker-head { display:flex; align-items:baseline; justify-content:space-between; margin-bottom:1rem; flex-wrap:wrap; gap:0.5rem; }
+.picker-head h2 { font-size:1.4rem; }
+.picker-head span { color:var(--muted); font-size:0.85rem; }
+.passage-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(240px,1fr)); gap:1rem; margin-bottom:2.6rem; }
+.passage-card { background:var(--white); border:1px solid var(--border-lt); border-radius:var(--radius); padding:1.2rem 1.3rem; cursor:pointer; transition:all 0.2s; position:relative; }
+.passage-card:hover { border-color:var(--gold); transform:translateY(-2px); box-shadow:0 8px 20px rgba(13,27,42,0.08); }
+.passage-card.active { border-color:var(--red); background:var(--red-lt); }
+.passage-icon { font-size:1.5rem; margin-bottom:0.5rem; display:block; }
+.passage-tag { font-size:0.7rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--gold); font-weight:600; margin-bottom:0.4rem; }
+.passage-card-title { font-family:'EB Garamond', serif; font-weight:600; font-size:1.12rem; color:var(--navy); margin-bottom:0.4rem; }
+.passage-meta { font-size:0.8rem; color:var(--muted); display:flex; gap:0.7rem; flex-wrap:wrap; }
+.diff-pill { display:inline-block; padding:0.1rem 0.55rem; border-radius:20px; font-size:0.7rem; font-weight:600; }
+.diff-easy { background:#E6F0E6; color:#2E6B2E; }
+.diff-medium { background:var(--gold-lt); color:#8A6A1E; }
+.diff-hard { background:var(--red-lt); color:var(--red); }
+.done-badge { position:absolute; top:0.9rem; right:0.9rem; font-size:0.68rem; font-weight:700; color:#2E6B2E; background:#E6F0E6; padding:0.15rem 0.5rem; border-radius:20px; }
+
+/* ── READER ── */
+.reader-panel { background:var(--navy); border-radius:8px; padding:2.2rem 1.6rem; margin-bottom:1.6rem; display:none; }
+.reader-panel.show { display:block; }
+.reader-title-row { display:flex; align-items:center; justify-content:space-between; margin-bottom:1.4rem; flex-wrap:wrap; gap:0.6rem; }
+.reader-title-row h3 { color:var(--white); font-size:1.15rem; }
+.reader-close { background:none; border:1px solid rgba(255,255,255,0.25); color:rgba(255,255,255,0.75); font-size:0.8rem; padding:0.35rem 0.85rem; border-radius:var(--radius); cursor:pointer; }
+.reader-close:hover { color:var(--white); border-color:var(--gold); }
+
+.reader-stage { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:6px; height:180px; display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden; margin-bottom:1.1rem; }
+.reader-stage.playing { box-shadow:0 0 0 1px rgba(184,150,62,0.35), 0 0 32px rgba(184,150,62,0.12) inset; animation:stagePulse 2.4s ease-in-out infinite; }
+@keyframes stagePulse { 0%,100% { background:rgba(255,255,255,0.04); } 50% { background:rgba(184,150,62,0.06); } }
+.reader-guide { position:absolute; top:0; bottom:0; width:2px; background:rgba(184,150,62,0.3); left:50%; }
+.reader-word { font-family:'EB Garamond', serif; font-size:2.6rem; font-weight:500; color:var(--white); letter-spacing:0.01em; text-align:center; padding:0 1rem; animation:wordPop 0.16s ease-out; }
+@keyframes wordPop { 0% { opacity:0.25; transform:scale(0.92); } 100% { opacity:1; transform:scale(1); } }
+.reader-word .orp { color:var(--gold); font-weight:700; }
+.reader-idle-msg { color:rgba(255,255,255,0.5); font-family:'Source Sans 3',sans-serif; font-size:1rem; text-align:center; padding:0 1.5rem; }
+.reader-countdown { font-family:'EB Garamond', serif; font-size:3.4rem; font-weight:700; color:var(--gold); animation:countPop 1s ease-out; }
+@keyframes countPop { 0% { opacity:0; transform:scale(1.4); } 30% { opacity:1; transform:scale(1); } 100% { opacity:0.85; transform:scale(1); } }
+@media (max-width:640px){ .reader-word{ font-size:1.9rem; } .reader-stage{ height:150px; } .reader-countdown{ font-size:2.4rem; } }
+
+.stats-strip { display:flex; justify-content:center; gap:1.8rem; flex-wrap:wrap; color:rgba(255,255,255,0.85); font-size:0.88rem; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.12); border-radius:6px; padding:0.8rem 1rem; margin-bottom:1.1rem; }
+.stats-strip b { color:var(--gold); font-weight:700; }
+
+.progress-track { height:5px; background:rgba(255,255,255,0.12); border-radius:10px; overflow:hidden; margin-bottom:1.3rem; }
+.progress-fill { height:100%; background:var(--gold); width:0%; transition:width 0.15s linear; }
+
+.reader-controls { display:flex; align-items:center; justify-content:center; gap:0.9rem; margin-bottom:1.4rem; flex-wrap:wrap; }
+.ctrl-btn { background:var(--gold); color:var(--navy); border:none; width:52px; height:52px; border-radius:50%; font-size:1.1rem; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:transform 0.15s; flex-shrink:0; }
+.ctrl-btn:hover { transform:scale(1.06); }
+.ctrl-btn-sm { background:rgba(255,255,255,0.08); color:var(--white); border:1px solid rgba(255,255,255,0.2); width:42px; height:42px; border-radius:50%; font-size:0.95rem; cursor:pointer; display:flex; align-items:center; justify-content:center; }
+.ctrl-btn-sm:hover { border-color:var(--gold); }
+
+.reader-settings { display:flex; align-items:center; justify-content:center; gap:1.8rem; flex-wrap:wrap; color:rgba(255,255,255,0.8); font-size:0.85rem; }
+.setting-group { display:flex; align-items:center; gap:0.6rem; }
+.setting-group input[type=range] { accent-color:var(--gold); width:130px; }
+.wpm-val { color:var(--gold); font-weight:700; min-width:3.2em; display:inline-block; text-align:right; }
+.chunk-toggle { display:flex; gap:0.35rem; }
+.chunk-btn { background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); color:rgba(255,255,255,0.75); font-size:0.78rem; padding:0.3rem 0.7rem; border-radius:20px; cursor:pointer; }
+.chunk-btn.active { background:var(--gold); border-color:var(--gold); color:var(--navy); font-weight:700; }
+
+/* ── QUIZ (matches site-wide scored quiz component) ── */
+.quiz-section {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem 1.7rem 1.5rem;
+  display: none;
+}
+.quiz-section.show { display: block; }
+.quiz-section .section-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 0.4rem;
+}
+.quiz-section h2 { border: none; margin: 0 0 0.4rem; padding: 0; font-size: 1.5rem; }
+.quiz-intro { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.6rem; }
+
+.squiz-progress { background: var(--white); border-radius: 30px; height: 8px; overflow: hidden; margin-bottom: 0.4rem; }
+.squiz-progress-fill { background: var(--gold); height: 100%; width: 0%; transition: width 0.25s ease; }
+.squiz-progress-label { font-size: 0.78rem; color: var(--muted); text-align: right; margin-bottom: 1.3rem; }
+.squiz-item { background: var(--white); border: 1px solid var(--border-lt); border-radius: var(--radius); padding: 1.1rem 1.3rem; margin-bottom: 1rem; }
+.squiz-q { font-weight: 600; color: var(--ink); margin-bottom: 0.8rem; font-size: 1rem; }
+.squiz-q .qnum { color: var(--red); margin-right: 0.4rem; }
+.squiz-option { display: flex; align-items: center; gap: 0.65rem; padding: 0.6rem 0.8rem; border: 1px solid var(--border-lt); border-radius: var(--radius); margin-bottom: 0.5rem; cursor: pointer; transition: border-color 0.15s, background 0.15s; }
+.squiz-option:hover { border-color: var(--gold); }
+.squiz-option input[type="radio"] { accent-color: var(--red); width: 16px; height: 16px; flex-shrink: 0; }
+.squiz-option label { cursor: pointer; font-size: 0.94rem; color: var(--slate); flex: 1; }
+.squiz-option.selected { border-color: var(--red); background: rgba(139,0,0,0.04); }
+.squiz-option.correct-answer { border-color: #2e7d32; background: rgba(46,125,50,0.08); }
+.squiz-option.wrong-answer { border-color: var(--red); background: rgba(139,0,0,0.08); }
+.squiz-submit-btn { display: block; width: 100%; background: var(--red); color: white; border: none; font-family: 'Source Sans 3', sans-serif; font-size: 0.98rem; font-weight: 600; padding: 0.9rem; border-radius: var(--radius); cursor: pointer; margin-top: 0.6rem; transition: background 0.2s; }
+.squiz-submit-btn:hover { background: var(--red-mid); }
+.squiz-submit-btn:disabled { background: var(--border); cursor: not-allowed; }
+.squiz-results { display: none; background: var(--navy); border-radius: var(--radius); padding: 2rem 1.6rem; text-align: center; margin-bottom: 1.8rem; }
+.squiz-results.visible { display: block; }
+.squiz-results .squiz-score-big { font-family: 'EB Garamond', serif; font-size: 2.8rem; font-weight: 600; color: var(--gold); line-height: 1; margin-bottom: 0.3rem; }
+.squiz-results .squiz-score-big.perfect { animation:scorePulse 1.2s ease-in-out 2; }
+@keyframes scorePulse { 0%,100% { transform:scale(1); } 50% { transform:scale(1.12); } }
+.squiz-results .squiz-score-label { color: rgba(255,255,255,0.7); font-size: 0.98rem; margin-bottom: 1rem; }
+.squiz-results .squiz-score-tier { display: inline-block; font-size: 0.82rem; font-weight: 600; padding: 0.4rem 1rem; border-radius: 30px; background: rgba(184,150,62,0.15); color: var(--gold); margin-bottom: 1.2rem; }
+.squiz-retake-btn { background: transparent; border: 1px solid rgba(255,255,255,0.3); color: white; font-family: 'Source Sans 3', sans-serif; font-size: 0.88rem; font-weight: 600; padding: 0.65rem 1.4rem; border-radius: 30px; cursor: pointer; }
+.squiz-retake-btn:hover { background: rgba(255,255,255,0.1); }
+
+footer { background:var(--navy); color:rgba(255,255,255,0.6); text-align:center; padding:2rem 1.5rem; font-size:0.85rem; }
+footer a { color:var(--gold); text-decoration:none; }
+</style>
+<style id="edusambam-topbar-guarantee-fix">
+/* Guarantee top-bar styling exists even if a file's own <style> block never defined it */
+.top-bar { background: var(--navy); padding: 0.45rem 3rem; display: flex; justify-content: space-between; align-items: center; }
+.top-bar p { font-size: 0.78rem; color: rgba(255,255,255,0.6); letter-spacing: 0.03em; }
+.top-bar-links { display: flex; gap: 1.5rem; list-style: none; }
+.top-bar-links a { font-size: 0.78rem; color: rgba(255,255,255,0.6); text-decoration: none; letter-spacing: 0.03em; transition: color 0.2s; }
+.top-bar-links a:hover { color: white; }
+@media (max-width: 680px) { .top-bar { display: none; } }
+</style>
+<style id="edusambam-reader-style">
+.mark{width:48px;height:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px;border-radius:14px;background:#eef6ff;box-shadow:0 2px 7px rgba(8,47,99,.10);flex:0 0 48px}.mark i{display:block;border-radius:50%;background:#0b4ea2;min-width:0;min-height:0}.mark i:nth-child(5){background:#d4a017}.edusambam-reader{max-width:980px;margin:1.2rem auto 0;padding:1rem 1.1rem;border:1px solid #d7e4ef;border-radius:14px;background:linear-gradient(135deg,#f7fbff,#fff);box-shadow:0 6px 18px rgba(11,45,92,.08)}.edusambam-reader strong{display:block;color:#0b55a5;font-size:.9rem;letter-spacing:.04em}.edusambam-reader .reader-slogan{color:#b27e08;font-weight:900;margin-top:.25rem;font-size:.82rem}.edusambam-reader .reader-help{color:#607086;font-size:.8rem;margin:.3rem 0 .7rem}.edusambam-reader .reader-controls{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}.edusambam-reader button,.edusambam-reader select{border:1px solid #c9d9e8;background:#fff;color:#153b6e;border-radius:8px;padding:.48rem .65rem;font-weight:800;cursor:pointer}.edusambam-reader button:first-child{background:#0b55a5;color:#fff;border-color:#0b55a5}.edusambam-reader .reader-status{display:block;color:#607086;font-size:.75rem;margin-top:.55rem}.edusambam-reader .reader-progress{height:4px;background:#e4edf6;border-radius:99px;margin-top:.6rem;overflow:hidden}.edusambam-reader .reader-progress span{display:block;width:0;height:100%;background:#e1ad1c;transition:width .2s linear}@media(max-width:600px){.edusambam-reader{margin-left:0;margin-right:0}.edusambam-reader .reader-controls button,.edusambam-reader .reader-controls select{flex:1;min-width:75px}}
+</style><style id="edusambam-edge-fix">.article-wrap,.article-hero,.nav-brand{min-width:0;overflow:visible}.article-wrap h1,.article-wrap h2,.article-wrap h3,.article-hero h1,.article-hero .sub{overflow-wrap:anywhere;word-break:normal}.article-wrap{padding-left:max(1.25rem,3vw);padding-right:max(1.25rem,3vw)}@media(max-width:600px){.article-wrap{padding-left:1rem;padding-right:1rem}.article-hero{padding-left:1rem;padding-right:1rem}.nav-brand{overflow:visible!important}.nav-brand-name,.nav-brand-sub{overflow-wrap:anywhere}}</style><style id="edusambam-frame-final">html{box-sizing:border-box;max-width:100%;overflow-x:hidden}*,*:before,*:after{box-sizing:inherit}body{max-width:100%;min-width:0;overflow-x:hidden;border:3px solid #d4a017;box-sizing:border-box}img,svg,video,iframe{max-width:100%;height:auto}h1,h2,h3,h4,p,a,span,small,b,strong{overflow-wrap:anywhere}section,header,footer,main,nav{max-width:100%;box-sizing:border-box}@media(max-width:600px){body{border-width:3px}h1,h2,h3{margin-left:0!important;margin-right:0!important}}</style><style id="edusambam-unified-nav-css">
+/* EDUSAMBAM unified navigation */
+.edusambam-nav{
+  position:sticky;top:0;z-index:10000;
+  min-height:72px;box-sizing:border-box;
+  display:flex;align-items:center;
+  padding:10px 20px;
+  background:#fff;border-bottom:1px solid #e5e7eb;
+  font-family:inherit;
+}
+.edusambam-nav-inner{
+  width:100%;max-width:1400px;margin:0 auto;
+  display:flex;align-items:center;gap:18px;min-width:0;
+}
+.edusambam-brand{
+  display:flex;align-items:center;gap:10px;min-width:0;
+  text-decoration:none;color:#0b3b66;flex:0 1 auto;
+}
+.edusambam-brand-copy{display:flex;flex-direction:column;line-height:1;min-width:0;overflow:hidden}
+.edusambam-brand-name{
+  font-family:"EB Garamond",Georgia,serif;
+  font-size:1.6rem;font-weight:600;letter-spacing:.01em;
+  color:#0b3b66;white-space:nowrap;
+}
+.edusambam-brand-subtitle{
+  margin-top:4px;
+  font-size:.62rem;font-weight:600;letter-spacing:.08em;
+  color:#64748b;white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis;max-width:100%;
+}
+.edusambam-nav-links{
+  display:flex;align-items:center;gap:14px;margin-left:auto;
+  list-style:none;padding:0;margin-top:0;margin-bottom:0;
+}
+.edusambam-nav-links a{
+  color:#334155;text-decoration:none;font-size:.9rem;
+  padding:8px 5px;border-radius:7px;white-space:nowrap;
+}
+.edusambam-nav-links a:hover,.edusambam-nav-links a:focus-visible{
+  color:#0b3b66;background:#f3f6f9;outline:none;
+}
+.edusambam-search-btn,.edusambam-menu-btn{
+  appearance:none;border:1px solid #d8dee6;background:#fff;
+  color:#0b3b66;border-radius:9px;min-width:40px;height:40px;
+  display:inline-flex;align-items:center;justify-content:center;
+  cursor:pointer;font-size:1.15rem;flex:0 0 auto;
+}
+.edusambam-search-btn:hover,.edusambam-menu-btn:hover,
+.edusambam-search-btn:focus-visible,.edusambam-menu-btn:focus-visible{
+  background:#f3f6f9;border-color:#b9c6d4;outline:2px solid rgba(214,162,58,.35);
+  outline-offset:2px;
+}
+.edusambam-menu-btn{display:none;font-size:1.2rem}
+.edusambam-mobile-menu{
+  display:none;position:fixed;top:72px;left:0;right:0;
+  z-index:9999;background:#fff;border-bottom:1px solid #e5e7eb;
+  box-shadow:0 8px 24px rgba(15,23,42,.12);
+  max-height:calc(100vh - 72px);overflow:auto;
+}
+.edusambam-mobile-menu.open{display:block}
+.edusambam-mobile-menu ul{list-style:none;margin:0;padding:10px 16px 16px}
+.edusambam-mobile-menu a{
+  display:block;padding:12px 10px;color:#0b3b66;text-decoration:none;
+  border-radius:8px;font-size:.98rem;
+}
+.edusambam-mobile-menu a:hover,.edusambam-mobile-menu a:focus-visible{
+  background:#f3f6f9;outline:none;
+}
+.edusambam-search-panel{
+  display:none;position:fixed;top:72px;left:0;right:0;z-index:9998;
+  background:#fff;border-bottom:1px solid #e5e7eb;
+  box-shadow:0 8px 24px rgba(15,23,42,.10);padding:12px 16px;
+}
+.edusambam-search-panel.open{display:block}
+.edusambam-search-wrap{max-width:900px;margin:0 auto;position:relative}
+.edusambam-search-input{
+  width:100%;box-sizing:border-box;padding:12px 14px;
+  border:1px solid #cbd5e1;border-radius:9px;font-size:1rem;
+}
+.edusambam-search-results{margin-top:8px;max-height:50vh;overflow:auto}
+.edusambam-search-results a{
+  display:block;padding:9px 10px;border-radius:7px;color:#0b3b66;text-decoration:none;
+}
+.edusambam-search-results a:hover{background:#f3f6f9}
+@media (max-width:1100px){
+  .edusambam-nav-links{gap:8px}
+  .edusambam-nav-links a{font-size:.84rem;padding-inline:3px}
+}
+@media (max-width:900px){
+  .edusambam-nav{min-height:68px;padding:8px 14px}
+  .edusambam-brand-mark{width:44px;height:44px;flex-basis:44px}
+  .edusambam-brand-mark span{width:12px;height:12px}
+  .edusambam-brand-mark .c3,.edusambam-brand-mark .c6{left:16px}
+  .edusambam-brand-name{font-size:1.42rem}
+  .edusambam-brand-subtitle{font-size:.52rem;letter-spacing:.06em}
+  .edusambam-nav-links{display:none}
+  .edusambam-menu-btn{display:inline-flex}
+  .edusambam-search-btn{margin-left:auto}
+  .edusambam-mobile-menu{top:68px;max-height:calc(100vh - 68px)}
+  .edusambam-search-panel{top:68px}
+}
+@media (max-width:480px){
+  .edusambam-nav-inner{gap:8px}
+  .edusambam-brand{gap:7px}
+  .edusambam-brand-mark{width:40px;height:40px;flex-basis:40px}
+  .edusambam-brand-mark span{width:11px;height:11px}
+  .edusambam-brand-mark .c3,.edusambam-brand-mark .c6{left:14.5px}
+  .edusambam-brand-name{font-size:1.28rem}
+  .edusambam-brand-subtitle{font-size:.46rem;letter-spacing:.045em}
+  .edusambam-search-btn,.edusambam-menu-btn{min-width:38px;height:38px}
+}
+</style><style id="edusambam-new-article-mobile-fixed-nav">
+/* New EDUSAMBAM article: keep the approved mobile header continuously available while scrolling. */
+@media (max-width:900px){
+  body{padding-top:68px !important;}
+  .edusambam-nav{position:fixed !important;top:0 !important;left:0 !important;right:0 !important;width:100% !important;}
+}
+</style><style id="edusambam-logo-visibility-fix">
+/* EDUSAMBAM logo visibility fix */
+.edusambam-brand-mark{
+  position:relative !important;
+  display:inline-block !important;
+  width:48px !important;
+  height:48px !important;
+  min-width:48px !important;
+  flex:0 0 48px !important;
+  overflow:visible !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+.edusambam-brand-mark > span{
+  position:absolute !important;
+  display:block !important;
+  width:13px !important;
+  height:13px !important;
+  min-width:13px !important;
+  min-height:13px !important;
+  padding:0 !important;
+  margin:0 !important;
+  border:0 !important;
+  border-radius:50% !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  box-sizing:border-box !important;
+}
+.edusambam-brand-mark > .c1{left:0 !important;top:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c2{right:0 !important;top:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c3{left:17.5px !important;top:8px !important;background:#d6a23a !important;}
+.edusambam-brand-mark > .c4{left:0 !important;bottom:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c5{right:0 !important;bottom:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c6{left:17.5px !important;bottom:8px !important;background:#d6a23a !important;}
+
+@media (max-width:900px){
+  .edusambam-brand-mark{
+    width:44px !important;height:44px !important;min-width:44px !important;flex-basis:44px !important;
+  }
+  .edusambam-brand-mark > span{
+    width:12px !important;height:12px !important;min-width:12px !important;min-height:12px !important;
+  }
+  .edusambam-brand-mark > .c3,.edusambam-brand-mark > .c6{left:16px !important;}
+}
+@media (max-width:480px){
+  .edusambam-brand-mark{
+    width:40px !important;height:40px !important;min-width:40px !important;flex-basis:40px !important;
+  }
+  .edusambam-brand-mark > span{
+    width:11px !important;height:11px !important;min-width:11px !important;min-height:11px !important;
+  }
+  .edusambam-brand-mark > .c3,.edusambam-brand-mark > .c6{left:14.5px !important;}
+}
+</style>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<style id="edusambam-menu-extra-css">
+.edusambam-mobile-menu .edusambam-menu-extra:first-of-type{
+  margin-top:8px;padding-top:8px;border-top:1px solid #e5e7eb;
+}
+.edusambam-mobile-menu .edusambam-menu-extra a{
+  font-weight:600;
+}
+</style>
+<style id="edusambam-article-footer-theme">
+.edusambam-article-footer{
+  background:linear-gradient(135deg,#06244a,#0b4ea2)!important;
+}
+</style>
+<style id="edusambam-unified-footer-fix">
+/* EDUSAMBAM unified footer: same visual language and neutral brand statement across all pages. */
+.edusambam-unified-footer,
+.edusambam-article-footer,
+footer.footer {
+  background: linear-gradient(135deg, #06244a, #0b4ea2) !important;
+  color: #fff !important;
+  border-top: 3px solid #d4a017 !important;
+  box-sizing: border-box;
+}
+.edusambam-footer-statement{margin:.25rem 0 0 !important;color:rgba(255,255,255,.88) !important;font-size:.78rem !important;letter-spacing:.08em !important;text-transform:uppercase !important}
+.edusambam-unified-footer .footer-brand-name,.edusambam-article-footer .footer-brand-name{color:#fff !important}
+</style>
+<style id="edusambam-final-unified-footer">
+/* Final unified footer — same structure, visual language, and approved nav logo on every page. */
+.edusambam-unified-footer{
+  width:100% !important;
+  margin:0 !important;
+  padding:44px 0 0 !important;
+  background:linear-gradient(135deg,#06244a,#0b4ea2) !important;
+  color:#d6e4f2 !important;
+  border-top:4px solid #d4a017 !important;
+  box-sizing:border-box !important;
+  overflow:hidden !important;
+}
+.edusambam-unified-footer .footer-top{
+  width:min(1180px,92%) !important;
+  max-width:1180px !important;
+  margin:0 auto !important;
+  padding:0 0 34px !important;
+  display:grid !important;
+  grid-template-columns:1.5fr repeat(3,1fr) !important;
+  gap:34px !important;
+  box-sizing:border-box !important;
+}
+.edusambam-unified-footer .footer-brand{min-width:0 !important;}
+.edusambam-footer-brand-row{margin:0 0 10px !important;}
+.edusambam-footer-logo-link{
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:12px !important;
+  min-width:0 !important;
+  color:#fff !important;
+  text-decoration:none !important;
+}
+.edusambam-footer-logo{
+  width:48px !important;
+  height:48px !important;
+  min-width:48px !important;
+  flex:0 0 48px !important;
+}
+.edusambam-footer-logo > span{width:13px !important;height:13px !important;min-width:13px !important;min-height:13px !important;}
+.edusambam-footer-logo > .c3,.edusambam-footer-logo > .c6{left:17.5px !important;}
+.edusambam-footer-brand-name{
+  color:#fff !important;
+  font-family:"EB Garamond",Georgia,serif !important;
+  font-size:1.65rem !important;
+  font-weight:600 !important;
+  letter-spacing:.01em !important;
+  line-height:1 !important;
+  white-space:nowrap !important;
+}
+.edusambam-unified-footer .edusambam-footer-statement{
+  margin:0 !important;
+  max-width:360px !important;
+  color:rgba(255,255,255,.88) !important;
+  font-size:.78rem !important;
+  line-height:1.7 !important;
+  letter-spacing:.08em !important;
+  text-transform:uppercase !important;
+}
+.edusambam-unified-footer .footer-col{min-width:0 !important;}
+.edusambam-unified-footer .footer-col h4{
+  margin:0 0 12px !important;
+  color:#fff !important;
+  font-family:"EB Garamond",Georgia,serif !important;
+  font-size:1rem !important;
+  font-weight:600 !important;
+  line-height:1.25 !important;
+}
+.edusambam-unified-footer .footer-col ul{
+  list-style:none !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+.edusambam-unified-footer .footer-col li{margin:0 0 8px !important;padding:0 !important;}
+.edusambam-unified-footer .footer-col a{
+  color:rgba(255,255,255,.68) !important;
+  text-decoration:none !important;
+  font-size:.84rem !important;
+  line-height:1.5 !important;
+  overflow-wrap:anywhere !important;
+}
+.edusambam-unified-footer .footer-col a:hover,
+.edusambam-unified-footer .footer-col a:focus-visible{color:#fff !important;}
+.edusambam-unified-footer .footer-bottom{
+  width:min(1180px,92%) !important;
+  max-width:1180px !important;
+  margin:0 auto !important;
+  padding:18px 0 22px !important;
+  border-top:1px solid rgba(255,255,255,.12) !important;
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:center !important;
+  gap:20px !important;
+  box-sizing:border-box !important;
+}
+.edusambam-unified-footer .footer-bottom p{
+  margin:0 !important;
+  color:rgba(255,255,255,.55) !important;
+  font-size:.8rem !important;
+  line-height:1.5 !important;
+}
+.edusambam-unified-footer .footer-bottom-links{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:18px !important;
+  list-style:none !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+.edusambam-unified-footer .footer-bottom-links a{
+  color:rgba(255,255,255,.55) !important;
+  font-size:.78rem !important;
+  line-height:1.5 !important;
+  text-decoration:none !important;
+}
+.edusambam-unified-footer .footer-bottom-links a:hover,
+.edusambam-unified-footer .footer-bottom-links a:focus-visible{color:#fff !important;}
+@media(max-width:900px){
+  .edusambam-unified-footer{padding-top:32px !important;}
+  .edusambam-unified-footer .footer-top{grid-template-columns:1fr 1fr !important;gap:28px 22px !important;}
+  .edusambam-unified-footer .footer-brand{grid-column:1/-1 !important;}
+}
+@media(max-width:600px){
+  .edusambam-unified-footer{padding-top:30px !important;}
+  .edusambam-unified-footer .footer-top{width:calc(100% - 28px) !important;grid-template-columns:1fr 1fr !important;gap:26px 20px !important;padding-bottom:28px !important;}
+  .edusambam-unified-footer .footer-bottom{width:calc(100% - 28px) !important;display:block !important;padding:16px 0 20px !important;}
+  .edusambam-unified-footer .footer-bottom-links{margin-top:10px !important;gap:16px !important;}
+  .edusambam-footer-logo{width:44px !important;height:44px !important;min-width:44px !important;flex-basis:44px !important;}
+  .edusambam-footer-logo > span{width:12px !important;height:12px !important;min-width:12px !important;min-height:12px !important;}
+  .edusambam-footer-logo > .c3,.edusambam-footer-logo > .c6{left:16px !important;}
+  .edusambam-footer-brand-name{font-size:1.48rem !important;}
+}
+@media(max-width:430px){
+  .edusambam-unified-footer .footer-top{grid-template-columns:1fr !important;gap:22px !important;}
+  .edusambam-unified-footer .footer-brand{grid-column:auto !important;}
+}
+</style>
+<style id="edusambam-footer-final-alignment">
+/* Final EDUSAMBAM footer consistency pass: identical royal-blue footer and left alignment on every page. */
+.edusambam-unified-footer {
+  background: linear-gradient(135deg,#06244a,#0b4ea2) !important;
+  color:#d6e4f2 !important;
+  text-align:left !important;
+  width:100% !important;
+  box-sizing:border-box !important;
+}
+.edusambam-unified-footer,
+.edusambam-unified-footer *,
+.edusambam-unified-footer h1,
+.edusambam-unified-footer h2,
+.edusambam-unified-footer h3,
+.edusambam-unified-footer h4,
+.edusambam-unified-footer p,
+.edusambam-unified-footer ul,
+.edusambam-unified-footer li,
+.edusambam-unified-footer a,
+.edusambam-unified-footer span {
+  text-align:left !important;
+}
+.edusambam-unified-footer .footer-top,
+.edusambam-unified-footer .footer-brand,
+.edusambam-unified-footer .footer-col,
+.edusambam-unified-footer .footer-bottom {
+  margin-left:0 !important;
+}
+.edusambam-unified-footer .footer-top {
+  margin-right:auto !important;
+}
+.edusambam-unified-footer .edusambam-footer-brand-row {
+  text-align:left !important;
+}
+.edusambam-unified-footer .edusambam-footer-logo-link {
+  justify-content:flex-start !important;
+  text-align:left !important;
+}
+.edusambam-unified-footer .footer-bottom {
+  justify-content:flex-start !important;
+  align-items:flex-start !important;
+  flex-direction:column !important;
+}
+.edusambam-unified-footer .footer-bottom-links {
+  justify-content:flex-start !important;
+  align-items:flex-start !important;
+}
+@media (max-width:600px) {
+  .edusambam-unified-footer .footer-top,
+  .edusambam-unified-footer .footer-bottom {
+    margin-left:0 !important;
+    margin-right:auto !important;
+  }
+}
+</style>
+<style id="edusambam-footer-mobile-inset-fix">
+/* Restore left inset so footer logo/text don't touch the screen edge on mobile */
+@media (max-width:600px) {
+  .edusambam-unified-footer .footer-top,
+  .edusambam-unified-footer .footer-bottom {
+    padding-left:14px !important;
+    box-sizing:border-box !important;
+  }
+}
+</style></head>
+<body id="top">
+<!-- TOP BAR -->
+<div class="top-bar">
+<p>Established 2026  ·  Free Educational Resources for All</p>
+<ul class="top-bar-links">
+<li><a href="index.html">Contact</a></li>
+<li><a href="index.html">About</a></li>
+<li><a href="index.html">Write for Us</a></li>
+</ul>
+</div>
+<!-- NAV -->
+<nav aria-label="Primary navigation" class="edusambam-nav">
+<div class="edusambam-nav-inner">
+<a aria-label="EDUSAMBAM home" class="edusambam-brand" href="index.html">
+<span aria-hidden="true" class="edusambam-brand-mark">
+<span class="c1"></span><span class="c2"></span><span class="c3"></span>
+<span class="c4"></span><span class="c5"></span><span class="c6"></span>
+</span>
+<span class="edusambam-brand-copy">
+<span class="edusambam-brand-name">EDUSAMBAM</span>
+<span class="edusambam-brand-subtitle">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM.</span>
+</span>
+</a>
+<ul class="edusambam-nav-links"><li><a href="index.html">Home</a></li><li><a href="index.html#subject-english">English</a></li><li><a href="index.html#subject-maths">Mathematics</a></li><li><a href="index.html#science">Science</a></li><li><a href="index.html#health">Health</a></li><li><a href="index.html#subject-gk">General Knowledge</a></li><li><a href="index.html#subject-computer">Computer &amp; AI</a></li><li><a href="index.html#resources">Resources</a></li></ul>
+<button aria-label="Search" class="edusambam-search-btn" title="Search" type="button">⌕</button>
+<button aria-expanded="false" aria-label="Open menu" class="edusambam-menu-btn" title="Menu" type="button">☰</button>
+</div>
+</nav>
+<div aria-label="Mobile navigation" class="edusambam-mobile-menu">
+<ul><li><a href="index.html">Home</a></li><li><a href="index.html#subject-english">English</a></li><li><a href="index.html#subject-maths">Mathematics</a></li><li><a href="index.html#science">Science</a></li><li><a href="index.html#health">Health</a></li><li><a href="index.html#subject-gk">General Knowledge</a></li><li><a href="index.html#subject-computer">Computer &amp; AI</a></li><li><a href="index.html#resources">Resources</a></li>
+<li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li>
+<li class="edusambam-menu-extra"><a href="assessment-arena.html">Assessment Arena</a></li>
+<li class="edusambam-menu-extra"><a href="index.html#about-edusambam">About</a></li>
+<li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li>
+<li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li>
+</ul>
+</div>
+<div aria-label="Site search" class="edusambam-search-panel">
+<div class="edusambam-search-wrap">
+<input aria-label="Search EDUSAMBAM" class="edusambam-search-input" placeholder="Search EDUSAMBAM…" type="search"/>
+<div class="edusambam-search-results"></div>
+</div>
+</div>
+
+<div class="article-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; <a href="index.html#activities">Interactive Practice</a> &nbsp;/&nbsp; Reading Practice &amp; Comprehension: RSVP</div>
+  <div class="article-hero-tag">Interactive Practice · Reading Skills</div>
+  <h1>Reading Practice &amp; Comprehension: RSVP</h1>
+  <div class="hero-technique">Technique: RSVP <span>— Rapid Serial Visual Presentation; one to three words flash at a time, everything else stays hidden</span></div>
+  <p class="sub">Only one to three words are visible at any moment — everything before and after stays hidden. Nothing to skip back to, nothing to skim ahead of. This trains your eyes to move forward at a fixed pace instead of drifting back over text you've already read, which is exactly the habit strong IELTS and exam readers build.</p>
+  <div class="article-hero-meta">
+    <span>EDUSAMBAM Editorial Team</span>
+    <span>·</span>
+    <span>6 passages</span>
+    <span>·</span>
+    <span>Self-paced</span>
+  </div>
+</div>
+<div aria-label="EDUSAMBAM article reader" class="edusambam-reader"><strong>🔊 LISTEN TO THIS ARTICLE</strong><div class="reader-slogan">SAVE YOUR EYES • IMPROVE YOUR LISTENING</div><div class="reader-help">Listen to the article instead of relying only on continuous screen reading.</div><div class="reader-controls"><button data-reader="play" type="button">▶ Play</button><button data-reader="pause" type="button">⏸ Pause</button><button data-reader="resume" type="button">▶ Resume</button><button data-reader="stop" type="button">■ Stop</button><select aria-label="Reading speed"><option value="1">1×</option><option value="0.8">0.8×</option><option value="1.2">1.2×</option></select></div><div aria-hidden="true" class="reader-progress"><span></span></div><small class="reader-status">Ready to read the article.</small></div>
+
+
+
+<div class="wrap">
+
+  <div class="how-box">
+    <h3>How this helps your reading</h3>
+    <ol>
+      <li>Choose a passage below — each is written in an IELTS-style academic tone.</li>
+      <li>Press play. Words flash one at a time (or in small groups) in the centre of the dark panel; nothing else on the page is visible while you read.</li>
+      <li>Adjust the speed (words per minute) and the group size — start with single words at a slow pace, and build up to two or three words at once as you improve.</li>
+      <li>When the passage ends, answer 5 comprehension questions to check what you actually absorbed at that speed.</li>
+    </ol>
+  </div>
+
+  <div class="picker-head">
+    <h2>Choose a passage</h2>
+    <span id="passageCount"></span>
+  </div>
+  <div class="passage-grid" id="passageGrid"></div>
+
+  <div class="reader-panel" id="readerPanel">
+    <div class="reader-title-row">
+      <h3 id="readerTitle">Passage</h3>
+      <button class="reader-close" onclick="closeReader()">Close &amp; choose another</button>
+    </div>
+
+    <div class="reader-stage" id="readerStage">
+      <div class="reader-guide"></div>
+      <div class="reader-idle-msg" id="readerIdle">Press play to begin. Keep your eyes fixed on the centre of this panel.</div>
+    </div>
+
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+    <div class="stats-strip" id="statsStrip" style="display:none;"></div>
+
+    <div class="reader-controls">
+      <button class="ctrl-btn-sm" id="restartBtn" onclick="restartPassage()" title="Restart">&#8635;</button>
+      <button class="ctrl-btn" id="playBtn" onclick="togglePlay()" title="Play / Pause">&#9658;</button>
+      <button class="ctrl-btn-sm" id="skipBtn" onclick="skipToQuiz()" title="Skip to quiz">&#9193;</button>
+    </div>
+
+    <div class="reader-settings">
+      <div class="setting-group">
+        <span>Speed</span>
+        <input type="range" id="wpmSlider" min="120" max="500" step="10" value="240" oninput="updateWpm(this.value)"/>
+        <span class="wpm-val" id="wpmVal">240 wpm</span>
+      </div>
+      <div class="setting-group">
+        <span>Words shown at once</span>
+        <div class="chunk-toggle">
+          <button class="chunk-btn active" data-chunk="1" onclick="setChunk(1)">1</button>
+          <button class="chunk-btn" data-chunk="2" onclick="setChunk(2)">2</button>
+          <button class="chunk-btn" data-chunk="3" onclick="setChunk(3)">3</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="quiz-section" id="quizPanel">
+    <div class="section-eyebrow">Test Your Understanding</div>
+    <h2 id="quizTitle">Practice Quiz</h2>
+    <p class="quiz-intro" id="quizIntro">5 questions. Select an answer for each, then submit to see your score instantly.</p>
+
+    <div class="squiz-progress"><div class="squiz-progress-fill" id="squizProgressFill"></div></div>
+    <div class="squiz-progress-label" id="squizProgressLabel">0 of 5 answered</div>
+
+    <div class="squiz-results" id="squizResults">
+      <div class="squiz-score-big" id="squizScoreBig">0/5</div>
+      <div class="squiz-score-label" id="squizScoreLabel">You scored 0%</div>
+      <div class="squiz-score-tier" id="squizScoreTier">Keep practicing</div>
+      <div><button class="squiz-retake-btn" onclick="retakeQuiz()">Retake Quiz</button></div>
+    </div>
+
+    <form id="squizForm"></form>
+  </div>
+
+</div>
+
+<script id="edusambam-reader-script">
+(function(){
+ const box=document.querySelector('.edusambam-reader'); if(!box)return;
+ const root=document.querySelector('.article-wrap, .article-wrapper');
+ if(!root)return;
+ const bodySource=root.querySelector('.article-content, .article-body, .content-body') || root;
+ const status=box.querySelector('.reader-status'), progress=box.querySelector('.reader-progress span'), rate=box.querySelector('select');
+ let utterance=null, chunks=[], index=0, total=0, paused=false, stopped=false;
+ function text(){
+   const clone=bodySource.cloneNode(true);
+   clone.querySelectorAll('.quiz-section,.drill-section,.squiz-section,.squiz-item,.activity-section,.assessment-section,.article-footer-nav,form,button,input,select,textarea,script,style,.edusambam-reader,.breadcrumb,.article-hero-meta,.article-hero-tag,nav,header,footer').forEach(el=>el.remove());
+   return clone.textContent.replace(/\s+/g,' ').trim();
+ }
+ function splitText(t){const out=[];const max=1200;for(let i=0;i<t.length;i+=max)out.push(t.slice(i,i+max));return out;}
+ function updateProgress(){progress.style.width=(total?Math.min(100,Math.round((index/total)*100)):0)+'%';}
+ function speakNext(){
+   if(stopped||index>=total){if(index>=total&&!stopped){status.textContent='Reading finished.';progress.style.width='100%';}return;}
+   utterance=new SpeechSynthesisUtterance(chunks[index]);
+   utterance.rate=Number(rate.value)||1;
+   utterance.onend=function(){if(stopped)return;index++;updateProgress();speakNext();};
+   utterance.onerror=function(){if(!stopped)status.textContent='The reader stopped unexpectedly. Tap Resume to continue.';};
+   status.textContent='Reading article…';
+   speechSynthesis.speak(utterance);
+ }
+ function play(){
+   if(!('speechSynthesis' in window)){status.textContent='Audio reading is not supported by this browser.';return;}
+   speechSynthesis.cancel();
+   chunks=splitText(text());index=0;total=chunks.length;paused=false;stopped=false;updateProgress();speakNext();
+ }
+ function pause(){
+   if(!('speechSynthesis' in window))return;
+   if(speechSynthesis.speaking){speechSynthesis.pause();paused=true;status.textContent='Reader paused.';}
+ }
+ function resume(){
+   if(!('speechSynthesis' in window))return;
+   stopped=false;
+   if(speechSynthesis.paused){speechSynthesis.resume();paused=false;status.textContent='Reader resumed.';return;}
+   if(!speechSynthesis.speaking && chunks.length && index<total){paused=false;status.textContent='Reader resumed.';speakNext();return;}
+   if(!chunks.length){status.textContent='Nothing to resume. Tap Play to start.';return;}
+   status.textContent='Reader is already playing.';
+ }
+ function stop(){
+   speechSynthesis.cancel();chunks=[];index=0;total=0;paused=false;stopped=true;progress.style.width='0';status.textContent='Reader stopped.';
+ }
+ box.querySelector('[data-reader="play"]').addEventListener('click',play);
+ box.querySelector('[data-reader="pause"]').addEventListener('click',pause);
+ box.querySelector('[data-reader="resume"]').addEventListener('click',resume);
+ box.querySelector('[data-reader="stop"]').addEventListener('click',stop);
+ window.addEventListener('beforeunload',()=>{stopped=true;speechSynthesis.cancel();});
+})();
+</script>
+<script id="edusambam-unified-nav-js">
+(function(){
+  const pages=[{"title":"Sentence Foundations: Building Clear, Accurate English — EDUSAMBAM","url":"o-level-english-sentence-foundations.html"},{"title":"Microorganisms, Disease &amp; the Human Immune System — EDUSAMBAM","url":"microorganisms-disease-human-immune-system.html"},{"title":"Reproduction, Growth &amp; Development — EDUSAMBAM","url":"reproduction-growth-development.html"},{"title":"DNA, Genes, Chromosomes &amp; Heredity — EDUSAMBAM","url":"dna-genes-chromosomes-heredity.html"},{"title":"Cellular Respiration, Energy &amp; Gas Exchange — EDUSAMBAM","url":"cellular-respiration-energy-gas-exchange.html"},{"title":"Photosynthesis, Plant Nutrition &amp; Transport — EDUSAMBAM","url":"photosynthesis-plant-nutrition-transport.html"},{"title":"Acids, Bases and Salts: The Chemistry of Sour, Bitter, and Neutral — EDUSAMBAM","url":"acids-bases-salts.html"},{"title":"AI Agents: When AI Takes Action, Not Just Talks — EDUSAMBAM","url":"ai-agents.html"},{"title":"AI Ethics: Bias, Privacy and Misinformation Explained — EDUSAMBAM","url":"ai-ethics.html"},{"title":"The Anatomy of the Eye in Depth — EDUSAMBAM","url":"anatomy-of-the-eye-in-depth.html"},{"title":"Animals &amp; Ecosystems: Wildlife GK — EDUSAMBAM","url":"animals-and-ecosystems.html"},{"title":"EDUSAMBAM Article Reader","url":"article-viewer.html"},{"title":"ASSESSMENT ARENA — EDUSAMBAM","url":"assessment-arena.html"},{"title":"Atoms and the Periodic Table: The Building Blocks of Everything — EDUSAMBAM","url":"atoms-and-periodic-table.html"},{"title":"Author's Purpose, Tone &amp; Point of View: The Complete Guide — EDUSAMBAM","url":"authors-purpose-tone-pov.html"},{"title":"Basic Data &amp; Statistics: Mean, Median, and Mode — EDUSAMBAM","url":"basic-data-statistics.html"},{"title":"BODMAS &amp; DMAS Rules: The Correct Order of Operations — EDUSAMBAM","url":"bodmas-dmas-rules.html"},{"title":"Brackets, Fractions &amp; Decimals in BODMAS — EDUSAMBAM","url":"brackets-fractions-decimals-bodmas.html"},{"title":"Cells: The Building Blocks of Life — EDUSAMBAM","url":"cells-the-building-blocks-of-life.html"},{"title":"Character Development: Writing People Readers Care About — EDUSAMBAM","url":"character-development.html"},{"title":"Chemical Bonding: How Atoms Connect to Form Everything — EDUSAMBAM","url":"chemical-bonding.html"},{"title":"Chemical Reactions and Equations: The Language of Change — EDUSAMBAM","url":"chemical-reactions-equations.html"},{"title":"Chemistry in Everyday Life: The Science Hiding in Plain Sight — EDUSAMBAM","url":"chemistry-in-everyday-life.html"},{"title":"Cloud Computing: What \"The Cloud\" Actually Is — EDUSAMBAM","url":"cloud-computing.html"},{"title":"Colour Vision and Colour Blindness Explained — EDUSAMBAM","url":"colour-vision-and-colour-blindness-explained.html"},{"title":"Common Errors in English: A Complete Guide — EDUSAMBAM","url":"common-errors.html"},{"title":"Common Pronunciation Mistakes — EDUSAMBAM","url":"common-pronunciation-mistakes.html"},{"title":"Complaint &amp; Request Letters — EDUSAMBAM","url":"complaint-request-letters.html"},{"title":"Computer Vision: How Machines Learn to See — EDUSAMBAM","url":"computer-vision.html"},{"title":"Context Clues: The Complete Guide — EDUSAMBAM","url":"context-clues.html"},{"title":"Continents &amp; Oceans: The Basic Map of the World — EDUSAMBAM","url":"continents-and-oceans.html"},{"title":"Countries &amp; Capitals: Major Nations Around the World — EDUSAMBAM","url":"countries-and-capitals.html"},{"title":"Cybersecurity Basics: Threats, Defences and Good Digital Habits — EDUSAMBAM","url":"cybersecurity-basics.html"},{"title":"Designing a Fair Experiment: Variables, Repeat Trials &amp; Reliability — EDUSAMBAM","url":"designing-a-fair-experiment.html"},{"title":"Dialogue &amp; Voice: Writing Conversation That Sounds Real — EDUSAMBAM","url":"dialogue-and-voice.html"},{"title":"Digital Footprint &amp; Online Privacy: What Gets Tracked, and Why It Matters — EDUSAMBAM","url":"digital-footprint-privacy.html"},{"title":"Divisibility Rules: Quick Tests for 2 Through 12 — EDUSAMBAM","url":"divisibility-rules.html"},{"title":"Earth's Structure: Layers, Plates &amp; Earthquakes — EDUSAMBAM","url":"earths-structure-layers-plates-and-earthquakes.html"},{"title":"Ecosystems &amp; Biodiversity — EDUSAMBAM","url":"ecosystems-and-biodiversity.html"},{"title":"Effects of Substance Abuse — EDUSAMBAM","url":"effects-of-substance-abuse.html"},{"title":"Electricity and Magnetism: The Basics — EDUSAMBAM","url":"electricity-and-magnetism-the-basics.html"},{"title":"Electrochemistry: Where Chemistry Meets Electricity — EDUSAMBAM","url":"electrochemistry.html"},{"title":"Energy: Types, Sources, and Transformations — EDUSAMBAM","url":"energy-types-sources-transformations.html"},{"title":"English as an International Language — EDUSAMBAM","url":"english-international-language.html"},{"title":"Essay Structure &amp; the Five-Paragraph Essay: The Complete Guide — EDUSAMBAM","url":"essay-structure.html"},{"title":"Evidence, Citations &amp; Avoiding Plagiarism: The Complete Guide — EDUSAMBAM","url":"evidence-citations-plagiarism.html"},{"title":"Exponents &amp; Powers: The Laws of Indices — EDUSAMBAM","url":"exponents-and-powers.html"},{"title":"Factors &amp; Multiples: Prime, Composite, and Common — EDUSAMBAM","url":"factors-and-multiples.html"},{"title":"Famous Personalities: Leaders, Scientists &amp; Nobel Laureates — EDUSAMBAM","url":"famous-personalities.html"},{"title":"Famous World Landmarks &amp; Wonders — EDUSAMBAM","url":"famous-world-landmarks-wonders.html"},{"title":"First Aid and Basic Safety — EDUSAMBAM","url":"first-aid-basic-safety.html"},{"title":"Flags of the World: Reading the Symbols — EDUSAMBAM","url":"flags-of-the-world.html"},{"title":"Fluency Building Techniques — EDUSAMBAM","url":"fluency-building-techniques.html"},{"title":"Food Groups and Healthy Eating Habits — EDUSAMBAM","url":"food-groups-healthy-eating.html"},{"title":"Force and Newton's Laws of Motion — EDUSAMBAM","url":"force-newtons-laws-of-motion.html"},{"title":"Formal vs. Informal English: The Complete Guide — EDUSAMBAM","url":"formal-informal-english.html"},{"title":"Formal Letter Writing — EDUSAMBAM","url":"formal-letter-writing.html"},{"title":"Fraction Fix-It: Strategies for Confident Fraction Sense — EDUSAMBAM","url":"fraction-fix-it.html"},{"title":"Multiply &amp; Divide Fractions: Cross, Flip, and Fly — EDUSAMBAM","url":"fraction-multiply-divide.html"},{"title":"Generative AI: Images, Text and Where the Line Is — EDUSAMBAM","url":"generative-ai.html"},{"title":"The Grammar Trap: 10 Mistakes That Make Smart People Look Careless — EDUSAMBAM","url":"grammar-article.html"},{"title":"Grammar Fix-It — EDUSAMBAM","url":"grammar-fix-it.html"},{"title":"Gravity and Space: Why Things Fall and Planets Orbit — EDUSAMBAM","url":"gravity-and-space.html"},{"title":"Great Inventions &amp; Inventors — EDUSAMBAM","url":"great-inventions-and-inventors.html"},{"title":"HCF &amp; LCM: Highest Common Factor &amp; Lowest Common Multiple — EDUSAMBAM","url":"hcf-and-lcm.html"},{"title":"HCF &amp; LCM Word Problems: Real-Life Applications — EDUSAMBAM","url":"hcf-lcm-word-problems.html"},{"title":"Heat and Temperature: How They Differ — EDUSAMBAM","url":"heat-and-temperature.html"},{"title":"The History of Computing: Babbage to Smartphones — EDUSAMBAM","url":"history-of-computing.html"},{"title":"How Computers Work: Hardware, Software and Binary Code — EDUSAMBAM","url":"how-computers-work.html"},{"title":"How to Write a Perfect Paragraph — EDUSAMBAM","url":"how-to-write-a-perfect-paragraph.html"},{"title":"How We See: Light, Focus, and the Brain's Role in Vision — EDUSAMBAM","url":"how-we-see-light-focus-and-the-brain.html"},{"title":"The Human Body's Immune System — EDUSAMBAM","url":"human-immune-system.html"},{"title":"Idiom Matcher — EDUSAMBAM","url":"idiom-matcher.html"},{"title":"Idioms &amp; Phrases: The Complete Guide — EDUSAMBAM","url":"idioms-phrases.html"},{"title":"The Importance of the English Language — EDUSAMBAM","url":"importance-of-english.html"},{"title":"The Importance of Sleep and Rest — EDUSAMBAM","url":"importance-of-sleep-and-rest.html"},{"title":"EDUSAMBAM — Global Learning, Knowledge &amp; Wellbeing","url":"index.html"},{"title":"India: National Symbols, Founders &amp; Key Facts — EDUSAMBAM","url":"india-national-symbols.html"},{"title":"Informal Letter Writing — EDUSAMBAM","url":"informal-letter-writing.html"},{"title":"Intonation in Conversation — EDUSAMBAM","url":"intonation-in-conversation.html"},{"title":"Job Applications &amp; Cover Letters — EDUSAMBAM","url":"job-applications-cover-letters.html"},{"title":"Lab Safety &amp; Scientific Equipment: The Basics Every Scientist Needs — EDUSAMBAM","url":"lab-safety-scientific-equipment.html"},{"title":"Language and Its Need — EDUSAMBAM","url":"language-and-its-need.html"},{"title":"EDUSAMBAM Learning Hub — Six SAMBAM Pathways","url":"learning-hub.html"},{"title":"Light: Reflection, Refraction, and Color — EDUSAMBAM","url":"light-reflection-refraction-color.html"},{"title":"Machine Learning Explained: How Computers Learn From Data — EDUSAMBAM","url":"machine-learning-explained.html"},{"title":"Main Idea &amp; Supporting Details: The Complete Guide — EDUSAMBAM","url":"main-idea-supporting-details.html"},{"title":"Making Inferences &amp; Drawing Conclusions: The Complete Guide — EDUSAMBAM","url":"making-inferences.html"},{"title":"Matter and Its States: Solid, Liquid, and Gas — EDUSAMBAM","url":"matter-and-its-states.html"},{"title":"Chemistry of Metals and Non-Metals: A Tale of Two Families — EDUSAMBAM","url":"metals-nonmetals-chemistry.html"},{"title":"Mixtures and Solutions: How Substances Combine Without Reacting — EDUSAMBAM","url":"mixtures-and-solutions.html"},{"title":"Models &amp; Simulations in Science — EDUSAMBAM","url":"models-and-simulations.html"},{"title":"The Mole and Chemical Calculations: Counting the Uncountable — EDUSAMBAM","url":"mole-chemical-calculations.html"},{"title":"Motion: Speed, Velocity, and Distance — EDUSAMBAM","url":"motion-speed-velocity-distance.html"},{"title":"Natural Language Processing: How Computers Understand Text — EDUSAMBAM","url":"natural-language-processing.html"},{"title":"Number Base Systems: Binary, Base 5, Base 7, Octal &amp; Decimal — EDUSAMBAM","url":"number-base-systems.html"},{"title":"Addition &amp; Subtraction on the Number Line — EDUSAMBAM","url":"number-line-addition-subtraction.html"},{"title":"Multiplication &amp; Division on the Number Line — EDUSAMBAM","url":"number-line-multiplication-division.html"},{"title":"Number Lines: Placing Whole Numbers, Fractions, and Decimals — EDUSAMBAM","url":"number-lines.html"},{"title":"Number Systems: Natural, Whole, Integer, Rational &amp; Real Numbers — EDUSAMBAM","url":"number-systems.html"},{"title":"Observation vs Inference: Reading Data Like a Scientist — EDUSAMBAM","url":"observation-vs-inference.html"},{"title":"Operating Systems: The Software Behind Every Device — EDUSAMBAM","url":"operating-systems.html"},{"title":"Operations of Integers: Addition, Subtraction, Multiplication &amp; Division — EDUSAMBAM","url":"operations-of-integers.html"},{"title":"Organic Chemistry Basics: The Chemistry of Carbon — EDUSAMBAM","url":"organic-chemistry-basics.html"},{"title":"Pakistan: National Symbols, Founders &amp; Key Facts — EDUSAMBAM","url":"pakistan-national-symbols.html"},{"title":"Parts of Speech: The Building Blocks of English — EDUSAMBAM","url":"parts-of-speech.html"},{"title":"Percentages: Averages, Profit &amp; Loss, Discounts &amp; Interest — EDUSAMBAM","url":"percentages.html"},{"title":"Personal Hygiene and Disease Prevention — EDUSAMBAM","url":"personal-hygiene-disease-prevention.html"},{"title":"Physical Fitness and Exercise Basics — EDUSAMBAM","url":"physical-fitness-exercise-basics.html"},{"title":"Place Value &amp; Face Value: International, Indian &amp; Pakistani Systems — EDUSAMBAM","url":"place-value-face-value.html"},{"title":"Poetry: The Complete Guide — EDUSAMBAM","url":"poetry.html"},{"title":"Practice Test: Academic &amp; Essay Writing — EDUSAMBAM","url":"practice-test-academic-essay-writing.html"},{"title":"Practice Test: AI Agents &amp; Natural Language Processing — EDUSAMBAM","url":"practice-test-ai-agents-and-nlp.html"},{"title":"Practice Test: What Is AI &amp; Machine Learning? — EDUSAMBAM","url":"practice-test-ai-and-machine-learning.html"},{"title":"Chemistry Comprehensive Practice Test 1 — EDUSAMBAM","url":"practice-test-chemistry-comprehensive-1.html"},{"title":"Chemistry Comprehensive Practice Test 2 — EDUSAMBAM","url":"practice-test-chemistry-comprehensive-2.html"},{"title":"Chemistry Comprehensive Practice Test 3 — EDUSAMBAM","url":"practice-test-chemistry-comprehensive-3.html"},{"title":"Chemistry Comprehensive Practice Test 4 — EDUSAMBAM","url":"practice-test-chemistry-comprehensive-4.html"},{"title":"Chemistry Comprehensive Practice Test 5 — EDUSAMBAM","url":"practice-test-chemistry-comprehensive-5.html"},{"title":"Chemistry Comprehensive Practice Test 6 — EDUSAMBAM","url":"practice-test-chemistry-comprehensive-6.html"},{"title":"Practice Test: Cloud Computing — EDUSAMBAM","url":"practice-test-cloud-computing.html"},{"title":"Practice Test: Computer Vision &amp; Recommendation Systems — EDUSAMBAM","url":"practice-test-computer-vision-and-recommendation-systems.html"},{"title":"Practice Test: Countries, Capitals &amp; Flags of the World | EDUSAMBAM","url":"practice-test-countries-capitals-flags.html"},{"title":"Practice Test: Creative Writing — Part 2 — EDUSAMBAM","url":"practice-test-creative-writing-part-1.html"},{"title":"Practice Test: Creative Writing — Part 1 — EDUSAMBAM","url":"practice-test-creative-writing-part.html"},{"title":"Practice Test: Digital Footprint &amp; Online Privacy — EDUSAMBAM","url":"practice-test-digital-footprint-privacy.html"},{"title":"Practice Test: Factors &amp; Multiples — EDUSAMBAM","url":"practice-test-factors-multiples.html"},{"title":"Practice Test: Foundational Concepts of English — EDUSAMBAM","url":"practice-test-foundational-concepts-english.html"},{"title":"Practice Test: Fractions — EDUSAMBAM","url":"practice-test-fractions.html"},{"title":"Practice Test: Generative AI &amp; Prompt Engineering — EDUSAMBAM","url":"practice-test-generative-ai-and-prompt-engineering.html"},{"title":"Practice Test: Grammar Basics — EDUSAMBAM","url":"practice-test-grammar-basics.html"},{"title":"Practice Test: The History of Computing — EDUSAMBAM","url":"practice-test-history-of-computing.html"},{"title":"Practice Test: How the Internet Works — EDUSAMBAM","url":"practice-test-how-the-internet-works.html"},{"title":"Practice Test: Literary Forms — EDUSAMBAM","url":"practice-test-literary-forms.html"},{"title":"Practice Test: What Is an LLM &amp; AI Ethics? — EDUSAMBAM","url":"practice-test-llm-and-ai-ethics.html"},{"title":"Practice Test: Measurement — EDUSAMBAM","url":"practice-test-measurement.html"},{"title":"Practice Test: Number Line Skills — EDUSAMBAM","url":"practice-test-number-line-skills.html"},{"title":"Practice Test: Number Systems — EDUSAMBAM","url":"practice-test-number-systems.html"},{"title":"Practice Test: Operations &amp; BODMAS — EDUSAMBAM","url":"practice-test-operations-bodmas.html"},{"title":"Practice Test: Parts of a Computer — EDUSAMBAM","url":"practice-test-parts-of-a-computer.html"},{"title":"Physics Comprehensive Practice Test 1 — EDUSAMBAM","url":"practice-test-physics-comprehensive-1.html"},{"title":"Physics Comprehensive Practice Test 2 — EDUSAMBAM","url":"practice-test-physics-comprehensive-2.html"},{"title":"Physics Comprehensive Practice Test 3 — EDUSAMBAM","url":"practice-test-physics-comprehensive-3.html"},{"title":"Physics Comprehensive Practice Test 4 — EDUSAMBAM","url":"practice-test-physics-comprehensive-4.html"},{"title":"Physics Comprehensive Practice Test 5 — EDUSAMBAM","url":"practice-test-physics-comprehensive-5.html"},{"title":"Physics Comprehensive Practice Test 6 — EDUSAMBAM","url":"practice-test-physics-comprehensive-6.html"},{"title":"Practice Test: Powers &amp; Roots — EDUSAMBAM","url":"practice-test-powers-roots.html"},{"title":"Practice Test: Practical Writing — EDUSAMBAM","url":"practice-test-practical-writing.html"},{"title":"Practice Test: Ratio &amp; Percentages — EDUSAMBAM","url":"practice-test-ratio-percentages.html"},{"title":"Practice Test: Reading Comprehension — EDUSAMBAM","url":"practice-test-reading-comprehension.html"},{"title":"Practice Test: Search Engines &amp; Web Browsers — EDUSAMBAM","url":"practice-test-search-engines-browsers.html"},{"title":"Practice Test: The Seven Wonders of the Modern World | EDUSAMBAM","url":"practice-test-seven-wonders-of-the-world.html"},{"title":"Practice Test: Software, Apps &amp; Operating Systems — EDUSAMBAM","url":"practice-test-software-apps-operating-systems.html"},{"title":"Practice Test: Speaking &amp; Pronunciation — EDUSAMBAM","url":"practice-test-speaking-pronunciation.html"},{"title":"Practice Test: Staying Safe Online — EDUSAMBAM","url":"practice-test-staying-safe-online.html"},{"title":"Practice Test: Times Tables — EDUSAMBAM","url":"practice-test-times-tables.html"},{"title":"Practice Test: Vocabulary Building — EDUSAMBAM","url":"practice-test-vocabulary-building.html"},{"title":"Practice Test: What Is an Algorithm? — EDUSAMBAM","url":"practice-test-what-is-an-algorithm.html"},{"title":"Practice Test: What Is Coding? — EDUSAMBAM","url":"practice-test-what-is-coding.html"},{"title":"Practice Test: Why Do We Need Mathematics? — EDUSAMBAM","url":"practice-test-why-we-need-mathematics.html"},{"title":"Practice Test: World Landmarks &amp; Continents and Oceans | EDUSAMBAM","url":"practice-test-world-landmarks-continents-oceans.html"},{"title":"Prefixes, Suffixes &amp; Root Words: The Complete Guide — EDUSAMBAM","url":"prefixes-suffixes-root-words.html"},{"title":"Pressure and Buoyancy: Why Some Things Float and Others Sink — EDUSAMBAM","url":"pressure-and-buoyancy.html"},{"title":"Professional Email Etiquette — EDUSAMBAM","url":"professional-email-etiquette.html"},{"title":"Prompt Engineering: Getting Better Results From AI Tools — EDUSAMBAM","url":"prompt-engineering.html"},{"title":"Prose: The Complete Guide — EDUSAMBAM","url":"prose.html"},{"title":"Punctuation Practice — EDUSAMBAM","url":"punctuation-practice.html"},{"title":"Punctuation Rules: The Complete Guide — EDUSAMBAM","url":"punctuation-rules.html"},{"title":"Ratio &amp; Proportion: Complete Guide with All Question Types — EDUSAMBAM","url":"ratio-and-proportion.html"},{"title":"Recommendation Systems: How Netflix and Spotify \"Know\" What You Like — EDUSAMBAM","url":"recommendation-systems.html"},{"title":"The Role of an Optometrist in Vision Health and Treatment — EDUSAMBAM","url":"role-of-an-optometrist-in-vision-health-and-treatment.html"},{"title":"Roman Numerals: Reading and Writing an Ancient Number System — EDUSAMBAM","url":"roman-numerals.html"},{"title":"Science vs Pseudoscience: How to Tell the Difference — EDUSAMBAM","url":"science-vs-pseudoscience.html"},{"title":"Scientific Measurement &amp; SI Units: The Language of Data — EDUSAMBAM","url":"scientific-measurement-si-units.html"},{"title":"Scientific Notation: Writing Very Large and Very Small Numbers — EDUSAMBAM","url":"scientific-notation.html"},{"title":"The Scientific Revolution: How Modern Science Began — EDUSAMBAM","url":"scientific-revolution.html"},{"title":"Search Engines &amp; Web Browsers: How the Internet Finds Things — EDUSAMBAM","url":"search-engines-browsers.html"},{"title":"Editing Your Own Work: A Step-by-Step Process — EDUSAMBAM","url":"self-editing-process.html"},{"title":"Sentence Scramble — EDUSAMBAM","url":"sentence-scramble.html"},{"title":"Sentence Structure: From Basic to Advanced — EDUSAMBAM","url":"sentence-structure.html"},{"title":"The Seven Wonders of the Modern World — EDUSAMBAM","url":"seven-wonders-of-the-world.html"},{"title":"Show, Don't Tell: The Principle of Vivid Writing — EDUSAMBAM","url":"show-dont-tell.html"},{"title":"Software, Apps &amp; Operating Systems — EDUSAMBAM","url":"software-apps-operating-systemsoverlaps.html"},{"title":"Sound: How We Hear the World — EDUSAMBAM","url":"sound-how-we-hear-the-world.html"},{"title":"Spoken English &amp; Pronunciation: Mistakes, Stress and Fluency — EDUSAMBAM","url":"spoken-english-pronunciation.html"},{"title":"Sports of the World: Rules, Terms &amp; Records — EDUSAMBAM","url":"sports-of-the-world.html"},{"title":"Squares, Square Roots, Cubes &amp; Cube Roots — EDUSAMBAM","url":"squares-cubes-roots.html"},{"title":"States of Matter and Changes: Why Substances Transform — EDUSAMBAM","url":"states-of-matter-changes.html"},{"title":"Story Structure: Beginning, Middle and End — EDUSAMBAM","url":"story-structure.html"},{"title":"Synonyms &amp; Antonyms: The Complete Guide — EDUSAMBAM","url":"synonyms-antonyms.html"},{"title":"Tenses &amp; Verb Forms: The Complete Guide — EDUSAMBAM","url":"tenses-verb-forms.html"},{"title":"Text Structure &amp; Organization: The Complete Guide — EDUSAMBAM","url":"text-structure-organization.html"},{"title":"The Solar System: Planets, Moons &amp; the Sun — EDUSAMBAM","url":"the-solar-system-planets-moons-and-the-sun.html"},{"title":"The Water Cycle &amp; Earth's Water Systems — EDUSAMBAM","url":"the-water-cycle-and-earths-water-systems.html"},{"title":"Thesis Statements: The Complete Guide — EDUSAMBAM","url":"thesis-statements.html"},{"title":"Times Tables Trainer: Strategies for Fast, Confident Multiplication — EDUSAMBAM","url":"times-tables-trainer.html"},{"title":"Transitions &amp; Cohesion: The Complete Guide — EDUSAMBAM","url":"transitions-cohesion.html"},{"title":"Types of Essays: The Complete Guide — EDUSAMBAM","url":"types-of-essays.html"},{"title":"Understanding Mental Health and Emotions — EDUSAMBAM","url":"understanding-mental-health-emotions.html"},{"title":"Units of Measurement: Length, Mass, Capacity, Time &amp; Area — EDUSAMBAM","url":"units-of-measurement.html"},{"title":"Understanding Vaccines and Immunization — EDUSAMBAM","url":"vaccines-and-immunization.html"},{"title":"Vision Science and Optometry: An Introduction — EDUSAMBAM","url":"vision-science-and-optometry-an-introduction.html"},{"title":"Vocabulary Flashcards — EDUSAMBAM","url":"vocabulary-flashcards.html"},{"title":"Weather &amp; Climate: How the Atmosphere Works — EDUSAMBAM","url":"weather-and-climate-how-the-atmosphere-works.html"},{"title":"What is a Balanced Diet and Why Does It Matter? — EDUSAMBAM","url":"what-is-a-balanced-diet.html"},{"title":"What Is an Algorithm? Thinking Like a Computer — EDUSAMBAM","url":"what-is-an-algorithm.html"},{"title":"What Is a Large Language Model? How Chatbots Actually Work — EDUSAMBAM","url":"what-is-an-llm.html"},{"title":"What is Artificial Intelligence and How Does It Work? — EDUSAMBAM","url":"what-is-artificial-intelligence.html"},{"title":"What is Biology? — EDUSAMBAM","url":"what-is-biology.html"},{"title":"What is Chemistry? The Science of Matter and Change — EDUSAMBAM","url":"what-is-chemistry.html"},{"title":"What Is Coding? Programming Languages Explained, From Basics to Advanced — EDUSAMBAM","url":"what-is-coding.html"},{"title":"What is Health? Physical, Mental &amp; Social Wellbeing — EDUSAMBAM","url":"what-is-health.html"},{"title":"What is Language? — EDUSAMBAM","url":"what-is-language.html"},{"title":"What is Physics? The Study of How Things Work — EDUSAMBAM","url":"what-is-physics.html"},{"title":"What is Science? The Scientific Method — EDUSAMBAM","url":"what-is-science-scientific-method.html"},{"title":"What is the Human Cell? A Simple Guide — EDUSAMBAM","url":"what-is-the-human-cell.html"},{"title":"What Is the Internet, Really? Servers, Packets and How Data Travels — EDUSAMBAM","url":"what-is-the-internet.html"},{"title":"Why Do We Need Mathematics in Daily Life? — EDUSAMBAM","url":"why-do-we-need-mathematics.html"},{"title":"Word &amp; Sentence Stress Patterns — EDUSAMBAM","url":"word-and-sentence-stress.html"},{"title":"Work, Power, and Simple Machines — EDUSAMBAM","url":"work-power-simple-machines.html"}];
+  function closeAll(except){
+    document.querySelectorAll('.edusambam-mobile-menu,.edusambam-search-panel').forEach(el=>{
+      if(el!==except) el.classList.remove('open');
+    });
+    const b=document.querySelector('.edusambam-menu-btn');
+    if(b){
+      const isOpen=!!document.querySelector('.edusambam-mobile-menu')?.classList.contains('open');
+      b.setAttribute('aria-expanded', String(isOpen));
+      b.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+      b.setAttribute('title', isOpen ? 'Close menu' : 'Menu');
+      b.textContent = isOpen ? '×' : '☰';
+    }
+  }
+  function setup(){
+    const menu=document.querySelector('.edusambam-mobile-menu');
+    const mb=document.querySelector('.edusambam-menu-btn');
+    const sb=document.querySelector('.edusambam-search-btn');
+    const panel=document.querySelector('.edusambam-search-panel');
+    const input=document.querySelector('.edusambam-search-input');
+    const results=document.querySelector('.edusambam-search-results');
+    if(mb && menu){
+      mb.addEventListener('click',()=>{
+        const open=menu.classList.toggle('open'); closeAll(open?menu:null);
+        mb.setAttribute('aria-expanded',String(open));
+        mb.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        mb.setAttribute('title', open ? 'Close menu' : 'Menu');
+        mb.textContent = open ? '×' : '☰';
+        if(open) panel?.classList.remove('open');
+      });
+    }
+    if(sb && panel){
+      sb.addEventListener('click',()=>{
+        const open=panel.classList.toggle('open'); closeAll(open?panel:null);
+        if(open) setTimeout(()=>input?.focus(),30);
+      });
+    }
+    if(input && results){
+      const render=()=>{
+        const q=input.value.trim().toLowerCase();
+        const hits=q?pages.filter(x=>(x.title+' '+x.url).toLowerCase().includes(q)).slice(0,20):[];
+        results.innerHTML=hits.map(x=>'<a href="'+x.url.replace(/"/g,'&quot;')+'">'+
+          x.title.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</a>').join('') ||
+          (q?'<div style="padding:10px;color:#64748b">No matching pages found.</div>':'');
+      };
+      input.addEventListener('input',render);
+    }
+    document.addEventListener('keydown',e=>{
+      if(e.key==='Escape') closeAll(null);
+    });
+    document.addEventListener('click',e=>{
+      if(!e.target.closest('.edusambam-nav') && !e.target.closest('.edusambam-mobile-menu') && !e.target.closest('.edusambam-search-panel')) closeAll(null);
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',setup); else setup();
+})();
+</script>
+<footer aria-label="EDUSAMBAM site footer" class="edusambam-unified-footer">
+<div class="footer-top">
+<div class="footer-brand">
+<div class="edusambam-footer-brand-row">
+<a aria-label="EDUSAMBAM home" class="edusambam-footer-logo-link" href="index.html">
+<span aria-hidden="true" class="edusambam-brand-mark edusambam-footer-logo">
+<span class="c1"></span><span class="c2"></span><span class="c3"></span>
+<span class="c4"></span><span class="c5"></span><span class="c6"></span>
+</span>
+<span class="edusambam-footer-brand-name">EDUSAMBAM</span>
+</a>
+</div>
+<p class="edusambam-footer-statement">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM.</p>
+</div>
+<div class="footer-col"><h4>Learning</h4><ul>
+<li><a href="index.html#subject-english">English Language</a></li>
+<li><a href="index.html#subject-gk">General Knowledge</a></li>
+<li><a href="index.html#subject-computer">Computer &amp; AI</a></li>
+<li><a href="index.html#subject-maths">Mathematics</a></li>
+<li><a href="index.html#science">Science</a></li>
+<li><a href="index.html#health">Health</a></li>
+<li><a href="index.html#resources">Resources</a></li>
+</ul></div>
+<div class="footer-col"><h4>Practice &amp; Assessment</h4><ul>
+<li><a href="index.html#interactive-activities">Interactive Activities</a></li>
+<li><a href="assessment-arena.html">ASSESSMENT ARENA</a></li>
+<li><a href="assessment-arena.html">What Is Assessment?</a></li>
+<li><a href="index.html#about">Learn Your Way</a></li>
+<li><a href="index.html#resources">Free Resources &amp; Downloads</a></li>
+</ul></div>
+<div class="footer-col"><h4>About EDUSAMBAM</h4><ul>
+<li><a href="index.html#about-edusambam">What EDUSAMBAM Is</a></li>
+<li><a href="index.html#mission">Our Mission</a></li>
+<li><a href="index.html#team">The Team</a></li>
+<li><a href="mailto:info.edusambam@gmail.com">Contact Us</a></li>
+<li><a href="mailto:feedback.edusambam@gmail.com?subject=EDUSAMBAM%20Feedback">Give Feedback</a></li>
+<li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+</ul></div>
+</div>
+<div class="footer-bottom"><p>© 2026 EDUSAMBAM · Learning resources, practice and assessment.</p><ul class="footer-bottom-links">
+<li><a href="#top">Back to Top</a></li>
+<li><a href="index.html#mission">Mission</a></li>
+<li><a href="index.html#team">Team</a></li>
+<li><a href="index.html#resources">Resources</a></li>
+</ul></div>
+</footer>
+
+
+<script>
+var PASSAGES = [
+  {
+    id:"microplastics", title:"The Silent Threat of Microplastics", topic:"Environment", difficulty:"medium",
+    text:"Every year, millions of tonnes of plastic waste enter the world's oceans, and much of it never fully disappears. Instead, sunlight, waves, and friction break larger pieces into microplastics — fragments smaller than five millimetres, often invisible to the naked eye. These particles have now been found in sea ice, drinking water, table salt, and even human blood. Scientists are still investigating the long-term health effects of ingesting microplastics, but early research suggests they may carry harmful chemicals and disrupt the endocrine system. Marine animals are especially vulnerable. Fish, seabirds, and filter-feeding creatures like mussels often mistake microplastics for food, which can lead to malnutrition, internal injury, and the transfer of toxins up the food chain. Because microplastics are so small and widespread, cleaning them from the environment is far more difficult than removing larger debris. For this reason, most experts argue that the most effective solution is prevention: reducing single-use plastic production, improving waste management systems, and developing biodegradable alternatives. Some countries have already introduced bans on microbeads in cosmetics, a small but measurable step. Ultimately, tackling this problem will require cooperation between governments, industries, and individual consumers, since plastic pollution crosses borders as easily as ocean currents themselves.",
+    questions:[
+      {q:"What are microplastics, according to the passage?", opts:["Chemicals used to make plastic","Fragments of plastic smaller than five millimetres","A type of biodegradable material","Large pieces of ocean debris"], correct:1},
+      {q:"Where have microplastics been found?", opts:["Only in ocean water","Only in fish","In sea ice, drinking water, salt, and human blood","Only in cosmetics"], correct:2},
+      {q:"How can microplastics harm marine animals?", opts:["By making the water too warm","By being mistaken for food, causing malnutrition and injury","By changing the animals' colour","By making them grow too quickly"], correct:1},
+      {q:"Why is cleaning up microplastics especially difficult?", opts:["They are too small and widespread","They are too expensive to collect","They only exist in deep water","Governments refuse to allow cleanup"], correct:0},
+      {q:"What solution do most experts favour?", opts:["Waiting for microplastics to dissolve naturally","Preventing plastic pollution at its source","Only cleaning beaches","Banning all ocean research"], correct:1}
+    ]
+  },
+  {
+    id:"renewable", title:"The Rise of Renewable Energy", topic:"Technology", difficulty:"easy",
+    text:"For most of the twentieth century, electricity generation depended heavily on burning coal, oil, and natural gas. These fossil fuels are reliable and energy-dense, but they release greenhouse gases that contribute to climate change. Over the past two decades, renewable energy sources such as solar, wind, and hydropower have grown rapidly, driven by falling costs and improving technology. Solar panels, for example, have dropped in price by more than eighty percent since 2010, making them competitive with traditional power plants in many regions. Wind turbines have also become larger and more efficient, capturing energy even in areas with moderate wind speeds. One challenge with renewable energy is intermittency: the sun does not always shine, and the wind does not always blow. Engineers are addressing this through better battery storage systems, which can store excess energy generated during peak conditions and release it when demand is high. Grid systems are also becoming smarter, balancing supply from multiple renewable sources across wide geographic areas. Countries such as Denmark and Costa Rica already generate the vast majority of their electricity from renewable sources, showing that a full transition is technically achievable. The main remaining obstacles are political will, investment, and updating ageing infrastructure to support a cleaner energy future.",
+    questions:[
+      {q:"What has been the traditional main source of electricity generation?", opts:["Solar panels","Fossil fuels like coal, oil, and gas","Wind turbines","Hydropower only"], correct:1},
+      {q:"How much have solar panel prices dropped since 2010?", opts:["About 10 percent","About 30 percent","More than 80 percent","They have stayed the same"], correct:2},
+      {q:"What is meant by 'intermittency' in the context of renewable energy?", opts:["Energy that never runs out","The fact that sun and wind are not always available","A type of battery storage","A government policy"], correct:1},
+      {q:"How are engineers addressing the problem of intermittency?", opts:["By building more coal plants","Through improved battery storage and smarter grids","By reducing electricity use nationwide","By only using solar power"], correct:1},
+      {q:"What does the example of Denmark and Costa Rica show?", opts:["Renewable energy is too expensive to use widely","A full transition to renewables is technically achievable","Wind power does not work well in small countries","Fossil fuels are still necessary everywhere"], correct:1}
+    ]
+  },
+  {
+    id:"memory", title:"How Memory Works", topic:"Psychology", difficulty:"medium",
+    text:"Human memory is not a single system but a network of different processes working together. Psychologists often divide memory into three stages: encoding, storage, and retrieval. Encoding is the process of converting information — a face, a fact, a smell — into a form the brain can use. Storage refers to how that information is maintained over time, and retrieval is the act of accessing it later. Short-term memory, sometimes called working memory, holds a small amount of information for a brief period, usually less than a minute, unless it is actively rehearsed. Long-term memory, by contrast, can store vast amounts of information for years or even a lifetime. Not all long-term memories are the same: procedural memory governs skills like riding a bicycle, while declarative memory covers facts and events that can be consciously recalled. Interestingly, memories are not stored like files in a cabinet. Each time a memory is retrieved, it can be subtly altered before being 're-stored', a phenomenon known as reconsolidation. This helps explain why eyewitness testimony can be unreliable, even when a witness is confident and sincere. Sleep also plays a crucial role in memory, as the brain appears to strengthen and organise new memories during certain sleep stages, which is one reason students who sleep well tend to retain information better than those who do not.",
+    questions:[
+      {q:"What are the three stages of memory described in the passage?", opts:["Learning, testing, forgetting","Encoding, storage, and retrieval","Short-term, medium-term, long-term","Seeing, hearing, remembering"], correct:1},
+      {q:"What is 'working memory' also known as?", opts:["Long-term memory","Procedural memory","Short-term memory","Declarative memory"], correct:2},
+      {q:"What is the difference between procedural and declarative memory?", opts:["Procedural memory covers skills; declarative memory covers facts and events","Procedural memory is only for children","Declarative memory cannot be recalled consciously","There is no real difference"], correct:0},
+      {q:"What does 'reconsolidation' mean, according to the passage?", opts:["Memories are permanently fixed and never change","Memories can be subtly altered each time they are retrieved","Memory is stored like files in a cabinet","Only short-term memories can change"], correct:1},
+      {q:"What role does sleep play in memory, according to the passage?", opts:["Sleep has no effect on memory","Sleep weakens memories","Sleep helps strengthen and organise new memories","Only naps help with memory"], correct:2}
+    ]
+  },
+  {
+    id:"silkroad", title:"The Silk Road: An Ancient Network", topic:"History", difficulty:"medium",
+    text:"The term 'Silk Road' was coined in the nineteenth century by a German geographer, but the trade routes it describes are far older, stretching back more than two thousand years. Rather than a single road, the Silk Road was a vast network of overland and maritime paths connecting China to the Mediterranean, passing through Central Asia, Persia, and the Middle East. Merchants carried silk, spices, precious metals, and ceramics westward, while gold, wool, and glassware travelled east. Goods were rarely transported the entire distance by a single trader; instead, they passed through a chain of intermediaries, with prices rising at each stage. Beyond commerce, the Silk Road served as a channel for ideas, religions, and technologies. Buddhism spread from India into China along these routes, while papermaking techniques travelled in the opposite direction, eventually reaching Europe centuries later. Diseases also spread along the network, most notably the bubonic plague, which some historians believe reached Europe via trade caravans in the fourteenth century. The Silk Road declined in importance after the fifteenth century, as European powers developed sea routes around Africa, reducing dependence on overland trade. Nonetheless, its legacy endures: the exchange of goods and ideas across such vast distances helped shape the cultural and economic development of Asia, the Middle East, and Europe alike.",
+    questions:[
+      {q:"Who coined the term 'Silk Road'?", opts:["A Chinese emperor","A German geographer in the nineteenth century","A Persian merchant","A Roman historian"], correct:1},
+      {q:"Was the Silk Road a single continuous road?", opts:["Yes, one paved road built by China","No, it was a network of overland and maritime paths","Yes, but only used by the Roman Empire","No, it only existed on maps, never in reality"], correct:1},
+      {q:"Besides goods, what else travelled along the Silk Road?", opts:["Nothing besides silk and spices","Ideas, religions, technologies, and diseases","Only gold and precious metals","Only diplomatic messages"], correct:1},
+      {q:"What is given as a possible example of disease spreading via the Silk Road?", opts:["Influenza in the 20th century","The bubonic plague reaching Europe in the fourteenth century","Smallpox in ancient Rome","Malaria in Central Asia"], correct:1},
+      {q:"Why did the Silk Road decline after the fifteenth century?", opts:["China closed its borders permanently","European powers developed sea routes around Africa","All the goods ran out","A war destroyed all the trade routes"], correct:1}
+    ]
+  },
+  {
+    id:"dreams", title:"Why Do We Dream?", topic:"Psychology", difficulty:"easy",
+    text:"Almost everyone dreams, yet scientists still do not fully agree on why. Dreams occur most vividly during REM sleep, a stage marked by rapid eye movement, increased brain activity, and temporary muscle paralysis that prevents the body from acting out what is being dreamed. Several theories attempt to explain the purpose of dreaming. One suggests that dreams help the brain process emotions, allowing people to work through stress or difficult experiences in a safe, simulated environment. Another theory proposes that dreaming supports memory consolidation, helping the brain sort and strengthen important information gathered during the day while discarding the irrelevant. A third theory, sometimes called the 'threat simulation' theory, argues that dreaming evolved as a way to rehearse responses to dangerous situations, which would have offered a survival advantage to early humans. Not all researchers accept a single explanation; many believe dreaming likely serves multiple overlapping functions rather than one specific purpose. Interestingly, the content of dreams is often shaped by recent experiences, a phenomenon known as 'day residue', though dreams frequently combine unrelated memories in illogical ways. While the exact function of dreaming remains debated, most scientists agree that REM sleep itself is essential for healthy brain function, and consistently losing this stage of sleep is linked to problems with mood, concentration, and memory.",
+    questions:[
+      {q:"During which sleep stage do the most vivid dreams occur?", opts:["Deep sleep","REM sleep","Light sleep","Non-REM sleep only"], correct:1},
+      {q:"What happens to the muscles during REM sleep?", opts:["They become more active than usual","They are temporarily paralysed","They stop functioning permanently","They move faster than when awake"], correct:1},
+      {q:"According to one theory, what might dreaming help the brain do with emotions?", opts:["Ignore them completely","Process and work through them safely","Delete them from memory","Transfer them to another person"], correct:1},
+      {q:"What is the 'threat simulation' theory?", opts:["Dreams predict the future","Dreaming evolved to rehearse responses to danger","Dreams are caused by watching frightening films","Threats in dreams are always imaginary and meaningless"], correct:1},
+      {q:"What is 'day residue'?", opts:["Leftover tiredness from the previous day","Dream content shaped by recent daytime experiences","A medical condition affecting sleep","The final stage of REM sleep"], correct:1}
+    ]
+  },
+  {
+    id:"space", title:"The Search for Life Beyond Earth", topic:"Space Science", difficulty:"hard",
+    text:"For centuries, the question of whether life exists beyond Earth was confined to philosophy and speculation. Today, it is an active scientific pursuit, shaped by advances in astronomy, chemistry, and biology. One major focus is the search for exoplanets — planets orbiting stars outside our solar system — particularly those within the 'habitable zone', where conditions might allow liquid water to exist on a planet's surface. Since the 1990s, astronomers have confirmed thousands of exoplanets, several of which lie within this zone, though confirming actual habitability requires far more detailed observation than simply measuring distance from a star. Closer to home, scientists are also investigating icy moons such as Europa and Enceladus, which orbit Jupiter and Saturn respectively. Both are believed to harbour subsurface oceans of liquid water beneath thick ice shells, kept liquid by tidal heating rather than sunlight. This makes them compelling targets, since liquid water is considered essential for life as we understand it. Meanwhile, missions to Mars continue to search for evidence of past microbial life, examining ancient riverbeds and mineral deposits for chemical signatures. Some scientists caution against assuming life elsewhere must resemble life on Earth, arguing that alternative biochemistries — based on different solvents or energy sources — cannot be ruled out. Whether or not life is eventually found, the search itself has driven remarkable advances in detection technology and our understanding of what conditions life actually requires.",
+    questions:[
+      {q:"What is an 'exoplanet'?", opts:["A planet within our solar system","A planet orbiting a star outside our solar system","A moon of Jupiter","A star without any planets"], correct:1},
+      {q:"What is the 'habitable zone'?", opts:["The region of a planet's surface with mountains","The area around a star where liquid water might exist on a planet","The zone inside a spacecraft where astronauts live","A region only found in our solar system"], correct:1},
+      {q:"What keeps the subsurface oceans of Europa and Enceladus liquid?", opts:["Direct sunlight","Tidal heating","Nuclear reactors installed by scientists","Volcanic eruptions on the surface"], correct:1},
+      {q:"What are Mars missions currently searching for?", opts:["Evidence of past microbial life","Signs of large modern civilizations","New moons orbiting Mars","Sources of fossil fuel"], correct:0},
+      {q:"What caution do some scientists raise about the search for life?", opts:["That life definitely does not exist anywhere else","That life elsewhere might not resemble life on Earth","That searching for life is a waste of resources","That only Mars should be studied"], correct:1}
+    ]
+  }
+];
+
+var currentPassage = null;
+var words = [];
+var wordIndex = 0;
+var wpm = 240;
+var chunkSize = 1;
+var timer = null;
+var playing = false;
+var readStartTime = null;
+
+var TOPIC_ICONS = {
+  "Environment":"🌍", "Technology":"⚡", "Psychology":"🧠", "History":"🏺", "Space Science":"🚀"
+};
+
+function buildPassageGrid(){
+  var grid = document.getElementById('passageGrid');
+  document.getElementById('passageCount').textContent = PASSAGES.length + ' passages available';
+  grid.innerHTML = '';
+  PASSAGES.forEach(function(p, i){
+    var wc = p.text.split(/\s+/).length;
+    var card = document.createElement('div');
+    card.className = 'passage-card';
+    card.id = 'card-' + p.id;
+    card.onclick = function(){ openPassage(p.id); };
+    var icon = TOPIC_ICONS[p.topic] || '📖';
+    card.innerHTML =
+      '<span class="passage-icon">' + icon + '</span>' +
+      '<div class="passage-tag">' + p.topic + '</div>' +
+      '<div class="passage-card-title">' + p.title + '</div>' +
+      '<div class="passage-meta"><span class="diff-pill diff-' + p.difficulty + '">' + p.difficulty.charAt(0).toUpperCase()+p.difficulty.slice(1) + '</span><span>' + wc + ' words</span></div>';
+    grid.appendChild(card);
+  });
+}
+
+function openPassage(id){
+  currentPassage = PASSAGES.filter(function(p){ return p.id === id; })[0];
+  if(!currentPassage) return;
+  document.querySelectorAll('.passage-card').forEach(function(c){ c.classList.remove('active'); });
+  document.getElementById('card-' + id).classList.add('active');
+
+  words = currentPassage.text.split(/\s+/);
+  wordIndex = 0;
+  playing = false;
+  readStartTime = null;
+  clearInterval(timer);
+
+  document.getElementById('readerTitle').textContent = currentPassage.title;
+  document.getElementById('readerPanel').classList.add('show');
+  document.getElementById('quizPanel').classList.remove('show');
+  document.getElementById('readerStage').classList.remove('playing');
+  document.getElementById('readerStage').innerHTML = '<div class="reader-guide"></div><div class="reader-idle-msg" id="readerIdle">Press play to begin. Keep your eyes fixed on the centre of this panel.</div>';
+  document.getElementById('progressFill').style.width = '0%';
+  document.getElementById('playBtn').innerHTML = '&#9658;';
+  document.getElementById('statsStrip').style.display = 'none';
+
+  document.getElementById('readerPanel').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+function closeReader(){
+  clearInterval(timer);
+  playing = false;
+  readStartTime = null;
+  document.getElementById('readerPanel').classList.remove('show');
+  document.getElementById('quizPanel').classList.remove('show');
+  document.querySelectorAll('.passage-card').forEach(function(c){ c.classList.remove('active'); });
+}
+
+function updateWpm(v){
+  wpm = parseInt(v, 10);
+  document.getElementById('wpmVal').textContent = wpm + ' wpm';
+}
+
+function setChunk(n){
+  chunkSize = n;
+  document.querySelectorAll('.chunk-btn').forEach(function(b){
+    b.classList.toggle('active', parseInt(b.getAttribute('data-chunk'),10) === n);
+  });
+}
+
+function escapeHtml(s){
+  return s.replace(/[<>&]/g, function(c){ return {'<':'&lt;','>':'&gt;','&':'&amp;'}[c]; });
+}
+
+function orpify(word){
+  var clean = word.replace(/[^a-zA-Z]/g, '');
+  var len = clean.length;
+  var pivot = 0;
+  if(len > 13) pivot = 4; else if(len > 9) pivot = 3; else if(len > 5) pivot = 2; else if(len > 1) pivot = 1;
+  var count = 0, out = '', placed = false;
+  for(var i=0;i<word.length;i++){
+    var ch = word[i];
+    if(/[a-zA-Z]/.test(ch) && !placed && count === pivot){
+      out += '<span class="orp">' + ch + '</span>';
+      placed = true;
+      count++;
+    } else {
+      out += ch;
+      if(/[a-zA-Z]/.test(ch)) count++;
+    }
+  }
+  return out;
+}
+
+function renderStage(){
+  var stage = document.getElementById('readerStage');
+  var slice = words.slice(wordIndex, wordIndex + chunkSize);
+  var html = '<div class="reader-guide"></div><div class="reader-word">';
+  html += slice.map(function(w, i){ return i === 0 ? orpify(w) : escapeHtml(w); }).join(' ');
+  html += '</div>';
+  stage.innerHTML = html;
+  document.getElementById('progressFill').style.width = Math.round((wordIndex / words.length) * 100) + '%';
+}
+
+function scheduleNext(){
+  var baseDelay = 60000 / wpm;
+  var lastWord = words[Math.min(wordIndex + chunkSize - 1, words.length - 1)] || '';
+  var extra = /[.!?]$/.test(lastWord) ? baseDelay * 0.9 : (/[,;:]$/.test(lastWord) ? baseDelay * 0.4 : 0);
+  timer = setTimeout(function(){
+    wordIndex += chunkSize;
+    if(wordIndex >= words.length){
+      finishPassage();
+      return;
+    }
+    renderStage();
+    scheduleNext();
+  }, baseDelay * chunkSize + extra);
+}
+
+function startCountdown(cb){
+  var stage = document.getElementById('readerStage');
+  var seq = ['3','2','1','Go!'];
+  var i = 0;
+  function step(){
+    if(!playing){ return; }
+    if(i >= seq.length){ cb(); return; }
+    stage.innerHTML = '<div class="reader-guide"></div><div class="reader-countdown">' + seq[i] + '</div>';
+    i++;
+    setTimeout(step, 480);
+  }
+  step();
+}
+
+function togglePlay(){
+  if(!currentPassage) return;
+  if(playing){
+    playing = false;
+    document.getElementById('playBtn').innerHTML = '&#9658;';
+    document.getElementById('readerStage').classList.remove('playing');
+    clearInterval(timer);
+    return;
+  }
+  if(wordIndex >= words.length) wordIndex = 0;
+  playing = true;
+  document.getElementById('playBtn').innerHTML = '&#10074;&#10074;';
+  document.getElementById('readerStage').classList.add('playing');
+  document.getElementById('statsStrip').style.display = 'none';
+  if(wordIndex === 0){
+    startCountdown(function(){
+      if(!playing) return;
+      readStartTime = Date.now();
+      renderStage();
+      scheduleNext();
+    });
+  } else {
+    if(!readStartTime) readStartTime = Date.now();
+    renderStage();
+    scheduleNext();
+  }
+}
+
+function restartPassage(){
+  clearInterval(timer);
+  wordIndex = 0;
+  playing = false;
+  readStartTime = null;
+  document.getElementById('playBtn').innerHTML = '&#9658;';
+  document.getElementById('readerStage').classList.remove('playing');
+  document.getElementById('readerStage').innerHTML = '<div class="reader-guide"></div><div class="reader-idle-msg">Press play to begin. Keep your eyes fixed on the centre of this panel.</div>';
+  document.getElementById('progressFill').style.width = '0%';
+  document.getElementById('statsStrip').style.display = 'none';
+}
+
+function skipToQuiz(){
+  clearInterval(timer);
+  playing = false;
+  finishPassage();
+}
+
+function finishPassage(){
+  clearInterval(timer);
+  playing = false;
+  document.getElementById('playBtn').innerHTML = '&#9658;';
+  document.getElementById('readerStage').classList.remove('playing');
+  document.getElementById('progressFill').style.width = '100%';
+  document.getElementById('readerStage').innerHTML = '<div class="reader-guide"></div><div class="reader-idle-msg">Passage complete. Scroll down for your comprehension check.</div>';
+
+  var wordsRead = Math.min(wordIndex, words.length) || words.length;
+  if(readStartTime){
+    var elapsedSec = Math.max(1, (Date.now() - readStartTime) / 1000);
+    var mins = elapsedSec / 60;
+    var effectiveWpm = Math.round(wordsRead / mins);
+    var timeLabel = elapsedSec < 60 ? Math.round(elapsedSec) + 's' : Math.floor(elapsedSec / 60) + 'm ' + Math.round(elapsedSec % 60) + 's';
+    document.getElementById('statsStrip').innerHTML = '📖 <b>' + wordsRead + '</b> words read &nbsp;·&nbsp; ⏱ <b>' + timeLabel + '</b> &nbsp;·&nbsp; ⚡ <b>' + effectiveWpm + ' wpm</b> effective pace';
+    document.getElementById('statsStrip').style.display = 'flex';
+  }
+  readStartTime = null;
+
+  buildQuiz();
+  document.getElementById('quizPanel').classList.add('show');
+  document.getElementById('quizPanel').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+var squizTotal = 0;
+
+function buildQuiz(){
+  document.getElementById('quizTitle').textContent = 'Practice Quiz — ' + currentPassage.title;
+  document.getElementById('quizIntro').textContent = currentPassage.questions.length + ' questions. Select an answer for each, then submit to see your score instantly.';
+
+  var form = document.getElementById('squizForm');
+  form.innerHTML = '';
+  squizTotal = currentPassage.questions.length;
+
+  currentPassage.questions.forEach(function(q, qi){
+    var n = qi + 1;
+    var item = document.createElement('div');
+    item.className = 'squiz-item';
+    item.setAttribute('data-correct', q.correct);
+    var optsHtml = q.opts.map(function(opt, oi){
+      var letter = String.fromCharCode(65 + oi);
+      var id = 'sq' + n + String.fromCharCode(97 + oi);
+      return '<div class="squiz-option"><input type="radio" name="sq' + n + '" id="' + id + '" value="' + oi + '"><label for="' + id + '">' + letter + '. ' + opt + '</label></div>';
+    }).join('');
+    item.innerHTML = '<div class="squiz-q"><span class="qnum">' + n + '.</span>' + q.q + '</div>' + optsHtml;
+    form.appendChild(item);
+  });
+
+  var submitBtn = document.createElement('button');
+  submitBtn.type = 'button';
+  submitBtn.className = 'squiz-submit-btn';
+  submitBtn.id = 'squizSubmitBtn';
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Answer all questions to submit';
+  submitBtn.onclick = submitQuiz;
+  form.appendChild(submitBtn);
+
+  document.getElementById('squizResults').classList.remove('visible');
+  document.getElementById('squizScoreBig').classList.remove('perfect');
+  document.getElementById('squizProgressFill').style.width = '0%';
+  document.getElementById('squizProgressLabel').textContent = '0 of ' + squizTotal + ' answered';
+
+  form.addEventListener('change', updateQuizProgress);
+}
+
+function countAnswered(){
+  var form = document.getElementById('squizForm');
+  var count = 0;
+  for(var i = 1; i <= squizTotal; i++){
+    if(form.querySelector('input[name="sq' + i + '"]:checked')) count++;
+  }
+  return count;
+}
+
+function updateQuizProgress(){
+  var answered = countAnswered();
+  var submitBtn = document.getElementById('squizSubmitBtn');
+  document.getElementById('squizProgressFill').style.width = (answered / squizTotal * 100) + '%';
+  document.getElementById('squizProgressLabel').textContent = answered + ' of ' + squizTotal + ' answered';
+  submitBtn.disabled = answered < squizTotal;
+  submitBtn.textContent = answered < squizTotal ? 'Answer all questions to submit' : 'Submit Quiz';
+  document.querySelectorAll('.squiz-option').forEach(function(opt){ opt.classList.remove('selected'); });
+  document.querySelectorAll('#squizForm input[type="radio"]:checked').forEach(function(input){
+    input.closest('.squiz-option').classList.add('selected');
+  });
+}
+
+function submitQuiz(){
+  var form = document.getElementById('squizForm');
+  var score = 0;
+  var items = document.querySelectorAll('.squiz-item');
+  items.forEach(function(item, idx){
+    var qnum = idx + 1;
+    var correctIdx = item.getAttribute('data-correct');
+    var selected = form.querySelector('input[name="sq' + qnum + '"]:checked');
+    var options = item.querySelectorAll('.squiz-option');
+    options.forEach(function(opt, oi){
+      opt.querySelector('input').disabled = true;
+      if(String(oi) === correctIdx) opt.classList.add('correct-answer');
+    });
+    if(selected && selected.value === correctIdx){
+      score++;
+    } else if(selected){
+      selected.closest('.squiz-option').classList.add('wrong-answer');
+    }
+  });
+
+  var percent = Math.round((score / squizTotal) * 100);
+  var scoreBig = document.getElementById('squizScoreBig');
+  scoreBig.textContent = score + '/' + squizTotal;
+  scoreBig.classList.toggle('perfect', percent === 100);
+  document.getElementById('squizScoreLabel').textContent = 'You scored ' + percent + '%';
+
+  var tier = 'Keep practicing';
+  if(percent === 100) tier = '🎉 Perfect score!';
+  else if(percent >= 80) tier = 'Excellent work';
+  else if(percent >= 60) tier = 'Good effort';
+  else if(percent >= 40) tier = 'Getting there';
+  document.getElementById('squizScoreTier').textContent = tier;
+
+  document.getElementById('squizResults').classList.add('visible');
+  document.getElementById('squizSubmitBtn').style.display = 'none';
+  document.getElementById('squizResults').scrollIntoView({behavior:'smooth', block:'start'});
+
+  markPassageDone(currentPassage.id);
+}
+
+function markPassageDone(id){
+  var card = document.getElementById('card-' + id);
+  if(card && !card.querySelector('.done-badge')){
+    card.insertAdjacentHTML('beforeend', '<span class="done-badge">Done</span>');
+  }
+}
+
+function retakeQuiz(){
+  buildQuiz();
+  document.getElementById('squizForm').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+document.addEventListener('keydown', function(e){
+  if(!document.getElementById('readerPanel').classList.contains('show')) return;
+  if(e.code === 'Space'){ e.preventDefault(); togglePlay(); }
+});
+
+buildPassageGrid();
+</script>
+</body>
+</html>
