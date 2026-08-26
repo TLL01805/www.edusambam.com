@@ -597,9 +597,9 @@ gtag('config', 'G-Y35DW0V4HQ');
 }
 .edusambam-brand{
   display:flex;align-items:center;gap:10px;min-width:0;
-  text-decoration:none;color:#0b3b66;flex:0 0 auto;
+  text-decoration:none;color:#0b3b66;flex:0 1 auto;
 }
-.edusambam-brand-copy{display:flex;flex-direction:column;line-height:1;min-width:0}
+.edusambam-brand-copy{display:flex;flex-direction:column;line-height:1;min-width:0;overflow:hidden}
 .edusambam-brand-name{
   font-family:"EB Garamond",Georgia,serif;
   font-size:1.6rem;font-weight:600;letter-spacing:.01em;
@@ -609,6 +609,7 @@ gtag('config', 'G-Y35DW0V4HQ');
   margin-top:4px;
   font-size:.62rem;font-weight:600;letter-spacing:.08em;
   color:#64748b;white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis;max-width:100%;
 }
 .edusambam-nav-links{
   display:flex;align-items:center;gap:14px;margin-left:auto;
@@ -994,18 +995,18 @@ footer.footer {
 <span class="edusambam-brand-subtitle">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM.</span>
 </span>
 </a>
-<ul class="edusambam-nav-links"><li><a href="index.html">Home</a></li><li><a href="index.html#english">English</a></li><li><a href="index.html#mathematics">Mathematics</a></li><li><a href="index.html#science">Science</a></li><li><a href="index.html#health">Health</a></li><li><a href="index.html#general-knowledge">General Knowledge</a></li><li><a href="index.html#computer-ai">Computer &amp; AI</a></li><li><a href="index.html#resources">Resources</a></li></ul>
+<ul class="edusambam-nav-links"><li><a href="index.html">Home</a></li><li><a href="index.html#subject-english">English</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li></ul>
 <button aria-label="Search" class="edusambam-search-btn" title="Search" type="button">⌕</button>
 <button aria-expanded="false" aria-label="Open menu" class="edusambam-menu-btn" title="Menu" type="button">☰</button>
 </div>
 </nav>
 <div aria-label="Mobile navigation" class="edusambam-mobile-menu">
-<ul><li><a href="index.html">Home</a></li><li><a href="index.html#english">English</a></li><li><a href="index.html#mathematics">Mathematics</a></li><li><a href="index.html#science">Science</a></li><li><a href="index.html#health">Health</a></li><li><a href="index.html#general-knowledge">General Knowledge</a></li><li><a href="index.html#computer-ai">Computer &amp; AI</a></li><li><a href="index.html#resources">Resources</a></li>
-<li class="edusambam-menu-extra"><a href="interactive-activities.html">Interactive Activities</a></li>
+<ul><li><a href="index.html">Home</a></li><li><a href="index.html#subject-english">English</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li>
+<li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li>
 <li class="edusambam-menu-extra"><a href="assessment-arena.html">Assessment Arena</a></li>
-<li class="edusambam-menu-extra"><a href="about.html">About</a></li>
-<li class="edusambam-menu-extra"><a href="mission.html">Mission</a></li>
-<li class="edusambam-menu-extra"><a href="team.html">Team</a></li>
+<li class="edusambam-menu-extra"><a href="index.html#about-edusambam">About</a></li>
+<li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li>
+<li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li>
 </ul>
 </div>
 <div aria-label="Site search" class="edusambam-search-panel">
@@ -1016,7 +1017,7 @@ footer.footer {
 </div>
 <!-- ARTICLE HERO -->
 <div class="article-hero">
-<div class="breadcrumb"><a href="index.html">Home</a>  /  <a href="index.html#english">English</a>  /  Foundation Stage Skills Map</div>
+<div class="breadcrumb"><a href="index.html">Home</a>  /  <a href="index.html#subject-english">English</a>  /  Foundation Stage Skills Map</div>
 <div class="article-hero-tag">English · O Level Preparation</div>
 <h1>Foundation Stage: Complete English Language Skills Map</h1>
 <p class="sub">A comprehensive EDUSAMBAM foundation pathway for building the reading, writing and language skills that learners need before progressing to advanced Cambridge O Level English Language 1123 work.</p>
@@ -1392,7 +1393,7 @@ footer.footer {
 <div class="squiz-item" data-correct="0"><div class="squiz-q"><span class="qnum">14.</span>Why should Foundation Stage tasks not all look like examination questions?</div><div class="squiz-option"><input id="sq14a" name="sq14" type="radio" value="0"/><label for="sq14a">A. Learners need to develop the underlying skills before those skills are repeatedly tested in examination form</label></div><div class="squiz-option"><input id="sq14b" name="sq14" type="radio" value="1"/><label for="sq14b">B. Examination skills are unnecessary</label></div><div class="squiz-option"><input id="sq14c" name="sq14" type="radio" value="2"/><label for="sq14c">C. Assessment should never be used</label></div><div class="squiz-option"><input id="sq14d" name="sq14" type="radio" value="3"/><label for="sq14d">D. Grammar cannot be assessed</label></div></div>
 <div class="squiz-item" data-correct="0"><div class="squiz-q"><span class="qnum">15.</span>What should happen after a learner improves a skill?</div><div class="squiz-option"><input id="sq15a" name="sq15" type="radio" value="0"/><label for="sq15a">A. Transfer the skill to a new and unfamiliar context</label></div><div class="squiz-option"><input id="sq15b" name="sq15" type="radio" value="1"/><label for="sq15b">B. Stop practising it permanently</label></div><div class="squiz-option"><input id="sq15c" name="sq15" type="radio" value="2"/><label for="sq15c">C. Memorise the original answer</label></div><div class="squiz-option"><input id="sq15d" name="sq15" type="radio" value="3"/><label for="sq15d">D. Replace the skill with a different topic</label></div></div>
 </form></div>
-<div class="article-footer-nav"><a href="index.html#english">← Back to English</a><a href="index.html#english">More English Topics →</a></div>
+<div class="article-footer-nav"><a href="index.html#subject-english">← Back to English</a><a href="index.html#subject-english">More English Topics →</a></div>
 </div>
 <script>
   (function() {
@@ -1599,12 +1600,12 @@ footer.footer {
 <p class="edusambam-footer-statement">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM.</p>
 </div>
 <div class="footer-col"><h4>Learning</h4><ul>
-<li><a href="index.html#english">English Language</a></li>
-<li><a href="index.html#general-knowledge">General Knowledge</a></li>
-<li><a href="index.html#computer-ai">Computer &amp; AI</a></li>
-<li><a href="index.html#mathematics">Mathematics</a></li>
-<li><a href="index.html#science">Science</a></li>
-<li><a href="index.html#health">Health</a></li>
+<li><a href="index.html#subject-english">English Language</a></li>
+<li><a href="index.html#subject-gk">General Knowledge</a></li>
+<li><a href="index.html#subject-computer">Computer &amp; AI</a></li>
+<li><a href="index.html#subject-maths">Mathematics</a></li>
+<li><a href="index.html#subject-physics">Physics &amp; Chemistry</a></li>
+<li><a href="index.html#subject-biology">Biology &amp; Nutrition</a></li>
 <li><a href="index.html#resources">Resources</a></li>
 </ul></div>
 <div class="footer-col"><h4>Practice &amp; Assessment</h4><ul>
