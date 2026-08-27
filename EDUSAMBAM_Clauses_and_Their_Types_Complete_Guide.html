@@ -1295,81 +1295,83 @@ footer.footer {
   <div class="section-eyebrow">Self-Assessment</div>
   <h2>Clauses and Their Types — 15-Question Check</h2>
   <p class="quiz-intro">Choose one answer for each question. Submit the quiz only after answering all questions.</p>
+  <div class="squiz-progress"><div class="squiz-progress-fill" id="squizProgressFill"></div></div><div class="squiz-progress-label" id="squizProgressLabel">0 of 15 answered</div><div class="squiz-results" id="squizResults"><div class="squiz-score-big" id="squizScoreBig">0/15</div><div class="squiz-score-label" id="squizScoreLabel"></div><div class="squiz-score-tier" id="squizScoreTier"></div><button class="squiz-retake-btn" onclick="retakeQuiz()" type="button">Retake Quiz</button></div>
+  
   <form id="squizForm">
     <div class="squiz-item" data-correct="0"><div class="squiz-question"><strong>1.</strong> Which best describes a clause?</div>
-      <div class="squiz-option"><input id="cq1a" name="cq1" type="radio" value="0"/><label for="cq1a">A group of words built around a verb.</label></div>
-      <div class="squiz-option"><input id="cq1b" name="cq1" type="radio" value="1"/><label for="cq1b">Any group of words without a verb.</label></div>
-      <div class="squiz-option"><input id="cq1c" name="cq1" type="radio" value="2"/><label for="cq1c">Only a complete sentence.</label></div>
+      <div class="squiz-option"><input id="cq1a" name="sq1" type="radio" value="0"/><label for="cq1a">A group of words built around a verb.</label></div>
+      <div class="squiz-option"><input id="cq1b" name="sq1" type="radio" value="1"/><label for="cq1b">Any group of words without a verb.</label></div>
+      <div class="squiz-option"><input id="cq1c" name="sq1" type="radio" value="2"/><label for="cq1c">Only a complete sentence.</label></div>
     </div>
     <div class="squiz-item" data-correct="1"><div class="squiz-question"><strong>2.</strong> Which is an independent clause?</div>
-      <div class="squiz-option"><input id="cq2a" name="cq2" type="radio" value="0"/><label for="cq2a">because the road was closed</label></div>
-      <div class="squiz-option"><input id="cq2b" name="cq2" type="radio" value="1"/><label for="cq2b">The students completed the work.</label></div>
-      <div class="squiz-option"><input id="cq2c" name="cq2" type="radio" value="2"/><label for="cq2c">when the lesson ended</label></div>
+      <div class="squiz-option"><input id="cq2a" name="sq2" type="radio" value="0"/><label for="cq2a">because the road was closed</label></div>
+      <div class="squiz-option"><input id="cq2b" name="sq2" type="radio" value="1"/><label for="cq2b">The students completed the work.</label></div>
+      <div class="squiz-option"><input id="cq2c" name="sq2" type="radio" value="2"/><label for="cq2c">when the lesson ended</label></div>
     </div>
     <div class="squiz-item" data-correct="2"><div class="squiz-question"><strong>3.</strong> “I understand what you mean.” What is “what you mean”?</div>
-      <div class="squiz-option"><input id="cq3a" name="cq3" type="radio" value="0"/><label for="cq3a">A main clause</label></div>
-      <div class="squiz-option"><input id="cq3b" name="cq3" type="radio" value="1"/><label for="cq3b">A relative clause</label></div>
-      <div class="squiz-option"><input id="cq3c" name="cq3" type="radio" value="2"/><label for="cq3c">A noun clause</label></div>
+      <div class="squiz-option"><input id="cq3a" name="sq3" type="radio" value="0"/><label for="cq3a">A main clause</label></div>
+      <div class="squiz-option"><input id="cq3b" name="sq3" type="radio" value="1"/><label for="cq3b">A relative clause</label></div>
+      <div class="squiz-option"><input id="cq3c" name="sq3" type="radio" value="2"/><label for="cq3c">A noun clause</label></div>
     </div>
     <div class="squiz-item" data-correct="0"><div class="squiz-question"><strong>4.</strong> Which clause describes a noun?</div>
-      <div class="squiz-option"><input id="cq4a" name="cq4" type="radio" value="0"/><label for="cq4a">Relative clause</label></div>
-      <div class="squiz-option"><input id="cq4b" name="cq4" type="radio" value="1"/><label for="cq4b">Noun clause</label></div>
-      <div class="squiz-option"><input id="cq4c" name="cq4" type="radio" value="2"/><label for="cq4c">Main clause only</label></div>
+      <div class="squiz-option"><input id="cq4a" name="sq4" type="radio" value="0"/><label for="cq4a">Relative clause</label></div>
+      <div class="squiz-option"><input id="cq4b" name="sq4" type="radio" value="1"/><label for="cq4b">Noun clause</label></div>
+      <div class="squiz-option"><input id="cq4c" name="sq4" type="radio" value="2"/><label for="cq4c">Main clause only</label></div>
     </div>
     <div class="squiz-item" data-correct="1"><div class="squiz-question"><strong>5.</strong> “We stayed inside because it was raining.” What is “because it was raining”?</div>
-      <div class="squiz-option"><input id="cq5a" name="cq5" type="radio" value="0"/><label for="cq5a">A noun clause</label></div>
-      <div class="squiz-option"><input id="cq5b" name="cq5" type="radio" value="1"/><label for="cq5b">An adverb clause of reason</label></div>
-      <div class="squiz-option"><input id="cq5c" name="cq5" type="radio" value="2"/><label for="cq5c">A relative clause</label></div>
+      <div class="squiz-option"><input id="cq5a" name="sq5" type="radio" value="0"/><label for="cq5a">A noun clause</label></div>
+      <div class="squiz-option"><input id="cq5b" name="sq5" type="radio" value="1"/><label for="cq5b">An adverb clause of reason</label></div>
+      <div class="squiz-option"><input id="cq5c" name="sq5" type="radio" value="2"/><label for="cq5c">A relative clause</label></div>
     </div>
     <div class="squiz-item" data-correct="2"><div class="squiz-question"><strong>6.</strong> Which sentence contains a relative clause?</div>
-      <div class="squiz-option"><input id="cq6a" name="cq6" type="radio" value="0"/><label for="cq6a">I know what she wants.</label></div>
-      <div class="squiz-option"><input id="cq6b" name="cq6" type="radio" value="1"/><label for="cq6b">We left when the bell rang.</label></div>
-      <div class="squiz-option"><input id="cq6c" name="cq6" type="radio" value="2"/><label for="cq6c">The book that you recommended was useful.</label></div>
+      <div class="squiz-option"><input id="cq6a" name="sq6" type="radio" value="0"/><label for="cq6a">I know what she wants.</label></div>
+      <div class="squiz-option"><input id="cq6b" name="sq6" type="radio" value="1"/><label for="cq6b">We left when the bell rang.</label></div>
+      <div class="squiz-option"><input id="cq6c" name="sq6" type="radio" value="2"/><label for="cq6c">The book that you recommended was useful.</label></div>
     </div>
     <div class="squiz-item" data-correct="0"><div class="squiz-question"><strong>7.</strong> Which sentence contains a clause of condition?</div>
-      <div class="squiz-option"><input id="cq7a" name="cq7" type="radio" value="0"/><label for="cq7a">If you practise, you will improve.</label></div>
-      <div class="squiz-option"><input id="cq7b" name="cq7" type="radio" value="1"/><label for="cq7b">Although he was tired, he continued.</label></div>
-      <div class="squiz-option"><input id="cq7c" name="cq7" type="radio" value="2"/><label for="cq7c">I know what you mean.</label></div>
+      <div class="squiz-option"><input id="cq7a" name="sq7" type="radio" value="0"/><label for="cq7a">If you practise, you will improve.</label></div>
+      <div class="squiz-option"><input id="cq7b" name="sq7" type="radio" value="1"/><label for="cq7b">Although he was tired, he continued.</label></div>
+      <div class="squiz-option"><input id="cq7c" name="sq7" type="radio" value="2"/><label for="cq7c">I know what you mean.</label></div>
     </div>
     <div class="squiz-item" data-correct="1"><div class="squiz-question"><strong>8.</strong> What is coordination?</div>
-      <div class="squiz-option"><input id="cq8a" name="cq8" type="radio" value="0"/><label for="cq8a">Making every clause dependent.</label></div>
-      <div class="squiz-option"><input id="cq8b" name="cq8" type="radio" value="1"/><label for="cq8b">Joining clauses of equal grammatical status.</label></div>
-      <div class="squiz-option"><input id="cq8c" name="cq8" type="radio" value="2"/><label for="cq8c">Removing all conjunctions.</label></div>
+      <div class="squiz-option"><input id="cq8a" name="sq8" type="radio" value="0"/><label for="cq8a">Making every clause dependent.</label></div>
+      <div class="squiz-option"><input id="cq8b" name="sq8" type="radio" value="1"/><label for="cq8b">Joining clauses of equal grammatical status.</label></div>
+      <div class="squiz-option"><input id="cq8c" name="sq8" type="radio" value="2"/><label for="cq8c">Removing all conjunctions.</label></div>
     </div>
     <div class="squiz-item" data-correct="2"><div class="squiz-question"><strong>9.</strong> Which is a dependent clause?</div>
-      <div class="squiz-option"><input id="cq9a" name="cq9" type="radio" value="0"/><label for="cq9a">The match resumed.</label></div>
-      <div class="squiz-option"><input id="cq9b" name="cq9" type="radio" value="1"/><label for="cq9b">The students worked.</label></div>
-      <div class="squiz-option"><input id="cq9c" name="cq9" type="radio" value="2"/><label for="cq9c">because the rain stopped</label></div>
+      <div class="squiz-option"><input id="cq9a" name="sq9" type="radio" value="0"/><label for="cq9a">The match resumed.</label></div>
+      <div class="squiz-option"><input id="cq9b" name="sq9" type="radio" value="1"/><label for="cq9b">The students worked.</label></div>
+      <div class="squiz-option"><input id="cq9c" name="sq9" type="radio" value="2"/><label for="cq9c">because the rain stopped</label></div>
     </div>
     <div class="squiz-item" data-correct="0"><div class="squiz-question"><strong>10.</strong> Which sentence is complex?</div>
-      <div class="squiz-option"><input id="cq10a" name="cq10" type="radio" value="0"/><label for="cq10a">We left when the lesson ended.</label></div>
-      <div class="squiz-option"><input id="cq10b" name="cq10" type="radio" value="1"/><label for="cq10b">We left, and the teacher stayed.</label></div>
-      <div class="squiz-option"><input id="cq10c" name="cq10" type="radio" value="2"/><label for="cq10c">We left.</label></div>
+      <div class="squiz-option"><input id="cq10a" name="sq10" type="radio" value="0"/><label for="cq10a">We left when the lesson ended.</label></div>
+      <div class="squiz-option"><input id="cq10b" name="sq10" type="radio" value="1"/><label for="cq10b">We left, and the teacher stayed.</label></div>
+      <div class="squiz-option"><input id="cq10c" name="sq10" type="radio" value="2"/><label for="cq10c">We left.</label></div>
     </div>
     <div class="squiz-item" data-correct="1"><div class="squiz-question"><strong>11.</strong> Which relative pronoun commonly refers to people?</div>
-      <div class="squiz-option"><input id="cq11a" name="cq11" type="radio" value="0"/><label for="cq11a">which</label></div>
-      <div class="squiz-option"><input id="cq11b" name="cq11" type="radio" value="1"/><label for="cq11b">who</label></div>
-      <div class="squiz-option"><input id="cq11c" name="cq11" type="radio" value="2"/><label for="cq11c">where</label></div>
+      <div class="squiz-option"><input id="cq11a" name="sq11" type="radio" value="0"/><label for="cq11a">which</label></div>
+      <div class="squiz-option"><input id="cq11b" name="sq11" type="radio" value="1"/><label for="cq11b">who</label></div>
+      <div class="squiz-option"><input id="cq11c" name="sq11" type="radio" value="2"/><label for="cq11c">where</label></div>
     </div>
     <div class="squiz-item" data-correct="2"><div class="squiz-question"><strong>12.</strong> Which sentence has a non-defining relative clause?</div>
-      <div class="squiz-option"><input id="cq12a" name="cq12" type="radio" value="0"/><label for="cq12a">The student who won the prize thanked the judges.</label></div>
-      <div class="squiz-option"><input id="cq12b" name="cq12" type="radio" value="1"/><label for="cq12b">The book that I borrowed was useful.</label></div>
-      <div class="squiz-option"><input id="cq12c" name="cq12" type="radio" value="2"/><label for="cq12c">Mr Khan, who teaches English, prepared the lesson.</label></div>
+      <div class="squiz-option"><input id="cq12a" name="sq12" type="radio" value="0"/><label for="cq12a">The student who won the prize thanked the judges.</label></div>
+      <div class="squiz-option"><input id="cq12b" name="sq12" type="radio" value="1"/><label for="cq12b">The book that I borrowed was useful.</label></div>
+      <div class="squiz-option"><input id="cq12c" name="sq12" type="radio" value="2"/><label for="cq12c">Mr Khan, who teaches English, prepared the lesson.</label></div>
     </div>
     <div class="squiz-item" data-correct="0"><div class="squiz-question"><strong>13.</strong> Which error occurs in “The rain stopped, the match resumed”?</div>
-      <div class="squiz-option"><input id="cq13a" name="cq13" type="radio" value="0"/><label for="cq13a">Comma splice</label></div>
-      <div class="squiz-option"><input id="cq13b" name="cq13" type="radio" value="1"/><label for="cq13b">Dangling modifier</label></div>
-      <div class="squiz-option"><input id="cq13c" name="cq13" type="radio" value="2"/><label for="cq13c">Wrong relative pronoun</label></div>
+      <div class="squiz-option"><input id="cq13a" name="sq13" type="radio" value="0"/><label for="cq13a">Comma splice</label></div>
+      <div class="squiz-option"><input id="cq13b" name="sq13" type="radio" value="1"/><label for="cq13b">Dangling modifier</label></div>
+      <div class="squiz-option"><input id="cq13c" name="sq13" type="radio" value="2"/><label for="cq13c">Wrong relative pronoun</label></div>
     </div>
     <div class="squiz-item" data-correct="1"><div class="squiz-question"><strong>14.</strong> In “Although he was tired, he continued,” what relationship is shown?</div>
-      <div class="squiz-option"><input id="cq14a" name="cq14" type="radio" value="0"/><label for="cq14a">Time</label></div>
-      <div class="squiz-option"><input id="cq14b" name="cq14" type="radio" value="1"/><label for="cq14b">Contrast</label></div>
-      <div class="squiz-option"><input id="cq14c" name="cq14" type="radio" value="2"/><label for="cq14c">Purpose</label></div>
+      <div class="squiz-option"><input id="cq14a" name="sq14" type="radio" value="0"/><label for="cq14a">Time</label></div>
+      <div class="squiz-option"><input id="cq14b" name="sq14" type="radio" value="1"/><label for="cq14b">Contrast</label></div>
+      <div class="squiz-option"><input id="cq14c" name="sq14" type="radio" value="2"/><label for="cq14c">Purpose</label></div>
     </div>
     <div class="squiz-item" data-correct="2"><div class="squiz-question"><strong>15.</strong> What is the best first step when analysing clauses?</div>
-      <div class="squiz-option"><input id="cq15a" name="cq15" type="radio" value="0"/><label for="cq15a">Count the words.</label></div>
-      <div class="squiz-option"><input id="cq15b" name="cq15" type="radio" value="1"/><label for="cq15b">Look only for commas.</label></div>
-      <div class="squiz-option"><input id="cq15c" name="cq15" type="radio" value="2"/><label for="cq15c">Identify the verbs and group each with its subject and related words.</label></div>
+      <div class="squiz-option"><input id="cq15a" name="sq15" type="radio" value="0"/><label for="cq15a">Count the words.</label></div>
+      <div class="squiz-option"><input id="cq15b" name="sq15" type="radio" value="1"/><label for="cq15b">Look only for commas.</label></div>
+      <div class="squiz-option"><input id="cq15c" name="sq15" type="radio" value="2"/><label for="cq15c">Identify the verbs and group each with its subject and related words.</label></div>
     </div>
     <button class="squiz-submit-btn" id="squizSubmitBtn" onclick="submitQuiz();return false;" type="button" disabled>Answer all questions to submit</button>
   </form>
