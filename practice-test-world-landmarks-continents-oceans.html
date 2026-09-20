@@ -13,7 +13,10 @@ gtag('config', 'G-Y35DW0V4HQ');
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Practice Test: World Landmarks &amp; Continents and Oceans | EDUSAMBAM</title>
+<link href="https://edusambam.com/practice-test-world-landmarks-continents-oceans.html" rel="canonical"/>
+<meta content="A free 100-mark GK practice test covering famous world landmarks and continents & oceans, auto-graded instantly." name="description"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <style>
   :root {
@@ -188,9 +191,9 @@ gtag('config', 'G-Y35DW0V4HQ');
 }
 .edusambam-brand{
   display:flex;align-items:center;gap:10px;min-width:0;
-  text-decoration:none;color:#0b3b66;flex:0 0 auto;
+  text-decoration:none;color:#0b3b66;flex:0 1 auto;
 }
-.edusambam-brand-copy{display:flex;flex-direction:column;line-height:1;min-width:0}
+.edusambam-brand-copy{display:flex;flex-direction:column;line-height:1;min-width:0;overflow:hidden}
 .edusambam-brand-name{
   font-family:"EB Garamond",Georgia,serif;
   font-size:1.6rem;font-weight:600;letter-spacing:.01em;
@@ -259,7 +262,7 @@ gtag('config', 'G-Y35DW0V4HQ');
   .edusambam-nav-links{gap:8px}
   .edusambam-nav-links a{font-size:.84rem;padding-inline:3px}
 }
-@media (max-width:900px){
+@media (max-width:1100px){
   .edusambam-nav{min-height:68px;padding:8px 14px}
   .edusambam-brand-mark{width:44px;height:44px;flex-basis:44px}
   .edusambam-brand-mark span{width:12px;height:12px}
@@ -317,7 +320,7 @@ gtag('config', 'G-Y35DW0V4HQ');
 .edusambam-brand-mark > .c5{right:0 !important;bottom:0 !important;background:#0b3b66 !important;}
 .edusambam-brand-mark > .c6{left:17.5px !important;bottom:8px !important;background:#d6a23a !important;}
 
-@media (max-width:900px){
+@media (max-width:1100px){
   .edusambam-brand-mark{
     width:44px !important;height:44px !important;min-width:44px !important;flex-basis:44px !important;
   }
@@ -336,6 +339,7 @@ gtag('config', 'G-Y35DW0V4HQ');
   .edusambam-brand-mark > .c3,.edusambam-brand-mark > .c6{left:14.5px !important;}
 }
 </style>
+<link href="favicon.webp" rel="icon" type="image/webp"/>
 <link href="favicon.ico" rel="icon" sizes="any"/>
 <link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
@@ -566,12 +570,8 @@ footer.footer {
 <nav aria-label="Primary navigation" class="edusambam-nav">
 <div class="edusambam-nav-inner">
 <a aria-label="EDUSAMBAM home" class="edusambam-brand" href="index.html">
-<span aria-hidden="true" class="edusambam-brand-mark">
-<span class="c1"></span><span class="c2"></span><span class="c3"></span>
-<span class="c4"></span><span class="c5"></span><span class="c6"></span>
-</span>
+<img alt="EDUSAMBAM" class="edusambam-brand-mark" src="logo-full.png" style="width:auto;height:56px;max-width:220px;object-fit:contain;background:none;border-radius:0;flex-basis:auto;"/>
 <span class="edusambam-brand-copy">
-<span class="edusambam-brand-name">EDUSAMBAM</span>
 <span class="edusambam-brand-subtitle">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM.</span>
 </span>
 </a>
@@ -1065,7 +1065,7 @@ footer.footer {
           const userVal = normalize(input.value);
           const wrap = item.querySelector('.text-answer');
           const fb = item.querySelector('.answer-feedback');
-          const isCorrect = answers.some(a => userVal.includes(a));
+          const isCorrect = answers.some(a => a && (' ' + userVal + ' ').includes(' ' + a + ' '));
           if (isCorrect) {
             earned = points;
             wrap.classList.add('correct-answer');
@@ -1188,11 +1188,7 @@ footer.footer {
 <div class="footer-brand">
 <div class="edusambam-footer-brand-row">
 <a aria-label="EDUSAMBAM home" class="edusambam-footer-logo-link" href="index.html">
-<span aria-hidden="true" class="edusambam-brand-mark edusambam-footer-logo">
-<span class="c1"></span><span class="c2"></span><span class="c3"></span>
-<span class="c4"></span><span class="c5"></span><span class="c6"></span>
-</span>
-<span class="edusambam-footer-brand-name">EDUSAMBAM</span>
+<img alt="EDUSAMBAM — Learn Today, Lead Tomorrow" class="edusambam-brand-mark edusambam-footer-logo" src="logo-full.png" style="width:auto;height:64px;max-width:240px;object-fit:contain;background:none;border-radius:0;"/>
 </a>
 </div>
 <p class="edusambam-footer-statement">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM.</p>
