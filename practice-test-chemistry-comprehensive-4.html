@@ -1,7 +1,15 @@
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="favicon.webp" rel="icon" type="image/webp"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 <title>Chemistry Comprehensive Practice Test 4 — EDUSAMBAM</title>
+<link href="https://edusambam.com/practice-test-chemistry-comprehensive-4.html" rel="canonical"/>
+<meta content="A free 100-mark chemistry practice test combining basic, intermediate and advanced knowledge across every topic, auto-graded instantly." name="description"/>
 <!-- Google Analytics 4 — EDUSAMBAM --><script async src="https://www.googletagmanager.com/gtag/js?id=G-Y35DW0V4HQ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Y35DW0V4HQ');</script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -174,9 +182,9 @@
 }
 .edusambam-brand{
   display:flex;align-items:center;gap:10px;min-width:0;
-  text-decoration:none;color:#0b3b66;flex:0 0 auto;
+  text-decoration:none;color:#0b3b66;flex:0 1 auto;
 }
-.edusambam-brand-copy{display:flex;flex-direction:column;line-height:1;min-width:0}
+.edusambam-brand-copy{display:flex;flex-direction:column;line-height:1;min-width:0;overflow:hidden}
 .edusambam-brand-name{
   font-family:"EB Garamond",Georgia,serif;
   font-size:1.6rem;font-weight:600;letter-spacing:.01em;
@@ -245,7 +253,7 @@
   .edusambam-nav-links{gap:8px}
   .edusambam-nav-links a{font-size:.84rem;padding-inline:3px}
 }
-@media (max-width:900px){
+@media (max-width:1100px){
   .edusambam-nav{min-height:68px;padding:8px 14px}
   .edusambam-brand-mark{width:44px;height:44px;flex-basis:44px}
   .edusambam-brand-mark span{width:12px;height:12px}
@@ -303,7 +311,7 @@
 .edusambam-brand-mark > .c5{right:0 !important;bottom:0 !important;background:#0b3b66 !important;}
 .edusambam-brand-mark > .c6{left:17.5px !important;bottom:8px !important;background:#d6a23a !important;}
 
-@media (max-width:900px){
+@media (max-width:1100px){
   .edusambam-brand-mark{
     width:44px !important;height:44px !important;min-width:44px !important;flex-basis:44px !important;
   }
@@ -561,12 +569,8 @@ footer.footer {
 <nav class="edusambam-nav" aria-label="Primary navigation">
   <div class="edusambam-nav-inner">
     <a class="edusambam-brand" href="index.html" aria-label="EDUSAMBAM home">
-      <span class="edusambam-brand-mark" aria-hidden="true">
-        <span class="c1"></span><span class="c2"></span><span class="c3"></span>
-        <span class="c4"></span><span class="c5"></span><span class="c6"></span>
-      </span>
+      <img alt="EDUSAMBAM" class="edusambam-brand-mark" src="logo-full.png" style="width:auto;height:56px;max-width:220px;object-fit:contain;background:none;border-radius:0;flex-basis:auto;"/>
       <span class="edusambam-brand-copy">
-        <span class="edusambam-brand-name">EDUSAMBAM</span>
         <span class="edusambam-brand-subtitle">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM.</span>
       </span>
     </a>
@@ -599,11 +603,7 @@ footer.footer {
 <div class="footer-brand">
 <div class="edusambam-footer-brand-row">
 <a class="edusambam-footer-logo-link" href="index.html" aria-label="EDUSAMBAM home">
-<span class="edusambam-brand-mark edusambam-footer-logo" aria-hidden="true">
-<span class="c1"></span><span class="c2"></span><span class="c3"></span>
-<span class="c4"></span><span class="c5"></span><span class="c6"></span>
-</span>
-<span class="edusambam-footer-brand-name">EDUSAMBAM</span>
+<img alt="EDUSAMBAM — Learn Today, Lead Tomorrow" class="edusambam-brand-mark edusambam-footer-logo" src="logo-full.png" style="width:auto;height:64px;max-width:240px;object-fit:contain;background:none;border-radius:0;"/>
 </a>
 </div>
 <p class="edusambam-footer-statement">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM.</p>
@@ -644,7 +644,7 @@ function isAnswered(item){const type=item.dataset.type;if(type==='mcq'){const in
 function countAnswered(){let n=0;items.forEach(it=>{if(isAnswered(it))n+=it.dataset.type==='match-group'?5:1});return n}
 function updateProgress(){const a=countAnswered();progressFill.style.width=(a/totalQuestions*100)+'%';progressLabel.textContent=a+' of '+totalQuestions+' answered';submitBtn.disabled=a<totalQuestions;submitBtn.textContent=a<totalQuestions?'Answer all questions to submit':'Submit Test';document.querySelectorAll('.squiz-option').forEach(o=>o.classList.remove('selected'));form.querySelectorAll('input[type="radio"]:checked').forEach(i=>i.closest('.squiz-option').classList.add('selected'));}
 form.addEventListener('input',updateProgress);form.addEventListener('change',updateProgress);
-window.submitQuiz=function(){let total=0;const sectionScores=[0,0,0,0,0];items.forEach((item,idx)=>{let earned=0;const type=item.dataset.type;if(type==='mcq'){const points=Number(item.dataset.points),name=item.querySelector('input[type="radio"]').name,correct=item.dataset.correct,checked=form.querySelector('input[name="'+name+'"]:checked'),selected=checked?checked.value:null;item.querySelectorAll('.squiz-option').forEach(opt=>{const input=opt.querySelector('input');if(input.value===correct)opt.classList.add('correct-answer');else if(input.value===selected)opt.classList.add('wrong-answer');});if(selected===correct)earned=points;}else if(type==='fill'||type==='short'){const points=Number(item.dataset.points),answers=item.dataset.answers.split('|').map(normalize),input=item.querySelector('input[type="text"],textarea'),userVal=normalize(input.value),wrap=item.querySelector('.text-answer'),fb=item.querySelector('.answer-feedback'),ok=answers.some(a=>a&&userVal.includes(a));if(ok){earned=points;wrap.classList.add('correct-answer');fb.textContent='Correct.';fb.classList.add('visible','is-correct')}else{wrap.classList.add('wrong-answer');fb.textContent='Model answer: '+item.dataset.answers.split('|')[0];fb.classList.add('visible','is-wrong')}}else if(type==='match-group'){const rows=Array.from(item.querySelector('.match-col-b').children);let c=0;rows.forEach((row,i)=>{if(Number(row.dataset.correct)===i){row.classList.add('correct-answer');c++}else row.classList.add('wrong-answer')});earned=c*2;}
+window.submitQuiz=function(){let total=0;const sectionScores=[0,0,0,0,0];items.forEach((item,idx)=>{let earned=0;const type=item.dataset.type;if(type==='mcq'){const points=Number(item.dataset.points),name=item.querySelector('input[type="radio"]').name,correct=item.dataset.correct,checked=form.querySelector('input[name="'+name+'"]:checked'),selected=checked?checked.value:null;item.querySelectorAll('.squiz-option').forEach(opt=>{const input=opt.querySelector('input');if(input.value===correct)opt.classList.add('correct-answer');else if(input.value===selected)opt.classList.add('wrong-answer');});if(selected===correct)earned=points;}else if(type==='fill'||type==='short'){const points=Number(item.dataset.points),answers=item.dataset.answers.split('|').map(normalize),input=item.querySelector('input[type="text"],textarea'),userVal=normalize(input.value),wrap=item.querySelector('.text-answer'),fb=item.querySelector('.answer-feedback'),ok=answers.some(a=>a&&(' '+userVal+' ').includes(' '+a+' '));if(ok){earned=points;wrap.classList.add('correct-answer');fb.textContent='Correct.';fb.classList.add('visible','is-correct')}else{wrap.classList.add('wrong-answer');fb.textContent='Model answer: '+item.dataset.answers.split('|')[0];fb.classList.add('visible','is-wrong')}}else if(type==='match-group'){const rows=Array.from(item.querySelector('.match-col-b').children);let c=0;rows.forEach((row,i)=>{if(Number(row.dataset.correct)===i){row.classList.add('correct-answer');c++}else row.classList.add('wrong-answer')});earned=c*2;}
 total+=earned;sectionRanges.forEach((sec,si)=>{if(idx>=sec.start&&idx<sec.end)sectionScores[si]+=earned;});});
 document.getElementById('squizScoreBig').textContent=total+'/'+totalMarks;document.getElementById('squizScoreLabel').textContent='You scored '+Math.round(total/totalMarks*100)+'%';document.getElementById('squizScoreBreakdown').innerHTML=sectionRanges.map((s,i)=>s.name+': '+sectionScores[i]+'/'+s.max).join(' &nbsp;·&nbsp; ');const pct=total/totalMarks*100;let tier='Keep practicing';if(pct>=90)tier='Outstanding';else if(pct>=75)tier='Strong grasp';else if(pct>=60)tier='Good progress';else if(pct>=40)tier='Getting there';document.getElementById('squizScoreTier').textContent=tier;document.getElementById('squizResults').classList.add('visible');submitBtn.style.display='none';document.getElementById('squizResults').scrollIntoView({behavior:'smooth',block:'center'});};
 window.retakeQuiz=function(){form.reset();document.querySelectorAll('.squiz-option').forEach(o=>o.classList.remove('correct-answer','wrong-answer','selected'));document.querySelectorAll('.text-answer').forEach(t=>t.classList.remove('correct-answer','wrong-answer'));document.querySelectorAll('.answer-feedback').forEach(f=>{f.classList.remove('visible','is-correct','is-wrong');f.textContent=''});document.querySelectorAll('.match-b-item').forEach(m=>m.classList.remove('correct-answer','wrong-answer'));document.querySelectorAll('.squiz-item[data-type="match-group"]').forEach(g=>g.dataset.touched='false');document.getElementById('squizResults').classList.remove('visible');submitBtn.style.display='block';updateProgress();window.scrollTo({top:0,behavior:'smooth'});};updateProgress();
