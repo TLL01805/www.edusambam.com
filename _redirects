@@ -1,7 +1,20 @@
+# Bot/scanner probes — return 410 (gone) so they stop retrying
 /blog/wp/*            /  410
 /blog/wordpress/*     /  410
 /blog/blog/*          /  410
 /blog/wp-json/*       /  410
 /blog/ rest_route=:x  /  410
+/*.env                /  410
+/.git/*               /  410
+/.git                 /  410
+/config.php           /  410
+/wp-config.php        /  410
+/.aws/*               /  410
+/.ssh/*               /  410
+/xmlrpc.php           /  410
+/phpinfo.php           /  410
+/admin/*              /  410
+
+# Your existing page-rename redirects
 /practice-test-natural-disasters-famous-explorers-1.html  /practice-test-natural-disasters-famous-explorers.html  301
 /algebra-basic-intermediate-advanced-o-level.html          /algebra-basic-intermediate-advanced.html               301
