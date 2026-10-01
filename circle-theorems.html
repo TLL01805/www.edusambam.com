@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<!-- Google Analytics 4 — EDUSAMBAM -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Y35DW0V4HQ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-Y35DW0V4HQ');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Circle Theorems — EDUSAMBAM</title>
+<link href="https://edusambam.com/circle-theorems.html" rel="canonical"/>
+<meta content="A complete guide to circle theorems: angle in a semicircle, angle at the centre, angles in the same segment, cyclic quadrilaterals, tangent properties and the alternate segment theorem." name="description"/>
+<meta content="circle theorems, angle in a semicircle, cyclic quadrilateral, tangent, alternate segment theorem, O Level maths geometry" name="keywords"/>
+<meta content="EDUSAMBAM Editorial Team" name="author"/>
+<meta content="index, follow" name="robots"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="EDUSAMBAM"/>
+<meta property="og:title" content="Circle Theorems"/>
+<meta property="og:description" content="A complete guide to circle theorems: angle in a semicircle, angle at the centre, angles in the same segment, cyclic quadrilaterals, tangent properties and the alternate segment theorem."/>
+<meta property="og:url" content="https://edusambam.com/circle-theorems.html"/>
+<meta property="article:section" content="Mathematics"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Circle Theorems"/>
+<meta name="twitter:description" content="A complete guide to circle theorems: angle in a semicircle, angle at the centre, angles in the same segment, cyclic quadrilaterals, tangent properties and the alternate segment theorem."/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "headline": "Circle Theorems",
+  "description": "A complete guide to circle theorems: angle in a semicircle, angle at the centre, angles in the same segment, cyclic quadrilaterals, tangent properties and the alternate segment theorem.",
+  "url": "https://edusambam.com/circle-theorems.html",
+  "learningResourceType": "Article",
+  "educationalLevel": "O Level / IGCSE",
+  "about": "Mathematics - Geometry",
+  "publisher": {
+    "@type": "Organization",
+    "name": "EDUSAMBAM",
+    "url": "https://edusambam.com"
+  }
+}
+</script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --red:       #8B0000;
+    --red-mid:   #A50000;
+    --red-lt:    #F9F0F0;
+    --navy:      #06244a;
+    --navy-mid:  #1C3151;
+    --gold:      #B8963E;
+    --gold-lt:   #F5EDD6;
+    --cream:     #FAF8F4;
+    --white:     #FFFFFF;
+    --ink:       #1A1A1A;
+    --slate:     #4A4A4A;
+    --muted:     #767676;
+    --border:    #D8D0C8;
+    --border-lt: #EDE8E0;
+    --radius:    4px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--ink);
+    background: var(--white);
+    line-height: 1.7;
+    overflow-x: hidden;
+
+    border: 3px solid #d4a017;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+  /* ── TOP BAR ── */
+  .top-bar {
+    background: var(--navy);
+    padding: 0.45rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .top-bar p {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.03em;
+  }
+  .top-bar-links { display: flex; gap: 1.5rem; list-style: none; }
+  .top-bar-links a {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+  .top-bar-links a:hover { color: white; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 200;
+    background: rgba(255,255,255,.97);
+    border-bottom: 3px solid var(--gold);
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    box-shadow: 0 2px 12px rgba(8,47,99,0.08);
+  }
+  .nav-brand { display: flex; flex-direction: column; line-height: 1; text-decoration: none; }
+  .nav-brand-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: 0.01em;
+  }
+  .nav-brand-name span { color: var(--red); }
+  .nav-brand-sub {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: rgba(13,27,42,0.6);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 0.25rem;
+  }
+  .nav-links { display: flex; gap: 0; list-style: none; }
+  .nav-links a {
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(13,27,42,0.75);
+    padding: 0 1.1rem;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--b, #0b4ea2); }
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+  }
+
+  /* ── DIAGRAM BOX (for CSS/SVG illustrations) ── */
+  .diagram-box {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin: 1.5rem 0 2rem;
+    text-align: center;
+  }
+  .diagram-box svg { max-width: 100%; height: auto; }
+  .diagram-caption {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 0.8rem;
+    font-style: italic;
+  }
+  .bar-chart { display: flex; align-items: flex-end; gap: 0.9rem; height: 180px; padding: 0 0.5rem; justify-content: center; }
+  .bar-chart .bar-col { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; width: 60px; }
+  .bar-chart .bar { width: 100%; background: var(--gold); border-radius: 3px 3px 0 0; position: relative; }
+  .bar-chart .bar.red { background: var(--red); }
+  .bar-chart .bar-val { font-size: 0.75rem; font-weight: 600; color: var(--ink); margin-bottom: 0.3rem; }
+  .bar-chart .bar-label { font-size: 0.72rem; color: var(--slate); margin-top: 0.5rem; text-align: center; }
+
+  /* ── ARTICLE HERO ── */
+  .article-hero {
+    background: linear-gradient(135deg,#06244a,#0b4ea2);
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+  }
+  .breadcrumb {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 1.1rem;
+    letter-spacing: 0.02em;
+  }
+  .breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--gold); }
+  .article-hero-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(184,150,62,0.4);
+    padding: 0.35rem 0.9rem;
+    border-radius: 30px;
+    margin-bottom: 1.25rem;
+  }
+  .article-hero h1 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 2.4rem;
+    color: white;
+    max-width: 760px;
+    margin: 0 auto 1rem;
+    line-height: 1.25;
+  }
+  .article-hero p.sub {
+    color: rgba(255,255,255,0.6);
+    max-width: 620px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.02rem;
+  }
+  .article-hero-meta {
+    display: flex; justify-content: center; gap: 0.9rem;
+    font-size: 0.8rem; color: rgba(255,255,255,0.45);
+    flex-wrap: wrap;
+  }
+
+  /* ── ARTICLE BODY ── */
+  .article-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+  .article-wrap h2 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 1.65rem;
+    color: var(--navy);
+    margin: 2.6rem 0 1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--border-lt);
+  }
+  .article-wrap h2 span.num {
+    color: var(--red);
+    margin-right: 0.5rem;
+    font-style: italic;
+  }
+  .article-wrap p { color: var(--slate); margin-bottom: 1rem; font-size: 1.02rem; }
+  .article-wrap ul { margin: 0 0 1.2rem 1.4rem; color: var(--slate); }
+  .article-wrap li { margin-bottom: 0.5rem; }
+  .article-wrap strong { color: var(--ink); }
+  .lead {
+    font-size: 1.15rem;
+    color: var(--ink);
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    border-left: 3px solid var(--gold);
+    padding-left: 1.2rem;
+    margin: 1.5rem 0 2rem;
+  }
+  .example-box {
+    background: var(--gold-lt);
+    border: 1px solid rgba(184,150,62,0.35);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 1.3rem 1.5rem;
+    margin: 1.3rem 0 1.8rem;
+  }
+  .example-box .ex-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.5rem;
+  }
+  .example-box p { color: var(--ink); margin-bottom: 0.4rem; font-size: 0.98rem; }
+  .example-box p:last-child { margin-bottom: 0; }
+
+  .real-world-box {
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 1.6rem 1.7rem;
+    margin: 2.4rem 0;
+  }
+  .real-world-box .rw-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.7rem;
+  }
+  .real-world-box p { color: rgba(255,255,255,0.8); margin-bottom: 0; font-size: 1rem; }
+
+  .table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+  table.pos-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+  table.pos-table th {
+    background: var(--navy);
+    color: white;
+    text-align: left;
+    padding: 0.7rem 0.9rem;
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+  }
+  table.pos-table td {
+    padding: 0.7rem 0.9rem;
+    border-bottom: 1px solid var(--border-lt);
+    color: var(--slate);
+  }
+  table.pos-table tr:nth-child(even) td { background: var(--cream); }
+
+  /* ── QUIZ ── */
+  .quiz-section {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem 1.7rem 1.5rem;
+    margin-top: 3rem;
+  }
+  .quiz-section .section-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.4rem;
+  }
+  .quiz-section h2 {
+    border: none; margin: 0 0 0.4rem; padding: 0;
+  }
+  .quiz-intro { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.6rem; }
+  .quiz-item {
+    background: var(--white);
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .quiz-q {
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.7rem;
+    font-size: 1rem;
+  }
+  .quiz-q .qnum { color: var(--red); margin-right: 0.4rem; }
+  .quiz-options { list-style: none; margin: 0 0 0.9rem; }
+  .quiz-options li {
+    padding: 0.4rem 0;
+    color: var(--slate);
+    font-size: 0.96rem;
+    padding-left: 1.4rem;
+    position: relative;
+  }
+  .quiz-options li::before {
+    content: "";
+    position: absolute; left: 0; top: 0.85rem;
+    width: 6px; height: 6px;
+    background: var(--border);
+    border-radius: 50%;
+  }
+  .show-answer-btn {
+    background: var(--navy);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 0.5rem 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .show-answer-btn:hover { background: var(--navy-mid); }
+  .quiz-answer {
+    display: none;
+    margin-top: 0.9rem;
+    background: var(--gold-lt);
+    border-left: 3px solid var(--gold);
+    padding: 0.7rem 1rem;
+    font-size: 0.92rem;
+    color: var(--ink);
+    border-radius: var(--radius);
+  }
+  .quiz-answer.visible { display: block; }
+  .quiz-answer strong { color: var(--red); }
+
+  .answer-key-toggle {
+    display: block;
+    width: 100%;
+    background: var(--red);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding: 0.9rem 1rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    margin-top: 0.6rem;
+    transition: background 0.2s;
+  }
+  .answer-key-toggle:hover { background: var(--red-mid); }
+
+  .article-footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-lt);
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .article-footer-nav a {
+    text-decoration: none;
+    color: var(--red);
+    font-weight: 600;
+    font-size: 0.92rem;
+  }
+  .article-footer-nav a:hover { text-decoration: underline; }
+
+  @media (max-width: 700px) {
+    .article-hero h1 { font-size: 1.7rem; }
+    .article-wrap { padding: 2rem 1.25rem 3rem; }
+  }
+  @media (max-width: 680px) {
+    .top-bar { display: none; }
+    nav {
+      padding: 0 1rem;
+      height: 68px;
+      border-bottom-width: 2px;
+    }
+    .nav-links { display: none; }
+    .nav-brand-name {
+      font-size: 1.35rem;
+      white-space: nowrap;
+    }
+    .nav-brand-sub {
+      font-size: 0.62rem;
+      letter-spacing: 0.07em;
+    }
+    .footer-top { grid-template-columns: 1fr; gap: 2rem; padding: 2rem 1.25rem; }
+    footer { padding: 2rem 1.25rem 0; }
+  }
+
+  /* ── FOOTER (copied from site) ── */
+  footer { background: var(--navy); padding: 3.5rem 3rem 0; }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 2.5rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .footer-brand-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+  }
+  .footer-brand-name span { color: var(--red); }
+  .footer-desc { color: rgba(255,255,255,0.45); font-size: 0.9rem; margin-top: 0.8rem; max-width: 320px; }
+  .footer-col h4 {
+    font-family: 'EB Garamond', serif;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 0.7rem; }
+  .footer-col a {
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.2s;
+  }
+  .footer-col a:hover { color: var(--gold); }
+  .footer-bottom {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer-bottom p { color: rgba(255,255,255,0.35); font-size: 0.8rem; }
+  .footer-bottom-links { display: flex; gap: 1.3rem; list-style: none; }
+  .footer-bottom-links a { color: rgba(255,255,255,0.35); text-decoration: none; font-size: 0.8rem; }
+  .footer-bottom-links a:hover { color: rgba(255,255,255,0.6); }
+  @media (max-width: 900px) {
+    .footer-top { grid-template-columns: 1fr 1fr; }
+    footer { padding: 2rem 1.25rem 0; }
+  }
+
+  /* SCORED QUIZ (click-to-highlight + real scoring) */
+  .squiz-progress {
+    background: var(--cream);
+    border-radius: 30px;
+    height: 8px;
+    overflow: hidden;
+    margin-bottom: 0.4rem;
+  }
+  .squiz-progress-fill {
+    background: var(--gold);
+    height: 100%;
+    width: 0%;
+    transition: width 0.25s ease;
+  }
+  .squiz-progress-label {
+    font-size: 0.78rem;
+    color: var(--muted);
+    text-align: right;
+    margin-bottom: 1.3rem;
+  }
+  .squiz-item {
+    background: var(--white);
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .squiz-q {
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+  }
+  .squiz-q .qnum { color: var(--red); margin-right: 0.4rem; }
+  .squiz-option {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .squiz-option:hover { border-color: var(--gold); }
+  .squiz-option input[type="radio"] { accent-color: var(--red); width: 16px; height: 16px; flex-shrink: 0; }
+  .squiz-option label { cursor: pointer; font-size: 0.94rem; color: var(--slate); flex: 1; }
+  .squiz-option.selected { border-color: var(--red); background: rgba(139,0,0,0.04); }
+  .squiz-option.correct-answer { border-color: #2e7d32; background: rgba(46,125,50,0.08); }
+  .squiz-option.wrong-answer { border-color: var(--red); background: rgba(139,0,0,0.08); }
+  .squiz-submit-btn {
+    display: block;
+    width: 100%;
+    background: var(--red);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.98rem;
+    font-weight: 600;
+    padding: 0.9rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    margin-top: 0.6rem;
+    transition: background 0.2s;
+  }
+  .squiz-submit-btn:hover { background: var(--red-mid); }
+  .squiz-submit-btn:disabled { background: var(--border); cursor: not-allowed; }
+  .squiz-results {
+    display: none;
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 2rem 1.6rem;
+    text-align: center;
+    margin-bottom: 1.8rem;
+  }
+  .squiz-results.visible { display: block; }
+  .squiz-results .squiz-score-big {
+    font-family: 'EB Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .squiz-results .squiz-score-label { color: rgba(255,255,255,0.7); font-size: 0.98rem; margin-bottom: 1rem; }
+  .squiz-results .squiz-score-tier {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    border-radius: 30px;
+    background: rgba(184,150,62,0.15);
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+  }
+  .squiz-retake-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 0.65rem 1.4rem;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  .squiz-retake-btn:hover { background: rgba(255,255,255,0.1); }
+</style>
+<style id="edusambam-reader-style">
+.mark{width:48px;height:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px;border-radius:14px;background:#eef6ff;box-shadow:0 2px 7px rgba(8,47,99,.10);flex:0 0 48px}.mark i{display:block;border-radius:50%;background:#0b4ea2;min-width:0;min-height:0}.mark i:nth-child(5){background:#d4a017}.edusambam-reader{max-width:980px;margin:1.2rem auto 0;padding:1rem 1.1rem;border:1px solid #d7e4ef;border-radius:14px;background:linear-gradient(135deg,#f7fbff,#fff);box-shadow:0 6px 18px rgba(11,45,92,.08)}.edusambam-reader strong{display:block;color:#0b55a5;font-size:.9rem;letter-spacing:.04em}.edusambam-reader .reader-slogan{color:#b27e08;font-weight:900;margin-top:.25rem;font-size:.82rem}.edusambam-reader .reader-help{color:#607086;font-size:.8rem;margin:.3rem 0 .7rem}.edusambam-reader .reader-controls{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}.edusambam-reader button,.edusambam-reader select{border:1px solid #c9d9e8;background:#fff;color:#153b6e;border-radius:8px;padding:.48rem .65rem;font-weight:800;cursor:pointer}.edusambam-reader button:first-child{background:#0b55a5;color:#fff;border-color:#0b55a5}.edusambam-reader .reader-status{display:block;color:#607086;font-size:.75rem;margin-top:.55rem}.edusambam-reader .reader-progress{height:4px;background:#e4edf6;border-radius:99px;margin-top:.6rem;overflow:hidden}.edusambam-reader .reader-progress span{display:block;width:0;height:100%;background:#e1ad1c;transition:width .2s linear}@media(max-width:600px){.edusambam-reader{margin-left:0;margin-right:0}.edusambam-reader .reader-controls button,.edusambam-reader .reader-controls select{flex:1;min-width:75px}}
+</style><style id="edusambam-edge-fix">.article-wrap,.article-hero,.nav-brand{min-width:0;overflow:visible}.article-wrap h1,.article-wrap h2,.article-wrap h3,.article-hero h1,.article-hero .sub{overflow-wrap:anywhere;word-break:normal}.article-wrap{padding-left:max(1.25rem,3vw);padding-right:max(1.25rem,3vw)}@media(max-width:600px){.article-wrap{padding-left:1rem;padding-right:1rem}.article-hero{padding-left:1rem;padding-right:1rem}.nav-brand{overflow:visible!important}.nav-brand-name,.nav-brand-sub{overflow-wrap:anywhere}}</style><style id="edusambam-frame-final">html{box-sizing:border-box;max-width:100%;overflow-x:hidden}*,*:before,*:after{box-sizing:inherit}body{max-width:100%;min-width:0;overflow-x:hidden;border:3px solid #d4a017;box-sizing:border-box}img,svg,video,iframe{max-width:100%;height:auto}h1,h2,h3,h4,p,a,span,small,b,strong{overflow-wrap:anywhere}section,header,footer,main,nav{max-width:100%;box-sizing:border-box}@media(max-width:600px){body{border-width:3px}h1,h2,h3{margin-left:0!important;margin-right:0!important}}</style><style id="edusambam-unified-nav-css">
+/* EDUSAMBAM unified navigation */
+.edusambam-nav{
+  position:sticky;top:0;z-index:10000;
+  min-height:72px;box-sizing:border-box;
+  display:flex;align-items:center;
+  padding:10px 20px;
+  background:#fff;border-bottom:1px solid #e5e7eb;
+  font-family:inherit;
+}
+.edusambam-nav-inner{
+  width:100%;max-width:1400px;margin:0 auto;
+  display:flex;align-items:center;gap:18px;min-width:0;
+}
+.edusambam-brand{
+  display:flex;align-items:center;gap:10px;min-width:0;
+  text-decoration:none;color:#0b3b66;flex:0 1 auto;
+}
+.edusambam-brand-copy{display:flex;flex-direction:column;line-height:1;min-width:0;overflow:hidden}
+.edusambam-brand-name{
+  font-family:"EB Garamond",Georgia,serif;
+  font-size:1.6rem;font-weight:600;letter-spacing:.01em;
+  color:#0b3b66;white-space:nowrap;
+}
+.edusambam-brand-subtitle{
+  margin-top:4px;
+  font-size:.62rem;font-weight:600;letter-spacing:.08em;
+  color:#64748b;white-space:nowrap;
+}
+.edusambam-nav-links{
+  display:flex;align-items:center;gap:14px;margin-left:auto;
+  list-style:none;padding:0;margin-top:0;margin-bottom:0;
+}
+.edusambam-nav-links a{
+  color:#334155;text-decoration:none;font-size:.9rem;
+  padding:8px 5px;border-radius:7px;white-space:nowrap;
+}
+.edusambam-nav-links a:hover,.edusambam-nav-links a:focus-visible{
+  color:#0b3b66;background:#f3f6f9;outline:none;
+}
+.edusambam-search-btn,.edusambam-menu-btn{
+  appearance:none;border:1px solid #d8dee6;background:#fff;
+  color:#0b3b66;border-radius:9px;min-width:40px;height:40px;
+  display:inline-flex;align-items:center;justify-content:center;
+  cursor:pointer;font-size:1.15rem;flex:0 0 auto;
+}
+.edusambam-search-btn:hover,.edusambam-menu-btn:hover,
+.edusambam-search-btn:focus-visible,.edusambam-menu-btn:focus-visible{
+  background:#f3f6f9;border-color:#b9c6d4;outline:2px solid rgba(214,162,58,.35);
+  outline-offset:2px;
+}
+.edusambam-menu-btn{display:none;font-size:1.2rem}
+.edusambam-mobile-menu{
+  display:none;position:fixed;top:72px;left:0;right:0;
+  z-index:9999;background:#fff;border-bottom:1px solid #e5e7eb;
+  box-shadow:0 8px 24px rgba(15,23,42,.12);
+  max-height:calc(100vh - 72px);overflow:auto;
+}
+.edusambam-mobile-menu.open{display:block}
+.edusambam-mobile-menu ul{list-style:none;margin:0;padding:10px 16px 16px}
+.edusambam-mobile-menu a{
+  display:block;padding:12px 10px;color:#0b3b66;text-decoration:none;
+  border-radius:8px;font-size:.98rem;
+}
+.edusambam-mobile-menu a:hover,.edusambam-mobile-menu a:focus-visible{
+  background:#f3f6f9;outline:none;
+}
+.edusambam-search-panel{
+  display:none;position:fixed;top:72px;left:0;right:0;z-index:9998;
+  background:#fff;border-bottom:1px solid #e5e7eb;
+  box-shadow:0 8px 24px rgba(15,23,42,.10);padding:12px 16px;
+}
+.edusambam-search-panel.open{display:block}
+.edusambam-search-wrap{max-width:900px;margin:0 auto;position:relative}
+.edusambam-search-input{
+  width:100%;box-sizing:border-box;padding:12px 14px;
+  border:1px solid #cbd5e1;border-radius:9px;font-size:1rem;
+}
+.edusambam-search-results{margin-top:8px;max-height:50vh;overflow:auto}
+.edusambam-search-results a{
+  display:block;padding:9px 10px;border-radius:7px;color:#0b3b66;text-decoration:none;
+}
+.edusambam-search-results a:hover{background:#f3f6f9}
+@media (max-width:1100px){
+  .edusambam-nav-links{gap:8px}
+  .edusambam-nav-links a{font-size:.84rem;padding-inline:3px}
+}
+@media (max-width:1100px){
+  .edusambam-nav{min-height:68px;padding:8px 14px}
+  .edusambam-brand-mark{width:44px;height:44px;flex-basis:44px}
+  .edusambam-brand-mark span{width:12px;height:12px}
+  .edusambam-brand-mark .c3,.edusambam-brand-mark .c6{left:16px}
+  .edusambam-brand-name{font-size:1.42rem}
+  .edusambam-brand-subtitle{font-size:.52rem;letter-spacing:.06em}
+  .edusambam-nav-links{display:none}
+  .edusambam-menu-btn{display:inline-flex}
+  .edusambam-search-btn{margin-left:auto}
+  .edusambam-mobile-menu{top:68px;max-height:calc(100vh - 68px)}
+  .edusambam-search-panel{top:68px}
+}
+@media (max-width:480px){
+  .edusambam-nav-inner{gap:8px}
+  .edusambam-brand{gap:7px}
+  .edusambam-brand-mark{width:40px;height:40px;flex-basis:40px}
+  .edusambam-brand-mark span{width:11px;height:11px}
+  .edusambam-brand-mark .c3,.edusambam-brand-mark .c6{left:14.5px}
+  .edusambam-brand-name{font-size:1.28rem}
+  .edusambam-brand-subtitle{font-size:.46rem;letter-spacing:.045em}
+  .edusambam-search-btn,.edusambam-menu-btn{min-width:38px;height:38px}
+}
+</style><style id="edusambam-new-article-mobile-fixed-nav">
+/* New EDUSAMBAM article: keep the approved mobile header continuously available while scrolling. */
+@media (max-width:1100px){
+  body{padding-top:68px !important;}
+  .edusambam-nav{position:fixed !important;top:0 !important;left:0 !important;right:0 !important;width:100% !important;}
+  .top-bar{display:none !important;}
+}
+</style><style id="edusambam-logo-visibility-fix">
+/* EDUSAMBAM logo visibility fix */
+.edusambam-brand-mark{
+  position:relative !important;
+  display:inline-block !important;
+  width:48px !important;
+  height:48px !important;
+  min-width:48px !important;
+  flex:0 0 48px !important;
+  overflow:visible !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+.edusambam-brand-mark > span{
+  position:absolute !important;
+  display:block !important;
+  width:13px !important;
+  height:13px !important;
+  min-width:13px !important;
+  min-height:13px !important;
+  padding:0 !important;
+  margin:0 !important;
+  border:0 !important;
+  border-radius:50% !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  box-sizing:border-box !important;
+}
+.edusambam-brand-mark > .c1{left:0 !important;top:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c2{right:0 !important;top:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c3{left:17.5px !important;top:8px !important;background:#d6a23a !important;}
+.edusambam-brand-mark > .c4{left:0 !important;bottom:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c5{right:0 !important;bottom:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c6{left:17.5px !important;bottom:8px !important;background:#d6a23a !important;}
+
+@media (max-width:1100px){
+  .edusambam-brand-mark{
+    width:44px !important;height:44px !important;min-width:44px !important;flex-basis:44px !important;
+  }
+  .edusambam-brand-mark > span{
+    width:12px !important;height:12px !important;min-width:12px !important;min-height:12px !important;
+  }
+  .edusambam-brand-mark > .c3,.edusambam-brand-mark > .c6{left:16px !important;}
+}
+@media (max-width:480px){
+  .edusambam-brand-mark{
+    width:40px !important;height:40px !important;min-width:40px !important;flex-basis:40px !important;
+  }
+  .edusambam-brand-mark > span{
+    width:11px !important;height:11px !important;min-width:11px !important;min-height:11px !important;
+  }
+  .edusambam-brand-mark > .c3,.edusambam-brand-mark > .c6{left:14.5px !important;}
+}
+</style>
+<link href="favicon.webp" rel="icon" type="image/webp"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<style id="edusambam-menu-extra-css">
+.edusambam-mobile-menu .edusambam-menu-extra:first-of-type{
+  margin-top:8px;padding-top:8px;border-top:1px solid #e5e7eb;
+}
+.edusambam-mobile-menu .edusambam-menu-extra a{
+  font-weight:600;
+}
+</style>
+<style id="edusambam-article-footer-theme">
+.edusambam-article-footer{
+  background:linear-gradient(135deg,#06244a,#0b4ea2)!important;
+}
+</style>
+<style id="edusambam-unified-footer-fix">
+/* EDUSAMBAM unified footer: same visual language and neutral brand statement across all pages. */
+.edusambam-unified-footer,
+.edusambam-article-footer,
+footer.footer {
+  background: linear-gradient(135deg, #06244a, #0b4ea2) !important;
+  color: #fff !important;
+  border-top: 3px solid #d4a017 !important;
+  box-sizing: border-box;
+}
+.edusambam-footer-statement{margin:.25rem 0 0 !important;color:rgba(255,255,255,.88) !important;font-size:.78rem !important;letter-spacing:.08em !important;text-transform:uppercase !important}
+.edusambam-unified-footer .footer-brand-name,.edusambam-article-footer .footer-brand-name{color:#fff !important}
+</style>
+<style id="edusambam-final-unified-footer">
+/* Final unified footer — same structure, visual language, and approved nav logo on every page. */
+.edusambam-unified-footer{
+  width:100% !important;
+  margin:0 !important;
+  padding:44px 0 0 !important;
+  background:linear-gradient(135deg,#06244a,#0b4ea2) !important;
+  color:#d6e4f2 !important;
+  border-top:4px solid #d4a017 !important;
+  box-sizing:border-box !important;
+  overflow:hidden !important;
+}
+.edusambam-unified-footer .footer-top{
+  width:min(1180px,92%) !important;
+  max-width:1180px !important;
+  margin:0 auto !important;
+  padding:0 0 34px !important;
+  display:grid !important;
+  grid-template-columns:1.5fr repeat(3,1fr) !important;
+  gap:34px !important;
+  box-sizing:border-box !important;
+}
+.edusambam-unified-footer .footer-brand{min-width:0 !important;}
+.edusambam-footer-brand-row{margin:0 0 10px !important;}
+.edusambam-footer-logo-link{
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:12px !important;
+  min-width:0 !important;
+  color:#fff !important;
+  text-decoration:none !important;
+}
+.edusambam-footer-logo{
+  width:48px !important;
+  height:48px !important;
+  min-width:48px !important;
+  flex:0 0 48px !important;
+}
+.edusambam-footer-logo > span{width:13px !important;height:13px !important;min-width:13px !important;min-height:13px !important;}
+.edusambam-footer-logo > .c3,.edusambam-footer-logo > .c6{left:17.5px !important;}
+.edusambam-footer-brand-name{
+  color:#fff !important;
+  font-family:"EB Garamond",Georgia,serif !important;
+  font-size:1.65rem !important;
+  font-weight:600 !important;
+  letter-spacing:.01em !important;
+  line-height:1 !important;
+  white-space:nowrap !important;
+}
+.edusambam-unified-footer .edusambam-footer-statement{
+  margin:0 !important;
+  max-width:360px !important;
+  color:rgba(255,255,255,.88) !important;
+  font-size:.78rem !important;
+  line-height:1.7 !important;
+  letter-spacing:.08em !important;
+  text-transform:uppercase !important;
+}
+.edusambam-unified-footer .footer-col{min-width:0 !important;}
+.edusambam-unified-footer .footer-col h4{
+  margin:0 0 12px !important;
+  color:#fff !important;
+  font-family:"EB Garamond",Georgia,serif !important;
+  font-size:1rem !important;
+  font-weight:600 !important;
+  line-height:1.25 !important;
+}
+.edusambam-unified-footer .footer-col ul{
+  list-style:none !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+.edusambam-unified-footer .footer-col li{margin:0 0 8px !important;padding:0 !important;}
+.edusambam-unified-footer .footer-col a{
+  color:rgba(255,255,255,.68) !important;
+  text-decoration:none !important;
+  font-size:.84rem !important;
+  line-height:1.5 !important;
+  overflow-wrap:anywhere !important;
+}
+.edusambam-unified-footer .footer-col a:hover,
+.edusambam-unified-footer .footer-col a:focus-visible{color:#fff !important;}
+.edusambam-unified-footer .footer-bottom{
+  width:min(1180px,92%) !important;
+  max-width:1180px !important;
+  margin:0 auto !important;
+  padding:18px 0 22px !important;
+  border-top:1px solid rgba(255,255,255,.12) !important;
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:center !important;
+  gap:20px !important;
+  box-sizing:border-box !important;
+}
+.edusambam-unified-footer .footer-bottom p{
+  margin:0 !important;
+  color:rgba(255,255,255,.55) !important;
+  font-size:.8rem !important;
+  line-height:1.5 !important;
+}
+.edusambam-unified-footer .footer-bottom-links{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:18px !important;
+  list-style:none !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+.edusambam-unified-footer .footer-bottom-links a{
+  color:rgba(255,255,255,.55) !important;
+  font-size:.78rem !important;
+  line-height:1.5 !important;
+  text-decoration:none !important;
+}
+.edusambam-unified-footer .footer-bottom-links a:hover,
+.edusambam-unified-footer .footer-bottom-links a:focus-visible{color:#fff !important;}
+@media(max-width:900px){
+  .edusambam-unified-footer{padding-top:32px !important;}
+  .edusambam-unified-footer .footer-top{grid-template-columns:1fr 1fr !important;gap:28px 22px !important;}
+  .edusambam-unified-footer .footer-brand{grid-column:1/-1 !important;}
+}
+@media(max-width:600px){
+  .edusambam-unified-footer{padding-top:30px !important;}
+  .edusambam-unified-footer .footer-top{width:calc(100% - 28px) !important;grid-template-columns:1fr 1fr !important;gap:26px 20px !important;padding-bottom:28px !important;}
+  .edusambam-unified-footer .footer-bottom{width:calc(100% - 28px) !important;display:block !important;padding:16px 0 20px !important;}
+  .edusambam-unified-footer .footer-bottom-links{margin-top:10px !important;gap:16px !important;}
+  .edusambam-footer-logo{width:44px !important;height:44px !important;min-width:44px !important;flex-basis:44px !important;}
+  .edusambam-footer-logo > span{width:12px !important;height:12px !important;min-width:12px !important;min-height:12px !important;}
+  .edusambam-footer-logo > .c3,.edusambam-footer-logo > .c6{left:16px !important;}
+  .edusambam-footer-brand-name{font-size:1.48rem !important;}
+}
+@media(max-width:430px){
+  .edusambam-unified-footer .footer-top{grid-template-columns:1fr !important;gap:22px !important;}
+  .edusambam-unified-footer .footer-brand{grid-column:auto !important;}
+}
+</style>
+<style id="edusambam-footer-final-alignment">
+/* Final EDUSAMBAM footer consistency pass: identical royal-blue footer and left alignment on every page. */
+.edusambam-unified-footer {
+  background: linear-gradient(135deg,#06244a,#0b4ea2) !important;
+  color:#d6e4f2 !important;
+  text-align:left !important;
+  width:100% !important;
+  box-sizing:border-box !important;
+}
+.edusambam-unified-footer,
+.edusambam-unified-footer *,
+.edusambam-unified-footer h1,
+.edusambam-unified-footer h2,
+.edusambam-unified-footer h3,
+.edusambam-unified-footer h4,
+.edusambam-unified-footer p,
+.edusambam-unified-footer ul,
+.edusambam-unified-footer li,
+.edusambam-unified-footer a,
+.edusambam-unified-footer span {
+  text-align:left !important;
+}
+.edusambam-unified-footer .footer-top,
+.edusambam-unified-footer .footer-brand,
+.edusambam-unified-footer .footer-col,
+.edusambam-unified-footer .footer-bottom {
+  margin-left:0 !important;
+}
+.edusambam-unified-footer .footer-top {
+  margin-right:auto !important;
+}
+.edusambam-unified-footer .edusambam-footer-brand-row {
+  text-align:left !important;
+}
+.edusambam-unified-footer .edusambam-footer-logo-link {
+  justify-content:flex-start !important;
+  text-align:left !important;
+}
+.edusambam-unified-footer .footer-bottom {
+  justify-content:flex-start !important;
+  align-items:flex-start !important;
+  flex-direction:column !important;
+}
+.edusambam-unified-footer .footer-bottom-links {
+  justify-content:flex-start !important;
+  align-items:flex-start !important;
+}
+@media (max-width:600px) {
+  .edusambam-unified-footer .footer-top,
+  .edusambam-unified-footer .footer-bottom {
+    margin-left:0 !important;
+    margin-right:auto !important;
+  }
+}
+</style><style id="edusambam-footer-social-css">.edusambam-footer-social{margin-top:14px}.edusambam-footer-social a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);color:rgba(255,255,255,.85);transition:background .15s,color .15s}.edusambam-footer-social a:hover{background:rgba(255,255,255,.22);color:#fff}</style></head>
+<body id="top">
+<!-- TOP BAR -->
+<div class="top-bar">
+<p>Established 2026  ·  Free Educational Resources for All</p>
+<ul class="top-bar-links">
+<li><a href="mailto:info.edusambam@gmail.com">Contact</a></li><li><a href="index.html#about-edusambam">About</a></li><li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+</ul>
+</div>
+<!-- NAV -->
+<nav aria-label="Primary navigation" class="edusambam-nav">
+<div class="edusambam-nav-inner">
+<a aria-label="EDUSAMBAM home" class="edusambam-brand" href="index.html">
+<img alt="EDUSAMBAM" class="edusambam-brand-mark" src="logo-icon-full.png" style="width:auto;height:56px;max-width:220px;object-fit:contain;background:none;border-radius:0;flex-basis:auto;"/>
+<span class="edusambam-brand-copy">
+<span class="edusambam-brand-subtitle">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</span>
+</span>
+</a>
+<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li></ul>
+<button aria-label="Search" class="edusambam-search-btn" title="Search" type="button">⌕</button>
+<button aria-expanded="false" aria-label="Open menu" class="edusambam-menu-btn" title="Menu" type="button">☰</button>
+</div>
+</nav>
+<div aria-label="Mobile navigation" class="edusambam-mobile-menu">
+<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="index.html#subject-assessment">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="index.html#about-edusambam">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li></ul>
+</div>
+<div aria-label="Site search" class="edusambam-search-panel">
+<div class="edusambam-search-wrap">
+<input aria-label="Search EDUSAMBAM" class="edusambam-search-input" placeholder="Search EDUSAMBAM…" type="search"/>
+<div class="edusambam-search-results"></div>
+</div>
+</div>
+<!-- ARTICLE HERO -->
+<div class="article-hero">
+<div class="breadcrumb"><a href="index.html#gateway">Gateway</a> &nbsp;/&nbsp; <a href="index.html#subject-maths">Maths</a> &nbsp;/&nbsp; Circle Theorems</div>
+<div class="article-hero-tag">Mathematics · Geometry</div>
+<h1>Circle Theorems</h1>
+<p class="sub">A complete guide to the circle theorems every learner needs — angle in a semicircle, the centre-circumference relationship, cyclic quadrilaterals, tangent properties and the alternate segment theorem.</p>
+<div class="article-hero-meta">
+<span>EDUSAMBAM Editorial Team</span><span>|</span><span>22 min read</span><span>|</span><span>Mathematics</span>
+</div>
+</div><div aria-label="EDUSAMBAM article reader" class="edusambam-reader"><strong>🔊 LISTEN TO THIS ARTICLE</strong><div class="reader-slogan">SAVE YOUR EYES • IMPROVE YOUR LISTENING</div><div class="reader-help">Listen to the article instead of relying only on continuous screen reading.</div><div class="reader-controls"><button data-reader="play" type="button">▶ Play</button><button data-reader="pause" type="button">⏸ Pause</button><button data-reader="resume" type="button">▶ Resume</button><button data-reader="stop" type="button">■ Stop</button><select aria-label="Reading speed"><option value="1">1×</option><option value="0.8">0.8×</option><option value="1.2">1.2×</option></select></div><div aria-hidden="true" class="reader-progress"><span></span></div><small class="reader-status">Ready to read the article.</small></div>
+<!-- ARTICLE BODY -->
+<div class="article-wrap">
+<p class="lead">A circle looks simple, but it hides a set of powerful angle relationships that let you find unknown angles without measuring anything. These circle theorems are some of the most tested ideas in geometry: once you recognise the shape a diagram is hinting at — a semicircle, a cyclic quadrilateral, a tangent — the correct theorem usually falls straight out. This guide works through every major circle theorem, from the basic vocabulary of a circle to the alternate segment theorem, with a diagram and worked example for each.</p>
+
+<div class="diagram-box">
+<svg viewBox="0 0 760 330" role="img" aria-labelledby="circTitle circDesc">
+<title id="circTitle">Circle theorems learning pathway</title>
+<desc id="circDesc">A pathway from circle vocabulary through centre-circumference angles, cyclic quadrilaterals, to tangent theorems.</desc>
+<defs><linearGradient id="circG" x1="0" x2="1"><stop offset="0" stop-color="#06244a"/><stop offset="1" stop-color="#0b4ea2"/></linearGradient></defs>
+<rect x="0" y="0" width="760" height="330" rx="18" fill="#faf8f4"/>
+<path d="M90 165 H670" stroke="#d4a017" stroke-width="5"/>
+<g font-family="Arial, sans-serif" text-anchor="middle">
+<g><circle cx="90" cy="165" r="55" fill="url(#circG)"/><text x="90" y="160" fill="white" font-size="15" font-weight="700">CIRCLE</text><text x="90" y="178" fill="white" font-size="15" font-weight="700">PARTS</text><text x="90" y="197" fill="#d4a017" font-size="12">radius • chord</text></g>
+<g><circle cx="235" cy="165" r="55" fill="white" stroke="#d4a017" stroke-width="3"/><text x="235" y="155" fill="#06244a" font-size="13" font-weight="700">SEMICIRCLE &amp;</text><text x="235" y="172" fill="#06244a" font-size="13" font-weight="700">CENTRE-ARC</text><text x="235" y="189" fill="#4a4a4a" font-size="12">angle rules</text></g>
+<g><circle cx="380" cy="165" r="55" fill="white" stroke="#d4a017" stroke-width="3"/><text x="380" y="155" fill="#06244a" font-size="13" font-weight="700">SAME</text><text x="380" y="172" fill="#06244a" font-size="13" font-weight="700">SEGMENT</text><text x="380" y="189" fill="#4a4a4a" font-size="12">equal angles</text></g>
+<g><circle cx="525" cy="165" r="55" fill="white" stroke="#d4a017" stroke-width="3"/><text x="525" y="155" fill="#06244a" font-size="12" font-weight="700">CYCLIC</text><text x="525" y="172" fill="#06244a" font-size="12" font-weight="700">QUADRILATERALS</text><text x="525" y="189" fill="#4a4a4a" font-size="12">opposite = 180°</text></g>
+<g><circle cx="670" cy="165" r="55" fill="url(#circG)"/><text x="670" y="160" fill="white" font-size="14" font-weight="700">TANGENTS</text><text x="670" y="180" fill="#d4a017" font-size="12">alt. segment</text></g>
+<text x="380" y="45" fill="#06244a" font-size="21" font-weight="700">FROM CIRCLE VOCABULARY TO TANGENT THEOREMS</text>
+<text x="380" y="292" fill="#767676" font-size="13">Each theorem builds on the same basic circle vocabulary introduced first.</text>
+</g>
+</svg>
+<div class="diagram-caption">Figure 1. Circle theorems build from basic vocabulary through centre/circumference angle rules to cyclic quadrilaterals and tangent properties. Diagram created specifically for EDUSAMBAM.</div>
+</div>
+
+<h2><span class="num">1.</span>Parts of a Circle: Essential Vocabulary</h2>
+<p>Before using any theorem, the vocabulary must be secure. The <strong>centre</strong> is the fixed middle point. A <strong>radius</strong> joins the centre to any point on the circle. A <strong>diameter</strong> is a chord through the centre, equal to two radii. A <strong>chord</strong> is any straight line joining two points on the circle. An <strong>arc</strong> is a part of the circumference; a <strong>sector</strong> is the pie-slice region between two radii and an arc; a <strong>segment</strong> is the region between a chord and an arc. A <strong>tangent</strong> is a straight line that touches the circle at exactly one point.</p>
+<div class="table-wrap"><table class="pos-table">
+<tr><th>Term</th><th>Definition</th></tr>
+<tr><td>Radius</td><td>Centre to circumference</td></tr>
+<tr><td>Diameter</td><td>Chord through the centre (2 × radius)</td></tr>
+<tr><td>Chord</td><td>Line joining two points on the circle</td></tr>
+<tr><td>Tangent</td><td>Line touching the circle at exactly one point</td></tr>
+<tr><td>Arc</td><td>Part of the circumference</td></tr>
+<tr><td>Sector</td><td>Region between two radii and an arc</td></tr>
+<tr><td>Segment</td><td>Region between a chord and an arc</td></tr>
+</table></div>
+
+<h2><span class="num">2.</span>Angle in a Semicircle</h2>
+<p>If a triangle is drawn inside a circle so that one side is the diameter, the angle at the point touching the circumference is always <strong>exactly 90°</strong>. This is sometimes called Thales' theorem.</p>
+
+<div class="diagram-box">
+<svg viewBox="0 0 460 300" role="img" aria-labelledby="semiTitle semiDesc">
+<title id="semiTitle">Angle in a semicircle</title>
+<desc id="semiDesc">A circle with a diameter drawn across it and a point on the circumference joined to both ends of the diameter, forming a right angle.</desc>
+<rect x="0" y="0" width="460" height="300" rx="18" fill="#faf8f4"/>
+<circle cx="230" cy="160" r="110" fill="none" stroke="#06244a" stroke-width="3"/>
+<line x1="120" y1="160" x2="340" y2="160" stroke="#8B0000" stroke-width="3"/>
+<circle cx="120" cy="160" r="4" fill="#06244a"/><circle cx="340" cy="160" r="4" fill="#06244a"/>
+<circle cx="270" cy="65" r="4" fill="#B8963E"/>
+<line x1="120" y1="160" x2="270" y2="65" stroke="#B8963E" stroke-width="3"/>
+<line x1="340" y1="160" x2="270" y2="65" stroke="#B8963E" stroke-width="3"/>
+<rect x="258" y="85" width="14" height="14" fill="none" stroke="#8B0000" stroke-width="2"/>
+<text x="230" y="185" fill="#8B0000" font-size="13" font-family="Arial, sans-serif" text-anchor="middle">diameter</text>
+<text x="270" y="55" fill="#B8963E" font-size="13" font-family="Arial, sans-serif" text-anchor="middle">90°</text>
+</svg>
+<div class="diagram-caption">Figure 2. Any angle drawn from the two ends of a diameter to a point on the circumference is exactly 90°.</div>
+</div>
+
+<div class="example-box"><div class="ex-label">Example 1 · Angle in a semicircle</div>
+<p>AB is a diameter of a circle, and C is a point on the circumference. If angle BAC = 35°, find angle ACB and angle ABC.</p>
+<p>Angle ACB = <strong>90°</strong> (angle in a semicircle). So angle ABC = 180 − 90 − 35 = <strong>55°</strong>.</p>
+</div>
+
+<h2><span class="num">3.</span>The Angle at the Centre is Twice the Angle at the Circumference</h2>
+<p>When an arc is viewed from the centre and from a point on the circumference (both on the same side of the arc), the angle at the <strong>centre</strong> is always <strong>twice</strong> the angle at the <strong>circumference</strong>.</p>
+
+<div class="diagram-box">
+<svg viewBox="0 0 460 300" role="img" aria-labelledby="centTitle centDesc">
+<title id="centTitle">Angle at the centre versus the circumference</title>
+<desc id="centDesc">A circle with an arc, showing the angle at the centre subtended by the arc and the angle at a point on the circumference subtended by the same arc.</desc>
+<rect x="0" y="0" width="460" height="300" rx="18" fill="#faf8f4"/>
+<circle cx="230" cy="160" r="110" fill="none" stroke="#06244a" stroke-width="3"/>
+<circle cx="230" cy="160" r="4" fill="#8B0000"/>
+<circle cx="140" cy="90" r="4" fill="#06244a"/><circle cx="320" cy="90" r="4" fill="#06244a"/>
+<circle cx="230" cy="268" r="4" fill="#B8963E"/>
+<line x1="230" y1="160" x2="140" y2="90" stroke="#8B0000" stroke-width="3"/>
+<line x1="230" y1="160" x2="320" y2="90" stroke="#8B0000" stroke-width="3"/>
+<line x1="230" y1="268" x2="140" y2="90" stroke="#B8963E" stroke-width="3"/>
+<line x1="230" y1="268" x2="320" y2="90" stroke="#B8963E" stroke-width="3"/>
+<text x="230" y="140" fill="#8B0000" font-size="14" font-family="Arial, sans-serif" text-anchor="middle">2x</text>
+<text x="230" y="250" fill="#B8963E" font-size="14" font-family="Arial, sans-serif" text-anchor="middle">x</text>
+</svg>
+<div class="diagram-caption">Figure 3. The angle at the centre (2x) is always twice the angle at the circumference (x) when both stand on the same arc.</div>
+</div>
+
+<div class="example-box"><div class="ex-label">Example 2 · Centre and circumference</div>
+<p>An arc subtends an angle of 76° at the circumference. The angle subtended at the centre by the same arc is 2 × 76 = <strong>152°</strong>.</p>
+</div>
+
+<h2><span class="num">4.</span>Angles in the Same Segment</h2>
+<p>Angles subtended by the <strong>same arc</strong>, from different points in the <strong>same segment</strong> of the circle, are always <strong>equal</strong>. This follows directly from the centre/circumference theorem, since every such angle equals half the same central angle.</p>
+<div class="example-box"><div class="ex-label">Example 3 · Same segment</div>
+<p>Points C and D lie in the same segment of a circle, both viewing chord AB. If angle ACB = 48°, then angle ADB = <strong>48°</strong> too.</p>
+</div>
+
+<h2><span class="num">5.</span>Cyclic Quadrilaterals</h2>
+<p>A <strong>cyclic quadrilateral</strong> has all four vertices on the circumference of a circle. Its <strong>opposite angles always sum to 180°</strong>.</p>
+
+<div class="diagram-box">
+<svg viewBox="0 0 460 300" role="img" aria-labelledby="cycTitle cycDesc">
+<title id="cycTitle">Cyclic quadrilateral</title>
+<desc id="cycDesc">A quadrilateral with all four vertices on a circle, with opposite angles marked as supplementary.</desc>
+<rect x="0" y="0" width="460" height="300" rx="18" fill="#faf8f4"/>
+<circle cx="230" cy="160" r="110" fill="none" stroke="#06244a" stroke-width="3"/>
+<polygon points="150,80 320,100 290,240 140,230" fill="none" stroke="#8B0000" stroke-width="3"/>
+<text x="150" y="70" fill="#06244a" font-size="14" font-family="Arial, sans-serif" text-anchor="middle">A</text>
+<text x="330" y="95" fill="#06244a" font-size="14" font-family="Arial, sans-serif" text-anchor="middle">B</text>
+<text x="300" y="255" fill="#06244a" font-size="14" font-family="Arial, sans-serif" text-anchor="middle">C</text>
+<text x="130" y="245" fill="#06244a" font-size="14" font-family="Arial, sans-serif" text-anchor="middle">D</text>
+<text x="230" y="290" fill="#767676" font-size="12" font-family="Arial, sans-serif" text-anchor="middle">angle A + angle C = 180° · angle B + angle D = 180°</text>
+</svg>
+<div class="diagram-caption">Figure 4. In any cyclic quadrilateral, each pair of opposite angles sums to 180°.</div>
+</div>
+
+<div class="example-box"><div class="ex-label">Example 4 · Cyclic quadrilateral</div>
+<p>In cyclic quadrilateral ABCD, angle A = 105° and angle B = 80°. Find angles C and D.</p>
+<p>Angle C = 180 − 105 = <strong>75°</strong> (opposite angle A). Angle D = 180 − 80 = <strong>100°</strong> (opposite angle B).</p>
+</div>
+
+<h2><span class="num">6.</span>Tangent Properties</h2>
+<p>A tangent touches a circle at exactly one point, called the <strong>point of tangency</strong>. Two properties are essential: the <strong>tangent is always perpendicular (90°) to the radius</strong> drawn to the point of tangency, and <strong>two tangents drawn from the same external point are equal in length</strong>.</p>
+<div class="example-box"><div class="ex-label">Example 5 · Tangent and radius</div>
+<p>A tangent touches a circle at point T, and O is the centre. If OT = 5 cm and the tangent length from an external point P to T is 12 cm, find OP.</p>
+<p>Since angle OTP = 90°, triangle OTP is right-angled. By Pythagoras: OP² = 5² + 12² = 25 + 144 = 169, so <strong>OP = 13 cm</strong>.</p>
+</div>
+
+<h2><span class="num">7.</span>The Alternate Segment Theorem</h2>
+<p>Where a tangent meets a chord at the point of tangency, the angle between the tangent and the chord equals the angle in the <strong>alternate segment</strong> — the angle subtended by that same chord on the far side of the circle.</p>
+
+<div class="diagram-box">
+<svg viewBox="0 0 460 300" role="img" aria-labelledby="altTitle altDesc">
+<title id="altTitle">Alternate segment theorem</title>
+<desc id="altDesc">A circle with a tangent line and a chord meeting at the point of tangency, with the tangent-chord angle equal to the angle in the alternate segment.</desc>
+<rect x="0" y="0" width="460" height="300" rx="18" fill="#faf8f4"/>
+<circle cx="230" cy="150" r="100" fill="none" stroke="#06244a" stroke-width="3"/>
+<line x1="80" y1="250" x2="380" y2="250" stroke="#8B0000" stroke-width="3"/>
+<circle cx="230" cy="250" r="4" fill="#8B0000"/>
+<line x1="230" y1="250" x2="130" y2="100" stroke="#B8963E" stroke-width="3"/>
+<circle cx="130" cy="100" r="4" fill="#06244a"/>
+<circle cx="310" cy="90" r="4" fill="#06244a"/>
+<line x1="130" y1="100" x2="310" y2="90" stroke="#06244a" stroke-width="2" stroke-dasharray="4,4"/>
+<line x1="230" y1="250" x2="310" y2="90" stroke="#06244a" stroke-width="2" stroke-dasharray="4,4"/>
+<text x="270" y="245" fill="#8B0000" font-size="13" font-family="Arial, sans-serif" text-anchor="middle">x</text>
+<text x="270" y="105" fill="#06244a" font-size="13" font-family="Arial, sans-serif" text-anchor="middle">x</text>
+<text x="230" y="285" fill="#767676" font-size="12" font-family="Arial, sans-serif" text-anchor="middle">tangent-chord angle = angle in the alternate segment</text>
+</svg>
+<div class="diagram-caption">Figure 5. The tangent-chord angle equals the inscribed angle in the alternate segment on the other side of the chord.</div>
+</div>
+
+<div class="example-box"><div class="ex-label">Example 6 · Alternate segment theorem</div>
+<p>A tangent meets a chord at a point on a circle, making an angle of 58° with the chord. The angle in the alternate segment is also <strong>58°</strong>.</p>
+</div>
+
+<h2><span class="num">8.</span>Combining Circle Theorems: Multi-Step Problems</h2>
+<p>Exam questions typically combine two or three theorems in a single diagram. The reliable strategy is the same as with any angle-chasing problem: identify which theorem applies to each labelled feature (a diameter suggests the semicircle theorem; four points on a circle suggest a cyclic quadrilateral; a tangent suggests the alternate segment theorem or the perpendicular-radius property), then work through step by step.</p>
+<div class="example-box"><div class="ex-label">Example 7 · Combining theorems</div>
+<p>AB is a diameter of a circle. C is a point on the circumference, and D is a point on the circumference such that ABCD is a cyclic quadrilateral with angle ADC = 115°. Find angle ACB and angle ABC if angle BAC = 25°.</p>
+<p>Angle ACB = <strong>90°</strong> (angle in a semicircle, since AB is a diameter). So angle ABC = 180 − 90 − 25 = <strong>65°</strong>.</p>
+<p>As a further check, angle ABC and angle ADC are opposite angles in the cyclic quadrilateral, so they should sum to 180°: 65 + 115 = 180 ✓.</p>
+</div>
+
+<h2><span class="num">9.</span>Common Circle Theorem Mistakes</h2>
+<p>Common errors include: applying the semicircle theorem when the given chord is not actually a diameter; confusing the centre-circumference relationship (doubling instead of halving, or vice versa); assuming opposite angles are equal rather than supplementary in a cyclic quadrilateral; and forgetting that the alternate segment theorem only applies at the exact point where the tangent touches the circle.</p>
+
+<h2><span class="num">10.</span>Putting Circle Theorems Together</h2>
+<div class="table-wrap"><table class="pos-table">
+<tr><th>Theorem</th><th>Statement</th></tr>
+<tr><td>Angle in a semicircle</td><td>Always 90°</td></tr>
+<tr><td>Angle at the centre</td><td>Twice the angle at the circumference (same arc)</td></tr>
+<tr><td>Angles in the same segment</td><td>Equal</td></tr>
+<tr><td>Cyclic quadrilateral</td><td>Opposite angles sum to 180°</td></tr>
+<tr><td>Tangent and radius</td><td>Perpendicular (90°) at the point of tangency</td></tr>
+<tr><td>Two tangents from a point</td><td>Equal in length</td></tr>
+<tr><td>Alternate segment theorem</td><td>Tangent-chord angle equals the angle in the alternate segment</td></tr>
+</table></div>
+<p>Every circle theorem question is a search for which of these seven facts the diagram is hinting at. With practice, recognising the shape — a diameter, a cyclic quadrilateral, a tangent meeting a chord — becomes automatic.</p>
+
+<h2><span class="num">11.</span>Sources and Further Reading</h2>
+<p>This article is original EDUSAMBAM educational writing. It is designed as a broad circle theorems resource covering the core angle relationships needed for confident geometric reasoning with circles. Exact examination requirements can vary between examination boards and syllabuses, so students should also compare their work with the specification and past-paper requirements of their own board.</p>
+<p><strong>Recommended study approach:</strong> learn the seven theorems in the summary table with their diagrams, practise identifying which theorem a diagram is hinting at, then attempt multi-step problems that combine several theorems at once.</p>
+
+<!-- QUIZ SECTION -->
+<div class="quiz-section">
+<div class="section-eyebrow">Test Your Understanding</div>
+<h2>Practice Quiz</h2>
+<p class="quiz-intro">20 questions covering circle vocabulary, the semicircle and centre-circumference theorems, cyclic quadrilaterals, tangent properties and the alternate segment theorem. Answer every question, then submit to see your score instantly.</p>
+<div class="squiz-progress"><div class="squiz-progress-fill" id="squizProgressFill"></div></div>
+<div class="squiz-progress-label" id="squizProgressLabel">0 of 20 answered</div>
+<div class="squiz-results" id="squizResults"><div class="squiz-score-big" id="squizScoreBig">0/20</div><div class="squiz-score-label" id="squizScoreLabel">You scored 0%</div><div class="squiz-score-tier" id="squizScoreTier">Keep practicing</div><div><button class="squiz-retake-btn" onclick="retakeQuiz()">Retake Quiz</button></div></div>
+<form id="squizForm">
+<div class="squiz-item" data-correct="1"><div class="squiz-q"><span class="qnum">1.</span>A straight line joining two points on a circle is called a:</div><div class="squiz-option"><input id="sq1a" name="sq1" type="radio" value="0"/><label for="sq1a">A. Radius</label></div><div class="squiz-option"><input id="sq1b" name="sq1" type="radio" value="1"/><label for="sq1b">B. Chord</label></div><div class="squiz-option"><input id="sq1c" name="sq1" type="radio" value="2"/><label for="sq1c">C. Tangent</label></div><div class="squiz-option"><input id="sq1d" name="sq1" type="radio" value="3"/><label for="sq1d">D. Sector</label></div></div>
+<div class="squiz-item" data-correct="2"><div class="squiz-q"><span class="qnum">2.</span>A line that touches a circle at exactly one point is called a:</div><div class="squiz-option"><input id="sq2a" name="sq2" type="radio" value="0"/><label for="sq2a">A. Chord</label></div><div class="squiz-option"><input id="sq2b" name="sq2" type="radio" value="1"/><label for="sq2b">B. Diameter</label></div><div class="squiz-option"><input id="sq2c" name="sq2" type="radio" value="2"/><label for="sq2c">C. Tangent</label></div><div class="squiz-option"><input id="sq2d" name="sq2" type="radio" value="3"/><label for="sq2d">D. Segment</label></div></div>
+<div class="squiz-item" data-correct="3"><div class="squiz-q"><span class="qnum">3.</span>AB is a diameter of a circle, and C is a point on the circumference. Angle ACB equals:</div><div class="squiz-option"><input id="sq3a" name="sq3" type="radio" value="0"/><label for="sq3a">A. 45°</label></div><div class="squiz-option"><input id="sq3b" name="sq3" type="radio" value="1"/><label for="sq3b">B. 180°</label></div><div class="squiz-option"><input id="sq3c" name="sq3" type="radio" value="2"/><label for="sq3c">C. 60°</label></div><div class="squiz-option"><input id="sq3d" name="sq3" type="radio" value="3"/><label for="sq3d">D. 90°</label></div></div>
+<div class="squiz-item" data-correct="0"><div class="squiz-q"><span class="qnum">4.</span>AB is a diameter and angle BAC = 40°. What is angle ABC?</div><div class="squiz-option"><input id="sq4a" name="sq4" type="radio" value="0"/><label for="sq4a">A. 50°</label></div><div class="squiz-option"><input id="sq4b" name="sq4" type="radio" value="1"/><label for="sq4b">B. 40°</label></div><div class="squiz-option"><input id="sq4c" name="sq4" type="radio" value="2"/><label for="sq4c">C. 90°</label></div><div class="squiz-option"><input id="sq4d" name="sq4" type="radio" value="3"/><label for="sq4d">D. 140°</label></div></div>
+<div class="squiz-item" data-correct="1"><div class="squiz-q"><span class="qnum">5.</span>An arc subtends an angle of 42° at the circumference. The angle it subtends at the centre is:</div><div class="squiz-option"><input id="sq5a" name="sq5" type="radio" value="0"/><label for="sq5a">A. 21°</label></div><div class="squiz-option"><input id="sq5b" name="sq5" type="radio" value="1"/><label for="sq5b">B. 84°</label></div><div class="squiz-option"><input id="sq5c" name="sq5" type="radio" value="2"/><label for="sq5c">C. 42°</label></div><div class="squiz-option"><input id="sq5d" name="sq5" type="radio" value="3"/><label for="sq5d">D. 138°</label></div></div>
+<div class="squiz-item" data-correct="2"><div class="squiz-q"><span class="qnum">6.</span>An arc subtends 130° at the centre. The angle it subtends at the circumference is:</div><div class="squiz-option"><input id="sq6a" name="sq6" type="radio" value="0"/><label for="sq6a">A. 260°</label></div><div class="squiz-option"><input id="sq6b" name="sq6" type="radio" value="1"/><label for="sq6b">B. 50°</label></div><div class="squiz-option"><input id="sq6c" name="sq6" type="radio" value="2"/><label for="sq6c">C. 65°</label></div><div class="squiz-option"><input id="sq6d" name="sq6" type="radio" value="3"/><label for="sq6d">D. 130°</label></div></div>
+<div class="squiz-item" data-correct="3"><div class="squiz-q"><span class="qnum">7.</span>Points C and D lie in the same segment, both viewing chord AB. If angle ACB = 37°, then angle ADB is:</div><div class="squiz-option"><input id="sq7a" name="sq7" type="radio" value="0"/><label for="sq7a">A. 74°</label></div><div class="squiz-option"><input id="sq7b" name="sq7" type="radio" value="1"/><label for="sq7b">B. 143°</label></div><div class="squiz-option"><input id="sq7c" name="sq7" type="radio" value="2"/><label for="sq7c">C. 90°</label></div><div class="squiz-option"><input id="sq7d" name="sq7" type="radio" value="3"/><label for="sq7d">D. 37°</label></div></div>
+<div class="squiz-item" data-correct="0"><div class="squiz-q"><span class="qnum">8.</span>In a cyclic quadrilateral, opposite angles:</div><div class="squiz-option"><input id="sq8a" name="sq8" type="radio" value="0"/><label for="sq8a">A. Sum to 180°</label></div><div class="squiz-option"><input id="sq8b" name="sq8" type="radio" value="1"/><label for="sq8b">B. Are always equal</label></div><div class="squiz-option"><input id="sq8c" name="sq8" type="radio" value="2"/><label for="sq8c">C. Sum to 360°</label></div><div class="squiz-option"><input id="sq8d" name="sq8" type="radio" value="3"/><label for="sq8d">D. Sum to 90°</label></div></div>
+<div class="squiz-item" data-correct="1"><div class="squiz-q"><span class="qnum">9.</span>In cyclic quadrilateral ABCD, angle A = 112°. What is angle C?</div><div class="squiz-option"><input id="sq9a" name="sq9" type="radio" value="0"/><label for="sq9a">A. 112°</label></div><div class="squiz-option"><input id="sq9b" name="sq9" type="radio" value="1"/><label for="sq9b">B. 68°</label></div><div class="squiz-option"><input id="sq9c" name="sq9" type="radio" value="2"/><label for="sq9c">C. 248°</label></div><div class="squiz-option"><input id="sq9d" name="sq9" type="radio" value="3"/><label for="sq9d">D. 56°</label></div></div>
+<div class="squiz-item" data-correct="2"><div class="squiz-q"><span class="qnum">10.</span>A tangent to a circle at point T always meets the radius OT at an angle of:</div><div class="squiz-option"><input id="sq10a" name="sq10" type="radio" value="0"/><label for="sq10a">A. 45°</label></div><div class="squiz-option"><input id="sq10b" name="sq10" type="radio" value="1"/><label for="sq10b">B. 180°</label></div><div class="squiz-option"><input id="sq10c" name="sq10" type="radio" value="2"/><label for="sq10c">C. 90°</label></div><div class="squiz-option"><input id="sq10d" name="sq10" type="radio" value="3"/><label for="sq10d">D. 60°</label></div></div>
+<div class="squiz-item" data-correct="3"><div class="squiz-q"><span class="qnum">11.</span>Two tangents are drawn from the same external point to a circle. These two tangents are:</div><div class="squiz-option"><input id="sq11a" name="sq11" type="radio" value="0"/><label for="sq11a">A. Perpendicular to each other</label></div><div class="squiz-option"><input id="sq11b" name="sq11" type="radio" value="1"/><label for="sq11b">B. Parallel</label></div><div class="squiz-option"><input id="sq11c" name="sq11" type="radio" value="2"/><label for="sq11c">C. Never equal</label></div><div class="squiz-option"><input id="sq11d" name="sq11" type="radio" value="3"/><label for="sq11d">D. Equal in length</label></div></div>
+<div class="squiz-item" data-correct="0"><div class="squiz-q"><span class="qnum">12.</span>OT is a radius of length 6 cm, and the tangent length from external point P to T is 8 cm. What is OP?</div><div class="squiz-option"><input id="sq12a" name="sq12" type="radio" value="0"/><label for="sq12a">A. 10 cm</label></div><div class="squiz-option"><input id="sq12b" name="sq12" type="radio" value="1"/><label for="sq12b">B. 14 cm</label></div><div class="squiz-option"><input id="sq12c" name="sq12" type="radio" value="2"/><label for="sq12c">C. 48 cm</label></div><div class="squiz-option"><input id="sq12d" name="sq12" type="radio" value="3"/><label for="sq12d">D. 2 cm</label></div></div>
+<div class="squiz-item" data-correct="1"><div class="squiz-q"><span class="qnum">13.</span>The alternate segment theorem relates the tangent-chord angle to:</div><div class="squiz-option"><input id="sq13a" name="sq13" type="radio" value="0"/><label for="sq13a">A. The angle at the centre</label></div><div class="squiz-option"><input id="sq13b" name="sq13" type="radio" value="1"/><label for="sq13b">B. The angle in the alternate segment</label></div><div class="squiz-option"><input id="sq13c" name="sq13" type="radio" value="2"/><label for="sq13c">C. The radius length</label></div><div class="squiz-option"><input id="sq13d" name="sq13" type="radio" value="3"/><label for="sq13d">D. The diameter</label></div></div>
+<div class="squiz-item" data-correct="2"><div class="squiz-q"><span class="qnum">14.</span>A tangent-chord angle is measured as 63°. The angle in the alternate segment is:</div><div class="squiz-option"><input id="sq14a" name="sq14" type="radio" value="0"/><label for="sq14a">A. 27°</label></div><div class="squiz-option"><input id="sq14b" name="sq14" type="radio" value="1"/><label for="sq14b">B. 126°</label></div><div class="squiz-option"><input id="sq14c" name="sq14" type="radio" value="2"/><label for="sq14c">C. 63°</label></div><div class="squiz-option"><input id="sq14d" name="sq14" type="radio" value="3"/><label for="sq14d">D. 117°</label></div></div>
+<div class="squiz-item" data-correct="3"><div class="squiz-q"><span class="qnum">15.</span>The region between a chord and an arc is called a:</div><div class="squiz-option"><input id="sq15a" name="sq15" type="radio" value="0"/><label for="sq15a">A. Sector</label></div><div class="squiz-option"><input id="sq15b" name="sq15" type="radio" value="1"/><label for="sq15b">B. Radius</label></div><div class="squiz-option"><input id="sq15c" name="sq15" type="radio" value="2"/><label for="sq15c">C. Tangent</label></div><div class="squiz-option"><input id="sq15d" name="sq15" type="radio" value="3"/><label for="sq15d">D. Segment</label></div></div>
+<div class="squiz-item" data-correct="0"><div class="squiz-q"><span class="qnum">16.</span>ABCD is a cyclic quadrilateral with angle B = 74° and angle D = 96°. This is:</div><div class="squiz-option"><input id="sq16a" name="sq16" type="radio" value="0"/><label for="sq16a">A. Consistent, since 74 + 96 = 170, so this pairing must not be opposite angles</label></div><div class="squiz-option"><input id="sq16b" name="sq16" type="radio" value="1"/><label for="sq16b">B. Always impossible</label></div><div class="squiz-option"><input id="sq16c" name="sq16" type="radio" value="2"/><label for="sq16c">C. Proof that the quadrilateral is not cyclic</label></div><div class="squiz-option"><input id="sq16d" name="sq16" type="radio" value="3"/><label for="sq16d">D. Proof that AB is a diameter</label></div></div>
+<div class="squiz-item" data-correct="1"><div class="squiz-q"><span class="qnum">17.</span>A chord divides a circle into two regions. Each such region is called a:</div><div class="squiz-option"><input id="sq17a" name="sq17" type="radio" value="0"/><label for="sq17a">A. Sector</label></div><div class="squiz-option"><input id="sq17b" name="sq17" type="radio" value="1"/><label for="sq17b">B. Segment</label></div><div class="squiz-option"><input id="sq17c" name="sq17" type="radio" value="2"/><label for="sq17c">C. Arc</label></div><div class="squiz-option"><input id="sq17d" name="sq17" type="radio" value="3"/><label for="sq17d">D. Diameter</label></div></div>
+<div class="squiz-item" data-correct="2"><div class="squiz-q"><span class="qnum">18.</span>AB is a diameter, C is on the circumference, and angle ABC = 63°. What is angle BAC?</div><div class="squiz-option"><input id="sq18a" name="sq18" type="radio" value="0"/><label for="sq18a">A. 63°</label></div><div class="squiz-option"><input id="sq18b" name="sq18" type="radio" value="1"/><label for="sq18b">B. 90°</label></div><div class="squiz-option"><input id="sq18c" name="sq18" type="radio" value="2"/><label for="sq18c">C. 27°</label></div><div class="squiz-option"><input id="sq18d" name="sq18" type="radio" value="3"/><label for="sq18d">D. 117°</label></div></div>
+<div class="squiz-item" data-correct="3"><div class="squiz-q"><span class="qnum">19.</span>Which of these is NOT a correct circle theorem?</div><div class="squiz-option"><input id="sq19a" name="sq19" type="radio" value="0"/><label for="sq19a">A. Angles in the same segment are equal</label></div><div class="squiz-option"><input id="sq19b" name="sq19" type="radio" value="1"/><label for="sq19b">B. The angle in a semicircle is 90°</label></div><div class="squiz-option"><input id="sq19c" name="sq19" type="radio" value="2"/><label for="sq19c">C. Opposite angles in a cyclic quadrilateral sum to 180°</label></div><div class="squiz-option"><input id="sq19d" name="sq19" type="radio" value="3"/><label for="sq19d">D. The angle at the centre is half the angle at the circumference</label></div></div>
+<div class="squiz-item" data-correct="0"><div class="squiz-q"><span class="qnum">20.</span>When starting a circle theorem problem, the best first step is to:</div><div class="squiz-option"><input id="sq20a" name="sq20" type="radio" value="0"/><label for="sq20a">A. Identify which feature (diameter, tangent, cyclic quadrilateral) each part of the diagram represents</label></div><div class="squiz-option"><input id="sq20b" name="sq20" type="radio" value="1"/><label for="sq20b">B. Guess an angle and check it later</label></div><div class="squiz-option"><input id="sq20c" name="sq20" type="radio" value="2"/><label for="sq20c">C. Measure the diagram with a ruler</label></div><div class="squiz-option"><input id="sq20d" name="sq20" type="radio" value="3"/><label for="sq20d">D. Assume all angles are equal</label></div></div>
+<button class="squiz-submit-btn" disabled="" id="squizSubmitBtn" onclick="submitQuiz()" type="button">Answer all questions to submit</button>
+</form></div>
+<div class="article-footer-nav"><a href="index.html#gateway">← Gateway</a></div>
+</div>
+<script>
+  (function() {
+    const form = document.getElementById('squizForm');
+    const submitBtn = document.getElementById('squizSubmitBtn');
+    const progressFill = document.getElementById('squizProgressFill');
+    const progressLabel = document.getElementById('squizProgressLabel');
+    const totalQuestions = document.querySelectorAll('.squiz-item').length;
+
+    function countAnswered() {
+      let count = 0;
+      for (let i = 1; i <= totalQuestions; i++) {
+        if (form.querySelector(`input[name="sq${i}"]:checked`)) count++;
+      }
+      return count;
+    }
+
+    function updateProgress() {
+      const answered = countAnswered();
+      progressFill.style.width = (answered / totalQuestions * 100) + '%';
+      progressLabel.textContent = answered + ' of ' + totalQuestions + ' answered';
+      submitBtn.disabled = answered < totalQuestions;
+      submitBtn.textContent = answered < totalQuestions ? 'Answer all questions to submit' : 'Submit Quiz';
+      document.querySelectorAll('.squiz-option').forEach(opt => opt.classList.remove('selected'));
+      form.querySelectorAll('input[type="radio"]:checked').forEach(input => {
+        input.closest('.squiz-option').classList.add('selected');
+      });
+    }
+
+    form.addEventListener('change', updateProgress);
+
+    window.submitQuiz = function() {
+      let score = 0;
+      const questions = document.querySelectorAll('.squiz-item');
+      questions.forEach((q, idx) => {
+        const qnum = idx + 1;
+        const correctIdx = q.getAttribute('data-correct');
+        const selected = form.querySelector(`input[name="sq${qnum}"]:checked`);
+        const options = q.querySelectorAll('.squiz-option');
+        options.forEach((opt, optIdx) => {
+          opt.querySelector('input').disabled = true;
+          if (String(optIdx) === correctIdx) opt.classList.add('correct-answer');
+        });
+        if (selected && selected.value === correctIdx) {
+          score++;
+        } else if (selected) {
+          selected.closest('.squiz-option').classList.add('wrong-answer');
+        }
+      });
+
+      const percent = Math.round((score / totalQuestions) * 100);
+      document.getElementById('squizScoreBig').textContent = score + '/' + totalQuestions;
+      document.getElementById('squizScoreLabel').textContent = 'You scored ' + percent + '%';
+
+      let tier = 'Keep practicing';
+      if (percent === 100) tier = 'Perfect score!';
+      else if (percent >= 80) tier = 'Excellent work';
+      else if (percent >= 60) tier = 'Good effort';
+      else if (percent >= 40) tier = 'Getting there';
+      document.getElementById('squizScoreTier').textContent = tier;
+
+      document.getElementById('squizResults').classList.add('visible');
+      submitBtn.style.display = 'none';
+      document.getElementById('squizResults').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    window.retakeQuiz = function() {
+      form.reset();
+      document.querySelectorAll('.squiz-option').forEach(opt => {
+        opt.classList.remove('selected', 'correct-answer', 'wrong-answer');
+        opt.querySelector('input').disabled = false;
+      });
+      document.getElementById('squizResults').classList.remove('visible');
+      submitBtn.style.display = 'block';
+      updateProgress();
+      document.getElementById('squizForm').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    updateProgress();
+  })();
+</script>
+
+<script id="edusambam-reader-script">
+(function(){
+ const box=document.querySelector('.edusambam-reader'); if(!box)return;
+ const root=document.querySelector('.article-wrap, .article-wrapper');
+ if(!root)return;
+ const bodySource=root.querySelector('.article-content, .article-body, .content-body') || root;
+ const status=box.querySelector('.reader-status'), progress=box.querySelector('.reader-progress span'), rate=box.querySelector('select');
+ let utterance=null, chunks=[], index=0, total=0, paused=false, stopped=false;
+ function text(){
+   const clone=bodySource.cloneNode(true);
+   clone.querySelectorAll('.quiz-section,.drill-section,.squiz-section,.squiz-item,.activity-section,.assessment-section,.article-footer-nav,form,button,input,select,textarea,script,style,.edusambam-reader,.breadcrumb,.article-hero-meta,.article-hero-tag,nav,header,footer').forEach(el=>el.remove());
+   return clone.textContent.replace(/\s+/g,' ').trim();
+ }
+ function splitText(t){const out=[];const max=1200;for(let i=0;i<t.length;i+=max)out.push(t.slice(i,i+max));return out;}
+ function updateProgress(){progress.style.width=(total?Math.min(100,Math.round((index/total)*100)):0)+'%';}
+ function speakNext(){
+   if(stopped||index>=total){if(index>=total&&!stopped){status.textContent='Reading finished.';progress.style.width='100%';}return;}
+   utterance=new SpeechSynthesisUtterance(chunks[index]);
+   utterance.rate=Number(rate.value)||1;
+   utterance.onend=function(){if(stopped)return;index++;updateProgress();speakNext();};
+   utterance.onerror=function(){if(!stopped)status.textContent='The reader stopped unexpectedly. Tap Resume to continue.';};
+   status.textContent='Reading article…';
+   speechSynthesis.speak(utterance);
+ }
+ function play(){
+   if(!('speechSynthesis' in window)){status.textContent='Audio reading is not supported by this browser.';return;}
+   speechSynthesis.cancel();
+   chunks=splitText(text());index=0;total=chunks.length;paused=false;stopped=false;updateProgress();speakNext();
+ }
+ function pause(){
+   if(!('speechSynthesis' in window))return;
+   if(speechSynthesis.speaking){speechSynthesis.pause();paused=true;status.textContent='Reader paused.';}
+ }
+ function resume(){
+   if(!('speechSynthesis' in window))return;
+   stopped=false;
+   if(speechSynthesis.paused){speechSynthesis.resume();paused=false;status.textContent='Reader resumed.';return;}
+   if(!speechSynthesis.speaking && chunks.length && index<total){paused=false;status.textContent='Reader resumed.';speakNext();return;}
+   if(!chunks.length){status.textContent='Nothing to resume. Tap Play to start.';return;}
+   status.textContent='Reader is already playing.';
+ }
+ function stop(){
+   speechSynthesis.cancel();chunks=[];index=0;total=0;paused=false;stopped=true;progress.style.width='0';status.textContent='Reader stopped.';
+ }
+ box.querySelector('[data-reader="play"]').addEventListener('click',play);
+ box.querySelector('[data-reader="pause"]').addEventListener('click',pause);
+ box.querySelector('[data-reader="resume"]').addEventListener('click',resume);
+ box.querySelector('[data-reader="stop"]').addEventListener('click',stop);
+ window.addEventListener('beforeunload',()=>{stopped=true;speechSynthesis.cancel();});
+})();
+</script>
+<script id="edusambam-unified-nav-js">
+(function(){
+  let pages=[];fetch('nav-search-index.json').then(r=>r.json()).then(d=>{pages=d;});
+  function closeAll(except){
+    document.querySelectorAll('.edusambam-mobile-menu,.edusambam-search-panel').forEach(el=>{
+      if(el!==except) el.classList.remove('open');
+    });
+    const b=document.querySelector('.edusambam-menu-btn');
+    if(b){
+      const isOpen=!!document.querySelector('.edusambam-mobile-menu')?.classList.contains('open');
+      b.setAttribute('aria-expanded', String(isOpen));
+      b.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+      b.setAttribute('title', isOpen ? 'Close menu' : 'Menu');
+      b.textContent = isOpen ? '×' : '☰';
+    }
+  }
+  function setup(){
+    const menu=document.querySelector('.edusambam-mobile-menu');
+    const mb=document.querySelector('.edusambam-menu-btn');
+    const sb=document.querySelector('.edusambam-search-btn');
+    const panel=document.querySelector('.edusambam-search-panel');
+    const input=document.querySelector('.edusambam-search-input');
+    const results=document.querySelector('.edusambam-search-results');
+    if(mb && menu){
+      mb.addEventListener('click',()=>{
+        const open=menu.classList.toggle('open'); closeAll(open?menu:null);
+        mb.setAttribute('aria-expanded',String(open));
+        mb.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        mb.setAttribute('title', open ? 'Close menu' : 'Menu');
+        mb.textContent = open ? '×' : '☰';
+        if(open) panel?.classList.remove('open');
+      });
+    }
+    if(sb && panel){
+      sb.addEventListener('click',()=>{
+        const open=panel.classList.toggle('open'); closeAll(open?panel:null);
+        if(open) setTimeout(()=>input?.focus(),30);
+      });
+    }
+    if(input && results){
+      const render=()=>{
+        const q=input.value.trim().toLowerCase();
+        const hits=q?pages.filter(x=>(x.title+' '+x.url).toLowerCase().includes(q)).slice(0,20):[];
+        results.innerHTML=hits.map(x=>'<a href="'+x.url.replace(/"/g,'&quot;')+'">'+
+          x.title.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</a>').join('') ||
+          (q?'<div style="padding:10px;color:#64748b">No matching pages found.</div>':'');
+      };
+      input.addEventListener('input',render);
+    }
+    document.addEventListener('keydown',e=>{
+      if(e.key==='Escape') closeAll(null);
+    });
+    document.addEventListener('click',e=>{
+      if(!e.target.closest('.edusambam-nav') && !e.target.closest('.edusambam-mobile-menu') && !e.target.closest('.edusambam-search-panel')) closeAll(null);
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',setup); else setup();
+})();
+</script>
+<footer class="edusambam-unified-footer" aria-label="EDUSAMBAM site footer">
+<div class="footer-top">
+<div class="footer-brand">
+<div class="edusambam-footer-brand-row">
+<a class="edusambam-footer-logo-link" href="index.html" aria-label="EDUSAMBAM home">
+<img alt="EDUSAMBAM" class="edusambam-brand-mark edusambam-footer-logo" src="logo-icon-full-white.png" style="width:auto;height:64px;max-width:240px;object-fit:contain;background:none;border-radius:0;"/>
+</a>
+</div>
+<p class="edusambam-footer-statement">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</p>
+<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a></div>
+</div>
+<div class="footer-col"><h4>Learning</h4><ul><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li></ul></div>
+<div class="footer-col"><h4>Practice &amp; Assessment</h4><ul>
+<li><a href="index.html#interactive-activities">Interactive Activities</a></li>
+<li><a href="assessment-arena.html">ASSESSMENT ARENA</a></li>
+<li><a href="assessment-arena.html">What Is Assessment?</a></li>
+<li><a href="index.html#about">Learn Your Way</a></li>
+<li><a href="index.html#resources">Resources &amp; Downloads</a></li>
+</ul></div>
+<div class="footer-col"><h4>About EDUSAMBAM</h4><ul>
+<li><a href="index.html#about-edusambam">What EDUSAMBAM Is</a></li>
+<li><a href="index.html#mission">Our Mission</a></li>
+<li><a href="index.html#team">The Team</a></li>
+<li><a href="mailto:info.edusambam@gmail.com">Contact Us</a></li>
+<li><a href="mailto:feedback.edusambam@gmail.com?subject=EDUSAMBAM%20Feedback">Give Feedback</a></li>
+<li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+</ul></div>
+</div>
+<div class="footer-bottom"><p>© 2026 EDUSAMBAM · Learning resources, practice and assessment.</p><ul class="footer-bottom-links">
+<li><a href="#top">Back to Top</a></li>
+<li><a href="index.html#mission">Mission</a></li>
+<li><a href="index.html#team">Team</a></li>
+<li><a href="index.html#resources">Resources</a></li>
+</ul></div>
+</footer></body>
+</html>
