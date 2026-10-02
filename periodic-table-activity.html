@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Analytics 4 — EDUSAMBAM -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y35DW0V4HQ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-Y35DW0V4HQ');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interactive Periodic Table | EDUSAMBAM</title>
+<meta name="description" content="Explore the periodic table element by element in this free interactive chemistry activity from EDUSAMBAM."/>
+<link href="https://edusambam.com/periodic-table-activity.html" rel="canonical"/>
+<link href="favicon.webp" rel="icon" type="image/webp"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+
+<style>
+:root{--bg:#12305c;--deep:#12305c;--panel:#1a3f78;--line:#3f6296;--gold:#c9a24b;--ivory:#fff;--mut:#c8d4e6;--ink:#12305c;--ok:#5fcf8f;--no:#ff8b7a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ivory);font:17px/1.5 "Segoe UI",Roboto,Helvetica,Arial,sans-serif;padding:20px 16px 40px}
+main{max-width:900px;margin:0 auto}
+.brand{color:var(--gold);font-weight:700;letter-spacing:.04em;font-size:15px;margin:0 0 4px}
+h1{font-size:2rem;line-height:1.15;margin:0 0 14px}
+p{margin:0 0 12px;color:var(--mut)}
+p b{color:var(--ivory)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;margin-top:16px}
+button{font:inherit;font-weight:700;border-radius:999px;border:2px solid var(--gold);background:var(--gold);color:var(--ink);padding:8px 16px;cursor:pointer}
+button.ghost{background:none;color:var(--gold);font-size:.95rem}
+button.ghost[aria-pressed=true]{background:var(--gold);color:var(--ink)}
+button:focus-visible{outline:3px solid var(--ivory);outline-offset:2px}
+.row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.wrap{overflow-x:auto;padding-bottom:8px}
+#tbl{display:grid;grid-template-columns:repeat(18,44px);grid-template-rows:16px repeat(7,50px) 12px 50px 50px;gap:3px;width:max-content}
+.gh{font-size:11px;text-align:center;color:var(--mut)}
+.fl{font-size:11px;color:var(--mut);align-self:center;text-align:right;padding-right:6px}
+.cell{width:44px;height:50px;padding:2px 0 0;border-radius:4px;border:1px solid transparent;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#0c1f3d;line-height:1.1;font-weight:400}
+.cell i{font-size:9px;font-style:normal}
+.cell b{font-size:15px}
+.cell u{font-size:8px;text-decoration:none}
+.empty{background:transparent;border:1px dashed var(--line);color:var(--mut)}
+.cell:disabled{cursor:default}
+.dim{opacity:.22}
+.sel{outline:3px solid #fff;outline-offset:1px}
+.cell.bad{background:#7a2b2b;border-color:var(--no)}
+.ka{background:#f28b82}.ke{background:#f6b26b}.kt{background:#f4d35e}.kp{background:#8fd3a8}.km{background:#4fc3b0}.kn{background:#7cc0f5}.kg{background:#b39ddb}.kl{background:#ff9ad5}.kc{background:#d99a6c}
+.sw{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+#det{display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap;margin-bottom:12px}
+.big{width:110px;height:120px;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#0c1f3d;flex:none}
+.big i{font-style:normal;font-size:18px}.big b{font-size:44px;line-height:1.1}.big u{font-size:16px;text-decoration:none}
+dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:2px 14px;font-size:.98rem}
+dt{color:var(--mut)}dd{margin:0;font-weight:600}
+#prompt{font-size:1.15rem;color:var(--ivory);margin-bottom:8px}
+.stats{color:var(--gold);font-weight:700;font-size:.95rem;margin-bottom:8px}
+#msg{min-height:1.5em;color:var(--ivory)}
+.result{border:2px solid var(--gold);border-radius:8px;padding:12px;text-align:center;margin-bottom:12px}
+.result strong{color:var(--gold);font-size:1.25rem}
+[hidden]{display:none!important}
+footer{margin-top:22px;text-align:center;color:var(--mut);font-size:.95rem}
+footer a{color:var(--gold)}
+</style>
+</head>
+<body>
+<main>
+<a aria-label="EDUSAMBAM home" href="index.html" style="display:inline-block;line-height:0"><img alt="EDUSAMBAM" src="logo-icon-full-white.png" style="height:52px;width:auto;max-width:100%;display:block"/></a>
+<p class="brand" style="margin-top:8px">Chemistry</p>
+<h1>The Periodic Table, Element by Element</h1>
+<p>The periodic table arranges all 118 known elements in order of <b>atomic number</b>, which is the number of protons in an atom. Rows are called <b>periods</b> and columns are called <b>groups</b>. Elements in the same group behave in similar ways.</p>
+<p>Use <b>Explore</b> to learn about each element, then use <b>Fill the table</b> to place elements in the right cell from memory. Swipe sideways to see the whole table on a phone.</p>
+
+<section class="card" aria-label="Periodic table activity">
+<div class="row" id="modes">
+<button class="ghost" data-m="ex" aria-pressed="true">Explore</button>
+<button class="ghost" data-m="fill" aria-pressed="false">Fill the table</button>
+</div>
+
+<div id="exbox">
+<div id="det"></div>
+<div class="row" id="legend"></div>
+</div>
+
+<div id="fillbox" hidden>
+<div class="row" id="levels"></div>
+<p id="prompt"></p>
+<div class="stats" id="stats"></div>
+<div class="row"><button class="ghost" id="hintb" onclick="hint()">Hint</button></div>
+<p id="msg" aria-live="polite"></p>
+<div class="result" id="res" hidden><strong id="rt"></strong><p id="rp"></p><button onclick="startFill(fill.n)">Play again</button></div>
+</div>
+
+<div class="wrap"><div id="tbl"></div></div>
+<p style="margin:8px 0 0;font-size:.9rem">Atomic masses are rounded. For elements with no stable form (technetium, promethium and polonium onward), the mass number of the most stable known isotope is shown.</p>
+</section>
+<footer>More free science resources at <a href="https://edusambam.com">edusambam.com</a></footer>
+</main>
+
+<script>
+const $=i=>document.getElementById(i);
+const RAW="H Hydrogen 1.008|He Helium 4.003|Li Lithium 6.94|Be Beryllium 9.012|B Boron 10.81|C Carbon 12.011|N Nitrogen 14.007|O Oxygen 15.999|F Fluorine 18.998|Ne Neon 20.180|Na Sodium 22.990|Mg Magnesium 24.305|Al Aluminium 26.982|Si Silicon 28.085|P Phosphorus 30.974|S Sulphur 32.06|Cl Chlorine 35.45|Ar Argon 39.948|K Potassium 39.098|Ca Calcium 40.078|Sc Scandium 44.956|Ti Titanium 47.867|V Vanadium 50.942|Cr Chromium 51.996|Mn Manganese 54.938|Fe Iron 55.845|Co Cobalt 58.933|Ni Nickel 58.693|Cu Copper 63.546|Zn Zinc 65.38|Ga Gallium 69.723|Ge Germanium 72.630|As Arsenic 74.922|Se Selenium 78.971|Br Bromine 79.904|Kr Krypton 83.798|Rb Rubidium 85.468|Sr Strontium 87.62|Y Yttrium 88.906|Zr Zirconium 91.224|Nb Niobium 92.906|Mo Molybdenum 95.95|Tc Technetium 98|Ru Ruthenium 101.07|Rh Rhodium 102.91|Pd Palladium 106.42|Ag Silver 107.87|Cd Cadmium 112.41|In Indium 114.82|Sn Tin 118.71|Sb Antimony 121.76|Te Tellurium 127.60|I Iodine 126.90|Xe Xenon 131.29|Cs Caesium 132.91|Ba Barium 137.33|La Lanthanum 138.91|Ce Cerium 140.12|Pr Praseodymium 140.91|Nd Neodymium 144.24|Pm Promethium 145|Sm Samarium 150.36|Eu Europium 151.96|Gd Gadolinium 157.25|Tb Terbium 158.93|Dy Dysprosium 162.50|Ho Holmium 164.93|Er Erbium 167.26|Tm Thulium 168.93|Yb Ytterbium 173.05|Lu Lutetium 174.97|Hf Hafnium 178.49|Ta Tantalum 180.95|W Tungsten 183.84|Re Rhenium 186.21|Os Osmium 190.23|Ir Iridium 192.22|Pt Platinum 195.08|Au Gold 196.97|Hg Mercury 200.59|Tl Thallium 204.38|Pb Lead 207.2|Bi Bismuth 208.98|Po Polonium 209|At Astatine 210|Rn Radon 222|Fr Francium 223|Ra Radium 226|Ac Actinium 227|Th Thorium 232.04|Pa Protactinium 231.04|U Uranium 238.03|Np Neptunium 237|Pu Plutonium 244|Am Americium 243|Cm Curium 247|Bk Berkelium 247|Cf Californium 251|Es Einsteinium 252|Fm Fermium 257|Md Mendelevium 258|No Nobelium 259|Lr Lawrencium 266|Rf Rutherfordium 267|Db Dubnium 268|Sg Seaborgium 269|Bh Bohrium 270|Hs Hassium 277|Mt Meitnerium 278|Ds Darmstadtium 281|Rg Roentgenium 282|Cn Copernicium 285|Nh Nihonium 286|Fl Flerovium 289|Mc Moscovium 290|Lv Livermorium 293|Ts Tennessine 294|Og Oganesson 294";
+const E=RAW.split("|").map((s,i)=>{const[a,b,c]=s.split(" ");return{z:i+1,s:a,n:b,m:c}});
+const CN={a:"Alkali metal",e:"Alkaline earth metal",t:"Transition metal",p:"Post-transition metal",m:"Metalloid",n:"Nonmetal",g:"Noble gas",l:"Lanthanide",c:"Actinide"};
+
+function pos(z){
+ if(z===1)return[1,1];if(z===2)return[1,18];
+ if(z<=4)return[2,z-2];if(z<=10)return[2,z+8];
+ if(z<=12)return[3,z-10];if(z<=18)return[3,z];
+ if(z<=36)return[4,z-18];if(z<=54)return[5,z-36];
+ if(z<=56)return[6,z-54];if(z<=70)return[9,z-54];
+ if(z<=86)return[6,z-68];if(z<=88)return[7,z-86];
+ if(z<=102)return[10,z-86];return[7,z-100];
+}
+function cat(z){
+ if([3,11,19,37,55,87].includes(z))return"a";
+ if([4,12,20,38,56,88].includes(z))return"e";
+ if([2,10,18,36,54,86,118].includes(z))return"g";
+ if([5,14,32,33,51,52,85].includes(z))return"m";
+ if([1,6,7,8,9,15,16,17,34,35,53,117].includes(z))return"n";
+ if(z>=57&&z<=71)return"l";
+ if(z>=89&&z<=103)return"c";
+ if((z>=21&&z<=30)||(z>=39&&z<=48)||(z>=72&&z<=80)||(z>=104&&z<=112))return"t";
+ return"p";
+}
+const per=z=>z<=2?1:z<=10?2:z<=18?3:z<=36?4:z<=54?5:z<=86?6:7;
+const isF=z=>(z>=57&&z<=70)||(z>=89&&z<=102);
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+
+let mode="ex",sel=1,act=null,fill=null;
+const T=$("tbl");
+let h="";
+for(let g=1;g<=18;g++)h+=`<div class="gh" style="grid-column:${g};grid-row:1">${g}</div>`;
+h+=`<div class="fl" style="grid-row:10;grid-column:1/3">Lanthanides</div><div class="fl" style="grid-row:11;grid-column:1/3">Actinides</div>`;
+E.forEach(e=>{const[r,c]=pos(e.z);h+=`<button class="cell" data-z="${e.z}" style="grid-row:${r+1};grid-column:${c}"></button>`});
+T.innerHTML=h;
+$("legend").innerHTML=Object.keys(CN).map(k=>`<button class="ghost" data-k="${k}" aria-pressed="false"><span class="sw k${k}"></span>${CN[k]}</button>`).join("");
+$("levels").innerHTML=[20,36,54,118].map(n=>`<button class="ghost" data-n="${n}" aria-pressed="false">${n===118?"All 118":"First "+n}</button>`).join("");
+
+function paint(){
+ T.querySelectorAll(".cell").forEach(b=>{
+  const z=+b.dataset.z,e=E[z-1],k=cat(z);
+  let show=true,dim=false;
+  if(mode==="fill"){show=fill.f.has(z);dim=z>fill.n}
+  else dim=act&&act!==k;
+  b.className="cell"+(show?" k"+k:" empty")+(dim?" dim":"")+(mode==="ex"&&z===sel?" sel":"");
+  b.innerHTML=show?`<i>${z}</i><b>${e.s}</b><u>${e.m}</u>`:"";
+  b.disabled=mode==="fill"&&(dim||show);
+  b.setAttribute("aria-label",show?`${e.n}, atomic number ${z}`:"Empty cell");
+ });
+}
+function detail(){
+ const z=sel,e=E[z-1],k=cat(z),c=pos(z)[1],m=+e.m,note=(z===43||z===61||z>=84)?" (most stable isotope)":"";
+ $("det").innerHTML=`<div class="big k${k}"><i>${z}</i><b>${e.s}</b><u>${e.m}</u></div>
+ <dl><dt>Name</dt><dd>${e.n}</dd><dt>Atomic number</dt><dd>${z} (protons)</dd><dt>Atomic mass</dt><dd>${e.m}${note}</dd>
+ <dt>Electrons</dt><dd>${z} in a neutral atom</dd><dt>Neutrons</dt><dd>about ${Math.round(m)-z}</dd>
+ <dt>Category</dt><dd>${CN[k]}</dd><dt>Period</dt><dd>${per(z)}</dd><dt>Group</dt><dd>${isF(z)?"f-block (no group number)":c}</dd></dl>`;
+}
+function setMode(m){
+ mode=m;$("exbox").hidden=m!=="ex";$("fillbox").hidden=m!=="fill";
+ document.querySelectorAll("#modes button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.m===m));
+ if(m==="fill")startFill(fill?fill.n:20);else{detail();paint()}
+}
+function startFill(n){
+ fill={n,f:new Set(),q:shuffle(E.slice(0,n).map(e=>e.z)),i:0,m:0};
+ document.querySelectorAll("#levels button").forEach(b=>b.setAttribute("aria-pressed",+b.dataset.n===n));
+ $("res").hidden=true;$("hintb").hidden=false;$("msg").textContent="Tap the empty cell where this element belongs.";
+ ask();paint();
+}
+function ask(){
+ const n=fill.n;
+ $("stats").textContent=`Placed ${fill.f.size} of ${n}   Mistakes ${fill.m}`;
+ if(fill.i>=n){
+  $("prompt").textContent="Table complete.";$("hintb").hidden=true;$("msg").textContent="";
+  $("rt").textContent=fill.m===0?"Perfect, no mistakes":"All "+n+" elements placed";
+  $("rp").textContent=`You placed ${n} elements with ${fill.m} mistake${fill.m===1?"":"s"}. Try a bigger level or play again.`;
+  $("res").hidden=false;return;
+ }
+ const e=E[fill.q[fill.i]-1];
+ $("prompt").innerHTML=`Place <b>${e.n}</b> (${e.s}), atomic mass ${e.m}`;
+}
+function hint(){
+ const z=fill.q[fill.i],[r,c]=pos(z);
+ $("msg").textContent=isF(z)?`Hint: atomic number ${z}. It is in the ${z<=70?"lanthanide":"actinide"} row below the table.`:`Hint: atomic number ${z}, period ${per(z)}, group ${c}.`;
+}
+T.onclick=ev=>{
+ const b=ev.target.closest(".cell");if(!b)return;const z=+b.dataset.z;
+ if(mode==="ex"){sel=z;detail();paint();return}
+ if(fill.i>=fill.n)return;
+ if(z===fill.q[fill.i]){fill.f.add(z);fill.i++;$("msg").textContent="Correct.";ask();paint()}
+ else{fill.m++;b.classList.add("bad");setTimeout(()=>b.classList.remove("bad"),500);$("msg").textContent="Not there. Try again or tap Hint.";ask()}
+};
+$("modes").onclick=e=>{const b=e.target.closest("button");if(b)setMode(b.dataset.m)};
+$("levels").onclick=e=>{const b=e.target.closest("button");if(b)startFill(+b.dataset.n)};
+$("legend").onclick=e=>{const b=e.target.closest("button");if(!b)return;
+ act=act===b.dataset.k?null:b.dataset.k;
+ document.querySelectorAll("#legend button").forEach(x=>x.setAttribute("aria-pressed",x.dataset.k===act));paint()};
+detail();paint();
+</script>
+</body>
+</html>

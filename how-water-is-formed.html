@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Analytics 4 — EDUSAMBAM -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y35DW0V4HQ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-Y35DW0V4HQ');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Is Water Formed? Interactive Activity | EDUSAMBAM</title>
+<meta name="description" content="Build a water molecule from hydrogen and oxygen atoms and see how bonding works. A free interactive chemistry activity from EDUSAMBAM."/>
+<link href="https://edusambam.com/how-water-is-formed.html" rel="canonical"/>
+<link href="favicon.webp" rel="icon" type="image/webp"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+
+<style>
+:root{--bg:#12305c;--deep:#12305c;--panel:#1a3f78;--line:#3f6296;--gold:#c9a24b;--ivory:#fff;--mut:#c8d4e6;--ink:#12305c;--ok:#5fcf8f;--no:#ff8b7a}
+*{box-sizing:border-box}
+html{scroll-padding-top:12px}
+body{margin:0;background:var(--bg);color:var(--ivory);font:17px/1.6 "Segoe UI",Roboto,Helvetica,Arial,sans-serif;padding:20px 16px 40px}
+main{max-width:660px;margin:0 auto}
+.brand{color:var(--gold);font-weight:700;letter-spacing:.04em;font-size:15px;margin:0 0 4px}
+h1{font-size:2rem;line-height:1.15;margin:0 0 14px}
+p{margin:0 0 12px;color:var(--mut)}
+p b,li b{color:var(--ivory)}
+.eqn{display:inline-block;background:var(--panel);border:1px solid var(--gold);border-radius:6px;padding:6px 14px;color:var(--ivory);font-size:1.15rem;font-weight:700}
+ol.glance{margin:0 0 22px;padding-left:22px;color:var(--mut)}
+ol.glance li{margin-bottom:2px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px}
+#steps{list-style:none;display:flex;gap:8px;margin:0 0 12px;padding:0}
+#steps li{width:34px;height:34px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;font-weight:700;color:var(--mut)}
+#steps li.d{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+#steps li.o{border-color:var(--gold);color:var(--gold)}
+h2{font-size:1.25rem;margin:0 0 4px}
+#ins{margin-bottom:10px}
+svg{display:block;width:100%;height:auto;background:var(--deep);border-radius:8px}
+svg g{transition:transform .8s ease,opacity .5s ease}
+.atom text{font-weight:700;text-anchor:middle;dominant-baseline:central;pointer-events:none}
+.atom.click{cursor:pointer}
+.tap .body{stroke:var(--gold);stroke-width:3;stroke-dasharray:5 4}
+.e{fill:var(--gold);transition:opacity .4s}
+#fb{min-height:3.2em;margin:10px 0 0;color:var(--ivory)}
+#ctrl{margin-top:12px}
+button{font:inherit;font-weight:700;border-radius:999px;border:2px solid var(--gold);background:var(--gold);color:var(--ink);padding:9px 20px;cursor:pointer}
+button.ghost{background:none;color:var(--gold)}
+button:disabled{opacity:.4;cursor:not-allowed}
+button:focus-visible,.atom:focus-visible{outline:3px solid var(--ivory);outline-offset:3px}
+.nav{display:flex;justify-content:space-between;margin-top:16px}
+.co{display:inline-flex;align-items:center;gap:6px;margin:0 4px}
+.co button{width:34px;height:34px;padding:0;font-size:1.2rem}
+.co output{min-width:1.2em;text-align:center;font-size:1.4rem;font-weight:700;color:var(--gold)}
+.eq{font-size:1.25rem;font-weight:700;display:flex;flex-wrap:wrap;align-items:center;gap:6px 2px;margin-bottom:10px}
+.tally{width:100%;border-collapse:collapse;font-size:.95rem;margin-bottom:8px}
+.tally th,.tally td{border-bottom:1px solid var(--line);padding:4px 6px;text-align:left}
+.q{margin-bottom:16px}
+.q p{color:var(--ivory);font-weight:700;margin-bottom:6px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opts button{background:none;color:var(--ivory);border-color:var(--line)}
+.opts button.ok{border-color:var(--ok);color:var(--ok)}
+.opts button.no{border-color:var(--no);color:var(--no)}
+.why{font-size:.95rem;margin:6px 0 0}
+.score{border:2px solid var(--gold);border-radius:8px;padding:12px;text-align:center}
+.score strong{font-size:1.4rem;color:var(--gold)}
+footer{margin-top:22px;text-align:center;color:var(--mut);font-size:.95rem}
+footer a{color:var(--gold)}
+@media (prefers-reduced-motion:reduce){svg g,.e{transition:none}}
+</style>
+</head>
+<body>
+<main>
+<a aria-label="EDUSAMBAM home" href="index.html" style="display:inline-block;line-height:0"><img alt="EDUSAMBAM" src="logo-icon-full-white.png" style="height:52px;width:auto;max-width:100%;display:block"/></a>
+<p class="brand" style="margin-top:8px">Chemistry</p>
+<h1>How Is Water Formed?</h1>
+<p>Water is a <b>compound</b> made from two elements, hydrogen and oxygen. One water molecule has <b>2 hydrogen atoms</b> joined to <b>1 oxygen atom</b>, so its formula is <b>H₂O</b>.</p>
+<p>The atoms are held together by <b>covalent bonds</b>, where atoms share electrons. Water forms when hydrogen gas burns in oxygen and releases heat. Chemists write the reaction like this:</p>
+<p><span class="eqn">2H₂ + O₂ → 2H₂O</span></p>
+<p>In this activity you will build a water molecule yourself:</p>
+<ol class="glance">
+<li>Meet the hydrogen and oxygen atoms.</li>
+<li>Gather 2 hydrogen atoms and 1 oxygen atom.</li>
+<li>Bond them by sharing electrons.</li>
+<li>Balance the chemical equation.</li>
+<li>Test yourself with a quick quiz.</li>
+</ol>
+
+<section class="card" aria-label="Water molecule activity">
+<ul id="steps"></ul>
+<h2 id="sh"></h2>
+<p id="ins"></p>
+<svg viewBox="0 0 320 230" role="img" aria-label="Model of hydrogen and oxygen atoms">
+<g id="bonds" style="opacity:0">
+<line x1="160" y1="90" x2="100.7" y2="135.9" stroke="#c9a24b" stroke-width="3"/>
+<line x1="160" y1="90" x2="219.3" y2="135.9" stroke="#c9a24b" stroke-width="3"/>
+<circle class="e" cx="133.1" cy="116.6" r="4"/><circle class="e" cx="127.7" cy="109.4" r="4"/>
+<circle class="e" cx="186.9" cy="116.6" r="4"/><circle class="e" cx="192.3" cy="109.4" r="4"/>
+</g>
+<g id="gO" class="atom" tabindex="0" role="button" aria-label="Oxygen atom" onclick="tap('O')" onkeydown="if(event.key==='Enter'||event.key===' ')tap('O')">
+<circle class="body" r="30" fill="#e8604c"/><text font-size="24" fill="#fff">O</text>
+</g>
+<g id="gH1" class="atom" tabindex="0" role="button" aria-label="Hydrogen atom" onclick="tap('H')" onkeydown="if(event.key==='Enter'||event.key===' ')tap('H')">
+<circle class="body" r="20" fill="#f3eedf"/><text font-size="18" fill="#0c1f3d">H</text><circle class="e hd" cx="0" cy="-29" r="4"/>
+</g>
+<g id="gH2" class="atom">
+<circle class="body" r="20" fill="#f3eedf"/><text font-size="18" fill="#0c1f3d">H</text><circle class="e hd" cx="0" cy="-29" r="4"/>
+</g>
+<text id="lbl" x="160" y="212" text-anchor="middle" font-size="22" font-weight="700" fill="#f3eedf" style="opacity:0;transition:opacity .5s">H₂O (water)</text>
+</svg>
+<p id="fb" aria-live="polite"></p>
+<div id="ctrl"></div>
+<div class="nav"><button class="ghost" id="bk" onclick="go(S.step-1)">Back</button><button id="nx" onclick="go(S.step+1)">Next</button></div>
+</section>
+<footer>More free science resources at <a href="https://edusambam.com">edusambam.com</a></footer>
+</main>
+
+<script>
+const $=i=>document.getElementById(i);
+const fresh=()=>({step:0,tH:0,tO:0,h:0,bonded:0,c:[1,1,1],eq:0,q:[null,null,null]});
+let S=fresh();
+const T=[
+{n:"Meet the atoms",i:"Tap the hydrogen atom and the oxygen atom to learn about them."},
+{n:"Gather the atoms",i:"One water molecule needs 2 hydrogen atoms and 1 oxygen atom. Tap the button to add hydrogen atoms."},
+{n:"Share electrons",i:"Atoms join by sharing electrons. Tap the button to bond the hydrogen atoms to oxygen."},
+{n:"Balance the equation",i:"Use + and − to set how many molecules take part, so both sides have the same number of each atom."},
+{n:"Quick check",i:"Answer the three questions to test what you learned."}
+];
+const Q=[
+{q:"What is the chemical formula of water?",o:["HO₂","H₂O","H₂O₂","OH"],a:1,w:"Water has 2 hydrogen atoms and 1 oxygen atom."},
+{q:"What do hydrogen and oxygen share in a water molecule?",o:["Protons","Neutrons","Electrons"],a:2,w:"Sharing electrons makes a covalent bond."},
+{q:"How many hydrogen atoms are needed to make 2 water molecules?",o:["2","3","4","6"],a:2,w:"Each molecule needs 2 hydrogen atoms, so 2 molecules need 4."}
+];
+// oxygen outer electrons
+(function(){const a=[0,50,-50,90,-90,180];let h="";a.forEach(d=>{const r=d*Math.PI/180;h+=`<circle class="e" cx="${(42*Math.sin(r)).toFixed(1)}" cy="${(-42*Math.cos(r)).toFixed(1)}" r="4"/>`});$('gO').insertAdjacentHTML('beforeend',h)})();
+
+function put(id,x,y,show){const e=$(id);e.style.transform=`translate(${x}px,${y}px)`;e.style.opacity=show?1:0;e.style.pointerEvents=show?'auto':'none'}
+function tap(k){if(S.step)return;S[k==='H'?'tH':'tO']=1;
+ let m=k==='H'?"<b>Hydrogen (H)</b> has 1 electron. It needs 2 to be stable, so it needs 1 more.":"<b>Oxygen (O)</b> has 6 outer electrons. It needs 8 to be stable, so it needs 2 more.";
+ if(S.tH&&S.tO)m+=" Both atoms need more electrons, and sharing solves that. Tap Next.";
+ render();$('fb').innerHTML=m}
+function addH(){S.h++;render();$('fb').textContent=S.h<2?"One hydrogen atom added. Add one more.":"You now have 2 hydrogen atoms and 1 oxygen atom. Tap Next."}
+function bond(){S.bonded=1;render();$('fb').innerHTML="Each hydrogen shares a pair of electrons with oxygen. Oxygen now has 8 electrons around it and each hydrogen has 2, so all three atoms are stable. The molecule is bent, with an angle of about 104.5°. Tap Next."}
+function adj(i,d){S.c[i]=Math.min(6,Math.max(1,S.c[i]+d));render()}
+function ans(q,o){if(S.q[q]!==null)return;S.q[q]=o;render()}
+function go(n){S.step=Math.max(0,Math.min(4,n));$('fb').textContent="";render()}
+function restart(){S=fresh();$('fb').textContent="";render()}
+
+const co=i=>`<span class="co"><button aria-label="Decrease" onclick="adj(${i},-1)">−</button><output>${S.c[i]}</output><button aria-label="Increase" onclick="adj(${i},1)">+</button></span>`;
+const C=[
+()=>"",
+()=>`<button onclick="addH()" ${S.h>=2?"disabled":""}>Add hydrogen atom</button> <span>Hydrogen atoms: ${S.h} of 2</span>`,
+()=>`<button onclick="bond()" ${S.bonded?"disabled":""}>Bond the atoms</button>`,
+()=>{const[a,b,c]=S.c;S.eq=(a===2&&b===1&&c===2)?1:0;
+ const hL=2*a,hR=2*c,oL=2*b,oR=c;
+ const row=(n,l,r)=>`<tr><td>${n}</td><td>${l}</td><td>${r}</td><td>${l===r?"Matches":"Does not match"}</td></tr>`;
+ let m;if(S.eq)m="Balanced. 2H₂ + O₂ → 2H₂O uses 4 hydrogen atoms and 2 oxygen atoms on each side. Tap Next.";
+ else if(a===c&&2*b===c)m="Balanced, but use the smallest whole numbers possible.";
+ else m="Not balanced yet. Change a number until every row says Matches.";
+ return `<div class="eq">${co(0)}H₂ + ${co(1)}O₂ → ${co(2)}H₂O</div>
+ <table class="tally"><tr><th>Atom</th><th>Left</th><th>Right</th><th></th></tr>${row("Hydrogen",hL,hR)}${row("Oxygen",oL,oR)}</table><p>${m}</p>`},
+()=>{let h=Q.map((x,qi)=>{const s=S.q[qi];
+ const ob=x.o.map((t,oi)=>`<button ${s!==null?"disabled":""} class="${s!==null?(oi===x.a?"ok":oi===s?"no":""):""}" onclick="ans(${qi},${oi})">${t}</button>`).join("");
+ const w=s===null?"":`<p class="why">${s===x.a?"Correct. ":"Not quite. "}${x.w}</p>`;
+ return `<div class="q"><p>${qi+1}. ${x.q}</p><div class="opts">${ob}</div>${w}</div>`}).join("");
+ if(S.q.every(v=>v!==null)){const n=S.q.filter((v,i)=>v===Q[i].a).length;
+ h+=`<div class="score"><strong>You scored ${n} out of 3</strong><p>${n===3?"Excellent. You understand how water is formed.":"Go back through the steps and try again."}</p><button onclick="restart()">Start again</button></div>`}
+ return h}
+];
+function render(){
+ const s=S.step,b=s>=2&&S.bonded;
+ put('gO',s?160:230,s?90:110,1);
+ const p1=s===0?[85,110]:b?[100.7,135.9]:[55,180];
+ put('gH1',p1[0],p1[1],s===0||S.h>=1);
+ const p2=b?[219.3,135.9]:[265,180];
+ put('gH2',p2[0],p2[1],s>=1&&S.h>=2);
+ $('bonds').style.opacity=b?1:0;$('lbl').style.opacity=b?1:0;
+ document.querySelectorAll('.hd').forEach(e=>e.style.opacity=b?0:1);
+ $('gO').classList.toggle('tap',s===0&&!S.tO);$('gH1').classList.toggle('tap',s===0&&!S.tH);
+ $('gO').classList.toggle('click',s===0);$('gH1').classList.toggle('click',s===0);
+ $('steps').innerHTML=T.map((t,i)=>`<li class="${i<s?'d':i===s?'o':''}" ${i===s?'aria-current="step"':''}>${i+1}</li>`).join('');
+ $('sh').textContent=`Step ${s+1}: ${T[s].n}`;$('ins').textContent=T[s].i;
+ $('ctrl').innerHTML=C[s]();
+ const done=[S.tH&&S.tO,S.h>=2,S.bonded,S.eq,0][s];
+ $('bk').disabled=s===0;$('nx').hidden=s===4;$('nx').disabled=!done;
+}
+render();
+</script>
+</body>
+</html>

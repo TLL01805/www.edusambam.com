@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Analytics 4 — EDUSAMBAM -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y35DW0V4HQ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-Y35DW0V4HQ');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matching Pairs Activity | EDUSAMBAM</title>
+<meta name="description" content="Match pairs across Chemistry, English, Computer and Nutrition topics to practise key facts. A free interactive activity from EDUSAMBAM."/>
+<link href="https://edusambam.com/matching-pairs.html" rel="canonical"/>
+<link href="favicon.webp" rel="icon" type="image/webp"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+
+<style>
+:root{--bg:#12305c;--deep:#12305c;--panel:#1a3f78;--line:#3f6296;--gold:#c9a24b;--ivory:#fff;--mut:#c8d4e6;--ink:#12305c;--ok:#5fcf8f;--no:#ff8b7a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ivory);font:17px/1.5 "Segoe UI",Roboto,Helvetica,Arial,sans-serif;padding:20px 16px 40px}
+main{max-width:660px;margin:0 auto}
+.brand{color:var(--gold);font-weight:700;letter-spacing:.04em;font-size:15px;margin:0 0 4px}
+h1{font-size:2rem;line-height:1.15;margin:0 0 14px}
+p{margin:0 0 12px;color:var(--mut)}
+p b{color:var(--ivory)}
+ol{margin:0 0 20px;padding-left:22px;color:var(--mut)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+button{font:inherit;font-weight:700;border-radius:999px;border:2px solid var(--gold);background:var(--gold);color:var(--ink);padding:8px 16px;cursor:pointer}
+.tabs button{background:none;color:var(--gold);font-size:.95rem}
+.tabs button[aria-pressed=true]{background:var(--gold);color:var(--ink)}
+button:focus-visible{outline:3px solid var(--ivory);outline-offset:3px}
+.stats{display:flex;justify-content:space-between;gap:8px;margin-bottom:12px;font-weight:700;color:var(--gold);font-size:.95rem}
+#grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+#grid h2{font-size:1rem;margin:0;color:var(--mut)}
+.it{width:100%;min-height:58px;border-radius:8px;text-align:left;background:var(--deep);color:var(--ivory);border:2px solid var(--line);padding:8px 12px;font-weight:600;font-size:.98rem;transition:border-color .2s,background .2s}
+.it.sel{border-color:var(--gold);background:#24508f}
+.it.ok{border-color:var(--ok);color:var(--ok);background:#0f3a3a;opacity:1;cursor:default}
+.it.bad{border-color:var(--no);color:var(--no)}
+#msg{min-height:1.6em;margin:12px 0 0;color:var(--ivory)}
+.result{margin-top:12px;border:2px solid var(--gold);border-radius:8px;padding:14px;text-align:center}
+.result strong{font-size:1.3rem;color:var(--gold);display:block;margin-bottom:6px}
+.result[hidden]{display:none}
+footer{margin-top:22px;text-align:center;color:var(--mut);font-size:.95rem}
+footer a{color:var(--gold)}
+@media (prefers-reduced-motion:reduce){.it{transition:none}}
+</style>
+</head>
+<body>
+<main>
+<a aria-label="EDUSAMBAM home" href="index.html" style="display:inline-block;line-height:0"><img alt="EDUSAMBAM" src="logo-icon-full-white.png" style="height:52px;width:auto;max-width:100%;display:block"/></a>
+<p class="brand" style="margin-top:8px">Practice</p>
+<h1>Matching Pairs</h1>
+<p>Matching pairs helps you remember facts by linking two ideas together, such as a word and its meaning. Choose a topic and match all six pairs in as few tries as you can.</p>
+<ol>
+<li>Tap an item in the left column.</li>
+<li>Tap the item in the right column that goes with it.</li>
+<li>A correct match turns green. A wrong match flashes red, so try again.</li>
+</ol>
+
+<section class="card" aria-label="Matching pairs game">
+<div class="tabs" id="tabs"></div>
+<div class="stats"><span id="st1">Matched: 0 of 6</span><span id="st2">Tries: 0</span><span id="st3">Time: 0s</span></div>
+<div id="grid"></div>
+<p id="msg" aria-live="polite"></p>
+<div class="result" id="res" hidden>
+<strong id="rt"></strong><p id="rp"></p>
+<button onclick="start()">Play again</button>
+</div>
+</section>
+<footer>More free practice at <a href="https://edusambam.com">edusambam.com</a></footer>
+</main>
+
+<script>
+const $=i=>document.getElementById(i);
+const D={
+chem:{n:"Chemistry",l:"Element",r:"Symbol",p:[["Sodium","Na"],["Potassium","K"],["Iron","Fe"],["Gold","Au"],["Silver","Ag"],["Copper","Cu"]]},
+eng:{n:"English",l:"Word",r:"Meaning",p:[["Abundant","Plentiful"],["Reluctant","Unwilling"],["Brief","Short"],["Ancient","Very old"],["Generous","Giving freely"],["Fragile","Easily broken"]]},
+comp:{n:"Computer",l:"Part",r:"Job",p:[["CPU","Processes instructions"],["RAM","Temporary memory"],["Hard drive","Stores files long term"],["Monitor","Shows output"],["Keyboard","Enters text"],["Router","Connects devices to the internet"]]},
+nut:{n:"Nutrition",l:"Nutrient",r:"What it does",p:[["Protein","Builds and repairs muscle"],["Carbohydrates","Main source of energy"],["Calcium","Strengthens bones and teeth"],["Iron","Helps make red blood cells"],["Fibre","Helps digestion"],["Vitamin C","Helps wounds heal"]]}
+};
+let key="chem",sel=null,matched=0,tries=0,t0=0,tm=null,lock=false;
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+
+$('tabs').innerHTML=Object.keys(D).map(k=>`<button data-k="${k}" aria-pressed="false">${D[k].n}</button>`).join("");
+$('tabs').onclick=e=>{const b=e.target.closest("button");if(b)start(b.dataset.k)};
+
+function start(k){
+ if(k)key=k;const d=D[key];
+ sel=null;matched=0;tries=0;t0=0;lock=false;clearInterval(tm);
+ const ids=d.p.map((_,i)=>i),L=shuffle(ids),R=shuffle(ids);
+ let h=`<h2>${d.l}</h2><h2>${d.r}</h2>`;
+ L.forEach((id,i)=>{h+=`<button class="it" data-side="l" data-id="${id}">${d.p[id][0]}</button><button class="it" data-side="r" data-id="${R[i]}">${d.p[R[i]][1]}</button>`});
+ $('grid').innerHTML=h;
+ document.querySelectorAll("#tabs button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.k===key));
+ $('res').hidden=true;$('msg').textContent="Tap an item to begin.";upd();
+}
+function upd(){
+ $('st1').textContent=`Matched: ${matched} of 6`;$('st2').textContent=`Tries: ${tries}`;
+ $('st3').textContent=`Time: ${t0?Math.round((Date.now()-t0)/1000):0}s`;
+}
+$('grid').onclick=e=>{
+ const b=e.target.closest("button.it");
+ if(!b||lock||b.classList.contains("ok"))return;
+ if(!t0){t0=Date.now();tm=setInterval(upd,500)}
+ if(!sel||sel.dataset.side===b.dataset.side){
+  if(sel)sel.classList.remove("sel");
+  if(sel===b){sel=null;return}
+  sel=b;b.classList.add("sel");return;
+ }
+ tries++;
+ if(sel.dataset.id===b.dataset.id){
+  const a=sel;[a,b].forEach(x=>{x.classList.remove("sel");x.classList.add("ok");x.disabled=true});
+  sel=null;matched++;$('msg').textContent="Correct match.";
+  if(matched===6)finish();
+ }else{
+  lock=true;const a=sel;a.classList.add("bad");b.classList.add("bad");
+  $('msg').textContent="Not a match. Try again.";
+  setTimeout(()=>{a.classList.remove("bad","sel");b.classList.remove("bad");sel=null;lock=false},700);
+ }
+ upd();
+};
+function finish(){
+ clearInterval(tm);const s=Math.round((Date.now()-t0)/1000);
+ $('rt').textContent=tries===6?"Perfect round":"All pairs matched";
+ $('rp').textContent=`You matched 6 pairs in ${tries} tries and ${s} seconds. ${tries===6?"You made no mistakes.":"Play again and try to use fewer tries."} You can also pick another topic above.`;
+ $('res').hidden=false;$('msg').textContent="";upd();
+}
+start("chem");
+</script>
+</body>
+</html>

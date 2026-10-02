@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Analytics 4 — EDUSAMBAM -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y35DW0V4HQ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-Y35DW0V4HQ');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Use a Vernier Caliper | EDUSAMBAM</title>
+<meta name="description" content="Learn to read a vernier caliper step by step with this free interactive physics activity from EDUSAMBAM."/>
+<link href="https://edusambam.com/vernier-caliper.html" rel="canonical"/>
+<link href="favicon.webp" rel="icon" type="image/webp"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+
+<style>
+:root{--bg:#12305c;--deep:#12305c;--panel:#1a3f78;--line:#3f6296;--gold:#c9a24b;--ivory:#fff;--mut:#c8d4e6;--ink:#12305c;--ok:#5fcf8f;--no:#ff8b7a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ivory);font:17px/1.6 "Segoe UI",Roboto,Helvetica,Arial,sans-serif;padding:20px 16px 40px}
+main{max-width:660px;margin:0 auto}
+.brand{color:var(--gold);font-weight:700;letter-spacing:.04em;font-size:15px;margin:0 0 4px}
+h1{font-size:2rem;line-height:1.15;margin:0 0 14px}
+p{margin:0 0 12px;color:var(--mut)}
+p b,li b{color:var(--ivory)}
+.formulas{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin:0 0 14px;font-weight:700;line-height:1.9}
+.formulas span{color:var(--gold)}
+ol.glance{margin:0 0 22px;padding-left:22px;color:var(--mut)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px}
+#steps{list-style:none;display:flex;gap:8px;margin:0 0 12px;padding:0}
+#steps li{width:34px;height:34px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;font-weight:700}
+#steps li.d{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+#steps li.o{border-color:var(--gold);color:var(--gold)}
+h2{font-size:1.25rem;margin:0 0 4px}
+svg{display:block;width:100%;height:auto;background:var(--deep);border-radius:8px}
+.pt{cursor:pointer}
+.pt:focus-visible{outline:3px solid var(--gold)}
+.bd{fill:#fff}.bd.v{fill:var(--gold)}
+.bn{font-size:11px;font-weight:700;text-anchor:middle;dominant-baseline:central;fill:var(--ink);pointer-events:none}
+.cap{font-size:10px;fill:#fff}
+.mn{font-size:8.5px;font-weight:700;fill:var(--ink);text-anchor:middle}
+#fb{min-height:3.4em;margin:10px 0 0;color:var(--ivory)}
+button{font:inherit;font-weight:700;border-radius:999px;border:2px solid var(--gold);background:var(--gold);color:var(--ink);padding:9px 20px;cursor:pointer}
+button.ghost{background:none;color:var(--gold)}
+button:disabled{opacity:.4;cursor:not-allowed}
+button:focus-visible,input:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.row{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.opts{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.opts button{background:var(--deep);color:var(--ivory);border-color:var(--line)}
+.opts button.ok{border-color:var(--ok);color:var(--ok)}
+input[type=range]{width:100%;accent-color:var(--gold)}
+input[type=number]{width:96px;font:inherit;padding:8px;border-radius:8px;border:2px solid var(--line);background:#fff;color:var(--ink)}
+label{font-weight:700}
+.nav{display:flex;justify-content:space-between;margin-top:16px}
+.ans{background:var(--deep);border:2px solid var(--gold);border-radius:8px;padding:12px;margin-top:12px}
+.ans p{color:var(--ivory);margin:0 0 4px}
+[hidden]{display:none!important}
+footer{margin-top:22px;text-align:center;color:var(--mut);font-size:.95rem}
+footer a{color:var(--gold)}
+</style>
+</head>
+<body>
+<main>
+<a aria-label="EDUSAMBAM home" href="index.html" style="display:inline-block;line-height:0"><img alt="EDUSAMBAM" src="logo-icon-full-white.png" style="height:52px;width:auto;max-width:100%;display:block"/></a>
+<p class="brand" style="margin-top:8px">Physics</p>
+<h1>How to Use a Vernier Caliper</h1>
+<p>A vernier caliper measures lengths more precisely than a ruler. It can measure the <b>outside diameter</b> of a wire or ball, the <b>inside diameter</b> of a pipe, and the <b>depth</b> of a hole, correct to 0.1 mm (0.01 cm).</p>
+<div class="formulas">
+<div>Least count = <span>1 MSD − 1 VSD</span></div>
+<div>Observed reading = <span>MSR + (VSR × least count)</span></div>
+<div>Correct reading = <span>observed reading − zero error</span></div>
+</div>
+<p>MSD means main scale division, VSD means vernier scale division, MSR is the main scale reading and VSR is the vernier scale reading. This activity uses a caliper where <b>10 VSD = 9 MSD</b> and <b>1 MSD = 1 mm</b>.</p>
+<ol class="glance">
+<li>Learn the parts of the vernier caliper.</li>
+<li>Find the least count.</li>
+<li>Check the zero error.</li>
+<li>Close the jaws on an object.</li>
+<li>Read both scales and correct the result.</li>
+</ol>
+
+<section class="card" aria-label="Vernier caliper activity">
+<ul id="steps"></ul>
+<h2 id="sh"></h2>
+<p id="ins"></p>
+<svg id="pv" viewBox="0 0 320 140" role="img" aria-label="Vernier caliper with numbered parts"></svg>
+<svg id="rv" viewBox="0 0 340 240" role="img" aria-label="Caliper jaws and magnified scales" hidden></svg>
+<p id="fb" aria-live="polite"></p>
+<div id="ctrl"></div>
+<div class="nav"><button class="ghost" id="bk" onclick="go(S.step-1)">Back</button><button id="nx" onclick="go(S.step+1)">Next</button></div>
+</section>
+<footer>More free physics resources at <a href="https://edusambam.com">edusambam.com</a></footer>
+</main>
+
+<script>
+const $=i=>document.getElementById(i);
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+const f1=v=>(v/10).toFixed(1)+" mm";
+const sg=v=>(v>0?"+":v<0?"−":"")+(Math.abs(v)/10).toFixed(1)+" mm";
+const PT=[
+["Main scale","The fixed scale along the beam. Each small division is 1 mm."],
+["Vernier scale","The sliding scale. Its 10 divisions together are 9 mm long, which lets you read to 0.1 mm."],
+["Lower jaws","Used for outside measurements, such as the diameter of a wire or a ball."],
+["Upper jaws","Used for inside measurements, such as the inner diameter of a pipe or a cup."],
+["Depth rod","Slides out from the end of the beam. Used to measure the depth of a hole or a bottle."],
+["Locking screw","Tighten it to fix the sliding jaw, so the reading does not change while you read it."]
+];
+const T=[
+{n:"Learn the parts",i:"Tap each numbered circle on the vernier caliper to see what that part does."},
+{n:"Find the least count",i:"The least count is the smallest length the caliper can measure. Here 10 vernier divisions (VSD) fit exactly into 9 main scale divisions (MSD)."},
+{n:"Check the zero error",i:"Close the jaws with nothing between them. A perfect caliper reads 0.0 mm. Look at where the vernier zero sits and which vernier line matches a main scale line."},
+{n:"Close the jaws on an object",i:"Slide the movable jaw until it just touches the metal rod. Use the slider for big moves and the buttons for tiny moves."},
+{n:"Read and calculate",i:"Read both scales, then subtract the zero error to get the true diameter of the rod."}
+];
+function fresh(){
+ const z=[2,3,1,-1,-2][Math.random()*5|0],d=150+(Math.random()*251|0);
+ return{step:0,seen:new Set(),lc:0,zok:0,rd:0,fin:0,hint:0,z,d,R:d+z+100,
+  zo:shuffle([z,-z,z>0?10-z:10+z,0]),fo:shuffle([d,d+z,d+2*z,d-z])};
+}
+let S=fresh();
+const obs=()=>S.d+S.z;
+
+/* parts diagram */
+(function(){
+ const g=(i,shape,x,y)=>`<g class="pt" data-i="${i}" tabindex="0" role="button" aria-label="Part ${i+1}">${shape}<circle class="bd" id="b${i}" cx="${x}" cy="${y}" r="10"/><text class="bn" x="${x}" y="${y}">${i+1}</text></g>`;
+ let t="";for(let m=0;m<=30;m++){const x=22+m*9;t+=`<line x1="${x}" y1="90" x2="${x}" y2="${m%5===0?78:83}" stroke="#0d2266"/>`}
+ let v="";for(let j=0;j<=10;j++){const x=102+j*8.1;v+=`<line x1="${x}" y1="90" x2="${x}" y2="${j%5===0?101:96}" stroke="#0d2266"/>`}
+ let h="";
+ h+=g(4,`<rect x="190" y="93" width="110" height="5" fill="#d5dcec" stroke="#0d2266"/>`,255,96);
+ h+=g(0,`<rect x="20" y="60" width="280" height="30" rx="3" fill="#e3e8f5" stroke="#0d2266"/>${t}`,250,70);
+ h+=g(2,`<rect x="20" y="90" width="14" height="40" rx="2" fill="#d5dcec" stroke="#0d2266"/><rect x="92" y="112" width="14" height="18" rx="2" fill="#d5dcec" stroke="#0d2266"/>`,27,116);
+ h+=g(3,`<rect x="20" y="34" width="12" height="26" rx="2" fill="#d5dcec" stroke="#0d2266"/><rect x="92" y="38" width="10" height="24" rx="2" fill="#d5dcec" stroke="#0d2266"/>`,26,46);
+ h+=g(1,`<rect x="92" y="58" width="100" height="56" rx="4" fill="#aab8e6" stroke="#0d2266"/><rect x="100" y="90" width="84" height="16" fill="#eef1f9"/>${v}`,142,100);
+ h+=g(5,`<circle cx="168" cy="72" r="9" fill="#8fa1d9" stroke="#0d2266"/><line x1="162" y1="72" x2="174" y2="72" stroke="#0d2266" stroke-width="2"/>`,168,72);
+ $("pv").innerHTML=h;
+ $("pv").onclick=e=>{const p=e.target.closest(".pt");if(p)part(+p.dataset.i)};
+ $("pv").onkeydown=e=>{if(e.key==="Enter"||e.key===" "){const p=e.target.closest(".pt");if(p){e.preventDefault();part(+p.dataset.i)}}};
+})();
+function part(i){
+ if(S.step!==0)return;S.seen.add(i);
+ $("fb").innerHTML=`<b>${i+1}. ${PT[i][0]}:</b> ${PT[i][1]}`+(S.seen.size===6?" You have met all six parts. Tap Next.":"");
+ draw();
+}
+
+/* jaws and magnified scales; R is in tenths of a millimetre */
+function readSvg(R,obj,hint){
+ const K=5,x0=20,Rm=R/10;
+ let h=`<text class="cap" x="10" y="14">Caliper jaws (side view)</text>`;
+ h+=`<rect x="12" y="66" width="320" height="20" rx="3" fill="#dfe5f5"/>`;
+ for(let m=0;m<=60;m++){const x=x0+m*K;h+=`<line x1="${x}" y1="86" x2="${x}" y2="${m%10===0?74:m%5===0?78:81}" stroke="#0d2266"/>`}
+ for(let c=0;c<=6;c++)h+=`<text class="cap" x="${x0+c*50}" y="63" text-anchor="middle">${c}</text>`;
+ h+=`<text class="cap" x="335" y="63" text-anchor="end">cm</text>`;
+ const xm=x0+Rm*K;
+ h+=`<rect x="12" y="22" width="8" height="44" rx="2" fill="#c5cde0"/>`;
+ if(obj!=null)h+=`<rect x="20" y="34" width="${obj/10*K}" height="24" rx="5" fill="#d9884a"/><text class="cap" x="60" y="47" style="fill:#0d2266">Rod</text>`;
+ h+=`<rect x="${xm}" y="22" width="8" height="44" rx="2" fill="#dfe5f5"/><rect x="${xm}" y="66" width="44" height="20" rx="3" fill="#aab8e6" opacity=".9"/>`;
+ const M0=R<0?-1:Math.floor(R/10)-1,K2=25,X0=20,xv=X0+(Rm-M0)*K2;
+ h+=`<text class="cap" x="10" y="112">Magnified view: main scale (mm) above, vernier scale below</text>`;
+ h+=`<rect x="10" y="118" width="322" height="46" rx="3" fill="#e6ebf6"/>`;
+ for(let m=M0;m<=M0+12;m++){if(m<0)continue;const x=X0+(m-M0)*K2;
+  h+=`<line x1="${x}" y1="164" x2="${x}" y2="${m%5===0?142:150}" stroke="#0d2266" stroke-width="1.4"/><text class="mn" x="${x}" y="134">${m}</text>`}
+ h+=`<rect x="${xv-8}" y="164" width="241" height="52" rx="3" fill="#b9ccf7" stroke="#0d2266"/><line x1="10" y1="164" x2="332" y2="164" stroke="#0d2266" stroke-width="1.6"/>`;
+ for(let j=0;j<=10;j++){const x=xv+j*22.5;
+  h+=`<line x1="${x}" y1="164" x2="${x}" y2="${j%5===0?186:178}" stroke="#0d2266" stroke-width="1.4"/><text class="mn" x="${x}" y="202" ${j===0?'style="fill:#c1121f;font-size:11px"':""}>${j}</text>`}
+ if(hint){const n=((R%10)+10)%10,x=xv+n*22.5;h+=`<line x1="${x}" y1="140" x2="${x}" y2="190" stroke="#c1121f" stroke-width="2.6"/>`}
+ h+=`<text class="cap" x="10" y="232">Vernier zero (red) points to the MSR on the main scale.</text>`;
+ return h;
+}
+
+/* controls */
+const hb=()=>`<button class="ghost" id="hb" onclick="hnt()">${S.hint?"Hide":"Show"} hint line</button>`;
+const C=[
+()=>`<p id="pc"></p>`,
+()=>{const o=["0.9 mm","0.1 mm","0.01 mm","1 mm"];
+ return `<div class="ans"><p>10 VSD = 9 MSD, and 1 MSD = 1 mm</p><p>So 1 VSD = 9 ÷ 10 = 0.9 mm</p></div>
+ <p style="margin-top:12px"><b>Least count = 1 MSD − 1 VSD = 1 mm − 0.9 mm = ?</b></p>
+ <div class="opts">${o.map((t,i)=>`<button ${S.lc?"disabled":""} class="${S.lc&&i===1?"ok":""}" onclick="lcp(${i})">${t}</button>`).join("")}</div>`},
+()=>`<div class="row">${hb()}</div><p><b>What is the zero error?</b></p><div class="opts">${S.zo.map(v=>`<button ${S.zok?"disabled":""} class="${S.zok&&v===S.z?"ok":""}" onclick="zpick(${v})">${v===0?"0.0 mm":sg(v)}</button>`).join("")}</div>
+ <p style="font-size:.95rem">Rule: if the vernier zero is to the right of the main zero, the error is positive: error = n × 0.1 mm, where n is the matching vernier line. If it is to the left, the error is negative: error = −(10 − n) × 0.1 mm.</p>`,
+()=>`<label for="rs">Slide the jaw</label><input type="range" id="rs" min="0" max="600" step="1" value="${S.R}" oninput="turn(+this.value)">
+ <div class="row"><button class="ghost" onclick="nudge(-10)">− 1 mm</button><button class="ghost" onclick="nudge(-1)">− 0.1 mm</button><button class="ghost" onclick="nudge(1)">+ 0.1 mm</button><button class="ghost" onclick="nudge(10)">+ 1 mm</button></div><p id="st"></p>`,
+()=>{const m=Math.floor(obs()/10),n=obs()%10;
+ let h=`<div class="row">${hb()}</div><div class="row"><label>MSR (mm) <input type="number" id="msr" inputmode="numeric" min="0" max="60" ${S.rd?`value="${m}" disabled`:""}></label>
+ <label>VSR (line no.) <input type="number" id="csr" inputmode="numeric" min="0" max="10" ${S.rd?`value="${n}" disabled`:""}></label></div>`;
+ if(!S.rd)return h+`<button onclick="chk()">Check my readings</button>`;
+ h+=`<div class="ans"><p>Observed reading = ${m} + (${n} × 0.1) = <b>${f1(obs())}</b></p></div>
+ <p style="margin-top:12px"><b>Correct diameter = observed reading − zero error (${sg(S.z)}) = ?</b></p>
+ <div class="opts">${S.fo.map(v=>`<button ${S.fin?"disabled":""} class="${S.fin&&v===S.d?"ok":""}" onclick="fpick(${v})">${f1(v)}</button>`).join("")}</div>`;
+ if(S.fin)h+=`<div class="ans"><p><b>Worked solution</b></p><p>Least count = 1 − 0.9 = 0.1 mm</p><p>Zero error = ${sg(S.z)}</p><p>Observed = ${m} + ${n} × 0.1 = ${f1(obs())}</p><p>Correct diameter = ${f1(obs())} − (${sg(S.z)}) = <b>${f1(S.d)}</b> = ${(S.d/100).toFixed(2)} cm</p></div><div class="row"><button onclick="again()">Try another rod</button></div>`;
+ return h}
+];
+function hnt(){S.hint=S.hint?0:1;$("hb").textContent=(S.hint?"Hide":"Show")+" hint line";draw()}
+function lcp(i){if(i===1){S.lc=1;$("fb").textContent="Correct. Least count = 0.1 mm, which is 0.01 cm. Tap Next."}else $("fb").textContent="Not quite. First find 1 VSD (9 ÷ 10 = 0.9 mm), then subtract it from 1 MSD (1 mm).";render()}
+function zpick(v){
+ if(v===S.z){S.zok=1;$("fb").textContent=`Correct. The zero error is ${sg(S.z)}. Every reading will be off by this amount, so you must correct it. Tap Next.`}
+ else $("fb").textContent="Not quite. Check whether the vernier zero is left or right of the main zero, then use the rule below.";
+ render()}
+function turn(v){S.R=v;draw();$("st").textContent=stat()}
+function nudge(d){S.R=Math.min(600,Math.max(0,S.R+d));$("rs").value=S.R;draw();$("st").textContent=stat()}
+function stat(){const o=obs();return S.R>o?"The jaws are open. Keep sliding the movable jaw in.":S.R<o?"Too tight! The jaw is squeezing the rod. Slide back a little.":"Touching! Tighten the locking screw, then tap Next to read the scales."}
+function chk(){
+ const a=$("msr").value,b=$("csr").value;
+ if(a===""||b===""){$("fb").textContent="Enter both readings first.";return}
+ const m=+a,n=+b,em=Math.floor(obs()/10),en=obs()%10;
+ if(m===em&&n===en){S.rd=1;$("fb").textContent="Correct readings. Now correct the result for zero error.";render()}
+ else $("fb").textContent=m!==em?"Check the MSR: it is the last main scale mark to the left of the red vernier zero.":"Check the VSR: it is the vernier line that lines up exactly with a main scale line."}
+function fpick(v){
+ if(v===S.d){S.fin=1;$("fb").textContent="Correct. You have measured the rod like a physicist."}
+ else $("fb").textContent="Not quite. The zero error must be subtracted from the observed reading. Subtracting a negative error makes the result larger.";
+ render()}
+function again(){S=fresh();$("fb").textContent="";render()}
+function go(n){S.step=Math.max(0,Math.min(4,n));$("fb").textContent="";render()}
+
+function draw(){
+ const s=S.step;
+ if(s===0)$("pc").textContent=`Parts explored: ${S.seen.size} of 6. Next unlocks after you explore all six.`;
+ $("pv").hidden=s>1;$("rv").hidden=s<2;
+ S.seen.forEach(i=>$("b"+i).classList.add("v"));
+ if(s===2)$("rv").innerHTML=readSvg(S.z,null,S.hint);
+ if(s===3)$("rv").innerHTML=readSvg(S.R,S.d,0);
+ if(s===4)$("rv").innerHTML=readSvg(obs(),S.d,S.hint);
+ const done=[S.seen.size===6,S.lc,S.zok,S.R===obs(),0][s];
+ $("bk").disabled=s===0;$("nx").hidden=s===4;$("nx").disabled=!done;
+}
+function render(){
+ const s=S.step;
+ $("steps").innerHTML=T.map((t,i)=>`<li class="${i<s?"d":i===s?"o":""}" ${i===s?'aria-current="step"':""}>${i+1}</li>`).join("");
+ $("sh").textContent=`Step ${s+1}: ${T[s].n}`;$("ins").textContent=T[s].i;
+ $("ctrl").innerHTML=C[s]();
+ draw();
+ if(s===3)$("st").textContent=stat();
+}
+render();
+</script>
+</body>
+</html>

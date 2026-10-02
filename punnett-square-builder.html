@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Analytics 4 — EDUSAMBAM -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y35DW0V4HQ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-Y35DW0V4HQ');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Punnett Square Builder | EDUSAMBAM</title>
+<meta name="description" content="Build Punnett squares and predict the genes of offspring step by step. A free interactive genetics activity from EDUSAMBAM."/>
+<link href="https://edusambam.com/punnett-square-builder.html" rel="canonical"/>
+<link href="favicon.webp" rel="icon" type="image/webp"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+
+<style>
+:root{--bg:#12305c;--deep:#12305c;--panel:#1a3f78;--line:#3f6296;--gold:#c9a24b;--ivory:#fff;--mut:#c8d4e6;--ink:#12305c;--ok:#5fcf8f;--no:#ff8b7a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ivory);font:17px/1.6 "Segoe UI",Roboto,Helvetica,Arial,sans-serif;padding:20px 16px 40px}
+main{max-width:660px;margin:0 auto}
+.brand{color:var(--gold);font-weight:700;letter-spacing:.04em;font-size:15px;margin:0 0 4px}
+h1{font-size:2rem;line-height:1.15;margin:0 0 14px}
+p{margin:0 0 12px;color:var(--mut)}
+p b,li b{color:var(--ivory)}
+.rule{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin:0 0 14px;font-weight:700}
+.rule span{color:var(--gold)}
+ol.glance{margin:0 0 22px;padding-left:22px;color:var(--mut)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px}
+#steps{list-style:none;display:flex;gap:8px;margin:0 0 12px;padding:0}
+#steps li{width:34px;height:34px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;font-weight:700}
+#steps li.d{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+#steps li.o{border-color:var(--gold);color:var(--gold)}
+h2{font-size:1.25rem;margin:0 0 4px}
+svg{display:block;width:100%;height:auto;background:var(--deep);border-radius:8px}
+.cell{cursor:pointer}
+.cell:focus-visible{outline:3px solid var(--gold)}
+.cap{font-size:11px;fill:#fff}
+#fb{margin:0 0 10px;padding:8px 12px;border-radius:8px;border:2px solid var(--line);background:var(--deep);color:var(--ivory)}
+#fb:empty{display:none}
+#fb.ok{border-color:var(--ok)}
+#fb.bad{border-color:var(--no)}
+#fb.bad.a{animation:sh1 .4s}
+#fb.bad.b{animation:sh2 .4s}
+@keyframes sh1{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+@keyframes sh2{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+button{font:inherit;font-weight:700;border-radius:999px;border:2px solid var(--gold);background:var(--gold);color:var(--ink);padding:9px 20px;cursor:pointer}
+button.ghost{background:none;color:var(--gold)}
+button:disabled{opacity:.4;cursor:not-allowed}
+button:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:8px 0}
+.row>span{font-weight:700;min-width:96px}
+.opts{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.opts button,.row button.t{background:var(--deep);color:var(--ivory);border-color:var(--line)}
+.opts button.ok{border-color:var(--ok);color:var(--ok)}
+.opts button[aria-pressed=true],.row button.t[aria-pressed=true]{border-color:var(--gold);color:var(--gold)}
+.nav{display:flex;justify-content:space-between;margin-top:16px}
+#hn{text-align:right;font-size:.9rem;margin:6px 0 0}
+.ans{background:var(--deep);border:2px solid var(--gold);border-radius:8px;padding:12px;margin:8px 0}
+.ans p{color:var(--ivory);margin:0 0 4px}
+.lg{font-size:.92rem}
+[hidden]{display:none!important}
+footer{margin-top:22px;text-align:center;color:var(--mut);font-size:.95rem}
+footer a{color:var(--gold)}
+@media (prefers-reduced-motion:reduce){#fb.bad{animation:none!important}}
+</style>
+</head>
+<body>
+<main>
+<a aria-label="EDUSAMBAM home" href="index.html" style="display:inline-block;line-height:0"><img alt="EDUSAMBAM" src="logo-icon-full-white.png" style="height:52px;width:auto;max-width:100%;display:block"/></a>
+<p class="brand" style="margin-top:8px">Biology</p>
+<h1>Punnett Square Builder</h1>
+<p>Gregor Mendel discovered the rules of inheritance by breeding pea plants. A <b>Punnett square</b> is a simple grid that predicts the possible offspring of a cross. In this activity the gene is for plant height: <b>T = tall</b> (dominant) and <b>t = dwarf</b> (recessive).</p>
+<div class="rule">Each parent gives <span>one allele</span> to each offspring → the box shows the offspring's <span>genotype</span></div>
+<ol class="glance">
+<li>Learn the key words of genetics.</li>
+<li>Work out the gametes each parent makes.</li>
+<li>Fill in the Punnett square.</li>
+<li>Read the genotype and phenotype ratios.</li>
+<li>Grow real plants and compare them with your prediction.</li>
+</ol>
+
+<section class="card" aria-label="Punnett square activity">
+<ul id="steps"></ul>
+<h2 id="sh"></h2>
+<p id="ins"></p>
+<p id="fb" aria-live="polite"></p>
+<svg id="sv" viewBox="0 0 340 250" role="img" aria-label="Genetics diagram"></svg>
+<div id="ctrl"></div>
+<div class="nav"><button class="ghost" id="bk" onclick="go(S.step-1)">Back</button><button id="nx" onclick="go(S.step+1)">Next</button></div>
+<p id="hn"></p>
+</section>
+<footer>More free biology resources at <a href="https://edusambam.com">edusambam.com</a></footer>
+</main>
+
+<script>
+const $=i=>document.getElementById(i);
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+let sn=0;
+function say(h,k){const f=$("fb");f.innerHTML=h;f.className=(k||"")+(k==="bad"?(sn++%2?" a":" b"):"")}
+const TERMS=[
+["Gene","A gene is a section of DNA that controls a characteristic, such as plant height."],
+["Allele","An allele is one version of a gene. Pea plants have a tall allele (T) and a dwarf allele (t)."],
+["Dominant","A dominant allele shows up even when only one copy is present. It is written as a capital letter: T."],
+["Recessive","A recessive allele shows only when two copies are present. It is written as a small letter: t."],
+["Genotype","The genotype is the pair of alleles an organism has, such as TT, Tt or tt."],
+["Phenotype","The phenotype is what you can see, such as a tall plant or a dwarf plant."],
+["Homozygous","Homozygous means both alleles are the same: TT (dominant) or tt (recessive)."],
+["Heterozygous","Heterozygous means the two alleles are different: Tt. The plant is tall, because T is dominant."]
+];
+const CR=[["Tt","Tt"],["Tt","tt"],["TT","tt"],["TT","Tt"],["tt","Tt"]];
+const GN=["","TT","Tt","tt"];
+const nm=(a,b)=>a===a.toUpperCase()?a+b:b+a;
+const T=[
+{n:"Learn the words",i:"Tap each key word to see what it means. The Next button unlocks after you explore all eight."},
+{n:"Find the gametes",i:"Gametes are sex cells. Each gamete carries only one allele from its parent's pair. Tap the gametes each parent can make."},
+{n:"Fill the Punnett square",i:"Each box combines the allele from its column with the allele from its row. Tap a box to change its genotype."},
+{n:"Read the results",i:"Look at your completed square and work out the ratios."},
+{n:"Grow the plants",i:"Real breeding is random. Grow plants from this cross and compare them with your prediction."}
+];
+function fresh(){
+ const cr=CR[Math.random()*CR.length|0],t=[];
+ for(let r=0;r<2;r++)for(let c=0;c<2;c++)t.push(nm(cr[0][c],cr[1][r]));
+ const cnt=g=>t.filter(x=>x===g).length,tall=cnt("TT")+cnt("Tt");
+ const gt=`${cnt("TT")} : ${cnt("Tt")} : ${cnt("tt")}`,pt=`${tall} : ${4-tall}`;
+ const GD=["1 : 2 : 1","0 : 2 : 2","0 : 4 : 0","4 : 0 : 0","2 : 2 : 0","0 : 0 : 4","2 : 0 : 2","3 : 1 : 0"].filter(x=>x!==gt);
+ const PD=["4 : 0","3 : 1","2 : 2","1 : 3","0 : 4"].filter(x=>x!==pt);
+ return{step:0,seen:new Set(),cr,t,gt,pt,o1:shuffle([gt,...shuffle(GD).slice(0,3)]),o2:shuffle([pt,...shuffle(PD).slice(0,3)]),
+  g1:new Set(),g2:new Set(),gok:0,c:[0,0,0,0],cs:[null,null,null,null],pk:0,r1:0,r2:0,pop:[]};
+}
+let S=fresh();
+
+const plant=(x,y,tall,s=1)=>{const h=(tall?46:22)*s;
+ return `<line x1="${x}" y1="${y}" x2="${x}" y2="${y-h}" stroke="#5fcf8f" stroke-width="${4*s}" stroke-linecap="round"/><ellipse cx="${x-7*s}" cy="${y-h*.55}" rx="${7*s}" ry="${3.5*s}" fill="#5fcf8f" transform="rotate(-25 ${x-7*s} ${y-h*.55})"/><ellipse cx="${x+7*s}" cy="${y-h*.4}" rx="${7*s}" ry="${3.5*s}" fill="#5fcf8f" transform="rotate(25 ${x+7*s} ${y-h*.4})"/><circle cx="${x}" cy="${y-h-2*s}" r="${5*s}" fill="#c9a24b"/>`};
+const chip=(x,y,a)=>`<circle cx="${x}" cy="${y}" r="15" fill="${a===a.toUpperCase()?"#c9a24b":"#8fb5ff"}"/><text x="${x}" y="${y+1}" text-anchor="middle" dominant-baseline="central" font-size="17" font-weight="700" fill="#12305c">${a}</text>`;
+
+function svg0(){
+ let h=`<text x="170" y="22" text-anchor="middle" class="cap">Two forms of one gene: height</text><line x1="20" y1="200" x2="320" y2="200" stroke="#3f6296" stroke-width="3"/>`;
+ h+=plant(100,200,1,2.2)+plant(240,200,0,2.2);
+ h+=`<text x="100" y="222" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">Tall plant</text><text x="100" y="240" text-anchor="middle" class="cap">genotype TT or Tt</text>`;
+ h+=`<text x="240" y="222" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">Dwarf plant</text><text x="240" y="240" text-anchor="middle" class="cap">genotype tt</text>`;
+ return h;
+}
+function svg1(){
+ let h=`<text x="170" y="20" text-anchor="middle" class="cap">Parent plants and the gametes they make</text><line x1="20" y1="165" x2="320" y2="165" stroke="#3f6296" stroke-width="3"/>`;
+ [[85,S.cr[0],S.g1,"Parent 1"],[255,S.cr[1],S.g2,"Parent 2"]].forEach(([x,g,set,l])=>{
+  h+=plant(x,165,g.includes("T"),1.5);
+  h+=`<text x="${x}" y="188" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">${l}: ${g}</text><text x="${x}" y="207" text-anchor="middle" class="cap">Gametes chosen:</text>`;
+  const a=[...set].sort();a.forEach((al,i)=>{h+=chip(x+(i-(a.length-1)/2)*38,232,al)});
+ });
+ return h;
+}
+function pun(res){
+ let h=`<text x="205" y="16" text-anchor="middle" class="cap">Parent 1 gametes (${S.cr[0]})</text><text transform="rotate(-90 14 150)" x="14" y="150" text-anchor="middle" class="cap">Parent 2 gametes (${S.cr[1]})</text>`;
+ for(let k=0;k<2;k++){h+=chip(160+90*k,44,S.cr[0][k])+chip(85,106+88*k,S.cr[1][k])}
+ for(let i=0;i<4;i++){
+  const c=i&1,r=i>>1,x=115+90*c,y=62+88*r,g=res?S.t[i]:GN[S.c[i]],st=res?null:S.cs[i],tall=g.includes("T");
+  h+=`<rect class="cell" data-i="${i}" x="${x}" y="${y}" width="88" height="86" rx="8" fill="${res?(tall?"#1d5d54":"#4a3d1f"):"#1a3f78"}" stroke="${st==="ok"?"#5fcf8f":st==="bad"?"#ff8b7a":"#3f6296"}" stroke-width="${st?4:2}" tabindex="0" role="button" aria-label="Box ${i+1}"/>`;
+  if(g)h+=`<text x="${res?x+28:x+44}" y="${y+46}" text-anchor="middle" font-size="24" font-weight="700" fill="#fff" pointer-events="none">${g}</text>`;
+  else h+=`<text x="${x+44}" y="${y+48}" text-anchor="middle" font-size="26" fill="#3f6296" pointer-events="none">?</text>`;
+  if(res)h+=plant(x+64,y+58,tall,.7)+`<text x="${x+44}" y="${y+79}" text-anchor="middle" class="cap" pointer-events="none">${tall?"Tall":"Dwarf"}</text>`;
+ }
+ return h;
+}
+function svg4(){
+ let h=`<text x="170" y="18" text-anchor="middle" class="cap">${S.pop.length?"Each plant is one offspring":"Press the button to grow plants"}</text>`;
+ S.pop.forEach((tall,i)=>{h+=plant(14+(i%16)*20.5,58+((i/16)|0)*56,tall,.42)});
+ return h;
+}
+
+const okAll=()=>S.seen.size===8;
+const C=[
+()=>{const left=TERMS.filter(t=>!S.seen.has(t[0])).map(t=>t[0]);
+ return `<div class="opts">${TERMS.map(t=>`<button aria-pressed="${S.seen.has(t[0])}" onclick="term('${t[0]}')">${t[0]}</button>`).join("")}</div>
+ <p>Explored: <b>${8-left.length} of 8</b>. ${left.length?"Still to find: "+left.join(", ")+".":"All done! Tap Next."}</p>`},
+()=>{
+ const row=(k,l)=>`<div class="row"><span>${l} (${S.cr[k]})</span>${["T","t"].map(a=>`<button class="t" aria-pressed="${S["g"+(k+1)].has(a)}" ${S.gok?"disabled":""} onclick="tg(${k},'${a}')">${a}</button>`).join("")}</div>`;
+ return row(0,"Parent 1")+row(1,"Parent 2")+(S.gok?"":`<div class="row"><button onclick="chkG()">Check gametes</button></div>`)},
+()=>`<p class="lg">Tap a box to change it: empty → TT → Tt → tt → empty. Write the uppercase letter first.</p>${S.pk?"":`<div class="row"><button onclick="chkP()">Check my square</button></div>`}`,
+()=>{
+ const q=(n,txt,o,right,ok)=>`<p style="margin-top:10px"><b>${txt}</b></p><div class="opts">${o.map((v,i)=>`<button ${ok?"disabled":""} class="${ok&&v===right?"ok":""}" onclick="pk(${n},${i})">${v}</button>`).join("")}</div>`;
+ return `<div class="ans"><p>Boxes: ${S.t.join(", ")}</p></div>`+q(1,"Genotype ratio TT : Tt : tt = ?",S.o1,S.gt,S.r1)+q(2,"Phenotype ratio tall : dwarf = ?",S.o2,S.pt,S.r2)},
+()=>{const n=S.pop.length,t=S.pop.filter(v=>v).length;
+ return `<div class="ans"><p>Expected from your square: <b>${S.pt}</b> (tall : dwarf)</p><p>Your plants: <b>${t} tall : ${n-t} dwarf</b> (${n} plants)</p></div>
+ <div class="row"><button onclick="grow()" ${n>=48?"disabled":""}>Grow 16 plants</button><button class="ghost" onclick="clr()">Clear</button><button class="ghost" onclick="again()">Try another cross</button></div>`}
+];
+
+function term(n){S.seen.add(n);say(`<b>${n}:</b> ${TERMS.find(t=>t[0]===n)[1]}`+(okAll()?" You have explored all eight words. Tap Next.":""));render()}
+function tg(k,a){const s=S["g"+(k+1)];s.has(a)?s.delete(a):s.add(a);render()}
+function chkG(){
+ const eq=(a,b)=>a.size===b.size&&[...a].every(x=>b.has(x));
+ const e1=eq(S.g1,new Set(S.cr[0])),e2=eq(S.g2,new Set(S.cr[1]));
+ if(e1&&e2){S.gok=1;say("✓ <b>Correct!</b> A Tt parent makes two kinds of gamete (T and t), but a TT or tt parent makes only one kind. Tap Next.","ok")}
+ else say(`✗ ${!e1&&!e2?"Both parents need another look.":!e1?"Check Parent 1.":"Check Parent 2."} Each gamete gets just one allele from the parent's pair.`,"bad");
+ render()}
+function cellTap(i){if(S.step!==2||S.pk)return;S.c[i]=(S.c[i]+1)%4;S.cs[i]=null;draw()}
+function chkP(){
+ if(S.c.some(v=>!v)){say("✗ Fill all four boxes first. Tap a box to change it.","bad");return}
+ const pos=["top-left","top-right","bottom-left","bottom-right"];
+ S.cs=S.c.map((v,i)=>GN[v]===S.t[i]?"ok":"bad");
+ const bad=S.cs.map((x,i)=>x==="bad"?pos[i]:null).filter(Boolean);
+ if(!bad.length){S.pk=1;say("✓ <b>Correct!</b> Every box is right. Tap Next to read the results.","ok")}
+ else say(`✗ Check the ${bad.join(", ")} box${bad.length>1?"es":""}. Each box takes one allele from its column and one from its row.`,"bad");
+ render()}
+function pk(n,i){
+ const o=n===1?S.o1:S.o2,right=n===1?S.gt:S.pt;
+ if(o[i]===right){S["r"+n]=1;say(n===1?`✓ <b>Correct.</b> The genotype ratio TT : Tt : tt is ${S.gt}.`:`✓ <b>Correct.</b> The phenotype ratio is ${S.pt}. Every plant with a T looks tall, because T is dominant.`+(S.r1&&S.r2?" Tap Next.":""),"ok")}
+ else say("✗ Not quite. Count the boxes for each genotype. For phenotypes, remember that TT and Tt are both tall.","bad");
+ render()}
+function grow(){
+ for(let i=0;i<16;i++){const a=S.cr[0][Math.random()*2|0],b=S.cr[1][Math.random()*2|0];S.pop.push(a==="T"||b==="T")}
+ const n=S.pop.length,t=S.pop.filter(v=>v).length;
+ say(`Grew 16 more plants. Now: ${t} tall : ${n-t} dwarf.`+(n>=48?" Notice: the more plants you grow, the closer the numbers get to the expected ratio. That is why Mendel counted thousands of plants.":""));
+ render()}
+function clr(){S.pop=[];say("");render()}
+function again(){S=fresh();S.step=1;S.seen=new Set(TERMS.map(t=>t[0]));say("");render()}
+function go(n){S.step=Math.max(0,Math.min(4,n));say("");render()}
+
+function draw(){
+ const s=S.step;
+ $("sv").innerHTML=[svg0,svg1,()=>pun(0),()=>pun(1),svg4][s]();
+ const done=[okAll(),S.gok,S.pk,S.r1&&S.r2,1][s];
+ $("bk").disabled=s===0;$("nx").hidden=s===4;$("nx").disabled=!done;
+ $("hn").textContent=done||s===4?"":"Complete this step to unlock Next.";
+}
+function render(){
+ const s=S.step;
+ $("steps").innerHTML=T.map((t,i)=>`<li class="${i<s?"d":i===s?"o":""}" ${i===s?'aria-current="step"':""}>${i+1}</li>`).join("");
+ $("sh").textContent=`Step ${s+1}: ${T[s].n}`;$("ins").textContent=T[s].i;
+ $("ctrl").innerHTML=C[s]();
+ draw();
+}
+$("sv").onclick=e=>{const c=e.target.closest(".cell");if(c)cellTap(+c.dataset.i)};
+$("sv").onkeydown=e=>{if(e.key==="Enter"||e.key===" "){const c=e.target.closest(".cell");if(c){e.preventDefault();cellTap(+c.dataset.i)}}};
+render();
+</script>
+</body>
+</html>

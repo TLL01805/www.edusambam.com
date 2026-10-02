@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Analytics 4 — EDUSAMBAM -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y35DW0V4HQ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-Y35DW0V4HQ');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guess the Element Quiz | EDUSAMBAM</title>
+<meta name="description" content="Guess the chemical element from clues in this free interactive chemistry quiz from EDUSAMBAM."/>
+<link href="https://edusambam.com/guess-the-element.html" rel="canonical"/>
+<link href="favicon.webp" rel="icon" type="image/webp"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+
+<style>
+:root{--bg:#12305c;--deep:#12305c;--panel:#1a3f78;--line:#3f6296;--gold:#c9a24b;--ivory:#fff;--mut:#c8d4e6;--ink:#12305c;--ok:#5fcf8f;--no:#ff8b7a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ivory);font:17px/1.55 "Segoe UI",Roboto,Helvetica,Arial,sans-serif;padding:20px 16px 40px}
+main{max-width:660px;margin:0 auto}
+.brand{color:var(--gold);font-weight:700;letter-spacing:.04em;font-size:15px;margin:0 0 4px}
+h1{font-size:2rem;line-height:1.15;margin:0 0 14px}
+p{margin:0 0 12px;color:var(--mut)}
+p b{color:var(--ivory)}
+ol.how{margin:0 0 20px;padding-left:22px;color:var(--mut)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px}
+button{font:inherit;font-weight:700;border-radius:999px;border:2px solid var(--gold);background:var(--gold);color:var(--ink);padding:9px 20px;cursor:pointer}
+button.ghost{background:none;color:var(--gold)}
+button:disabled{cursor:default}
+button:focus-visible{outline:3px solid var(--ivory);outline-offset:3px}
+.stats{display:flex;justify-content:space-between;color:var(--gold);font-weight:700;font-size:.95rem;margin-bottom:10px}
+#clues{list-style:none;margin:0 0 10px;padding:0}
+#clues li{background:var(--deep);border-left:4px solid var(--gold);border-radius:6px;padding:10px 12px;margin-bottom:8px}
+#clues b{color:var(--gold)}
+#worth{font-size:.95rem;margin-bottom:10px}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}
+.opt{border-radius:8px;background:var(--deep);color:var(--ivory);border-color:var(--line);text-align:left;font-weight:600}
+.opt.ok{border-color:var(--ok);color:var(--ok)}
+.opt.no{border-color:var(--no);color:var(--no)}
+#fb{min-height:3em;color:var(--ivory)}
+.nav{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.result{text-align:center}
+.result strong{display:block;font-size:1.6rem;color:var(--gold);margin-bottom:6px}
+.result ul{text-align:left;color:var(--mut);margin:0 0 14px;padding-left:22px}
+[hidden]{display:none!important}
+footer{margin-top:22px;text-align:center;color:var(--mut);font-size:.95rem}
+footer a{color:var(--gold)}
+</style>
+</head>
+<body>
+<main>
+<a aria-label="EDUSAMBAM home" href="index.html" style="display:inline-block;line-height:0"><img alt="EDUSAMBAM" src="logo-icon-full-white.png" style="height:52px;width:auto;max-width:100%;display:block"/></a>
+<p class="brand" style="margin-top:8px">Chemistry</p>
+<h1>Guess the Element</h1>
+<p>Every element has its own properties and uses. In this quiz you get clues about a mystery element and must work out which one it is. The fewer clues you need, the more points you win.</p>
+<ol class="how">
+<li>Read the first clue. It is worth <b>3 points</b>.</li>
+<li>Need help? Tap <b>Show next clue</b>, but the points drop to 2, then 1.</li>
+<li>Choose your answer. You get one guess per question, and there are 10 questions.</li>
+</ol>
+
+<section class="card" aria-label="Guess the element quiz">
+<div id="game">
+<div class="stats"><span id="qn"></span><span id="sc"></span></div>
+<ol id="clues"></ol>
+<p id="worth"></p>
+<button class="ghost" id="more" onclick="more()">Show next clue</button>
+<div class="opts" id="opts"></div>
+<p id="fb" aria-live="polite"></p>
+<div class="nav"><span></span><button id="nx" onclick="next()" hidden>Next question</button></div>
+</div>
+<div class="result" id="res" hidden>
+<strong id="rt"></strong><p id="rm"></p>
+<ul id="ml"></ul>
+<button onclick="start()">Play again</button>
+</div>
+</section>
+<footer>More free science resources at <a href="https://edusambam.com">edusambam.com</a></footer>
+</main>
+
+<script>
+const $=i=>document.getElementById(i);
+const P=[
+{n:"Hydrogen",s:"H",z:1,c:["It is the lightest of all elements.","Two atoms of it combine with one oxygen atom to make water.","Symbol H, atomic number 1."]},
+{n:"Helium",s:"He",z:2,c:["This gas makes party balloons float and gives you a squeaky voice.","It is a noble gas and does not react with other elements.","Symbol He, atomic number 2."]},
+{n:"Carbon",s:"C",z:6,c:["Diamond and graphite are both made only of this element.","All living things are built on chains of its atoms.","Symbol C, atomic number 6."]},
+{n:"Nitrogen",s:"N",z:7,c:["It makes up about 78% of the air we breathe.","Plants need it, and fertilisers are rich in it.","Symbol N, atomic number 7."]},
+{n:"Oxygen",s:"O",z:8,c:["We need this gas to breathe.","Fire needs it to burn, and it makes up about 21% of air.","Symbol O, atomic number 8."]},
+{n:"Neon",s:"Ne",z:10,c:["This gas glows bright red-orange inside advertising signs.","It is a noble gas and is very unreactive.","Symbol Ne, atomic number 10."]},
+{n:"Sodium",s:"Na",z:11,c:["This soft metal can be cut with a knife and reacts fiercely with water.","It combines with chlorine to make table salt.","Symbol Na, atomic number 11."]},
+{n:"Aluminium",s:"Al",z:13,c:["This light, silvery metal is used to make drink cans and aircraft.","It does not rust and is the most common metal in the Earth's crust.","Symbol Al, atomic number 13."]},
+{n:"Sulphur",s:"S",z:16,c:["This yellow solid is found near volcanoes.","Matches contain it, and it burns with a blue flame.","Symbol S, atomic number 16."]},
+{n:"Chlorine",s:"Cl",z:17,c:["A yellow-green gas with a sharp smell, used to kill germs in swimming pools.","It joins with sodium to make common salt.","Symbol Cl, atomic number 17."]},
+{n:"Calcium",s:"Ca",z:20,c:["This element is the main mineral in bones and teeth.","Milk is a rich source of it, and chalk contains it.","Symbol Ca, atomic number 20."]},
+{n:"Iron",s:"Fe",z:26,c:["It rusts when left in damp air.","Steel is mostly made of it, and it carries oxygen in red blood cells.","Symbol Fe, atomic number 26."]},
+{n:"Copper",s:"Cu",z:29,c:["This reddish-brown metal is used in electric wires.","Water pipes and old coins are often made of it.","Symbol Cu, atomic number 29."]},
+{n:"Silver",s:"Ag",z:47,c:["This shiny white metal is the best conductor of electricity.","It is used in jewellery, coins and mirrors.","Symbol Ag, atomic number 47."]},
+{n:"Gold",s:"Au",z:79,c:["This shiny yellow metal hardly ever tarnishes.","It is used in jewellery and is very valuable.","Symbol Au, atomic number 79."]},
+{n:"Mercury",s:"Hg",z:80,c:["It is the only metal that is liquid at room temperature.","It was once used in thermometers, but it is poisonous.","Symbol Hg, atomic number 80."]}
+];
+const N=10;
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+let order,qi,clues,score,missed,done,opts;
+
+function start(){
+ order=shuffle(P.map((_,i)=>i)).slice(0,N);qi=0;score=0;missed=[];
+ $("res").hidden=true;$("game").hidden=false;show();
+}
+function show(){
+ const e=P[order[qi]];clues=1;done=false;
+ const wrong=shuffle(P.filter(x=>x!==e)).slice(0,3);
+ opts=shuffle([e,...wrong]);
+ $("opts").innerHTML=opts.map((o,i)=>`<button class="opt" onclick="pick(${i})">${o.n}</button>`).join("");
+ $("fb").textContent="";$("nx").hidden=true;
+ $("nx").textContent=qi===N-1?"See results":"Next question";
+ paint();
+}
+function paint(){
+ const e=P[order[qi]];
+ $("qn").textContent=`Question ${qi+1} of ${N}`;$("sc").textContent=`Score: ${score}`;
+ $("clues").innerHTML=e.c.slice(0,done?3:clues).map((t,i)=>`<li><b>Clue ${i+1}:</b> ${t}</li>`).join("");
+ const p=4-clues;
+ $("worth").textContent=done?"":`Worth ${p} point${p===1?"":"s"} if you are right now.`;
+ $("more").hidden=done||clues>=3;
+}
+function more(){if(clues<3&&!done){clues++;paint()}}
+function pick(i){
+ if(done)return;done=true;
+ const e=P[order[qi]],ch=opts[i],pts=4-clues;
+ document.querySelectorAll(".opt").forEach((b,j)=>{
+  b.disabled=true;
+  if(opts[j]===e)b.classList.add("ok");else if(j===i)b.classList.add("no");
+ });
+ if(ch===e){score+=pts;$("fb").textContent=`Correct! +${pts} point${pts===1?"":"s"}. ${e.n} has the symbol ${e.s} and atomic number ${e.z}.`}
+ else{missed.push(e);$("fb").textContent=`Not quite. The answer is ${e.n}, symbol ${e.s}, atomic number ${e.z}.`}
+ paint();$("nx").hidden=false;
+}
+function next(){
+ if(qi<N-1){qi++;show();return}
+ $("game").hidden=true;$("res").hidden=false;
+ const max=N*3;
+ $("rt").textContent=`${score} out of ${max} points`;
+ $("rm").textContent=score>=max*0.8?"Excellent! You know your elements well.":score>=max*0.5?"Good work. A little more practice and you will master them.":"Keep practising. Try again and use the clues to learn.";
+ $("ml").innerHTML=missed.length?`<li><b>Elements to revise:</b></li>`+missed.map(e=>`<li>${e.n} (${e.s}, atomic number ${e.z})</li>`).join(""):`<li>You answered every question correctly.</li>`;
+}
+start();
+</script>
+</body>
+</html>

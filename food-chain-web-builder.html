@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Analytics 4 — EDUSAMBAM -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y35DW0V4HQ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-Y35DW0V4HQ');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Food Chain and Food Web Builder | EDUSAMBAM</title>
+<meta name="description" content="Build food chains and food webs and see how energy flows between living things. A free interactive biology activity from EDUSAMBAM."/>
+<link href="https://edusambam.com/food-chain-web-builder.html" rel="canonical"/>
+<link href="favicon.webp" rel="icon" type="image/webp"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+
+<style>
+:root{--bg:#12305c;--deep:#12305c;--panel:#1a3f78;--line:#3f6296;--gold:#c9a24b;--ivory:#fff;--mut:#c8d4e6;--ink:#12305c;--ok:#5fcf8f;--no:#ff8b7a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ivory);font:17px/1.6 "Segoe UI",Roboto,Helvetica,Arial,sans-serif;padding:20px 16px 40px}
+main{max-width:660px;margin:0 auto}
+.brand{color:var(--gold);font-weight:700;letter-spacing:.04em;font-size:15px;margin:0 0 4px}
+h1{font-size:2rem;line-height:1.15;margin:0 0 14px}
+p{margin:0 0 12px;color:var(--mut)}
+p b,li b{color:var(--ivory)}
+.rule{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin:0 0 14px;font-weight:700}
+.rule span{color:var(--gold)}
+ol.glance{margin:0 0 22px;padding-left:22px;color:var(--mut)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px}
+#steps{list-style:none;display:flex;gap:8px;margin:0 0 12px;padding:0}
+#steps li{width:34px;height:34px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;font-weight:700}
+#steps li.d{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+#steps li.o{border-color:var(--gold);color:var(--gold)}
+h2{font-size:1.25rem;margin:0 0 4px}
+svg{display:block;width:100%;height:auto;background:var(--deep);border-radius:8px}
+.nd{cursor:pointer}
+.nd:focus-visible{outline:3px solid var(--gold)}
+.cap{font-size:11px;fill:#fff}
+#fb{margin:0 0 10px;padding:8px 12px;border-radius:8px;border:2px solid var(--line);background:var(--deep);color:var(--ivory)}
+#fb:empty{display:none}
+#fb.ok{border-color:var(--ok)}
+#fb.bad{border-color:var(--no)}
+#fb.bad.a{animation:sh1 .4s}
+#fb.bad.b{animation:sh2 .4s}
+@keyframes sh1{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+@keyframes sh2{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+button{font:inherit;font-weight:700;border-radius:999px;border:2px solid var(--gold);background:var(--gold);color:var(--ink);padding:9px 20px;cursor:pointer}
+button.ghost{background:none;color:var(--gold)}
+button:disabled{opacity:.4;cursor:not-allowed}
+button:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:8px 0}
+.opts{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.opts button{background:var(--deep);color:var(--ivory);border-color:var(--line)}
+.opts button.ok{border-color:var(--ok);color:var(--ok)}
+.opts button.no{border-color:var(--no);color:var(--no)}
+.opts button[aria-pressed=true]{border-color:var(--gold);color:var(--gold)}
+.chips button{padding:8px 12px}
+.nav{display:flex;justify-content:space-between;margin-top:16px}
+#hn{text-align:right;font-size:.9rem;margin:6px 0 0}
+.ans{background:var(--deep);border:2px solid var(--gold);border-radius:8px;padding:12px;margin:8px 0}
+.ans p{color:var(--ivory);margin:0 0 4px}
+.q{margin-bottom:14px}.q>p{color:var(--ivory);font-weight:700;margin-bottom:6px}
+.why{font-size:.95rem;margin:6px 0 0}
+.lg{font-size:.92rem}
+[hidden]{display:none!important}
+footer{margin-top:22px;text-align:center;color:var(--mut);font-size:.95rem}
+footer a{color:var(--gold)}
+@media (prefers-reduced-motion:reduce){#fb.bad{animation:none!important}}
+</style>
+</head>
+<body>
+<main>
+<a aria-label="EDUSAMBAM home" href="index.html" style="display:inline-block;line-height:0"><img alt="EDUSAMBAM" src="logo-icon-full-white.png" style="height:52px;width:auto;max-width:100%;display:block"/></a>
+<p class="brand" style="margin-top:8px">Biology</p>
+<h1>Food Chain and Food Web Builder</h1>
+<p>Every living thing needs energy. A <b>food chain</b> shows who eats whom, and an arrow points from the food to the eater, because it shows the <b>flow of energy</b>. Most habitats contain many linked chains, which together make a <b>food web</b>.</p>
+<div class="rule">Sun → <span>producer</span> → <span>primary consumer</span> → <span>secondary consumer</span> → top consumer</div>
+<ol class="glance">
+<li>Learn the key words of ecology.</li>
+<li>Build a real food chain, one link at a time.</li>
+<li>Follow the energy up an energy pyramid.</li>
+<li>Remove organisms from a food web and see what happens.</li>
+<li>Take a five-question quiz.</li>
+</ol>
+
+<section class="card" aria-label="Food chain and food web activity">
+<ul id="steps"></ul>
+<h2 id="sh"></h2>
+<p id="ins"></p>
+<p id="fb" aria-live="polite"></p>
+<svg id="sv" viewBox="0 0 340 250" role="img" aria-label="Food chain diagram"></svg>
+<div id="ctrl"></div>
+<div class="nav"><button class="ghost" id="bk" onclick="go(S.step-1)">Back</button><button id="nx" onclick="go(S.step+1)">Next</button></div>
+<p id="hn"></p>
+</section>
+<footer>More free biology resources at <a href="https://edusambam.com">edusambam.com</a></footer>
+</main>
+
+<script>
+const $=i=>document.getElementById(i);
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+let sn=0;
+function say(h,k){const f=$("fb");f.innerHTML=h;f.className=(k||"")+(k==="bad"?(sn++%2?" a":" b"):"")}
+const OR={
+ gr:{n:"Grass",e:"🌿",eats:[]},sh:{n:"Shrub",e:"🌳",eats:[]},
+ gh:{n:"Grasshopper",e:"🦗",eats:["gr"]},rb:{n:"Rabbit",e:"🐇",eats:["gr","sh"]},ms:{n:"Mouse",e:"🐭",eats:["gr","sh"]},
+ fg:{n:"Frog",e:"🐸",eats:["gh"]},sn:{n:"Snake",e:"🐍",eats:["fg","ms"]},fx:{n:"Fox",e:"🦊",eats:["rb","ms"]},
+ eg:{n:"Eagle",e:"🦅",eats:["sn","rb"]},fu:{n:"Fungi",e:"🍄",eats:[]}
+};
+const WEB=["gr","sh","gh","rb","ms","fg","sn","fx","eg"];
+const P={gr:[90,215],sh:[250,215],gh:[50,155],rb:[170,155],ms:[290,155],fg:[50,95],sn:[130,95],fx:[270,95],eg:[190,35]};
+const ROLE=[["Producer",""],["Primary","consumer"],["Secondary","consumer"],["Tertiary","consumer"],["Quaternary","consumer"]];
+const TERMS=[
+["Producer","A producer makes its own food by photosynthesis. Green plants are producers. Every food chain starts with one."],
+["Consumer","A consumer cannot make its own food, so it eats other organisms. Consumers are called primary, secondary and tertiary in order."],
+["Herbivore","A herbivore eats only plants. It is a primary consumer, such as a grasshopper or rabbit."],
+["Carnivore","A carnivore eats only other animals, such as a frog, snake or eagle."],
+["Omnivore","An omnivore eats both plants and animals, such as humans and bears."],
+["Decomposer","Decomposers, such as fungi and bacteria, break down dead organisms and wastes and return nutrients to the soil."],
+["Food chain","A food chain is a single line showing who eats whom. Arrows show the flow of energy from food to eater."],
+["Food web","A food web is many food chains joined together. It shows that most animals eat more than one kind of food."],
+["Trophic level","A trophic level is a feeding level in a food chain: level 1 producers, level 2 primary consumers, and so on."]
+];
+const TMAP={Producer:[0],Consumer:[1,2,3,4],Herbivore:[1],Carnivore:[2,3,4],Decomposer:[],"Food chain":[0,1,2,3,4],"Trophic level":[0,1,2,3,4]};
+const CH=["gr","gh","fg","sn","eg"];
+const QS=[
+{q:"What do all food chains start with?",o:["A carnivore","A producer","A decomposer","A herbivore"],a:1,w:"Producers make food from sunlight, so energy enters the chain through them."},
+{q:"In a food chain, what do the arrows show?",o:["Who is bigger","Where animals live","The flow of energy from food to eater","Which animal runs fastest"],a:2,w:"The arrow points from the food to the animal that eats it."},
+{q:"An animal that eats only plants is called a:",o:["Carnivore","Herbivore","Decomposer","Producer"],a:1,w:"Herbivores are primary consumers."},
+{q:"About how much energy passes from one trophic level to the next?",o:["About 10%","About 50%","About 90%","All of it"],a:0,w:"The rest is lost as heat, movement, waste and uneaten parts."},
+{q:"What do decomposers such as fungi do?",o:["Make food from sunlight","Hunt other animals","Break down dead organisms and return nutrients to the soil","Store energy as fat"],a:2,w:"Without decomposers, nutrients would stay locked in dead matter."}
+];
+const T=[
+{n:"Learn the words",i:"Tap each key word to see what it means and where it fits on the food chain. The Next button unlocks after you explore all nine."},
+{n:"Build a food chain",i:"Tap organisms in order, starting with a producer, so that each one eats the one before it."},
+{n:"Energy pyramid",i:"Energy is lost at every step. Press the button to pass energy up the pyramid, then answer the question."},
+{n:"Food web: what if?",i:"Tap an organism to remove it, and see who is affected. Try three different ones, then answer the question."},
+{n:"Quick check",i:"Answer the five questions to test what you learned."}
+];
+function fresh(){
+ const N=[3000,7000,50000][Math.random()*3|0],E=[10000,5000,20000][Math.random()*3|0];
+ const cand=[N/100,N/10,N/1000,N/2];
+ return{step:0,seen:new Set(),last:null,tg:["eg","fx"][Math.random()*2|0],ch:[],cok:0,E,es:0,N,eo:shuffle(cand),eq:0,R:new Set(),tried:new Set(),po:shuffle(["Frog","Rabbit","Eagle","Grass"]),pq:0,
+  qo:QS.map(q=>shuffle(q.o.map((_,i)=>i))),qa:QS.map(()=>null)};
+}
+let S=fresh();
+const AR=`<defs><marker id="ar" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7Z" fill="#fff"/></marker></defs>`;
+const slots=(list,showLv)=>{
+ let h="";
+ for(let i=0;i<5;i++){
+  const x=34+68*i,k=list[i];
+  h+=k?`<circle cx="${x}" cy="108" r="26" fill="#1a3f78" stroke="${showLv&&showLv.has(i)?"#c9a24b":"#3f6296"}" stroke-width="${showLv&&showLv.has(i)?4:2}"/><text x="${x}" y="108" text-anchor="middle" dominant-baseline="central" font-size="28">${OR[k].e}</text><text x="${x}" y="150" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">${OR[k].n}</text><text x="${x}" y="164" text-anchor="middle" font-size="9" font-weight="700" fill="#c9a24b">${ROLE[i][0]}</text><text x="${x}" y="175" text-anchor="middle" font-size="9" font-weight="700" fill="#c9a24b">${ROLE[i][1]}</text>`
+   :`<circle cx="${x}" cy="108" r="26" fill="none" stroke="#3f6296" stroke-width="2" stroke-dasharray="5 4"/><text x="${x}" y="109" text-anchor="middle" dominant-baseline="central" font-size="20" fill="#3f6296">?</text>`;
+  if(i<4&&k&&list[i+1])h+=`<line x1="${x+28}" y1="108" x2="${x+40}" y2="108" stroke="#fff" stroke-width="2" marker-end="url(#ar)"/>`;
+ }
+ return h;
+}
+function svg0(){
+ const hi=new Set(TMAP[S.last]||[]);
+ let h=AR+`<text x="34" y="34" text-anchor="middle" font-size="28">☀️</text><text x="34" y="58" text-anchor="middle" class="cap">Sun</text><line x1="34" y1="62" x2="34" y2="76" stroke="#fff" stroke-width="2" marker-end="url(#ar)"/>`;
+ h+=slots(CH,hi);
+ if(S.last==="Trophic level")CH.forEach((k,i)=>{h+=`<text x="${34+68*i}" y="84" text-anchor="middle" font-size="11" font-weight="700" fill="#c9a24b">Level ${i+1}</text>`});
+ const f=S.last==="Decomposer";
+ h+=`<circle cx="170" cy="222" r="22" fill="#1a3f78" stroke="${f?"#c9a24b":"#3f6296"}" stroke-width="${f?4:2}"/><text x="170" y="222" text-anchor="middle" dominant-baseline="central" font-size="24">🍄</text><text x="202" y="220" font-size="10" font-weight="700" fill="#fff">Decomposers (fungi)</text><text x="202" y="233" class="cap">break down dead matter</text>`;
+ CH.forEach((k,i)=>{h+=`<line x1="${34+68*i}" y1="184" x2="170" y2="198" stroke="#8fb5ff" stroke-width="1.5" stroke-dasharray="4 3"/>`});
+ return h;
+}
+function svg1(){
+ return AR+`<text x="170" y="30" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">Goal: end the chain with the ${OR[S.tg].e} ${OR[S.tg].n}</text>`+slots(S.ch)+`<text x="170" y="214" text-anchor="middle" class="cap">Arrows show the flow of energy: food → eater</text><text x="170" y="232" text-anchor="middle" class="cap">${S.ch.length?"Links so far: "+S.ch.length:"Start with a producer"}</text>`;
+}
+function svg2(){
+ const L=["Tertiary consumer","Secondary consumer","Primary consumer","Producer"],W=[70,130,200,280];
+ const val=[S.E/1000,S.E/100,S.E/10,S.E];
+ let h=`<text x="170" y="20" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">Energy pyramid (kJ)</text>`;
+ for(let i=0;i<4;i++){
+  const lvl=3-i,on=S.es>=lvl,y=34+i*50;
+  h+=`<rect x="${170-W[i]/2}" y="${y}" width="${W[i]}" height="44" rx="6" fill="${on?["#3fae6a","#5fcf8f","#8fd9a8","#c9a24b"][i]:"#1a3f78"}" stroke="#3f6296" stroke-width="2"/>`;
+  h+=`<text x="170" y="${y+19}" text-anchor="middle" font-size="${W[i]<100?9:11}" font-weight="700" fill="${on?"#12305c":"#c8d4e6"}">${W[i]<100?"Tertiary":L[i]}</text><text x="170" y="${y+35}" text-anchor="middle" font-size="12" font-weight="700" fill="${on?"#12305c":"#c8d4e6"}">${on?val[i]+" kJ":"?"}</text>`;
+ }
+ if(S.es>=1)h+=`<text x="262" y="${34+50*2+8}" font-size="10" fill="#ff8b7a" font-weight="700">only 10%</text><text x="262" y="${34+50*2+20}" font-size="10" fill="#ff8b7a" font-weight="700">passes up</text>`;
+ return h;
+}
+function status(){
+ const gone=new Set(S.R),st={};
+ let ch=1;
+ while(ch){ch=0;WEB.forEach(k=>{if(gone.has(k))return;const d=OR[k].eats;if(d.length&&d.every(x=>gone.has(x))){gone.add(k);st[k]="starve";ch=1}})}
+ WEB.forEach(k=>{if(gone.has(k))return;const d=OR[k].eats;
+  if(d.some(x=>gone.has(x)))st[k]="less";
+  else if(WEB.some(p=>gone.has(p)&&OR[p].eats.includes(k)))st[k]="rise"});
+ return{gone,st};
+}
+const SCOL={starve:"#ff8b7a",less:"#ffb04a",rise:"#5fcf8f"};
+function svg3(){
+ const {gone,st}=status();
+ let h=AR;
+ WEB.forEach(p=>OR[p].eats.forEach(q=>{
+  const [x1,y1]=P[q],[x2,y2]=P[p],dx=x2-x1,dy=y2-y1,d=Math.hypot(dx,dy),ux=dx/d,uy=dy/d,off=gone.has(p)||gone.has(q);
+  h+=`<line x1="${x1+ux*22}" y1="${y1+uy*22}" x2="${x2-ux*25}" y2="${y2-uy*25}" stroke="${off?"#3f6296":"#c8d4e6"}" stroke-width="1.6" ${off?'stroke-dasharray="3 4"':'marker-end="url(#ar)"'} opacity="${off?.5:.85}"/>`}));
+ WEB.forEach(k=>{
+  const [x,y]=P[k],g=S.R.has(k),s=st[k];
+  h+=`<g class="nd" data-k="${k}" tabindex="0" role="button" aria-label="${OR[k].n}"><circle cx="${x}" cy="${y}" r="27" fill="transparent"/><circle cx="${x}" cy="${y}" r="20" fill="${g?"#4b5563":gone.has(k)?"#4b5563":"#1a3f78"}" stroke="${s?SCOL[s]:"#3f6296"}" stroke-width="${s?4:2}"/><text x="${x}" y="${y+1}" text-anchor="middle" dominant-baseline="central" font-size="22" opacity="${gone.has(k)?.35:1}" pointer-events="none">${OR[k].e}</text>${g?`<text x="${x}" y="${y+1}" text-anchor="middle" dominant-baseline="central" font-size="22" font-weight="700" fill="#ff8b7a" pointer-events="none">✕</text>`:""}</g>`;
+  h+=`<text x="${x}" y="${y+33}" text-anchor="middle" font-size="9.5" font-weight="700" fill="#fff" pointer-events="none">${OR[k].n}</text>`;
+ });
+ return h;
+}
+const nmz=a=>a.map(k=>OR[k].n);
+function sumRem(){
+ const {gone,st}=status(),R=S.R;
+ if(!R.size)return "";
+ const by=t=>WEB.filter(k=>st[k]===t);
+ const gl=[...gone].filter(k=>!R.has(k));
+ let m=`You removed: <b>${nmz([...R]).join(", ")}</b>.`;
+ if(gl.length)m+=` <b>Starving (no food left):</b> ${nmz(gl).join(", ")}.`;
+ const less=by("less").filter(k=>!gone.has(k));
+ if(less.length)m+=` <b>Less food:</b> ${nmz(less).join(", ")}.`;
+ const rise=by("rise");
+ if(rise.length)m+=` <b>May increase (fewer predators):</b> ${nmz(rise).join(", ")}.`;
+ return m;
+}
+const chipsHtml=()=>`<div class="opts chips">${["gr","sh","gh","rb","ms","fg","sn","fx","eg","fu"].map(k=>`<button ${S.cok||S.ch.includes(k)?"disabled":""} onclick="addO('${k}')">${OR[k].e} ${OR[k].n}</button>`).join("")}</div>`;
+const C=[
+()=>{const left=TERMS.filter(t=>!S.seen.has(t[0])).map(t=>t[0]);
+ return `<div class="opts">${TERMS.map(t=>`<button aria-pressed="${S.seen.has(t[0])}" onclick="term('${t[0]}')">${t[0]}</button>`).join("")}</div><p>Explored: <b>${9-left.length} of 9</b>. ${left.length?"Still to find: "+left.join(", ")+".":"All done! Tap Next."}</p>`},
+()=>`${chipsHtml()}<div class="row"><button class="ghost" onclick="undo()" ${S.ch.length&&!S.cok?"":"disabled"}>Undo last</button><button class="ghost" onclick="clr()">Start again</button></div>${S.cok?`<div class="ans"><p><b>${S.ch.map(k=>OR[k].n).join(" → ")}</b></p><p>Energy flows from the producer to the top consumer.</p></div>`:""}`,
+()=>{
+ const stage=`<p>Energy passed up: <b>${S.es} of 3 steps</b></p><div class="row"><button onclick="up()" ${S.es>=3?"disabled":""}>Pass energy up</button><button class="ghost" onclick="rup()">Reset</button></div>`;
+ if(S.es<3)return stage;
+ return stage+`<p style="margin-top:8px"><b>A producer level holds ${S.N} kJ. About how much energy reaches the secondary consumer?</b></p><div class="opts">${S.eo.map(v=>`<button ${S.eq?"disabled":""} class="${S.eq&&v===S.N/100?"ok":""}" onclick="ep(${v})">${v} kJ</button>`).join("")}</div>`},
+()=>`<p>Distinct organisms removed so far: <b>${Math.min(3,S.tried.size)} of 3</b>. Tap a removed organism again to bring it back.</p><div class="row"><button class="ghost" onclick="rest()">Restore all</button></div>
+ <p style="margin-top:8px"><b>If all the grasshoppers disappeared, which organism would be in most trouble?</b></p><div class="opts">${S.po.map(n=>`<button ${S.pq?"disabled":""} class="${S.pq&&n==="Frog"?"ok":""}" onclick="pp('${n}')">${n}</button>`).join("")}</div>`,
+()=>{
+ let h=QS.map((x,qi)=>{const a=S.qa[qi];
+  const ob=S.qo[qi].map(oi=>`<button ${a!==null?"disabled":""} class="${a!==null?(oi===x.a?"ok":oi===a?"no":""):""}" onclick="qp(${qi},${oi})">${x.o[oi]}</button>`).join("");
+  return `<div class="q"><p>${qi+1}. ${x.q}</p><div class="opts">${ob}</div>${a===null?"":`<p class="why">${a===x.a?"Correct. ":"Not quite. "}${x.w}</p>`}</div>`}).join("");
+ if(S.qa.every(v=>v!==null)){const n=S.qa.filter((v,i)=>v===QS[i].a).length;
+  h+=`<div class="ans"><p><b>You scored ${n} out of 5</b></p><p>${n===5?"Excellent! You understand food chains and webs very well.":n>=3?"Good work. Try building another chain to strengthen it.":"Keep practising. Go back and build the chain again."}</p></div><div class="row"><button onclick="again()">Start again</button></div>`}
+ return h}
+];
+
+function term(n){S.seen.add(n);S.last=n;say(`<b>${n}:</b> ${TERMS.find(t=>t[0]===n)[1]}`+(S.seen.size===9?" You have explored all nine words. Tap Next.":""));render()}
+function addO(k){
+ const o=OR[k],last=S.ch[S.ch.length-1];
+ if(k==="fu"){say("✗ <b>Fungi are decomposers.</b> They break down dead matter, but they are not a link in the feeding chain.","bad");return}
+ if(!last){
+  if(o.eats.length){say(`✗ <b>Every food chain starts with a producer.</b> A ${o.n.toLowerCase()} cannot make its own food. Choose a green plant.`,"bad");return}
+  S.ch.push(k);say(`✓ <b>${o.n}</b> is a producer. It makes food by photosynthesis, so the chain can start here.`,"ok");render();return}
+ if(!o.eats.includes(last)){
+  say(`✗ <b>A ${o.n.toLowerCase()} does not eat ${OR[last].n.toLowerCase()}.</b> Look for an organism that eats the ${OR[last].n.toLowerCase()}.`,"bad");return}
+ S.ch.push(k);
+ if(k===S.tg){S.cok=1;say(`✓ <b>Chain complete!</b> ${S.ch.map(x=>OR[x].n).join(" → ")}. Each arrow shows energy flowing from food to eater. Tap Next.`,"ok")}
+ else if(!WEB.some(p=>OR[p].eats.includes(k))){say(`✗ The ${o.n.toLowerCase()} is at the top, but your goal ends with the ${OR[S.tg].n.toLowerCase()}. Tap Undo last and try another path.`,"bad")}
+ else say(`✓ <b>A ${o.n.toLowerCase()} eats ${OR[last].n.toLowerCase()}.</b> Energy flows from the ${OR[last].n.toLowerCase()} to the ${o.n.toLowerCase()}.`,"ok");
+ render();
+}
+function undo(){S.ch.pop();say("");render()}
+function clr(){S.ch=[];S.cok=0;say("");render()}
+function up(){if(S.es<3){S.es++;say(S.es===1?"Only about <b>10%</b> of the energy passes to the next level. The other 90% is used for life processes or lost as heat, movement, waste and uneaten parts.":S.es===2?"The secondary consumer gets just 10% of what the primary consumer had.":"Very little energy reaches the top. This is why food chains rarely have more than five links.");render()}}
+function rup(){S.es=0;say("");render()}
+function ep(v){
+ if(v===S.N/100){S.eq=1;say(`✓ <b>Correct.</b> ${S.N} kJ → ${S.N/10} kJ (primary consumer) → ${S.N/100} kJ (secondary consumer). Tap Next.`,"ok")}
+ else say("✗ Not quite. Take 10% of the producer's energy for the primary consumer, then 10% again for the secondary consumer.","bad");
+ render()}
+function nodeTap(k){
+ if(S.step!==3)return;
+ if(S.R.has(k)){S.R.delete(k)}else{S.R.add(k);S.tried.add(k)}
+ say(S.R.size?sumRem():"All organisms restored."+(S.tried.size>=3&&!S.pq?" Now answer the question below.":""));
+ render();
+}
+function rest(){S.R=new Set();say("All organisms restored.");render()}
+function pp(n){
+ if(n==="Frog"){S.pq=1;say("✓ <b>Correct: the frog.</b> It eats only grasshoppers, so with no other food it would starve."+(S.tried.size>=3?" Tap Next.":" Now try removing three different organisms in the web."),"ok")}
+ else say("✗ Not quite. Which animal depends on grasshoppers for all of its food? Try removing the grasshopper in the web and watch.","bad");
+ render()}
+function qp(q,o){if(S.qa[q]!==null)return;S.qa[q]=o;render()}
+function again(){S=fresh();S.step=1;S.seen=new Set(TERMS.map(t=>t[0]));say("");render()}
+function go(n){S.step=Math.max(0,Math.min(4,n));say("");render()}
+
+function gate(){const d=[S.seen.size===9,S.cok,S.eq,S.tried.size>=3&&S.pq,1][S.step];$("nx").disabled=!d;$("hn").textContent=d||S.step===4?"":"Complete this step to unlock Next."}
+function draw(){
+ const s=S.step;
+ $("sv").innerHTML=[svg0,svg1,svg2,svg3,()=>`<text x="170" y="120" text-anchor="middle" font-size="64">🌍</text><text x="170" y="170" text-anchor="middle" class="cap">Show what you know!</text>`][s]();
+ $("bk").disabled=s===0;$("nx").hidden=s===4;gate();
+}
+function render(){
+ const s=S.step;
+ $("steps").innerHTML=T.map((t,i)=>`<li class="${i<s?"d":i===s?"o":""}" ${i===s?'aria-current="step"':""}>${i+1}</li>`).join("");
+ $("sh").textContent=`Step ${s+1}: ${T[s].n}`;$("ins").textContent=T[s].i;
+ $("ctrl").innerHTML=C[s]();
+ draw();
+}
+$("sv").onclick=e=>{const t=e.target.closest(".nd");if(t)nodeTap(t.dataset.k)};
+$("sv").onkeydown=e=>{if(e.key==="Enter"||e.key===" "){const t=e.target.closest(".nd");if(t){e.preventDefault();nodeTap(t.dataset.k)}}};
+render();
+</script>
+</body>
+</html>

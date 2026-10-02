@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Analytics 4 — EDUSAMBAM -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y35DW0V4HQ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-Y35DW0V4HQ');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Enzyme Activity | EDUSAMBAM</title>
+<meta name="description" content="Test how temperature and pH change enzyme activity in this free interactive biology activity from EDUSAMBAM."/>
+<link href="https://edusambam.com/enzyme-activity.html" rel="canonical"/>
+<link href="favicon.webp" rel="icon" type="image/webp"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+
+<style>
+:root{--bg:#12305c;--deep:#12305c;--panel:#1a3f78;--line:#3f6296;--gold:#c9a24b;--ivory:#fff;--mut:#c8d4e6;--ink:#12305c;--ok:#5fcf8f;--no:#ff8b7a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ivory);font:17px/1.6 "Segoe UI",Roboto,Helvetica,Arial,sans-serif;padding:20px 16px 40px}
+main{max-width:660px;margin:0 auto}
+.brand{color:var(--gold);font-weight:700;letter-spacing:.04em;font-size:15px;margin:0 0 4px}
+h1{font-size:2rem;line-height:1.15;margin:0 0 14px}
+p{margin:0 0 12px;color:var(--mut)}
+p b,li b{color:var(--ivory)}
+.rule{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin:0 0 14px;font-weight:700}
+.rule span{color:var(--gold)}
+ol.glance{margin:0 0 22px;padding-left:22px;color:var(--mut)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px}
+#steps{list-style:none;display:flex;gap:8px;margin:0 0 12px;padding:0}
+#steps li{width:34px;height:34px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;font-weight:700}
+#steps li.d{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+#steps li.o{border-color:var(--gold);color:var(--gold)}
+h2{font-size:1.25rem;margin:0 0 4px}
+svg{display:block;width:100%;height:auto;background:var(--deep);border-radius:8px}
+.cand{cursor:pointer}
+.cand:focus-visible{outline:3px solid var(--gold)}
+.mv{transition:transform .7s ease,opacity .5s ease}
+.mq{transition:transform .3s ease}
+.dr{animation:dr var(--d,3s) ease-in-out infinite;animation-delay:var(--dl,0s)}
+@keyframes dr{0%,100%{transform:translate(0,0)}25%{transform:translate(14px,-10px)}50%{transform:translate(-10px,12px)}75%{transform:translate(12px,10px)}}
+.cap{font-size:11px;fill:#fff}
+#fb{margin:0 0 10px;padding:8px 12px;border-radius:8px;border:2px solid var(--line);background:var(--deep);color:var(--ivory)}
+#fb:empty{display:none}
+#fb.ok{border-color:var(--ok)}
+#fb.bad{border-color:var(--no)}
+#fb.bad.a{animation:sh1 .4s}
+#fb.bad.b{animation:sh2 .4s}
+@keyframes sh1{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+@keyframes sh2{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+button{font:inherit;font-weight:700;border-radius:999px;border:2px solid var(--gold);background:var(--gold);color:var(--ink);padding:9px 20px;cursor:pointer}
+button.ghost{background:none;color:var(--gold)}
+button:disabled{opacity:.4;cursor:not-allowed}
+button:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:8px 0}
+.opts{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.opts button{background:var(--deep);color:var(--ivory);border-color:var(--line)}
+.opts button.ok{border-color:var(--ok);color:var(--ok)}
+.opts button.no{border-color:var(--no);color:var(--no)}
+.opts button[aria-pressed=true]{border-color:var(--gold);color:var(--gold)}
+input[type=range]{width:100%;accent-color:var(--gold);margin:2px 0 10px}
+label{font-weight:700}
+.nav{display:flex;justify-content:space-between;margin-top:16px}
+#hn{text-align:right;font-size:.9rem;margin:6px 0 0}
+.ans{background:var(--deep);border:2px solid var(--gold);border-radius:8px;padding:12px;margin:8px 0}
+.ans p{color:var(--ivory);margin:0 0 4px}
+.q{margin-bottom:14px}.q>p{color:var(--ivory);font-weight:700;margin-bottom:6px}
+.why{font-size:.95rem;margin:6px 0 0}
+.lg{font-size:.92rem}
+[hidden]{display:none!important}
+footer{margin-top:22px;text-align:center;color:var(--mut);font-size:.95rem}
+footer a{color:var(--gold)}
+@media (prefers-reduced-motion:reduce){.dr{animation:none}.mv,.mq{transition:none}#fb.bad{animation:none!important}}
+</style>
+</head>
+<body>
+<main>
+<a aria-label="EDUSAMBAM home" href="index.html" style="display:inline-block;line-height:0"><img alt="EDUSAMBAM" src="logo-icon-full-white.png" style="height:52px;width:auto;max-width:100%;display:block"/></a>
+<p class="brand" style="margin-top:8px">Biology</p>
+<h1>Enzyme Activity</h1>
+<p><b>Enzymes</b> are proteins that act as biological catalysts: they speed up chemical reactions in living things without being used up. Each enzyme works on one kind of molecule, called its <b>substrate</b>, which fits into a special shape on the enzyme called the <b>active site</b>.</p>
+<div class="rule">Substrate + <span>enzyme</span> → enzyme–substrate complex → products + <span>enzyme (unchanged)</span></div>
+<ol class="glance">
+<li>Watch the lock and key model work.</li>
+<li>Find the substrate that fits the active site.</li>
+<li>Explore how temperature changes enzyme activity.</li>
+<li>Find the best pH for three different enzymes.</li>
+<li>Take a five-question quiz.</li>
+</ol>
+
+<section class="card" aria-label="Enzyme activity">
+<ul id="steps"></ul>
+<h2 id="sh"></h2>
+<p id="ins"></p>
+<p id="fb" aria-live="polite"></p>
+<svg id="sv" viewBox="0 0 340 250" role="img" aria-label="Enzyme diagram"></svg>
+<div id="ctrl"></div>
+<div class="nav"><button class="ghost" id="bk" onclick="go(S.step-1)">Back</button><button id="nx" onclick="go(S.step+1)">Next</button></div>
+<p id="hn"></p>
+</section>
+<footer>More free biology resources at <a href="https://edusambam.com">edusambam.com</a></footer>
+</main>
+
+<script>
+const $=i=>document.getElementById(i);
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+let sn=0,lk=0;
+function say(h,k){const f=$("fb");f.innerHTML=h;f.className=(k||"")+(k==="bad"?(sn++%2?" a":" b"):"")}
+const SH={
+ sq:{body:"M-55 -35H-18V-11H18V-35H55V35H-55Z",sub:'<rect x="-16" y="-33" width="32" height="20" rx="2"/>'},
+ tr:{body:"M-55 -35H-20L0 -8L20 -35H55V35H-55Z",sub:'<polygon points="-17,-33 17,-33 0,-11"/>'},
+ ci:{body:"M-55 -35H-18A18 18 0 0 0 18 -35H55V35H-55Z",sub:'<circle cx="0" cy="-35" r="16"/>'}
+};
+const SC={sq:"#ffd35a",tr:"#ff8b7a",ci:"#5fcf8f"},SN={sq:"square",tr:"triangle",ci:"circle"};
+const EZ=[["Pepsin",2,"Works in the stomach, which is strongly acidic.","#e8604c"],["Amylase",7,"Works in the mouth, which is neutral.","#7f6bd6"],["Trypsin",8,"Works in the small intestine, which is slightly alkaline.","#3fae9a"]];
+const rT=T=>T<=37?Math.pow(T/37,2):Math.max(0,1-Math.pow((T-37)/18,2));
+const rP=(p,o)=>Math.max(0,1-Math.pow((p-o)/3,2));
+const STG=[
+"<b>1. The substrate approaches.</b> The substrate is the molecule the enzyme works on. The enzyme has a hollow of a special shape, the active site.",
+"<b>2. Enzyme–substrate complex.</b> The substrate fits the active site exactly, like a key in a lock.",
+"<b>3. The reaction.</b> The enzyme breaks the substrate into two smaller molecules.",
+"<b>4. Products released.</b> The products leave. The enzyme is unchanged and can work on another substrate. Tap Next."
+];
+const TK=[
+["Find the best temperature (rate of 95% or more).","You found the optimum. Human enzymes work best at about 37 °C, our body temperature."],
+["Cool the enzyme to 10 °C or less (without damaging it).","In the cold, molecules move slowly and collide less often, so the reaction is slow. Cold does not destroy the enzyme."],
+["Heat it above 55 °C to denature it, then cool it back to 40 °C or less.","Heat changes the enzyme's shape for good. The active site no longer fits, and cooling does not bring it back."]
+];
+const QS=[
+{q:"What is an enzyme?",o:["A protein that speeds up reactions","A sugar that stores energy","A fat that insulates","A vitamin that is used up"],a:0,w:"Enzymes are biological catalysts made of protein."},
+{q:"What is the part of the enzyme where the substrate fits called?",o:["Nucleus","Active site","Membrane","Stoma"],a:1,w:"The active site has a specific shape."},
+{q:"What happens to an enzyme at a very high temperature?",o:["It works faster and faster","It is denatured and loses its shape","It turns into a substrate","Nothing happens"],a:1,w:"The active site changes shape, so the substrate no longer fits."},
+{q:"At which pH does pepsin work best?",o:["pH 2","pH 7","pH 10","pH 14"],a:0,w:"Pepsin works in the acidic stomach."},
+{q:"Why does each enzyme work on only one kind of substrate?",o:["It is the biggest molecule","Its active site has a specific shape","It is always hot","It uses up the substrate"],a:1,w:"Only the matching substrate fits the active site (the lock and key model)."}
+];
+const T=[
+{n:"Lock and key",i:"Step through the four stages of an enzyme reaction. The Next button unlocks when you reach stage 4."},
+{n:"Which substrate fits?",i:"Enzymes are specific. Tap each substrate to try it in the active site and find the one that fits."},
+{n:"Temperature lab",i:"Move the temperature slider and watch the enzyme and the rate. Complete the three tasks to unlock Next."},
+{n:"pH lab",i:"Each enzyme has a best pH. Choose an enzyme, then move the pH slider to find its best value. Do this for all three."},
+{n:"Quick check",i:"Answer the five questions to test what you learned."}
+];
+function fresh(){return{step:0,sh:["sq","tr","ci"][Math.random()*3|0],stg:0,l1:0,co:shuffle(["sq","tr","ci"]),fit:-1,Tm:25,dn:0,t:[0,0,0],ez:0,ph:7,po:[0,0,0],qo:QS.map(q=>shuffle(q.o.map((_,i)=>i))),qa:QS.map(()=>null)}}
+let S=fresh();
+const tr=(x,y,s)=>`translate(${x}px,${y}px)${s?` scale(${s})`:""}`;
+
+function svg0(){
+ const sh=SH[S.sh];
+ return `<g transform="translate(170 165)"><path d="${sh.body}" fill="#7f6bd6" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></g>
+ <text x="170" y="222" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">Enzyme</text>
+ <line x1="248" y1="114" x2="190" y2="140" stroke="#c9a24b" stroke-width="2"/><text x="250" y="110" font-size="11" font-weight="700" fill="#c9a24b">Active site</text>
+ <g id="sub" class="mv" fill="${SC[S.sh]}" stroke="#fff" stroke-width="1.5">${sh.sub}</g>
+ <circle id="pa" class="mv" r="9" fill="#ffd35a" stroke="#fff" stroke-width="1.5" style="opacity:0"/><rect id="pb" class="mv" x="-9" y="-7" width="18" height="14" rx="2" fill="${SC[S.sh]}" stroke="#fff" stroke-width="1.5" style="opacity:0"/>
+ <text x="170" y="22" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">Stage <tspan id="sg">1</tspan> of 4</text>`;
+}
+function stg(){
+ const k=S.stg,set=(id,x,y,o)=>{const e=$(id);e.style.transform=tr(x,y);e.style.opacity=o};
+ set("sub",k===0?70:170,k===0?90:165,k<2?1:0);
+ set("pa",k===3?95:161,k===3?80:142,k>=2?1:0);
+ set("pb",k===3?245:179,k===3?80:142,k>=2?1:0);
+ $("sg").textContent=k+1;
+}
+function svg1(){
+ const rest=[[60,70],[170,70],[280,70]],names="ABC";
+ let h=`<g transform="translate(170 195)"><path d="${SH[S.sh].body}" fill="#7f6bd6" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></g><text x="170" y="245" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">Enzyme</text>`;
+ S.co.forEach((s,i)=>{
+  const fit=S.fit===i;
+  h+=`<g class="cand mv" id="c${i}" data-i="${i}" tabindex="0" role="button" aria-label="Substrate ${names[i]}" style="transform:${fit?tr(170,195):tr(rest[i][0],rest[i][1]+23)}" fill="${SC[s]}" stroke="#fff" stroke-width="1.5">${SH[s].sub}<rect x="-30" y="-50" width="60" height="62" fill="transparent" stroke="none"/></g>`;
+  h+=`<text x="${rest[i][0]}" y="118" text-anchor="middle" font-size="14" font-weight="700" fill="#fff" pointer-events="none">${names[i]}</text>`;
+ });
+ return h;
+}
+function svg2(){
+ const sh=SH[S.sh];let h=`<text x="95" y="18" text-anchor="middle" class="cap">Enzyme and substrate molecules</text>`;
+ [[30,52],[155,58],[35,192],[150,192],[22,128]].forEach((p,i)=>{h+=`<g transform="translate(${p[0]} ${p[1]}) scale(.5)"><g class="dr" id="p${i}" fill="${SC[S.sh]}" style="--dl:-${i*.6}s">${sh.sub}</g></g>`});
+ h+=`<g id="en" class="mq"><path id="enp" d="${sh.body}" fill="#7f6bd6" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"/></g><g id="su" class="mq" fill="${SC[S.sh]}" stroke="#fff" stroke-width="1.5">${sh.sub}</g>`;
+ h+=`<text id="st3" x="95" y="234" text-anchor="middle" font-size="12" font-weight="700" fill="#fff"></text>`;
+ h+=`<line x1="195" y1="190" x2="330" y2="190" stroke="#c8d4e6" stroke-width="2"/><line x1="195" y1="190" x2="195" y2="40" stroke="#c8d4e6" stroke-width="2"/>`;
+ let pts="";for(let t=0;t<=70;t+=2)pts+=`${195+t*130/70},${190-rT(t)*140} `;
+ h+=`<polyline points="${pts}" fill="none" stroke="#5fcf8f" stroke-width="3.5" stroke-linejoin="round"/>`;
+ h+=`<line x1="${195+37*130/70}" y1="190" x2="${195+37*130/70}" y2="50" stroke="#c8d4e6" stroke-dasharray="4 4"/><circle id="dt" r="7" fill="#c9a24b" stroke="#fff" stroke-width="2"/>`;
+ h+=`<text x="195" y="206" text-anchor="middle" class="cap">0</text><text x="${195+37*130/70}" y="206" text-anchor="middle" class="cap">37</text><text x="330" y="206" text-anchor="end" class="cap">70</text><text x="262" y="224" text-anchor="middle" class="cap">Temperature (°C)</text><text transform="rotate(-90 186 115)" x="186" y="115" text-anchor="middle" class="cap">Rate</text>`;
+ return h;
+}
+function lab3(){
+ const T=S.Tm,r=S.dn?0:rT(T),def=S.dn?24:Math.max(0,Math.min(24,(T-45)*1.2));
+ $("en").style.transform=tr(95,125,.85)+` skewX(${def}deg)`;
+ $("enp").setAttribute("fill",S.dn?"#6b7280":"#7f6bd6");
+ const o=(1-Math.min(1,r/.5))*70;
+ $("su").style.transform=tr(95+o*.8,125-o*.9,.85);
+ for(let i=0;i<5;i++){const p=$("p"+i);p.style.setProperty("--d",Math.max(.35,3.2-T/18).toFixed(2)+"s");p.style.animationPlayState=T<3?"paused":"running"}
+ $("dt").setAttribute("cx",195+T*130/70);$("dt").setAttribute("cy",190-r*140);$("dt").setAttribute("fill",S.dn?"#ff8b7a":"#c9a24b");
+ $("st3").textContent=S.dn?"Denatured: shape lost for good":r>=.95?"Best rate":T<20?"Too cold: slow":T>41?"Too hot: damaging the enzyme":"Working well";
+ $("vT").textContent=T;$("vR").textContent=Math.round(r*100);
+}
+function tasks(){TK.forEach((t,i)=>{const e=$("k"+i);if(e)e.textContent=(S.t[i]?"✓ ":"○ ")+t[0]})}
+function sl3(v){
+ S.Tm=v;const was=S.dn;
+ if(v>=55&&!S.dn){S.dn=1;say("✗ <b>The enzyme has denatured!</b> Its shape has changed for good. Cooling it down will not fix it.","bad")}
+ lab3();
+ const r=S.dn?0:rT(v),ok=[r>=.95,v<=10&&!S.dn,S.dn&&v<=40];
+ ok.forEach((b,i)=>{if(b&&!S.t[i]){S.t[i]=1;say(`✓ <b>Task ${i+1} complete!</b> ${TK[i][1]}`+(S.t.every(x=>x)?" All tasks done. Tap Next.":""),"ok")}});
+ tasks();gate();
+}
+function newEnz(){S.dn=0;say("A fresh enzyme sample is ready. Heat is still your enemy!");lab3()}
+function svg3(){
+ const [n,o,w,col]=EZ[S.ez],sh=SH[S.sh];
+ let h=`<defs><linearGradient id="ph" x1="0" x2="1"><stop offset="0" stop-color="#e8604c"/><stop offset=".5" stop-color="#5fcf8f"/><stop offset="1" stop-color="#4a7bff"/></linearGradient></defs>`;
+ h+=`<g id="en4" class="mq"><path id="enp4" d="${sh.body}" fill="${col}" stroke="#fff" stroke-width="3" stroke-linejoin="round"/></g><g id="su4" class="mq" fill="${SC[S.sh]}" stroke="#fff" stroke-width="2">${sh.sub}</g>`;
+ h+=`<text x="120" y="38" font-size="16" font-weight="700" fill="#fff">${n}</text><text x="120" y="58" class="cap">${w}</text><text id="st4" x="120" y="76" font-size="12" font-weight="700" fill="#c9a24b"></text>`;
+ h+=`<line x1="40" y1="200" x2="320" y2="200" stroke="#c8d4e6" stroke-width="2"/>`;
+ let pts="";for(let p=0;p<=14;p+=.5)pts+=`${40+p*20},${200-rP(p,o)*92} `;
+ h+=`<polyline points="${pts}" fill="none" stroke="#5fcf8f" stroke-width="3.5" stroke-linejoin="round"/><circle id="dt4" r="7" fill="#c9a24b" stroke="#fff" stroke-width="2"/>`;
+ h+=`<rect x="40" y="206" width="280" height="10" rx="3" fill="url(#ph)"/>`;
+ [0,7,14].forEach(p=>{h+=`<text x="${40+p*20}" y="232" text-anchor="middle" class="cap">${p}</text>`});
+ h+=`<text x="180" y="246" text-anchor="middle" class="cap">pH (acid → alkali)</text><text x="14" y="150" class="cap" transform="rotate(-90 14 150)" text-anchor="middle">Rate</text>`;
+ return h;
+}
+function lab4(){
+ const [n,o]=EZ[S.ez],r=rP(S.ph,o);
+ $("en4").style.transform=tr(55,60,.5)+` skewX(${((1-r)*22).toFixed(1)}deg)`;
+ const off=(1-Math.min(1,r/.5))*70;
+ $("su4").style.transform=tr(55+off*.5,60-off*.5,.5);
+ $("dt4").setAttribute("cx",40+S.ph*20);$("dt4").setAttribute("cy",200-r*92);
+ $("st4").textContent=r>=.95?"Best rate: pH is just right":r>=.5?"Working, but not at its best":r>0?"Poor: the active site is losing its shape":"Denatured: no activity";
+ $("vP").textContent=S.ph.toFixed(1);$("vR4").textContent=Math.round(r*100);
+}
+function found(){const e=$("fd");if(e)e.textContent="Best pH found: "+EZ.map((x,i)=>x[0]+(S.po[i]?" ✓":" ○")).join(" · ")}
+function sl4(v){
+ S.ph=v;lab4();
+ const [n,o,w]=EZ[S.ez];
+ if(Math.abs(v-o)<=.5&&!S.po[S.ez]){S.po[S.ez]=1;say(`✓ <b>${n} works best at about pH ${o}.</b> ${w}`+(S.po.every(x=>x)?" You found all three. Tap Next.":""),"ok")}
+ found();gate();
+}
+function pn(d){const v=Math.min(14,Math.max(0,Math.round((S.ph+d)*10)/10));$("sP").value=v;sl4(v)}
+function ez(i){S.ez=i;say("");render()}
+
+const C=[
+()=>`<p>Stage <b>${S.stg+1} of 4</b>${S.l1?" · You have seen all four stages.":""}</p><div class="row"><button onclick="nxs()">${S.stg<3?"Next stage":"Replay"}</button></div>`,
+()=>`<p><b>${S.fit>=0?"The enzyme and substrate fit together!":"Tap substrate A, B or C."}</b></p><p class="lg">Look at the shape of the hollow on top of the enzyme.</p>`,
+()=>`<label for="sT">Temperature: <span id="vT"></span> °C</label><input type="range" id="sT" min="0" max="70" value="${S.Tm}" oninput="sl3(+this.value)">
+ <div class="ans"><p><b>Rate: <span id="vR"></span>% of maximum</b></p>${TK.map((t,i)=>`<p id="k${i}"></p>`).join("")}</div><div class="row"><button class="ghost" onclick="newEnz()">New enzyme sample</button></div>`,
+()=>`<div class="opts">${EZ.map((e,i)=>`<button aria-pressed="${S.ez===i}" onclick="ez(${i})">${e[0]}</button>`).join("")}</div>
+ <label for="sP">pH: <span id="vP"></span></label><input type="range" id="sP" min="0" max="14" step="0.1" value="${S.ph}" oninput="sl4(+this.value)">
+ <div class="row"><button class="ghost" onclick="pn(-.5)">− 0.5</button><button class="ghost" onclick="pn(.5)">+ 0.5</button></div>
+ <div class="ans"><p>Rate: <b id="vR4"></b>% of maximum</p><p id="fd"></p></div>`,
+()=>{
+ let h=QS.map((x,qi)=>{const a=S.qa[qi];
+  const ob=S.qo[qi].map(oi=>`<button ${a!==null?"disabled":""} class="${a!==null?(oi===x.a?"ok":oi===a?"no":""):""}" onclick="qp(${qi},${oi})">${x.o[oi]}</button>`).join("");
+  return `<div class="q"><p>${qi+1}. ${x.q}</p><div class="opts">${ob}</div>${a===null?"":`<p class="why">${a===x.a?"Correct. ":"Not quite. "}${x.w}</p>`}</div>`}).join("");
+ if(S.qa.every(v=>v!==null)){const n=S.qa.filter((v,i)=>v===QS[i].a).length;
+  h+=`<div class="ans"><p><b>You scored ${n} out of 5</b></p><p>${n===5?"Excellent! You understand enzymes very well.":n>=3?"Good work. Try the labs again to strengthen it.":"Keep practising. Go back and explore the labs again."}</p></div><div class="row"><button onclick="again()">Start again</button></div>`}
+ return h}
+];
+
+function nxs(){S.stg=(S.stg+1)%4;if(S.stg===3)S.l1=1;say(STG[S.stg],S.stg===3?"ok":"");render()}
+function tryS(i){
+ if(lk||S.fit>=0)return;
+ const s=S.co[i],c=$("c"+i);
+ if(s===S.sh){S.fit=i;c.style.transform=tr(170,195);say(`✓ <b>It fits!</b> The ${SN[s]} substrate matches the shape of the active site exactly. This is why an enzyme works on only one substrate. Tap Next.`,"ok");lk=1;setTimeout(()=>{lk=0;render()},750);return}
+ lk=1;c.style.transform=tr(170,125);
+ say(`✗ <b>The ${SN[s]} does not fit.</b> Enzymes are specific: only a substrate with the matching shape fits the active site.`,"bad");
+ const rest=[[60,70],[170,70],[280,70]][i];
+ setTimeout(()=>{c.style.transform=tr(rest[0],rest[1]+23);lk=0},800);
+}
+function qp(q,o){if(S.qa[q]!==null)return;S.qa[q]=o;render()}
+function again(){S=fresh();S.step=1;say("");render()}
+function go(n){S.step=Math.max(0,Math.min(4,n));say("");render()}
+function gate(){const d=[S.l1,S.fit>=0,S.t.every(x=>x),S.po.every(x=>x),1][S.step];$("nx").disabled=!d;$("hn").textContent=d||S.step===4?"":"Complete this step to unlock Next."}
+function draw(){
+ const s=S.step;
+ $("sv").innerHTML=[svg0,svg1,svg2,svg3,()=>`<text x="170" y="120" text-anchor="middle" font-size="64">🧬</text><text x="170" y="170" text-anchor="middle" class="cap">Show what you know!</text>`][s]();
+ if(s===0)stg();
+ if(s===2)lab3();
+ if(s===3)lab4();
+ $("bk").disabled=s===0;$("nx").hidden=s===4;gate();
+}
+function render(){
+ const s=S.step;
+ $("steps").innerHTML=T.map((t,i)=>`<li class="${i<s?"d":i===s?"o":""}" ${i===s?'aria-current="step"':""}>${i+1}</li>`).join("");
+ $("sh").textContent=`Step ${s+1}: ${T[s].n}`;$("ins").textContent=T[s].i;
+ $("ctrl").innerHTML=C[s]();
+ draw();
+ if(s===2)tasks();
+ if(s===3)found();
+}
+$("sv").onclick=e=>{const c=e.target.closest(".cand");if(c)tryS(+c.dataset.i)};
+$("sv").onkeydown=e=>{if(e.key==="Enter"||e.key===" "){const c=e.target.closest(".cand");if(c){e.preventDefault();tryS(+c.dataset.i)}}};
+render();
+</script>
+</body>
+</html>

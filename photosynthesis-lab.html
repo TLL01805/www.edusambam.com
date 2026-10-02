@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Analytics 4 — EDUSAMBAM -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y35DW0V4HQ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-Y35DW0V4HQ');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photosynthesis Lab | EDUSAMBAM</title>
+<meta name="description" content="Run a virtual photosynthesis lab and see how light, water and carbon dioxide help plants make food. A free interactive biology activity from EDUSAMBAM."/>
+<link href="https://edusambam.com/photosynthesis-lab.html" rel="canonical"/>
+<link href="favicon.webp" rel="icon" type="image/webp"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+
+<style>
+:root{--bg:#12305c;--deep:#12305c;--panel:#1a3f78;--line:#3f6296;--gold:#c9a24b;--ivory:#fff;--mut:#c8d4e6;--ink:#12305c;--ok:#5fcf8f;--no:#ff8b7a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ivory);font:17px/1.6 "Segoe UI",Roboto,Helvetica,Arial,sans-serif;padding:20px 16px 40px}
+main{max-width:660px;margin:0 auto}
+.brand{color:var(--gold);font-weight:700;letter-spacing:.04em;font-size:15px;margin:0 0 4px}
+h1{font-size:2rem;line-height:1.15;margin:0 0 14px}
+p{margin:0 0 12px;color:var(--mut)}
+p b,li b{color:var(--ivory)}
+.rule{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin:0 0 14px;font-weight:700}
+.rule span{color:var(--gold)}
+ol.glance{margin:0 0 22px;padding-left:22px;color:var(--mut)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px}
+#steps{list-style:none;display:flex;gap:8px;margin:0 0 12px;padding:0}
+#steps li{width:34px;height:34px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;font-weight:700}
+#steps li.d{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+#steps li.o{border-color:var(--gold);color:var(--gold)}
+h2{font-size:1.25rem;margin:0 0 4px}
+svg{display:block;width:100%;height:auto;background:var(--deep);border-radius:8px}
+.tp,.slot{cursor:pointer}
+.tp:focus-visible,.slot:focus-visible{outline:3px solid var(--gold)}
+.cap{font-size:11px;fill:#fff}
+.bub{animation:rise var(--d,3s) linear infinite;animation-delay:var(--dl,0s)}
+@keyframes rise{from{transform:translateY(0);opacity:1}to{transform:translateY(-75px);opacity:0}}
+#fb{margin:0 0 10px;padding:8px 12px;border-radius:8px;border:2px solid var(--line);background:var(--deep);color:var(--ivory)}
+#fb:empty{display:none}
+#fb.ok{border-color:var(--ok)}
+#fb.bad{border-color:var(--no)}
+#fb.bad.a{animation:sh1 .4s}
+#fb.bad.b{animation:sh2 .4s}
+@keyframes sh1{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+@keyframes sh2{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+button{font:inherit;font-weight:700;border-radius:999px;border:2px solid var(--gold);background:var(--gold);color:var(--ink);padding:9px 20px;cursor:pointer}
+button.ghost{background:none;color:var(--gold)}
+button:disabled{opacity:.4;cursor:not-allowed}
+button:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:8px 0}
+.opts{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.opts button{background:var(--deep);color:var(--ivory);border-color:var(--line)}
+.opts button.ok{border-color:var(--ok);color:var(--ok)}
+.opts button.no{border-color:var(--no);color:var(--no)}
+input[type=range]{width:100%;accent-color:var(--gold);margin:2px 0 10px}
+label{font-weight:700}
+.nav{display:flex;justify-content:space-between;margin-top:16px}
+#hn{text-align:right;font-size:.9rem;margin:6px 0 0}
+.ans{background:var(--deep);border:2px solid var(--gold);border-radius:8px;padding:12px;margin:8px 0}
+.ans p{color:var(--ivory);margin:0 0 4px}
+.q{margin-bottom:14px}.q>p{color:var(--ivory);font-weight:700;margin-bottom:6px}
+.why{font-size:.95rem;margin:6px 0 0}
+.lg{font-size:.92rem}
+[hidden]{display:none!important}
+footer{margin-top:22px;text-align:center;color:var(--mut);font-size:.95rem}
+footer a{color:var(--gold)}
+@media (prefers-reduced-motion:reduce){.bub{animation:none}#fb.bad{animation:none!important}}
+</style>
+</head>
+<body>
+<main>
+<a aria-label="EDUSAMBAM home" href="index.html" style="display:inline-block;line-height:0"><img alt="EDUSAMBAM" src="logo-icon-full-white.png" style="height:52px;width:auto;max-width:100%;display:block"/></a>
+<p class="brand" style="margin-top:8px">Biology</p>
+<h1>Photosynthesis Lab</h1>
+<p>Photosynthesis is how green plants make their own food. Leaves trap light energy and use it to turn carbon dioxide and water into glucose, releasing oxygen. In this lab you will build the equation, run a pondweed experiment, and find out what limits the rate.</p>
+<div class="rule">Carbon dioxide + water <span>— light, chlorophyll →</span> glucose + oxygen</div>
+<ol class="glance">
+<li>Learn the six key ingredients and products.</li>
+<li>Build the photosynthesis equation.</li>
+<li>Run the pondweed experiment with three sliders.</li>
+<li>Find the limiting factor in three situations.</li>
+<li>Take a five-question quiz.</li>
+</ol>
+
+<section class="card" aria-label="Photosynthesis lab">
+<ul id="steps"></ul>
+<h2 id="sh"></h2>
+<p id="ins"></p>
+<p id="fb" aria-live="polite"></p>
+<svg id="sv" viewBox="0 0 340 250" role="img" aria-label="Photosynthesis diagram"></svg>
+<div id="ctrl"></div>
+<div class="nav"><button class="ghost" id="bk" onclick="go(S.step-1)">Back</button><button id="nx" onclick="go(S.step+1)">Next</button></div>
+<p id="hn"></p>
+</section>
+<footer>More free biology resources at <a href="https://edusambam.com">edusambam.com</a></footer>
+</main>
+
+<script>
+const $=i=>document.getElementById(i);
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+let sn=0;
+function say(h,k){const f=$("fb");f.innerHTML=h;f.className=(k||"")+(k==="bad"?(sn++%2?" a":" b"):"")}
+const PT=[
+["Sunlight",45,45,"The sun provides the light energy that drives photosynthesis."],
+["Water",110,226,"Roots absorb water from the soil. It travels up the stem to the leaves."],
+["Carbon dioxide",290,70,"Carbon dioxide enters the leaf through tiny pores called stomata."],
+["Chlorophyll",135,100,"Chlorophyll is the green pigment inside chloroplasts. It absorbs light energy."],
+["Glucose",170,165,"Glucose is the food made by photosynthesis. The plant uses it for energy and growth, or stores it as starch."],
+["Oxygen",55,140,"Oxygen is released as a by-product through the stomata. Animals breathe it."]
+];
+const OPT=["","Carbon dioxide","Water","Glucose","Oxygen","Nitrogen","Sunlight"];
+const GA=["Carbon dioxide","Water"],GB=["Glucose","Oxygen"];
+const SCN=[[15,80,28,"l"],[85,12,28,"c"],[90,90,8,"t"],[95,95,42,"t"],[8,90,30,"l"]];
+const FN={l:"Light",c:"Carbon dioxide",t:"Temperature"};
+const WHY={l:"There is too little light. Even with plenty of CO₂ and a good temperature, the plant cannot go faster.",c:"There is too little carbon dioxide. Even with plenty of light and a good temperature, the plant cannot go faster.",t:"The temperature is wrong. It is either too cold, so enzymes work slowly, or too hot, so they are damaged."};
+const lf=L=>1-Math.exp(-L/30),cf=C=>1-Math.exp(-C/30);
+const tf=T=>T<=30?Math.pow(T/30,1.6):Math.max(0,1-Math.pow((T-30)/14,2));
+const rate=(L,C,T)=>Math.round(100*Math.min(lf(L),cf(C))*tf(T)/0.9643);
+const QS=[
+{q:"Which gas is released during photosynthesis?",o:["Carbon dioxide","Oxygen","Nitrogen","Hydrogen"],a:1,w:"Oxygen is the by-product."},
+{q:"Where in a plant cell does photosynthesis happen?",o:["Mitochondria","Chloroplasts","Nucleus","Vacuole"],a:1,w:"Chloroplasts contain chlorophyll."},
+{q:"Which pigment absorbs the light energy?",o:["Haemoglobin","Melanin","Chlorophyll","Keratin"],a:2,w:"Chlorophyll is the green pigment."},
+{q:"Through what do leaves take in carbon dioxide?",o:["Roots","Stomata","Xylem","Flowers"],a:1,w:"Stomata are tiny pores, mostly on the underside of the leaf."},
+{q:"What happens to the rate of photosynthesis if the temperature gets far too high?",o:["It keeps rising","It stays the same","It falls, because enzymes are damaged","It doubles"],a:2,w:"High temperature denatures the enzymes."}
+];
+const T=[
+{n:"Learn the ingredients",i:"Tap each numbered circle on the plant to see what it does. The Next button unlocks after you explore all six."},
+{n:"Build the equation",i:"Tap each box to choose what goes into photosynthesis (top row) and what comes out (bottom row), then check."},
+{n:"Run the experiment",i:"Move the sliders and watch the oxygen bubbles from the pondweed. Complete the three tasks to unlock Next."},
+{n:"Find the limiting factor",i:"The limiting factor is the one thing holding the rate back. Study each situation and the graph, then choose."},
+{n:"Quick check",i:"Answer the five questions to test what you learned."}
+];
+function fresh(){return{step:0,seen:new Set(),e:[0,0,0,0],es:[null,null,null,null],eok:0,L:50,C:50,Tm:25,t:[0,0,0],sc:shuffle([0,1,2,3,4]).slice(0,3),sq:0,qo:QS.map(q=>shuffle(q.o.map((_,i)=>i))),qa:QS.map(()=>null)}}
+let S=fresh();
+
+function svg0(){
+ let h=`<defs><marker id="ar" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7Z" fill="#fff"/></marker></defs>`;
+ h+=`<rect x="0" y="205" width="340" height="45" fill="#5a4630"/><line x1="170" y1="205" x2="170" y2="92" stroke="#3fae6a" stroke-width="9" stroke-linecap="round"/>`;
+ h+=`<ellipse cx="132" cy="104" rx="42" ry="19" fill="#3fae6a" transform="rotate(-20 132 104)"/><ellipse cx="208" cy="124" rx="42" ry="19" fill="#3fae6a" transform="rotate(20 208 124)"/>`;
+ h+=`<path d="M170 205L140 235M170 205L200 235M170 205V240" stroke="#c8b08a" stroke-width="3" fill="none"/>`;
+ h+=`<g stroke="#ffd35a" stroke-width="3">${[0,45,90,135,180,225,270,315].map(a=>`<line x1="${45+30*Math.cos(a*Math.PI/180)}" y1="${45+30*Math.sin(a*Math.PI/180)}" x2="${45+38*Math.cos(a*Math.PI/180)}" y2="${45+38*Math.sin(a*Math.PI/180)}"/>`).join("")}</g>`;
+ h+=`<line x1="75" y1="68" x2="115" y2="92" stroke="#fff" stroke-width="2" marker-end="url(#ar)"/><line x1="268" y1="76" x2="232" y2="108" stroke="#fff" stroke-width="2" marker-end="url(#ar)"/><line x1="102" y1="228" x2="150" y2="205" stroke="#fff" stroke-width="2"/><line x1="105" y1="108" x2="75" y2="128" stroke="#fff" stroke-width="2" marker-end="url(#ar)"/>`;
+ h+=`<circle cx="45" cy="45" r="24" fill="#ffd35a"/>`;
+ PT.forEach((p,i)=>{
+  const [n,x,y]=p,lab=[[45,84],[110,246],[290,98],[135,128],[216,170],[55,168]][i];
+  h+=`<g class="tp" data-i="${i}" tabindex="0" role="button" aria-label="${n}"><circle cx="${x}" cy="${y}" r="17" fill="transparent"/><circle cx="${x}" cy="${y}" r="13" fill="${S.seen.has(i)?"#c9a24b":"#fff"}" stroke="#12305c" stroke-width="2"/><text x="${x}" y="${y+1}" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="700" fill="#12305c" pointer-events="none">${i+1}</text></g>`;
+  h+=`<text x="${lab[0]}" y="${lab[1]}" text-anchor="middle" font-size="10.5" font-weight="700" fill="#fff" pointer-events="none">${n}</text>`;
+ });
+ return h;
+}
+function svg1(){
+ let h=`<text x="170" y="22" text-anchor="middle" class="cap">Inputs</text><text x="170" y="132" text-anchor="middle" class="cap">Outputs</text><line x1="170" y1="30" x2="170" y2="30" /><text x="170" y="97" text-anchor="middle" font-size="22" fill="#fff">↓</text><text x="170" y="115" text-anchor="middle" class="cap">light energy + chlorophyll</text>`;
+ [[60,34],[214,34],[60,142],[214,142]].forEach(([x,y],i)=>{
+  const v=OPT[S.e[i]],st=S.es[i],w=v.split(" ");
+  h+=`<rect class="slot" data-i="${i}" x="${x}" y="${y}" width="70" height="60" rx="10" fill="${v?"#1a3f78":"transparent"}" stroke="${st==="ok"?"#5fcf8f":st==="bad"?"#ff8b7a":"#c9a24b"}" stroke-width="${st?4:2}" ${v?"":'stroke-dasharray="6 4"'} tabindex="0" role="button" aria-label="Box ${i+1}"/>`;
+  h+=v?w.map((t,k)=>`<text x="${x+35}" y="${y+(w.length>1?26+k*15:34)}" text-anchor="middle" font-size="12" font-weight="700" fill="#fff" pointer-events="none">${t}</text>`).join(""):`<text x="${x+35}" y="${y+38}" text-anchor="middle" font-size="24" fill="#c9a24b" pointer-events="none">?</text>`;
+ });
+ h+=`<text x="170" y="68" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">+</text><text x="170" y="176" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">+</text>`;
+ if(S.eok)h+=`<text x="170" y="232" text-anchor="middle" font-size="15" font-weight="700" fill="#c9a24b">6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂</text>`;
+ return h;
+}
+function svg2(){
+ let h=`<g id="lamp" opacity=".6"><circle cx="45" cy="125" r="24" fill="#ffd35a"/>${[0,45,90,135,180,225,270,315].map(a=>`<line x1="${45+30*Math.cos(a*Math.PI/180)}" y1="${125+30*Math.sin(a*Math.PI/180)}" x2="${45+40*Math.cos(a*Math.PI/180)}" y2="${125+40*Math.sin(a*Math.PI/180)}" stroke="#ffd35a" stroke-width="3"/>`).join("")}<path d="M75 110L150 100M75 125L150 125M75 140L150 150" stroke="#ffd35a" stroke-width="2" stroke-dasharray="4 4"/></g>`;
+ h+=`<rect id="wat" x="152" y="62" width="130" height="150" rx="10" fill="#4f8fe0" fill-opacity=".45"/><rect x="152" y="62" width="130" height="150" rx="10" fill="none" stroke="#c8d4e6" stroke-width="3"/>`;
+ h+=`<path d="M217 208C217 180 210 160 217 130M217 190C200 180 195 168 192 160M217 170C232 160 240 150 242 140M217 150C204 144 200 134 198 126" stroke="#3fae6a" stroke-width="4" fill="none" stroke-linecap="round"/>`;
+ for(let i=0;i<10;i++)h+=`<circle class="bub" id="b${i}" cx="${200+(i%5)*9+(i>4?4:0)}" cy="${150-(i%3)*6}" r="${3+(i%3)}" fill="#fff" fill-opacity=".85" style="--dl:-${(i*0.47).toFixed(2)}s"/>`;
+ h+=`<text id="rt" x="170" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#fff"></text><text x="217" y="234" text-anchor="middle" class="cap">Pondweed in a beaker of water</text>`;
+ return h;
+}
+function svg3(){
+ const sc=SCN[S.sc[Math.min(S.sq,2)]],[L,C,Tm]=sc;
+ let pts="";for(let l=0;l<=100;l+=4)pts+=`${40+l*2.8},${200-rate(l,C,Tm)*1.6} `;
+ return `<line x1="40" y1="200" x2="320" y2="200" stroke="#c8d4e6" stroke-width="2"/><line x1="40" y1="200" x2="40" y2="36" stroke="#c8d4e6" stroke-width="2"/>
+ <text x="180" y="226" text-anchor="middle" class="cap">Light intensity →</text><text transform="rotate(-90 14 118)" x="14" y="118" text-anchor="middle" class="cap">Rate of photosynthesis →</text>
+ <polyline points="${pts}" fill="none" stroke="#5fcf8f" stroke-width="4" stroke-linejoin="round"/>
+ <line x1="${40+L*2.8}" y1="200" x2="${40+L*2.8}" y2="${200-rate(L,C,Tm)*1.6}" stroke="#c9a24b" stroke-dasharray="5 4" stroke-width="2"/><circle cx="${40+L*2.8}" cy="${200-rate(L,C,Tm)*1.6}" r="8" fill="#c9a24b" stroke="#fff" stroke-width="2"/>
+ <text x="180" y="24" text-anchor="middle" class="cap">Graph for CO₂ ${C} and ${Tm} °C. The gold dot shows this situation.</text>`;
+}
+
+function lab(){
+ const r=rate(S.L,S.C,S.Tm),n=Math.round(r/10);
+ $("rt").textContent=`Oxygen bubbles: ${r} per minute`;
+ $("lamp").setAttribute("opacity",(.15+S.L/100*.85).toFixed(2));
+ $("wat").setAttribute("fill",`hsl(${210-S.Tm*4},70%,55%)`);
+ for(let i=0;i<10;i++){const b=$("b"+i);b.style.display=i<n?"block":"none";b.style.setProperty("--d",(5-r*0.035).toFixed(2)+"s")}
+ [["vL",S.L],["vC",S.C],["vT",S.Tm],["vR",r]].forEach(([k,v])=>{$(k).textContent=v});
+}
+const TK=[
+["Reach a rate of 80 or more.","You found ideal conditions: plenty of light and CO₂ and a warm temperature."],
+["Switch the light off (0) and watch the bubbles stop.","With no light there is no energy, so photosynthesis stops, even with CO₂ and warmth."],
+["Heat the water to 45 °C or more while light and CO₂ are above 50.","Too much heat damages (denatures) the enzymes, so photosynthesis stops."]
+];
+function sl(k,v){
+ S[k]=v;lab();
+ const r=rate(S.L,S.C,S.Tm);
+ const ok=[r>=80,S.L===0&&S.C>=50&&S.Tm>=20,S.Tm>=45&&S.L>=50&&S.C>=50&&r===0];
+ ok.forEach((b,i)=>{if(b&&!S.t[i]){S.t[i]=1;say(`✓ <b>Task ${i+1} complete!</b> ${TK[i][1]}`+(S.t.every(x=>x)?" All tasks done. Tap Next.":""),"ok")}});
+ tasks();
+ const d=S.t.every(x=>x);$("nx").disabled=!d;$("hn").textContent=d?"":"Complete this step to unlock Next.";
+}
+function tasks(){TK.forEach((t,i)=>{const e=$("k"+i);if(e)e.textContent=(S.t[i]?"✓ ":"○ ")+t[0]})}
+
+const C=[
+()=>{const left=PT.filter((p,i)=>!S.seen.has(i)).map(p=>p[0]);
+ return `<p>Explored: <b>${6-left.length} of 6</b>. ${left.length?"Still to find: "+left.join(", ")+".":"All done! Tap Next."}</p>`},
+()=>`${S.eok?`<div class="ans"><p><b>Balanced chemical equation</b></p><p>6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂</p></div>`:`<p class="lg">Tap a box to change it. Top row: the two things the plant takes in. Bottom row: the two things it makes.</p><div class="row"><button onclick="chkE()">Check my equation</button></div>`}`,
+()=>`<label for="sL">Light intensity: <span id="vL"></span></label><input type="range" id="sL" min="0" max="100" value="${S.L}" oninput="sl('L',+this.value)">
+ <label for="sC">Carbon dioxide level: <span id="vC"></span></label><input type="range" id="sC" min="0" max="100" value="${S.C}" oninput="sl('C',+this.value)">
+ <label for="sT">Temperature: <span id="vT"></span> °C</label><input type="range" id="sT" min="0" max="50" value="${S.Tm}" oninput="sl('Tm',+this.value)">
+ <div class="ans"><p><b>Rate: <span id="vR"></span> bubbles per minute</b></p>${TK.map((t,i)=>`<p id="k${i}"></p>`).join("")}</div>`,
+()=>{
+ if(S.sq>=3)return `<div class="ans"><p><b>All three situations solved!</b></p><p>When a factor is in short supply, adding more of the other factors makes no difference. Tap Next.</p></div>`;
+ const [L,C,Tm]=SCN[S.sc[S.sq]];
+ return `<p>Situation ${S.sq+1} of 3: light <b>${L}</b>, carbon dioxide <b>${C}</b>, temperature <b>${Tm} °C</b>. Rate: <b>${rate(L,C,Tm)}</b> bubbles per minute.</p>
+ <p><b>Which factor is limiting the rate?</b></p><div class="opts">${["l","c","t"].map(k=>`<button onclick="sp('${k}')">${FN[k]}</button>`).join("")}</div>
+ <p class="lg">Tip: if the gold dot is on the flat part of the curve, light is not the limiting factor.</p>`},
+()=>{
+ let h=QS.map((x,qi)=>{const a=S.qa[qi];
+  const ob=S.qo[qi].map(oi=>`<button ${a!==null?"disabled":""} class="${a!==null?(oi===x.a?"ok":oi===a?"no":""):""}" onclick="qp(${qi},${oi})">${x.o[oi]}</button>`).join("");
+  return `<div class="q"><p>${qi+1}. ${x.q}</p><div class="opts">${ob}</div>${a===null?"":`<p class="why">${a===x.a?"Correct. ":"Not quite. "}${x.w}</p>`}</div>`}).join("");
+ if(S.qa.every(v=>v!==null)){const n=S.qa.filter((v,i)=>v===QS[i].a).length;
+  h+=`<div class="ans"><p><b>You scored ${n} out of 5</b></p><p>${n===5?"Excellent! You understand photosynthesis very well.":n>=3?"Good work. Try the experiment again to strengthen it.":"Keep practising. Go back and run the experiment again."}</p></div><div class="row"><button onclick="again()">Start again</button></div>`}
+ return h}
+];
+
+function part(i){S.seen.add(i);say(`<b>${PT[i][0]}:</b> ${PT[i][3]}`+(S.seen.size===6?" You have explored all six. Tap Next.":""));render()}
+function slotTap(i){if(S.step!==1||S.eok)return;S.e[i]=(S.e[i]+1)%OPT.length;S.es[i]=null;draw()}
+function chkE(){
+ if(S.e.some(v=>!v)){say("✗ Fill all four boxes first. Tap a box to change it.","bad");return}
+ const v=S.e.map(i=>OPT[i]);
+ S.es=v.map((x,i)=>{const g=i<2?GA:GB,sib=v[i^1];return g.includes(x)&&x!==sib?"ok":"bad"});
+ const bad=S.es.filter(x=>x==="bad").length;
+ if(!bad){S.eok=1;say("✓ <b>Correct!</b> Plants take in carbon dioxide and water, and make glucose and oxygen. Light energy and chlorophyll make it happen. Tap Next.","ok")}
+ else say(`✗ ${bad} box${bad>1?"es are":" is"} not right (marked red). Think: what does a plant take in, and what does it make?`,"bad");
+ render()}
+function sp(k){
+ const sc=SCN[S.sc[S.sq]];
+ if(k===sc[3]){say(`✓ <b>Correct: ${FN[k]}.</b> ${WHY[k]}`+(S.sq===2?" Tap Next.":""),"ok");S.sq++;render()}
+ else say(`✗ Not quite. Compare the three numbers. Which one is furthest from ideal? (Ideal: plenty of light and CO₂, about 30 °C.)`,"bad");
+}
+function qp(q,o){if(S.qa[q]!==null)return;S.qa[q]=o;render()}
+function again(){S=fresh();S.step=2;S.seen=new Set([0,1,2,3,4,5]);S.eok=1;say("");render()}
+function go(n){S.step=Math.max(0,Math.min(4,n));say("");render()}
+
+function draw(){
+ const s=S.step;
+ $("sv").innerHTML=[svg0,svg1,svg2,svg3,()=>svg3()][s]();
+ if(s===2)lab();
+ if(s===4)$("sv").innerHTML=`<text x="170" y="120" text-anchor="middle" font-size="64">🌿</text><text x="170" y="170" text-anchor="middle" class="cap">Show what you know!</text>`;
+ const done=[S.seen.size===6,S.eok,S.t.every(x=>x),S.sq>=3,1][s];
+ $("bk").disabled=s===0;$("nx").hidden=s===4;$("nx").disabled=!done;
+ $("hn").textContent=done||s===4?"":"Complete this step to unlock Next.";
+}
+function render(){
+ const s=S.step;
+ $("steps").innerHTML=T.map((t,i)=>`<li class="${i<s?"d":i===s?"o":""}" ${i===s?'aria-current="step"':""}>${i+1}</li>`).join("");
+ $("sh").textContent=`Step ${s+1}: ${T[s].n}`;$("ins").textContent=T[s].i;
+ $("ctrl").innerHTML=C[s]();
+ draw();
+ if(s===2){lab();tasks()}
+}
+$("sv").onclick=e=>{const t=e.target.closest(".tp"),c=e.target.closest(".slot");if(t)part(+t.dataset.i);else if(c)slotTap(+c.dataset.i)};
+$("sv").onkeydown=e=>{if(e.key==="Enter"||e.key===" "){const t=e.target.closest(".tp"),c=e.target.closest(".slot");if(t||c){e.preventDefault();t?part(+t.dataset.i):slotTap(+c.dataset.i)}}};
+render();
+</script>
+</body>
+</html>

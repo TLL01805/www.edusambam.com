@@ -12,9 +12,9 @@ gtag('config', 'G-Y35DW0V4HQ');
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>The Water Cycle: Evaporation, Condensation &amp; Precipitation — EDUSAMBAM</title>
-<meta name="description" content="Explore the water cycle with an interactive simulator: evaporation, condensation and precipitation, step by step. Free learning activity from EDUSAMBAM."/>
-<link href="https://edusambam.com/water-cycle-simulator.html" rel="canonical"/>
+<title>Magic Square Workshop — EDUSAMBAM Interactive</title>
+<meta name="description" content="Build and solve magic squares where every row, column and diagonal adds to the same total. A free interactive maths activity from EDUSAMBAM."/>
+<link href="https://edusambam.com/magic-square-workshop.html" rel="canonical"/>
 <link href="favicon.webp" rel="icon" type="image/webp"/>
 <link href="favicon.ico" rel="icon" sizes="any"/>
 <link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
@@ -588,95 +588,110 @@ gtag('config', 'G-Y35DW0V4HQ');
   }
   .squiz-retake-btn:hover { background: rgba(255,255,255,0.1); }
 
-  /* ── FURTHER READING BOX ── */
-  .further-reading-box {
-    background: var(--cream);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 1.4rem 1.6rem;
-    margin: 1.5rem 0 2rem;
-  }
-  .further-reading-box .fr-label {
-    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em;
-    text-transform: uppercase; color: var(--red); margin-bottom: 0.7rem;
-  }
-  .further-reading-box ul { margin: 0 0 0 1.1rem; }
-  .further-reading-box li { margin-bottom: 0.5rem; }
-  .further-reading-box a { color: var(--navy); }
-  .further-reading-box a:hover { color: var(--red); }
+  /* ── TOOL HEADER (trimmed article-hero, no meta/tag/reader) ── */
+  .article-hero .sub a { color: var(--red); font-weight: 600; }
+  .article-hero .sub a:hover { text-decoration: underline; }
 
-  /* ── INTERACTIVE ACTIVITY BASE ── */
-  .activity-section {
+  /* ── BASE BUTTONS/PANEL (shared interactive-tool styling) ── */
+  .tool-panel {
     background: linear-gradient(135deg,#eef6ff,#fbf9f2);
     border: 1px solid var(--border);
     border-left: 5px solid var(--gold);
     border-radius: var(--radius);
     padding: 1.7rem 1.6rem 1.9rem;
-    margin: 2.2rem 0 2.6rem;
+    margin: 0.5rem 0 2rem;
   }
-  .activity-eyebrow {
-    display: inline-block;
-    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em;
-    text-transform: uppercase; color: var(--red);
-    background: rgba(139,0,0,0.08);
-    padding: 0.3rem 0.8rem; border-radius: 30px;
-    margin-bottom: 0.7rem;
+  .tool-panel p.tool-intro { color: var(--slate); font-size: 0.96rem; margin-bottom: 1.2rem; }
+  .tool-howto {
+    background: var(--white); border: 1px solid var(--border-lt); border-radius: var(--radius);
+    padding: 1.1rem 1.3rem; margin: 0 0 1.4rem;
   }
-  .activity-section h3 {
-    font-family: 'EB Garamond', serif; font-weight: 600;
-    font-size: 1.35rem; color: var(--navy); margin: 0 0 0.5rem;
+  .tool-howto .howto-label {
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--red); margin-bottom: 0.6rem;
   }
-  .activity-section > p.activity-intro { color: var(--slate); font-size: 0.96rem; margin-bottom: 1.2rem; }
-  .activity-btn-row { display: flex; gap: 0.7rem; flex-wrap: wrap; }
-  .activity-btn {
+  .tool-howto ol { margin: 0 0 0 1.2rem; }
+  .tool-howto li { margin-bottom: 0.5rem; font-size: 0.92rem; color: var(--slate); }
+  .tool-howto li strong { color: var(--ink); }
+  .tool-howto .howto-example {
+    margin-top: 0.8rem; padding-top: 0.8rem; border-top: 1px dashed var(--border);
+    font-size: 0.85rem; color: var(--muted);
+  }
+  .tool-btn-row { display: flex; gap: 0.7rem; flex-wrap: wrap; margin-top: 1rem; }
+  .tool-btn {
     font-family: 'Source Sans 3', sans-serif; font-size: 0.88rem; font-weight: 600;
     padding: 0.6rem 1.2rem; border-radius: 30px; cursor: pointer; border: none;
     transition: background 0.2s;
   }
-  .activity-btn.primary { background: var(--red); color: white; }
-  .activity-btn.primary:hover { background: var(--red-mid); }
-  .activity-btn.secondary { background: var(--white); color: var(--navy); border: 1px solid var(--border); }
-  .activity-btn.secondary:hover { border-color: var(--navy); }
-  .fc-tab {
+  .tool-btn.primary { background: var(--red); color: white; }
+  .tool-btn.primary:hover { background: var(--red-mid); }
+  .tool-btn.secondary { background: var(--white); color: var(--navy); border: 1px solid var(--border); }
+  .tool-btn.secondary:hover { border-color: var(--navy); }
+  .tool-tab {
     background: var(--white); border: 1px solid var(--border);
     color: var(--navy); font-family: 'Source Sans 3', sans-serif;
     font-size: 0.86rem; font-weight: 600; padding: 0.5rem 1rem;
     border-radius: 30px; cursor: pointer; transition: all 0.15s;
   }
-  .fc-tab.active { background: var(--navy); color: white; border-color: var(--navy); }
-  .fc-tab:hover:not(.active) { border-color: var(--gold); }
-  .plate-preset-row { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1.2rem 0 0.4rem; }
-  .plate-preset-hint { font-size: 0.86rem; color: var(--muted); margin-bottom: 0.5rem; }
-
-  /* ── WATER CYCLE SIMULATOR ── */
-  .wc-controls { display: flex; flex-wrap: wrap; gap: 1.6rem; margin-bottom: 1.2rem; }
-  .wc-controls label { display: flex; align-items: center; gap: 0.6rem; font-size: 0.88rem; font-weight: 600; color: var(--slate); }
-  .wc-controls input[type="range"] { width: 140px; accent-color: var(--red); }
-  .wc-controls .wc-val { font-weight: 700; color: var(--navy); min-width: 44px; display: inline-block; }
-  .wc-scene {
-    position: relative; height: 260px; border-radius: var(--radius);
-    border: 1px solid var(--border); overflow: hidden; margin-bottom: 1rem;
-    background: linear-gradient(to bottom, #cfe8ff 0%, #eaf2fb 55%, #d8ecff 100%);
-  }
-  .wc-sun { position: absolute; top: 12px; left: 16px; font-size: 2.1rem; transition: filter 0.3s; }
-  .wc-cloud-wrap { position: absolute; top: 16px; left: 50%; transform: translateX(-50%); text-align: center; }
-  .wc-cloud { font-size: 2.8rem; display: block; transition: filter 0.3s; }
-  .wc-cloud.raining { filter: brightness(0.75) saturate(1.3); }
-  .wc-cloud-fill-track { width: 92px; height: 8px; background: rgba(255,255,255,0.7); border-radius: 6px; margin: 4px auto 0; overflow: hidden; }
-  .wc-cloud-fill { height: 100%; background: var(--navy); width: 0%; transition: width 0.4s ease; }
-  .wc-ground {
-    position: absolute; bottom: 0; left: 0; right: 0; text-align: center;
-    font-size: 1.9rem; padding: 10px 0 8px;
-    background: linear-gradient(to bottom, transparent, rgba(11,78,162,0.18));
-  }
-  .wc-droplet { position: absolute; font-size: 1.05rem; pointer-events: none; transition: top 1.1s linear, opacity 0.3s linear; }
-  .wc-stats { display: flex; gap: 1.4rem; flex-wrap: wrap; font-size: 0.86rem; font-weight: 600; color: var(--slate); margin-bottom: 1rem; }
-  .wc-stats .wc-stat-val { color: var(--navy); font-weight: 700; }
-  .wc-message {
+  .tool-tab.active { background: var(--navy); color: white; border-color: var(--navy); }
+  .tool-tab:hover:not(.active) { border-color: var(--gold); }
+  .tool-message {
     padding: 0.9rem 1.1rem; border-radius: var(--radius); font-size: 0.92rem; font-weight: 600;
-    background: var(--cream); color: var(--slate); border-left: 4px solid var(--border); margin-top: 0.6rem;
+    background: var(--cream); color: var(--slate); border-left: 4px solid var(--border); margin-top: 1rem;
   }
-  .wc-message.event { background: rgba(11,78,162,0.1); color: #0b4ea2; border-left-color: #0b4ea2; }
+  .tool-message.success { background: rgba(46,125,50,0.1); color: #2e7d32; border-left-color: #2e7d32; }
+  .tool-message.fail { background: rgba(139,0,0,0.07); color: var(--red); border-left-color: var(--red); }
+  .tool-stats { display: flex; gap: 1.4rem; flex-wrap: wrap; font-size: 0.86rem; font-weight: 600; color: var(--slate); margin: 1rem 0; }
+  .tool-stats .stat-val { color: var(--navy); font-weight: 700; }
+
+  /* ── MAGIC SQUARE WORKSHOP ── */
+  .ms-layout { display: flex; gap: 1.8rem; flex-wrap: wrap; align-items: flex-start; justify-content: center; }
+  .ms-grid-col { flex: 0 0 auto; }
+  .ms-grid-with-sums {
+    display: inline-grid;
+    gap: 4px;
+  }
+  .ms-cell {
+    width: 52px; height: 52px;
+    background: var(--white); border: 2px solid var(--border);
+    border-radius: 8px; font-family: 'EB Garamond', serif; font-weight: 700;
+    font-size: 1.3rem; color: var(--navy); cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.15s;
+  }
+  .ms-cell:hover { border-color: var(--gold); }
+  .ms-cell.selected { background: var(--gold-lt); border-color: var(--gold); transform: scale(1.05); }
+  .ms-cell.solution { cursor: default; background: var(--cream); color: var(--slate); }
+  .ms-sum-badge {
+    min-width: 44px; height: 52px; display: flex; align-items: center; justify-content: center;
+    font-size: 0.86rem; font-weight: 700; color: var(--muted);
+    background: var(--cream); border-radius: 8px; border: 1px solid var(--border-lt);
+  }
+  .ms-sum-badge.col-badge { height: 36px; width: 52px; min-width: 0; }
+  .ms-sum-badge.ok { background: rgba(46,125,50,0.15); color: #2e7d32; border-color: #2e7d32; }
+  .ms-diag-row { display: flex; gap: 0.8rem; margin-top: 0.7rem; flex-wrap: wrap; justify-content: center; }
+  .ms-diag-badge {
+    font-size: 0.82rem; font-weight: 700; color: var(--muted);
+    background: var(--cream); border: 1px solid var(--border-lt); border-radius: 30px;
+    padding: 0.35rem 0.9rem;
+  }
+  .ms-diag-badge.ok { background: rgba(46,125,50,0.15); color: #2e7d32; border-color: #2e7d32; }
+  .ms-side-panel { flex: 1 1 200px; min-width: 200px; }
+  .ms-constant-box {
+    background: var(--white); border: 1px solid var(--border-lt); border-radius: var(--radius);
+    padding: 1rem 1.1rem; margin-bottom: 1rem; text-align: center;
+  }
+  .ms-constant-box .mc-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--red); margin-bottom: 0.3rem; }
+  .ms-constant-box .mc-value { font-family: 'EB Garamond', serif; font-size: 2rem; font-weight: 700; color: var(--navy); }
+  .ms-progress-box {
+    background: var(--white); border: 1px solid var(--border-lt); border-radius: var(--radius);
+    padding: 0.9rem 1.1rem; margin-bottom: 1rem; text-align: center; font-size: 0.92rem; font-weight: 600; color: var(--slate);
+  }
+  @media (max-width: 480px) {
+    .ms-cell { width: 42px; height: 42px; font-size: 1.05rem; }
+    .ms-sum-badge { width: 38px; min-width: 38px; height: 42px; font-size: 0.74rem; }
+    .ms-sum-badge.col-badge { height: 30px; width: 42px; }
+  }
 </style>
 <style id="edusambam-reader-style">
 .mark{width:48px;height:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px;border-radius:14px;background:#eef6ff;box-shadow:0 2px 7px rgba(8,47,99,.10);flex:0 0 48px}.mark i{display:block;border-radius:50%;background:#0b4ea2;min-width:0;min-height:0}.mark i:nth-child(5){background:#d4a017}.edusambam-reader{max-width:980px;margin:1.2rem auto 0;padding:1rem 1.1rem;border:1px solid #d7e4ef;border-radius:14px;background:linear-gradient(135deg,#f7fbff,#fff);box-shadow:0 6px 18px rgba(11,45,92,.08)}.edusambam-reader strong{display:block;color:#0b55a5;font-size:.9rem;letter-spacing:.04em}.edusambam-reader .reader-slogan{color:#b27e08;font-weight:900;margin-top:.25rem;font-size:.82rem}.edusambam-reader .reader-help{color:#607086;font-size:.8rem;margin:.3rem 0 .7rem}.edusambam-reader .reader-controls{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}.edusambam-reader button,.edusambam-reader select{border:1px solid #c9d9e8;background:#fff;color:#153b6e;border-radius:8px;padding:.48rem .65rem;font-weight:800;cursor:pointer}.edusambam-reader button:first-child{background:#0b55a5;color:#fff;border-color:#0b55a5}.edusambam-reader .reader-status{display:block;color:#607086;font-size:.75rem;margin-top:.55rem}.edusambam-reader .reader-progress{height:4px;background:#e4edf6;border-radius:99px;margin-top:.6rem;overflow:hidden}.edusambam-reader .reader-progress span{display:block;width:0;height:100%;background:#e1ad1c;transition:width .2s linear}@media(max-width:600px){.edusambam-reader{margin-left:0;margin-right:0}.edusambam-reader .reader-controls button,.edusambam-reader .reader-controls select{flex:1;min-width:75px}}
@@ -1105,398 +1120,232 @@ footer.footer {
 <div class="edusambam-search-results"></div>
 </div>
 </div>
-<!-- ARTICLE HERO -->
+<!-- TOOL HEADER (lightweight, not an article) -->
 <div class="article-hero">
-<div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; <a href="index.html#subject-biology">Biology</a> &nbsp;/&nbsp; The Water Cycle</div>
-<div class="article-hero-tag">General Science · Earth Science &amp; Interactive Activities</div>
-<h1>The Water Cycle: Evaporation, Condensation &amp; Precipitation</h1>
-<p class="sub">Follow a single drop of water as it rises, gathers into clouds, falls back to Earth, and starts the journey all over again — then take control and run the cycle yourself.</p>
-<div class="article-hero-meta"><span>EDUSAMBAM Editorial Team</span><span>|</span><span>18 min read + interactive</span><span>|</span><span>Science</span></div>
-</div><div aria-label="EDUSAMBAM article reader" class="edusambam-reader"><strong>🔊 LISTEN TO THIS ARTICLE</strong><div class="reader-slogan">SAVE YOUR EYES • IMPROVE YOUR LISTENING</div><div class="reader-help">Listen to the article instead of relying only on continuous screen reading.</div><div class="reader-controls"><button data-reader="play" type="button">▶ Play</button><button data-reader="pause" type="button">⏸ Pause</button><button data-reader="resume" type="button">▶ Resume</button><button data-reader="stop" type="button">■ Stop</button><select aria-label="Reading speed"><option value="1">1×</option><option value="0.8">0.8×</option><option value="1.2">1.2×</option></select></div><div aria-hidden="true" class="reader-progress"><span></span></div><small class="reader-status">Ready to read the article.</small></div>
-<!-- ARTICLE BODY -->
+<div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; <a href="index.html#subject-maths">Mathematics</a> &nbsp;/&nbsp; Magic Square Workshop</div>
+<h1>🔢 Magic Square Workshop</h1>
+<p class="sub">Rearrange the numbers so every row, column and diagonal adds up to the same magic total — with live sums that turn green the moment a line is correct.</p>
+</div>
+<!-- TOOL BODY -->
 
+<div class="tool-panel" id="magicSquareWorkshop">
+<p class="tool-intro">🔢 A magic square uses every number from 1 to n² exactly once, arranged so every row, column and diagonal adds up to the same total. Your numbers are already there — your job is to put them in the right places.</p>
 
-<div class="article-wrap">
-<p class="lead">The water in a glass on your table today might once have been part of a cloud over the ocean, or rain that fell on a mountain hundreds of years ago. Water on Earth doesn't disappear or get used up — it just keeps changing form and moving between the sky, the land and the sea in an endless loop called the <strong>water cycle</strong>. This article walks through every stage of that journey, then hands you the controls: set the temperature and sunlight yourself and watch the cycle run in real time.</p>
-
-<div class="diagram-box">
-<svg viewBox="0 0 820 380" role="img" aria-labelledby="t1 d1">
-<title id="t1">The water cycle</title>
-<desc id="d1">A diagram showing the sun heating the ocean, water evaporating upward into a cloud, condensing, falling as precipitation onto mountains, and running off through a river back into the ocean.</desc>
-<circle cx="700" cy="60" r="34" fill="#ffe89a" stroke="#06244a" stroke-width="3"/>
-<text x="700" y="68" text-anchor="middle" font-size="26">☀️</text>
-<path d="M120 300 Q140 100 400 90 Q660 80 700 100" fill="none" stroke="#0b4ea2" stroke-width="0"/>
-<ellipse cx="330" cy="90" rx="110" ry="46" fill="#e7eef7" stroke="#06244a" stroke-width="3"/>
-<text x="330" y="100" text-anchor="middle" font-size="30">☁️</text>
-<path d="M170 260 L200 130" stroke="#0b4ea2" stroke-width="5" stroke-dasharray="2 8" marker-end="url(#wa1)"/>
-<text x="130" y="200" font-size="15" fill="#142033" font-weight="700">Evaporation</text>
-<path d="M300 150 L280 240" stroke="#0b4ea2" stroke-width="5" marker-end="url(#wa1)"/>
-<path d="M360 150 L380 240" stroke="#0b4ea2" stroke-width="5" marker-end="url(#wa1)"/>
-<text x="380" y="185" font-size="15" fill="#142033" font-weight="700">Precipitation</text>
-<polygon points="180,300 260,180 340,300" fill="#c9d6e3" stroke="#06244a" stroke-width="3"/>
-<polygon points="200,300 260,210 320,300" fill="#eef2f6" stroke="#06244a" stroke-width="2"/>
-<path d="M270 260 Q320 320 420 330 Q560 340 610 300" fill="none" stroke="#0b4ea2" stroke-width="6" marker-end="url(#wa1)"/>
-<text x="420" y="360" text-anchor="middle" font-size="15" fill="#142033" font-weight="700">Runoff &amp; Collection</text>
-<rect x="600" y="290" width="220" height="70" fill="#8ec6f0" stroke="#06244a" stroke-width="3"/>
-<text x="710" y="330" text-anchor="middle" font-size="16" font-weight="700" fill="#06244a">Ocean</text>
-<path d="M700 100 Q680 180 620 280" stroke="#ffcf4d" stroke-width="4" stroke-dasharray="2 8" marker-end="url(#wa2)"/>
-<defs>
-<marker id="wa1" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#0b4ea2"/></marker>
-<marker id="wa2" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#d4a017"/></marker>
-</defs>
-</svg>
-<div class="diagram-caption">Original EDUSAMBAM schematic: the water cycle — evaporation lifts water up, it condenses into clouds, falls as precipitation, and collects back into oceans and rivers.</div>
+<div class="tool-howto">
+<div class="howto-label">How This Works</div>
+<ol>
+<li><strong>Pick a size</strong> below — 3×3, 4×4 or 5×5. The numbers get shuffled into the grid.</li>
+<li><strong>Tap any two cells to swap them.</strong> Tap the first number (it highlights gold), then tap a second number — they swap places.</li>
+<li><strong>Watch the sum badges.</strong> Every row, column and the two diagonals have their own live total. A badge turns green the moment that line matches the magic total.</li>
+<li><strong>Get all lines green to win.</strong> Keep swapping until every row, column and diagonal glows green at once.</li>
+</ol>
+<div class="howto-example">Stuck? Tap "Reveal a Solution" to see one correct arrangement, then tap "Back to My Puzzle" to keep trying yourself.</div>
 </div>
 
-<h2><span class="num">1.</span> What Is the Water Cycle?</h2>
-<p>The <strong>water cycle</strong> (also called the hydrologic cycle) is the continuous movement of water between the Earth's oceans, atmosphere and land. It has no real starting point — water is constantly evaporating, condensing, falling and collecting, over and over, powered almost entirely by energy from the sun.</p>
-<p>The total amount of water on Earth stays roughly the same over time. The water cycle doesn't create or destroy water — it simply moves it from one form and place to another, again and again.</p>
-<div class="example-box"><div class="ex-label">Big idea</div><p>The same water molecules have been cycling through oceans, clouds, rivers and living things for billions of years. The water you drink today has almost certainly been rained on before, more than once.</p></div>
+<p style="font-size:0.86rem;color:var(--muted);margin-bottom:0.6rem;"><strong>Choose a size:</strong></p>
+<div class="tool-btn-row" id="msSizeRow" style="margin-top:0;margin-bottom:1.2rem;"></div>
 
-<h2><span class="num">2.</span> Evaporation: Water Becomes Vapor</h2>
-<p>Sunlight heats the surface of oceans, lakes and rivers, giving water molecules enough energy to escape into the air as invisible <strong>water vapor</strong>, a gas. This process is called <strong>evaporation</strong>. Warmer temperatures and more direct sunlight speed evaporation up, because the extra energy makes it easier for water molecules to break free from the liquid surface.</p>
-<p>Plants also release water vapor into the air through their leaves, in a related process called <strong>transpiration</strong>. Together, evaporation and transpiration are sometimes grouped as "evapotranspiration."</p>
+<div class="ms-constant-box">
+<div class="mc-label">Magic Total</div>
+<div class="mc-value" id="msConstantVal">15</div>
+</div>
 
-<h2><span class="num">3.</span> Condensation: Vapor Becomes Clouds</h2>
-<p>As water vapor rises higher into the atmosphere, it reaches cooler air. Cooling causes the vapor to lose energy and turn back into tiny liquid water droplets — a process called <strong>condensation</strong>. Billions of these tiny droplets clustering together around dust and other particles in the air form the clouds you see in the sky.</p>
-<div class="real-world-box"><div class="rw-label">Everyday example</div><p>The mist that forms on a cold glass of lemonade on a hot day is condensation in action — warm, humid air touching the cold glass cools down and its water vapor turns back into liquid droplets.</p></div>
+<div class="ms-progress-box" id="msProgressBox">0 of 8 lines correct</div>
 
-<h2><span class="num">4.</span> Precipitation: Water Falls Back Down</h2>
-<p>As more and more droplets condense inside a cloud, they combine into larger drops. Eventually they become too heavy for rising air to support, and they fall to Earth as <strong>precipitation</strong> — rain, snow, sleet or hail, depending on the temperature of the air they fall through.</p>
-<p>Precipitation is the main way water returns from the atmosphere to the Earth's surface, refilling oceans, rivers, lakes and groundwater supplies.</p>
-
-<h2><span class="num">5.</span> Collection and Runoff: Water Returns</h2>
-<p>Once precipitation reaches the ground, it takes several possible paths. Some flows across the surface as <strong>runoff</strong>, joining streams and rivers that eventually lead back to the ocean. Some soaks into the ground and becomes <strong>groundwater</strong>, which can later resurface in springs or be drawn up by plant roots. And some falls directly back into oceans and lakes, ready to evaporate all over again.</p>
-<div class="example-box"><div class="ex-label">Quick check</div><p>Snow that falls on a mountain in winter doesn't leave the water cycle — it simply pauses as ice until it melts, then continues the same journey as runoff and evaporation.</p></div>
-
-<div class="activity-section" id="waterCycleSim">
-<span class="activity-eyebrow">Interactive Activity</span>
-<h3>🌦️ Water Cycle Simulator</h3>
-<p class="activity-intro">Set the temperature and sunlight, then press Start. Watch water rise from the ocean as evaporation, fill the cloud, and fall as rain once the cloud is full.</p>
-<div class="wc-controls">
-<label>🌡️ Temperature <input id="wcTemp" max="40" min="0" type="range" value="20"/> <span class="wc-val" id="wcTempVal">20°C</span></label>
-<label>☀️ Sunlight <input id="wcSun" max="100" min="0" type="range" value="50"/> <span class="wc-val" id="wcSunVal">50%</span></label>
-</div>
-<div class="wc-scene" id="wcScene">
-<div class="wc-sun" id="wcSunIcon">☀️</div>
-<div class="wc-cloud-wrap">
-<span class="wc-cloud" id="wcCloud">☁️</span>
-<div class="wc-cloud-fill-track"><div class="wc-cloud-fill" id="wcCloudFill"></div></div>
-</div>
-<div id="wcDroplets"></div>
-<div class="wc-ground">🏔️〰️🌊</div>
-</div>
-<div class="wc-stats">
-<span>Evaporation Rate: <span class="wc-stat-val" id="wcEvapRate">—</span></span>
-<span>Cloud Fullness: <span class="wc-stat-val" id="wcCloudPct">0%</span></span>
-<span>Rain Cycles: <span class="wc-stat-val" id="wcRainCount">0</span></span>
-</div>
-<div class="activity-btn-row" style="margin-bottom:1rem;">
-<button class="activity-btn primary" id="wcPlayBtn" type="button">▶ Start Simulation</button>
-<button class="activity-btn secondary" id="wcResetBtn" type="button">Reset</button>
-</div>
-<div class="wc-message" id="wcMessage">Adjust temperature and sunlight, then press Start to watch the cycle run.</div>
-<p class="plate-preset-hint"><strong>Or try a preset scenario:</strong></p>
-<div class="plate-preset-row">
-<button class="fc-tab" data-wcpreset="desert" type="button">🏜️ Desert Day</button>
-<button class="fc-tab" data-wcpreset="rainy" type="button">🌧️ Cool &amp; Cloudy</button>
-<button class="fc-tab" data-wcpreset="tropical" type="button">🌴 Tropical Storm</button>
+<div class="ms-layout">
+<div class="ms-grid-col">
+<div class="ms-grid-with-sums" id="msGridWithSums"></div>
+<div class="ms-diag-row" id="msDiagRow"></div>
 </div>
 </div>
 
-<h2><span class="num">6.</span> The Water Cycle, Weather and Climate</h2>
-<p>The water cycle is one of the main engines behind weather. Evaporation adds moisture to the air; condensation turns that moisture into clouds; precipitation releases it as rain or snow. Where and how fast each stage happens determines whether a region experiences frequent storms, gentle rain, or long dry spells.</p>
-<p>Regions near warm oceans, like tropical coastlines, tend to have faster evaporation and heavier rainfall because higher temperatures and abundant water speed up the entire cycle. Cooler, drier regions cycle water much more slowly.</p>
-
-<h2><span class="num">7.</span> Human Impact on the Water Cycle</h2>
-<p>Human activity can noticeably affect the water cycle. Cutting down forests reduces transpiration, since fewer trees means less water vapor released into the air, which can reduce local rainfall over time. Paving over land with roads and buildings stops water from soaking into the ground, increasing runoff and the risk of flooding. Rising global temperatures also speed up evaporation in many regions, intensifying both droughts and heavy rainfall events in different places.</p>
-<div class="real-world-box"><div class="rw-label">Why it matters</div><p>Because the water cycle connects oceans, land, air and living things into one continuous system, a change in one part — like widespread deforestation — can shift rainfall patterns far away from where the change actually happened.</p></div>
-
-<h2><span class="num">8.</span> Common Misconceptions and Further Reading</h2>
-<p><strong>Misconception 1: "Water disappears when it evaporates."</strong> Evaporated water doesn't vanish — it simply becomes an invisible gas (water vapor) that stays in the atmosphere until it condenses again.</p>
-<p><strong>Misconception 2: "Rain only comes from the ocean."</strong> Rain can come from water evaporated from lakes, rivers, soil and plants too — the ocean is the largest source simply because it covers most of Earth's surface.</p>
-<p><strong>Misconception 3: "The water cycle always moves at the same speed."</strong> Temperature, sunlight, humidity and wind all change how fast each stage happens — that's exactly why some places have frequent rain and others stay dry for months.</p>
-<p><strong>Misconception 4: "Clouds are made of water vapor."</strong> Clouds are actually made of tiny liquid water droplets (or ice crystals) that have already condensed — water vapor itself is invisible.</p>
-
-<div class="further-reading-box">
-<div class="fr-label">Further Reading</div>
-<p>This article is original EDUSAMBAM educational writing. The following open resource was used for factual cross-checking and is provided for further study; it is not reproduced as article text.</p>
-<ul>
-<li><a href="https://www.usgs.gov/special-topics/water-science-school/science/water-cycle" rel="noopener" target="_blank">USGS Water Science School — The Water Cycle</a></li>
-</ul>
+<div class="tool-btn-row">
+<button class="tool-btn secondary" id="msShuffleBtn" type="button">🔀 New Shuffle</button>
+<button class="tool-btn secondary" id="msRevealBtn" type="button">👁️ Reveal a Solution</button>
 </div>
 
-<div class="quiz-section">
-<div class="section-eyebrow">Test Your Understanding</div>
-<h2>Practice Quiz</h2>
-<p class="quiz-intro">10 questions. Select an answer for each, then submit to see your score instantly.</p>
-<div class="squiz-progress"><div class="squiz-progress-fill" id="squizProgressFill"></div></div>
-<div class="squiz-progress-label" id="squizProgressLabel">0 of 10 answered</div>
-<div class="squiz-results" id="squizResults">
-<div class="squiz-score-big" id="squizScoreBig">0/10</div><div class="squiz-score-label" id="squizScoreLabel">You scored 0%</div><div class="squiz-score-tier" id="squizScoreTier">Keep practicing</div>
-<div><button class="squiz-retake-btn" onclick="retakeQuiz()">Retake Quiz</button></div>
-</div>
-<form id="squizForm">
-<div class="squiz-item" data-correct="1">
-<div class="squiz-q"><span class="qnum">1.</span>What powers most of the water cycle?</div>
-<div class="squiz-option"><input id="sq1a" name="sq1" type="radio" value="0"/><label for="sq1a">A. Wind alone</label></div><div class="squiz-option"><input id="sq1b" name="sq1" type="radio" value="1"/><label for="sq1b">B. Energy from the sun</label></div><div class="squiz-option"><input id="sq1c" name="sq1" type="radio" value="2"/><label for="sq1c">C. Ocean currents</label></div><div class="squiz-option"><input id="sq1d" name="sq1" type="radio" value="3"/><label for="sq1d">D. Electricity from lightning</label></div>
-</div><div class="squiz-item" data-correct="2">
-<div class="squiz-q"><span class="qnum">2.</span>What is evaporation?</div>
-<div class="squiz-option"><input id="sq2a" name="sq2" type="radio" value="0"/><label for="sq2a">A. Water freezing into ice</label></div><div class="squiz-option"><input id="sq2b" name="sq2" type="radio" value="1"/><label for="sq2b">B. Rain falling to the ground</label></div><div class="squiz-option"><input id="sq2c" name="sq2" type="radio" value="2"/><label for="sq2c">C. Liquid water turning into water vapor</label></div><div class="squiz-option"><input id="sq2d" name="sq2" type="radio" value="3"/><label for="sq2d">D. Clouds joining together</label></div>
-</div><div class="squiz-item" data-correct="0">
-<div class="squiz-q"><span class="qnum">3.</span>What happens during condensation?</div>
-<div class="squiz-option"><input id="sq3a" name="sq3" type="radio" value="0"/><label for="sq3a">A. Water vapor cools and turns back into tiny liquid droplets</label></div><div class="squiz-option"><input id="sq3b" name="sq3" type="radio" value="1"/><label for="sq3b">B. Liquid water evaporates into gas</label></div><div class="squiz-option"><input id="sq3c" name="sq3" type="radio" value="2"/><label for="sq3c">C. Ice melts into liquid water</label></div><div class="squiz-option"><input id="sq3d" name="sq3" type="radio" value="3"/><label for="sq3d">D. Groundwater rises to the surface</label></div>
-</div><div class="squiz-item" data-correct="3">
-<div class="squiz-q"><span class="qnum">4.</span>What is precipitation?</div>
-<div class="squiz-option"><input id="sq4a" name="sq4" type="radio" value="0"/><label for="sq4a">A. Water vapor rising into the sky</label></div><div class="squiz-option"><input id="sq4b" name="sq4" type="radio" value="1"/><label for="sq4b">B. Water soaking into soil</label></div><div class="squiz-option"><input id="sq4c" name="sq4" type="radio" value="2"/><label for="sq4c">C. Clouds forming from dust</label></div><div class="squiz-option"><input id="sq4d" name="sq4" type="radio" value="3"/><label for="sq4d">D. Water falling from clouds as rain, snow, sleet or hail</label></div>
-</div><div class="squiz-item" data-correct="1">
-<div class="squiz-q"><span class="qnum">5.</span>What is the term for water flowing across the land surface into rivers after it rains?</div>
-<div class="squiz-option"><input id="sq5a" name="sq5" type="radio" value="0"/><label for="sq5a">A. Transpiration</label></div><div class="squiz-option"><input id="sq5b" name="sq5" type="radio" value="1"/><label for="sq5b">B. Runoff</label></div><div class="squiz-option"><input id="sq5c" name="sq5" type="radio" value="2"/><label for="sq5c">C. Condensation</label></div><div class="squiz-option"><input id="sq5d" name="sq5" type="radio" value="3"/><label for="sq5d">D. Sublimation</label></div>
-</div><div class="squiz-item" data-correct="2">
-<div class="squiz-q"><span class="qnum">6.</span>How do plants contribute to the water cycle?</div>
-<div class="squiz-option"><input id="sq6a" name="sq6" type="radio" value="0"/><label for="sq6a">A. They freeze groundwater</label></div><div class="squiz-option"><input id="sq6b" name="sq6" type="radio" value="1"/><label for="sq6b">B. They stop evaporation completely</label></div><div class="squiz-option"><input id="sq6c" name="sq6" type="radio" value="2"/><label for="sq6c">C. They release water vapor into the air through transpiration</label></div><div class="squiz-option"><input id="sq6d" name="sq6" type="radio" value="3"/><label for="sq6d">D. They convert rain directly into snow</label></div>
-</div><div class="squiz-item" data-correct="0">
-<div class="squiz-q"><span class="qnum">7.</span>Why does higher temperature generally speed up evaporation?</div>
-<div class="squiz-option"><input id="sq7a" name="sq7" type="radio" value="0"/><label for="sq7a">A. Extra heat energy helps water molecules escape the liquid surface more easily</label></div><div class="squiz-option"><input id="sq7b" name="sq7" type="radio" value="1"/><label for="sq7b">B. Heat freezes water faster</label></div><div class="squiz-option"><input id="sq7c" name="sq7" type="radio" value="2"/><label for="sq7c">C. Heat has no effect on evaporation</label></div><div class="squiz-option"><input id="sq7d" name="sq7" type="radio" value="3"/><label for="sq7d">D. Heat makes water heavier</label></div>
-</div><div class="squiz-item" data-correct="1">
-<div class="squiz-q"><span class="qnum">8.</span>What is groundwater?</div>
-<div class="squiz-option"><input id="sq8a" name="sq8" type="radio" value="0"/><label for="sq8a">A. Water inside clouds</label></div><div class="squiz-option"><input id="sq8b" name="sq8" type="radio" value="1"/><label for="sq8b">B. Water that has soaked into the ground and is stored underground</label></div><div class="squiz-option"><input id="sq8c" name="sq8" type="radio" value="2"/><label for="sq8c">C. Water vapor in the atmosphere</label></div><div class="squiz-option"><input id="sq8d" name="sq8" type="radio" value="3"/><label for="sq8d">D. Ocean water only</label></div>
-</div><div class="squiz-item" data-correct="3">
-<div class="squiz-q"><span class="qnum">9.</span>How can widespread deforestation affect the water cycle?</div>
-<div class="squiz-option"><input id="sq9a" name="sq9" type="radio" value="0"/><label for="sq9a">A. It has no measurable effect</label></div><div class="squiz-option"><input id="sq9b" name="sq9" type="radio" value="1"/><label for="sq9b">B. It instantly stops all evaporation worldwide</label></div><div class="squiz-option"><input id="sq9c" name="sq9" type="radio" value="2"/><label for="sq9c">C. It only affects ocean temperatures</label></div><div class="squiz-option"><input id="sq9d" name="sq9" type="radio" value="3"/><label for="sq9d">D. Less transpiration from trees can reduce local rainfall over time</label></div>
-</div><div class="squiz-item" data-correct="2">
-<div class="squiz-q"><span class="qnum">10.</span>What are clouds actually made of?</div>
-<div class="squiz-option"><input id="sq10a" name="sq10" type="radio" value="0"/><label for="sq10a">A. Pure water vapor gas</label></div><div class="squiz-option"><input id="sq10b" name="sq10" type="radio" value="1"/><label for="sq10b">B. Compressed air only</label></div><div class="squiz-option"><input id="sq10c" name="sq10" type="radio" value="2"/><label for="sq10c">C. Tiny liquid water droplets or ice crystals</label></div><div class="squiz-option"><input id="sq10d" name="sq10" type="radio" value="3"/><label for="sq10d">D. Dust with no water content</label></div>
-</div>
-<button class="squiz-submit-btn" id="squizSubmitBtn" onclick="submitQuiz(); return false;" type="button">Submit Quiz</button>
-</form>
-</div>
-<div class="article-footer-nav"><a href="index.html#subject-biology">← Back to Biology</a><a href="index.html#subject-biology">More Biology Topics →</a></div>
+<div class="tool-message" id="msMessage">Tap two cells to swap them and start building your magic square.</div>
 </div>
 
-<script id="edusambam-watercycle-activity">
+<script id="edusambam-magic-square-activity">
 (function(){
-  var tempSlider = document.getElementById('wcTemp');
-  var sunSlider = document.getElementById('wcSun');
-  var tempVal = document.getElementById('wcTempVal');
-  var sunVal = document.getElementById('wcSunVal');
-  var cloud = document.getElementById('wcCloud');
-  var cloudFill = document.getElementById('wcCloudFill');
-  var dropletsWrap = document.getElementById('wcDroplets');
-  var evapRateEl = document.getElementById('wcEvapRate');
-  var cloudPctEl = document.getElementById('wcCloudPct');
-  var rainCountEl = document.getElementById('wcRainCount');
-  var playBtn = document.getElementById('wcPlayBtn');
-  var resetBtn = document.getElementById('wcResetBtn');
-  var messageEl = document.getElementById('wcMessage');
-  var scene = document.getElementById('wcScene');
+  var sizeRow = document.getElementById('msSizeRow');
+  var constantVal = document.getElementById('msConstantVal');
+  var progressBox = document.getElementById('msProgressBox');
+  var gridWrap = document.getElementById('msGridWithSums');
+  var diagRow = document.getElementById('msDiagRow');
+  var shuffleBtn = document.getElementById('msShuffleBtn');
+  var revealBtn = document.getElementById('msRevealBtn');
+  var messageEl = document.getElementById('msMessage');
 
-  if (!tempSlider) return;
+  if (!gridWrap) return;
 
-  var cloudFullness = 0;
-  var rainCount = 0;
-  var playing = false;
-  var timer = null;
-
-  function evapRate(){
-    var t = parseInt(tempSlider.value, 10);
-    var s = parseInt(sunSlider.value, 10);
-    return Math.round(((t / 40) * (s / 100) * 10) * 10) / 10;
-  }
-
-  function updateReadouts(){
-    tempVal.textContent = tempSlider.value + '°C';
-    sunVal.textContent = sunSlider.value + '%';
-    evapRateEl.textContent = evapRate() + ' / tick';
-  }
-
-  function spawnDroplet(kind){
-    var d = document.createElement('span');
-    d.className = 'wc-droplet';
-    d.textContent = '💧';
-    var sceneWidth = scene.clientWidth;
-    if (kind === 'rise'){
-      d.style.left = (sceneWidth * 0.15 + Math.random() * sceneWidth * 0.15) + 'px';
-      d.style.top = '200px';
-      d.style.opacity = '1';
-      dropletsWrap.appendChild(d);
-      requestAnimationFrame(function(){
-        d.style.top = '55px';
-        d.style.opacity = '0.2';
-      });
-    } else {
-      d.style.left = (sceneWidth * 0.42 + Math.random() * sceneWidth * 0.16) + 'px';
-      d.style.top = '70px';
-      d.style.opacity = '1';
-      dropletsWrap.appendChild(d);
-      requestAnimationFrame(function(){
-        d.style.top = '205px';
-        d.style.opacity = '0.9';
-      });
-    }
-    setTimeout(function(){ d.remove(); }, 1200);
-  }
-
-  function tick(){
-    var rate = evapRate();
-    cloudFullness = Math.min(100, cloudFullness + rate);
-    cloudPctEl.textContent = Math.round(cloudFullness) + '%';
-    cloudFill.style.width = cloudFullness + '%';
-    if (rate > 0.5) spawnDroplet('rise');
-
-    if (cloudFullness >= 100){
-      cloud.classList.add('raining');
-      messageEl.className = 'wc-message event';
-      messageEl.textContent = '🌧️ Precipitation! The cloud released its water as rain, which will collect and start evaporating all over again.';
-      spawnDroplet('fall'); spawnDroplet('fall'); spawnDroplet('fall');
-      rainCount++;
-      rainCountEl.textContent = rainCount;
-      cloudFullness = 0;
-      setTimeout(function(){
-        cloud.classList.remove('raining');
-        cloudFill.style.width = '0%';
-        cloudPctEl.textContent = '0%';
-      }, 700);
-    } else if (rate === 0){
-      messageEl.className = 'wc-message';
-      messageEl.textContent = 'No temperature or sunlight means no evaporation — try raising the sliders to get the cycle moving.';
-    } else {
-      messageEl.className = 'wc-message';
-      messageEl.textContent = 'Water is evaporating from the ocean and filling the cloud. Higher temperature and sunlight speed this up.';
-    }
-  }
-
-  tempSlider.addEventListener('input', updateReadouts);
-  sunSlider.addEventListener('input', updateReadouts);
-
-  playBtn.addEventListener('click', function(){
-    playing = !playing;
-    if (playing){
-      playBtn.textContent = '⏸ Pause Simulation';
-      timer = setInterval(tick, 800);
-    } else {
-      playBtn.textContent = '▶ Start Simulation';
-      clearInterval(timer);
-    }
-  });
-
-  resetBtn.addEventListener('click', function(){
-    playing = false;
-    clearInterval(timer);
-    playBtn.textContent = '▶ Start Simulation';
-    cloudFullness = 0;
-    rainCount = 0;
-    cloudFill.style.width = '0%';
-    cloudPctEl.textContent = '0%';
-    rainCountEl.textContent = '0';
-    cloud.classList.remove('raining');
-    dropletsWrap.innerHTML = '';
-    tempSlider.value = 20;
-    sunSlider.value = 50;
-    updateReadouts();
-    messageEl.className = 'wc-message';
-    messageEl.textContent = 'Adjust temperature and sunlight, then press Start to watch the cycle run.';
-  });
-
-  var presets = {
-    desert: {temp: 38, sun: 95},
-    rainy: {temp: 8, sun: 15},
-    tropical: {temp: 32, sun: 80}
+  var knownSolutions = {
+    3: [4,9,2, 3,5,7, 8,1,6],
+    4: [16,3,2,13, 5,10,11,8, 9,6,7,12, 4,15,14,1],
+    5: [17,24,1,8,15, 23,5,7,14,16, 4,6,13,20,22, 10,12,19,21,3, 11,18,25,2,9]
   };
-  document.querySelectorAll('[data-wcpreset]').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var p = presets[btn.getAttribute('data-wcpreset')];
-      tempSlider.value = p.temp;
-      sunSlider.value = p.sun;
-      updateReadouts();
-      messageEl.className = 'wc-message';
-      messageEl.textContent = 'Preset loaded — press Start to see how this combination changes the cycle speed.';
+
+  var sizes = [3, 4, 5];
+  var n = 3;
+  var values = [];
+  var selected = null;
+  var showingSolution = false;
+  var savedPuzzle = null;
+
+  function magicConstant(size){ return size * (size * size + 1) / 2; }
+
+  function shuffle(arr){
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--){
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = a[i]; a[i] = a[j]; a[j] = t;
+    }
+    return a;
+  }
+
+  function newPuzzle(size){
+    n = size;
+    var nums = [];
+    for (var i = 1; i <= n * n; i++) nums.push(i);
+    values = shuffle(nums);
+    selected = null;
+    showingSolution = false;
+    savedPuzzle = null;
+    constantVal.textContent = magicConstant(n);
+    renderSizeButtons();
+    renderGrid();
+    messageEl.className = 'tool-message';
+    messageEl.textContent = 'Tap two cells to swap them and start building your magic square.';
+  }
+
+  function renderSizeButtons(){
+    sizeRow.innerHTML = '';
+    sizes.forEach(function(s){
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'tool-tab' + (s === n ? ' active' : '');
+      btn.textContent = s + '\u00D7' + s;
+      btn.addEventListener('click', function(){ newPuzzle(s); });
+      sizeRow.appendChild(btn);
     });
+  }
+
+  function rowSum(r){ var s = 0; for (var c = 0; c < n; c++) s += values[r * n + c]; return s; }
+  function colSum(c){ var s = 0; for (var r = 0; r < n; r++) s += values[r * n + c]; return s; }
+  function diag1Sum(){ var s = 0; for (var i = 0; i < n; i++) s += values[i * n + i]; return s; }
+  function diag2Sum(){ var s = 0; for (var i = 0; i < n; i++) s += values[i * n + (n - 1 - i)]; return s; }
+
+  function renderGrid(){
+    var target = magicConstant(n);
+    gridWrap.style.gridTemplateColumns = '52px repeat(' + n + ', 52px)';
+    gridWrap.innerHTML = '';
+
+    gridWrap.appendChild(document.createElement('div'));
+    for (var c = 0; c < n; c++){
+      var cb = document.createElement('div');
+      cb.className = 'ms-sum-badge col-badge' + (colSum(c) === target ? ' ok' : '');
+      cb.textContent = colSum(c);
+      gridWrap.appendChild(cb);
+    }
+
+    for (var r = 0; r < n; r++){
+      var rb = document.createElement('div');
+      rb.className = 'ms-sum-badge' + (rowSum(r) === target ? ' ok' : '');
+      rb.textContent = rowSum(r);
+      gridWrap.appendChild(rb);
+
+      for (var c2 = 0; c2 < n; c2++){
+        (function(r, c2){
+          var idx = r * n + c2;
+          var cell = document.createElement('button');
+          cell.type = 'button';
+          cell.className = 'ms-cell' + (selected === idx ? ' selected' : '') + (showingSolution ? ' solution' : '');
+          cell.textContent = values[idx];
+          if (!showingSolution){
+            cell.addEventListener('click', function(){ handleCellClick(idx); });
+          }
+          gridWrap.appendChild(cell);
+        })(r, c2);
+      }
+    }
+
+    renderDiagAndProgress(target);
+  }
+
+  function renderDiagAndProgress(target){
+    diagRow.innerHTML = '';
+    var d1 = diag1Sum(), d2 = diag2Sum();
+    var b1 = document.createElement('div');
+    b1.className = 'ms-diag-badge' + (d1 === target ? ' ok' : '');
+    b1.textContent = '\u2198 Diagonal: ' + d1;
+    var b2 = document.createElement('div');
+    b2.className = 'ms-diag-badge' + (d2 === target ? ' ok' : '');
+    b2.textContent = '\u2199 Diagonal: ' + d2;
+    diagRow.appendChild(b1);
+    diagRow.appendChild(b2);
+
+    var correct = 0;
+    var total = n * 2 + 2;
+    for (var r = 0; r < n; r++) if (rowSum(r) === target) correct++;
+    for (var c = 0; c < n; c++) if (colSum(c) === target) correct++;
+    if (d1 === target) correct++;
+    if (d2 === target) correct++;
+
+    progressBox.textContent = correct + ' of ' + total + ' lines correct';
+
+    if (correct === total && !showingSolution){
+      messageEl.className = 'tool-message success';
+      messageEl.textContent = '\uD83C\uDF89 That\u2019s a genuine magic square! Every row, column and diagonal adds up to ' + target + '.';
+    }
+  }
+
+  function handleCellClick(idx){
+    if (selected === null){
+      selected = idx;
+      renderGrid();
+      return;
+    }
+    if (selected === idx){
+      selected = null;
+      renderGrid();
+      return;
+    }
+    var tmp = values[selected];
+    values[selected] = values[idx];
+    values[idx] = tmp;
+    selected = null;
+    renderGrid();
+    if (messageEl.classList.contains('success')) return;
+    messageEl.className = 'tool-message';
+    messageEl.textContent = 'Keep swapping \u2014 watch which rows, columns and diagonals turn green.';
+  }
+
+  shuffleBtn.addEventListener('click', function(){ newPuzzle(n); });
+
+  revealBtn.addEventListener('click', function(){
+    if (!showingSolution){
+      savedPuzzle = values.slice();
+      values = knownSolutions[n].slice();
+      showingSolution = true;
+      selected = null;
+      revealBtn.textContent = '\u2190 Back to My Puzzle';
+      messageEl.className = 'tool-message';
+      messageEl.textContent = 'This is one valid solution \u2014 notice every line adds up to ' + magicConstant(n) + '.';
+    } else {
+      values = savedPuzzle.slice();
+      showingSolution = false;
+      revealBtn.textContent = '\uD83D\uDC41\uFE0F Reveal a Solution';
+      messageEl.className = 'tool-message';
+      messageEl.textContent = 'Back to your puzzle \u2014 keep swapping to solve it yourself.';
+    }
+    renderGrid();
   });
 
-  updateReadouts();
+  newPuzzle(3);
 })();
 </script>
-<script>
-  (function() {
-    const form = document.getElementById('squizForm');
-    const submitBtn = document.getElementById('squizSubmitBtn');
-    const progressFill = document.getElementById('squizProgressFill');
-    const progressLabel = document.getElementById('squizProgressLabel');
-    const totalQuestions = document.querySelectorAll('.squiz-item').length;
-
-    function countAnswered() {
-      let count = 0;
-      for (let i = 1; i <= totalQuestions; i++) {
-        if (form.querySelector(`input[name="sq${i}"]:checked`)) count++;
-      }
-      return count;
-    }
-
-    function updateProgress() {
-      const answered = countAnswered();
-      progressFill.style.width = (answered / totalQuestions * 100) + '%';
-      progressLabel.textContent = answered + ' of ' + totalQuestions + ' answered';
-      submitBtn.disabled = answered < totalQuestions;
-      submitBtn.textContent = answered < totalQuestions ? 'Answer all questions to submit' : 'Submit Quiz';
-      document.querySelectorAll('.squiz-option').forEach(opt => opt.classList.remove('selected'));
-      form.querySelectorAll('input[type="radio"]:checked').forEach(input => {
-        input.closest('.squiz-option').classList.add('selected');
-      });
-    }
-
-    form.addEventListener('change', updateProgress);
-
-    window.submitQuiz = function() {
-      let score = 0;
-      const questions = document.querySelectorAll('.squiz-item');
-      questions.forEach((q, idx) => {
-        const qnum = idx + 1;
-        const correctIdx = q.getAttribute('data-correct');
-        const selected = form.querySelector(`input[name="sq${qnum}"]:checked`);
-        const options = q.querySelectorAll('.squiz-option');
-        options.forEach((opt, optIdx) => {
-          opt.querySelector('input').disabled = true;
-          if (String(optIdx) === correctIdx) opt.classList.add('correct-answer');
-        });
-        if (selected && selected.value === correctIdx) {
-          score++;
-        } else if (selected) {
-          selected.closest('.squiz-option').classList.add('wrong-answer');
-        }
-      });
-
-      const percent = Math.round((score / totalQuestions) * 100);
-      document.getElementById('squizScoreBig').textContent = score + '/' + totalQuestions;
-      document.getElementById('squizScoreLabel').textContent = 'You scored ' + percent + '%';
-
-      let tier = 'Keep practicing';
-      if (percent === 100) tier = 'Perfect score!';
-      else if (percent >= 80) tier = 'Excellent work';
-      else if (percent >= 60) tier = 'Good effort';
-      else if (percent >= 40) tier = 'Getting there';
-      document.getElementById('squizScoreTier').textContent = tier;
-
-      document.getElementById('squizResults').classList.add('visible');
-      submitBtn.style.display = 'none';
-      document.getElementById('squizResults').scrollIntoView({ behavior: 'smooth', block: 'start' });
-    };
-
-    window.retakeQuiz = function() {
-      form.reset();
-      document.querySelectorAll('.squiz-option').forEach(opt => {
-        opt.classList.remove('selected', 'correct-answer', 'wrong-answer');
-        opt.querySelector('input').disabled = false;
-      });
-      document.getElementById('squizResults').classList.remove('visible');
-      submitBtn.style.display = 'block';
-      updateProgress();
-      document.getElementById('squizForm').scrollIntoView({ behavior: 'smooth', block: 'start' });
-    };
-
-    updateProgress();
-  })();
-</script>
+</div>
 
 <script id="edusambam-reader-script">
 (function(){

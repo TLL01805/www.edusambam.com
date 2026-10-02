@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Analytics 4 — EDUSAMBAM -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y35DW0V4HQ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-Y35DW0V4HQ');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blood Flow Through the Heart | EDUSAMBAM</title>
+<meta name="description" content="Follow blood through the chambers and valves of the heart in this free interactive biology activity from EDUSAMBAM."/>
+<link href="https://edusambam.com/blood-flow-heart.html" rel="canonical"/>
+<link href="favicon.webp" rel="icon" type="image/webp"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+
+<style>
+:root{--bg:#12305c;--deep:#12305c;--panel:#1a3f78;--line:#3f6296;--gold:#c9a24b;--ivory:#fff;--mut:#c8d4e6;--ink:#12305c;--ok:#5fcf8f;--no:#ff8b7a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ivory);font:17px/1.6 "Segoe UI",Roboto,Helvetica,Arial,sans-serif;padding:20px 16px 40px}
+main{max-width:660px;margin:0 auto}
+.brand{color:var(--gold);font-weight:700;letter-spacing:.04em;font-size:15px;margin:0 0 4px}
+h1{font-size:2rem;line-height:1.15;margin:0 0 14px}
+p{margin:0 0 12px;color:var(--mut)}
+p b,li b{color:var(--ivory)}
+.rule{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin:0 0 14px;font-weight:700}
+.rule span{color:var(--gold)}
+ol.glance{margin:0 0 22px;padding-left:22px;color:var(--mut)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px}
+#steps{list-style:none;display:flex;gap:8px;margin:0 0 12px;padding:0}
+#steps li{width:34px;height:34px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;font-weight:700}
+#steps li.d{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+#steps li.o{border-color:var(--gold);color:var(--gold)}
+h2{font-size:1.25rem;margin:0 0 4px}
+svg{display:block;width:100%;height:auto;background:var(--deep);border-radius:8px}
+.st{cursor:pointer}
+.st:focus-visible{outline:3px solid var(--gold)}
+.pl{animation:pl 1s ease-in-out infinite}
+@keyframes pl{50%{opacity:.3}}
+.ch{transition:transform .5s ease;transform-box:fill-box;transform-origin:center}
+#drop{transition:transform .8s ease,fill .4s ease}
+.lg{font-size:.9rem;margin:6px 0 0}
+#fb{margin:0 0 10px;padding:8px 12px;border-radius:8px;border:2px solid var(--line);background:var(--deep);color:var(--ivory)}
+#fb:empty{display:none}
+#fb.ok{border-color:var(--ok)}
+#fb.bad{border-color:var(--no)}
+#fb.bad.a{animation:sh1 .4s}
+#fb.bad.b{animation:sh2 .4s}
+@keyframes sh1{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+@keyframes sh2{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.pill{display:inline-block;padding:3px 12px;border-radius:999px;font-weight:700;color:#fff}
+button{font:inherit;font-weight:700;border-radius:999px;border:2px solid var(--gold);background:var(--gold);color:var(--ink);padding:9px 20px;cursor:pointer}
+button.ghost{background:none;color:var(--gold)}
+button:disabled{opacity:.4;cursor:not-allowed}
+button:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:8px 0}
+.opts{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.opts button{background:var(--deep);color:var(--ivory);border-color:var(--line)}
+.opts button.ok{border-color:var(--ok);color:var(--ok)}
+.opts button.no{border-color:var(--no);color:var(--no)}
+input[type=range]{width:100%;accent-color:var(--gold)}
+.nav{display:flex;justify-content:space-between;margin-top:16px}
+.ans{background:var(--deep);border:2px solid var(--gold);border-radius:8px;padding:12px;margin:8px 0}
+.ans p{color:var(--ivory);margin:0 0 4px}
+.q{margin-bottom:14px}.q>p{color:var(--ivory);font-weight:700;margin-bottom:6px}
+.why{font-size:.95rem;margin:6px 0 0}
+[hidden]{display:none!important}
+footer{margin-top:22px;text-align:center;color:var(--mut);font-size:.95rem}
+footer a{color:var(--gold)}
+@media (prefers-reduced-motion:reduce){.pl{animation:none}.ch,#drop{transition:none}}
+</style>
+</head>
+<body>
+<main>
+<a aria-label="EDUSAMBAM home" href="index.html" style="display:inline-block;line-height:0"><img alt="EDUSAMBAM" src="logo-icon-full-white.png" style="height:52px;width:auto;max-width:100%;display:block"/></a>
+<p class="brand" style="margin-top:8px">Biology</p>
+<h1>Blood Flow Through the Heart</h1>
+<p>The heart is a muscular pump with <b>four chambers</b>. Humans have a <b>double circulation</b>: blood passes through the heart twice in every complete trip around the body. The right side pumps blood to the lungs, and the left side pumps it to the body.</p>
+<div class="rule">Body → <span>right side</span> → lungs → <span>left side</span> → body</div>
+<ol class="glance">
+<li>Learn the parts of the heart.</li>
+<li>Guide a drop of blood around the whole circuit.</li>
+<li>Colour the heart: blue for deoxygenated, red for oxygenated blood.</li>
+<li>Watch the heartbeat and its valves.</li>
+<li>Take a five-question quiz.</li>
+</ol>
+
+<section class="card" aria-label="Blood flow activity">
+<ul id="steps"></ul>
+<h2 id="sh"></h2>
+<p id="ins"></p>
+<p id="fb" aria-live="polite"></p>
+<svg id="sv" viewBox="0 0 340 292" role="img" aria-label="Diagram of the heart, lungs and body"><g id="hg"></g><circle id="drop" r="8" fill="#2f6fe0" stroke="#fff" stroke-width="2" style="transform:translate(170px,270px);pointer-events:none"/></svg>
+<p class="lg">TV Tricuspid valve · PV Pulmonary valve · MV Mitral valve · AV Aortic valve. Blue = deoxygenated blood, red = oxygenated blood.</p>
+<div id="ctrl"></div>
+<div class="nav"><button class="ghost" id="bk" onclick="go(S.step-1)">Back</button><button id="nx" onclick="go(S.step+1)">Next</button></div>
+</section>
+<footer>More free biology resources at <a href="https://edusambam.com">edusambam.com</a></footer>
+</main>
+
+<script>
+const $=i=>document.getElementById(i);
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+const ST=[
+{k:"vc",n:"Vena cava",x:55,y:190,i:"The vena cava is the large vein that brings deoxygenated blood from the body to the heart."},
+{k:"ra",n:"Right atrium",x:122,y:120,i:"The right atrium receives deoxygenated blood from the body."},
+{k:"tv",n:"Tricuspid valve",x:122,y:147,i:"The tricuspid valve lies between the right atrium and right ventricle. It opens one way only, so blood cannot flow backwards."},
+{k:"rv",n:"Right ventricle",x:131,y:184,i:"The right ventricle pumps deoxygenated blood towards the lungs."},
+{k:"pl",n:"Pulmonary valve",x:160,y:148,i:"The pulmonary valve guards the exit of the right ventricle."},
+{k:"pa",n:"Pulmonary artery",x:160,y:90,i:"The pulmonary artery carries deoxygenated blood to the lungs. It is the only artery that carries deoxygenated blood."},
+{k:"lu",n:"Lungs",x:180,y:22,i:"In the lungs the blood picks up oxygen and gives out carbon dioxide, so it turns red."},
+{k:"pn",n:"Pulmonary vein",x:215,y:68,i:"The pulmonary vein brings oxygenated blood from the lungs back to the heart."},
+{k:"la",n:"Left atrium",x:217,y:120,i:"The left atrium receives oxygenated blood from the lungs."},
+{k:"mv",n:"Mitral valve",x:218,y:147,i:"The mitral (bicuspid) valve lies between the left atrium and left ventricle."},
+{k:"lv",n:"Left ventricle",x:208,y:184,i:"The left ventricle has the thickest wall, because it pumps blood all around the body."},
+{k:"av",n:"Aortic valve",x:245,y:185,i:"The aortic valve guards the exit of the left ventricle."},
+{k:"ao",n:"Aorta",x:292,y:218,i:"The aorta is the largest artery. It carries oxygenated blood to the body."},
+{k:"bo",n:"Body",x:170,y:270,i:"Oxygen is delivered to the body's cells. The blood turns blue again and returns to the heart. Circuit complete!"}
+];
+const MAIN=["vc","ra","rv","pa","pn","la","lv","ao"];
+const TR={vc:"b",ra:"b",rv:"b",pa:"b",pn:"r",la:"r",lv:"r",ao:"r"};
+const F={n:"#cfd8ea",b:"#2f6fe0",r:"#d63a3a"};
+const NAME={};ST.forEach(s=>NAME[s.k]=s.n);
+const V={vc:"M55 248V118H95",pa:"M160 150V40",pn:"M215 40V95",ao:"M245 185H292V250"};
+const VLB={vc:[59,190,"Vena cava"],pa:[164,98,"Pulmonary artery"],pn:[219,68,"Pulm. vein"],ao:[296,218,"Aorta"]};
+const R={ra:[95,95,55,50],la:[190,95,55,50],rv:[95,150,73,68],lv:[172,150,73,68]};
+const LB={ra:["Right","atrium"],la:["Left","atrium"],rv:["Right","ventricle"],lv:["Left","ventricle"]};
+const VL={tv:[122,147,"TV"],pl:[160,146,"PV"],mv:[218,147,"MV"],av:[245,185,"AV"]};
+const PH=[
+["Relaxed and filling","Both atria fill with blood. The tricuspid and mitral valves are open. The pulmonary and aortic valves are closed."],
+["Atria contract","The atria squeeze and push blood through the open tricuspid and mitral valves into the ventricles."],
+["Ventricles contract","The tricuspid and mitral valves shut with a “lub” sound. The pulmonary and aortic valves open, and blood is pumped to the lungs and body."],
+["Ventricles relax","The pulmonary and aortic valves snap shut with a “dup” sound. Blood then flows into the atria again."]
+];
+const QS=[
+{q:"Which chamber pumps oxygenated blood to the whole body?",o:["Right atrium","Right ventricle","Left atrium","Left ventricle"],a:3,w:"The left ventricle pumps blood into the aorta."},
+{q:"Which vessel brings oxygenated blood from the lungs to the heart?",o:["Pulmonary artery","Pulmonary vein","Vena cava","Aorta"],a:1,w:"The pulmonary vein carries oxygenated blood to the left atrium."},
+{q:"What kind of blood does the pulmonary artery carry?",o:["Oxygenated","Deoxygenated","Both kinds","No blood"],a:1,w:"It carries deoxygenated blood from the right ventricle to the lungs."},
+{q:"Which valve lies between the left atrium and left ventricle?",o:["Tricuspid","Pulmonary","Aortic","Mitral"],a:3,w:"The mitral (bicuspid) valve is on the left side."},
+{q:"Why is the wall of the left ventricle the thickest?",o:["It stores extra blood","It pumps blood all around the body","It is nearest the lungs","It is the largest atrium"],a:1,w:"Pushing blood around the whole body needs strong muscle."}
+];
+const Q3=["Tricuspid and mitral valves","Pulmonary and aortic valves","Only the aortic valve","No valves close"];
+const T=[
+{n:"Learn the parts",i:"Tap the parts of the heart to see what each one does. The Next button unlocks after you explore all eight chambers and vessels."},
+{n:"Guide the blood",i:"A drop of blood is returning from the body. Tap each place it visits, in the right order, to send it around the circuit."},
+{n:"Colour the heart",i:"Tap each chamber and vessel to make it blue (deoxygenated) or red (oxygenated), then check your work."},
+{n:"Watch the heartbeat",i:"Step through one heartbeat and watch the chambers squeeze and the valves open and close."},
+{n:"Quick check",i:"Answer the five questions to test what you learned."}
+];
+let S,tm=0,sn=0;
+function say(h,k){const f=$("fb");f.innerHTML=h;f.className=(k||"")+(k==="bad"?(sn++%2?" a":" b"):"")}
+function flash(k,c){const t=ST.find(x=>x.k===k);$("hg").insertAdjacentHTML("beforeend",`<circle id="fl" cx="${t.x}" cy="${t.y}" r="18" fill="none" stroke="${c}" stroke-width="4"/>`);setTimeout(()=>{const e=$("fl");if(e)e.remove()},700)}
+function fresh(){return{step:0,seen:new Set(),gi:0,gd:0,hint:0,blood:"b",tr:[],pc:{},uc:{},cok:0,ph:0,pl:0,bpm:72,q3:null,o3:shuffle([0,1,2,3]),qo:QS.map(q=>shuffle(q.o.map((_,i)=>i))),qa:QS.map(()=>null)}}
+S=fresh();
+
+function heart(){
+ const s=S.step;
+ const col=k=>s===0?(TR[k]||"n"):s===1?(S.pc[k]||"n"):s===2?(S.uc[k]||"n"):(TR[k]||"n");
+ const hl=k=>(s===0&&S.seen.has(k))||(s===1&&S.hint&&S.gi<14&&ST[S.gi].k===k);
+ const pu=s===1&&S.hint?" pl":"";
+ const at=k=>`class="st" data-k="${k}" tabindex="0" role="button" aria-label="${NAME[k]}"`;
+ let h=`<defs><linearGradient id="gr" x1="0" x2="1"><stop offset="0" stop-color="#2f6fe0"/><stop offset="1" stop-color="#d63a3a"/></linearGradient><marker id="ab" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0L6 3L0 6Z" fill="#2f6fe0"/></marker><marker id="ar" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0L6 3L0 6Z" fill="#d63a3a"/></marker></defs>`;
+ for(const [k,x,y,w] of [["lu",110,4,140],["bo",20,252,300]]){
+  const t=hl(k);
+  h+=`<rect ${at(k)} x="${x}" y="${y}" width="${w}" height="36" rx="14" fill="url(#gr)" stroke="${t?"#c9a24b":"none"}" stroke-width="3"/><text x="${x+w/2}" y="${y+22}" text-anchor="middle" font-size="13" font-weight="700" fill="#fff" pointer-events="none">${NAME[k]}</text>`;
+ }
+ for(const k in V){
+  const c=col(k),tint=c!=="n";
+  h+=`<path d="${V[k]}" fill="none" stroke="#c9a24b" stroke-width="21" stroke-linecap="round" stroke-linejoin="round" opacity="${hl(k)?1:0}" class="${hl(k)?pu.trim():""}" pointer-events="none"/>`;
+  h+=`<path ${at(k)} d="${V[k]}" fill="none" stroke="transparent" stroke-width="32" stroke-linecap="round" stroke-linejoin="round" pointer-events="stroke"/><path d="${V[k]}" fill="none" stroke="${F[c]}" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" pointer-events="none"/>`;
+  const l=VLB[k];h+=`<text transform="rotate(-90 ${l[0]} ${l[1]})" x="${l[0]}" y="${l[1]}" text-anchor="middle" font-size="8" font-weight="700" fill="${tint?"#fff":"#12305c"}" pointer-events="none">${l[2]}</text>`;
+ }
+ for(const k in R){
+  const [x,y,w,hh]=R[k],c=col(k),tint=c!=="n",t=hl(k);
+  h+=`<g class="ch" id="g-${k}"><rect ${at(k)} x="${x}" y="${y}" width="${w}" height="${hh}" rx="12" fill="${F[c]}" stroke="${t?"#c9a24b":"#12305c"}" stroke-width="${t?4:1.5}"/>`;
+  h+=`<text x="${x+w/2}" y="${y+hh/2-2}" text-anchor="middle" font-size="9.5" font-weight="700" fill="${tint?"#fff":"#12305c"}" pointer-events="none">${LB[k][0]}</text><text x="${x+w/2}" y="${y+hh/2+10}" text-anchor="middle" font-size="9.5" font-weight="700" fill="${tint?"#fff":"#12305c"}" pointer-events="none">${LB[k][1]}</text></g>`;
+ }
+ for(const k in VL){
+  const [x,y,t]=VL[k],c=col(k),tint=c!=="n"&&s<3,hi=hl(k);
+  h+=`<circle ${at(k)} cx="${x}" cy="${y}" r="14" fill="transparent" pointer-events="all"/><circle id="v-${k}" pointer-events="none" cx="${x}" cy="${y}" r="9" fill="${tint?F[c]:"#fff"}" stroke="${hi?"#c9a24b":"#12305c"}" stroke-width="${hi?3.5:1.5}"/><text x="${x}" y="${y+2.5}" text-anchor="middle" font-size="7" font-weight="700" fill="${tint?"#fff":"#12305c"}" pointer-events="none">${t}</text>`;
+ }
+ if(s===1)S.tr.forEach(t=>{h+=`<line x1="${t.x1}" y1="${t.y1}" x2="${t.x2}" y2="${t.y2}" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity=".85" pointer-events="none"/><line x1="${t.x1}" y1="${t.y1}" x2="${t.x2}" y2="${t.y2}" stroke="${t.c==="b"?"#2f6fe0":"#d63a3a"}" stroke-width="4" stroke-linecap="round" marker-end="url(#a${t.c})" pointer-events="none"/>`});
+ return h;
+}
+function applyPhase(){
+ const p=S.ph;
+ ["ra","la"].forEach(k=>$("g-"+k).style.transform=p===1?"scale(.86)":"scale(1)");
+ ["rv","lv"].forEach(k=>$("g-"+k).style.transform=p===2?"scale(.88)":"scale(1)");
+ const av=p<2,sl=p===2;
+ ["tv","mv"].forEach(k=>$("v-"+k).setAttribute("fill",av?"#5fcf8f":"#ff8b7a"));
+ ["pl","av"].forEach(k=>$("v-"+k).setAttribute("fill",sl?"#5fcf8f":"#ff8b7a"));
+}
+
+function tapKey(k){
+ const s=S.step;
+ if(s===0){if(MAIN.includes(k))S.seen.add(k);
+  say(`<b>${NAME[k]}:</b> ${M(k).i}`+(MAIN.every(x=>S.seen.has(x))?" You have explored all eight main parts. Tap Next.":""));
+  render();
+ }else if(s===1)game(k);
+ else if(s===2&&TR[k]&&!S.cok){S.uc[k]=S.uc[k]==="b"?"r":"b";render()}
+}
+const M=k=>ST.find(x=>x.k===k);
+function game(k){
+ if(S.gi>=14){say("The circuit is complete. Tap Next, or go round again.","ok");return}
+ const nx=ST[S.gi];
+ if(k!==nx.k){
+  flash(k,"#ff8b7a");
+  say(`✗ <b>Wrong order.</b> The ${M(k).n.toLowerCase()} does not come next. The blood is ${S.gi?"in the "+ST[S.gi-1].n.toLowerCase():"returning from the body"}. Where does it go next?${S.hint?"":" Tap Show hint if you are stuck."}`,"bad");
+  return}
+ const c=S.blood,pv=S.gi?ST[S.gi-1]:{x:170,y:270};
+ S.tr.push({x1:pv.x,y1:pv.y,x2:nx.x,y2:nx.y,c});
+ S.gi++;if(k==="lu")S.blood="r";
+ S.pc[k]=S.blood;
+ say(`✓ <b>Correct: ${nx.n}.</b> ${nx.i}`,"ok");
+ if(k==="bo"){S.blood="b";S.gd=1;S.hint=0}
+ render();flash(k,"#5fcf8f");
+}
+function hnt(){S.hint=S.hint?0:1;render()}
+function garound(){S.gi=0;S.tr=[];S.pc={};S.blood="b";S.hint=0;say("");render()}
+function chkc(){
+ const un=Object.keys(TR).filter(k=>!S.uc[k]);
+ if(un.length){say("✗ Colour all eight parts first.","bad");return}
+ const bad=Object.keys(TR).filter(k=>S.uc[k]!==TR[k]).map(k=>NAME[k]);
+ if(!bad.length){S.cok=1;say("✓ Correct! Blood on the right side is deoxygenated (blue) and blood on the left side is oxygenated (red). Only the pulmonary artery and vein break the rule that arteries carry oxygenated blood. Tap Next.","ok")}
+ else say("✗ Check again: "+bad.join(", ")+".","bad");
+ render()}
+function nextPh(){S.ph=(S.ph+1)%4;$("pt").textContent=PH[S.ph][0];$("pd").textContent=PH[S.ph][1];applyPhase()}
+function play(){
+ S.pl=S.pl?0:1;clearInterval(tm);
+ if(S.pl)tm=setInterval(nextPh,60000/S.bpm);
+ $("pb").textContent=S.pl?"Pause":"Play in slow motion";
+}
+function bpm(v){S.bpm=v;$("bl").textContent=v;if(S.pl){clearInterval(tm);tm=setInterval(nextPh,60000/v)}}
+function p3(i){S.q3=i;say(i===0?"✓ Correct. When the ventricles contract, the tricuspid and mitral valves close, making the “lub” sound. Tap Next.":"✗ Not quite. Watch the valves turn red during “Ventricles contract”.",i===0?"ok":"bad");render()}
+function qp(q,o){if(S.qa[q]!==null)return;S.qa[q]=o;render()}
+function again(){clearInterval(tm);S=fresh();S.step=1;MAIN.forEach(k=>S.seen.add(k));say("");render()}
+function go(n){clearInterval(tm);S.pl=0;S.step=Math.max(0,Math.min(4,n));say("");render()}
+
+const C=[
+()=>{const left=MAIN.filter(k=>!S.seen.has(k)).map(k=>NAME[k]);
+ return `<p>Explored: <b>${8-left.length} of 8</b>. ${left.length?"Still to find: "+left.join(", ")+".":"All done! Tap Next."}</p>`},
+()=>`<p>Blood now: <span class="pill" style="background:${F[S.blood]}">${S.blood==="b"?"Deoxygenated (blue)":"Oxygenated (red)"}</span></p><p><b>${S.gi>=14?"Circuit complete!":S.gi?"The blood is in the "+ST[S.gi-1].n+". Tap where it goes next.":"The blood is returning from the body. Tap where it goes first."}</b></p>
+ <p>Station ${S.gi} of 14</p><div class="row"><button class="ghost" onclick="hnt()">${S.hint?"Hide":"Show"} hint</button>${S.gd?`<button class="ghost" onclick="garound()">Go round again</button>`:""}</div>`,
+()=>`<p>Coloured: <b>${Object.keys(TR).filter(k=>S.uc[k]).length} of 8</b>. Tap a part to switch between blue and red.</p>${S.cok?"":`<div class="row"><button onclick="chkc()">Check my colours</button></div>`}`,
+()=>{const p=PH[S.ph];
+ return `<div class="ans"><p><b id="pt">${p[0]}</b></p><p id="pd">${p[1]}</p></div>
+ <div class="row"><button onclick="nextPh()">Next phase</button><button class="ghost" id="pb" onclick="play()">${S.pl?"Pause":"Play in slow motion"}</button></div>
+ <label for="bp">Heart rate: <b id="bl">${S.bpm}</b> beats per minute</label><input type="range" id="bp" min="40" max="180" value="${S.bpm}" oninput="bpm(+this.value)">
+ <p class="lg">Green valve = open. Red valve = closed.</p>
+ <p style="margin-top:12px"><b>Which valves close to make the “lub” sound?</b></p>
+ <div class="opts">${S.o3.map(i=>`<button ${S.q3===0?"disabled":""} class="${S.q3===0&&i===0?"ok":""}" onclick="p3(${i})">${Q3[i]}</button>`).join("")}</div>`},
+()=>{
+ let h=QS.map((x,qi)=>{const a=S.qa[qi];
+  const ob=S.qo[qi].map(oi=>`<button ${a!==null?"disabled":""} class="${a!==null?(oi===x.a?"ok":oi===a?"no":""):""}" onclick="qp(${qi},${oi})">${x.o[oi]}</button>`).join("");
+  return `<div class="q"><p>${qi+1}. ${x.q}</p><div class="opts">${ob}</div>${a===null?"":`<p class="why">${a===x.a?"Correct. ":"Not quite. "}${x.w}</p>`}</div>`}).join("");
+ if(S.qa.every(v=>v!==null)){const n=S.qa.filter((v,i)=>v===QS[i].a).length;
+  h+=`<div class="ans"><p><b>You scored ${n} out of 5</b></p><p>${n===5?"Excellent! You know the heart very well.":n>=3?"Good work. Try the circuit again to strengthen it.":"Keep practising. Go round the circuit again."}</p></div><div class="row"><button onclick="again()">Start again</button></div>`}
+ return h}
+];
+
+function draw(){
+ const s=S.step;
+ $("hg").innerHTML=heart();
+ const d=$("drop");d.style.display=s===1?"block":"none";
+ const p=S.gi?M(ST[S.gi-1].k):{x:170,y:270};
+ d.style.transform=`translate(${p.x}px,${p.y}px)`;d.setAttribute("fill",F[S.blood]);
+ if(s===3)applyPhase();
+ const done=[MAIN.every(k=>S.seen.has(k)),S.gd,S.cok,S.q3===0,0][s];
+ $("bk").disabled=s===0;$("nx").hidden=s===4;$("nx").disabled=!done;
+}
+function render(){
+ const s=S.step;
+ $("steps").innerHTML=T.map((t,i)=>`<li class="${i<s?"d":i===s?"o":""}" ${i===s?'aria-current="step"':""}>${i+1}</li>`).join("");
+ $("sh").textContent=`Step ${s+1}: ${T[s].n}`;$("ins").textContent=T[s].i;
+ $("ctrl").innerHTML=C[s]();
+ draw();
+}
+$("sv").onclick=e=>{const t=e.target.closest(".st");if(t)tapKey(t.dataset.k)};
+$("sv").onkeydown=e=>{if(e.key==="Enter"||e.key===" "){const t=e.target.closest(".st");if(t){e.preventDefault();tapKey(t.dataset.k)}}};
+render();
+</script>
+</body>
+</html>
