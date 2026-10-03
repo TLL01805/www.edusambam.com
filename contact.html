@@ -12,9 +12,9 @@ gtag('config', 'G-Y35DW0V4HQ');
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Geometry Angle Explorer — EDUSAMBAM Interactive</title>
-<meta name="description" content="Drag lines and rays to explore angles and see their measures change live. A free interactive geometry activity from EDUSAMBAM."/>
-<link href="https://edusambam.com/geometry-angle-explorer.html" rel="canonical"/>
+<title>Contact Us — EDUSAMBAM</title>
+<meta name="description" content="Contact EDUSAMBAM with questions, feedback or corrections. Free learning resources for students."/>
+<link href="https://edusambam.com/contact.html" rel="canonical"/>
 <link href="favicon.webp" rel="icon" type="image/webp"/>
 <link href="favicon.ico" rel="icon" sizes="any"/>
 <link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
@@ -644,37 +644,54 @@ gtag('config', 'G-Y35DW0V4HQ');
   .tool-stats { display: flex; gap: 1.4rem; flex-wrap: wrap; font-size: 0.86rem; font-weight: 600; color: var(--slate); margin: 1rem 0; }
   .tool-stats .stat-val { color: var(--navy); font-weight: 700; }
 
-  /* ── GEOMETRY ANGLE EXPLORER ── */
-  .angle-svg-wrap { width: 100%; max-width: 320px; margin: 0 auto 1rem; touch-action: none; }
-  .angle-svg-wrap svg { width: 100%; height: auto; display: block; cursor: pointer; }
-  .angle-readout-row {
-    display: flex; align-items: center; justify-content: center; gap: 0.8rem;
-    margin-bottom: 1.1rem; flex-wrap: wrap;
+  /* ── MAGIC SQUARE WORKSHOP ── */
+  .ms-layout { display: flex; gap: 1.8rem; flex-wrap: wrap; align-items: flex-start; justify-content: center; }
+  .ms-grid-col { flex: 0 0 auto; }
+  .ms-grid-with-sums {
+    display: inline-grid;
+    gap: 4px;
   }
-  .angle-readout-val {
-    font-family: 'EB Garamond', serif; font-size: 2.1rem; font-weight: 700; color: var(--navy);
+  .ms-cell {
+    width: 52px; height: 52px;
+    background: var(--white); border: 2px solid var(--border);
+    border-radius: 8px; font-family: 'EB Garamond', serif; font-weight: 700;
+    font-size: 1.3rem; color: var(--navy); cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.15s;
   }
-  .angle-badge {
-    display: inline-block; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.03em;
-    padding: 0.35rem 0.9rem; border-radius: 30px; text-transform: uppercase;
-    background: var(--gold-lt); color: #8a6a1f;
+  .ms-cell:hover { border-color: var(--gold); }
+  .ms-cell.selected { background: var(--gold-lt); border-color: var(--gold); transform: scale(1.05); }
+  .ms-cell.solution { cursor: default; background: var(--cream); color: var(--slate); }
+  .ms-sum-badge {
+    min-width: 44px; height: 52px; display: flex; align-items: center; justify-content: center;
+    font-size: 0.86rem; font-weight: 700; color: var(--muted);
+    background: var(--cream); border-radius: 8px; border: 1px solid var(--border-lt);
   }
-  .angle-badge.acute { background: #eaf6df; color: #2e7d32; }
-  .angle-badge.right { background: #eaf2fb; color: #0b4ea2; }
-  .angle-badge.obtuse { background: #fff4d8; color: #8a6a1f; }
-  .angle-badge.straight { background: #f0e6f6; color: #6a4c93; }
-  .angle-badge.reflex { background: #fbe9e9; color: var(--red); }
-  .angle-badge.zero { background: var(--cream); color: var(--muted); }
-  .angle-challenge-box {
+  .ms-sum-badge.col-badge { height: 36px; width: 52px; min-width: 0; }
+  .ms-sum-badge.ok { background: rgba(46,125,50,0.15); color: #2e7d32; border-color: #2e7d32; }
+  .ms-diag-row { display: flex; gap: 0.8rem; margin-top: 0.7rem; flex-wrap: wrap; justify-content: center; }
+  .ms-diag-badge {
+    font-size: 0.82rem; font-weight: 700; color: var(--muted);
+    background: var(--cream); border: 1px solid var(--border-lt); border-radius: 30px;
+    padding: 0.35rem 0.9rem;
+  }
+  .ms-diag-badge.ok { background: rgba(46,125,50,0.15); color: #2e7d32; border-color: #2e7d32; }
+  .ms-side-panel { flex: 1 1 200px; min-width: 200px; }
+  .ms-constant-box {
     background: var(--white); border: 1px solid var(--border-lt); border-radius: var(--radius);
-    padding: 1rem 1.1rem; margin-top: 1rem;
+    padding: 1rem 1.1rem; margin-bottom: 1rem; text-align: center;
   }
-  .angle-challenge-box .ac-label {
-    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
-    color: var(--red); margin-bottom: 0.4rem;
+  .ms-constant-box .mc-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--red); margin-bottom: 0.3rem; }
+  .ms-constant-box .mc-value { font-family: 'EB Garamond', serif; font-size: 2rem; font-weight: 700; color: var(--navy); }
+  .ms-progress-box {
+    background: var(--white); border: 1px solid var(--border-lt); border-radius: var(--radius);
+    padding: 0.9rem 1.1rem; margin-bottom: 1rem; text-align: center; font-size: 0.92rem; font-weight: 600; color: var(--slate);
   }
-  .angle-challenge-box .ac-target { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 0.2rem; }
-  .angle-challenge-box .ac-progress { font-size: 0.8rem; color: var(--muted); }
+  @media (max-width: 480px) {
+    .ms-cell { width: 42px; height: 42px; font-size: 1.05rem; }
+    .ms-sum-badge { width: 38px; min-width: 38px; height: 42px; font-size: 0.74rem; }
+    .ms-sum-badge.col-badge { height: 30px; width: 42px; }
+  }
 </style>
 <style id="edusambam-reader-style">
 .mark{width:48px;height:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px;border-radius:14px;background:#eef6ff;box-shadow:0 2px 7px rgba(8,47,99,.10);flex:0 0 48px}.mark i{display:block;border-radius:50%;background:#0b4ea2;min-width:0;min-height:0}.mark i:nth-child(5){background:#d4a017}.edusambam-reader{max-width:980px;margin:1.2rem auto 0;padding:1rem 1.1rem;border:1px solid #d7e4ef;border-radius:14px;background:linear-gradient(135deg,#f7fbff,#fff);box-shadow:0 6px 18px rgba(11,45,92,.08)}.edusambam-reader strong{display:block;color:#0b55a5;font-size:.9rem;letter-spacing:.04em}.edusambam-reader .reader-slogan{color:#b27e08;font-weight:900;margin-top:.25rem;font-size:.82rem}.edusambam-reader .reader-help{color:#607086;font-size:.8rem;margin:.3rem 0 .7rem}.edusambam-reader .reader-controls{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}.edusambam-reader button,.edusambam-reader select{border:1px solid #c9d9e8;background:#fff;color:#153b6e;border-radius:8px;padding:.48rem .65rem;font-weight:800;cursor:pointer}.edusambam-reader button:first-child{background:#0b55a5;color:#fff;border-color:#0b55a5}.edusambam-reader .reader-status{display:block;color:#607086;font-size:.75rem;margin-top:.55rem}.edusambam-reader .reader-progress{height:4px;background:#e4edf6;border-radius:99px;margin-top:.6rem;overflow:hidden}.edusambam-reader .reader-progress span{display:block;width:0;height:100%;background:#e1ad1c;transition:width .2s linear}@media(max-width:600px){.edusambam-reader{margin-left:0;margin-right:0}.edusambam-reader .reader-controls button,.edusambam-reader .reader-controls select{flex:1;min-width:75px}}
@@ -1069,6 +1086,19 @@ footer.footer {
 .edusambam-footer-social a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);color:rgba(255,255,255,.85);transition:background .15s,color .15s}
 .edusambam-footer-social a:hover{background:rgba(255,255,255,.22);color:#fff}
 </style>
+<style id="edusambam-contact-css">
+.contact-box{background:linear-gradient(135deg,#eef6ff,#fbf9f2);border:1px solid var(--border);border-left:5px solid var(--gold);border-radius:var(--radius);padding:1.5rem 1.4rem 1.7rem;margin:0 0 1.6rem}
+.contact-box h2{font-family:'EB Garamond',serif;color:var(--navy);font-size:1.6rem;margin:0 0 .5rem}
+.contact-note{color:var(--slate);margin:0 0 1rem}
+.contact-box label{display:block;font-weight:600;color:var(--navy);margin:.9rem 0 .3rem}
+.contact-box input[type=text],.contact-box input[type=email],.contact-box select,.contact-box textarea{width:100%;font:inherit;padding:.7rem .8rem;border:1px solid var(--border);border-radius:var(--radius);background:#fff;color:var(--ink)}
+.contact-box button{margin-top:1.2rem;background:var(--navy);color:#fff;border:0;border-radius:var(--radius);padding:.8rem 1.6rem;font:inherit;font-weight:600;cursor:pointer}
+.contact-box button:hover{background:#0b4ea2}
+.contact-hide{position:absolute;left:-9999px;height:0;overflow:hidden}
+.contact-thanks{background:#e8f6ec;border:1px solid #9bd3ab;border-radius:var(--radius);padding:.8rem 1rem;margin:0 0 1rem;font-weight:600;color:#14532d}
+.contact-list{list-style:none;padding:0;margin:0 0 1rem}
+.contact-list li{margin:.5rem 0;overflow-wrap:anywhere}
+</style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2230995786427221"
      crossorigin="anonymous"></script>
 </head>
@@ -1097,7 +1127,7 @@ footer.footer {
 </div>
 </nav>
 <div aria-label="Mobile navigation" class="edusambam-mobile-menu">
-<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="index.html#subject-assessment">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="index.html#about-edusambam">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li></ul>
+<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="index.html#subject-assessment">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="index.html#about-edusambam">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li></ul>
 </div>
 <div aria-label="Site search" class="edusambam-search-panel">
 <div class="edusambam-search-wrap">
@@ -1105,374 +1135,47 @@ footer.footer {
 <div class="edusambam-search-results"></div>
 </div>
 </div>
-<!-- TOOL HEADER (lightweight, not an article) -->
 <div class="article-hero">
-<div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; <a href="index.html#subject-maths">Mathematics</a> &nbsp;/&nbsp; Geometry Angle Explorer</div>
-<h1>📐 Geometry Angle Explorer</h1>
-<p class="sub">Drag the arm around the protractor to build any angle, see it classified live, and try snap-to-shape challenges.</p>
+<div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Contact Us</div>
+<h1>Contact Us</h1>
+<p class="sub">Questions, corrections, feedback or ideas for new learning resources? We would love to hear from you.</p>
 </div>
-<!-- TOOL BODY -->
-
-<div class="tool-panel" id="angleExplorer">
-<p class="tool-intro">📐 Drag anywhere on the dial below to build an angle between the two arms. The angle updates live, gets classified automatically, and you can try challenges to hit a specific type of angle.</p>
-
-<div class="tool-howto">
-<div class="howto-label">How This Works</div>
-<ol>
-<li><strong>Touch or click inside the circle</strong> and drag around it — the blue arm follows your finger or cursor.</li>
-<li><strong>The gold arm stays fixed at 0°.</strong> The angle you're building is always measured between the fixed arm and the arm you're dragging.</li>
-<li><strong>Watch the number and the badge.</strong> The degree reading updates instantly, and the badge below it tells you what type of angle you've made — Acute, Right, Obtuse, Straight, or Reflex.</li>
-<li><strong>Try a challenge.</strong> Press "Start Challenges" and you'll be asked to build a specific type of angle. Get it in range, then press "Check Angle" to confirm.</li>
-</ol>
-<div class="howto-example">Reminder: Acute is less than 90°, Right is exactly 90°, Obtuse is between 90° and 180°, Straight is exactly 180°, and Reflex is more than 180°.</div>
+<div class="article-wrap">
+<div class="contact-box">
+<h2>Send us a message</h2>
+<p class="contact-note">EDUSAMBAM is a free learning platform. We read every message and reply as soon as we can.</p>
+<p class="contact-thanks" id="contactThanks" hidden>✅ Thank you! Your message has been sent. We will reply as soon as we can.</p>
+<form name="contact" method="POST" action="contact.html?sent=1" data-netlify="true" netlify-honeypot="bot-field">
+<input type="hidden" name="form-name" value="contact"/>
+<p class="contact-hide"><label>Do not fill this out: <input name="bot-field"/></label></p>
+<label for="cName">Your name</label>
+<input id="cName" name="name" type="text" required autocomplete="name"/>
+<label for="cEmail">Your email address</label>
+<input id="cEmail" name="email" type="email" required autocomplete="email"/>
+<label for="cTopic">What is your message about?</label>
+<select id="cTopic" name="topic">
+<option>General question</option>
+<option>Feedback or suggestion</option>
+<option>Report a mistake in a resource</option>
+<option>Write for EDUSAMBAM</option>
+<option>Other</option>
+</select>
+<label for="cMsg">Your message</label>
+<textarea id="cMsg" name="message" rows="6" required></textarea>
+<button type="submit">Send message</button>
+</form>
 </div>
-
-<div class="angle-svg-wrap">
-<svg id="angleSvg" viewBox="0 0 300 300"></svg>
-</div>
-
-<div class="angle-readout-row">
-<span class="angle-readout-val" id="angleReadoutVal">0°</span>
-<span class="angle-badge zero" id="angleBadge">Zero Angle</span>
-</div>
-
-<div class="tool-btn-row" id="angleChallengeControls">
-<button class="tool-btn primary" id="angleStartChallengeBtn" type="button">🎯 Start Challenges</button>
-</div>
-
-<div class="angle-challenge-box" id="angleChallengeBox" style="display:none;">
-<div class="ac-label">Current Challenge</div>
-<div class="ac-target" id="angleChallengeTarget">—</div>
-<div class="ac-progress" id="angleChallengeProgress">Challenge 1 of 5</div>
-<div class="tool-btn-row">
-<button class="tool-btn primary" id="angleCheckBtn" type="button">✓ Check Angle</button>
-<button class="tool-btn secondary" id="angleSkipBtn" type="button">Skip →</button>
-<button class="tool-btn secondary" id="angleStopBtn" type="button">Exit Challenges</button>
+<div class="contact-box">
+<h2>Or email us directly</h2>
+<ul class="contact-list">
+<li><strong>General questions:</strong> <a href="mailto:info.edusambam@gmail.com">info.edusambam@gmail.com</a></li>
+<li><strong>Feedback:</strong> <a href="mailto:feedback.edusambam@gmail.com?subject=EDUSAMBAM%20Feedback">feedback.edusambam@gmail.com</a></li>
+<li><strong>Write for us:</strong> <a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">info.edusambam@gmail.com</a></li>
+</ul>
+<p class="contact-note">Please read our <a href="privacy-policy.html">Privacy Policy</a> to see how we handle your information.</p>
 </div>
 </div>
 
-<div class="tool-message" id="angleMessage">Drag inside the circle to build your first angle.</div>
-</div>
-
-<script id="edusambam-angle-explorer-activity">
-(function(){
-  var svg = document.getElementById('angleSvg');
-  var readoutVal = document.getElementById('angleReadoutVal');
-  var badge = document.getElementById('angleBadge');
-  var messageEl = document.getElementById('angleMessage');
-  var startBtn = document.getElementById('angleStartChallengeBtn');
-  var challengeControls = document.getElementById('angleChallengeControls');
-  var challengeBox = document.getElementById('angleChallengeBox');
-  var challengeTarget = document.getElementById('angleChallengeTarget');
-  var challengeProgress = document.getElementById('angleChallengeProgress');
-  var checkBtn = document.getElementById('angleCheckBtn');
-  var skipBtn = document.getElementById('angleSkipBtn');
-  var stopBtn = document.getElementById('angleStopBtn');
-
-  if (!svg) return;
-
-  var NS = 'http://www.w3.org/2000/svg';
-  var cx = 150, cy = 150, r = 110;
-  var currentAngle = 45;
-  var dragging = false;
-
-  var challenges = [
-    {label: 'Right Angle', hint: 'Build an angle of exactly 90°', type: 'exact', target: 90, tolerance: 4},
-    {label: 'Acute Angle', hint: 'Build an angle between 20° and 70°', type: 'range', min: 20, max: 70},
-    {label: 'Obtuse Angle', hint: 'Build an angle between 100° and 150°', type: 'range', min: 100, max: 150},
-    {label: 'Straight Angle', hint: 'Build an angle of exactly 180°', type: 'exact', target: 180, tolerance: 4},
-    {label: 'Reflex Angle', hint: 'Build an angle between 210° and 300°', type: 'range', min: 210, max: 300}
-  ];
-  var challengeMode = false;
-  var challengeIndex = 0;
-
-  function el(tag, attrs){
-    var e = document.createElementNS(NS, tag);
-    for (var k in attrs) e.setAttribute(k, attrs[k]);
-    return e;
-  }
-
-  function polar(angleDeg, radius){
-    var rad = angleDeg * Math.PI / 180;
-    return { x: cx + radius * Math.cos(rad), y: cy + radius * Math.sin(rad) };
-  }
-
-  function classify(angle){
-    var a = ((angle % 360) + 360) % 360;
-    if (a < 1) return {key: 'zero', label: 'Zero Angle'};
-    if (a < 89) return {key: 'acute', label: 'Acute'};
-    if (a <= 91) return {key: 'right', label: 'Right'};
-    if (a < 179) return {key: 'obtuse', label: 'Obtuse'};
-    if (a <= 181) return {key: 'straight', label: 'Straight'};
-    return {key: 'reflex', label: 'Reflex'};
-  }
-
-  function buildStaticSvg(){
-    svg.innerHTML = '';
-    svg.appendChild(el('circle', {cx: cx, cy: cy, r: r + 22, fill: '#fbf9f2', stroke: '#D8D0C8', 'stroke-width': 1}));
-
-    for (var deg = 0; deg < 360; deg += 15){
-      var isMajor = deg % 90 === 0;
-      var p1 = polar(deg, r + (isMajor ? 8 : 12));
-      var p2 = polar(deg, r + 22);
-      svg.appendChild(el('line', {
-        x1: p1.x, y1: p1.y, x2: p2.x, y2: p2.y,
-        stroke: isMajor ? '#06244a' : '#B8963E',
-        'stroke-width': isMajor ? 2.5 : 1.2
-      }));
-      if (isMajor){
-        var lp = polar(deg, r + 34);
-        var t = el('text', {x: lp.x, y: lp.y + 4, 'text-anchor': 'middle', 'font-size': 13, 'font-weight': 700, fill: '#06244a'});
-        t.textContent = deg + '\u00B0';
-        svg.appendChild(t);
-      }
-    }
-
-    svg.appendChild(el('circle', {cx: cx, cy: cy, r: r, fill: '#ffffff', stroke: '#D8D0C8', 'stroke-width': 1}));
-
-    var sector = el('path', {id: 'angleSector', fill: 'rgba(11,78,162,0.15)', stroke: 'none'});
-    svg.appendChild(sector);
-
-    var fixedEnd = polar(0, r);
-    svg.appendChild(el('line', {x1: cx, y1: cy, x2: fixedEnd.x, y2: fixedEnd.y, stroke: '#B8963E', 'stroke-width': 4, 'stroke-linecap': 'round'}));
-
-    var movingLine = el('line', {id: 'angleMovingLine', x1: cx, y1: cy, x2: cx, y2: cy, stroke: '#0b4ea2', 'stroke-width': 4, 'stroke-linecap': 'round'});
-    svg.appendChild(movingLine);
-
-    var handle = el('circle', {id: 'angleHandle', cx: cx, cy: cy, r: 9, fill: '#0b4ea2', stroke: '#ffffff', 'stroke-width': 2});
-    svg.appendChild(handle);
-
-    svg.appendChild(el('circle', {cx: cx, cy: cy, r: 4, fill: '#06244a'}));
-
-    var hitCircle = el('circle', {id: 'angleHitArea', cx: cx, cy: cy, r: r + 22, fill: 'transparent'});
-    svg.appendChild(hitCircle);
-  }
-
-  function describeSector(angleDeg){
-    var a = ((angleDeg % 360) + 360) % 360;
-    var start = polar(0, r * 0.55);
-    var end = polar(a, r * 0.55);
-    var largeArc = a > 180 ? 1 : 0;
-    return ['M', cx, cy, 'L', start.x, start.y, 'A', r * 0.55, r * 0.55, 0, largeArc, 1, end.x, end.y, 'Z'].join(' ');
-  }
-
-  function render(){
-    var end = polar(currentAngle, r);
-    document.getElementById('angleMovingLine').setAttribute('x2', end.x);
-    document.getElementById('angleMovingLine').setAttribute('y2', end.y);
-    document.getElementById('angleHandle').setAttribute('cx', end.x);
-    document.getElementById('angleHandle').setAttribute('cy', end.y);
-    document.getElementById('angleSector').setAttribute('d', describeSector(currentAngle));
-
-    var rounded = Math.round(currentAngle);
-    readoutVal.textContent = rounded + '\u00B0';
-    var c = classify(currentAngle);
-    badge.className = 'angle-badge ' + c.key;
-    badge.textContent = c.label;
-  }
-
-  function angleFromPointer(clientX, clientY){
-    var rect = svg.getBoundingClientRect();
-    var scale = 300 / rect.width;
-    var px = (clientX - rect.left) * scale;
-    var py = (clientY - rect.top) * scale;
-    var dx = px - cx, dy = py - cy;
-    var deg = Math.atan2(dy, dx) * 180 / Math.PI;
-    return ((deg % 360) + 360) % 360;
-  }
-
-  function pointerDown(e){
-    dragging = true;
-    svg.setPointerCapture(e.pointerId);
-    pointerMove(e);
-  }
-  function pointerMove(e){
-    if (!dragging) return;
-    currentAngle = angleFromPointer(e.clientX, e.clientY);
-    render();
-  }
-  function pointerUp(e){
-    dragging = false;
-    if (!challengeMode){
-      messageEl.className = 'tool-message';
-      var c = classify(currentAngle);
-      messageEl.textContent = 'That\u2019s a ' + Math.round(currentAngle) + '\u00B0 angle \u2014 classified as ' + c.label + '.';
-    }
-  }
-
-  svg.addEventListener('pointerdown', pointerDown);
-  svg.addEventListener('pointermove', pointerMove);
-  svg.addEventListener('pointerup', pointerUp);
-  svg.addEventListener('pointercancel', pointerUp);
-
-  function showChallenge(){
-    var ch = challenges[challengeIndex];
-    challengeTarget.textContent = ch.label + ' \u2014 ' + ch.hint;
-    challengeProgress.textContent = 'Challenge ' + (challengeIndex + 1) + ' of ' + challenges.length;
-    messageEl.className = 'tool-message';
-    messageEl.textContent = 'Build the angle, then press "Check Angle".';
-  }
-
-  function checkChallenge(){
-    var ch = challenges[challengeIndex];
-    var a = ((currentAngle % 360) + 360) % 360;
-    var pass = false;
-    if (ch.type === 'exact'){
-      var diff = Math.min(Math.abs(a - ch.target), 360 - Math.abs(a - ch.target));
-      pass = diff <= ch.tolerance;
-    } else {
-      pass = a >= ch.min && a <= ch.max;
-    }
-    if (pass){
-      messageEl.className = 'tool-message success';
-      messageEl.textContent = '\uD83C\uDF89 Nice! That\u2019s a valid ' + ch.label.toLowerCase() + '.';
-    } else {
-      messageEl.className = 'tool-message fail';
-      messageEl.textContent = 'Not quite \u2014 ' + ch.hint.toLowerCase() + '. Keep adjusting and check again.';
-    }
-  }
-
-  function nextChallenge(){
-    challengeIndex++;
-    if (challengeIndex >= challenges.length) challengeIndex = 0;
-    showChallenge();
-  }
-
-  startBtn.addEventListener('click', function(){
-    challengeMode = true;
-    challengeIndex = 0;
-    challengeControls.style.display = 'none';
-    challengeBox.style.display = 'block';
-    showChallenge();
-  });
-
-  checkBtn.addEventListener('click', checkChallenge);
-  skipBtn.addEventListener('click', nextChallenge);
-
-  stopBtn.addEventListener('click', function(){
-    challengeMode = false;
-    challengeBox.style.display = 'none';
-    challengeControls.style.display = 'flex';
-    messageEl.className = 'tool-message';
-    messageEl.textContent = 'Free explore mode \u2014 drag inside the circle to build any angle.';
-  });
-
-  buildStaticSvg();
-  render();
-})();
-</script>
-</div>
-
-<script id="edusambam-reader-script">
-(function(){
- const box=document.querySelector('.edusambam-reader'); if(!box)return;
- const root=document.querySelector('.article-wrap, .article-wrapper');
- if(!root)return;
- const bodySource=root.querySelector('.article-content, .article-body, .content-body') || root;
- const status=box.querySelector('.reader-status'), progress=box.querySelector('.reader-progress span'), rate=box.querySelector('select');
- let utterance=null, chunks=[], index=0, total=0, paused=false, stopped=false;
- function text(){
-   const clone=bodySource.cloneNode(true);
-   clone.querySelectorAll('.quiz-section,.drill-section,.squiz-section,.squiz-item,.activity-section,.assessment-section,.article-footer-nav,form,button,input,select,textarea,script,style,.edusambam-reader,.breadcrumb,.article-hero-meta,.article-hero-tag,nav,header,footer').forEach(el=>el.remove());
-   return clone.textContent.replace(/\s+/g,' ').trim();
- }
- function splitText(t){const out=[];const max=1200;for(let i=0;i<t.length;i+=max)out.push(t.slice(i,i+max));return out;}
- function updateProgress(){progress.style.width=(total?Math.min(100,Math.round((index/total)*100)):0)+'%';}
- function speakNext(){
-   if(stopped||index>=total){if(index>=total&&!stopped){status.textContent='Reading finished.';progress.style.width='100%';}return;}
-   utterance=new SpeechSynthesisUtterance(chunks[index]);
-   utterance.rate=Number(rate.value)||1;
-   utterance.onend=function(){if(stopped)return;index++;updateProgress();speakNext();};
-   utterance.onerror=function(){if(!stopped)status.textContent='The reader stopped unexpectedly. Tap Resume to continue.';};
-   status.textContent='Reading article…';
-   speechSynthesis.speak(utterance);
- }
- function play(){
-   if(!('speechSynthesis' in window)){status.textContent='Audio reading is not supported by this browser.';return;}
-   speechSynthesis.cancel();
-   chunks=splitText(text());index=0;total=chunks.length;paused=false;stopped=false;updateProgress();speakNext();
- }
- function pause(){
-   if(!('speechSynthesis' in window))return;
-   if(speechSynthesis.speaking){speechSynthesis.pause();paused=true;status.textContent='Reader paused.';}
- }
- function resume(){
-   if(!('speechSynthesis' in window))return;
-   stopped=false;
-   if(speechSynthesis.paused){speechSynthesis.resume();paused=false;status.textContent='Reader resumed.';return;}
-   if(!speechSynthesis.speaking && chunks.length && index<total){paused=false;status.textContent='Reader resumed.';speakNext();return;}
-   if(!chunks.length){status.textContent='Nothing to resume. Tap Play to start.';return;}
-   status.textContent='Reader is already playing.';
- }
- function stop(){
-   speechSynthesis.cancel();chunks=[];index=0;total=0;paused=false;stopped=true;progress.style.width='0';status.textContent='Reader stopped.';
- }
- box.querySelector('[data-reader="play"]').addEventListener('click',play);
- box.querySelector('[data-reader="pause"]').addEventListener('click',pause);
- box.querySelector('[data-reader="resume"]').addEventListener('click',resume);
- box.querySelector('[data-reader="stop"]').addEventListener('click',stop);
- window.addEventListener('beforeunload',()=>{stopped=true;speechSynthesis.cancel();});
-})();
-</script>
-<script id="edusambam-unified-nav-js">
-(function(){
-  let pages=[];fetch('nav-search-index.json').then(r=>r.json()).then(d=>{pages=d;});
-  function closeAll(except){
-    document.querySelectorAll('.edusambam-mobile-menu,.edusambam-search-panel').forEach(el=>{
-      if(el!==except) el.classList.remove('open');
-    });
-    const b=document.querySelector('.edusambam-menu-btn');
-    if(b){
-      const isOpen=!!document.querySelector('.edusambam-mobile-menu')?.classList.contains('open');
-      b.setAttribute('aria-expanded', String(isOpen));
-      b.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-      b.setAttribute('title', isOpen ? 'Close menu' : 'Menu');
-      b.textContent = isOpen ? '×' : '☰';
-    }
-  }
-  function setup(){
-    const menu=document.querySelector('.edusambam-mobile-menu');
-    const mb=document.querySelector('.edusambam-menu-btn');
-    const sb=document.querySelector('.edusambam-search-btn');
-    const panel=document.querySelector('.edusambam-search-panel');
-    const input=document.querySelector('.edusambam-search-input');
-    const results=document.querySelector('.edusambam-search-results');
-    if(mb && menu){
-      mb.addEventListener('click',()=>{
-        const open=menu.classList.toggle('open'); closeAll(open?menu:null);
-        mb.setAttribute('aria-expanded',String(open));
-        mb.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-        mb.setAttribute('title', open ? 'Close menu' : 'Menu');
-        mb.textContent = open ? '×' : '☰';
-        if(open) panel?.classList.remove('open');
-      });
-    }
-    if(sb && panel){
-      sb.addEventListener('click',()=>{
-        const open=panel.classList.toggle('open'); closeAll(open?panel:null);
-        if(open) setTimeout(()=>input?.focus(),30);
-      });
-    }
-    if(input && results){
-      const render=()=>{
-        const q=input.value.trim().toLowerCase();
-        const hits=q?pages.filter(x=>(x.title+' '+x.url).toLowerCase().includes(q)).slice(0,20):[];
-        results.innerHTML=hits.map(x=>'<a href="'+x.url.replace(/"/g,'&quot;')+'">'+
-          x.title.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</a>').join('') ||
-          (q?'<div style="padding:10px;color:#64748b">No matching pages found.</div>':'');
-      };
-      input.addEventListener('input',render);
-    }
-    document.addEventListener('keydown',e=>{
-      if(e.key==='Escape') closeAll(null);
-    });
-    document.addEventListener('click',e=>{
-      if(!e.target.closest('.edusambam-nav') && !e.target.closest('.edusambam-mobile-menu') && !e.target.closest('.edusambam-search-panel')) closeAll(null);
-    });
-  }
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',setup); else setup();
-})();
-</script>
 <footer aria-label="EDUSAMBAM site footer" class="edusambam-unified-footer">
 <div class="footer-top">
 <div class="footer-brand">
@@ -1494,7 +1197,7 @@ footer.footer {
 <li><a href="index.html#about-edusambam">What EDUSAMBAM Is</a></li>
 <li><a href="index.html#mission">Our Mission</a></li>
 <li><a href="index.html#team">The Team</a></li>
-<li><a href="mailto:info.edusambam@gmail.com">Contact Us</a></li>
+<li><a href="contact.html">Contact Us</a></li>
 <li><a href="mailto:feedback.edusambam@gmail.com?subject=EDUSAMBAM%20Feedback">Give Feedback</a></li>
 <li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
 <li><a href="privacy-policy.html">Privacy Policy</a></li>
@@ -1506,5 +1209,7 @@ footer.footer {
 <li><a href="index.html#team">Team</a></li>
 <li><a href="index.html#resources">Resources</a></li>
 </ul></div>
-</footer></body>
+</footer>
+<script>try{if(/[?&]sent=1/.test(location.search)){var e=document.getElementById("contactThanks");if(e){e.hidden=false;}}}catch(x){}</script>
+</body>
 </html>
