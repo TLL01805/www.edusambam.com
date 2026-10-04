@@ -12,9 +12,15 @@ gtag('config', 'G-Y35DW0V4HQ');
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Inference and Implicit Meaning — EDUSAMBAM</title>
-<link href="https://edusambam.com/EDUSAMBAM_O_Level_English_Unit_5_Inference_Implicit_Meaning.html" rel="canonical"/>
-<meta content="A Cambridge O Level English unit on inference and implicit meaning — reading beyond what a text states directly." name="description"/>
+<title>Thank You — EDUSAMBAM</title>
+<meta name="description" content="Thank you for contacting EDUSAMBAM."/>
+<meta name="robots" content="noindex"/>
+<link href="https://edusambam.com/contact-thanks.html" rel="canonical"/>
+<link href="favicon.webp" rel="icon" type="image/webp"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
@@ -582,6 +588,111 @@ gtag('config', 'G-Y35DW0V4HQ');
     cursor: pointer;
   }
   .squiz-retake-btn:hover { background: rgba(255,255,255,0.1); }
+
+  /* ── TOOL HEADER (trimmed article-hero, no meta/tag/reader) ── */
+  .article-hero .sub a { color: var(--red); font-weight: 600; }
+  .article-hero .sub a:hover { text-decoration: underline; }
+
+  /* ── BASE BUTTONS/PANEL (shared interactive-tool styling) ── */
+  .tool-panel {
+    background: linear-gradient(135deg,#eef6ff,#fbf9f2);
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 1.7rem 1.6rem 1.9rem;
+    margin: 0.5rem 0 2rem;
+  }
+  .tool-panel p.tool-intro { color: var(--slate); font-size: 0.96rem; margin-bottom: 1.2rem; }
+  .tool-howto {
+    background: var(--white); border: 1px solid var(--border-lt); border-radius: var(--radius);
+    padding: 1.1rem 1.3rem; margin: 0 0 1.4rem;
+  }
+  .tool-howto .howto-label {
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--red); margin-bottom: 0.6rem;
+  }
+  .tool-howto ol { margin: 0 0 0 1.2rem; }
+  .tool-howto li { margin-bottom: 0.5rem; font-size: 0.92rem; color: var(--slate); }
+  .tool-howto li strong { color: var(--ink); }
+  .tool-howto .howto-example {
+    margin-top: 0.8rem; padding-top: 0.8rem; border-top: 1px dashed var(--border);
+    font-size: 0.85rem; color: var(--muted);
+  }
+  .tool-btn-row { display: flex; gap: 0.7rem; flex-wrap: wrap; margin-top: 1rem; }
+  .tool-btn {
+    font-family: 'Source Sans 3', sans-serif; font-size: 0.88rem; font-weight: 600;
+    padding: 0.6rem 1.2rem; border-radius: 30px; cursor: pointer; border: none;
+    transition: background 0.2s;
+  }
+  .tool-btn.primary { background: var(--red); color: white; }
+  .tool-btn.primary:hover { background: var(--red-mid); }
+  .tool-btn.secondary { background: var(--white); color: var(--navy); border: 1px solid var(--border); }
+  .tool-btn.secondary:hover { border-color: var(--navy); }
+  .tool-tab {
+    background: var(--white); border: 1px solid var(--border);
+    color: var(--navy); font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.86rem; font-weight: 600; padding: 0.5rem 1rem;
+    border-radius: 30px; cursor: pointer; transition: all 0.15s;
+  }
+  .tool-tab.active { background: var(--navy); color: white; border-color: var(--navy); }
+  .tool-tab:hover:not(.active) { border-color: var(--gold); }
+  .tool-message {
+    padding: 0.9rem 1.1rem; border-radius: var(--radius); font-size: 0.92rem; font-weight: 600;
+    background: var(--cream); color: var(--slate); border-left: 4px solid var(--border); margin-top: 1rem;
+  }
+  .tool-message.success { background: rgba(46,125,50,0.1); color: #2e7d32; border-left-color: #2e7d32; }
+  .tool-message.fail { background: rgba(139,0,0,0.07); color: var(--red); border-left-color: var(--red); }
+  .tool-stats { display: flex; gap: 1.4rem; flex-wrap: wrap; font-size: 0.86rem; font-weight: 600; color: var(--slate); margin: 1rem 0; }
+  .tool-stats .stat-val { color: var(--navy); font-weight: 700; }
+
+  /* ── MAGIC SQUARE WORKSHOP ── */
+  .ms-layout { display: flex; gap: 1.8rem; flex-wrap: wrap; align-items: flex-start; justify-content: center; }
+  .ms-grid-col { flex: 0 0 auto; }
+  .ms-grid-with-sums {
+    display: inline-grid;
+    gap: 4px;
+  }
+  .ms-cell {
+    width: 52px; height: 52px;
+    background: var(--white); border: 2px solid var(--border);
+    border-radius: 8px; font-family: 'EB Garamond', serif; font-weight: 700;
+    font-size: 1.3rem; color: var(--navy); cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.15s;
+  }
+  .ms-cell:hover { border-color: var(--gold); }
+  .ms-cell.selected { background: var(--gold-lt); border-color: var(--gold); transform: scale(1.05); }
+  .ms-cell.solution { cursor: default; background: var(--cream); color: var(--slate); }
+  .ms-sum-badge {
+    min-width: 44px; height: 52px; display: flex; align-items: center; justify-content: center;
+    font-size: 0.86rem; font-weight: 700; color: var(--muted);
+    background: var(--cream); border-radius: 8px; border: 1px solid var(--border-lt);
+  }
+  .ms-sum-badge.col-badge { height: 36px; width: 52px; min-width: 0; }
+  .ms-sum-badge.ok { background: rgba(46,125,50,0.15); color: #2e7d32; border-color: #2e7d32; }
+  .ms-diag-row { display: flex; gap: 0.8rem; margin-top: 0.7rem; flex-wrap: wrap; justify-content: center; }
+  .ms-diag-badge {
+    font-size: 0.82rem; font-weight: 700; color: var(--muted);
+    background: var(--cream); border: 1px solid var(--border-lt); border-radius: 30px;
+    padding: 0.35rem 0.9rem;
+  }
+  .ms-diag-badge.ok { background: rgba(46,125,50,0.15); color: #2e7d32; border-color: #2e7d32; }
+  .ms-side-panel { flex: 1 1 200px; min-width: 200px; }
+  .ms-constant-box {
+    background: var(--white); border: 1px solid var(--border-lt); border-radius: var(--radius);
+    padding: 1rem 1.1rem; margin-bottom: 1rem; text-align: center;
+  }
+  .ms-constant-box .mc-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--red); margin-bottom: 0.3rem; }
+  .ms-constant-box .mc-value { font-family: 'EB Garamond', serif; font-size: 2rem; font-weight: 700; color: var(--navy); }
+  .ms-progress-box {
+    background: var(--white); border: 1px solid var(--border-lt); border-radius: var(--radius);
+    padding: 0.9rem 1.1rem; margin-bottom: 1rem; text-align: center; font-size: 0.92rem; font-weight: 600; color: var(--slate);
+  }
+  @media (max-width: 480px) {
+    .ms-cell { width: 42px; height: 42px; font-size: 1.05rem; }
+    .ms-sum-badge { width: 38px; min-width: 38px; height: 42px; font-size: 0.74rem; }
+    .ms-sum-badge.col-badge { height: 30px; width: 42px; }
+  }
 </style>
 <style id="edusambam-reader-style">
 .mark{width:48px;height:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px;border-radius:14px;background:#eef6ff;box-shadow:0 2px 7px rgba(8,47,99,.10);flex:0 0 48px}.mark i{display:block;border-radius:50%;background:#0b4ea2;min-width:0;min-height:0}.mark i:nth-child(5){background:#d4a017}.edusambam-reader{max-width:980px;margin:1.2rem auto 0;padding:1rem 1.1rem;border:1px solid #d7e4ef;border-radius:14px;background:linear-gradient(135deg,#f7fbff,#fff);box-shadow:0 6px 18px rgba(11,45,92,.08)}.edusambam-reader strong{display:block;color:#0b55a5;font-size:.9rem;letter-spacing:.04em}.edusambam-reader .reader-slogan{color:#b27e08;font-weight:900;margin-top:.25rem;font-size:.82rem}.edusambam-reader .reader-help{color:#607086;font-size:.8rem;margin:.3rem 0 .7rem}.edusambam-reader .reader-controls{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}.edusambam-reader button,.edusambam-reader select{border:1px solid #c9d9e8;background:#fff;color:#153b6e;border-radius:8px;padding:.48rem .65rem;font-weight:800;cursor:pointer}.edusambam-reader button:first-child{background:#0b55a5;color:#fff;border-color:#0b55a5}.edusambam-reader .reader-status{display:block;color:#607086;font-size:.75rem;margin-top:.55rem}.edusambam-reader .reader-progress{height:4px;background:#e4edf6;border-radius:99px;margin-top:.6rem;overflow:hidden}.edusambam-reader .reader-progress span{display:block;width:0;height:100%;background:#e1ad1c;transition:width .2s linear}@media(max-width:600px){.edusambam-reader{margin-left:0;margin-right:0}.edusambam-reader .reader-controls button,.edusambam-reader .reader-controls select{flex:1;min-width:75px}}
@@ -601,9 +712,9 @@ gtag('config', 'G-Y35DW0V4HQ');
 }
 .edusambam-brand{
   display:flex;align-items:center;gap:10px;min-width:0;
-  text-decoration:none;color:#0b3b66;flex:0 1 auto;
+  text-decoration:none;color:#0b3b66;flex:0 0 auto;
 }
-.edusambam-brand-copy{display:flex;flex-direction:column;line-height:1;min-width:0;overflow:hidden}
+.edusambam-brand-copy{display:flex;flex-direction:column;line-height:1;min-width:0}
 .edusambam-brand-name{
   font-family:"EB Garamond",Georgia,serif;
   font-size:1.6rem;font-weight:600;letter-spacing:.01em;
@@ -700,7 +811,6 @@ gtag('config', 'G-Y35DW0V4HQ');
 @media (max-width:1100px){
   body{padding-top:68px !important;}
   .edusambam-nav{position:fixed !important;top:0 !important;left:0 !important;right:0 !important;width:100% !important;}
-  .top-bar{display:none !important;}
 }
 </style><style id="edusambam-logo-visibility-fix">
 /* EDUSAMBAM logo visibility fix */
@@ -737,7 +847,7 @@ gtag('config', 'G-Y35DW0V4HQ');
 .edusambam-brand-mark > .c5{right:0 !important;bottom:0 !important;background:#0b3b66 !important;}
 .edusambam-brand-mark > .c6{left:17.5px !important;bottom:8px !important;background:#d6a23a !important;}
 
-@media (max-width:1100px){
+@media (max-width:900px){
   .edusambam-brand-mark{
     width:44px !important;height:44px !important;min-width:44px !important;flex-basis:44px !important;
   }
@@ -756,10 +866,6 @@ gtag('config', 'G-Y35DW0V4HQ');
   .edusambam-brand-mark > .c3,.edusambam-brand-mark > .c6{left:14.5px !important;}
 }
 </style>
-<link href="favicon.webp" rel="icon" type="image/webp"/>
-<link href="favicon.ico" rel="icon" sizes="any"/>
-<link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
-<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 <style id="edusambam-menu-extra-css">
 .edusambam-mobile-menu .edusambam-menu-extra:first-of-type{
   margin-top:8px;padding-top:8px;border-top:1px solid #e5e7eb;
@@ -976,15 +1082,33 @@ footer.footer {
     margin-right:auto !important;
   }
 }
-</style><style id="edusambam-footer-social-css">.edusambam-footer-social{margin-top:14px}.edusambam-footer-social a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);color:rgba(255,255,255,.85);transition:background .15s,color .15s}.edusambam-footer-social a:hover{background:rgba(255,255,255,.22);color:#fff}</style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2230995786427221"
-     crossorigin="anonymous"></script>
+</style><style id="edusambam-footer-social-css">
+.edusambam-footer-social{margin-top:14px}
+.edusambam-footer-social a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);color:rgba(255,255,255,.85);transition:background .15s,color .15s}
+.edusambam-footer-social a:hover{background:rgba(255,255,255,.22);color:#fff}
+</style>
+<style id="edusambam-contact-css">
+.contact-box{background:linear-gradient(135deg,#eef6ff,#fbf9f2);border:1px solid var(--border);border-left:5px solid var(--gold);border-radius:var(--radius);padding:1.5rem 1.4rem 1.7rem;margin:0 0 1.6rem}
+.contact-box h2{font-family:'EB Garamond',serif;color:var(--navy);font-size:1.6rem;margin:0 0 .5rem}
+.contact-note{color:var(--slate);margin:0 0 1rem}
+.contact-box label{display:block;font-weight:600;color:var(--navy);margin:.9rem 0 .3rem}
+.contact-box input[type=text],.contact-box input[type=email],.contact-box select,.contact-box textarea{width:100%;font:inherit;padding:.7rem .8rem;border:1px solid var(--border);border-radius:var(--radius);background:#fff;color:var(--ink)}
+.contact-box button{margin-top:1.2rem;background:var(--navy);color:#fff;border:0;border-radius:var(--radius);padding:.8rem 1.6rem;font:inherit;font-weight:600;cursor:pointer}
+.contact-box button:hover{background:#0b4ea2}
+.contact-hide{position:absolute;left:-9999px;height:0;overflow:hidden}
+.contact-thanks{background:#e8f6ec;border:1px solid #9bd3ab;border-radius:var(--radius);padding:.8rem 1rem;margin:0 0 1rem;font-weight:600;color:#14532d}
+.contact-list{list-style:none;padding:0;margin:0 0 1rem}
+.contact-list li{margin:.5rem 0;overflow-wrap:anywhere}
+</style>
 </head>
 <body id="top">
 <!-- TOP BAR -->
 <div class="top-bar">
 <p>Established 2026  ·  Free Educational Resources for All</p>
 <ul class="top-bar-links">
-<li><a href="contact.html">Contact</a></li><li><a href="index.html#about-edusambam">About</a></li><li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+<li><a href="index.html">Contact</a></li>
+<li><a href="index.html">About</a></li>
+<li><a href="index.html">Write for Us</a></li>
 </ul>
 </div>
 <!-- NAV -->
@@ -1002,7 +1126,7 @@ footer.footer {
 </div>
 </nav>
 <div aria-label="Mobile navigation" class="edusambam-mobile-menu">
-<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="assessment-arena.html">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="index.html#about-edusambam">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li></ul>
+<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="index.html#subject-assessment">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="index.html#about-edusambam">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li></ul>
 </div>
 <div aria-label="Site search" class="edusambam-search-panel">
 <div class="edusambam-search-wrap">
@@ -1010,391 +1134,33 @@ footer.footer {
 <div class="edusambam-search-results"></div>
 </div>
 </div>
-<!-- ARTICLE HERO -->
 <div class="article-hero">
-<div class="breadcrumb"><a href="index.html#gateway">Gateway</a> &nbsp;/&nbsp; <a href="index.html#subject-english">English</a> &nbsp;/&nbsp; Inference & Implicit Meaning</div>
-<div class="article-hero-tag">O Level English · Foundation Stage · Unit 5</div>
-<h1>Inference and Implicit Meaning: Reading Between the Lines</h1>
-<p class="sub">A comprehensive foundation unit for locating, understanding, selecting and accurately communicating information stated directly in a text.</p>
-<div class="article-hero-meta"><span>EDUSAMBAM Editorial Team</span><span>|</span><span>Foundation Unit 5</span><span>|</span><span>English Language</span></div>
-</div><div aria-label="EDUSAMBAM article reader" class="edusambam-reader"><strong>🔊 LISTEN TO THIS ARTICLE</strong><div class="reader-slogan">SAVE YOUR EYES • IMPROVE YOUR LISTENING</div><div class="reader-help">Listen to the article instead of relying only on continuous screen reading.</div><div class="reader-controls"><button data-reader="play" type="button">▶ Play</button><button data-reader="pause" type="button">⏸ Pause</button><button data-reader="resume" type="button">▶ Resume</button><button data-reader="stop" type="button">■ Stop</button><select aria-label="Reading speed"><option value="1">1×</option><option value="0.8">0.8×</option><option value="1.2">1.2×</option></select></div><div aria-hidden="true" class="reader-progress"><span></span></div><small class="reader-status">Ready to read the article.</small></div>
+<div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; <a href="contact.html">Contact Us</a> &nbsp;/&nbsp; Thank You</div>
+<h1>Thank You!</h1>
+<p class="sub">Your message has been sent. We will reply as soon as we can.</p>
+</div>
 <div class="article-wrap">
-<p class="lead">Once learners can retrieve what a text says explicitly, the next step is to understand what the writer <strong>suggests</strong>. This unit develops inference: using textual clues, context and language to reach a justified understanding of meanings, feelings, attitudes and viewpoints that are not stated directly.</p>
-
-<h2><span class="num">1.</span> Unit Purpose</h2>
-<p>Cambridge O Level English Language 1123 identifies <strong>R2</strong> as demonstrating understanding of implicit meanings and attitudes. The current assessment framework also connects inference with wider reading skills such as analysing and evaluating ideas and understanding how writers achieve effects. citeturn0search12</p>
-<div class="example-box"><div class="ex-label">EDUSAMBAM principle</div><p><strong>Notice the clue → connect the clue → infer the meaning → prove the inference.</strong></p></div>
-<p>This unit is an EDUSAMBAM teaching sequence designed to develop that Cambridge objective progressively. Cambridge defines the assessment objective; the detailed lesson progression below is an EDUSAMBAM framework.</p>
-
-<h2><span class="num">2.</span> Learning Outcomes</h2>
-<ul>
-<li>distinguish explicit information from implied meaning;</li>
-<li>identify clues that support an inference;</li>
-<li>combine more than one clue to form a justified conclusion;</li>
-<li>infer feelings, attitudes and viewpoints;</li>
-<li>infer reasons and consequences where they are not directly stated;</li>
-<li>recognise the difference between a reasonable inference and a guess;</li>
-<li>use textual evidence to support an inference;</li>
-<li>explain how a clue leads to a conclusion;</li>
-<li>use cautious language when the evidence permits more than one interpretation;</li>
-<li>avoid unsupported or exaggerated interpretations.</li>
-</ul>
-
-<h2><span class="num">3.</span> What Is Implicit Meaning?</h2>
-<p>Implicit meaning is meaning that is not stated directly but can reasonably be understood from clues in the text.</p>
-<div class="example-box"><div class="ex-label">Example</div><p>Text: “Rafiq glanced at the dark clouds, closed his picnic basket and hurried towards the house.”</p><p>The text does not say, <em>“Rafiq thought it was going to rain.”</em> However, the dark clouds, closing the basket and hurrying home provide clues from which a reader can infer that he expected bad weather.</p></div>
-
-<h2><span class="num">4.</span> Explicit Meaning vs Implicit Meaning</h2>
-<table class="compare"><tr><th>Explicit</th><th>Implicit</th></tr>
-<tr><td>The writer states the information.</td><td>The reader works out meaning from clues.</td></tr>
-<tr><td>“She was frightened.”</td><td>“Her hands trembled and she stepped backwards.”</td></tr>
-<tr><td>Retrieval is central.</td><td>Interpretation is central.</td></tr>
-<tr><td>The evidence is directly stated.</td><td>The evidence supports a conclusion.</td></tr></table>
-
-<h2><span class="num">5.</span> The Inference Formula</h2>
-<div class="example-box"><div class="ex-label">EDUSAMBAM formula</div><p><strong>Textual clue + Contextual connection = Justified inference</strong></p></div>
-<p>A strong inference has three parts:</p>
-<ol><li><strong>Clue:</strong> What does the writer give us?</li><li><strong>Connection:</strong> What does that clue suggest in this context?</li><li><strong>Conclusion:</strong> What can reasonably be inferred?</li></ol>
-<p>Teach learners never to jump directly from a single word to a dramatic conclusion without showing the connection.</p>
-
-<h2><span class="num">6.</span> Lesson 1 — Recognising Clues</h2>
-<p>Begin with simple situations in which the conclusion is strongly supported.</p>
-<div class="example-box"><div class="ex-label">Practice</div><p>“The classroom lights were off, the chairs were stacked and the door was locked.”</p><p><strong>Inference:</strong> The classroom was probably not in use at that time.</p></div>
-<p>Ask: <strong>Which three clues support the inference?</strong> This makes evidence part of the habit from the beginning.</p>
-
-<h2><span class="num">7.</span> Lesson 2 — Feelings and Emotions</h2>
-<p>Writers often reveal emotion through actions, physical reactions, speech, thoughts and descriptions rather than simply naming a feeling.</p>
-<table class="compare"><tr><th>Clue</th><th>Possible inference</th></tr>
-<tr><td>He avoided eye contact and spoke quietly.</td><td>He may have felt nervous, embarrassed or uncomfortable.</td></tr>
-<tr><td>She smiled repeatedly and rushed to tell her friends.</td><td>She was probably excited or pleased.</td></tr>
-<tr><td>He clenched his fists and spoke sharply.</td><td>He was probably angry or frustrated.</td></tr></table>
-<p>Important: teach learners that context matters. A single clue may support more than one possible emotion.</p>
-
-<h2><span class="num">8.</span> Lesson 3 — Attitude</h2>
-<p><strong>Attitude</strong> concerns how a writer or character feels about a person, situation, idea or event.</p>
-<p>Useful attitude vocabulary includes <strong>enthusiastic, doubtful, critical, approving, dismissive, sympathetic, concerned, optimistic, pessimistic, frustrated, amused</strong> and <strong>cautious</strong>.</p>
-<div class="example-box"><div class="ex-label">Evidence rule</div><p>Do not choose an attitude merely because it sounds sophisticated. Choose the attitude that the language and context actually support.</p></div>
-
-<h2><span class="num">9.</span> Lesson 4 — Inferring Reasons</h2>
-<p>Sometimes a text shows what happened but does not directly state why.</p>
-<div class="example-box"><div class="ex-label">Example</div><p>“After reading the notice, Sara quietly put her books back into her bag and left the room.”</p><p>The text does not state why she left. A reader must look for additional context before making a justified inference.</p></div>
-<p>Teach learners to distinguish <strong>possible</strong> reasons from <strong>supported</strong> reasons.</p>
-
-<h2><span class="num">10.</span> Lesson 5 — Inferring Consequences</h2>
-<p>Readers can sometimes infer what is likely to happen next from information already provided.</p>
-<div class="example-box"><div class="ex-label">Example</div><p>“The river continued to rise, and water had already reached the lower steps of the houses.”</p><p>A reasonable inference is that flooding may become more serious if the river continues to rise.</p></div>
-<p>The inference should remain proportional to the evidence. Avoid turning “may happen” into “will definitely happen.”</p>
-
-<h2><span class="num">11.</span> Lesson 6 — Inference from Context</h2>
-<p>The same action can communicate different meanings in different contexts. Teach learners to use the surrounding passage rather than relying on isolated words.</p>
-<div class="example-box"><div class="ex-label">Context matters</div><p>A character “laughed” after hearing a joke, after receiving bad news, or while feeling nervous. The word <strong>laughed</strong> alone does not prove the same emotion in every situation.</p></div>
-
-<h2><span class="num">12.</span> Lesson 7 — Strong Inference vs Guess</h2>
-<table class="compare"><tr><th>Strong inference</th><th>Guess</th></tr>
-<tr><td>Uses one or more textual clues.</td><td>Uses imagination without sufficient evidence.</td></tr>
-<tr><td>Fits the context.</td><td>May contradict the passage.</td></tr>
-<tr><td>Can be explained.</td><td>Cannot be properly justified.</td></tr>
-<tr><td>Uses cautious wording where necessary.</td><td>Often makes absolute claims.</td></tr></table>
-
-<h2><span class="num">13.</span> Lesson 8 — Writing an Inference Answer</h2>
-<p>A useful foundation structure is:</p>
-<div class="example-box"><div class="ex-label">Answer structure</div><p><strong>Inference → Evidence → Explanation</strong></p><p>“The character appears to be nervous because he avoids eye contact and speaks quietly. These actions suggest that he is uncomfortable in the situation.”</p></div>
-<p>The exact response length should depend on the question and mark allocation. The aim is not to write more; it is to provide a justified interpretation.</p>
-
-<h2><span class="num">14.</span> The EDUSAMBAM 7-Step Inference Method</h2>
-<ol>
-<li><strong>Read</strong> the question carefully.</li>
-<li><strong>Locate</strong> the relevant part of the text.</li>
-<li><strong>Notice</strong> words, actions, descriptions and contrasts.</li>
-<li><strong>Connect</strong> the clues with the context.</li>
-<li><strong>Infer</strong> the most reasonable meaning.</li>
-<li><strong>Support</strong> the inference with textual evidence.</li>
-<li><strong>Check</strong> that the conclusion is not stronger than the evidence allows.</li>
-</ol>
-
-<h2><span class="num">15.</span> A Worked Example</h2>
-<div class="example-box"><div class="ex-label">Original EDUSAMBAM practice text</div><p>“When the head teacher announced that the old library would remain open after school, Amir smiled, immediately put his notebook into his bag and asked whether he could stay until six.”</p><p><strong>Question:</strong> What can you infer about Amir's attitude towards the library?</p><p><strong>Inference:</strong> Amir is probably enthusiastic about using the library.</p><p><strong>Evidence:</strong> He smiled, prepared to stay and specifically asked to remain until six.</p><p><strong>Explanation:</strong> These actions show positive interest rather than reluctance.</p></div>
-
-<h2><span class="num">16.</span> Differentiation</h2>
-<table class="compare"><tr><th>Support</th><th>Core</th><th>Extension</th></tr>
-<tr><td>Short passages with obvious clues and a choice of possible inferences.</td><td>Unmarked passages requiring an inference plus evidence.</td><td>Longer passages containing competing clues, subtle attitudes and more than one plausible interpretation.</td></tr></table>
-
-<h2><span class="num">17.</span> Common Errors and Remediation</h2>
-<ul>
-<li><strong>Guessing without evidence:</strong> require the learner to underline the clue.</li>
-<li><strong>Repeating the explicit information:</strong> ask, “What does this suggest?”</li>
-<li><strong>Over-interpreting:</strong> ask whether the passage actually supports the strength of the conclusion.</li>
-<li><strong>Choosing an emotion from one word only:</strong> examine the surrounding actions and context.</li>
-<li><strong>Giving several unrelated possibilities:</strong> choose the most strongly supported interpretation.</li>
-<li><strong>Explaining the inference but giving no evidence:</strong> add a precise textual reference.</li>
-</ul>
-
-<h2><span class="num">18.</span> R1–R5 Connection</h2>
-<table class="compare"><tr><th>Objective</th><th>Connection in this unit</th></tr>
-<tr><td>R1</td><td>Foundation: accurate retrieval of the explicit clues.</td></tr>
-<tr><td>R2</td><td><strong>Primary focus:</strong> implicit meanings, attitudes and justified inference.</td></tr>
-<tr><td>R3</td><td>Begins to develop support for interpretations using relevant textual evidence.</td></tr>
-<tr><td>R4</td><td>Prepares learners to connect language choices with effects in later units.</td></tr>
-<tr><td>R5</td><td>Supports selection of relevant information for a specific purpose.</td></tr></table>
-<p>Cambridge's current assessment objectives define R2 as understanding implicit meanings and attitudes, while R3 covers analysis, evaluation and development of facts, ideas and opinions using appropriate support from the text. citeturn0search12</p>
-
-<h2><span class="num">19.</span> Assessment Criteria</h2>
-<table class="compare"><tr><th>Criterion</th><th>Secure performance</th></tr>
-<tr><td>Interpretation</td><td>Inference is reasonable and fits the context.</td></tr>
-<tr><td>Evidence</td><td>Relevant textual clues support the conclusion.</td></tr>
-<tr><td>Explanation</td><td>The learner explains how the clues lead to the inference.</td></tr>
-<tr><td>Proportion</td><td>The conclusion is no stronger than the evidence permits.</td></tr>
-<tr><td>Precision</td><td>Emotion or attitude vocabulary is appropriately chosen.</td></tr>
-</table>
-
-<h2><span class="num">20.</span> Unit Assessment Structure</h2>
-<p>Use an original passage containing a range of inferential opportunities. Include questions on:</p>
-<ul>
-<li>implicit meaning;</li>
-<li>feelings and emotions;</li>
-<li>attitude;</li>
-<li>reasons and consequences;</li>
-<li>reference to supporting clues;</li>
-<li>distinguishing a justified inference from an unsupported guess.</li>
-</ul>
-<p>The assessment should reward the quality and relevance of the interpretation rather than simply the use of sophisticated vocabulary.</p>
-
-<h2><span class="num">21.</span> Mastery Levels</h2>
-<table class="compare"><tr><th>Level</th><th>Descriptor</th></tr>
-<tr><td>Introduced</td><td>Can identify an obvious implied meaning with strong support.</td></tr>
-<tr><td>Developing</td><td>Can make reasonable inferences but may give weak or incomplete evidence.</td></tr>
-<tr><td>Secure</td><td>Produces justified inferences supported by relevant clues.</td></tr>
-<tr><td>Advanced</td><td>Handles subtle attitudes, competing clues and cautious interpretation.</td></tr>
-<tr><td>Examination Ready</td><td>Infers accurately and efficiently under timed conditions.</td></tr></table>
-
-<h2><span class="num">22.</span> Original Practice Passage</h2>
-<div class="example-box"><div class="ex-label">EDUSAMBAM original text</div><p>“Nadia stood at the edge of the stage holding the certificate with both hands. She looked towards her parents in the front row, took a slow breath and smiled before stepping forward to receive the medal.”</p></div>
-<ol>
-<li>What can you infer about Nadia's feelings?</li>
-<li>Which two details support your inference?</li>
-<li>Why might she have taken a slow breath?</li>
-<li>Does the passage suggest that Nadia was completely relaxed? Explain your answer.</li>
-</ol>
-
-<h2><span class="num">23.</span> Home Practice</h2>
-<p>Choose a short narrative or non-fiction passage. Identify five clues that reveal a person's feeling or attitude. For each clue, write a justified inference and explain the connection. Then identify one inference that would be too strong for the evidence and explain why.</p>
-
-<h2><span class="num">24.</span> Mastery Checklist</h2>
-<ul class="checklist">
-<li>☐ I can distinguish explicit information from implied meaning.</li>
-<li>☐ I can identify clues that support an inference.</li>
-<li>☐ I can combine clues with context.</li>
-<li>☐ I can infer feelings and attitudes.</li>
-<li>☐ I can infer reasons and likely consequences.</li>
-<li>☐ I can distinguish inference from unsupported guessing.</li>
-<li>☐ I can support my inference with textual evidence.</li>
-<li>☐ I can explain how evidence leads to my conclusion.</li>
-<li>☐ I can avoid making conclusions stronger than the evidence.</li>
-<li>☐ I can apply the method independently.</li>
-</ul>
-
-<h2><span class="num">25.</span> What Comes Next?</h2>
-<p>After learners can retrieve explicit information and infer implicit meanings, they are ready to examine <strong>how writers create effects</strong>. The next stage moves toward R4: language choices, tone, imagery, connotation and reader response.</p>
-<div class="example-box"><div class="ex-label">Progression</div><p><strong>What does the text say? → What does it suggest? → How does the writer create the effect?</strong></p></div>
-
-<h2><span class="num">26.</span> Quick Assessment</h2>
-<div class="quiz-box" id="quizBox">
-<div class="quiz-question"><strong>1. What is implicit meaning?</strong><label><input type="radio" name="q1" value="a"> Meaning stated word for word</label><label><input type="radio" name="q1" value="b"> Meaning reasonably understood from clues</label><label><input type="radio" name="q1" value="c"> Personal information unrelated to the text</label></div>
-<div class="quiz-question"><strong>2. What should support an inference?</strong><label><input type="radio" name="q2" value="a"> Textual clues</label><label><input type="radio" name="q2" value="b"> Guesswork only</label><label><input type="radio" name="q2" value="c"> A memorised answer</label></div>
-<div class="quiz-question"><strong>3. Which formula best describes inference?</strong><label><input type="radio" name="q3" value="a"> Guess + opinion</label><label><input type="radio" name="q3" value="b"> Clue + context = justified inference</label><label><input type="radio" name="q3" value="c"> Keyword + imagination</label></div>
-<div class="quiz-question"><strong>4. What is attitude?</strong><label><input type="radio" name="q4" value="a"> How a person or writer feels towards something</label><label><input type="radio" name="q4" value="b"> The length of a sentence</label><label><input type="radio" name="q4" value="c"> The date of publication</label></div>
-<div class="quiz-question"><strong>5. Why does context matter?</strong><label><input type="radio" name="q5" value="a"> The same clue can have different meanings in different situations</label><label><input type="radio" name="q5" value="b"> Context is never important</label><label><input type="radio" name="q5" value="c"> It removes the need for evidence</label></div>
-<div class="quiz-question"><strong>6. Which is a strong inference?</strong><label><input type="radio" name="q6" value="a"> One supported by relevant clues</label><label><input type="radio" name="q6" value="b"> One based entirely on imagination</label><label><input type="radio" name="q6" value="c"> One that contradicts the text</label></div>
-<div class="quiz-question"><strong>7. What should an inference answer normally include?</strong><label><input type="radio" name="q7" value="a"> Inference and supporting evidence</label><label><input type="radio" name="q7" value="b"> Only a long quotation</label><label><input type="radio" name="q7" value="c"> Personal biography</label></div>
-<div class="quiz-question"><strong>8. What is over-interpretation?</strong><label><input type="radio" name="q8" value="a"> Making a conclusion stronger than the evidence permits</label><label><input type="radio" name="q8" value="b"> Finding a clue</label><label><input type="radio" name="q8" value="c"> Checking the context</label></div>
-<div class="quiz-question"><strong>9. Which Cambridge objective is the primary focus?</strong><label><input type="radio" name="q9" value="a"> R2</label><label><input type="radio" name="q9" value="b"> W4</label><label><input type="radio" name="q9" value="c"> W5</label></div>
-<div class="quiz-question"><strong>10. What comes after inference in the EDUSAMBAM progression?</strong><label><input type="radio" name="q10" value="a"> Writer's effects and language choices</label><label><input type="radio" name="q10" value="b"> Memorising unrelated facts</label><label><input type="radio" name="q10" value="c"> Ignoring evidence</label></div>
-<button type="button" onclick="checkQuiz()">Check Answers</button>
-<div id="quizResult" class="quiz-result"></div>
-</div>
-<script>
-function checkQuiz(){
-  const answers={q1:'b',q2:'a',q3:'b',q4:'a',q5:'a',q6:'a',q7:'a',q8:'a',q9:'a',q10:'a'};
-  let score=0, answered=0;
-  Object.keys(answers).forEach(q=>{
-    const x=document.querySelector('input[name="'+q+'"]:checked');
-    if(x){answered++; if(x.value===answers[q]) score++;}
-  });
-  document.getElementById('quizResult').innerHTML='<strong>Score: '+score+'/10</strong><br>Answered: '+answered+'/10. Review any missed skill before moving to the next unit.';
-}
-</script>
+<div class="contact-box">
+<h2>What happens next</h2>
+<p class="contact-note">We read every message. If you wrote to us with a question or a correction, you will hear back at the email address you gave.</p>
+<p><a href="index.html">← Back to the EDUSAMBAM home page</a></p>
 </div>
 </div>
-
-</div>
-</div>
-<script>
-(function(){
-  const form = document.getElementById('squizForm');
-  const submitBtn = document.getElementById('squizSubmitBtn');
-  const progressFill = document.getElementById('squizProgressFill');
-  const progressLabel = document.getElementById('squizProgressLabel');
-  const totalQuestions = document.querySelectorAll('#squizForm .squiz-item').length;
-  if(!form || !submitBtn) return;
-  function countAnswered(){ let count=0; for(let i=1;i<=totalQuestions;i++){ if(form.querySelector(`input[name="sq${i}"]:checked`)) count++; } return count; }
-  function updateProgress(){
-    const answered=countAnswered();
-    progressFill.style.width=(answered/totalQuestions*100)+'%';
-    progressLabel.textContent=answered+' of '+totalQuestions+' answered';
-    submitBtn.disabled=answered<totalQuestions;
-    submitBtn.textContent=answered<totalQuestions?'Answer all questions to submit':'Submit Quiz';
-    form.querySelectorAll('.squiz-option').forEach(opt=>opt.classList.remove('selected'));
-    form.querySelectorAll('input[type="radio"]:checked').forEach(input=>input.closest('.squiz-option').classList.add('selected'));
-  }
-  form.addEventListener('change',updateProgress);
-  form.addEventListener('submit',function(e){e.preventDefault(); window.submitQuiz();});
-  window.submitQuiz=function(){
-    let score=0; const questions=form.querySelectorAll('.squiz-item');
-    questions.forEach((q,idx)=>{ const qnum=idx+1, correctIdx=q.getAttribute('data-correct'), selected=form.querySelector(`input[name="sq${qnum}"]:checked`), options=q.querySelectorAll('.squiz-option');
-      options.forEach((opt,optIdx)=>{ opt.querySelector('input').disabled=true; if(String(optIdx)===correctIdx) opt.classList.add('correct-answer'); });
-      if(selected && selected.value===correctIdx) score++; else if(selected) selected.closest('.squiz-option').classList.add('wrong-answer');
-    });
-    const percent=Math.round((score/totalQuestions)*100);
-    document.getElementById('squizScoreBig').textContent=score+'/'+totalQuestions;
-    document.getElementById('squizScoreLabel').textContent='You scored '+percent+'%';
-    let tier='Keep practicing'; if(percent===100) tier='Perfect score!'; else if(percent>=80) tier='Excellent work'; else if(percent>=60) tier='Good effort'; else if(percent>=40) tier='Getting there';
-    document.getElementById('squizScoreTier').textContent=tier;
-    document.getElementById('squizResults').classList.add('visible'); submitBtn.style.display='none';
-    document.getElementById('squizResults').scrollIntoView({behavior:'smooth',block:'start'});
-  };
-  window.retakeQuiz=function(){ form.reset(); form.querySelectorAll('.squiz-option').forEach(opt=>{opt.classList.remove('selected','correct-answer','wrong-answer'); opt.querySelector('input').disabled=false;}); document.getElementById('squizResults').classList.remove('visible'); submitBtn.style.display='block'; updateProgress(); document.getElementById('squizForm').scrollIntoView({behavior:'smooth',block:'start'}); };
-  updateProgress();
-})();
-</script>
-
-<script id="edusambam-reader-script">
-(function(){
- const box=document.querySelector('.edusambam-reader'); if(!box)return;
- const root=document.querySelector('.article-wrap, .article-wrapper');
- if(!root)return;
- const bodySource=root.querySelector('.article-content, .article-body, .content-body') || root;
- const status=box.querySelector('.reader-status'), progress=box.querySelector('.reader-progress span'), rate=box.querySelector('select');
- let utterance=null, chunks=[], index=0, total=0, paused=false, stopped=false;
- function text(){
-   const clone=bodySource.cloneNode(true);
-   clone.querySelectorAll('.quiz-section,.drill-section,.squiz-section,.squiz-item,.activity-section,.assessment-section,.article-footer-nav,form,button,input,select,textarea,script,style,.edusambam-reader,.breadcrumb,.article-hero-meta,.article-hero-tag,nav,header,footer').forEach(el=>el.remove());
-   return clone.textContent.replace(/\s+/g,' ').trim();
- }
- function splitText(t){const out=[];const max=1200;for(let i=0;i<t.length;i+=max)out.push(t.slice(i,i+max));return out;}
- function updateProgress(){progress.style.width=(total?Math.min(100,Math.round((index/total)*100)):0)+'%';}
- function speakNext(){
-   if(stopped||index>=total){if(index>=total&&!stopped){status.textContent='Reading finished.';progress.style.width='100%';}return;}
-   utterance=new SpeechSynthesisUtterance(chunks[index]);
-   utterance.rate=Number(rate.value)||1;
-   utterance.onend=function(){if(stopped)return;index++;updateProgress();speakNext();};
-   utterance.onerror=function(){if(!stopped)status.textContent='The reader stopped unexpectedly. Tap Resume to continue.';};
-   status.textContent='Reading article…';
-   speechSynthesis.speak(utterance);
- }
- function play(){
-   if(!('speechSynthesis' in window)){status.textContent='Audio reading is not supported by this browser.';return;}
-   speechSynthesis.cancel();
-   chunks=splitText(text());index=0;total=chunks.length;paused=false;stopped=false;updateProgress();speakNext();
- }
- function pause(){
-   if(!('speechSynthesis' in window))return;
-   if(speechSynthesis.speaking){speechSynthesis.pause();paused=true;status.textContent='Reader paused.';}
- }
- function resume(){
-   if(!('speechSynthesis' in window))return;
-   stopped=false;
-   if(speechSynthesis.paused){speechSynthesis.resume();paused=false;status.textContent='Reader resumed.';return;}
-   if(!speechSynthesis.speaking && chunks.length && index<total){paused=false;status.textContent='Reader resumed.';speakNext();return;}
-   if(!chunks.length){status.textContent='Nothing to resume. Tap Play to start.';return;}
-   status.textContent='Reader is already playing.';
- }
- function stop(){
-   speechSynthesis.cancel();chunks=[];index=0;total=0;paused=false;stopped=true;progress.style.width='0';status.textContent='Reader stopped.';
- }
- box.querySelector('[data-reader="play"]').addEventListener('click',play);
- box.querySelector('[data-reader="pause"]').addEventListener('click',pause);
- box.querySelector('[data-reader="resume"]').addEventListener('click',resume);
- box.querySelector('[data-reader="stop"]').addEventListener('click',stop);
- window.addEventListener('beforeunload',()=>{stopped=true;speechSynthesis.cancel();});
-})();
-</script>
-<script id="edusambam-unified-nav-js">
-(function(){
-  let pages=[];fetch('nav-search-index.json').then(r=>r.json()).then(d=>{pages=d;});
-  function closeAll(except){
-    document.querySelectorAll('.edusambam-mobile-menu,.edusambam-search-panel').forEach(el=>{
-      if(el!==except) el.classList.remove('open');
-    });
-    const b=document.querySelector('.edusambam-menu-btn');
-    if(b){
-      const isOpen=!!document.querySelector('.edusambam-mobile-menu')?.classList.contains('open');
-      b.setAttribute('aria-expanded', String(isOpen));
-      b.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-      b.setAttribute('title', isOpen ? 'Close menu' : 'Menu');
-      b.textContent = isOpen ? '×' : '☰';
-    }
-  }
-  function setup(){
-    const menu=document.querySelector('.edusambam-mobile-menu');
-    const mb=document.querySelector('.edusambam-menu-btn');
-    const sb=document.querySelector('.edusambam-search-btn');
-    const panel=document.querySelector('.edusambam-search-panel');
-    const input=document.querySelector('.edusambam-search-input');
-    const results=document.querySelector('.edusambam-search-results');
-    if(mb && menu){
-      mb.addEventListener('click',()=>{
-        const open=menu.classList.toggle('open'); closeAll(open?menu:null);
-        mb.setAttribute('aria-expanded',String(open));
-        mb.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-        mb.setAttribute('title', open ? 'Close menu' : 'Menu');
-        mb.textContent = open ? '×' : '☰';
-        if(open) panel?.classList.remove('open');
-      });
-    }
-    if(sb && panel){
-      sb.addEventListener('click',()=>{
-        const open=panel.classList.toggle('open'); closeAll(open?panel:null);
-        if(open) setTimeout(()=>input?.focus(),30);
-      });
-    }
-    if(input && results){
-      const render=()=>{
-        const q=input.value.trim().toLowerCase();
-        const hits=q?pages.filter(x=>(x.title+' '+x.url).toLowerCase().includes(q)).slice(0,20):[];
-        results.innerHTML=hits.map(x=>'<a href="'+x.url.replace(/"/g,'&quot;')+'">'+
-          x.title.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</a>').join('') ||
-          (q?'<div style="padding:10px;color:#64748b">No matching pages found.</div>':'');
-      };
-      input.addEventListener('input',render);
-    }
-    document.addEventListener('keydown',e=>{
-      if(e.key==='Escape') closeAll(null);
-    });
-    document.addEventListener('click',e=>{
-      if(!e.target.closest('.edusambam-nav') && !e.target.closest('.edusambam-mobile-menu') && !e.target.closest('.edusambam-search-panel')) closeAll(null);
-    });
-  }
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',setup); else setup();
-})();
-</script>
-<div class="article-footer-nav"><a href="EDUSAMBAM_O_Level_English_Unit_4_Reading_Explicit_Meaning.html">← Previous Unit</a><a href="index.html#gateway">Gateway</a><a href="EDUSAMBAM_O_Level_English_Unit_6_Writers_Language_Effects_Reader_Response.html">Next Unit →</a></div>
-<footer class="edusambam-unified-footer" aria-label="EDUSAMBAM site footer">
+<footer aria-label="EDUSAMBAM site footer" class="edusambam-unified-footer">
 <div class="footer-top">
 <div class="footer-brand">
 <div class="edusambam-footer-brand-row">
-<a class="edusambam-footer-logo-link" href="index.html" aria-label="EDUSAMBAM home">
+<a aria-label="EDUSAMBAM home" class="edusambam-footer-logo-link" href="index.html">
 <img alt="EDUSAMBAM" class="edusambam-brand-mark edusambam-footer-logo" src="logo-icon-full-white.png" style="width:auto;height:64px;max-width:240px;object-fit:contain;background:none;border-radius:0;"/>
 </a>
 </div>
 <p class="edusambam-footer-statement">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</p>
 <div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a></div>
 </div>
-<div class="footer-col"><h4>Learning</h4><ul><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li></ul></div>
+<div class="footer-col"><h4>Learning Areas</h4><ul><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li></ul></div>
 <div class="footer-col"><h4>Practice &amp; Assessment</h4><ul>
 <li><a href="index.html#interactive-activities">Interactive Activities</a></li>
 <li><a href="assessment-arena.html">ASSESSMENT ARENA</a></li>
-<li><a href="assessment-arena.html">What Is Assessment?</a></li>
-<li><a href="index.html#about">Learn Your Way</a></li>
 <li><a href="index.html#resources">Resources &amp; Downloads</a></li>
 </ul></div>
 <div class="footer-col"><h4>About EDUSAMBAM</h4><ul>
@@ -1413,5 +1179,6 @@ function checkQuiz(){
 <li><a href="index.html#team">Team</a></li>
 <li><a href="index.html#resources">Resources</a></li>
 </ul></div>
-</footer></body>
+</footer>
+</body>
 </html>

@@ -1144,8 +1144,7 @@ footer.footer {
 <div class="contact-box">
 <h2>Send us a message</h2>
 <p class="contact-note">EDUSAMBAM is a free learning platform. We read every message and reply as soon as we can.</p>
-<p class="contact-thanks" id="contactThanks" hidden>✅ Thank you! Your message has been sent. We will reply as soon as we can.</p>
-<form name="contact" method="POST" action="contact.html?sent=1" data-netlify="true" netlify-honeypot="bot-field">
+<form name="contact" method="POST" action="/contact-thanks.html" data-netlify="true" netlify-honeypot="bot-field">
 <input type="hidden" name="form-name" value="contact"/>
 <p class="contact-hide"><label>Do not fill this out: <input name="bot-field"/></label></p>
 <label for="cName">Your name</label>
@@ -1210,6 +1209,5 @@ footer.footer {
 <li><a href="index.html#resources">Resources</a></li>
 </ul></div>
 </footer>
-<script>try{if(/[?&]sent=1/.test(location.search)){var e=document.getElementById("contactThanks");if(e){e.hidden=false;}}}catch(x){}</script>
 </body>
 </html>

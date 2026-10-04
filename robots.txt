@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.edusambam.com/index.html
+Sitemap: https://edusambam.com/sitemap.xml
