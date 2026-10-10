@@ -1,0 +1,1774 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<!-- Google Analytics 4 — EDUSAMBAM -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Y35DW0V4HQ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-Y35DW0V4HQ');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Networks and Databases: Sharing and Storing Data — EDUSAMBAM</title>
+<link href="https://edusambam.com/networks-and-databases-explained.html" rel="canonical"/>
+<meta content="Understand computer networks and databases: LANs and WANs, routers, IP addresses, packets, tables, keys and SQL, and how websites use both together." name="description"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<meta content="EDUSAMBAM Editorial Team" name="author"/>
+<meta content="computer networks, databases, LAN WAN, router and switch, IP address, DNS, packets and protocols, SQL basics, primary key foreign key, network security" name="keywords"/>
+<meta content="Networks and Databases: Sharing and Storing Data — EDUSAMBAM" property="og:title"/>
+<meta content="Understand computer networks and databases: LANs and WANs, routers, IP addresses, packets, tables, keys and SQL, and how websites use both together." property="og:description"/>
+<meta content="https://edusambam.com/og-image.jpg" property="og:image"/>
+<meta content="https://edusambam.com/networks-and-databases-explained.html" property="og:url"/>
+<meta content="article" property="og:type"/>
+<meta content="EDUSAMBAM" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="2026-10-05" property="article:published_time"/>
+<meta content="Computer" property="article:section"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Networks and Databases: Sharing and Storing Data — EDUSAMBAM" name="twitter:title"/>
+<meta content="Understand computer networks and databases: LANs and WANs, routers, IP addresses, packets, tables, keys and SQL, and how websites use both together." name="twitter:description"/>
+<meta content="https://edusambam.com/og-image.jpg" name="twitter:image"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Networks and Databases: Sharing and Storing Data",
+ "description": "Understand computer networks and databases: LANs and WANs, routers, IP addresses, packets, tables, keys and SQL, and how websites use both together.",
+ "image": "https://edusambam.com/og-image.jpg",
+ "datePublished": "2026-10-05",
+ "dateModified": "2026-10-05",
+ "inLanguage": "en",
+ "isAccessibleForFree": true,
+ "articleSection": "Computer",
+ "wordCount": 3158,
+ "keywords": [
+  "computer networks",
+  "databases",
+  "LAN WAN",
+  "router and switch",
+  "IP address",
+  "DNS",
+  "packets and protocols",
+  "SQL basics",
+  "primary key foreign key",
+  "network security"
+ ],
+ "author": {
+  "@type": "Organization",
+  "name": "EDUSAMBAM Editorial Team",
+  "url": "https://edusambam.com/"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "EDUSAMBAM",
+  "url": "https://edusambam.com/",
+  "logo": {
+   "@type": "ImageObject",
+   "url": "https://edusambam.com/logo-icon-full.png"
+  }
+ },
+ "mainEntityOfPage": {
+  "@type": "WebPage",
+  "@id": "https://edusambam.com/networks-and-databases-explained.html"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Gateway",
+   "item": "https://edusambam.com/#gateway"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Computer",
+   "item": "https://edusambam.com/#subject-computer"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Networks and Databases",
+   "item": "https://edusambam.com/networks-and-databases-explained.html"
+  }
+ ]
+}
+</script>
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --red: #0b4ea2;
+    --red-mid: #0b55a5;
+    --red-lt:    #eef5fc;
+    --navy:      #06244a;
+    --navy-mid:  #0b4ea2;
+    --gold:      #d4a017;
+    --gold-lt:   #fff7dc;
+    --cream:     #f7faff;
+    --white:     #FFFFFF;
+    --ink:       #142033;
+    --slate:     #607086;
+    --muted:     #607086;
+    --border:    #dce7f4;
+    --border-lt: #eef5fc;
+    --radius:    4px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--ink);
+    background: var(--white);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── TOP BAR ── */
+  .top-bar {
+    background: var(--navy);
+    padding: 0.45rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .top-bar p {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.03em;
+  }
+  .top-bar-links { display: flex; gap: 1.5rem; list-style: none; }
+  .top-bar-links a {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+  .top-bar-links a:hover { color: white; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 200;
+    background: var(--navy);
+    border-bottom: 3px solid var(--red);
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  }
+  .nav-brand { display: flex; flex-direction: column; line-height: 1; text-decoration: none; }
+  .nav-brand-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 0.01em;
+  }
+  .nav-brand-name span { color: var(--red); }
+  .nav-brand-sub {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.65);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 0.25rem;
+  }
+  .nav-links { display: flex; gap: 0; list-style: none; }
+  .nav-links a {
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.75);
+    padding: 0 1.1rem;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: white; }
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+  }
+
+  /* ── DIAGRAM BOX (for CSS/SVG illustrations) ── */
+  .diagram-box {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin: 1.5rem 0 2rem;
+    text-align: center;
+  }
+  .diagram-box svg { max-width: 100%; height: auto; }
+  .diagram-caption {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 0.8rem;
+    font-style: italic;
+  }
+  .bar-chart { display: flex; align-items: flex-end; gap: 0.9rem; height: 180px; padding: 0 0.5rem; justify-content: center; }
+  .bar-chart .bar-col { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; width: 60px; }
+  .bar-chart .bar { width: 100%; background: var(--gold); border-radius: 3px 3px 0 0; position: relative; }
+  .bar-chart .bar.red { background: var(--red); }
+  .bar-chart .bar-val { font-size: 0.75rem; font-weight: 600; color: var(--ink); margin-bottom: 0.3rem; }
+  .bar-chart .bar-label { font-size: 0.72rem; color: var(--slate); margin-top: 0.5rem; text-align: center; }
+
+  /* ── ARTICLE HERO ── */
+  .article-hero {
+    background: linear-gradient(135deg,#06244a,#0b4ea2);
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+  }
+  .breadcrumb {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 1.1rem;
+    letter-spacing: 0.02em;
+  }
+  .breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--gold); }
+  .article-hero-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(184,150,62,0.4);
+    padding: 0.35rem 0.9rem;
+    border-radius: 30px;
+    margin-bottom: 1.25rem;
+  }
+  .article-hero h1 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 2.4rem;
+    color: white;
+    max-width: 760px;
+    margin: 0 auto 1rem;
+    line-height: 1.25;
+  }
+  .article-hero p.sub {
+    color: rgba(255,255,255,0.6);
+    max-width: 620px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.02rem;
+  }
+  .article-hero-meta {
+    display: flex; justify-content: center; gap: 0.9rem;
+    font-size: 0.8rem; color: rgba(255,255,255,0.45);
+    flex-wrap: wrap;
+  }
+
+  /* ── ARTICLE BODY ── */
+  .article-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+  .article-wrap h2 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 1.65rem;
+    color: var(--navy);
+    margin: 2.6rem 0 1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--border-lt);
+  }
+  .article-wrap h2 span.num {
+    color: var(--red);
+    margin-right: 0.5rem;
+    font-style: italic;
+  }
+  .article-wrap p { color: var(--slate); margin-bottom: 1rem; font-size: 1.02rem; }
+  .article-wrap ul { margin: 0 0 1.2rem 1.4rem; color: var(--slate); }
+  .article-wrap li { margin-bottom: 0.5rem; }
+  .article-wrap strong { color: var(--ink); }
+  .lead {
+    font-size: 1.15rem;
+    color: var(--ink);
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    border-left: 3px solid var(--gold);
+    padding-left: 1.2rem;
+    margin: 1.5rem 0 2rem;
+  }
+  .example-box {
+    background: var(--gold-lt);
+    border: 1px solid rgba(184,150,62,0.35);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 1.3rem 1.5rem;
+    margin: 1.3rem 0 1.8rem;
+  }
+  .example-box .ex-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.5rem;
+  }
+  .example-box p { color: var(--ink); margin-bottom: 0.4rem; font-size: 0.98rem; }
+  .example-box p:last-child { margin-bottom: 0; }
+
+  .real-world-box {
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 1.6rem 1.7rem;
+    margin: 2.4rem 0;
+  }
+  .real-world-box .rw-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.7rem;
+  }
+  .real-world-box p { color: rgba(255,255,255,0.8); margin-bottom: 0; font-size: 1rem; }
+
+  .further-reading-box {
+    background: var(--cream);
+    border: 1px solid rgba(184,150,62,0.35);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.5rem;
+    margin: 2.4rem 0;
+  }
+  .further-reading-box .fr-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.7rem;
+  }
+  .further-reading-box ul {
+    list-style: none;
+    margin: 0;
+  }
+  .further-reading-box li {
+    margin-bottom: 0.5rem;
+    font-size: 0.82rem;
+  }
+  .further-reading-box li:last-child { margin-bottom: 0; }
+  .further-reading-box a {
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 0.82rem;
+    border-bottom: 1px solid rgba(184,150,62,0.3);
+    transition: border-color 0.2s;
+  }
+  .further-reading-box a:hover { border-color: var(--gold); }
+  .further-reading-box .fr-source {
+    color: var(--muted);
+    font-size: 0.78rem;
+  }
+
+
+
+  .table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+  table.pos-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+  table.pos-table th {
+    background: var(--navy);
+    color: white;
+    text-align: left;
+    padding: 0.7rem 0.9rem;
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+  }
+  table.pos-table td {
+    padding: 0.7rem 0.9rem;
+    border-bottom: 1px solid var(--border-lt);
+    color: var(--slate);
+  }
+  table.pos-table tr:nth-child(even) td { background: var(--cream); }
+
+  /* ── QUIZ ── */
+  .quiz-section {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem 1.7rem 1.5rem;
+    margin-top: 3rem;
+  }
+  .quiz-section .section-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.4rem;
+  }
+  .quiz-section h2 {
+    border: none; margin: 0 0 0.4rem; padding: 0;
+  }
+  .quiz-intro { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.6rem; }
+  .quiz-item {
+    background: var(--white);
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .quiz-q {
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.7rem;
+    font-size: 1rem;
+  }
+  .quiz-q .qnum { color: var(--red); margin-right: 0.4rem; }
+  .quiz-options { list-style: none; margin: 0 0 0.9rem; }
+  .quiz-options li {
+    padding: 0.4rem 0;
+    color: var(--slate);
+    font-size: 0.96rem;
+    padding-left: 1.4rem;
+    position: relative;
+  }
+  .quiz-options li::before {
+    content: "";
+    position: absolute; left: 0; top: 0.85rem;
+    width: 6px; height: 6px;
+    background: var(--border);
+    border-radius: 50%;
+  }
+  .show-answer-btn {
+    background: var(--navy);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 0.5rem 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .show-answer-btn:hover { background: var(--navy-mid); }
+  .quiz-answer {
+    display: none;
+    margin-top: 0.9rem;
+    background: var(--gold-lt);
+    border-left: 3px solid var(--gold);
+    padding: 0.7rem 1rem;
+    font-size: 0.92rem;
+    color: var(--ink);
+    border-radius: var(--radius);
+  }
+  .quiz-answer.visible { display: block; }
+  .quiz-answer strong { color: var(--red); }
+
+  .answer-key-toggle {
+    display: block;
+    width: 100%;
+    background: var(--red);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding: 0.9rem 1rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    margin-top: 0.6rem;
+    transition: background 0.2s;
+  }
+  .answer-key-toggle:hover { background: var(--red-mid); }
+
+  .article-footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-lt);
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .article-footer-nav a {
+    text-decoration: none;
+    color: var(--red);
+    font-weight: 600;
+    font-size: 0.92rem;
+  }
+  .article-footer-nav a:hover { text-decoration: underline; }
+
+  @media (max-width: 700px) {
+    .article-hero h1 { font-size: 1.7rem; }
+    .article-wrap { padding: 2rem 1.25rem 3rem; }
+  }
+  @media (max-width: 680px) {
+    .top-bar { display: none; }
+    nav {
+      padding: 0 1rem;
+      height: 68px;
+      border-bottom-width: 2px;
+    }
+    .nav-links { display: none; }
+    .nav-brand-name {
+      font-size: 1.35rem;
+      white-space: nowrap;
+    }
+    .nav-brand-sub {
+      font-size: 0.62rem;
+      letter-spacing: 0.07em;
+    }
+    .footer-top { grid-template-columns: 1fr; gap: 2rem; padding: 2rem 1.25rem; }
+    footer { padding: 2rem 1.25rem 0; }
+  }
+
+  /* ── FOOTER (copied from site) ── */
+  footer { background: var(--navy); padding: 3.5rem 3rem 0; }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 2.5rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .footer-brand-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+  }
+  .footer-brand-name span { color: var(--red); }
+  .footer-desc { color: rgba(255,255,255,0.45); font-size: 0.9rem; margin-top: 0.8rem; max-width: 320px; }
+  .footer-col h4 {
+    font-family: 'EB Garamond', serif;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 0.7rem; }
+  .footer-col a {
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.2s;
+  }
+  .footer-col a:hover { color: var(--gold); }
+  .footer-bottom {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer-bottom p { color: rgba(255,255,255,0.35); font-size: 0.8rem; }
+  .footer-bottom-links { display: flex; gap: 1.3rem; list-style: none; }
+  .footer-bottom-links a { color: rgba(255,255,255,0.35); text-decoration: none; font-size: 0.8rem; }
+  .footer-bottom-links a:hover { color: rgba(255,255,255,0.6); }
+  @media (max-width: 900px) {
+    .footer-top { grid-template-columns: 1fr 1fr; }
+    footer { padding: 2rem 1.25rem 0; }
+  }
+
+  /* SCORED QUIZ (click-to-highlight + real scoring) */
+  .squiz-progress {
+    background: var(--cream);
+    border-radius: 30px;
+    height: 8px;
+    overflow: hidden;
+    margin-bottom: 0.4rem;
+  }
+  .squiz-progress-fill {
+    background: var(--gold);
+    height: 100%;
+    width: 0%;
+    transition: width 0.25s ease;
+  }
+  .squiz-progress-label {
+    font-size: 0.78rem;
+    color: var(--muted);
+    text-align: right;
+    margin-bottom: 1.3rem;
+  }
+  .squiz-item {
+    background: var(--white);
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .squiz-q {
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+  }
+  .squiz-q .qnum { color: var(--red); margin-right: 0.4rem; }
+  .squiz-option {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .squiz-option:hover { border-color: var(--gold); }
+  .squiz-option input[type="radio"] { accent-color: var(--red); width: 16px; height: 16px; flex-shrink: 0; }
+  .squiz-option label { cursor: pointer; font-size: 0.94rem; color: var(--slate); flex: 1; }
+  .squiz-option.selected { border-color: var(--red); background: rgba(139,0,0,0.04); }
+  .squiz-option.correct-answer { border-color: #2e7d32; background: rgba(46,125,50,0.08); }
+  .squiz-option.wrong-answer { border-color: var(--red); background: rgba(139,0,0,0.08); }
+  .squiz-submit-btn {
+    display: block;
+    width: 100%;
+    background: var(--red);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.98rem;
+    font-weight: 600;
+    padding: 0.9rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    margin-top: 0.6rem;
+    transition: background 0.2s;
+  }
+  .squiz-submit-btn:hover { background: var(--red-mid); }
+  .squiz-submit-btn:disabled { background: var(--border); cursor: not-allowed; }
+  .squiz-results {
+    display: none;
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 2rem 1.6rem;
+    text-align: center;
+    margin-bottom: 1.8rem;
+  }
+  .squiz-results.visible { display: block; }
+  .squiz-results .squiz-score-big {
+    font-family: 'EB Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .squiz-results .squiz-score-label { color: rgba(255,255,255,0.7); font-size: 0.98rem; margin-bottom: 1rem; }
+  .squiz-results .squiz-score-tier {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    border-radius: 30px;
+    background: rgba(184,150,62,0.15);
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+  }
+  .squiz-retake-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 0.65rem 1.4rem;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  .squiz-retake-btn:hover { background: rgba(255,255,255,0.1); }
+</style>
+<style id="edusambam-mark-style">
+.mark{width:48px;height:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px;border-radius:14px;background:#eef6ff;box-shadow:0 2px 7px rgba(8,47,99,.10);flex:0 0 48px}
+.mark i{display:block;border-radius:50%;background:#0b4ea2;min-width:0;min-height:0}
+.mark i:nth-child(5){background:#d4a017}
+</style>
+<style id="edusambam-reader-style">
+.mark{width:48px;height:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px;border-radius:14px;background:#eef6ff;box-shadow:0 2px 7px rgba(8,47,99,.10);flex:0 0 48px}.mark i{display:block;border-radius:50%;background:#0b4ea2;min-width:0;min-height:0}.mark i:nth-child(5){background:#d4a017}.edusambam-reader{max-width:980px;margin:1.2rem auto 0;padding:1rem 1.1rem;border:1px solid #d7e4ef;border-radius:14px;background:linear-gradient(135deg,#f7fbff,#fff);box-shadow:0 6px 18px rgba(11,45,92,.08)}.edusambam-reader strong{display:block;color:#0b55a5;font-size:.9rem;letter-spacing:.04em}.edusambam-reader .reader-slogan{color:#a87900;font-weight:900;margin-top:.25rem;font-size:.82rem}.edusambam-reader .reader-help{color:#607086;font-size:.8rem;margin:.3rem 0 .7rem}.edusambam-reader .reader-controls{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}.edusambam-reader button,.edusambam-reader select{border:1px solid #c9d9e8;background:#fff;color:#153b6e;border-radius:8px;padding:.48rem .65rem;font-weight:800;cursor:pointer}.edusambam-reader button:first-child{background:#0b55a5;color:#fff;border-color:#0b55a5}.edusambam-reader .reader-status{display:block;color:#607086;font-size:.75rem;margin-top:.55rem}.edusambam-reader .reader-progress{height:4px;background:#e4edf6;border-radius:99px;margin-top:.6rem;overflow:hidden}.edusambam-reader .reader-progress span{display:block;width:0;height:100%;background:#d4a017;transition:width .2s linear}@media(max-width:600px){.edusambam-reader{margin-left:0;margin-right:0}.edusambam-reader .reader-controls button,.edusambam-reader .reader-controls select{flex:1;min-width:75px}}
+</style>
+<style id="edusambam-frame-final">html{box-sizing:border-box;max-width:100%;overflow-x:hidden}*,*:before,*:after{box-sizing:inherit}body{max-width:100%;min-width:0;overflow-x:hidden;border:3px solid #d4a017;box-sizing:border-box}img,svg,video,iframe{max-width:100%;height:auto}h1,h2,h3,h4,p,a,span,small,b,strong{overflow-wrap:anywhere}section,header,footer,main,nav{max-width:100%;box-sizing:border-box}@media(max-width:600px){body{border-width:3px}h1,h2,h3{margin-left:0!important;margin-right:0!important}}</style><style id="edusambam-unified-nav-css">
+/* EDUSAMBAM unified navigation */
+.edusambam-nav{
+  position:sticky;top:0;z-index:10000;
+  min-height:72px;box-sizing:border-box;
+  display:flex;align-items:center;
+  padding:10px 20px;
+  background:#fff;border-bottom:1px solid #e5e7eb;
+  font-family:inherit;
+}
+.edusambam-nav-inner{
+  width:100%;max-width:1400px;margin:0 auto;
+  display:flex;align-items:center;gap:18px;min-width:0;
+}
+.edusambam-brand{
+  display:flex;align-items:center;gap:10px;min-width:0;
+  text-decoration:none;color:#0b3b66;flex:0 1 auto;
+}
+.edusambam-brand-copy{display:flex;flex-direction:column;line-height:1;min-width:0;overflow:hidden}
+.edusambam-brand-name{
+  font-family:"EB Garamond",Georgia,serif;
+  font-size:1.6rem;font-weight:600;letter-spacing:.01em;
+  color:#0b3b66;white-space:nowrap;
+}
+.edusambam-brand-subtitle{
+  margin-top:4px;
+  font-size:.62rem;font-weight:600;letter-spacing:.08em;
+  color:#64748b;white-space:nowrap;
+}
+.edusambam-nav-links{
+  display:flex;align-items:center;gap:14px;margin-left:auto;
+  list-style:none;padding:0;margin-top:0;margin-bottom:0;
+}
+.edusambam-nav-links a{
+  color:#334155;text-decoration:none;font-size:.9rem;
+  padding:8px 5px;border-radius:7px;white-space:nowrap;
+}
+.edusambam-nav-links a:hover,.edusambam-nav-links a:focus-visible{
+  color:#0b3b66;background:#f3f6f9;outline:none;
+}
+.edusambam-search-btn,.edusambam-menu-btn{
+  appearance:none;border:1px solid #d8dee6;background:#fff;
+  color:#0b3b66;border-radius:9px;min-width:40px;height:40px;
+  display:inline-flex;align-items:center;justify-content:center;
+  cursor:pointer;font-size:1.15rem;flex:0 0 auto;
+}
+.edusambam-search-btn:hover,.edusambam-menu-btn:hover,
+.edusambam-search-btn:focus-visible,.edusambam-menu-btn:focus-visible{
+  background:#f3f6f9;border-color:#b9c6d4;outline:2px solid rgba(214,162,58,.35);
+  outline-offset:2px;
+}
+.edusambam-menu-btn{display:none;font-size:1.2rem}
+.edusambam-mobile-menu{
+  display:none;position:fixed;top:72px;left:0;right:0;
+  z-index:9999;background:#fff;border-bottom:1px solid #e5e7eb;
+  box-shadow:0 8px 24px rgba(15,23,42,.12);
+  max-height:calc(100vh - 72px);overflow:auto;
+}
+.edusambam-mobile-menu.open{display:block}
+.edusambam-mobile-menu ul{list-style:none;margin:0;padding:10px 16px 16px}
+.edusambam-mobile-menu a{
+  display:block;padding:12px 10px;color:#0b3b66;text-decoration:none;
+  border-radius:8px;font-size:.98rem;
+}
+.edusambam-mobile-menu a:hover,.edusambam-mobile-menu a:focus-visible{
+  background:#f3f6f9;outline:none;
+}
+.edusambam-search-panel{
+  display:none;position:fixed;top:72px;left:0;right:0;z-index:9998;
+  background:#fff;border-bottom:1px solid #e5e7eb;
+  box-shadow:0 8px 24px rgba(15,23,42,.10);padding:12px 16px;
+}
+.edusambam-search-panel.open{display:block}
+.edusambam-search-wrap{max-width:900px;margin:0 auto;position:relative}
+.edusambam-search-input{
+  width:100%;box-sizing:border-box;padding:12px 14px;
+  border:1px solid #cbd5e1;border-radius:9px;font-size:1rem;
+}
+.edusambam-search-results{margin-top:8px;max-height:50vh;overflow:auto}
+.edusambam-search-results a{
+  display:block;padding:9px 10px;border-radius:7px;color:#0b3b66;text-decoration:none;
+}
+.edusambam-search-results a:hover{background:#f3f6f9}
+@media (max-width:1100px){
+  .edusambam-nav-links{gap:8px}
+  .edusambam-nav-links a{font-size:.84rem;padding-inline:3px}
+}
+@media (max-width:1100px){
+  .edusambam-nav{min-height:68px;padding:8px 14px}
+  .edusambam-brand-mark{width:44px;height:44px;flex-basis:44px}
+  .edusambam-brand-mark span{width:12px;height:12px}
+  .edusambam-brand-mark .c3,.edusambam-brand-mark .c6{left:16px}
+  .edusambam-brand-name{font-size:1.42rem}
+  .edusambam-brand-subtitle{font-size:.52rem;letter-spacing:.06em}
+  .edusambam-nav-links{display:none}
+  .edusambam-menu-btn{display:inline-flex}
+  .edusambam-search-btn{margin-left:auto}
+  .edusambam-mobile-menu{top:68px;max-height:calc(100vh - 68px)}
+  .edusambam-search-panel{top:68px}
+}
+@media (max-width:480px){
+  .edusambam-nav-inner{gap:8px}
+  .edusambam-brand{gap:7px}
+  .edusambam-brand-mark{width:40px;height:40px;flex-basis:40px}
+  .edusambam-brand-mark span{width:11px;height:11px}
+  .edusambam-brand-mark .c3,.edusambam-brand-mark .c6{left:14.5px}
+  .edusambam-brand-name{font-size:1.28rem}
+  .edusambam-brand-subtitle{font-size:.46rem;letter-spacing:.045em}
+  .edusambam-search-btn,.edusambam-menu-btn{min-width:38px;height:38px}
+}
+</style><style id="edusambam-logo-visibility-fix">
+/* EDUSAMBAM logo visibility fix */
+.edusambam-brand-mark{
+  position:relative !important;
+  display:inline-block !important;
+  width:48px !important;
+  height:48px !important;
+  min-width:48px !important;
+  flex:0 0 48px !important;
+  overflow:visible !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+.edusambam-brand-mark > span{
+  position:absolute !important;
+  display:block !important;
+  width:13px !important;
+  height:13px !important;
+  min-width:13px !important;
+  min-height:13px !important;
+  padding:0 !important;
+  margin:0 !important;
+  border:0 !important;
+  border-radius:50% !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  box-sizing:border-box !important;
+}
+.edusambam-brand-mark > .c1{left:0 !important;top:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c2{right:0 !important;top:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c3{left:17.5px !important;top:8px !important;background:#d6a23a !important;}
+.edusambam-brand-mark > .c4{left:0 !important;bottom:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c5{right:0 !important;bottom:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c6{left:17.5px !important;bottom:8px !important;background:#d6a23a !important;}
+
+@media (max-width:1100px){
+  .edusambam-brand-mark{
+    width:44px !important;height:44px !important;min-width:44px !important;flex-basis:44px !important;
+  }
+  .edusambam-brand-mark > span{
+    width:12px !important;height:12px !important;min-width:12px !important;min-height:12px !important;
+  }
+  .edusambam-brand-mark > .c3,.edusambam-brand-mark > .c6{left:16px !important;}
+}
+@media (max-width:480px){
+  .edusambam-brand-mark{
+    width:40px !important;height:40px !important;min-width:40px !important;flex-basis:40px !important;
+  }
+  .edusambam-brand-mark > span{
+    width:11px !important;height:11px !important;min-width:11px !important;min-height:11px !important;
+  }
+  .edusambam-brand-mark > .c3,.edusambam-brand-mark > .c6{left:14.5px !important;}
+}
+</style>
+<link href="favicon.webp" rel="icon" type="image/webp"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<style id="edusambam-menu-extra-css">
+.edusambam-mobile-menu .edusambam-menu-extra:first-of-type{
+  margin-top:8px;padding-top:8px;border-top:1px solid #e5e7eb;
+}
+.edusambam-mobile-menu .edusambam-menu-extra a{
+  font-weight:600;
+}
+</style>
+<style id="edusambam-article-footer-theme">
+.edusambam-article-footer{
+  background:linear-gradient(135deg,#06244a,#0b4ea2)!important;
+}
+</style>
+<style id="edusambam-unified-footer-fix">
+/* EDUSAMBAM unified footer: same visual language and neutral brand statement across all pages. */
+.edusambam-unified-footer,
+.edusambam-article-footer,
+footer.footer {
+  background: linear-gradient(135deg, #06244a, #0b4ea2) !important;
+  color: #fff !important;
+  border-top: 3px solid #d4a017 !important;
+  box-sizing: border-box;
+}
+.edusambam-footer-statement{margin:.25rem 0 0 !important;color:rgba(255,255,255,.88) !important;font-size:.78rem !important;letter-spacing:.08em !important;text-transform:uppercase !important}
+.edusambam-unified-footer .footer-brand-name,.edusambam-article-footer .footer-brand-name{color:#fff !important}
+</style>
+<style id="edusambam-final-unified-footer">
+/* Final unified footer — same structure, visual language, and approved nav logo on every page. */
+.edusambam-unified-footer{
+  width:100% !important;
+  margin:0 !important;
+  padding:44px 0 0 !important;
+  background:linear-gradient(135deg,#06244a,#0b4ea2) !important;
+  color:#d6e4f2 !important;
+  border-top:4px solid #d4a017 !important;
+  box-sizing:border-box !important;
+  overflow:hidden !important;
+}
+.edusambam-unified-footer .footer-top{
+  width:min(1180px,92%) !important;
+  max-width:1180px !important;
+  margin:0 auto !important;
+  padding:0 0 34px !important;
+  display:grid !important;
+  grid-template-columns:1.5fr repeat(3,1fr) !important;
+  gap:34px !important;
+  box-sizing:border-box !important;
+}
+.edusambam-unified-footer .footer-brand{min-width:0 !important;}
+.edusambam-footer-brand-row{margin:0 0 10px !important;}
+.edusambam-footer-logo-link{
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:12px !important;
+  min-width:0 !important;
+  color:#fff !important;
+  text-decoration:none !important;
+}
+.edusambam-footer-logo{
+  width:48px !important;
+  height:48px !important;
+  min-width:48px !important;
+  flex:0 0 48px !important;
+}
+.edusambam-footer-logo > span{width:13px !important;height:13px !important;min-width:13px !important;min-height:13px !important;}
+.edusambam-footer-logo > .c3,.edusambam-footer-logo > .c6{left:17.5px !important;}
+.edusambam-footer-brand-name{
+  color:#fff !important;
+  font-family:"EB Garamond",Georgia,serif !important;
+  font-size:1.65rem !important;
+  font-weight:600 !important;
+  letter-spacing:.01em !important;
+  line-height:1 !important;
+  white-space:nowrap !important;
+}
+.edusambam-unified-footer .edusambam-footer-statement{
+  margin:0 !important;
+  max-width:360px !important;
+  color:rgba(255,255,255,.88) !important;
+  font-size:.78rem !important;
+  line-height:1.7 !important;
+  letter-spacing:.08em !important;
+  text-transform:uppercase !important;
+}
+.edusambam-unified-footer .footer-col{min-width:0 !important;}
+.edusambam-unified-footer .footer-col h4{
+  margin:0 0 12px !important;
+  color:#fff !important;
+  font-family:"EB Garamond",Georgia,serif !important;
+  font-size:1rem !important;
+  font-weight:600 !important;
+  line-height:1.25 !important;
+}
+.edusambam-unified-footer .footer-col ul{
+  list-style:none !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+.edusambam-unified-footer .footer-col li{margin:0 0 8px !important;padding:0 !important;}
+.edusambam-unified-footer .footer-col a{
+  color:rgba(255,255,255,.68) !important;
+  text-decoration:none !important;
+  font-size:.84rem !important;
+  line-height:1.5 !important;
+  overflow-wrap:anywhere !important;
+}
+.edusambam-unified-footer .footer-col a:hover,
+.edusambam-unified-footer .footer-col a:focus-visible{color:#fff !important;}
+.edusambam-unified-footer .footer-bottom{
+  width:min(1180px,92%) !important;
+  max-width:1180px !important;
+  margin:0 auto !important;
+  padding:18px 0 22px !important;
+  border-top:1px solid rgba(255,255,255,.12) !important;
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:center !important;
+  gap:20px !important;
+  box-sizing:border-box !important;
+}
+.edusambam-unified-footer .footer-bottom p{
+  margin:0 !important;
+  color:rgba(255,255,255,.55) !important;
+  font-size:.8rem !important;
+  line-height:1.5 !important;
+}
+.edusambam-unified-footer .footer-bottom-links{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:18px !important;
+  list-style:none !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+.edusambam-unified-footer .footer-bottom-links a{
+  color:rgba(255,255,255,.55) !important;
+  font-size:.78rem !important;
+  line-height:1.5 !important;
+  text-decoration:none !important;
+}
+.edusambam-unified-footer .footer-bottom-links a:hover,
+.edusambam-unified-footer .footer-bottom-links a:focus-visible{color:#fff !important;}
+@media(max-width:900px){
+  .edusambam-unified-footer{padding-top:32px !important;}
+  .edusambam-unified-footer .footer-top{grid-template-columns:1fr 1fr !important;gap:28px 22px !important;}
+  .edusambam-unified-footer .footer-brand{grid-column:1/-1 !important;}
+}
+@media(max-width:600px){
+  .edusambam-unified-footer{padding-top:30px !important;}
+  .edusambam-unified-footer .footer-top{width:calc(100% - 28px) !important;grid-template-columns:1fr 1fr !important;gap:26px 20px !important;padding-bottom:28px !important;}
+  .edusambam-unified-footer .footer-bottom{width:calc(100% - 28px) !important;display:block !important;padding:16px 0 20px !important;}
+  .edusambam-unified-footer .footer-bottom-links{margin-top:10px !important;gap:16px !important;}
+  .edusambam-footer-logo{width:44px !important;height:44px !important;min-width:44px !important;flex-basis:44px !important;}
+  .edusambam-footer-logo > span{width:12px !important;height:12px !important;min-width:12px !important;min-height:12px !important;}
+  .edusambam-footer-logo > .c3,.edusambam-footer-logo > .c6{left:16px !important;}
+  .edusambam-footer-brand-name{font-size:1.48rem !important;}
+}
+@media(max-width:430px){
+  .edusambam-unified-footer .footer-top{grid-template-columns:1fr !important;gap:22px !important;}
+  .edusambam-unified-footer .footer-brand{grid-column:auto !important;}
+}
+</style>
+<style id="edusambam-footer-final-alignment">
+/* Final EDUSAMBAM footer consistency pass: identical royal-blue footer and left alignment on every page. */
+.edusambam-unified-footer {
+  background: linear-gradient(135deg,#06244a,#0b4ea2) !important;
+  color:#d6e4f2 !important;
+  text-align:left !important;
+  width:100% !important;
+  box-sizing:border-box !important;
+}
+.edusambam-unified-footer,
+.edusambam-unified-footer *,
+.edusambam-unified-footer h1,
+.edusambam-unified-footer h2,
+.edusambam-unified-footer h3,
+.edusambam-unified-footer h4,
+.edusambam-unified-footer p,
+.edusambam-unified-footer ul,
+.edusambam-unified-footer li,
+.edusambam-unified-footer a,
+.edusambam-unified-footer span {
+  text-align:left !important;
+}
+.edusambam-unified-footer .footer-top,
+.edusambam-unified-footer .footer-brand,
+.edusambam-unified-footer .footer-col,
+.edusambam-unified-footer .footer-bottom {
+  margin-left:0 !important;
+}
+.edusambam-unified-footer .footer-top {
+  margin-right:auto !important;
+}
+.edusambam-unified-footer .edusambam-footer-brand-row {
+  text-align:left !important;
+}
+.edusambam-unified-footer .edusambam-footer-logo-link {
+  justify-content:flex-start !important;
+  text-align:left !important;
+}
+.edusambam-unified-footer .footer-bottom {
+  justify-content:flex-start !important;
+  align-items:flex-start !important;
+  flex-direction:column !important;
+}
+.edusambam-unified-footer .footer-bottom-links {
+  justify-content:flex-start !important;
+  align-items:flex-start !important;
+}
+@media (max-width:600px) {
+  .edusambam-unified-footer .footer-top,
+  .edusambam-unified-footer .footer-bottom {
+    margin-left:0 !important;
+    margin-right:auto !important;
+  }
+}
+</style><style id="edusambam-footer-social-css">.edusambam-footer-social{margin-top:14px}.edusambam-footer-social a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);color:rgba(255,255,255,.85);transition:background .15s,color .15s}.edusambam-footer-social a:hover{background:rgba(255,255,255,.22);color:#fff}</style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2230995786427221"
+     crossorigin="anonymous"></script>
+<style id="edusambam-article-list-fix">.article-wrap ol{margin:0 0 1.2rem 1.4rem;color:var(--slate)}.article-wrap li{font-size:1.02rem}.article-wrap h3{margin:1.4rem 0 .5rem}.article-wrap p a,.article-wrap li a{color:var(--navy-mid);text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:3px}.article-wrap p a:hover,.article-wrap li a:hover{color:var(--navy)}.article-wrap code{background:var(--red-lt);color:var(--navy);padding:1px 5px;border-radius:3px;font-size:.92em}.example-box code{background:rgba(255,255,255,.65)}</style>
+</head>
+<body id="top">
+<!-- TOP BAR -->
+<div class="top-bar">
+<p>Established 2026  ·  Free Educational Resources for All</p>
+<ul class="top-bar-links">
+<li><a href="contact.html">Contact</a></li><li><a href="index.html#about-edusambam">About</a></li><li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+</ul>
+</div>
+<!-- NAV -->
+<nav aria-label="Primary navigation" class="edusambam-nav">
+<div class="edusambam-nav-inner">
+<a aria-label="EDUSAMBAM home" class="edusambam-brand" href="index.html">
+<img alt="EDUSAMBAM" class="edusambam-brand-mark" src="logo-icon-full.png" style="width:auto;height:56px;max-width:220px;object-fit:contain;background:none;border-radius:0;flex-basis:auto;"/>
+<span class="edusambam-brand-copy">
+<span class="edusambam-brand-subtitle">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</span>
+</span>
+</a>
+<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li></ul>
+<button aria-label="Search" class="edusambam-search-btn" title="Search" type="button">⌕</button>
+<button aria-expanded="false" aria-label="Open menu" class="edusambam-menu-btn" title="Menu" type="button">☰</button>
+</div>
+</nav>
+<div aria-label="Mobile navigation" class="edusambam-mobile-menu">
+<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="assessment-arena.html">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="index.html#about-edusambam">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
+</div>
+<div aria-label="Site search" class="edusambam-search-panel">
+<div class="edusambam-search-wrap">
+<input aria-label="Search EDUSAMBAM" class="edusambam-search-input" placeholder="Search EDUSAMBAM…" type="search"/>
+<div class="edusambam-search-results"></div>
+</div>
+</div>
+<!-- ARTICLE HERO -->
+<div class="article-hero">
+<div class="breadcrumb"><a href="index.html#gateway">Gateway</a>  /  <a href="index.html#subject-computer">Computer</a>  /  Networks and Databases</div>
+<div class="article-hero-tag">Computer · Networks &amp; Data</div>
+<h1>Networks and Databases: Sharing and Storing Data</h1>
+<p class="sub">A network carries data and a database stores it. Learn how devices connect, how data travels in packets, how tables and keys organise information, and how both work together every time you use a website.</p>
+<div class="article-hero-meta">
+<span>EDUSAMBAM Editorial Team</span>
+<span>|</span>
+<span>22 min read</span>
+<span>|</span>
+<span>Computer</span>
+</div>
+</div>
+<!-- ARTICLE BODY -->
+<div aria-label="EDUSAMBAM article reader" class="edusambam-reader"><strong>🔊 LISTEN TO THIS ARTICLE</strong><div class="reader-slogan">SAVE YOUR EYES • IMPROVE YOUR LISTENING</div><div class="reader-help">Listen to the article instead of relying only on continuous screen reading.</div><div class="reader-controls"><button data-reader="play" type="button">▶ Play</button><button data-reader="pause" type="button">⏸ Pause</button><button data-reader="resume" type="button">▶ Resume</button><button data-reader="stop" type="button">■ Stop</button><select aria-label="Reading speed"><option value="1">1×</option><option value="0.8">0.8×</option><option value="1.2">1.2×</option></select></div><div aria-hidden="true" class="reader-progress"><span></span></div><small class="reader-status">Ready to read the article.</small></div>
+<div class="article-wrap">
+<p class="lead">When you send a message, watch a video, pay for something online or check your marks on a school website, two invisible systems are working together. A <strong>network</strong> carries the data from one place to another, and a <strong>database</strong> stores the data in an organised way so that it can be found, changed and protected. Almost every modern service depends on both. This guide explains networks first, then databases, and finally shows how the two work together every time you use an app or a website. Technical words are explained as they appear.</p>
+
+<div class="example-box">
+<div class="ex-label">Key Takeaways</div>
+<p>A network connects devices so they can share data, using addresses, packets and rules called protocols. A database stores data in tables of records, linked by keys, and is searched with a language such as SQL. When you use a website, your device (the client) talks across a network to a server, and the server asks a database for the data you need. Both must be protected with passwords, updates, encryption and backups.</p>
+</div>
+
+<h2><span class="num">1.</span>Part One: Computer Networks</h2>
+<p>A <strong>computer network</strong> is a group of devices, such as computers, phones, printers and servers, that are connected so they can share data and resources. Networks let people share files and printers, send messages, use the same internet connection, and store information in one central place. Without networks, every computer would work alone.</p>
+
+<h2><span class="num">2.</span>Types of Network by Size</h2>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Type</th><th>Area covered</th><th>Example</th></tr>
+<tr><td>PAN<br/>(Personal Area Network)</td><td>A few metres around one person</td><td>A phone connected to wireless earphones</td></tr>
+<tr><td>LAN<br/>(Local Area Network)</td><td>One building or a small group of buildings</td><td>A home, a school or an office network</td></tr>
+<tr><td>WLAN<br/>(Wireless LAN)</td><td>A LAN that uses radio signals (Wi-Fi) instead of cables</td><td>The Wi-Fi in a library</td></tr>
+<tr><td>MAN<br/>(Metropolitan Area Network)</td><td>A town or city</td><td>A city council's connected offices</td></tr>
+<tr><td>WAN<br/>(Wide Area Network)</td><td>Very large areas, even across countries</td><td>A bank linking branches in many cities</td></tr>
+</table>
+</div>
+<p>The <strong>internet</strong> is the largest WAN: a network of networks, connected all over the world. You can read more about it in our article <a href="what-is-the-internet.html">What Is the Internet, Really?</a></p>
+
+<h2><span class="num">3.</span>The Parts of a Network</h2>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Part</th><th>What it does</th></tr>
+<tr><td>Client</td><td>A device that asks for a service, such as your phone or laptop</td></tr>
+<tr><td>Server</td><td>A powerful computer that provides a service, such as storing files or hosting a website</td></tr>
+<tr><td>Network interface card (NIC)</td><td>The part inside a device that lets it connect to a network, by cable or wirelessly</td></tr>
+<tr><td>Switch</td><td>Connects the devices inside one local network and sends data only to the device that needs it</td></tr>
+<tr><td>Router</td><td>Connects different networks, such as your home network and the internet, and decides where data should go</td></tr>
+<tr><td>Modem</td><td>Converts signals so that your network can use the line from your internet service provider</td></tr>
+<tr><td>Wireless access point</td><td>Lets devices connect to the network using Wi-Fi</td></tr>
+</table>
+</div>
+<p>In most homes, the modem, router and wireless access point are combined in one box, which people usually call "the router". It is still helpful to know the three jobs separately.</p>
+<h3>Cables and wireless</h3>
+<p><strong>Ethernet cables</strong> use copper wires and are common inside buildings. <strong>Fibre-optic cables</strong> send data as pulses of light through thin glass threads, and they can carry very large amounts of data over long distances. <strong>Wi-Fi</strong> sends data by radio waves, which is convenient but usually slower and less stable than a cable, and weaker through thick walls.</p>
+
+<h2><span class="num">4.</span>Network Layouts (Topologies)</h2>
+<p>A <strong>topology</strong> is the way the devices of a network are arranged and connected.</p>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Topology</th><th>How it is arranged</th><th>Advantage and disadvantage</th></tr>
+<tr><td>Star</td><td>Every device connects to a central switch</td><td><strong>Plus:</strong> one broken cable affects only one device, and it is easy to add devices. <strong>Minus:</strong> if the central switch fails, the whole network stops.</td></tr>
+<tr><td>Bus</td><td>All devices share one main cable</td><td><strong>Plus:</strong> uses little cable. <strong>Minus:</strong> a fault in the main cable can stop everything.</td></tr>
+<tr><td>Ring</td><td>Each device connects to two neighbours, forming a circle</td><td><strong>Plus:</strong> orderly data flow. <strong>Minus:</strong> a single break can disrupt the ring.</td></tr>
+<tr><td>Mesh</td><td>Devices have many connections to each other</td><td><strong>Plus:</strong> very reliable, with several routes. <strong>Minus:</strong> expensive and complex.</td></tr>
+</table>
+</div>
+<p>Most modern local networks use the <strong>star</strong> layout, with a switch or wireless access point at the centre.</p>
+
+<h2><span class="num">5.</span>Client-Server and Peer-to-Peer</h2>
+<p>In a <strong>client-server</strong> network, clients ask a central server for services, such as files, email or web pages. This makes it easy to manage security and backups in one place. Schools, companies and most websites work this way. In a <strong>peer-to-peer</strong> network, every device can share files directly with the others, with no central server. It is cheap and simple for a few computers, but it is harder to manage and protect when it grows.</p>
+
+<h2><span class="num">6.</span>Addresses and Names</h2>
+<p>For data to arrive at the right place, every device needs an address.</p>
+<ul>
+<li><strong>IP address:</strong> a number that identifies a device on a network. A common form, IPv4, has four numbers from 0 to 255 separated by dots, such as <code>192.168.1.10</code>. This example is from a range reserved for private home and office networks. A newer form, IPv6, is much longer, because the world was running out of IPv4 addresses.</li>
+<li><strong>MAC address:</strong> a unique hardware identifier built into a network card.</li>
+<li><strong>Domain name:</strong> a name that humans can remember, such as a website address, instead of a number.</li>
+<li><strong>DNS (Domain Name System):</strong> the internet's "phone book", which translates a domain name into the IP address of the right server. When you type a web address, a DNS server finds the number for you.</li>
+</ul>
+
+<h2><span class="num">7.</span>How Data Travels: Packets and Protocols</h2>
+<p>Data is not sent as one large piece. It is divided into small units called <strong>packets</strong>. Each packet has a <strong>header</strong> (the destination and source addresses, and a number showing its order) and the <strong>payload</strong> (a part of the real data). The packets may travel by different routes through routers, and the receiving device puts them back in the correct order. This is like posting a long letter as several numbered envelopes: if one envelope is lost, only that one needs to be sent again.</p>
+<p>For this to work, all devices must follow the same rules, called <strong>protocols</strong>. A protocol is an agreed set of rules for communication.</p>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Protocol</th><th>Used for</th></tr>
+<tr><td>TCP/IP</td><td>The basic rules for addressing and delivering packets across the internet</td></tr>
+<tr><td>HTTP and HTTPS</td><td>Loading web pages; HTTPS adds encryption so others cannot read the data</td></tr>
+<tr><td>SMTP and IMAP</td><td>Sending and receiving email</td></tr>
+<tr><td>FTP</td><td>Transferring files between computers</td></tr>
+<tr><td>DNS</td><td>Finding the IP address that belongs to a domain name</td></tr>
+</table>
+</div>
+<p><strong>Encryption</strong> means scrambling data so that only the person with the right key can read it. When a web address starts with "https" and shows a padlock, the connection between your device and the site is encrypted.</p>
+
+<h2><span class="num">8.</span>Speed: Bandwidth, Bits and Latency</h2>
+<p><strong>Bandwidth</strong> is the maximum amount of data that a connection can carry in a given time. It is measured in <strong>bits per second</strong>, such as megabits per second (Mbps). A <strong>bit</strong> is the smallest unit of data, and <strong>8 bits make 1 byte</strong>. Files are usually measured in bytes, such as megabytes (MB), so you must convert before comparing.</p>
+<div class="example-box">
+<div class="ex-label">Worked example</div>
+<p>How long does it take to download a 500 MB file on a 100 Mbps connection, in ideal conditions?</p>
+<p><strong>Step 1:</strong> Convert bytes to bits: 500 MB &times; 8 = 4,000 megabits.</p>
+<p><strong>Step 2:</strong> Divide by the speed: 4,000 &divide; 100 = <strong>40 seconds</strong>.</p>
+<p>Notice that 100 Mbps equals 100 &divide; 8 = 12.5 megabytes per second. Real speeds are usually lower because many devices share the connection and signals weaken with distance.</p>
+</div>
+<p><strong>Latency</strong> is the delay before data starts to arrive, measured in milliseconds (ms). Low latency matters for video calls and online games, even when bandwidth is high. A connection can have high bandwidth and still feel slow if the latency is high.</p>
+
+<h2><span class="num">9.</span>Keeping a Network Safe</h2>
+<ul>
+<li><strong>Change default passwords</strong> on your router and use a strong Wi-Fi password.</li>
+<li><strong>Use modern Wi-Fi security,</strong> such as WPA2 or WPA3, which encrypts the Wi-Fi signal.</li>
+<li><strong>Keep devices and routers updated,</strong> because updates repair security weaknesses.</li>
+<li><strong>Use a firewall:</strong> a program or device that checks network traffic and blocks what is unsafe.</li>
+<li><strong>Be careful on public Wi-Fi.</strong> Avoid banking or entering passwords on an open network, unless the connection is protected.</li>
+<li><strong>Use a VPN (virtual private network)</strong> if you need to connect safely to a work or school network from outside.</li>
+</ul>
+<p>Our article on <a href="cybersecurity-basics.html">cybersecurity basics</a> explains threats such as phishing and malware, and good habits for passwords.</p>
+
+<h2><span class="num">10.</span>Basic Network Troubleshooting</h2>
+<p>When a connection fails, a calm step-by-step check solves most problems:</p>
+<ol>
+<li>Check whether only your device is affected, or other devices too.</li>
+<li>Check that Wi-Fi is turned on, or that the cable is plugged in firmly.</li>
+<li>Restart the device, and if other devices are also affected, restart the router.</li>
+<li>Move closer to the router, because walls and distance weaken Wi-Fi.</li>
+<li>Check for a service message from your internet provider.</li>
+<li>If the problem remains, contact your provider or a teacher or technician.</li>
+</ol>
+
+<h2><span class="num">11.</span>Part Two: Databases</h2>
+<p>A <strong>database</strong> is an organised collection of data, stored so that it can be searched, updated and protected easily. A <strong>database management system (DBMS)</strong> is the software that controls the database, for example by adding data, finding it and deciding who may see it. School records, bank accounts, hospital systems, online shops and library catalogues all use databases.</p>
+<p>A spreadsheet (see our guide to <a href="spreadsheets-and-documents-everyday-computer-skills.html">spreadsheets and documents</a>) is excellent for small lists and calculations. A database is better when data is large, many people use it at once, the data is linked in complex ways, or accuracy and security are critical.</p>
+
+<h2><span class="num">12.</span>Tables, Records, Fields and Keys</h2>
+<p>Most databases are <strong>relational</strong>: they store data in <strong>tables</strong> that are linked to each other.</p>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Term</th><th>Meaning</th><th>Example</th></tr>
+<tr><td>Table</td><td>A set of data about one kind of thing</td><td>Students</td></tr>
+<tr><td>Field</td><td>A column: one kind of detail</td><td>Name</td></tr>
+<tr><td>Record</td><td>A row: all the details of one item</td><td>The row for one student</td></tr>
+<tr><td>Primary key</td><td>A field whose value is unique for every record</td><td>StudentID</td></tr>
+<tr><td>Foreign key</td><td>A field that refers to the primary key of another table</td><td>ClassID in the Students table</td></tr>
+</table>
+</div>
+<p>Suppose a school stores the teacher of each class. If every student's record repeated the teacher's name, a change of teacher would need hundreds of edits, and mistakes would appear. A better design uses two tables, linked by a key.</p>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>StudentID</th><th>Name</th><th>ClassID</th></tr>
+<tr><td>1</td><td>Alex</td><td>8A</td></tr>
+<tr><td>2</td><td>Bo</td><td>8B</td></tr>
+<tr><td>3</td><td>Casey</td><td>8A</td></tr>
+</table>
+</div>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>ClassID</th><th>Teacher</th></tr>
+<tr><td>8A</td><td>Ms Green</td></tr>
+<tr><td>8B</td><td>Mr Singh</td></tr>
+</table>
+</div>
+<p>Here StudentID and ClassID (in the second table) are primary keys, and ClassID in the Students table is a foreign key. Each teacher is stored once, and if the teacher of 8A changes, only one record needs editing. Avoiding repeated data like this is called reducing <strong>redundancy</strong>. This relationship, where one class has many students, is called a <strong>one-to-many</strong> relationship.</p>
+
+<h2><span class="num">13.</span>Keeping Data Correct</h2>
+<p>A database is only useful if the data is accurate. Designers use several tools:</p>
+<ul>
+<li><strong>Data types:</strong> each field accepts a certain type, such as text, whole number, date or yes/no.</li>
+<li><strong>Validation:</strong> rules that check data when it is entered, such as "marks must be between 0 and 100" or "an email address must contain @".</li>
+<li><strong>Required fields:</strong> some fields, such as the primary key, cannot be left empty.</li>
+<li><strong>Integrity rules:</strong> for example, a student cannot be assigned to a class that does not exist.</li>
+</ul>
+<p>Validation checks that data is <em>sensible</em>, but it cannot check that it is <em>true</em>. A person can still type the wrong, but valid, number.</p>
+
+<h2><span class="num">14.</span>Asking Questions with SQL</h2>
+<p><strong>SQL</strong> (Structured Query Language, often pronounced "S-Q-L" or "sequel") is the standard language for working with relational databases. A <strong>query</strong> is a question or instruction that you send to the database. Here is a small table, called <em>Students</em>, to practise with.</p>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>ID</th><th>Name</th><th>Class</th><th>Marks</th></tr>
+<tr><td>1</td><td>Alex</td><td>8A</td><td>78</td></tr>
+<tr><td>2</td><td>Bo</td><td>8B</td><td>64</td></tr>
+<tr><td>3</td><td>Casey</td><td>8A</td><td>91</td></tr>
+<tr><td>4</td><td>Dana</td><td>8B</td><td>55</td></tr>
+<tr><td>5</td><td>Eli</td><td>8A</td><td>70</td></tr>
+</table>
+</div>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>SQL command</th><th>Meaning</th></tr>
+<tr><td>SELECT</td><td>Choose which fields to show</td></tr>
+<tr><td>FROM</td><td>Name the table</td></tr>
+<tr><td>WHERE</td><td>Keep only the records that meet a condition</td></tr>
+<tr><td>ORDER BY</td><td>Sort the results</td></tr>
+<tr><td>INSERT, UPDATE, DELETE</td><td>Add, change or remove records</td></tr>
+<tr><td>COUNT, AVG, MAX, MIN, SUM</td><td>Calculate on a group of records</td></tr>
+</table>
+</div>
+<div class="example-box">
+<div class="ex-label">Worked queries</div>
+<p><strong>1. Names of students in class 8A, highest marks first.</strong></p>
+<p><code>SELECT Name FROM Students WHERE Class = '8A' ORDER BY Marks DESC;</code></p>
+<p>Result: <strong>Casey (91), Alex (78), Eli (70)</strong>.</p>
+<p><strong>2. The average marks of class 8A.</strong></p>
+<p><code>SELECT AVG(Marks) FROM Students WHERE Class = '8A';</code></p>
+<p>Result: (78 + 91 + 70) &divide; 3 = 239 &divide; 3 = <strong>79.67</strong> (about 79.7).</p>
+<p><strong>3. How many students scored 60 or more?</strong></p>
+<p><code>SELECT COUNT(*) FROM Students WHERE Marks &gt;= 60;</code></p>
+<p>Result: Alex (78), Bo (64), Casey (91) and Eli (70) qualify, so the answer is <strong>4</strong>.</p>
+</div>
+<p>Notice how SQL reads almost like English: choose these fields, from this table, where this condition is true. SQL works with the same ideas as the spreadsheet functions you may know, such as AVERAGE and COUNT, but it can handle far more data and many linked tables.</p>
+
+<h2><span class="num">15.</span>Other Kinds of Database</h2>
+<p>Relational databases, such as MySQL, PostgreSQL and SQLite, are very common, but not the only kind. <strong>NoSQL</strong> databases store data in other forms, for example as flexible documents or as simple key-and-value pairs. They are often used when data does not fit neatly into tables or when a system must handle huge amounts of changing data. The right choice depends on the job: relational databases are excellent when data is structured and accuracy is critical, such as in banking and school records.</p>
+
+<h2><span class="num">16.</span>Networks and Databases Working Together</h2>
+<p>Every time you use a website or an app, networks and databases cooperate. Consider ordering a book from an online shop:</p>
+<ol>
+<li>Your phone (the <strong>client</strong>) sends a request across the <strong>network</strong>, first to your router and then across the internet. DNS has already found the shop's server address.</li>
+<li>The shop's <strong>web server</strong> receives your request, in packets, over a protocol such as HTTPS.</li>
+<li>The server asks a <strong>database</strong> for the book's price, description and stock.</li>
+<li>The database sends the data back to the server, which builds the page.</li>
+<li>When you buy, the server writes a new <strong>record</strong> in the orders table and updates the stock.</li>
+<li>The page travels back across the network to your phone.</li>
+</ol>
+<p>Often the web server and the database are on computers in a data centre run by a cloud company. Our article on <a href="cloud-computing.html">cloud computing</a> explains how this works.</p>
+
+<h2><span class="num">17.</span>Protecting Data</h2>
+<p>Databases often hold personal information, such as names, addresses and payment details, so protecting them is a serious responsibility. Many countries have laws about how personal data must be collected, stored and shared.</p>
+<ul>
+<li><strong>Access control:</strong> each user gets only the permissions needed for their job.</li>
+<li><strong>Strong authentication:</strong> strong passwords and, where possible, a second step such as a code.</li>
+<li><strong>Encryption:</strong> protects data while it travels and while it is stored.</li>
+<li><strong>Backups:</strong> regular copies that allow recovery after a failure or attack.</li>
+<li><strong>Safe input handling:</strong> websites must check what users type into forms, because attackers sometimes try to trick a database by typing instructions instead of normal data. Careful programmers validate input and use safe query methods to prevent this.</li>
+<li><strong>Updates:</strong> installing security updates for the database software.</li>
+</ul>
+<p>As a user, share personal data only when it is necessary, use different strong passwords for different services, and read what a service says it will do with your information. For more, see <a href="digital-footprint-privacy.html">Digital Footprint and Online Privacy</a>.</p>
+
+<h2><span class="num">18.</span>Common Misunderstandings</h2>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Misunderstanding</th><th>Reality</th></tr>
+<tr><td>Wi-Fi and the internet are the same</td><td>Wi-Fi connects your device to a local network; the router then links that network to the internet</td></tr>
+<tr><td>A modem and a router are the same</td><td>The modem connects to the provider's line; the router directs data between networks. They are often combined in one box</td></tr>
+<tr><td>Mbps and MBps are the same</td><td>One megabyte equals 8 megabits, so 100 Mbps is about 12.5 MB per second</td></tr>
+<tr><td>More Wi-Fi bars always mean fast internet</td><td>Bars show signal strength, not the speed of your internet plan</td></tr>
+<tr><td>A database is just a big spreadsheet</td><td>A database links tables, controls access and handles many users safely</td></tr>
+<tr><td>Deleting a file removes all risk</td><td>Copies may exist in backups and other systems</td></tr>
+</table>
+</div>
+
+<h2><span class="num">19.</span>Three Practice Projects</h2>
+<ol>
+<li><strong>Draw your home network.</strong> Draw the router and every device that connects to it, label which use Wi-Fi and which use cables, and name the topology you see.</li>
+<li><strong>Design a small database.</strong> Choose a topic, such as a library or a shop. Plan two tables, write the fields, choose a primary key for each, and mark the foreign key. You can build it in a spreadsheet using two sheets.</li>
+<li><strong>Practise SQL.</strong> Use a free online SQL practice website to write the three queries in this article on your own table, and then invent three more.</li>
+</ol>
+
+<h2><span class="num">20.</span>Your Networks and Databases Checklist</h2>
+<ul>
+<li>I can name the types of network: PAN, LAN, WLAN, MAN and WAN.</li>
+<li>I know what a router, switch and modem do.</li>
+<li>I can explain IP addresses, DNS, packets and protocols in simple words.</li>
+<li>I can convert bits to bytes and calculate a download time.</li>
+<li>I know the difference between a table, a record, a field, a primary key and a foreign key.</li>
+<li>I can read and write simple SELECT queries with WHERE and ORDER BY.</li>
+<li>I can describe how a website uses a network and a database together.</li>
+<li>I follow good safety habits for passwords, updates and public Wi-Fi.</li>
+</ul>
+
+<h2>Key Terms</h2>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Term</th><th>Meaning</th></tr>
+<tr><td>Network</td><td>Devices connected so they can share data and resources</td></tr>
+<tr><td>Protocol</td><td>An agreed set of rules for communication</td></tr>
+<tr><td>Packet</td><td>A small unit of data sent across a network</td></tr>
+<tr><td>IP address</td><td>A number that identifies a device on a network</td></tr>
+<tr><td>DNS</td><td>The system that turns domain names into IP addresses</td></tr>
+<tr><td>Bandwidth</td><td>The maximum amount of data a connection can carry in a given time</td></tr>
+<tr><td>Latency</td><td>The delay before data starts to arrive</td></tr>
+<tr><td>Database</td><td>An organised collection of data</td></tr>
+<tr><td>Primary key</td><td>A field that uniquely identifies each record in a table</td></tr>
+<tr><td>Foreign key</td><td>A field that refers to the primary key of another table</td></tr>
+<tr><td>SQL</td><td>The standard language for working with relational databases</td></tr>
+<tr><td>Redundancy</td><td>Unnecessary repetition of the same data</td></tr>
+</table>
+</div>
+
+<h2>A Closing Thought</h2>
+<p>Networks move data, and databases keep it organised, so together they form the foundation of almost everything you do online. You do not need to be a technician to understand them. If you can picture packets travelling between a client and a server, and tables linked by keys, you already understand the main ideas. Try one of the practice projects, and the next time a page loads, think of the many steps behind it: a name found, a path chosen, a question asked of a database, and an answer sent back in a fraction of a second.</p>
+<div class="further-reading-box">
+<div class="fr-label">Further Reading</div>
+<ul>
+<li><a href="https://www.cloudflare.com/learning/" rel="noopener noreferrer" target="_blank">Cloudflare Learning Center</a> <span class="fr-source">— free, clear explainers on networking, the internet and security</span></li>
+<li><a href="https://www.khanacademy.org/computing" rel="noopener noreferrer" target="_blank">Khan Academy: Computing</a> <span class="fr-source">— free lessons on how the internet works and on databases</span></li>
+<li><a href="https://www.w3schools.com/sql/" rel="noopener noreferrer" target="_blank">W3Schools SQL Tutorial</a> <span class="fr-source">— free beginner tutorial with examples you can try in the browser</span></li>
+</ul>
+</div>
+</div>
+<!-- QUIZ SECTION -->
+<div class="quiz-section">
+<div class="section-eyebrow">Test Your Understanding</div>
+<h2>Practice Quiz</h2>
+<p class="quiz-intro">14 questions. Select an answer for each, then submit to see your score instantly.</p>
+<div class="squiz-progress"><div class="squiz-progress-fill" id="squizProgressFill"></div></div>
+<div class="squiz-progress-label" id="squizProgressLabel">0 of 14 answered</div>
+<div class="squiz-results" id="squizResults">
+<div class="squiz-score-big" id="squizScoreBig">0/14</div>
+<div class="squiz-score-label" id="squizScoreLabel">You scored 0%</div>
+<div class="squiz-score-tier" id="squizScoreTier">Keep practicing</div>
+<div><button class="squiz-retake-btn" onclick="retakeQuiz()">Retake Quiz</button></div>
+</div>
+<form id="squizForm">
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">1.</span>Which device connects different networks, such as your home network and the internet, and directs data between them?</div>
+<div class="squiz-option"><input id="sq1a" name="sq1" type="radio" value="0"/><label for="sq1a">A. Printer</label></div>
+<div class="squiz-option"><input id="sq1b" name="sq1" type="radio" value="1"/><label for="sq1b">B. Router</label></div>
+<div class="squiz-option"><input id="sq1c" name="sq1" type="radio" value="2"/><label for="sq1c">C. Monitor</label></div>
+<div class="squiz-option"><input id="sq1d" name="sq1" type="radio" value="3"/><label for="sq1d">D. Keyboard</label></div>
+</div>
+<div class="squiz-item" data-correct="3">
+<div class="squiz-q"><span class="qnum">2.</span>What does LAN stand for?</div>
+<div class="squiz-option"><input id="sq2a" name="sq2" type="radio" value="0"/><label for="sq2a">A. Large Area Number</label></div>
+<div class="squiz-option"><input id="sq2b" name="sq2" type="radio" value="1"/><label for="sq2b">B. Long Access Node</label></div>
+<div class="squiz-option"><input id="sq2c" name="sq2" type="radio" value="2"/><label for="sq2c">C. Linked Antenna Network</label></div>
+<div class="squiz-option"><input id="sq2d" name="sq2" type="radio" value="3"/><label for="sq2d">D. Local Area Network</label></div>
+</div>
+<div class="squiz-item" data-correct="0">
+<div class="squiz-q"><span class="qnum">3.</span>In which topology does every device connect to a central switch?</div>
+<div class="squiz-option"><input id="sq3a" name="sq3" type="radio" value="0"/><label for="sq3a">A. Star</label></div>
+<div class="squiz-option"><input id="sq3b" name="sq3" type="radio" value="1"/><label for="sq3b">B. Bus</label></div>
+<div class="squiz-option"><input id="sq3c" name="sq3" type="radio" value="2"/><label for="sq3c">C. Ring</label></div>
+<div class="squiz-option"><input id="sq3d" name="sq3" type="radio" value="3"/><label for="sq3d">D. Random</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">4.</span>What does DNS do?</div>
+<div class="squiz-option"><input id="sq4a" name="sq4" type="radio" value="0"/><label for="sq4a">A. Stores your photos</label></div>
+<div class="squiz-option"><input id="sq4b" name="sq4" type="radio" value="1"/><label for="sq4b">B. Blocks all viruses</label></div>
+<div class="squiz-option"><input id="sq4c" name="sq4" type="radio" value="2"/><label for="sq4c">C. Translates domain names into IP addresses</label></div>
+<div class="squiz-option"><input id="sq4d" name="sq4" type="radio" value="3"/><label for="sq4d">D. Makes the screen brighter</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">5.</span>Data sent across a network is divided into small units called:</div>
+<div class="squiz-option"><input id="sq5a" name="sq5" type="radio" value="0"/><label for="sq5a">A. Pages</label></div>
+<div class="squiz-option"><input id="sq5b" name="sq5" type="radio" value="1"/><label for="sq5b">B. Packets</label></div>
+<div class="squiz-option"><input id="sq5c" name="sq5" type="radio" value="2"/><label for="sq5c">C. Posters</label></div>
+<div class="squiz-option"><input id="sq5d" name="sq5" type="radio" value="3"/><label for="sq5d">D. Passwords</label></div>
+</div>
+<div class="squiz-item" data-correct="3">
+<div class="squiz-q"><span class="qnum">6.</span>How does HTTPS differ from HTTP?</div>
+<div class="squiz-option"><input id="sq6a" name="sq6" type="radio" value="0"/><label for="sq6a">A. It is slower by design</label></div>
+<div class="squiz-option"><input id="sq6b" name="sq6" type="radio" value="1"/><label for="sq6b">B. It only works on phones</label></div>
+<div class="squiz-option"><input id="sq6c" name="sq6" type="radio" value="2"/><label for="sq6c">C. It is used only for email</label></div>
+<div class="squiz-option"><input id="sq6d" name="sq6" type="radio" value="3"/><label for="sq6d">D. It encrypts the data between your device and the website</label></div>
+</div>
+<div class="squiz-item" data-correct="0">
+<div class="squiz-q"><span class="qnum">7.</span>How long does a 500 MB file take to download at 100 Mbps in ideal conditions?</div>
+<div class="squiz-option"><input id="sq7a" name="sq7" type="radio" value="0"/><label for="sq7a">A. 40 seconds</label></div>
+<div class="squiz-option"><input id="sq7b" name="sq7" type="radio" value="1"/><label for="sq7b">B. 5 seconds</label></div>
+<div class="squiz-option"><input id="sq7c" name="sq7" type="radio" value="2"/><label for="sq7c">C. 400 seconds</label></div>
+<div class="squiz-option"><input id="sq7d" name="sq7" type="radio" value="3"/><label for="sq7d">D. 4 seconds</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">8.</span>In a database table, what is a single row called?</div>
+<div class="squiz-option"><input id="sq8a" name="sq8" type="radio" value="0"/><label for="sq8a">A. A field</label></div>
+<div class="squiz-option"><input id="sq8b" name="sq8" type="radio" value="1"/><label for="sq8b">B. A key</label></div>
+<div class="squiz-option"><input id="sq8c" name="sq8" type="radio" value="2"/><label for="sq8c">C. A record</label></div>
+<div class="squiz-option"><input id="sq8d" name="sq8" type="radio" value="3"/><label for="sq8d">D. A column</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">9.</span>What is a primary key?</div>
+<div class="squiz-option"><input id="sq9a" name="sq9" type="radio" value="0"/><label for="sq9a">A. A password for the database</label></div>
+<div class="squiz-option"><input id="sq9b" name="sq9" type="radio" value="1"/><label for="sq9b">B. A field whose value uniquely identifies each record</label></div>
+<div class="squiz-option"><input id="sq9c" name="sq9" type="radio" value="2"/><label for="sq9c">C. The first column, whatever it contains</label></div>
+<div class="squiz-option"><input id="sq9d" name="sq9" type="radio" value="3"/><label for="sq9d">D. A copy of the table</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">10.</span>Which SQL command is used to retrieve data from a table?</div>
+<div class="squiz-option"><input id="sq10a" name="sq10" type="radio" value="0"/><label for="sq10a">A. REMOVE</label></div>
+<div class="squiz-option"><input id="sq10b" name="sq10" type="radio" value="1"/><label for="sq10b">B. COPY</label></div>
+<div class="squiz-option"><input id="sq10c" name="sq10" type="radio" value="2"/><label for="sq10c">C. SELECT</label></div>
+<div class="squiz-option"><input id="sq10d" name="sq10" type="radio" value="3"/><label for="sq10d">D. SHOW-ALL</label></div>
+</div>
+<div class="squiz-item" data-correct="0">
+<div class="squiz-q"><span class="qnum">11.</span>What is a foreign key?</div>
+<div class="squiz-option"><input id="sq11a" name="sq11" type="radio" value="0"/><label for="sq11a">A. A field in one table that refers to the primary key of another table</label></div>
+<div class="squiz-option"><input id="sq11b" name="sq11" type="radio" value="1"/><label for="sq11b">B. A key used only on foreign websites</label></div>
+<div class="squiz-option"><input id="sq11c" name="sq11" type="radio" value="2"/><label for="sq11c">C. A password written in another language</label></div>
+<div class="squiz-option"><input id="sq11d" name="sq11" type="radio" value="3"/><label for="sq11d">D. A deleted record</label></div>
+</div>
+<div class="squiz-item" data-correct="3">
+<div class="squiz-q"><span class="qnum">12.</span>Which statement describes a client-server network?</div>
+<div class="squiz-option"><input id="sq12a" name="sq12" type="radio" value="0"/><label for="sq12a">A. There are no computers</label></div>
+<div class="squiz-option"><input id="sq12b" name="sq12" type="radio" value="1"/><label for="sq12b">B. Only printers are connected</label></div>
+<div class="squiz-option"><input id="sq12c" name="sq12" type="radio" value="2"/><label for="sq12c">C. Every device must be a server</label></div>
+<div class="squiz-option"><input id="sq12d" name="sq12" type="radio" value="3"/><label for="sq12d">D. Clients request services from a central server</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">13.</span>Why is a relational design with linked tables better than repeating the same data in many records?</div>
+<div class="squiz-option"><input id="sq13a" name="sq13" type="radio" value="0"/><label for="sq13a">A. It makes the data harder to find</label></div>
+<div class="squiz-option"><input id="sq13b" name="sq13" type="radio" value="1"/><label for="sq13b">B. It reduces duplication and the chance of mistakes</label></div>
+<div class="squiz-option"><input id="sq13c" name="sq13" type="radio" value="2"/><label for="sq13c">C. It removes the need for passwords</label></div>
+<div class="squiz-option"><input id="sq13d" name="sq13" type="radio" value="3"/><label for="sq13d">D. It makes the network faster</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">14.</span>Which of these helps protect a Wi-Fi network?</div>
+<div class="squiz-option"><input id="sq14a" name="sq14" type="radio" value="0"/><label for="sq14a">A. Using the default password forever</label></div>
+<div class="squiz-option"><input id="sq14b" name="sq14" type="radio" value="1"/><label for="sq14b">B. Turning off all updates</label></div>
+<div class="squiz-option"><input id="sq14c" name="sq14" type="radio" value="2"/><label for="sq14c">C. A strong password with WPA2 or WPA3 security</label></div>
+<div class="squiz-option"><input id="sq14d" name="sq14" type="radio" value="3"/><label for="sq14d">D. Sharing the password publicly</label></div>
+</div>
+<button class="squiz-submit-btn" disabled="" id="squizSubmitBtn" onclick="submitQuiz()" type="button">Answer all questions to submit</button>
+</form>
+<div class="article-footer-nav">
+<a href="index.html#gateway">← Gateway</a>
+
+</div>
+</div>
+<script>
+  (function() {
+    const form = document.getElementById('squizForm');
+    const submitBtn = document.getElementById('squizSubmitBtn');
+    const progressFill = document.getElementById('squizProgressFill');
+    const progressLabel = document.getElementById('squizProgressLabel');
+    const totalQuestions = document.querySelectorAll('.squiz-item').length;
+
+    function countAnswered() {
+      let count = 0;
+      for (let i = 1; i <= totalQuestions; i++) {
+        if (form.querySelector(`input[name="sq${i}"]:checked`)) count++;
+      }
+      return count;
+    }
+
+    function updateProgress() {
+      const answered = countAnswered();
+      progressFill.style.width = (answered / totalQuestions * 100) + '%';
+      progressLabel.textContent = answered + ' of ' + totalQuestions + ' answered';
+      submitBtn.disabled = answered < totalQuestions;
+      submitBtn.textContent = answered < totalQuestions ? 'Answer all questions to submit' : 'Submit Quiz';
+      document.querySelectorAll('.squiz-option').forEach(opt => opt.classList.remove('selected'));
+      form.querySelectorAll('input[type="radio"]:checked').forEach(input => {
+        input.closest('.squiz-option').classList.add('selected');
+      });
+    }
+
+    form.addEventListener('change', updateProgress);
+
+    window.submitQuiz = function() {
+      let score = 0;
+      const questions = document.querySelectorAll('.squiz-item');
+      questions.forEach((q, idx) => {
+        const qnum = idx + 1;
+        const correctIdx = q.getAttribute('data-correct');
+        const selected = form.querySelector(`input[name="sq${qnum}"]:checked`);
+        const options = q.querySelectorAll('.squiz-option');
+        options.forEach((opt, optIdx) => {
+          opt.querySelector('input').disabled = true;
+          if (String(optIdx) === correctIdx) opt.classList.add('correct-answer');
+        });
+        if (selected && selected.value === correctIdx) {
+          score++;
+        } else if (selected) {
+          selected.closest('.squiz-option').classList.add('wrong-answer');
+        }
+      });
+
+      const percent = Math.round((score / totalQuestions) * 100);
+      document.getElementById('squizScoreBig').textContent = score + '/' + totalQuestions;
+      document.getElementById('squizScoreLabel').textContent = 'You scored ' + percent + '%';
+
+      let tier = 'Keep practicing';
+      if (percent === 100) tier = 'Perfect score!';
+      else if (percent >= 80) tier = 'Excellent work';
+      else if (percent >= 60) tier = 'Good effort';
+      else if (percent >= 40) tier = 'Getting there';
+      document.getElementById('squizScoreTier').textContent = tier;
+
+      document.getElementById('squizResults').classList.add('visible');
+      submitBtn.style.display = 'none';
+      document.getElementById('squizResults').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    window.retakeQuiz = function() {
+      form.reset();
+      document.querySelectorAll('.squiz-option').forEach(opt => {
+        opt.classList.remove('selected', 'correct-answer', 'wrong-answer');
+        opt.querySelector('input').disabled = false;
+      });
+      document.getElementById('squizResults').classList.remove('visible');
+      submitBtn.style.display = 'block';
+      updateProgress();
+      document.getElementById('squizForm').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    updateProgress();
+  })();
+</script>
+<footer class="edusambam-unified-footer" aria-label="EDUSAMBAM site footer">
+<div class="footer-top">
+<div class="footer-brand">
+<div class="edusambam-footer-brand-row">
+<a class="edusambam-footer-logo-link" href="index.html" aria-label="EDUSAMBAM home">
+<img alt="EDUSAMBAM" class="edusambam-brand-mark edusambam-footer-logo" src="logo-icon-full-white.png" style="width:auto;height:64px;max-width:240px;object-fit:contain;background:none;border-radius:0;"/>
+</a>
+</div>
+<p class="edusambam-footer-statement">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</p>
+<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a></div>
+</div>
+<div class="footer-col"><h4>Learning</h4><ul><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li></ul></div>
+<div class="footer-col"><h4>Practice &amp; Assessment</h4><ul>
+<li><a href="index.html#interactive-activities">Interactive Activities</a></li>
+<li><a href="assessment-arena.html">ASSESSMENT ARENA</a></li>
+<li><a href="assessment-arena.html">What Is Assessment?</a></li>
+<li><a href="index.html#about">Learn Your Way</a></li>
+<li><a href="index.html#resources">Resources &amp; Downloads</a></li>
+</ul></div>
+<div class="footer-col"><h4>About EDUSAMBAM</h4><ul>
+<li><a href="index.html#about-edusambam">What EDUSAMBAM Is</a></li>
+<li><a href="index.html#mission">Our Mission</a></li>
+<li><a href="index.html#team">The Team</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="mailto:feedback.edusambam@gmail.com?subject=EDUSAMBAM%20Feedback">Give Feedback</a></li>
+<li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+<li><a href="privacy-policy.html">Privacy Policy</a></li>
+</ul></div>
+</div>
+<div class="footer-bottom"><p>© 2026 EDUSAMBAM · Learning resources, practice and assessment.</p><ul class="footer-bottom-links">
+<li><a href="#top">Back to Top</a></li>
+<li><a href="index.html#mission">Mission</a></li>
+<li><a href="index.html#team">Team</a></li>
+<li><a href="index.html#resources">Resources</a></li>
+</ul></div>
+</footer>
+
+<script id="edusambam-reader-script">
+(function(){
+ const box=document.querySelector('.edusambam-reader'); if(!box)return;
+ const root=document.querySelector('.article-wrap, .article-wrapper');
+ if(!root)return;
+ const status=box.querySelector('.reader-status'), progress=box.querySelector('.reader-progress span'), rate=box.querySelector('select');
+ let utterance=null, chunks=[], index=0, total=0, paused=false, stopped=false;
+ function text(){
+   const clone=root.cloneNode(true);
+   clone.querySelectorAll('.quiz-section,.drill-section,.squiz-section,.activity-section,.assessment-section,form,button,input,select,textarea,script,style').forEach(el=>el.remove());
+   return clone.textContent.replace(/\s+/g,' ').trim();
+ }
+ function splitText(t){const out=[];const max=1200;for(let i=0;i<t.length;i+=max)out.push(t.slice(i,i+max));return out;}
+ function updateProgress(){progress.style.width=(total?Math.min(100,Math.round((index/total)*100)):0)+'%';}
+ function speakNext(){
+   if(stopped||index>=total){if(index>=total&&!stopped){status.textContent='Reading finished.';progress.style.width='100%';}return;}
+   utterance=new SpeechSynthesisUtterance(chunks[index]);
+   utterance.rate=Number(rate.value)||1;
+   utterance.onend=function(){if(stopped)return;index++;updateProgress();speakNext();};
+   utterance.onerror=function(){if(!stopped)status.textContent='The reader stopped unexpectedly. Tap Resume to continue.';};
+   status.textContent='Reading article…';
+   speechSynthesis.speak(utterance);
+ }
+ function play(){
+   if(!('speechSynthesis' in window)){status.textContent='Audio reading is not supported by this browser.';return;}
+   speechSynthesis.cancel();
+   chunks=splitText(text());index=0;total=chunks.length;paused=false;stopped=false;updateProgress();speakNext();
+ }
+ function pause(){
+   if(!('speechSynthesis' in window))return;
+   if(speechSynthesis.speaking){speechSynthesis.pause();paused=true;status.textContent='Reader paused.';}
+ }
+ function resume(){
+   if(!('speechSynthesis' in window))return;
+   stopped=false;
+   if(speechSynthesis.paused){speechSynthesis.resume();paused=false;status.textContent='Reader resumed.';return;}
+   if(!speechSynthesis.speaking && chunks.length && index<total){paused=false;status.textContent='Reader resumed.';speakNext();return;}
+   if(!chunks.length){status.textContent='Nothing to resume. Tap Play to start.';return;}
+   status.textContent='Reader is already playing.';
+ }
+ function stop(){
+   speechSynthesis.cancel();chunks=[];index=0;total=0;paused=false;stopped=true;progress.style.width='0';status.textContent='Reader stopped.';
+ }
+ box.querySelector('[data-reader="play"]').addEventListener('click',play);
+ box.querySelector('[data-reader="pause"]').addEventListener('click',pause);
+ box.querySelector('[data-reader="resume"]').addEventListener('click',resume);
+ box.querySelector('[data-reader="stop"]').addEventListener('click',stop);
+ window.addEventListener('beforeunload',()=>{stopped=true;speechSynthesis.cancel();});
+})();
+</script>
+<script id="edusambam-unified-nav-js">
+(function(){
+  let pages=[];fetch('nav-search-index.json').then(r=>r.json()).then(d=>{pages=d;});
+  function closeAll(except){
+    document.querySelectorAll('.edusambam-mobile-menu,.edusambam-search-panel').forEach(el=>{
+      if(el!==except) el.classList.remove('open');
+    });
+    const b=document.querySelector('.edusambam-menu-btn');
+    if(b) b.setAttribute('aria-expanded', String(document.querySelector('.edusambam-mobile-menu')?.classList.contains('open')||false));
+  }
+  function setup(){
+    const menu=document.querySelector('.edusambam-mobile-menu');
+    const mb=document.querySelector('.edusambam-menu-btn');
+    const sb=document.querySelector('.edusambam-search-btn');
+    const panel=document.querySelector('.edusambam-search-panel');
+    const input=document.querySelector('.edusambam-search-input');
+    const results=document.querySelector('.edusambam-search-results');
+    if(mb && menu){
+      mb.addEventListener('click',()=>{
+        const open=menu.classList.toggle('open'); closeAll(open?menu:null);
+        mb.setAttribute('aria-expanded',String(open));
+        if(open) panel?.classList.remove('open');
+      });
+    }
+    if(sb && panel){
+      sb.addEventListener('click',()=>{
+        const open=panel.classList.toggle('open'); closeAll(open?panel:null);
+        if(open) setTimeout(()=>input?.focus(),30);
+      });
+    }
+    if(input && results){
+      const render=()=>{
+        const q=input.value.trim().toLowerCase();
+        const hits=q?pages.filter(x=>(x.title+' '+x.url).toLowerCase().includes(q)).slice(0,20):[];
+        results.innerHTML=hits.map(x=>'<a href="'+x.url.replace(/"/g,'&quot;')+'">'+
+          x.title.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</a>').join('') ||
+          (q?'<div style="padding:10px;color:#64748b">No matching pages found.</div>':'');
+      };
+      input.addEventListener('input',render);
+    }
+    document.addEventListener('keydown',e=>{
+      if(e.key==='Escape') closeAll(null);
+    });
+    document.addEventListener('click',e=>{
+      if(!e.target.closest('.edusambam-nav') && !e.target.closest('.edusambam-mobile-menu') && !e.target.closest('.edusambam-search-panel')) closeAll(null);
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',setup); else setup();
+})();
+</script>
+</body>
+</html>

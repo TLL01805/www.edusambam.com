@@ -1,0 +1,1783 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<!-- Google Analytics 4 — EDUSAMBAM -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Y35DW0V4HQ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-Y35DW0V4HQ');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rates of Reaction and Energy Changes in Chemistry — EDUSAMBAM</title>
+<link href="https://edusambam.com/rates-of-reaction-and-energy-changes.html" rel="canonical"/>
+<meta content="Learn why reactions go fast or slow and how energy changes: collision theory, catalysts, exothermic and endothermic reactions, bond energies and calorimetry." name="description"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<meta content="EDUSAMBAM Editorial Team" name="author"/>
+<meta content="rates of reaction, collision theory, activation energy, catalysts, exothermic and endothermic, energy profile diagram, bond energy calculations, calorimetry, chemistry for students" name="keywords"/>
+<meta content="Rates of Reaction and Energy Changes in Chemistry — EDUSAMBAM" property="og:title"/>
+<meta content="Learn why reactions go fast or slow and how energy changes: collision theory, catalysts, exothermic and endothermic reactions, bond energies and calorimetry." property="og:description"/>
+<meta content="https://edusambam.com/og-image.jpg" property="og:image"/>
+<meta content="https://edusambam.com/rates-of-reaction-and-energy-changes.html" property="og:url"/>
+<meta content="article" property="og:type"/>
+<meta content="EDUSAMBAM" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="2026-10-05" property="article:published_time"/>
+<meta content="Chemistry" property="article:section"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Rates of Reaction and Energy Changes in Chemistry — EDUSAMBAM" name="twitter:title"/>
+<meta content="Learn why reactions go fast or slow and how energy changes: collision theory, catalysts, exothermic and endothermic reactions, bond energies and calorimetry." name="twitter:description"/>
+<meta content="https://edusambam.com/og-image.jpg" name="twitter:image"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Rates of Reaction and Energy Changes in Chemistry",
+ "description": "Learn why reactions go fast or slow and how energy changes: collision theory, catalysts, exothermic and endothermic reactions, bond energies and calorimetry.",
+ "image": "https://edusambam.com/og-image.jpg",
+ "datePublished": "2026-10-05",
+ "dateModified": "2026-10-05",
+ "inLanguage": "en",
+ "isAccessibleForFree": true,
+ "articleSection": "Chemistry",
+ "wordCount": 3176,
+ "keywords": [
+  "rates of reaction",
+  "collision theory",
+  "activation energy",
+  "catalysts",
+  "exothermic and endothermic",
+  "energy profile diagram",
+  "bond energy calculations",
+  "calorimetry",
+  "chemistry for students"
+ ],
+ "author": {
+  "@type": "Organization",
+  "name": "EDUSAMBAM Editorial Team",
+  "url": "https://edusambam.com/"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "EDUSAMBAM",
+  "url": "https://edusambam.com/",
+  "logo": {
+   "@type": "ImageObject",
+   "url": "https://edusambam.com/logo-icon-full.png"
+  }
+ },
+ "mainEntityOfPage": {
+  "@type": "WebPage",
+  "@id": "https://edusambam.com/rates-of-reaction-and-energy-changes.html"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Gateway",
+   "item": "https://edusambam.com/#gateway"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Chemistry",
+   "item": "https://edusambam.com/#subject-chemistry"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Rates of Reaction and Energy Changes",
+   "item": "https://edusambam.com/rates-of-reaction-and-energy-changes.html"
+  }
+ ]
+}
+</script>
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --red: #0b4ea2;
+    --red-mid: #0b55a5;
+    --red-lt:    #eef5fc;
+    --navy:      #06244a;
+    --navy-mid:  #0b4ea2;
+    --gold:      #d4a017;
+    --gold-lt:   #fff7dc;
+    --cream:     #f7faff;
+    --white:     #FFFFFF;
+    --ink:       #142033;
+    --slate:     #607086;
+    --muted:     #607086;
+    --border:    #dce7f4;
+    --border-lt: #eef5fc;
+    --radius:    4px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--ink);
+    background: var(--white);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── TOP BAR ── */
+  .top-bar {
+    background: var(--navy);
+    padding: 0.45rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .top-bar p {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.03em;
+  }
+  .top-bar-links { display: flex; gap: 1.5rem; list-style: none; }
+  .top-bar-links a {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+  .top-bar-links a:hover { color: white; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 200;
+    background: var(--navy);
+    border-bottom: 3px solid var(--red);
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  }
+  .nav-brand { display: flex; flex-direction: column; line-height: 1; text-decoration: none; }
+  .nav-brand-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 0.01em;
+  }
+  .nav-brand-name span { color: var(--red); }
+  .nav-brand-sub {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.65);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 0.25rem;
+  }
+  .nav-links { display: flex; gap: 0; list-style: none; }
+  .nav-links a {
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.75);
+    padding: 0 1.1rem;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: white; }
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+  }
+
+  /* ── DIAGRAM BOX (for CSS/SVG illustrations) ── */
+  .diagram-box {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin: 1.5rem 0 2rem;
+    text-align: center;
+  }
+  .diagram-box svg { max-width: 100%; height: auto; }
+  .diagram-caption {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 0.8rem;
+    font-style: italic;
+  }
+  .bar-chart { display: flex; align-items: flex-end; gap: 0.9rem; height: 180px; padding: 0 0.5rem; justify-content: center; }
+  .bar-chart .bar-col { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; width: 60px; }
+  .bar-chart .bar { width: 100%; background: var(--gold); border-radius: 3px 3px 0 0; position: relative; }
+  .bar-chart .bar.red { background: var(--red); }
+  .bar-chart .bar-val { font-size: 0.75rem; font-weight: 600; color: var(--ink); margin-bottom: 0.3rem; }
+  .bar-chart .bar-label { font-size: 0.72rem; color: var(--slate); margin-top: 0.5rem; text-align: center; }
+
+  /* ── ARTICLE HERO ── */
+  .article-hero {
+    background: linear-gradient(135deg,#06244a,#0b4ea2);
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+  }
+  .breadcrumb {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 1.1rem;
+    letter-spacing: 0.02em;
+  }
+  .breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--gold); }
+  .article-hero-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(184,150,62,0.4);
+    padding: 0.35rem 0.9rem;
+    border-radius: 30px;
+    margin-bottom: 1.25rem;
+  }
+  .article-hero h1 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 2.4rem;
+    color: white;
+    max-width: 760px;
+    margin: 0 auto 1rem;
+    line-height: 1.25;
+  }
+  .article-hero p.sub {
+    color: rgba(255,255,255,0.6);
+    max-width: 620px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.02rem;
+  }
+  .article-hero-meta {
+    display: flex; justify-content: center; gap: 0.9rem;
+    font-size: 0.8rem; color: rgba(255,255,255,0.45);
+    flex-wrap: wrap;
+  }
+
+  /* ── ARTICLE BODY ── */
+  .article-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+  .article-wrap h2 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 1.65rem;
+    color: var(--navy);
+    margin: 2.6rem 0 1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--border-lt);
+  }
+  .article-wrap h2 span.num {
+    color: var(--red);
+    margin-right: 0.5rem;
+    font-style: italic;
+  }
+  .article-wrap p { color: var(--slate); margin-bottom: 1rem; font-size: 1.02rem; }
+  .article-wrap ul { margin: 0 0 1.2rem 1.4rem; color: var(--slate); }
+  .article-wrap li { margin-bottom: 0.5rem; }
+  .article-wrap strong { color: var(--ink); }
+  .lead {
+    font-size: 1.15rem;
+    color: var(--ink);
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    border-left: 3px solid var(--gold);
+    padding-left: 1.2rem;
+    margin: 1.5rem 0 2rem;
+  }
+  .example-box {
+    background: var(--gold-lt);
+    border: 1px solid rgba(184,150,62,0.35);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 1.3rem 1.5rem;
+    margin: 1.3rem 0 1.8rem;
+  }
+  .example-box .ex-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.5rem;
+  }
+  .example-box p { color: var(--ink); margin-bottom: 0.4rem; font-size: 0.98rem; }
+  .example-box p:last-child { margin-bottom: 0; }
+
+  .real-world-box {
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 1.6rem 1.7rem;
+    margin: 2.4rem 0;
+  }
+  .real-world-box .rw-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.7rem;
+  }
+  .real-world-box p { color: rgba(255,255,255,0.8); margin-bottom: 0; font-size: 1rem; }
+
+  .further-reading-box {
+    background: var(--cream);
+    border: 1px solid rgba(184,150,62,0.35);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.5rem;
+    margin: 2.4rem 0;
+  }
+  .further-reading-box .fr-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.7rem;
+  }
+  .further-reading-box ul {
+    list-style: none;
+    margin: 0;
+  }
+  .further-reading-box li {
+    margin-bottom: 0.5rem;
+    font-size: 0.82rem;
+  }
+  .further-reading-box li:last-child { margin-bottom: 0; }
+  .further-reading-box a {
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 0.82rem;
+    border-bottom: 1px solid rgba(184,150,62,0.3);
+    transition: border-color 0.2s;
+  }
+  .further-reading-box a:hover { border-color: var(--gold); }
+  .further-reading-box .fr-source {
+    color: var(--muted);
+    font-size: 0.78rem;
+  }
+
+
+
+  .table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+  table.pos-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+  table.pos-table th {
+    background: var(--navy);
+    color: white;
+    text-align: left;
+    padding: 0.7rem 0.9rem;
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+  }
+  table.pos-table td {
+    padding: 0.7rem 0.9rem;
+    border-bottom: 1px solid var(--border-lt);
+    color: var(--slate);
+  }
+  table.pos-table tr:nth-child(even) td { background: var(--cream); }
+
+  /* ── QUIZ ── */
+  .quiz-section {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem 1.7rem 1.5rem;
+    margin-top: 3rem;
+  }
+  .quiz-section .section-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.4rem;
+  }
+  .quiz-section h2 {
+    border: none; margin: 0 0 0.4rem; padding: 0;
+  }
+  .quiz-intro { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.6rem; }
+  .quiz-item {
+    background: var(--white);
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .quiz-q {
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.7rem;
+    font-size: 1rem;
+  }
+  .quiz-q .qnum { color: var(--red); margin-right: 0.4rem; }
+  .quiz-options { list-style: none; margin: 0 0 0.9rem; }
+  .quiz-options li {
+    padding: 0.4rem 0;
+    color: var(--slate);
+    font-size: 0.96rem;
+    padding-left: 1.4rem;
+    position: relative;
+  }
+  .quiz-options li::before {
+    content: "";
+    position: absolute; left: 0; top: 0.85rem;
+    width: 6px; height: 6px;
+    background: var(--border);
+    border-radius: 50%;
+  }
+  .show-answer-btn {
+    background: var(--navy);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 0.5rem 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .show-answer-btn:hover { background: var(--navy-mid); }
+  .quiz-answer {
+    display: none;
+    margin-top: 0.9rem;
+    background: var(--gold-lt);
+    border-left: 3px solid var(--gold);
+    padding: 0.7rem 1rem;
+    font-size: 0.92rem;
+    color: var(--ink);
+    border-radius: var(--radius);
+  }
+  .quiz-answer.visible { display: block; }
+  .quiz-answer strong { color: var(--red); }
+
+  .answer-key-toggle {
+    display: block;
+    width: 100%;
+    background: var(--red);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding: 0.9rem 1rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    margin-top: 0.6rem;
+    transition: background 0.2s;
+  }
+  .answer-key-toggle:hover { background: var(--red-mid); }
+
+  .article-footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-lt);
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .article-footer-nav a {
+    text-decoration: none;
+    color: var(--red);
+    font-weight: 600;
+    font-size: 0.92rem;
+  }
+  .article-footer-nav a:hover { text-decoration: underline; }
+
+  @media (max-width: 700px) {
+    .article-hero h1 { font-size: 1.7rem; }
+    .article-wrap { padding: 2rem 1.25rem 3rem; }
+  }
+  @media (max-width: 680px) {
+    .top-bar { display: none; }
+    nav {
+      padding: 0 1rem;
+      height: 68px;
+      border-bottom-width: 2px;
+    }
+    .nav-links { display: none; }
+    .nav-brand-name {
+      font-size: 1.35rem;
+      white-space: nowrap;
+    }
+    .nav-brand-sub {
+      font-size: 0.62rem;
+      letter-spacing: 0.07em;
+    }
+    .footer-top { grid-template-columns: 1fr; gap: 2rem; padding: 2rem 1.25rem; }
+    footer { padding: 2rem 1.25rem 0; }
+  }
+
+  /* ── FOOTER (copied from site) ── */
+  footer { background: var(--navy); padding: 3.5rem 3rem 0; }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 2.5rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .footer-brand-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+  }
+  .footer-brand-name span { color: var(--red); }
+  .footer-desc { color: rgba(255,255,255,0.45); font-size: 0.9rem; margin-top: 0.8rem; max-width: 320px; }
+  .footer-col h4 {
+    font-family: 'EB Garamond', serif;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 0.7rem; }
+  .footer-col a {
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.2s;
+  }
+  .footer-col a:hover { color: var(--gold); }
+  .footer-bottom {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer-bottom p { color: rgba(255,255,255,0.35); font-size: 0.8rem; }
+  .footer-bottom-links { display: flex; gap: 1.3rem; list-style: none; }
+  .footer-bottom-links a { color: rgba(255,255,255,0.35); text-decoration: none; font-size: 0.8rem; }
+  .footer-bottom-links a:hover { color: rgba(255,255,255,0.6); }
+  @media (max-width: 900px) {
+    .footer-top { grid-template-columns: 1fr 1fr; }
+    footer { padding: 2rem 1.25rem 0; }
+  }
+
+  /* SCORED QUIZ (click-to-highlight + real scoring) */
+  .squiz-progress {
+    background: var(--cream);
+    border-radius: 30px;
+    height: 8px;
+    overflow: hidden;
+    margin-bottom: 0.4rem;
+  }
+  .squiz-progress-fill {
+    background: var(--gold);
+    height: 100%;
+    width: 0%;
+    transition: width 0.25s ease;
+  }
+  .squiz-progress-label {
+    font-size: 0.78rem;
+    color: var(--muted);
+    text-align: right;
+    margin-bottom: 1.3rem;
+  }
+  .squiz-item {
+    background: var(--white);
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .squiz-q {
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+  }
+  .squiz-q .qnum { color: var(--red); margin-right: 0.4rem; }
+  .squiz-option {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .squiz-option:hover { border-color: var(--gold); }
+  .squiz-option input[type="radio"] { accent-color: var(--red); width: 16px; height: 16px; flex-shrink: 0; }
+  .squiz-option label { cursor: pointer; font-size: 0.94rem; color: var(--slate); flex: 1; }
+  .squiz-option.selected { border-color: var(--red); background: rgba(139,0,0,0.04); }
+  .squiz-option.correct-answer { border-color: #2e7d32; background: rgba(46,125,50,0.08); }
+  .squiz-option.wrong-answer { border-color: var(--red); background: rgba(139,0,0,0.08); }
+  .squiz-submit-btn {
+    display: block;
+    width: 100%;
+    background: var(--red);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.98rem;
+    font-weight: 600;
+    padding: 0.9rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    margin-top: 0.6rem;
+    transition: background 0.2s;
+  }
+  .squiz-submit-btn:hover { background: var(--red-mid); }
+  .squiz-submit-btn:disabled { background: var(--border); cursor: not-allowed; }
+  .squiz-results {
+    display: none;
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 2rem 1.6rem;
+    text-align: center;
+    margin-bottom: 1.8rem;
+  }
+  .squiz-results.visible { display: block; }
+  .squiz-results .squiz-score-big {
+    font-family: 'EB Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .squiz-results .squiz-score-label { color: rgba(255,255,255,0.7); font-size: 0.98rem; margin-bottom: 1rem; }
+  .squiz-results .squiz-score-tier {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    border-radius: 30px;
+    background: rgba(184,150,62,0.15);
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+  }
+  .squiz-retake-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 0.65rem 1.4rem;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  .squiz-retake-btn:hover { background: rgba(255,255,255,0.1); }
+</style>
+<style id="edusambam-mark-style">
+.mark{width:48px;height:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px;border-radius:14px;background:#eef6ff;box-shadow:0 2px 7px rgba(8,47,99,.10);flex:0 0 48px}
+.mark i{display:block;border-radius:50%;background:#0b4ea2;min-width:0;min-height:0}
+.mark i:nth-child(5){background:#d4a017}
+</style>
+<style id="edusambam-reader-style">
+.mark{width:48px;height:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px;border-radius:14px;background:#eef6ff;box-shadow:0 2px 7px rgba(8,47,99,.10);flex:0 0 48px}.mark i{display:block;border-radius:50%;background:#0b4ea2;min-width:0;min-height:0}.mark i:nth-child(5){background:#d4a017}.edusambam-reader{max-width:980px;margin:1.2rem auto 0;padding:1rem 1.1rem;border:1px solid #d7e4ef;border-radius:14px;background:linear-gradient(135deg,#f7fbff,#fff);box-shadow:0 6px 18px rgba(11,45,92,.08)}.edusambam-reader strong{display:block;color:#0b55a5;font-size:.9rem;letter-spacing:.04em}.edusambam-reader .reader-slogan{color:#a87900;font-weight:900;margin-top:.25rem;font-size:.82rem}.edusambam-reader .reader-help{color:#607086;font-size:.8rem;margin:.3rem 0 .7rem}.edusambam-reader .reader-controls{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}.edusambam-reader button,.edusambam-reader select{border:1px solid #c9d9e8;background:#fff;color:#153b6e;border-radius:8px;padding:.48rem .65rem;font-weight:800;cursor:pointer}.edusambam-reader button:first-child{background:#0b55a5;color:#fff;border-color:#0b55a5}.edusambam-reader .reader-status{display:block;color:#607086;font-size:.75rem;margin-top:.55rem}.edusambam-reader .reader-progress{height:4px;background:#e4edf6;border-radius:99px;margin-top:.6rem;overflow:hidden}.edusambam-reader .reader-progress span{display:block;width:0;height:100%;background:#d4a017;transition:width .2s linear}@media(max-width:600px){.edusambam-reader{margin-left:0;margin-right:0}.edusambam-reader .reader-controls button,.edusambam-reader .reader-controls select{flex:1;min-width:75px}}
+</style>
+<style id="edusambam-frame-final">html{box-sizing:border-box;max-width:100%;overflow-x:hidden}*,*:before,*:after{box-sizing:inherit}body{max-width:100%;min-width:0;overflow-x:hidden;border:3px solid #d4a017;box-sizing:border-box}img,svg,video,iframe{max-width:100%;height:auto}h1,h2,h3,h4,p,a,span,small,b,strong{overflow-wrap:anywhere}section,header,footer,main,nav{max-width:100%;box-sizing:border-box}@media(max-width:600px){body{border-width:3px}h1,h2,h3{margin-left:0!important;margin-right:0!important}}</style><style id="edusambam-unified-nav-css">
+/* EDUSAMBAM unified navigation */
+.edusambam-nav{
+  position:sticky;top:0;z-index:10000;
+  min-height:72px;box-sizing:border-box;
+  display:flex;align-items:center;
+  padding:10px 20px;
+  background:#fff;border-bottom:1px solid #e5e7eb;
+  font-family:inherit;
+}
+.edusambam-nav-inner{
+  width:100%;max-width:1400px;margin:0 auto;
+  display:flex;align-items:center;gap:18px;min-width:0;
+}
+.edusambam-brand{
+  display:flex;align-items:center;gap:10px;min-width:0;
+  text-decoration:none;color:#0b3b66;flex:0 1 auto;
+}
+.edusambam-brand-copy{display:flex;flex-direction:column;line-height:1;min-width:0;overflow:hidden}
+.edusambam-brand-name{
+  font-family:"EB Garamond",Georgia,serif;
+  font-size:1.6rem;font-weight:600;letter-spacing:.01em;
+  color:#0b3b66;white-space:nowrap;
+}
+.edusambam-brand-subtitle{
+  margin-top:4px;
+  font-size:.62rem;font-weight:600;letter-spacing:.08em;
+  color:#64748b;white-space:nowrap;
+}
+.edusambam-nav-links{
+  display:flex;align-items:center;gap:14px;margin-left:auto;
+  list-style:none;padding:0;margin-top:0;margin-bottom:0;
+}
+.edusambam-nav-links a{
+  color:#334155;text-decoration:none;font-size:.9rem;
+  padding:8px 5px;border-radius:7px;white-space:nowrap;
+}
+.edusambam-nav-links a:hover,.edusambam-nav-links a:focus-visible{
+  color:#0b3b66;background:#f3f6f9;outline:none;
+}
+.edusambam-search-btn,.edusambam-menu-btn{
+  appearance:none;border:1px solid #d8dee6;background:#fff;
+  color:#0b3b66;border-radius:9px;min-width:40px;height:40px;
+  display:inline-flex;align-items:center;justify-content:center;
+  cursor:pointer;font-size:1.15rem;flex:0 0 auto;
+}
+.edusambam-search-btn:hover,.edusambam-menu-btn:hover,
+.edusambam-search-btn:focus-visible,.edusambam-menu-btn:focus-visible{
+  background:#f3f6f9;border-color:#b9c6d4;outline:2px solid rgba(214,162,58,.35);
+  outline-offset:2px;
+}
+.edusambam-menu-btn{display:none;font-size:1.2rem}
+.edusambam-mobile-menu{
+  display:none;position:fixed;top:72px;left:0;right:0;
+  z-index:9999;background:#fff;border-bottom:1px solid #e5e7eb;
+  box-shadow:0 8px 24px rgba(15,23,42,.12);
+  max-height:calc(100vh - 72px);overflow:auto;
+}
+.edusambam-mobile-menu.open{display:block}
+.edusambam-mobile-menu ul{list-style:none;margin:0;padding:10px 16px 16px}
+.edusambam-mobile-menu a{
+  display:block;padding:12px 10px;color:#0b3b66;text-decoration:none;
+  border-radius:8px;font-size:.98rem;
+}
+.edusambam-mobile-menu a:hover,.edusambam-mobile-menu a:focus-visible{
+  background:#f3f6f9;outline:none;
+}
+.edusambam-search-panel{
+  display:none;position:fixed;top:72px;left:0;right:0;z-index:9998;
+  background:#fff;border-bottom:1px solid #e5e7eb;
+  box-shadow:0 8px 24px rgba(15,23,42,.10);padding:12px 16px;
+}
+.edusambam-search-panel.open{display:block}
+.edusambam-search-wrap{max-width:900px;margin:0 auto;position:relative}
+.edusambam-search-input{
+  width:100%;box-sizing:border-box;padding:12px 14px;
+  border:1px solid #cbd5e1;border-radius:9px;font-size:1rem;
+}
+.edusambam-search-results{margin-top:8px;max-height:50vh;overflow:auto}
+.edusambam-search-results a{
+  display:block;padding:9px 10px;border-radius:7px;color:#0b3b66;text-decoration:none;
+}
+.edusambam-search-results a:hover{background:#f3f6f9}
+@media (max-width:1100px){
+  .edusambam-nav-links{gap:8px}
+  .edusambam-nav-links a{font-size:.84rem;padding-inline:3px}
+}
+@media (max-width:1100px){
+  .edusambam-nav{min-height:68px;padding:8px 14px}
+  .edusambam-brand-mark{width:44px;height:44px;flex-basis:44px}
+  .edusambam-brand-mark span{width:12px;height:12px}
+  .edusambam-brand-mark .c3,.edusambam-brand-mark .c6{left:16px}
+  .edusambam-brand-name{font-size:1.42rem}
+  .edusambam-brand-subtitle{font-size:.52rem;letter-spacing:.06em}
+  .edusambam-nav-links{display:none}
+  .edusambam-menu-btn{display:inline-flex}
+  .edusambam-search-btn{margin-left:auto}
+  .edusambam-mobile-menu{top:68px;max-height:calc(100vh - 68px)}
+  .edusambam-search-panel{top:68px}
+}
+@media (max-width:480px){
+  .edusambam-nav-inner{gap:8px}
+  .edusambam-brand{gap:7px}
+  .edusambam-brand-mark{width:40px;height:40px;flex-basis:40px}
+  .edusambam-brand-mark span{width:11px;height:11px}
+  .edusambam-brand-mark .c3,.edusambam-brand-mark .c6{left:14.5px}
+  .edusambam-brand-name{font-size:1.28rem}
+  .edusambam-brand-subtitle{font-size:.46rem;letter-spacing:.045em}
+  .edusambam-search-btn,.edusambam-menu-btn{min-width:38px;height:38px}
+}
+</style><style id="edusambam-logo-visibility-fix">
+/* EDUSAMBAM logo visibility fix */
+.edusambam-brand-mark{
+  position:relative !important;
+  display:inline-block !important;
+  width:48px !important;
+  height:48px !important;
+  min-width:48px !important;
+  flex:0 0 48px !important;
+  overflow:visible !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+.edusambam-brand-mark > span{
+  position:absolute !important;
+  display:block !important;
+  width:13px !important;
+  height:13px !important;
+  min-width:13px !important;
+  min-height:13px !important;
+  padding:0 !important;
+  margin:0 !important;
+  border:0 !important;
+  border-radius:50% !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  box-sizing:border-box !important;
+}
+.edusambam-brand-mark > .c1{left:0 !important;top:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c2{right:0 !important;top:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c3{left:17.5px !important;top:8px !important;background:#d6a23a !important;}
+.edusambam-brand-mark > .c4{left:0 !important;bottom:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c5{right:0 !important;bottom:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c6{left:17.5px !important;bottom:8px !important;background:#d6a23a !important;}
+
+@media (max-width:1100px){
+  .edusambam-brand-mark{
+    width:44px !important;height:44px !important;min-width:44px !important;flex-basis:44px !important;
+  }
+  .edusambam-brand-mark > span{
+    width:12px !important;height:12px !important;min-width:12px !important;min-height:12px !important;
+  }
+  .edusambam-brand-mark > .c3,.edusambam-brand-mark > .c6{left:16px !important;}
+}
+@media (max-width:480px){
+  .edusambam-brand-mark{
+    width:40px !important;height:40px !important;min-width:40px !important;flex-basis:40px !important;
+  }
+  .edusambam-brand-mark > span{
+    width:11px !important;height:11px !important;min-width:11px !important;min-height:11px !important;
+  }
+  .edusambam-brand-mark > .c3,.edusambam-brand-mark > .c6{left:14.5px !important;}
+}
+</style>
+<link href="favicon.webp" rel="icon" type="image/webp"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<style id="edusambam-menu-extra-css">
+.edusambam-mobile-menu .edusambam-menu-extra:first-of-type{
+  margin-top:8px;padding-top:8px;border-top:1px solid #e5e7eb;
+}
+.edusambam-mobile-menu .edusambam-menu-extra a{
+  font-weight:600;
+}
+</style>
+<style id="edusambam-article-footer-theme">
+.edusambam-article-footer{
+  background:linear-gradient(135deg,#06244a,#0b4ea2)!important;
+}
+</style>
+<style id="edusambam-unified-footer-fix">
+/* EDUSAMBAM unified footer: same visual language and neutral brand statement across all pages. */
+.edusambam-unified-footer,
+.edusambam-article-footer,
+footer.footer {
+  background: linear-gradient(135deg, #06244a, #0b4ea2) !important;
+  color: #fff !important;
+  border-top: 3px solid #d4a017 !important;
+  box-sizing: border-box;
+}
+.edusambam-footer-statement{margin:.25rem 0 0 !important;color:rgba(255,255,255,.88) !important;font-size:.78rem !important;letter-spacing:.08em !important;text-transform:uppercase !important}
+.edusambam-unified-footer .footer-brand-name,.edusambam-article-footer .footer-brand-name{color:#fff !important}
+</style>
+<style id="edusambam-final-unified-footer">
+/* Final unified footer — same structure, visual language, and approved nav logo on every page. */
+.edusambam-unified-footer{
+  width:100% !important;
+  margin:0 !important;
+  padding:44px 0 0 !important;
+  background:linear-gradient(135deg,#06244a,#0b4ea2) !important;
+  color:#d6e4f2 !important;
+  border-top:4px solid #d4a017 !important;
+  box-sizing:border-box !important;
+  overflow:hidden !important;
+}
+.edusambam-unified-footer .footer-top{
+  width:min(1180px,92%) !important;
+  max-width:1180px !important;
+  margin:0 auto !important;
+  padding:0 0 34px !important;
+  display:grid !important;
+  grid-template-columns:1.5fr repeat(3,1fr) !important;
+  gap:34px !important;
+  box-sizing:border-box !important;
+}
+.edusambam-unified-footer .footer-brand{min-width:0 !important;}
+.edusambam-footer-brand-row{margin:0 0 10px !important;}
+.edusambam-footer-logo-link{
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:12px !important;
+  min-width:0 !important;
+  color:#fff !important;
+  text-decoration:none !important;
+}
+.edusambam-footer-logo{
+  width:48px !important;
+  height:48px !important;
+  min-width:48px !important;
+  flex:0 0 48px !important;
+}
+.edusambam-footer-logo > span{width:13px !important;height:13px !important;min-width:13px !important;min-height:13px !important;}
+.edusambam-footer-logo > .c3,.edusambam-footer-logo > .c6{left:17.5px !important;}
+.edusambam-footer-brand-name{
+  color:#fff !important;
+  font-family:"EB Garamond",Georgia,serif !important;
+  font-size:1.65rem !important;
+  font-weight:600 !important;
+  letter-spacing:.01em !important;
+  line-height:1 !important;
+  white-space:nowrap !important;
+}
+.edusambam-unified-footer .edusambam-footer-statement{
+  margin:0 !important;
+  max-width:360px !important;
+  color:rgba(255,255,255,.88) !important;
+  font-size:.78rem !important;
+  line-height:1.7 !important;
+  letter-spacing:.08em !important;
+  text-transform:uppercase !important;
+}
+.edusambam-unified-footer .footer-col{min-width:0 !important;}
+.edusambam-unified-footer .footer-col h4{
+  margin:0 0 12px !important;
+  color:#fff !important;
+  font-family:"EB Garamond",Georgia,serif !important;
+  font-size:1rem !important;
+  font-weight:600 !important;
+  line-height:1.25 !important;
+}
+.edusambam-unified-footer .footer-col ul{
+  list-style:none !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+.edusambam-unified-footer .footer-col li{margin:0 0 8px !important;padding:0 !important;}
+.edusambam-unified-footer .footer-col a{
+  color:rgba(255,255,255,.68) !important;
+  text-decoration:none !important;
+  font-size:.84rem !important;
+  line-height:1.5 !important;
+  overflow-wrap:anywhere !important;
+}
+.edusambam-unified-footer .footer-col a:hover,
+.edusambam-unified-footer .footer-col a:focus-visible{color:#fff !important;}
+.edusambam-unified-footer .footer-bottom{
+  width:min(1180px,92%) !important;
+  max-width:1180px !important;
+  margin:0 auto !important;
+  padding:18px 0 22px !important;
+  border-top:1px solid rgba(255,255,255,.12) !important;
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:center !important;
+  gap:20px !important;
+  box-sizing:border-box !important;
+}
+.edusambam-unified-footer .footer-bottom p{
+  margin:0 !important;
+  color:rgba(255,255,255,.55) !important;
+  font-size:.8rem !important;
+  line-height:1.5 !important;
+}
+.edusambam-unified-footer .footer-bottom-links{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:18px !important;
+  list-style:none !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+.edusambam-unified-footer .footer-bottom-links a{
+  color:rgba(255,255,255,.55) !important;
+  font-size:.78rem !important;
+  line-height:1.5 !important;
+  text-decoration:none !important;
+}
+.edusambam-unified-footer .footer-bottom-links a:hover,
+.edusambam-unified-footer .footer-bottom-links a:focus-visible{color:#fff !important;}
+@media(max-width:900px){
+  .edusambam-unified-footer{padding-top:32px !important;}
+  .edusambam-unified-footer .footer-top{grid-template-columns:1fr 1fr !important;gap:28px 22px !important;}
+  .edusambam-unified-footer .footer-brand{grid-column:1/-1 !important;}
+}
+@media(max-width:600px){
+  .edusambam-unified-footer{padding-top:30px !important;}
+  .edusambam-unified-footer .footer-top{width:calc(100% - 28px) !important;grid-template-columns:1fr 1fr !important;gap:26px 20px !important;padding-bottom:28px !important;}
+  .edusambam-unified-footer .footer-bottom{width:calc(100% - 28px) !important;display:block !important;padding:16px 0 20px !important;}
+  .edusambam-unified-footer .footer-bottom-links{margin-top:10px !important;gap:16px !important;}
+  .edusambam-footer-logo{width:44px !important;height:44px !important;min-width:44px !important;flex-basis:44px !important;}
+  .edusambam-footer-logo > span{width:12px !important;height:12px !important;min-width:12px !important;min-height:12px !important;}
+  .edusambam-footer-logo > .c3,.edusambam-footer-logo > .c6{left:16px !important;}
+  .edusambam-footer-brand-name{font-size:1.48rem !important;}
+}
+@media(max-width:430px){
+  .edusambam-unified-footer .footer-top{grid-template-columns:1fr !important;gap:22px !important;}
+  .edusambam-unified-footer .footer-brand{grid-column:auto !important;}
+}
+</style>
+<style id="edusambam-footer-final-alignment">
+/* Final EDUSAMBAM footer consistency pass: identical royal-blue footer and left alignment on every page. */
+.edusambam-unified-footer {
+  background: linear-gradient(135deg,#06244a,#0b4ea2) !important;
+  color:#d6e4f2 !important;
+  text-align:left !important;
+  width:100% !important;
+  box-sizing:border-box !important;
+}
+.edusambam-unified-footer,
+.edusambam-unified-footer *,
+.edusambam-unified-footer h1,
+.edusambam-unified-footer h2,
+.edusambam-unified-footer h3,
+.edusambam-unified-footer h4,
+.edusambam-unified-footer p,
+.edusambam-unified-footer ul,
+.edusambam-unified-footer li,
+.edusambam-unified-footer a,
+.edusambam-unified-footer span {
+  text-align:left !important;
+}
+.edusambam-unified-footer .footer-top,
+.edusambam-unified-footer .footer-brand,
+.edusambam-unified-footer .footer-col,
+.edusambam-unified-footer .footer-bottom {
+  margin-left:0 !important;
+}
+.edusambam-unified-footer .footer-top {
+  margin-right:auto !important;
+}
+.edusambam-unified-footer .edusambam-footer-brand-row {
+  text-align:left !important;
+}
+.edusambam-unified-footer .edusambam-footer-logo-link {
+  justify-content:flex-start !important;
+  text-align:left !important;
+}
+.edusambam-unified-footer .footer-bottom {
+  justify-content:flex-start !important;
+  align-items:flex-start !important;
+  flex-direction:column !important;
+}
+.edusambam-unified-footer .footer-bottom-links {
+  justify-content:flex-start !important;
+  align-items:flex-start !important;
+}
+@media (max-width:600px) {
+  .edusambam-unified-footer .footer-top,
+  .edusambam-unified-footer .footer-bottom {
+    margin-left:0 !important;
+    margin-right:auto !important;
+  }
+}
+</style><style id="edusambam-footer-social-css">.edusambam-footer-social{margin-top:14px}.edusambam-footer-social a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);color:rgba(255,255,255,.85);transition:background .15s,color .15s}.edusambam-footer-social a:hover{background:rgba(255,255,255,.22);color:#fff}</style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2230995786427221"
+     crossorigin="anonymous"></script>
+<style id="edusambam-article-list-fix">.article-wrap ol{margin:0 0 1.2rem 1.4rem;color:var(--slate)}.article-wrap li{font-size:1.02rem}.article-wrap h3{margin:1.4rem 0 .5rem}.article-wrap p a,.article-wrap li a{color:var(--navy-mid);text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:3px}.article-wrap p a:hover,.article-wrap li a:hover{color:var(--navy)}.article-wrap code{background:var(--red-lt);color:var(--navy);padding:1px 5px;border-radius:3px;font-size:.92em}.example-box code{background:rgba(255,255,255,.65)}</style>
+</head>
+<body id="top">
+<!-- TOP BAR -->
+<div class="top-bar">
+<p>Established 2026  ·  Free Educational Resources for All</p>
+<ul class="top-bar-links">
+<li><a href="contact.html">Contact</a></li><li><a href="index.html#about-edusambam">About</a></li><li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+</ul>
+</div>
+<!-- NAV -->
+<nav aria-label="Primary navigation" class="edusambam-nav">
+<div class="edusambam-nav-inner">
+<a aria-label="EDUSAMBAM home" class="edusambam-brand" href="index.html">
+<img alt="EDUSAMBAM" class="edusambam-brand-mark" src="logo-icon-full.png" style="width:auto;height:56px;max-width:220px;object-fit:contain;background:none;border-radius:0;flex-basis:auto;"/>
+<span class="edusambam-brand-copy">
+<span class="edusambam-brand-subtitle">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</span>
+</span>
+</a>
+<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li></ul>
+<button aria-label="Search" class="edusambam-search-btn" title="Search" type="button">⌕</button>
+<button aria-expanded="false" aria-label="Open menu" class="edusambam-menu-btn" title="Menu" type="button">☰</button>
+</div>
+</nav>
+<div aria-label="Mobile navigation" class="edusambam-mobile-menu">
+<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="assessment-arena.html">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="index.html#about-edusambam">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
+</div>
+<div aria-label="Site search" class="edusambam-search-panel">
+<div class="edusambam-search-wrap">
+<input aria-label="Search EDUSAMBAM" class="edusambam-search-input" placeholder="Search EDUSAMBAM…" type="search"/>
+<div class="edusambam-search-results"></div>
+</div>
+</div>
+<!-- ARTICLE HERO -->
+<div class="article-hero">
+<div class="breadcrumb"><a href="index.html#gateway">Gateway</a>  /  <a href="index.html#subject-chemistry">Chemistry</a>  /  Rates of Reaction and Energy Changes</div>
+<div class="article-hero-tag">Chemistry · Reactions &amp; Substances</div>
+<h1>Rates of Reaction and Energy Changes in Chemistry</h1>
+<p class="sub">Why does a firework explode in a flash while iron rusts over years, and why does a hand warmer heat up while a cold pack cools? Two ideas, collision theory and bond energy, explain both.</p>
+<div class="article-hero-meta">
+<span>EDUSAMBAM Editorial Team</span>
+<span>|</span>
+<span>22 min read</span>
+<span>|</span>
+<span>Chemistry</span>
+</div>
+</div>
+<!-- ARTICLE BODY -->
+<div aria-label="EDUSAMBAM article reader" class="edusambam-reader"><strong>🔊 LISTEN TO THIS ARTICLE</strong><div class="reader-slogan">SAVE YOUR EYES • IMPROVE YOUR LISTENING</div><div class="reader-help">Listen to the article instead of relying only on continuous screen reading.</div><div class="reader-controls"><button data-reader="play" type="button">▶ Play</button><button data-reader="pause" type="button">⏸ Pause</button><button data-reader="resume" type="button">▶ Resume</button><button data-reader="stop" type="button">■ Stop</button><select aria-label="Reading speed"><option value="1">1×</option><option value="0.8">0.8×</option><option value="1.2">1.2×</option></select></div><div aria-hidden="true" class="reader-progress"><span></span></div><small class="reader-status">Ready to read the article.</small></div>
+<div class="article-wrap">
+<p class="lead">Some chemical reactions happen in a flash, such as a firework exploding. Others take years, such as iron slowly turning to rust. Some reactions make the surroundings hot, such as a burning candle, and others make them cold, such as the chemicals in an instant cold pack. Two ideas explain all of this: the <strong>rate of a reaction</strong>, which tells us how fast it goes, and the <strong>energy change</strong>, which tells us how much energy it takes in or gives out. This guide explains both, shows how to measure and calculate them, and links them to everyday life, with each scientific word explained.</p>
+
+<div class="example-box">
+<div class="ex-label">Key Takeaways</div>
+<p>Reactions happen when particles collide with enough energy. The rate rises with higher concentration, higher temperature, larger surface area and the use of a catalyst, because these make successful collisions more frequent or easier. Every reaction either releases energy (exothermic) or absorbs it (endothermic): breaking bonds takes in energy and making bonds gives it out. Energy changes can be measured by temperature change and calculated from bond energies.</p>
+</div>
+
+<h2><span class="num">1.</span>Part One: Rates of Reaction</h2>
+<p>The <strong>rate of reaction</strong> is a measure of how quickly the reactants are used up or how quickly the products are made. A fast reaction has a high rate, and a slow reaction has a low rate. We can write it as:</p>
+<div class="diagram-box">
+<p><strong>Rate = change in amount &divide; time taken</strong></p>
+</div>
+<div class="diagram-caption">The amount can be a mass in grams, a volume of gas in cm&sup3;, or a concentration in mol/dm&sup3;.</div>
+<p>The unit of rate depends on what you measure, for example g/s (grams per second) or cm&sup3;/s (cubic centimetres per second). If you need a reminder about reactions and equations, read our article <a href="chemical-reactions-equations.html">Chemical Reactions and Equations</a>.</p>
+
+<h2><span class="num">2.</span>How Rates Are Measured</h2>
+<p>To follow a reaction, we choose something that changes steadily and can be measured. Four common methods are shown below.</p>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Method</th><th>What you measure</th><th>Suits reactions that...</th></tr>
+<tr><td>Collect the gas</td><td>Volume of gas produced over time, using a gas syringe or an upturned measuring cylinder in water</td><td>Produce a gas, such as acid with a metal or a carbonate</td></tr>
+<tr><td>Measure mass loss</td><td>The mass on a balance as the gas escapes</td><td>Release a gas that is not very soluble</td></tr>
+<tr><td>Time a cloudy change</td><td>How long a solid (precipitate) takes to hide a cross under the flask</td><td>Produce a solid that makes the liquid cloudy</td></tr>
+<tr><td>Observe a colour change</td><td>Time for a colour to appear or vanish, or readings from a colour meter</td><td>Involve a change of colour</td></tr>
+</table>
+</div>
+<p>Chemistry experiments can involve glassware, hot water, acids and gases, so always follow your teacher's instructions and wear eye protection. Our article on <a href="lab-safety-scientific-equipment.html">lab safety</a> explains the basics.</p>
+
+<h3>A worked example: reading rate from data</h3>
+<p>A student reacts magnesium with acid and collects the hydrogen gas. The total volume is recorded every 10 seconds.</p>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Time (s)</th><th>Total gas (cm&sup3;)</th><th>Gas made in this 10 s (cm&sup3;)</th><th>Rate (cm&sup3;/s)</th></tr>
+<tr><td>0</td><td>0</td><td>&ndash;</td><td>&ndash;</td></tr>
+<tr><td>10</td><td>22</td><td>22</td><td>2.2</td></tr>
+<tr><td>20</td><td>38</td><td>16</td><td>1.6</td></tr>
+<tr><td>30</td><td>48</td><td>10</td><td>1.0</td></tr>
+<tr><td>40</td><td>54</td><td>6</td><td>0.6</td></tr>
+<tr><td>50</td><td>58</td><td>4</td><td>0.4</td></tr>
+<tr><td>60</td><td>60</td><td>2</td><td>0.2</td></tr>
+</table>
+</div>
+<div class="example-box">
+<div class="ex-label">What the data show</div>
+<p><strong>Average rate over the whole experiment:</strong> 60 cm&sup3; &divide; 60 s = <strong>1.0 cm&sup3;/s</strong>.</p>
+<p><strong>The rate is highest at the start</strong> (2.2 cm&sup3;/s) and falls steadily, because the reactants are being used up and there are fewer particles to collide. On a graph of total gas against time, the line starts steep and then flattens. It becomes flat when one reactant has run out, and the reaction has stopped.</p>
+</div>
+<p>On such a graph, a steeper line means a faster rate. If you compare two experiments on the same graph, the steeper line belongs to the faster reaction, and both lines level off at the same height if they started with the same amount of the limiting reactant. For practice with reading graphs, see <a href="graphs-and-pie-charts.html">Graphs and Pie Charts</a>.</p>
+
+<h2><span class="num">3.</span>Collision Theory: Why Reactions Happen</h2>
+<p>The <strong>collision theory</strong> explains reaction rates. It says that a reaction occurs only when reacting particles <em>collide</em>, and only some collisions lead to a reaction. A successful (effective) collision needs two things:</p>
+<ol>
+<li><strong>Enough energy.</strong> The particles must hit each other with at least a minimum amount of energy, called the <strong>activation energy</strong>. This energy is needed to break the first bonds so that new ones can form.</li>
+<li><strong>The right orientation.</strong> The particles must be facing each other in a suitable way when they collide.</li>
+</ol>
+<p>Most collisions do not have enough energy and simply bounce apart. So the rate of reaction depends on <strong>how often</strong> particles collide and <strong>how many of those collisions are successful</strong>. Every factor that speeds up a reaction does so by increasing one of these two things.</p>
+
+<h2><span class="num">4.</span>The Factors That Change the Rate</h2>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Factor</th><th>Effect on particles</th><th>Effect on rate</th></tr>
+<tr><td>Higher concentration (or higher pressure for gases)</td><td>More particles in the same space, so collisions are more frequent</td><td>Faster</td></tr>
+<tr><td>Higher temperature</td><td>Particles move faster and have more energy: collisions are more frequent and more of them are successful</td><td>Faster</td></tr>
+<tr><td>Larger surface area (smaller pieces)</td><td>More particles of a solid are exposed to collisions</td><td>Faster</td></tr>
+<tr><td>A catalyst</td><td>Gives the reaction an easier path with a lower activation energy</td><td>Faster</td></tr>
+<tr><td>Light (for some reactions)</td><td>Provides the energy for the reaction</td><td>Faster</td></tr>
+</table>
+</div>
+<h3>Concentration and pressure</h3>
+<p><strong>Concentration</strong> is the amount of a substance dissolved in a given volume. In a more concentrated solution there are more particles in every cubic centimetre, so they meet more often. For gases, increasing the pressure squeezes the particles closer together, which has the same effect.</p>
+<h3>Temperature</h3>
+<p>Raising the temperature has two effects. The particles move faster, so they collide more often, and, more importantly, a larger fraction of them have at least the activation energy. For many reactions at around room temperature, the rate roughly doubles for each 10&deg;C rise, but this is only a rule of thumb, not an exact law. Cooling slows reactions, which is why we keep food in a refrigerator: the chemical reactions that spoil food, and the growth of microorganisms, are slowed.</p>
+<h3>Surface area</h3>
+<p>Only the particles at the surface of a solid can collide with a liquid or gas. Breaking a solid into smaller pieces exposes more particles. Consider a cube with sides of 1 cm.</p>
+<div class="example-box">
+<div class="ex-label">Worked example: surface area</div>
+<p><strong>One large cube</strong> (1 cm &times; 1 cm &times; 1 cm): it has 6 faces, each 1 cm&sup2;, so the surface area is 6 &times; 1 = <strong>6 cm&sup2;</strong>.</p>
+<p><strong>Cut it into 8 small cubes</strong> (each 0.5 cm on a side): each face is 0.5 &times; 0.5 = 0.25 cm&sup2;, so each small cube has 6 &times; 0.25 = 1.5 cm&sup2;. Together, 8 &times; 1.5 = <strong>12 cm&sup2;</strong>.</p>
+<p>The total volume is unchanged, but the surface area has doubled, so the reaction can happen about twice as fast, if other things stay the same. Powdered marble reacts with acid much faster than a large lump of marble.</p>
+</div>
+<p>This idea explains why a cloud of fine flour or coal dust in the air can explode: the huge surface area exposed to oxygen allows combustion to spread extremely rapidly. Factories that handle powders, such as flour mills and grain stores, must control dust to prevent this danger.</p>
+
+<h2><span class="num">5.</span>Catalysts and Enzymes</h2>
+<p>A <strong>catalyst</strong> is a substance that speeds up a reaction without being used up. It provides an alternative route for the reaction with a lower activation energy, so a larger fraction of collisions are successful. At the end of the reaction, the catalyst is chemically the same as it was at the start and can be used again. A catalyst does <strong>not</strong> change the amount of product that can be made, only how fast it forms.</p>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Catalyst</th><th>Used for</th></tr>
+<tr><td>Manganese(IV) oxide</td><td>Speeding up the breakdown of hydrogen peroxide into water and oxygen</td></tr>
+<tr><td>Iron</td><td>Making ammonia in industry (the Haber process)</td></tr>
+<tr><td>Platinum, palladium and rhodium</td><td>Catalytic converters in car exhausts, which change harmful gases into less harmful ones</td></tr>
+<tr><td>Enzymes</td><td>Speeding up the reactions in living things, such as digestion</td></tr>
+</table>
+</div>
+<p><strong>Enzymes</strong> are biological catalysts, made of protein. Each works best at a certain temperature and pH. To explore this, see <a href="enzyme-activity.html">Enzyme Activity</a> and <a href="biological-molecules-enzymes-food-tests.html">Biological Molecules, Enzymes and Food Tests</a>.</p>
+
+<h2><span class="num">6.</span>Part Two: Energy Changes in Reactions</h2>
+<p>Every chemical reaction involves energy. The energy is stored in the <strong>chemical bonds</strong> between atoms (read more in <a href="chemical-bonding.html">Chemical Bonding</a>). During a reaction, the bonds in the reactants are broken, and new bonds in the products are made. The key rule is:</p>
+<div class="diagram-box">
+<p><strong>Breaking bonds takes in energy. Making bonds gives out energy.</strong></p>
+</div>
+<div class="diagram-caption">The overall energy change depends on which is larger.</div>
+<p>Energy is never created or destroyed in a reaction. It is only transferred between the chemicals and the surroundings, a principle called the <strong>conservation of energy</strong>. Our article on <a href="energy-types-sources-transformations.html">energy types and transformations</a> explains this idea more widely.</p>
+
+<h2><span class="num">7.</span>Exothermic and Endothermic Reactions</h2>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Exothermic</th><th>Endothermic</th></tr>
+<tr><td><strong>Energy</strong> goes <strong>out</strong> to the surroundings</td><td><strong>Energy</strong> comes <strong>in</strong> from the surroundings</td></tr>
+<tr><td>Surroundings get <strong>warmer</strong></td><td>Surroundings get <strong>colder</strong></td></tr>
+<tr><td>Making bonds releases more energy than breaking bonds takes in</td><td>Breaking bonds takes in more energy than making bonds releases</td></tr>
+<tr><td><em>Examples:</em> burning fuels, respiration, neutralisation, slow rusting</td><td><em>Examples:</em> photosynthesis, heating calcium carbonate, dissolving ammonium nitrate</td></tr>
+<tr><td><em>Everyday use:</em> hand warmers, heaters</td><td><em>Everyday use:</em> instant cold packs</td></tr>
+</table>
+</div>
+<p>A helpful memory aid: <strong>exo</strong> means "out" and <strong>endo</strong> means "in", like <em>exit</em> and <em>entrance</em>. Notice that "endothermic" means that the reaction takes in energy, so the surroundings get colder. The reaction itself does not become cold.</p>
+
+<h3>Reversible reactions and energy</h3>
+<p>If a reaction is exothermic in one direction, it is endothermic by the same amount in the reverse direction. A classic example is blue hydrated copper(II) sulfate. When it is heated, water is driven off and the powder turns white (an endothermic change). When water is added to the white powder, it turns blue again and gets warm (an exothermic change).</p>
+
+<h2><span class="num">8.</span>Energy Profile Diagrams</h2>
+<p>An <strong>energy profile diagram</strong> shows how the energy of the chemicals changes during a reaction. The vertical axis is energy, and the horizontal axis is the progress of the reaction. The "hump" in the middle is the activation energy, the energy barrier that must be overcome. The difference in height between reactants and products is the <strong>energy change</strong>, written <strong>&Delta;H</strong> (pronounced "delta H"). The symbol &Delta; means "change in".</p>
+<div class="diagram-box">
+<svg viewBox="0 0 420 240" role="img" aria-label="Energy profile for an exothermic reaction" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:440px;height:auto;display:block;margin:0 auto" font-family="Arial, sans-serif">
+<title>Energy profile for an exothermic reaction</title>
+<defs><marker id="ahexo" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#b8860b"/></marker></defs>
+<line x1="50" y1="205" x2="50" y2="15" stroke="#142033" stroke-width="2"/>
+<line x1="50" y1="205" x2="408" y2="205" stroke="#142033" stroke-width="2"/>
+<text x="16" y="110" font-size="16" fill="#142033" transform="rotate(-90 16 110)" text-anchor="middle">Energy</text>
+<text x="229" y="228" font-size="16" fill="#142033" text-anchor="middle">Progress of reaction</text>
+<path d="M60 100 H140 C170 100 190 40 220 40 C250 40 270 160 300 160 H395" fill="none" stroke="#0b4ea2" stroke-width="3.5"/>
+<text x="100" y="122" font-size="16" font-weight="bold" fill="#06244a" text-anchor="middle">Reactants</text>
+<text x="347" y="182" font-size="16" font-weight="bold" fill="#06244a" text-anchor="middle">Products</text>
+<line x1="150" y1="100" x2="150" y2="40" stroke="#b8860b" stroke-width="2" marker-end="url(#ahexo)"/>
+<text x="144" y="64" font-size="15" fill="#142033" text-anchor="end">Activation</text>
+<text x="144" y="80" font-size="15" fill="#142033" text-anchor="end">energy</text>
+<line x1="385" y1="100" x2="385" y2="160" stroke="#b8860b" stroke-width="2" marker-end="url(#ahexo)"/>
+<line x1="300" y1="100" x2="385" y2="100" stroke="#607086" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="378" y="126" font-size="15" fill="#142033" text-anchor="end">ΔH is</text>
+<text x="378" y="142" font-size="15" fill="#142033" text-anchor="end">negative</text>
+</svg>
+</div>
+<div class="diagram-caption">Exothermic: the products have less energy than the reactants, so energy is released and &Delta;H is negative.</div>
+<div class="diagram-box">
+<svg viewBox="0 0 420 240" role="img" aria-label="Energy profile for an endothermic reaction" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:440px;height:auto;display:block;margin:0 auto" font-family="Arial, sans-serif">
+<title>Energy profile for an endothermic reaction</title>
+<defs><marker id="ahendo" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#b8860b"/></marker></defs>
+<line x1="50" y1="205" x2="50" y2="15" stroke="#142033" stroke-width="2"/>
+<line x1="50" y1="205" x2="408" y2="205" stroke="#142033" stroke-width="2"/>
+<text x="16" y="110" font-size="16" fill="#142033" transform="rotate(-90 16 110)" text-anchor="middle">Energy</text>
+<text x="229" y="228" font-size="16" fill="#142033" text-anchor="middle">Progress of reaction</text>
+<path d="M60 160 H140 C170 160 190 40 220 40 C250 40 270 100 300 100 H395" fill="none" stroke="#0b4ea2" stroke-width="3.5"/>
+<text x="100" y="182" font-size="16" font-weight="bold" fill="#06244a" text-anchor="middle">Reactants</text>
+<text x="347" y="88" font-size="16" font-weight="bold" fill="#06244a" text-anchor="middle">Products</text>
+<line x1="150" y1="160" x2="150" y2="40" stroke="#b8860b" stroke-width="2" marker-end="url(#ahendo)"/>
+<text x="144" y="94" font-size="15" fill="#142033" text-anchor="end">Activation</text>
+<text x="144" y="110" font-size="15" fill="#142033" text-anchor="end">energy</text>
+<line x1="385" y1="160" x2="385" y2="100" stroke="#b8860b" stroke-width="2" marker-end="url(#ahendo)"/>
+<line x1="300" y1="160" x2="385" y2="160" stroke="#607086" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="378" y="126" font-size="15" fill="#142033" text-anchor="end">ΔH is</text>
+<text x="378" y="142" font-size="15" fill="#142033" text-anchor="end">positive</text>
+</svg>
+</div>
+<div class="diagram-caption">Endothermic: the products have more energy than the reactants, so energy is absorbed and &Delta;H is positive.</div>
+<p>Two important points follow from these diagrams. First, even an exothermic reaction needs a push to start: a match must be struck and a fuel must be lit, because the activation energy must be supplied first. Second, <strong>a catalyst lowers the height of the hump</strong> but does not change the heights of the reactants and products, so &Delta;H stays the same.</p>
+
+<h2><span class="num">9.</span>Calculating Energy Changes from Bond Energies</h2>
+<p>A <strong>bond energy</strong> is the average energy needed to break one mole of a particular bond (see <a href="mole-chemical-calculations.html">The Mole and Chemical Calculations</a> for the meaning of a mole). It is measured in kilojoules per mole (kJ/mol). The method has three steps:</p>
+<ol>
+<li>Add up the energy needed to <strong>break</strong> all the bonds in the reactants.</li>
+<li>Add up the energy released when all the bonds in the products are <strong>made</strong>.</li>
+<li><strong>&Delta;H = energy to break bonds &minus; energy released making bonds.</strong></li>
+</ol>
+<div class="example-box">
+<div class="ex-label">Worked example 1: hydrogen and chlorine</div>
+<p><strong>H<sub>2</sub> + Cl<sub>2</sub> &rarr; 2HCl</strong></p>
+<p>Bond energies: H&ndash;H = 436, Cl&ndash;Cl = 243, H&ndash;Cl = 432 (all in kJ/mol).</p>
+<p><strong>Bonds broken:</strong> one H&ndash;H and one Cl&ndash;Cl: 436 + 243 = <strong>679 kJ</strong>.</p>
+<p><strong>Bonds made:</strong> two H&ndash;Cl: 2 &times; 432 = <strong>864 kJ</strong>.</p>
+<p><strong>&Delta;H = 679 &minus; 864 = &minus;185 kJ/mol.</strong> The negative sign shows the reaction is <strong>exothermic</strong>, because more energy is released than is taken in.</p>
+</div>
+<div class="example-box">
+<div class="ex-label">Worked example 2: burning methane</div>
+<p><strong>CH<sub>4</sub> + 2O<sub>2</sub> &rarr; CO<sub>2</sub> + 2H<sub>2</sub>O</strong></p>
+<p>Bond energies: C&ndash;H = 413, O=O = 498, C=O = 805, O&ndash;H = 464 (kJ/mol).</p>
+<p><strong>Bonds broken:</strong> 4 C&ndash;H and 2 O=O: (4 &times; 413) + (2 &times; 498) = 1,652 + 996 = <strong>2,648 kJ</strong>.</p>
+<p><strong>Bonds made:</strong> 2 C=O and 4 O&ndash;H: (2 &times; 805) + (4 &times; 464) = 1,610 + 1,856 = <strong>3,466 kJ</strong>.</p>
+<p><strong>&Delta;H = 2,648 &minus; 3,466 = &minus;818 kJ/mol</strong>, so the reaction is exothermic.</p>
+</div>
+<p>Bond energies are <em>average</em> values, so a calculated answer is an estimate and may differ somewhat from a value measured in an experiment.</p>
+
+<h2><span class="num">10.</span>Measuring Energy Changes in the Laboratory</h2>
+<p>The energy released or absorbed by a reaction in water can be found by measuring the temperature change. This method is called <strong>calorimetry</strong>. The formula is:</p>
+<div class="diagram-box">
+<p><strong>Q = m &times; c &times; &Delta;T</strong></p>
+</div>
+<div class="diagram-caption">Q = energy transferred (joules), m = mass of water (g), c = specific heat capacity of water (4.18 J/g&deg;C), &Delta;T = temperature change (&deg;C).</div>
+<div class="example-box">
+<div class="ex-label">Worked example</div>
+<p>A student adds an acid to an alkali in 50 cm&sup3; of water (assume 50 g). The temperature rises from 20.0&deg;C to 26.0&deg;C.</p>
+<p><strong>&Delta;T</strong> = 26.0 &minus; 20.0 = 6.0&deg;C.</p>
+<p><strong>Q</strong> = 50 &times; 4.18 &times; 6.0 = <strong>1,254 J</strong>, which is 1.254 kJ.</p>
+<p>If 0.025 mol of reactant took part, the energy per mole is 1.254 &divide; 0.025 = <strong>50.16 kJ/mol</strong>, or about 50.2 kJ/mol. The reaction is exothermic, so &Delta;H is about &minus;50.2 kJ/mol.</p>
+</div>
+<p>This calculation assumes that 1 cm&sup3; of water has a mass of 1 g, and that no heat is lost to the air. In practice some heat is always lost, so the result is a little too small. Using a lid and an insulated cup reduces the error. If you want to learn about the units used here, see <a href="scientific-measurement-si-units.html">Scientific Measurement and SI Units</a>.</p>
+
+<h2><span class="num">11.</span>Rates and Energy in Everyday Life</h2>
+<ul>
+<li><strong>Food storage:</strong> refrigerators and freezers slow the reactions that spoil food.</li>
+<li><strong>Cooking:</strong> cutting food into small pieces and heating it speeds up cooking. A pressure cooker raises the boiling point, so food cooks faster.</li>
+<li><strong>Fuels and engines:</strong> combustion is exothermic, and car engines use catalytic converters to reduce harmful gases.</li>
+<li><strong>Your body:</strong> respiration is an exothermic process that releases energy from food (see <a href="cellular-respiration-energy-gas-exchange.html">Cellular Respiration, Energy and Gas Exchange</a>), and enzymes make body reactions fast enough at body temperature.</li>
+<li><strong>Hand warmers and cold packs:</strong> these use exothermic and endothermic changes to warm or cool the body.</li>
+<li><strong>Industry:</strong> catalysts, temperature and pressure are chosen to make products quickly and economically.</li>
+</ul>
+<p>For more, see <a href="chemistry-in-everyday-life.html">Chemistry in Everyday Life</a>.</p>
+
+<h2><span class="num">12.</span>Planning a Fair Investigation</h2>
+<p>A good experiment changes only one thing at a time. In an investigation of how temperature affects the rate of the reaction between sodium thiosulfate solution and dilute hydrochloric acid, you would measure the time for a cross under the flask to disappear as the mixture turns cloudy.</p>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Type of variable</th><th>In this experiment</th></tr>
+<tr><td>Independent variable (what you change)</td><td>The temperature of the mixture</td></tr>
+<tr><td>Dependent variable (what you measure)</td><td>The time for the cross to disappear</td></tr>
+<tr><td>Control variables (keep the same)</td><td>Concentration and volume of both solutions, the flask, the person judging the cross</td></tr>
+</table>
+</div>
+<p>Repeat each temperature at least twice and calculate a mean to improve reliability. Because the rate is the opposite of the time (a shorter time means a faster rate), you can plot 1 &divide; time to show rate on a graph. This reaction produces a small amount of sulfur dioxide gas, so it must be done only in a well-ventilated room under teacher supervision, with eye protection and with care when handling hot water.</p>
+
+<h2><span class="num">13.</span>Common Misconceptions</h2>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Misconception</th><th>Correct idea</th></tr>
+<tr><td>A catalyst is used up</td><td>A catalyst is not used up, and can be reused</td></tr>
+<tr><td>A catalyst gives more product</td><td>It only makes the same amount of product form faster</td></tr>
+<tr><td>Breaking bonds releases energy</td><td>Breaking bonds takes in energy; making bonds releases it</td></tr>
+<tr><td>Exothermic reactions need no energy to start</td><td>They still need activation energy, such as a flame or spark</td></tr>
+<tr><td>Endothermic reactions are themselves cold</td><td>They take energy from the surroundings, which then cool</td></tr>
+<tr><td>A faster reaction makes more product</td><td>Rate is how fast; the amount of product depends on the amount of reactants</td></tr>
+<tr><td>The rate always exactly doubles for each 10&deg;C</td><td>This is only a rough rule for many reactions</td></tr>
+<tr><td>Heating only makes particles collide more often</td><td>It also gives more particles enough energy to react</td></tr>
+</table>
+</div>
+
+<h2><span class="num">14.</span>Studying This Topic for Exams</h2>
+<ul>
+<li><strong>Use the two-part answer for rate:</strong> "more frequent collisions" and "more successful collisions" (higher energy), and explain which applies.</li>
+<li><strong>Always write units</strong> and show working for rate, bond energy and calorimetry calculations.</li>
+<li><strong>Draw the energy profile</strong> from memory, labelling reactants, products, activation energy and &Delta;H.</li>
+<li><strong>Interpret graphs:</strong> steeper means faster, flat means finished.</li>
+<li><strong>Remember the sign:</strong> exothermic means &Delta;H is negative.</li>
+<li><strong>Practise</strong> with the full-length chemistry tests, such as <a href="practice-test-chemistry-comprehensive-1.html">Chemistry Comprehensive Practice Test 1</a>, and use the methods in <a href="study-skills-and-exam-technique.html">Study Skills and Exam Technique</a>.</li>
+</ul>
+
+<h2><span class="num">15.</span>Your Rates and Energy Checklist</h2>
+<ul>
+<li>I can define rate of reaction and calculate an average rate with units.</li>
+<li>I can describe four ways to measure rate.</li>
+<li>I can explain collision theory and activation energy.</li>
+<li>I can explain how concentration, temperature, surface area and catalysts change the rate.</li>
+<li>I can distinguish exothermic and endothermic reactions and give examples.</li>
+<li>I can draw and label an energy profile diagram.</li>
+<li>I can calculate &Delta;H from bond energies and Q from Q = mc&Delta;T.</li>
+<li>I can plan a fair test and name the variables.</li>
+</ul>
+
+<h2>Key Terms</h2>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Term</th><th>Meaning</th></tr>
+<tr><td>Rate of reaction</td><td>How quickly reactants are used up or products are made</td></tr>
+<tr><td>Collision theory</td><td>Reactions happen when particles collide with enough energy and the right orientation</td></tr>
+<tr><td>Activation energy</td><td>The minimum energy needed for a collision to be successful</td></tr>
+<tr><td>Catalyst</td><td>A substance that speeds up a reaction without being used up</td></tr>
+<tr><td>Exothermic</td><td>A reaction that releases energy to the surroundings</td></tr>
+<tr><td>Endothermic</td><td>A reaction that absorbs energy from the surroundings</td></tr>
+<tr><td>&Delta;H</td><td>The overall energy change of a reaction</td></tr>
+<tr><td>Bond energy</td><td>The energy needed to break one mole of a particular bond</td></tr>
+<tr><td>Calorimetry</td><td>Measuring energy changes using temperature change</td></tr>
+<tr><td>Surface area</td><td>The total area of the outside of a solid that can meet other substances</td></tr>
+</table>
+</div>
+
+<h2>A Closing Thought</h2>
+<p>Why does a lump of coal burn slowly while coal dust can explode? Why does a cold pack get cold and a hand warmer get warm? The answers come from just two ideas: particles must collide with enough energy to react, and bonds take in energy when they break and give it out when they form. Once you understand these, a very large number of everyday observations make sense, from cooking and refrigeration to engines and the chemistry of your own body. Try drawing both energy profile diagrams from memory today, and explain each one aloud in your own words.</p>
+<div class="further-reading-box">
+<div class="fr-label">Further Reading</div>
+<ul>
+<li><a href="https://edu.rsc.org/" rel="noopener noreferrer" target="_blank">Royal Society of Chemistry: Education</a> <span class="fr-source">— free resources and experiments for learners and teachers</span></li>
+<li><a href="https://www.khanacademy.org/science/chemistry" rel="noopener noreferrer" target="_blank">Khan Academy: Chemistry</a> <span class="fr-source">— free lessons on kinetics, thermodynamics and reactions</span></li>
+<li><a href="https://www.bbc.co.uk/bitesize" rel="noopener noreferrer" target="_blank">BBC Bitesize</a> <span class="fr-source">— free revision guides on rates of reaction and energy changes</span></li>
+</ul>
+</div>
+</div>
+<!-- QUIZ SECTION -->
+<div class="quiz-section">
+<div class="section-eyebrow">Test Your Understanding</div>
+<h2>Practice Quiz</h2>
+<p class="quiz-intro">14 questions. Select an answer for each, then submit to see your score instantly.</p>
+<div class="squiz-progress"><div class="squiz-progress-fill" id="squizProgressFill"></div></div>
+<div class="squiz-progress-label" id="squizProgressLabel">0 of 14 answered</div>
+<div class="squiz-results" id="squizResults">
+<div class="squiz-score-big" id="squizScoreBig">0/14</div>
+<div class="squiz-score-label" id="squizScoreLabel">You scored 0%</div>
+<div class="squiz-score-tier" id="squizScoreTier">Keep practicing</div>
+<div><button class="squiz-retake-btn" onclick="retakeQuiz()">Retake Quiz</button></div>
+</div>
+<form id="squizForm">
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">1.</span>What does the rate of a reaction measure?</div>
+<div class="squiz-option"><input id="sq1a" name="sq1" type="radio" value="0"/><label for="sq1a">A. The colour of the products</label></div>
+<div class="squiz-option"><input id="sq1b" name="sq1" type="radio" value="1"/><label for="sq1b">B. How quickly reactants are used up or products are made</label></div>
+<div class="squiz-option"><input id="sq1c" name="sq1" type="radio" value="2"/><label for="sq1c">C. The size of the flask</label></div>
+<div class="squiz-option"><input id="sq1d" name="sq1" type="radio" value="3"/><label for="sq1d">D. The cost of the chemicals</label></div>
+</div>
+<div class="squiz-item" data-correct="3">
+<div class="squiz-q"><span class="qnum">2.</span>Which change would slow a reaction down?</div>
+<div class="squiz-option"><input id="sq2a" name="sq2" type="radio" value="0"/><label for="sq2a">A. Increasing the concentration</label></div>
+<div class="squiz-option"><input id="sq2b" name="sq2" type="radio" value="1"/><label for="sq2b">B. Using a powder instead of a lump</label></div>
+<div class="squiz-option"><input id="sq2c" name="sq2" type="radio" value="2"/><label for="sq2c">C. Adding a catalyst</label></div>
+<div class="squiz-option"><input id="sq2d" name="sq2" type="radio" value="3"/><label for="sq2d">D. Lowering the temperature</label></div>
+</div>
+<div class="squiz-item" data-correct="0">
+<div class="squiz-q"><span class="qnum">3.</span>What is activation energy?</div>
+<div class="squiz-option"><input id="sq3a" name="sq3" type="radio" value="0"/><label for="sq3a">A. The minimum energy particles need for a successful collision</label></div>
+<div class="squiz-option"><input id="sq3b" name="sq3" type="radio" value="1"/><label for="sq3b">B. The total energy of the products</label></div>
+<div class="squiz-option"><input id="sq3c" name="sq3" type="radio" value="2"/><label for="sq3c">C. The energy released by a catalyst</label></div>
+<div class="squiz-option"><input id="sq3d" name="sq3" type="radio" value="3"/><label for="sq3d">D. The energy of the surroundings</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">4.</span>What does a catalyst do?</div>
+<div class="squiz-option"><input id="sq4a" name="sq4" type="radio" value="0"/><label for="sq4a">A. It is completely used up in the reaction</label></div>
+<div class="squiz-option"><input id="sq4b" name="sq4" type="radio" value="1"/><label for="sq4b">B. It increases the amount of product</label></div>
+<div class="squiz-option"><input id="sq4c" name="sq4" type="radio" value="2"/><label for="sq4c">C. It speeds up the reaction by lowering the activation energy and is not used up</label></div>
+<div class="squiz-option"><input id="sq4d" name="sq4" type="radio" value="3"/><label for="sq4d">D. It makes the reaction exothermic</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">5.</span>Why does powdered marble react faster with acid than a large lump?</div>
+<div class="squiz-option"><input id="sq5a" name="sq5" type="radio" value="0"/><label for="sq5a">A. Powder is hotter</label></div>
+<div class="squiz-option"><input id="sq5b" name="sq5" type="radio" value="1"/><label for="sq5b">B. Powder has a larger surface area, so there are more collisions</label></div>
+<div class="squiz-option"><input id="sq5c" name="sq5" type="radio" value="2"/><label for="sq5c">C. Powder is lighter in colour</label></div>
+<div class="squiz-option"><input id="sq5d" name="sq5" type="radio" value="3"/><label for="sq5d">D. Powder is a different substance</label></div>
+</div>
+<div class="squiz-item" data-correct="3">
+<div class="squiz-q"><span class="qnum">6.</span>60 cm³ of gas is collected in 40 seconds. What is the average rate?</div>
+<div class="squiz-option"><input id="sq6a" name="sq6" type="radio" value="0"/><label for="sq6a">A. 0.67 cm³/s</label></div>
+<div class="squiz-option"><input id="sq6b" name="sq6" type="radio" value="1"/><label for="sq6b">B. 20 cm³/s</label></div>
+<div class="squiz-option"><input id="sq6c" name="sq6" type="radio" value="2"/><label for="sq6c">C. 2,400 cm³/s</label></div>
+<div class="squiz-option"><input id="sq6d" name="sq6" type="radio" value="3"/><label for="sq6d">D. 1.5 cm³/s</label></div>
+</div>
+<div class="squiz-item" data-correct="0">
+<div class="squiz-q"><span class="qnum">7.</span>What happens in an exothermic reaction?</div>
+<div class="squiz-option"><input id="sq7a" name="sq7" type="radio" value="0"/><label for="sq7a">A. Energy is released to the surroundings and the temperature rises</label></div>
+<div class="squiz-option"><input id="sq7b" name="sq7" type="radio" value="1"/><label for="sq7b">B. Energy is absorbed and the temperature falls</label></div>
+<div class="squiz-option"><input id="sq7c" name="sq7" type="radio" value="2"/><label for="sq7c">C. No energy changes</label></div>
+<div class="squiz-option"><input id="sq7d" name="sq7" type="radio" value="3"/><label for="sq7d">D. A catalyst is destroyed</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">8.</span>Which of these is an endothermic change?</div>
+<div class="squiz-option"><input id="sq8a" name="sq8" type="radio" value="0"/><label for="sq8a">A. Burning a candle</label></div>
+<div class="squiz-option"><input id="sq8b" name="sq8" type="radio" value="1"/><label for="sq8b">B. Respiration in cells</label></div>
+<div class="squiz-option"><input id="sq8c" name="sq8" type="radio" value="2"/><label for="sq8c">C. The thermal decomposition of calcium carbonate</label></div>
+<div class="squiz-option"><input id="sq8d" name="sq8" type="radio" value="3"/><label for="sq8d">D. Neutralising an acid with an alkali</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">9.</span>Breaking chemical bonds is:</div>
+<div class="squiz-option"><input id="sq9a" name="sq9" type="radio" value="0"/><label for="sq9a">A. Exothermic, because it releases energy</label></div>
+<div class="squiz-option"><input id="sq9b" name="sq9" type="radio" value="1"/><label for="sq9b">B. Endothermic, because it takes in energy</label></div>
+<div class="squiz-option"><input id="sq9c" name="sq9" type="radio" value="2"/><label for="sq9c">C. Neither, as no energy is involved</label></div>
+<div class="squiz-option"><input id="sq9d" name="sq9" type="radio" value="3"/><label for="sq9d">D. Always very fast</label></div>
+</div>
+<div class="squiz-item" data-correct="3">
+<div class="squiz-q"><span class="qnum">10.</span>For H₂ + Cl₂ → 2HCl, bonds broken need 679 kJ and bonds made release 864 kJ. What is ΔH?</div>
+<div class="squiz-option"><input id="sq10a" name="sq10" type="radio" value="0"/><label for="sq10a">A. +185 kJ/mol</label></div>
+<div class="squiz-option"><input id="sq10b" name="sq10" type="radio" value="1"/><label for="sq10b">B. −864 kJ/mol</label></div>
+<div class="squiz-option"><input id="sq10c" name="sq10" type="radio" value="2"/><label for="sq10c">C. +679 kJ/mol</label></div>
+<div class="squiz-option"><input id="sq10d" name="sq10" type="radio" value="3"/><label for="sq10d">D. −185 kJ/mol</label></div>
+</div>
+<div class="squiz-item" data-correct="0">
+<div class="squiz-q"><span class="qnum">11.</span>What is the energy transferred (Q = m × c × ΔT) to 50 g of water that warms by 6.0°C? (c = 4.18 J/g°C)</div>
+<div class="squiz-option"><input id="sq11a" name="sq11" type="radio" value="0"/><label for="sq11a">A. 1,254 J</label></div>
+<div class="squiz-option"><input id="sq11b" name="sq11" type="radio" value="1"/><label for="sq11b">B. 300 J</label></div>
+<div class="squiz-option"><input id="sq11c" name="sq11" type="radio" value="2"/><label for="sq11c">C. 125.4 J</label></div>
+<div class="squiz-option"><input id="sq11d" name="sq11" type="radio" value="3"/><label for="sq11d">D. 12,540 J</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">12.</span>On an energy profile for an exothermic reaction, where are the products?</div>
+<div class="squiz-option"><input id="sq12a" name="sq12" type="radio" value="0"/><label for="sq12a">A. Higher in energy than the reactants</label></div>
+<div class="squiz-option"><input id="sq12b" name="sq12" type="radio" value="1"/><label for="sq12b">B. At exactly the same energy as the activation energy</label></div>
+<div class="squiz-option"><input id="sq12c" name="sq12" type="radio" value="2"/><label for="sq12c">C. Lower in energy than the reactants</label></div>
+<div class="squiz-option"><input id="sq12d" name="sq12" type="radio" value="3"/><label for="sq12d">D. They cannot be shown</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">13.</span>Why can a cloud of flour dust explode when a lump of flour will not?</div>
+<div class="squiz-option"><input id="sq13a" name="sq13" type="radio" value="0"/><label for="sq13a">A. Flour dust is a different substance</label></div>
+<div class="squiz-option"><input id="sq13b" name="sq13" type="radio" value="1"/><label for="sq13b">B. The dust has a huge surface area exposed to oxygen, so it burns extremely fast</label></div>
+<div class="squiz-option"><input id="sq13c" name="sq13" type="radio" value="2"/><label for="sq13c">C. Dust is always hotter</label></div>
+<div class="squiz-option"><input id="sq13d" name="sq13" type="radio" value="3"/><label for="sq13d">D. Lumps of flour contain no energy</label></div>
+</div>
+<div class="squiz-item" data-correct="3">
+<div class="squiz-q"><span class="qnum">14.</span>Which is a control variable when investigating the effect of temperature on rate?</div>
+<div class="squiz-option"><input id="sq14a" name="sq14" type="radio" value="0"/><label for="sq14a">A. The temperature</label></div>
+<div class="squiz-option"><input id="sq14b" name="sq14" type="radio" value="1"/><label for="sq14b">B. The time measured</label></div>
+<div class="squiz-option"><input id="sq14c" name="sq14" type="radio" value="2"/><label for="sq14c">C. The result</label></div>
+<div class="squiz-option"><input id="sq14d" name="sq14" type="radio" value="3"/><label for="sq14d">D. The concentration and volume of the solutions</label></div>
+</div>
+<button class="squiz-submit-btn" disabled="" id="squizSubmitBtn" onclick="submitQuiz()" type="button">Answer all questions to submit</button>
+</form>
+<div class="article-footer-nav">
+<a href="index.html#gateway">← Gateway</a>
+
+</div>
+</div>
+<script>
+  (function() {
+    const form = document.getElementById('squizForm');
+    const submitBtn = document.getElementById('squizSubmitBtn');
+    const progressFill = document.getElementById('squizProgressFill');
+    const progressLabel = document.getElementById('squizProgressLabel');
+    const totalQuestions = document.querySelectorAll('.squiz-item').length;
+
+    function countAnswered() {
+      let count = 0;
+      for (let i = 1; i <= totalQuestions; i++) {
+        if (form.querySelector(`input[name="sq${i}"]:checked`)) count++;
+      }
+      return count;
+    }
+
+    function updateProgress() {
+      const answered = countAnswered();
+      progressFill.style.width = (answered / totalQuestions * 100) + '%';
+      progressLabel.textContent = answered + ' of ' + totalQuestions + ' answered';
+      submitBtn.disabled = answered < totalQuestions;
+      submitBtn.textContent = answered < totalQuestions ? 'Answer all questions to submit' : 'Submit Quiz';
+      document.querySelectorAll('.squiz-option').forEach(opt => opt.classList.remove('selected'));
+      form.querySelectorAll('input[type="radio"]:checked').forEach(input => {
+        input.closest('.squiz-option').classList.add('selected');
+      });
+    }
+
+    form.addEventListener('change', updateProgress);
+
+    window.submitQuiz = function() {
+      let score = 0;
+      const questions = document.querySelectorAll('.squiz-item');
+      questions.forEach((q, idx) => {
+        const qnum = idx + 1;
+        const correctIdx = q.getAttribute('data-correct');
+        const selected = form.querySelector(`input[name="sq${qnum}"]:checked`);
+        const options = q.querySelectorAll('.squiz-option');
+        options.forEach((opt, optIdx) => {
+          opt.querySelector('input').disabled = true;
+          if (String(optIdx) === correctIdx) opt.classList.add('correct-answer');
+        });
+        if (selected && selected.value === correctIdx) {
+          score++;
+        } else if (selected) {
+          selected.closest('.squiz-option').classList.add('wrong-answer');
+        }
+      });
+
+      const percent = Math.round((score / totalQuestions) * 100);
+      document.getElementById('squizScoreBig').textContent = score + '/' + totalQuestions;
+      document.getElementById('squizScoreLabel').textContent = 'You scored ' + percent + '%';
+
+      let tier = 'Keep practicing';
+      if (percent === 100) tier = 'Perfect score!';
+      else if (percent >= 80) tier = 'Excellent work';
+      else if (percent >= 60) tier = 'Good effort';
+      else if (percent >= 40) tier = 'Getting there';
+      document.getElementById('squizScoreTier').textContent = tier;
+
+      document.getElementById('squizResults').classList.add('visible');
+      submitBtn.style.display = 'none';
+      document.getElementById('squizResults').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    window.retakeQuiz = function() {
+      form.reset();
+      document.querySelectorAll('.squiz-option').forEach(opt => {
+        opt.classList.remove('selected', 'correct-answer', 'wrong-answer');
+        opt.querySelector('input').disabled = false;
+      });
+      document.getElementById('squizResults').classList.remove('visible');
+      submitBtn.style.display = 'block';
+      updateProgress();
+      document.getElementById('squizForm').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    updateProgress();
+  })();
+</script>
+<footer class="edusambam-unified-footer" aria-label="EDUSAMBAM site footer">
+<div class="footer-top">
+<div class="footer-brand">
+<div class="edusambam-footer-brand-row">
+<a class="edusambam-footer-logo-link" href="index.html" aria-label="EDUSAMBAM home">
+<img alt="EDUSAMBAM" class="edusambam-brand-mark edusambam-footer-logo" src="logo-icon-full-white.png" style="width:auto;height:64px;max-width:240px;object-fit:contain;background:none;border-radius:0;"/>
+</a>
+</div>
+<p class="edusambam-footer-statement">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</p>
+<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a></div>
+</div>
+<div class="footer-col"><h4>Learning</h4><ul><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li></ul></div>
+<div class="footer-col"><h4>Practice &amp; Assessment</h4><ul>
+<li><a href="index.html#interactive-activities">Interactive Activities</a></li>
+<li><a href="assessment-arena.html">ASSESSMENT ARENA</a></li>
+<li><a href="assessment-arena.html">What Is Assessment?</a></li>
+<li><a href="index.html#about">Learn Your Way</a></li>
+<li><a href="index.html#resources">Resources &amp; Downloads</a></li>
+</ul></div>
+<div class="footer-col"><h4>About EDUSAMBAM</h4><ul>
+<li><a href="index.html#about-edusambam">What EDUSAMBAM Is</a></li>
+<li><a href="index.html#mission">Our Mission</a></li>
+<li><a href="index.html#team">The Team</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="mailto:feedback.edusambam@gmail.com?subject=EDUSAMBAM%20Feedback">Give Feedback</a></li>
+<li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+<li><a href="privacy-policy.html">Privacy Policy</a></li>
+</ul></div>
+</div>
+<div class="footer-bottom"><p>© 2026 EDUSAMBAM · Learning resources, practice and assessment.</p><ul class="footer-bottom-links">
+<li><a href="#top">Back to Top</a></li>
+<li><a href="index.html#mission">Mission</a></li>
+<li><a href="index.html#team">Team</a></li>
+<li><a href="index.html#resources">Resources</a></li>
+</ul></div>
+</footer>
+
+<script id="edusambam-reader-script">
+(function(){
+ const box=document.querySelector('.edusambam-reader'); if(!box)return;
+ const root=document.querySelector('.article-wrap, .article-wrapper');
+ if(!root)return;
+ const status=box.querySelector('.reader-status'), progress=box.querySelector('.reader-progress span'), rate=box.querySelector('select');
+ let utterance=null, chunks=[], index=0, total=0, paused=false, stopped=false;
+ function text(){
+   const clone=root.cloneNode(true);
+   clone.querySelectorAll('.quiz-section,.drill-section,.squiz-section,.activity-section,.assessment-section,form,button,input,select,textarea,script,style').forEach(el=>el.remove());
+   return clone.textContent.replace(/\s+/g,' ').trim();
+ }
+ function splitText(t){const out=[];const max=1200;for(let i=0;i<t.length;i+=max)out.push(t.slice(i,i+max));return out;}
+ function updateProgress(){progress.style.width=(total?Math.min(100,Math.round((index/total)*100)):0)+'%';}
+ function speakNext(){
+   if(stopped||index>=total){if(index>=total&&!stopped){status.textContent='Reading finished.';progress.style.width='100%';}return;}
+   utterance=new SpeechSynthesisUtterance(chunks[index]);
+   utterance.rate=Number(rate.value)||1;
+   utterance.onend=function(){if(stopped)return;index++;updateProgress();speakNext();};
+   utterance.onerror=function(){if(!stopped)status.textContent='The reader stopped unexpectedly. Tap Resume to continue.';};
+   status.textContent='Reading article…';
+   speechSynthesis.speak(utterance);
+ }
+ function play(){
+   if(!('speechSynthesis' in window)){status.textContent='Audio reading is not supported by this browser.';return;}
+   speechSynthesis.cancel();
+   chunks=splitText(text());index=0;total=chunks.length;paused=false;stopped=false;updateProgress();speakNext();
+ }
+ function pause(){
+   if(!('speechSynthesis' in window))return;
+   if(speechSynthesis.speaking){speechSynthesis.pause();paused=true;status.textContent='Reader paused.';}
+ }
+ function resume(){
+   if(!('speechSynthesis' in window))return;
+   stopped=false;
+   if(speechSynthesis.paused){speechSynthesis.resume();paused=false;status.textContent='Reader resumed.';return;}
+   if(!speechSynthesis.speaking && chunks.length && index<total){paused=false;status.textContent='Reader resumed.';speakNext();return;}
+   if(!chunks.length){status.textContent='Nothing to resume. Tap Play to start.';return;}
+   status.textContent='Reader is already playing.';
+ }
+ function stop(){
+   speechSynthesis.cancel();chunks=[];index=0;total=0;paused=false;stopped=true;progress.style.width='0';status.textContent='Reader stopped.';
+ }
+ box.querySelector('[data-reader="play"]').addEventListener('click',play);
+ box.querySelector('[data-reader="pause"]').addEventListener('click',pause);
+ box.querySelector('[data-reader="resume"]').addEventListener('click',resume);
+ box.querySelector('[data-reader="stop"]').addEventListener('click',stop);
+ window.addEventListener('beforeunload',()=>{stopped=true;speechSynthesis.cancel();});
+})();
+</script>
+<script id="edusambam-unified-nav-js">
+(function(){
+  let pages=[];fetch('nav-search-index.json').then(r=>r.json()).then(d=>{pages=d;});
+  function closeAll(except){
+    document.querySelectorAll('.edusambam-mobile-menu,.edusambam-search-panel').forEach(el=>{
+      if(el!==except) el.classList.remove('open');
+    });
+    const b=document.querySelector('.edusambam-menu-btn');
+    if(b) b.setAttribute('aria-expanded', String(document.querySelector('.edusambam-mobile-menu')?.classList.contains('open')||false));
+  }
+  function setup(){
+    const menu=document.querySelector('.edusambam-mobile-menu');
+    const mb=document.querySelector('.edusambam-menu-btn');
+    const sb=document.querySelector('.edusambam-search-btn');
+    const panel=document.querySelector('.edusambam-search-panel');
+    const input=document.querySelector('.edusambam-search-input');
+    const results=document.querySelector('.edusambam-search-results');
+    if(mb && menu){
+      mb.addEventListener('click',()=>{
+        const open=menu.classList.toggle('open'); closeAll(open?menu:null);
+        mb.setAttribute('aria-expanded',String(open));
+        if(open) panel?.classList.remove('open');
+      });
+    }
+    if(sb && panel){
+      sb.addEventListener('click',()=>{
+        const open=panel.classList.toggle('open'); closeAll(open?panel:null);
+        if(open) setTimeout(()=>input?.focus(),30);
+      });
+    }
+    if(input && results){
+      const render=()=>{
+        const q=input.value.trim().toLowerCase();
+        const hits=q?pages.filter(x=>(x.title+' '+x.url).toLowerCase().includes(q)).slice(0,20):[];
+        results.innerHTML=hits.map(x=>'<a href="'+x.url.replace(/"/g,'&quot;')+'">'+
+          x.title.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</a>').join('') ||
+          (q?'<div style="padding:10px;color:#64748b">No matching pages found.</div>':'');
+      };
+      input.addEventListener('input',render);
+    }
+    document.addEventListener('keydown',e=>{
+      if(e.key==='Escape') closeAll(null);
+    });
+    document.addEventListener('click',e=>{
+      if(!e.target.closest('.edusambam-nav') && !e.target.closest('.edusambam-mobile-menu') && !e.target.closest('.edusambam-search-panel')) closeAll(null);
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',setup); else setup();
+})();
+</script>
+</body>
+</html>

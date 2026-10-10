@@ -1,0 +1,1740 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<!-- Google Analytics 4 — EDUSAMBAM -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Y35DW0V4HQ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-Y35DW0V4HQ');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Spreadsheets and Documents: Everyday Computer Skills — EDUSAMBAM</title>
+<link href="https://edusambam.com/spreadsheets-and-documents-everyday-computer-skills.html" rel="canonical"/>
+<meta content="Learn everyday computer skills: spreadsheet formulas, functions and charts, clear document formatting, file management and backups, with worked examples." name="description"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<meta content="EDUSAMBAM Editorial Team" name="author"/>
+<meta content="spreadsheet skills, Excel formulas, Google Sheets, word processing, document formatting, computer skills for work, SUM AVERAGE IF, file management, digital skills" name="keywords"/>
+<meta content="Spreadsheets and Documents: Everyday Computer Skills — EDUSAMBAM" property="og:title"/>
+<meta content="Learn everyday computer skills: spreadsheet formulas, functions and charts, clear document formatting, file management and backups, with worked examples." property="og:description"/>
+<meta content="https://edusambam.com/og-image.jpg" property="og:image"/>
+<meta content="https://edusambam.com/spreadsheets-and-documents-everyday-computer-skills.html" property="og:url"/>
+<meta content="article" property="og:type"/>
+<meta content="EDUSAMBAM" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="2026-10-05" property="article:published_time"/>
+<meta content="Computer" property="article:section"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Spreadsheets and Documents: Everyday Computer Skills — EDUSAMBAM" name="twitter:title"/>
+<meta content="Learn everyday computer skills: spreadsheet formulas, functions and charts, clear document formatting, file management and backups, with worked examples." name="twitter:description"/>
+<meta content="https://edusambam.com/og-image.jpg" name="twitter:image"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Spreadsheets and Documents: Everyday Computer Skills",
+ "description": "Learn everyday computer skills: spreadsheet formulas, functions and charts, clear document formatting, file management and backups, with worked examples.",
+ "image": "https://edusambam.com/og-image.jpg",
+ "datePublished": "2026-10-05",
+ "dateModified": "2026-10-05",
+ "inLanguage": "en",
+ "isAccessibleForFree": true,
+ "articleSection": "Computer",
+ "wordCount": 2688,
+ "keywords": [
+  "spreadsheet skills",
+  "Excel formulas",
+  "Google Sheets",
+  "word processing",
+  "document formatting",
+  "computer skills for work",
+  "SUM AVERAGE IF",
+  "file management",
+  "digital skills"
+ ],
+ "author": {
+  "@type": "Organization",
+  "name": "EDUSAMBAM Editorial Team",
+  "url": "https://edusambam.com/"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "EDUSAMBAM",
+  "url": "https://edusambam.com/",
+  "logo": {
+   "@type": "ImageObject",
+   "url": "https://edusambam.com/logo-icon-full.png"
+  }
+ },
+ "mainEntityOfPage": {
+  "@type": "WebPage",
+  "@id": "https://edusambam.com/spreadsheets-and-documents-everyday-computer-skills.html"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Gateway",
+   "item": "https://edusambam.com/#gateway"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Computer",
+   "item": "https://edusambam.com/#subject-computer"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Spreadsheets and Documents",
+   "item": "https://edusambam.com/spreadsheets-and-documents-everyday-computer-skills.html"
+  }
+ ]
+}
+</script>
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --red: #0b4ea2;
+    --red-mid: #0b55a5;
+    --red-lt:    #eef5fc;
+    --navy:      #06244a;
+    --navy-mid:  #0b4ea2;
+    --gold:      #d4a017;
+    --gold-lt:   #fff7dc;
+    --cream:     #f7faff;
+    --white:     #FFFFFF;
+    --ink:       #142033;
+    --slate:     #607086;
+    --muted:     #607086;
+    --border:    #dce7f4;
+    --border-lt: #eef5fc;
+    --radius:    4px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--ink);
+    background: var(--white);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── TOP BAR ── */
+  .top-bar {
+    background: var(--navy);
+    padding: 0.45rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .top-bar p {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.03em;
+  }
+  .top-bar-links { display: flex; gap: 1.5rem; list-style: none; }
+  .top-bar-links a {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+  .top-bar-links a:hover { color: white; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 200;
+    background: var(--navy);
+    border-bottom: 3px solid var(--red);
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  }
+  .nav-brand { display: flex; flex-direction: column; line-height: 1; text-decoration: none; }
+  .nav-brand-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 0.01em;
+  }
+  .nav-brand-name span { color: var(--red); }
+  .nav-brand-sub {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.65);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 0.25rem;
+  }
+  .nav-links { display: flex; gap: 0; list-style: none; }
+  .nav-links a {
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.75);
+    padding: 0 1.1rem;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: white; }
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+  }
+
+  /* ── DIAGRAM BOX (for CSS/SVG illustrations) ── */
+  .diagram-box {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin: 1.5rem 0 2rem;
+    text-align: center;
+  }
+  .diagram-box svg { max-width: 100%; height: auto; }
+  .diagram-caption {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 0.8rem;
+    font-style: italic;
+  }
+  .bar-chart { display: flex; align-items: flex-end; gap: 0.9rem; height: 180px; padding: 0 0.5rem; justify-content: center; }
+  .bar-chart .bar-col { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; width: 60px; }
+  .bar-chart .bar { width: 100%; background: var(--gold); border-radius: 3px 3px 0 0; position: relative; }
+  .bar-chart .bar.red { background: var(--red); }
+  .bar-chart .bar-val { font-size: 0.75rem; font-weight: 600; color: var(--ink); margin-bottom: 0.3rem; }
+  .bar-chart .bar-label { font-size: 0.72rem; color: var(--slate); margin-top: 0.5rem; text-align: center; }
+
+  /* ── ARTICLE HERO ── */
+  .article-hero {
+    background: linear-gradient(135deg,#06244a,#0b4ea2);
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+  }
+  .breadcrumb {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 1.1rem;
+    letter-spacing: 0.02em;
+  }
+  .breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--gold); }
+  .article-hero-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(184,150,62,0.4);
+    padding: 0.35rem 0.9rem;
+    border-radius: 30px;
+    margin-bottom: 1.25rem;
+  }
+  .article-hero h1 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 2.4rem;
+    color: white;
+    max-width: 760px;
+    margin: 0 auto 1rem;
+    line-height: 1.25;
+  }
+  .article-hero p.sub {
+    color: rgba(255,255,255,0.6);
+    max-width: 620px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.02rem;
+  }
+  .article-hero-meta {
+    display: flex; justify-content: center; gap: 0.9rem;
+    font-size: 0.8rem; color: rgba(255,255,255,0.45);
+    flex-wrap: wrap;
+  }
+
+  /* ── ARTICLE BODY ── */
+  .article-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+  .article-wrap h2 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 1.65rem;
+    color: var(--navy);
+    margin: 2.6rem 0 1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--border-lt);
+  }
+  .article-wrap h2 span.num {
+    color: var(--red);
+    margin-right: 0.5rem;
+    font-style: italic;
+  }
+  .article-wrap p { color: var(--slate); margin-bottom: 1rem; font-size: 1.02rem; }
+  .article-wrap ul { margin: 0 0 1.2rem 1.4rem; color: var(--slate); }
+  .article-wrap li { margin-bottom: 0.5rem; }
+  .article-wrap strong { color: var(--ink); }
+  .lead {
+    font-size: 1.15rem;
+    color: var(--ink);
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    border-left: 3px solid var(--gold);
+    padding-left: 1.2rem;
+    margin: 1.5rem 0 2rem;
+  }
+  .example-box {
+    background: var(--gold-lt);
+    border: 1px solid rgba(184,150,62,0.35);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 1.3rem 1.5rem;
+    margin: 1.3rem 0 1.8rem;
+  }
+  .example-box .ex-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.5rem;
+  }
+  .example-box p { color: var(--ink); margin-bottom: 0.4rem; font-size: 0.98rem; }
+  .example-box p:last-child { margin-bottom: 0; }
+
+  .real-world-box {
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 1.6rem 1.7rem;
+    margin: 2.4rem 0;
+  }
+  .real-world-box .rw-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.7rem;
+  }
+  .real-world-box p { color: rgba(255,255,255,0.8); margin-bottom: 0; font-size: 1rem; }
+
+  .further-reading-box {
+    background: var(--cream);
+    border: 1px solid rgba(184,150,62,0.35);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.5rem;
+    margin: 2.4rem 0;
+  }
+  .further-reading-box .fr-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.7rem;
+  }
+  .further-reading-box ul {
+    list-style: none;
+    margin: 0;
+  }
+  .further-reading-box li {
+    margin-bottom: 0.5rem;
+    font-size: 0.82rem;
+  }
+  .further-reading-box li:last-child { margin-bottom: 0; }
+  .further-reading-box a {
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 0.82rem;
+    border-bottom: 1px solid rgba(184,150,62,0.3);
+    transition: border-color 0.2s;
+  }
+  .further-reading-box a:hover { border-color: var(--gold); }
+  .further-reading-box .fr-source {
+    color: var(--muted);
+    font-size: 0.78rem;
+  }
+
+
+
+  .table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+  table.pos-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+  table.pos-table th {
+    background: var(--navy);
+    color: white;
+    text-align: left;
+    padding: 0.7rem 0.9rem;
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+  }
+  table.pos-table td {
+    padding: 0.7rem 0.9rem;
+    border-bottom: 1px solid var(--border-lt);
+    color: var(--slate);
+  }
+  table.pos-table tr:nth-child(even) td { background: var(--cream); }
+
+  /* ── QUIZ ── */
+  .quiz-section {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem 1.7rem 1.5rem;
+    margin-top: 3rem;
+  }
+  .quiz-section .section-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.4rem;
+  }
+  .quiz-section h2 {
+    border: none; margin: 0 0 0.4rem; padding: 0;
+  }
+  .quiz-intro { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.6rem; }
+  .quiz-item {
+    background: var(--white);
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .quiz-q {
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.7rem;
+    font-size: 1rem;
+  }
+  .quiz-q .qnum { color: var(--red); margin-right: 0.4rem; }
+  .quiz-options { list-style: none; margin: 0 0 0.9rem; }
+  .quiz-options li {
+    padding: 0.4rem 0;
+    color: var(--slate);
+    font-size: 0.96rem;
+    padding-left: 1.4rem;
+    position: relative;
+  }
+  .quiz-options li::before {
+    content: "";
+    position: absolute; left: 0; top: 0.85rem;
+    width: 6px; height: 6px;
+    background: var(--border);
+    border-radius: 50%;
+  }
+  .show-answer-btn {
+    background: var(--navy);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 0.5rem 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .show-answer-btn:hover { background: var(--navy-mid); }
+  .quiz-answer {
+    display: none;
+    margin-top: 0.9rem;
+    background: var(--gold-lt);
+    border-left: 3px solid var(--gold);
+    padding: 0.7rem 1rem;
+    font-size: 0.92rem;
+    color: var(--ink);
+    border-radius: var(--radius);
+  }
+  .quiz-answer.visible { display: block; }
+  .quiz-answer strong { color: var(--red); }
+
+  .answer-key-toggle {
+    display: block;
+    width: 100%;
+    background: var(--red);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding: 0.9rem 1rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    margin-top: 0.6rem;
+    transition: background 0.2s;
+  }
+  .answer-key-toggle:hover { background: var(--red-mid); }
+
+  .article-footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-lt);
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .article-footer-nav a {
+    text-decoration: none;
+    color: var(--red);
+    font-weight: 600;
+    font-size: 0.92rem;
+  }
+  .article-footer-nav a:hover { text-decoration: underline; }
+
+  @media (max-width: 700px) {
+    .article-hero h1 { font-size: 1.7rem; }
+    .article-wrap { padding: 2rem 1.25rem 3rem; }
+  }
+  @media (max-width: 680px) {
+    .top-bar { display: none; }
+    nav {
+      padding: 0 1rem;
+      height: 68px;
+      border-bottom-width: 2px;
+    }
+    .nav-links { display: none; }
+    .nav-brand-name {
+      font-size: 1.35rem;
+      white-space: nowrap;
+    }
+    .nav-brand-sub {
+      font-size: 0.62rem;
+      letter-spacing: 0.07em;
+    }
+    .footer-top { grid-template-columns: 1fr; gap: 2rem; padding: 2rem 1.25rem; }
+    footer { padding: 2rem 1.25rem 0; }
+  }
+
+  /* ── FOOTER (copied from site) ── */
+  footer { background: var(--navy); padding: 3.5rem 3rem 0; }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 2.5rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .footer-brand-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+  }
+  .footer-brand-name span { color: var(--red); }
+  .footer-desc { color: rgba(255,255,255,0.45); font-size: 0.9rem; margin-top: 0.8rem; max-width: 320px; }
+  .footer-col h4 {
+    font-family: 'EB Garamond', serif;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 0.7rem; }
+  .footer-col a {
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.2s;
+  }
+  .footer-col a:hover { color: var(--gold); }
+  .footer-bottom {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer-bottom p { color: rgba(255,255,255,0.35); font-size: 0.8rem; }
+  .footer-bottom-links { display: flex; gap: 1.3rem; list-style: none; }
+  .footer-bottom-links a { color: rgba(255,255,255,0.35); text-decoration: none; font-size: 0.8rem; }
+  .footer-bottom-links a:hover { color: rgba(255,255,255,0.6); }
+  @media (max-width: 900px) {
+    .footer-top { grid-template-columns: 1fr 1fr; }
+    footer { padding: 2rem 1.25rem 0; }
+  }
+
+  /* SCORED QUIZ (click-to-highlight + real scoring) */
+  .squiz-progress {
+    background: var(--cream);
+    border-radius: 30px;
+    height: 8px;
+    overflow: hidden;
+    margin-bottom: 0.4rem;
+  }
+  .squiz-progress-fill {
+    background: var(--gold);
+    height: 100%;
+    width: 0%;
+    transition: width 0.25s ease;
+  }
+  .squiz-progress-label {
+    font-size: 0.78rem;
+    color: var(--muted);
+    text-align: right;
+    margin-bottom: 1.3rem;
+  }
+  .squiz-item {
+    background: var(--white);
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .squiz-q {
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+  }
+  .squiz-q .qnum { color: var(--red); margin-right: 0.4rem; }
+  .squiz-option {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .squiz-option:hover { border-color: var(--gold); }
+  .squiz-option input[type="radio"] { accent-color: var(--red); width: 16px; height: 16px; flex-shrink: 0; }
+  .squiz-option label { cursor: pointer; font-size: 0.94rem; color: var(--slate); flex: 1; }
+  .squiz-option.selected { border-color: var(--red); background: rgba(139,0,0,0.04); }
+  .squiz-option.correct-answer { border-color: #2e7d32; background: rgba(46,125,50,0.08); }
+  .squiz-option.wrong-answer { border-color: var(--red); background: rgba(139,0,0,0.08); }
+  .squiz-submit-btn {
+    display: block;
+    width: 100%;
+    background: var(--red);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.98rem;
+    font-weight: 600;
+    padding: 0.9rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    margin-top: 0.6rem;
+    transition: background 0.2s;
+  }
+  .squiz-submit-btn:hover { background: var(--red-mid); }
+  .squiz-submit-btn:disabled { background: var(--border); cursor: not-allowed; }
+  .squiz-results {
+    display: none;
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 2rem 1.6rem;
+    text-align: center;
+    margin-bottom: 1.8rem;
+  }
+  .squiz-results.visible { display: block; }
+  .squiz-results .squiz-score-big {
+    font-family: 'EB Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .squiz-results .squiz-score-label { color: rgba(255,255,255,0.7); font-size: 0.98rem; margin-bottom: 1rem; }
+  .squiz-results .squiz-score-tier {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    border-radius: 30px;
+    background: rgba(184,150,62,0.15);
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+  }
+  .squiz-retake-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 0.65rem 1.4rem;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  .squiz-retake-btn:hover { background: rgba(255,255,255,0.1); }
+</style>
+<style id="edusambam-mark-style">
+.mark{width:48px;height:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px;border-radius:14px;background:#eef6ff;box-shadow:0 2px 7px rgba(8,47,99,.10);flex:0 0 48px}
+.mark i{display:block;border-radius:50%;background:#0b4ea2;min-width:0;min-height:0}
+.mark i:nth-child(5){background:#d4a017}
+</style>
+<style id="edusambam-reader-style">
+.mark{width:48px;height:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px;border-radius:14px;background:#eef6ff;box-shadow:0 2px 7px rgba(8,47,99,.10);flex:0 0 48px}.mark i{display:block;border-radius:50%;background:#0b4ea2;min-width:0;min-height:0}.mark i:nth-child(5){background:#d4a017}.edusambam-reader{max-width:980px;margin:1.2rem auto 0;padding:1rem 1.1rem;border:1px solid #d7e4ef;border-radius:14px;background:linear-gradient(135deg,#f7fbff,#fff);box-shadow:0 6px 18px rgba(11,45,92,.08)}.edusambam-reader strong{display:block;color:#0b55a5;font-size:.9rem;letter-spacing:.04em}.edusambam-reader .reader-slogan{color:#a87900;font-weight:900;margin-top:.25rem;font-size:.82rem}.edusambam-reader .reader-help{color:#607086;font-size:.8rem;margin:.3rem 0 .7rem}.edusambam-reader .reader-controls{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}.edusambam-reader button,.edusambam-reader select{border:1px solid #c9d9e8;background:#fff;color:#153b6e;border-radius:8px;padding:.48rem .65rem;font-weight:800;cursor:pointer}.edusambam-reader button:first-child{background:#0b55a5;color:#fff;border-color:#0b55a5}.edusambam-reader .reader-status{display:block;color:#607086;font-size:.75rem;margin-top:.55rem}.edusambam-reader .reader-progress{height:4px;background:#e4edf6;border-radius:99px;margin-top:.6rem;overflow:hidden}.edusambam-reader .reader-progress span{display:block;width:0;height:100%;background:#d4a017;transition:width .2s linear}@media(max-width:600px){.edusambam-reader{margin-left:0;margin-right:0}.edusambam-reader .reader-controls button,.edusambam-reader .reader-controls select{flex:1;min-width:75px}}
+</style>
+<style id="edusambam-frame-final">html{box-sizing:border-box;max-width:100%;overflow-x:hidden}*,*:before,*:after{box-sizing:inherit}body{max-width:100%;min-width:0;overflow-x:hidden;border:3px solid #d4a017;box-sizing:border-box}img,svg,video,iframe{max-width:100%;height:auto}h1,h2,h3,h4,p,a,span,small,b,strong{overflow-wrap:anywhere}section,header,footer,main,nav{max-width:100%;box-sizing:border-box}@media(max-width:600px){body{border-width:3px}h1,h2,h3{margin-left:0!important;margin-right:0!important}}</style><style id="edusambam-unified-nav-css">
+/* EDUSAMBAM unified navigation */
+.edusambam-nav{
+  position:sticky;top:0;z-index:10000;
+  min-height:72px;box-sizing:border-box;
+  display:flex;align-items:center;
+  padding:10px 20px;
+  background:#fff;border-bottom:1px solid #e5e7eb;
+  font-family:inherit;
+}
+.edusambam-nav-inner{
+  width:100%;max-width:1400px;margin:0 auto;
+  display:flex;align-items:center;gap:18px;min-width:0;
+}
+.edusambam-brand{
+  display:flex;align-items:center;gap:10px;min-width:0;
+  text-decoration:none;color:#0b3b66;flex:0 1 auto;
+}
+.edusambam-brand-copy{display:flex;flex-direction:column;line-height:1;min-width:0;overflow:hidden}
+.edusambam-brand-name{
+  font-family:"EB Garamond",Georgia,serif;
+  font-size:1.6rem;font-weight:600;letter-spacing:.01em;
+  color:#0b3b66;white-space:nowrap;
+}
+.edusambam-brand-subtitle{
+  margin-top:4px;
+  font-size:.62rem;font-weight:600;letter-spacing:.08em;
+  color:#64748b;white-space:nowrap;
+}
+.edusambam-nav-links{
+  display:flex;align-items:center;gap:14px;margin-left:auto;
+  list-style:none;padding:0;margin-top:0;margin-bottom:0;
+}
+.edusambam-nav-links a{
+  color:#334155;text-decoration:none;font-size:.9rem;
+  padding:8px 5px;border-radius:7px;white-space:nowrap;
+}
+.edusambam-nav-links a:hover,.edusambam-nav-links a:focus-visible{
+  color:#0b3b66;background:#f3f6f9;outline:none;
+}
+.edusambam-search-btn,.edusambam-menu-btn{
+  appearance:none;border:1px solid #d8dee6;background:#fff;
+  color:#0b3b66;border-radius:9px;min-width:40px;height:40px;
+  display:inline-flex;align-items:center;justify-content:center;
+  cursor:pointer;font-size:1.15rem;flex:0 0 auto;
+}
+.edusambam-search-btn:hover,.edusambam-menu-btn:hover,
+.edusambam-search-btn:focus-visible,.edusambam-menu-btn:focus-visible{
+  background:#f3f6f9;border-color:#b9c6d4;outline:2px solid rgba(214,162,58,.35);
+  outline-offset:2px;
+}
+.edusambam-menu-btn{display:none;font-size:1.2rem}
+.edusambam-mobile-menu{
+  display:none;position:fixed;top:72px;left:0;right:0;
+  z-index:9999;background:#fff;border-bottom:1px solid #e5e7eb;
+  box-shadow:0 8px 24px rgba(15,23,42,.12);
+  max-height:calc(100vh - 72px);overflow:auto;
+}
+.edusambam-mobile-menu.open{display:block}
+.edusambam-mobile-menu ul{list-style:none;margin:0;padding:10px 16px 16px}
+.edusambam-mobile-menu a{
+  display:block;padding:12px 10px;color:#0b3b66;text-decoration:none;
+  border-radius:8px;font-size:.98rem;
+}
+.edusambam-mobile-menu a:hover,.edusambam-mobile-menu a:focus-visible{
+  background:#f3f6f9;outline:none;
+}
+.edusambam-search-panel{
+  display:none;position:fixed;top:72px;left:0;right:0;z-index:9998;
+  background:#fff;border-bottom:1px solid #e5e7eb;
+  box-shadow:0 8px 24px rgba(15,23,42,.10);padding:12px 16px;
+}
+.edusambam-search-panel.open{display:block}
+.edusambam-search-wrap{max-width:900px;margin:0 auto;position:relative}
+.edusambam-search-input{
+  width:100%;box-sizing:border-box;padding:12px 14px;
+  border:1px solid #cbd5e1;border-radius:9px;font-size:1rem;
+}
+.edusambam-search-results{margin-top:8px;max-height:50vh;overflow:auto}
+.edusambam-search-results a{
+  display:block;padding:9px 10px;border-radius:7px;color:#0b3b66;text-decoration:none;
+}
+.edusambam-search-results a:hover{background:#f3f6f9}
+@media (max-width:1100px){
+  .edusambam-nav-links{gap:8px}
+  .edusambam-nav-links a{font-size:.84rem;padding-inline:3px}
+}
+@media (max-width:1100px){
+  .edusambam-nav{min-height:68px;padding:8px 14px}
+  .edusambam-brand-mark{width:44px;height:44px;flex-basis:44px}
+  .edusambam-brand-mark span{width:12px;height:12px}
+  .edusambam-brand-mark .c3,.edusambam-brand-mark .c6{left:16px}
+  .edusambam-brand-name{font-size:1.42rem}
+  .edusambam-brand-subtitle{font-size:.52rem;letter-spacing:.06em}
+  .edusambam-nav-links{display:none}
+  .edusambam-menu-btn{display:inline-flex}
+  .edusambam-search-btn{margin-left:auto}
+  .edusambam-mobile-menu{top:68px;max-height:calc(100vh - 68px)}
+  .edusambam-search-panel{top:68px}
+}
+@media (max-width:480px){
+  .edusambam-nav-inner{gap:8px}
+  .edusambam-brand{gap:7px}
+  .edusambam-brand-mark{width:40px;height:40px;flex-basis:40px}
+  .edusambam-brand-mark span{width:11px;height:11px}
+  .edusambam-brand-mark .c3,.edusambam-brand-mark .c6{left:14.5px}
+  .edusambam-brand-name{font-size:1.28rem}
+  .edusambam-brand-subtitle{font-size:.46rem;letter-spacing:.045em}
+  .edusambam-search-btn,.edusambam-menu-btn{min-width:38px;height:38px}
+}
+</style><style id="edusambam-logo-visibility-fix">
+/* EDUSAMBAM logo visibility fix */
+.edusambam-brand-mark{
+  position:relative !important;
+  display:inline-block !important;
+  width:48px !important;
+  height:48px !important;
+  min-width:48px !important;
+  flex:0 0 48px !important;
+  overflow:visible !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+.edusambam-brand-mark > span{
+  position:absolute !important;
+  display:block !important;
+  width:13px !important;
+  height:13px !important;
+  min-width:13px !important;
+  min-height:13px !important;
+  padding:0 !important;
+  margin:0 !important;
+  border:0 !important;
+  border-radius:50% !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  box-sizing:border-box !important;
+}
+.edusambam-brand-mark > .c1{left:0 !important;top:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c2{right:0 !important;top:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c3{left:17.5px !important;top:8px !important;background:#d6a23a !important;}
+.edusambam-brand-mark > .c4{left:0 !important;bottom:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c5{right:0 !important;bottom:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c6{left:17.5px !important;bottom:8px !important;background:#d6a23a !important;}
+
+@media (max-width:1100px){
+  .edusambam-brand-mark{
+    width:44px !important;height:44px !important;min-width:44px !important;flex-basis:44px !important;
+  }
+  .edusambam-brand-mark > span{
+    width:12px !important;height:12px !important;min-width:12px !important;min-height:12px !important;
+  }
+  .edusambam-brand-mark > .c3,.edusambam-brand-mark > .c6{left:16px !important;}
+}
+@media (max-width:480px){
+  .edusambam-brand-mark{
+    width:40px !important;height:40px !important;min-width:40px !important;flex-basis:40px !important;
+  }
+  .edusambam-brand-mark > span{
+    width:11px !important;height:11px !important;min-width:11px !important;min-height:11px !important;
+  }
+  .edusambam-brand-mark > .c3,.edusambam-brand-mark > .c6{left:14.5px !important;}
+}
+</style>
+<link href="favicon.webp" rel="icon" type="image/webp"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<style id="edusambam-menu-extra-css">
+.edusambam-mobile-menu .edusambam-menu-extra:first-of-type{
+  margin-top:8px;padding-top:8px;border-top:1px solid #e5e7eb;
+}
+.edusambam-mobile-menu .edusambam-menu-extra a{
+  font-weight:600;
+}
+</style>
+<style id="edusambam-article-footer-theme">
+.edusambam-article-footer{
+  background:linear-gradient(135deg,#06244a,#0b4ea2)!important;
+}
+</style>
+<style id="edusambam-unified-footer-fix">
+/* EDUSAMBAM unified footer: same visual language and neutral brand statement across all pages. */
+.edusambam-unified-footer,
+.edusambam-article-footer,
+footer.footer {
+  background: linear-gradient(135deg, #06244a, #0b4ea2) !important;
+  color: #fff !important;
+  border-top: 3px solid #d4a017 !important;
+  box-sizing: border-box;
+}
+.edusambam-footer-statement{margin:.25rem 0 0 !important;color:rgba(255,255,255,.88) !important;font-size:.78rem !important;letter-spacing:.08em !important;text-transform:uppercase !important}
+.edusambam-unified-footer .footer-brand-name,.edusambam-article-footer .footer-brand-name{color:#fff !important}
+</style>
+<style id="edusambam-final-unified-footer">
+/* Final unified footer — same structure, visual language, and approved nav logo on every page. */
+.edusambam-unified-footer{
+  width:100% !important;
+  margin:0 !important;
+  padding:44px 0 0 !important;
+  background:linear-gradient(135deg,#06244a,#0b4ea2) !important;
+  color:#d6e4f2 !important;
+  border-top:4px solid #d4a017 !important;
+  box-sizing:border-box !important;
+  overflow:hidden !important;
+}
+.edusambam-unified-footer .footer-top{
+  width:min(1180px,92%) !important;
+  max-width:1180px !important;
+  margin:0 auto !important;
+  padding:0 0 34px !important;
+  display:grid !important;
+  grid-template-columns:1.5fr repeat(3,1fr) !important;
+  gap:34px !important;
+  box-sizing:border-box !important;
+}
+.edusambam-unified-footer .footer-brand{min-width:0 !important;}
+.edusambam-footer-brand-row{margin:0 0 10px !important;}
+.edusambam-footer-logo-link{
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:12px !important;
+  min-width:0 !important;
+  color:#fff !important;
+  text-decoration:none !important;
+}
+.edusambam-footer-logo{
+  width:48px !important;
+  height:48px !important;
+  min-width:48px !important;
+  flex:0 0 48px !important;
+}
+.edusambam-footer-logo > span{width:13px !important;height:13px !important;min-width:13px !important;min-height:13px !important;}
+.edusambam-footer-logo > .c3,.edusambam-footer-logo > .c6{left:17.5px !important;}
+.edusambam-footer-brand-name{
+  color:#fff !important;
+  font-family:"EB Garamond",Georgia,serif !important;
+  font-size:1.65rem !important;
+  font-weight:600 !important;
+  letter-spacing:.01em !important;
+  line-height:1 !important;
+  white-space:nowrap !important;
+}
+.edusambam-unified-footer .edusambam-footer-statement{
+  margin:0 !important;
+  max-width:360px !important;
+  color:rgba(255,255,255,.88) !important;
+  font-size:.78rem !important;
+  line-height:1.7 !important;
+  letter-spacing:.08em !important;
+  text-transform:uppercase !important;
+}
+.edusambam-unified-footer .footer-col{min-width:0 !important;}
+.edusambam-unified-footer .footer-col h4{
+  margin:0 0 12px !important;
+  color:#fff !important;
+  font-family:"EB Garamond",Georgia,serif !important;
+  font-size:1rem !important;
+  font-weight:600 !important;
+  line-height:1.25 !important;
+}
+.edusambam-unified-footer .footer-col ul{
+  list-style:none !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+.edusambam-unified-footer .footer-col li{margin:0 0 8px !important;padding:0 !important;}
+.edusambam-unified-footer .footer-col a{
+  color:rgba(255,255,255,.68) !important;
+  text-decoration:none !important;
+  font-size:.84rem !important;
+  line-height:1.5 !important;
+  overflow-wrap:anywhere !important;
+}
+.edusambam-unified-footer .footer-col a:hover,
+.edusambam-unified-footer .footer-col a:focus-visible{color:#fff !important;}
+.edusambam-unified-footer .footer-bottom{
+  width:min(1180px,92%) !important;
+  max-width:1180px !important;
+  margin:0 auto !important;
+  padding:18px 0 22px !important;
+  border-top:1px solid rgba(255,255,255,.12) !important;
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:center !important;
+  gap:20px !important;
+  box-sizing:border-box !important;
+}
+.edusambam-unified-footer .footer-bottom p{
+  margin:0 !important;
+  color:rgba(255,255,255,.55) !important;
+  font-size:.8rem !important;
+  line-height:1.5 !important;
+}
+.edusambam-unified-footer .footer-bottom-links{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:18px !important;
+  list-style:none !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+.edusambam-unified-footer .footer-bottom-links a{
+  color:rgba(255,255,255,.55) !important;
+  font-size:.78rem !important;
+  line-height:1.5 !important;
+  text-decoration:none !important;
+}
+.edusambam-unified-footer .footer-bottom-links a:hover,
+.edusambam-unified-footer .footer-bottom-links a:focus-visible{color:#fff !important;}
+@media(max-width:900px){
+  .edusambam-unified-footer{padding-top:32px !important;}
+  .edusambam-unified-footer .footer-top{grid-template-columns:1fr 1fr !important;gap:28px 22px !important;}
+  .edusambam-unified-footer .footer-brand{grid-column:1/-1 !important;}
+}
+@media(max-width:600px){
+  .edusambam-unified-footer{padding-top:30px !important;}
+  .edusambam-unified-footer .footer-top{width:calc(100% - 28px) !important;grid-template-columns:1fr 1fr !important;gap:26px 20px !important;padding-bottom:28px !important;}
+  .edusambam-unified-footer .footer-bottom{width:calc(100% - 28px) !important;display:block !important;padding:16px 0 20px !important;}
+  .edusambam-unified-footer .footer-bottom-links{margin-top:10px !important;gap:16px !important;}
+  .edusambam-footer-logo{width:44px !important;height:44px !important;min-width:44px !important;flex-basis:44px !important;}
+  .edusambam-footer-logo > span{width:12px !important;height:12px !important;min-width:12px !important;min-height:12px !important;}
+  .edusambam-footer-logo > .c3,.edusambam-footer-logo > .c6{left:16px !important;}
+  .edusambam-footer-brand-name{font-size:1.48rem !important;}
+}
+@media(max-width:430px){
+  .edusambam-unified-footer .footer-top{grid-template-columns:1fr !important;gap:22px !important;}
+  .edusambam-unified-footer .footer-brand{grid-column:auto !important;}
+}
+</style>
+<style id="edusambam-footer-final-alignment">
+/* Final EDUSAMBAM footer consistency pass: identical royal-blue footer and left alignment on every page. */
+.edusambam-unified-footer {
+  background: linear-gradient(135deg,#06244a,#0b4ea2) !important;
+  color:#d6e4f2 !important;
+  text-align:left !important;
+  width:100% !important;
+  box-sizing:border-box !important;
+}
+.edusambam-unified-footer,
+.edusambam-unified-footer *,
+.edusambam-unified-footer h1,
+.edusambam-unified-footer h2,
+.edusambam-unified-footer h3,
+.edusambam-unified-footer h4,
+.edusambam-unified-footer p,
+.edusambam-unified-footer ul,
+.edusambam-unified-footer li,
+.edusambam-unified-footer a,
+.edusambam-unified-footer span {
+  text-align:left !important;
+}
+.edusambam-unified-footer .footer-top,
+.edusambam-unified-footer .footer-brand,
+.edusambam-unified-footer .footer-col,
+.edusambam-unified-footer .footer-bottom {
+  margin-left:0 !important;
+}
+.edusambam-unified-footer .footer-top {
+  margin-right:auto !important;
+}
+.edusambam-unified-footer .edusambam-footer-brand-row {
+  text-align:left !important;
+}
+.edusambam-unified-footer .edusambam-footer-logo-link {
+  justify-content:flex-start !important;
+  text-align:left !important;
+}
+.edusambam-unified-footer .footer-bottom {
+  justify-content:flex-start !important;
+  align-items:flex-start !important;
+  flex-direction:column !important;
+}
+.edusambam-unified-footer .footer-bottom-links {
+  justify-content:flex-start !important;
+  align-items:flex-start !important;
+}
+@media (max-width:600px) {
+  .edusambam-unified-footer .footer-top,
+  .edusambam-unified-footer .footer-bottom {
+    margin-left:0 !important;
+    margin-right:auto !important;
+  }
+}
+</style><style id="edusambam-footer-social-css">.edusambam-footer-social{margin-top:14px}.edusambam-footer-social a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);color:rgba(255,255,255,.85);transition:background .15s,color .15s}.edusambam-footer-social a:hover{background:rgba(255,255,255,.22);color:#fff}</style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2230995786427221"
+     crossorigin="anonymous"></script>
+<style id="edusambam-article-list-fix">.article-wrap ol{margin:0 0 1.2rem 1.4rem;color:var(--slate)}.article-wrap li{font-size:1.02rem}.article-wrap h3{margin:1.4rem 0 .5rem}.article-wrap p a,.article-wrap li a{color:var(--navy-mid);text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:3px}.article-wrap p a:hover,.article-wrap li a:hover{color:var(--navy)}.article-wrap code{background:var(--red-lt);color:var(--navy);padding:1px 5px;border-radius:3px;font-size:.92em}.example-box code{background:rgba(255,255,255,.65)}</style>
+</head>
+<body id="top">
+<!-- TOP BAR -->
+<div class="top-bar">
+<p>Established 2026  ·  Free Educational Resources for All</p>
+<ul class="top-bar-links">
+<li><a href="contact.html">Contact</a></li><li><a href="index.html#about-edusambam">About</a></li><li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+</ul>
+</div>
+<!-- NAV -->
+<nav aria-label="Primary navigation" class="edusambam-nav">
+<div class="edusambam-nav-inner">
+<a aria-label="EDUSAMBAM home" class="edusambam-brand" href="index.html">
+<img alt="EDUSAMBAM" class="edusambam-brand-mark" src="logo-icon-full.png" style="width:auto;height:56px;max-width:220px;object-fit:contain;background:none;border-radius:0;flex-basis:auto;"/>
+<span class="edusambam-brand-copy">
+<span class="edusambam-brand-subtitle">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</span>
+</span>
+</a>
+<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li></ul>
+<button aria-label="Search" class="edusambam-search-btn" title="Search" type="button">⌕</button>
+<button aria-expanded="false" aria-label="Open menu" class="edusambam-menu-btn" title="Menu" type="button">☰</button>
+</div>
+</nav>
+<div aria-label="Mobile navigation" class="edusambam-mobile-menu">
+<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="assessment-arena.html">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="index.html#about-edusambam">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
+</div>
+<div aria-label="Site search" class="edusambam-search-panel">
+<div class="edusambam-search-wrap">
+<input aria-label="Search EDUSAMBAM" class="edusambam-search-input" placeholder="Search EDUSAMBAM…" type="search"/>
+<div class="edusambam-search-results"></div>
+</div>
+</div>
+<!-- ARTICLE HERO -->
+<div class="article-hero">
+<div class="breadcrumb"><a href="index.html#gateway">Gateway</a>  /  <a href="index.html#subject-computer">Computer</a>  /  Spreadsheets and Documents</div>
+<div class="article-hero-tag">Computer · Everyday Computer Skills</div>
+<h1>Spreadsheets and Documents: Everyday Computer Skills</h1>
+<p class="sub">Documents and spreadsheets are used in almost every school and workplace. Learn the main ideas, the key formulas and good habits, with worked examples you can try on any computer, tablet or phone.</p>
+<div class="article-hero-meta">
+<span>EDUSAMBAM Editorial Team</span>
+<span>|</span>
+<span>19 min read</span>
+<span>|</span>
+<span>Computer</span>
+</div>
+</div>
+<!-- ARTICLE BODY -->
+<div aria-label="EDUSAMBAM article reader" class="edusambam-reader"><strong>🔊 LISTEN TO THIS ARTICLE</strong><div class="reader-slogan">SAVE YOUR EYES • IMPROVE YOUR LISTENING</div><div class="reader-help">Listen to the article instead of relying only on continuous screen reading.</div><div class="reader-controls"><button data-reader="play" type="button">▶ Play</button><button data-reader="pause" type="button">⏸ Pause</button><button data-reader="resume" type="button">▶ Resume</button><button data-reader="stop" type="button">■ Stop</button><select aria-label="Reading speed"><option value="1">1×</option><option value="0.8">0.8×</option><option value="1.2">1.2×</option></select></div><div aria-hidden="true" class="reader-progress"><span></span></div><small class="reader-status">Ready to read the article.</small></div>
+<div class="article-wrap">
+<p class="lead">Almost every office, school, shop and small business uses two kinds of computer program every day: a program for <strong>documents</strong>, such as letters, reports and forms, and a program for <strong>spreadsheets</strong>, such as budgets, marks lists and records. Knowing how to use them well is one of the most practical skills you can have. It saves hours of work, reduces mistakes, and is listed in a very large number of job advertisements. This guide explains both kinds of program in plain language, with worked examples that you can try on a computer, a tablet or a phone, using whichever program you have.</p>
+
+<div class="example-box">
+<div class="ex-label">Key Takeaways</div>
+<p>In a spreadsheet, put one fact in each cell, begin formulas with an equals sign, and use cell references instead of typing numbers again. In a document, use heading styles and templates instead of changing each line by hand. In both, save often with clear file names, keep a backup, and check your work before you share it.</p>
+</div>
+
+<h2><span class="num">1.</span>The Programs You Can Use</h2>
+<p>Several programs do the same jobs. The skills in this article apply to all of them, because they use the same ideas and very similar menus.</p>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Job</th><th>Common programs</th><th>Typical file types</th></tr>
+<tr><td>Documents (word processing)</td><td>Microsoft Word, Google Docs, LibreOffice Writer</td><td>.docx, .odt, .pdf</td></tr>
+<tr><td>Spreadsheets</td><td>Microsoft Excel, Google Sheets, LibreOffice Calc</td><td>.xlsx, .ods, .csv</td></tr>
+<tr><td>Presentations</td><td>PowerPoint, Google Slides, LibreOffice Impress</td><td>.pptx, .odp</td></tr>
+</table>
+</div>
+<p>Some of these programs are free and work in a web browser or on a phone. Others are installed on a computer. If you want to understand what the computer is doing behind the scenes, read our article on <a href="how-computers-work.html">how computers work</a>, and for online storage see our guide to <a href="cloud-computing.html">cloud computing</a>.</p>
+
+<h2><span class="num">2.</span>Before You Start: Basic Skills and Shortcuts</h2>
+<p>A few basic actions are used constantly in every program. Learning their keyboard shortcuts can make you much faster. On a Mac computer, use the Command key instead of Ctrl.</p>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Action</th><th>Shortcut</th></tr>
+<tr><td>Copy</td><td>Ctrl + C</td></tr>
+<tr><td>Cut (move)</td><td>Ctrl + X</td></tr>
+<tr><td>Paste</td><td>Ctrl + V</td></tr>
+<tr><td>Undo</td><td>Ctrl + Z</td></tr>
+<tr><td>Redo</td><td>Ctrl + Y</td></tr>
+<tr><td>Save</td><td>Ctrl + S</td></tr>
+<tr><td>Select everything</td><td>Ctrl + A</td></tr>
+<tr><td>Find</td><td>Ctrl + F</td></tr>
+<tr><td>Bold, Italic, Underline</td><td>Ctrl + B, Ctrl + I, Ctrl + U</td></tr>
+</table>
+</div>
+<p>The most valuable habit of all is to <strong>save early and save often</strong>. Many programs save automatically online, but you should never rely on that alone for important work.</p>
+
+<h2><span class="num">3.</span>Spreadsheets: The Main Ideas</h2>
+<p>A <strong>spreadsheet</strong> is a grid of boxes that can store text and numbers and can calculate with them. Its great strength is that when you change one number, every calculation that depends on it updates automatically. Learn these words first:</p>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Term</th><th>Meaning</th></tr>
+<tr><td>Workbook</td><td>The whole file, which may contain several sheets</td></tr>
+<tr><td>Worksheet (sheet)</td><td>One page of the grid, shown as a tab at the bottom</td></tr>
+<tr><td>Cell</td><td>One box in the grid</td></tr>
+<tr><td>Column / Row</td><td>Columns run up and down and are named with letters (A, B, C); rows run across and are named with numbers (1, 2, 3)</td></tr>
+<tr><td>Cell address</td><td>The name of a cell: its column letter and row number, such as C4</td></tr>
+<tr><td>Range</td><td>A group of cells, written with a colon, such as A1:A5 (cells A1 to A5)</td></tr>
+<tr><td>Formula</td><td>A calculation, always starting with an equals sign (=)</td></tr>
+<tr><td>Function</td><td>A built-in formula with a name, such as SUM</td></tr>
+</table>
+</div>
+
+<h2><span class="num">4.</span>Entering Data Correctly</h2>
+<p>The quality of a spreadsheet depends on how the data is entered. Follow these rules from the start, and every later step becomes easier.</p>
+<ul>
+<li><strong>One fact per cell.</strong> Do not write "Ali, 45" in one cell. Put the name in one column and the marks in another.</li>
+<li><strong>A clear header row.</strong> Put a short title at the top of each column, such as "Name" and "Marks".</li>
+<li><strong>No blank rows or columns</strong> inside your data table, because they confuse sorting, filtering and charts.</li>
+<li><strong>The same format in each column.</strong> Do not mix numbers and words like "ten" in the same column.</li>
+<li><strong>Do not merge cells</strong> inside your data table. Merged cells make sorting and formulas difficult.</li>
+<li><strong>Keep units in the header,</strong> such as "Weight (kg)", so that the cells contain only numbers.</li>
+</ul>
+
+<h2><span class="num">5.</span>Formulas and Functions</h2>
+<p>Every formula starts with <strong>=</strong>. You can use the symbols + (add), - (subtract), * (multiply) and / (divide). The important rule is to use <strong>cell references</strong> instead of typing the numbers again. For example, write <code>=B2*C2</code> instead of <code>=5*20</code>. Then, when a number in B2 or C2 changes, the answer changes by itself.</p>
+<p>A <strong>function</strong> does a bigger job with a short name. The most useful functions for beginners are shown below, using the numbers 12, 18, 25, 10 and 35 in cells A1 to A5.</p>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Function</th><th>What it does</th><th>Result for A1:A5</th></tr>
+<tr><td>=SUM(A1:A5)</td><td>Adds the values</td><td>100</td></tr>
+<tr><td>=AVERAGE(A1:A5)</td><td>Finds the mean</td><td>20</td></tr>
+<tr><td>=MAX(A1:A5)</td><td>Finds the largest value</td><td>35</td></tr>
+<tr><td>=MIN(A1:A5)</td><td>Finds the smallest value</td><td>10</td></tr>
+<tr><td>=COUNT(A1:A5)</td><td>Counts the cells that contain numbers</td><td>5</td></tr>
+</table>
+</div>
+<p>The AVERAGE function finds the same mean that you can learn about in our article on <a href="basic-data-statistics.html">mean, median and mode</a>. Spreadsheets also have functions such as MEDIAN for the middle value.</p>
+
+<h3>Making decisions with IF</h3>
+<p>The <strong>IF</strong> function chooses between two results. Its shape is <code>=IF(test, result if true, result if false)</code>. Suppose a pass mark is 50 and a student's marks are in cell B2. The formula <code>=IF(B2&gt;=50,"Pass","Fail")</code> shows "Pass" when the marks are 50 or more, and "Fail" otherwise. If B2 contains 45, the answer is "Fail".</p>
+
+<h3>Relative and absolute references</h3>
+<p>When you copy a formula to another cell, the references usually move with it. This is called a <strong>relative reference</strong>. If you copy <code>=B2*C2</code> down one row, it becomes <code>=B3*C3</code>, which is exactly what you want in a list. Sometimes you need a reference to stay fixed, such as a single tax rate or exchange rate in cell F1. A dollar sign before the column and row, as in <code>$F$1</code>, makes it an <strong>absolute reference</strong> that does not move when copied.</p>
+
+<h2><span class="num">6.</span>A Worked Example: A Simple Monthly Budget</h2>
+<p>Here is a small budget. The monthly income of 1,200 is in cell B1, and the expenses are in cells B3 to B6.</p>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Cell</th><th>Column A</th><th>Column B</th></tr>
+<tr><td>Row 1</td><td>Income</td><td>1200</td></tr>
+<tr><td>Row 2</td><td>Expense</td><td>Amount</td></tr>
+<tr><td>Row 3</td><td>Rent</td><td>400</td></tr>
+<tr><td>Row 4</td><td>Food</td><td>250</td></tr>
+<tr><td>Row 5</td><td>Transport</td><td>80</td></tr>
+<tr><td>Row 6</td><td>Other</td><td>120</td></tr>
+</table>
+</div>
+<div class="example-box">
+<div class="ex-label">Formulas and results</div>
+<p><strong>Total expenses:</strong> <code>=SUM(B3:B6)</code> gives <strong>850</strong>.</p>
+<p><strong>Money left:</strong> <code>=B1-SUM(B3:B6)</code> gives 1200 &minus; 850 = <strong>350</strong>.</p>
+<p><strong>Share of income spent on food:</strong> <code>=B4/B1</code> gives 0.2083. If you format the cell as a percentage, it shows <strong>20.8%</strong>.</p>
+</div>
+<p>Now the spreadsheet is useful. If the rent rises to 450, change only cell B3, and the total, the amount left and the percentage all update immediately. This is the real power of a spreadsheet.</p>
+
+<h2><span class="num">7.</span>Formatting, Sorting and Filtering</h2>
+<p><strong>Formatting</strong> changes how data looks without changing its value. Use number, currency, percentage and date formats so that the data is easy to read. For example, 0.2083 shown as a percentage is 20.8%.</p>
+<p><strong>Sorting</strong> puts rows in order, such as marks from highest to lowest or names from A to Z. Always select the whole table before sorting so that each row stays together. <strong>Filtering</strong> shows only the rows that meet a condition, for example the students who scored below 50, and hides the others without deleting them.</p>
+<p>Use simple formatting to help the reader: bold headers, a light fill colour for the header row, borders for tables, and column widths wide enough to show the data. If you see a row of hash signs (#####) in a cell, the column is too narrow to show the number. Widen the column.</p>
+
+<h2><span class="num">8.</span>Charts: Showing Data Clearly</h2>
+<p>A <strong>chart</strong> turns numbers into a picture. Select your data, including the headers, then insert a chart. The chart type should match your message.</p>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Chart type</th><th>Best for</th><th>Example</th></tr>
+<tr><td>Bar or column chart</td><td>Comparing amounts between groups</td><td>Marks of five students</td></tr>
+<tr><td>Line chart</td><td>Showing change over time</td><td>Monthly sales through the year</td></tr>
+<tr><td>Pie chart</td><td>Showing parts of one whole (use few slices)</td><td>How a budget is divided</td></tr>
+</table>
+</div>
+<p>Give every chart a clear title, label the axes with units, and avoid decoration that makes it hard to read. A simple chart that people understand immediately is better than a fancy one that confuses them.</p>
+
+<h2><span class="num">9.</span>Common Spreadsheet Errors</h2>
+<p>Errors are normal, and they are useful clues. Learn to read the message in the cell.</p>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Message</th><th>Usual cause</th><th>Fix</th></tr>
+<tr><td>#DIV/0!</td><td>A division by zero or by an empty cell</td><td>Check the divisor and make sure it has a value</td></tr>
+<tr><td>#NAME?</td><td>A misspelled function or a name the program does not recognise</td><td>Check the spelling of the function</td></tr>
+<tr><td>#REF!</td><td>A reference to a cell that no longer exists, for example after deleting a column</td><td>Correct the reference</td></tr>
+<tr><td>#VALUE!</td><td>The wrong type of data, such as text in a calculation</td><td>Check that the cells contain numbers</td></tr>
+<tr><td>#####</td><td>The column is too narrow</td><td>Widen the column</td></tr>
+</table>
+</div>
+<p>To check a result, estimate it first. If the sum of five numbers around 20 comes out as 1,000, something is wrong. Also check that you did not type a number directly into a formula that should have used a cell reference.</p>
+
+<h2><span class="num">10.</span>Documents: Writing a Clear, Professional Page</h2>
+<p>A word processor is not just a typewriter on a screen. It can structure, format and check a document for you. The key is to use its tools instead of working by hand.</p>
+<h3>Use styles for headings and text</h3>
+<p>A <strong>style</strong> is a saved set of formatting, such as "Heading 1", "Heading 2" and "Normal". Instead of making a title bigger and bolder by hand, apply the Heading style. This gives the whole document a consistent look, lets you change the design of all headings at once, lets readers move around using the navigation pane, and allows the program to build a table of contents automatically.</p>
+<h3>Basic layout choices</h3>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Feature</th><th>Good practice</th></tr>
+<tr><td>Font</td><td>A plain, readable font at 11 or 12 points; no more than two fonts in a document</td></tr>
+<tr><td>Line spacing</td><td>Usually 1.15 to 1.5 for easy reading</td></tr>
+<tr><td>Margins</td><td>Even margins on all sides, often about 2.5 cm (1 inch)</td></tr>
+<tr><td>Alignment</td><td>Left-aligned text is the easiest to read</td></tr>
+<tr><td>Spacing between paragraphs</td><td>Use paragraph spacing, not repeated empty lines</td></tr>
+<tr><td>Lists</td><td>Use the bullet and numbering buttons, not typed dashes or numbers</td></tr>
+</table>
+</div>
+<h3>Useful features to learn</h3>
+<ul>
+<li><strong>Tables</strong> for organised information, with a header row.</li>
+<li><strong>Page numbers, headers and footers</strong> for longer documents.</li>
+<li><strong>Spelling and grammar check</strong>, while remembering that it can miss correctly spelled wrong words, such as "there" and "their".</li>
+<li><strong>Find and replace</strong> to change a name or a word everywhere at once.</li>
+<li><strong>Comments and track changes</strong> so that other people can suggest edits without destroying the original.</li>
+<li><strong>Templates</strong>: ready-made layouts for letters, reports, invoices and CVs. For example, see how a CV is organised in our guide to <a href="cv-and-resume-writing.html">CV and Resume Writing</a>, and how emails are written in <a href="professional-email-etiquette.html">professional email etiquette</a>.</li>
+</ul>
+<h3>Accessibility</h3>
+<p>Good documents can be used by everyone. Use heading styles so that screen-reader programs can navigate, add short descriptions (alternative text) to pictures, choose strong contrast between text and background, and avoid using colour alone to give meaning.</p>
+
+<h2><span class="num">11.</span>Working Together and Sharing</h2>
+<p>Online programs let several people work on the same file. When you share a file, choose the permission carefully:</p>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Permission</th><th>What the person can do</th></tr>
+<tr><td>View</td><td>Read the file only</td></tr>
+<tr><td>Comment</td><td>Read and add comments, but not change the text</td></tr>
+<tr><td>Edit</td><td>Change the file</td></tr>
+</table>
+</div>
+<p>Use comments and version history instead of sending many copies by email, because many copies lead to confusion about which one is correct. Share a file only with the people who need it, and do not share files that contain private information, such as identity numbers or bank details, with people who do not need them. Our article on <a href="cybersecurity-basics.html">cybersecurity basics</a> explains good habits for passwords and safe sharing.</p>
+
+<h2><span class="num">12.</span>File Management and Backup</h2>
+<p>Skill with files is as important as skill with programs. Many people lose hours looking for a document they saved under an unclear name.</p>
+<ul>
+<li><strong>Use clear file names</strong> that say what the file is, who it is for and when, such as <em>Budget-October-2026.xlsx</em> or <em>Maths-Report-Draft2.docx</em>. Avoid names like "new1" or "final final".</li>
+<li><strong>Use folders</strong> arranged by subject, project or year, and keep the structure simple.</li>
+<li><strong>Know the file types:</strong> .docx and .xlsx are editable; .pdf keeps the layout fixed and is best for sending a final document; .csv is a plain text file of table data that almost any program can open.</li>
+<li><strong>Back up important files.</strong> A well-known guideline is the <strong>3-2-1 rule</strong>: keep three copies of your files, on two different kinds of storage, with one copy in a different place, such as online storage.</li>
+<li><strong>Close and reopen</strong> a file after saving to check that it opens correctly.</li>
+</ul>
+
+<h2><span class="num">13.</span>Three Practice Projects</h2>
+<p>The best way to learn is to make something real. Try these three projects, increasing in difficulty.</p>
+<ol>
+<li><strong>A monthly budget.</strong> List your income and expenses, add totals with SUM, calculate the amount left, and make a pie chart of your spending.</li>
+<li><strong>A marks sheet.</strong> Enter five student names and marks, then use AVERAGE, MAX and MIN. Add an IF formula that shows "Pass" or "Fail". For example, the marks 45, 62, 78, 50 and 91 have a total of 326, a mean of 65.2, a highest mark of 91 and a lowest mark of 45, and four of the five students pass at a pass mark of 50.</li>
+<li><strong>A one-page report.</strong> Write a short report in a word processor with a title, two headings, a bulleted list, a small table and page numbers. Save it as a PDF.</li>
+</ol>
+
+<h2><span class="num">14.</span>Common Mistakes and How to Fix Them</h2>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Mistake</th><th>Fix</th></tr>
+<tr><td>Typing numbers into formulas</td><td>Use cell references so that results update</td></tr>
+<tr><td>Putting several facts in one cell</td><td>Use one fact per cell, with a header row</td></tr>
+<tr><td>Sorting only one column</td><td>Select the whole table before sorting</td></tr>
+<tr><td>Formatting headings by hand</td><td>Apply heading styles</td></tr>
+<tr><td>Using spaces or empty lines to move text</td><td>Use alignment, indents and paragraph spacing</td></tr>
+<tr><td>Not checking calculations</td><td>Estimate the answer and test with simple numbers</td></tr>
+<tr><td>Unclear file names and no backup</td><td>Name files clearly and follow the 3-2-1 rule</td></tr>
+<tr><td>Sharing with edit permission by default</td><td>Choose the lowest permission that is needed</td></tr>
+</table>
+</div>
+
+<h2><span class="num">15.</span>Your Everyday Computer Skills Checklist</h2>
+<ul>
+<li>I know the shortcuts for copy, paste, undo, save and find.</li>
+<li>I enter spreadsheet data with one fact per cell and a clear header row.</li>
+<li>I can use SUM, AVERAGE, MAX, MIN, COUNT and IF.</li>
+<li>I use cell references, and I know when to use an absolute reference.</li>
+<li>I can sort, filter and make a clear chart with a title and labels.</li>
+<li>I use heading styles, lists and templates in documents.</li>
+<li>I name files clearly, use folders and keep a backup.</li>
+<li>I check my work before sharing and choose sharing permissions carefully.</li>
+</ul>
+
+<h2>Key Terms</h2>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Term</th><th>Meaning</th></tr>
+<tr><td>Cell address</td><td>The name of a cell, made of its column letter and row number</td></tr>
+<tr><td>Range</td><td>A group of cells, such as A1:A5</td></tr>
+<tr><td>Formula</td><td>A calculation that starts with an equals sign</td></tr>
+<tr><td>Function</td><td>A built-in formula with a name, such as SUM</td></tr>
+<tr><td>Relative reference</td><td>A cell reference that changes when the formula is copied</td></tr>
+<tr><td>Absolute reference</td><td>A cell reference with dollar signs that stays fixed when copied</td></tr>
+<tr><td>Style</td><td>A saved set of text formatting, such as Heading 1</td></tr>
+<tr><td>Template</td><td>A ready-made document layout</td></tr>
+<tr><td>PDF</td><td>A file type that keeps the layout the same on every device</td></tr>
+<tr><td>Backup</td><td>An extra copy of a file kept in case the original is lost</td></tr>
+</table>
+</div>
+
+<h2>A Closing Thought</h2>
+<p>Documents and spreadsheets are not difficult, but they reward careful habits. Enter data in a clean structure, let formulas do the calculations, use styles to format documents, and protect your work with clear names and backups. Each skill is small, yet together they make you faster, more accurate and more employable. Choose one of the three practice projects this week, build it from start to finish, and you will learn more in an hour than in many hours of reading.</p>
+<div class="further-reading-box">
+<div class="fr-label">Further Reading</div>
+<ul>
+<li><a href="https://edu.gcfglobal.org/en/" rel="noopener noreferrer" target="_blank">GCFGlobal Learning</a> <span class="fr-source">— free, step-by-step tutorials on spreadsheets, documents and computer basics</span></li>
+<li><a href="https://www.libreoffice.org/" rel="noopener noreferrer" target="_blank">LibreOffice</a> <span class="fr-source">— a free office suite with a word processor and a spreadsheet program</span></li>
+<li><a href="https://support.google.com/docs/" rel="noopener noreferrer" target="_blank">Google Docs Editors Help</a> <span class="fr-source">— official help for Docs, Sheets and Slides</span></li>
+</ul>
+</div>
+</div>
+<!-- QUIZ SECTION -->
+<div class="quiz-section">
+<div class="section-eyebrow">Test Your Understanding</div>
+<h2>Practice Quiz</h2>
+<p class="quiz-intro">14 questions. Select an answer for each, then submit to see your score instantly.</p>
+<div class="squiz-progress"><div class="squiz-progress-fill" id="squizProgressFill"></div></div>
+<div class="squiz-progress-label" id="squizProgressLabel">0 of 14 answered</div>
+<div class="squiz-results" id="squizResults">
+<div class="squiz-score-big" id="squizScoreBig">0/14</div>
+<div class="squiz-score-label" id="squizScoreLabel">You scored 0%</div>
+<div class="squiz-score-tier" id="squizScoreTier">Keep practicing</div>
+<div><button class="squiz-retake-btn" onclick="retakeQuiz()">Retake Quiz</button></div>
+</div>
+<form id="squizForm">
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">1.</span>Every spreadsheet formula starts with which symbol?</div>
+<div class="squiz-option"><input id="sq1a" name="sq1" type="radio" value="0"/><label for="sq1a">A. A hash sign (#)</label></div>
+<div class="squiz-option"><input id="sq1b" name="sq1" type="radio" value="1"/><label for="sq1b">B. A question mark (?)</label></div>
+<div class="squiz-option"><input id="sq1c" name="sq1" type="radio" value="2"/><label for="sq1c">C. An equals sign (=)</label></div>
+<div class="squiz-option"><input id="sq1d" name="sq1" type="radio" value="3"/><label for="sq1d">D. A dollar sign ($)</label></div>
+</div>
+<div class="squiz-item" data-correct="0">
+<div class="squiz-q"><span class="qnum">2.</span>Which is the cell address of the cell in column C, row 4?</div>
+<div class="squiz-option"><input id="sq2a" name="sq2" type="radio" value="0"/><label for="sq2a">A. C4</label></div>
+<div class="squiz-option"><input id="sq2b" name="sq2" type="radio" value="1"/><label for="sq2b">B. 4C</label></div>
+<div class="squiz-option"><input id="sq2c" name="sq2" type="radio" value="2"/><label for="sq2c">C. CC4</label></div>
+<div class="squiz-option"><input id="sq2d" name="sq2" type="radio" value="3"/><label for="sq2d">D. C-4-C</label></div>
+</div>
+<div class="squiz-item" data-correct="3">
+<div class="squiz-q"><span class="qnum">3.</span>What does the range A1:A5 mean?</div>
+<div class="squiz-option"><input id="sq3a" name="sq3" type="radio" value="0"/><label for="sq3a">A. Only the cell A5</label></div>
+<div class="squiz-option"><input id="sq3b" name="sq3" type="radio" value="1"/><label for="sq3b">B. The cells A1 and A5 added together</label></div>
+<div class="squiz-option"><input id="sq3c" name="sq3" type="radio" value="2"/><label for="sq3c">C. A formula that divides A1 by A5</label></div>
+<div class="squiz-option"><input id="sq3d" name="sq3" type="radio" value="3"/><label for="sq3d">D. The group of cells from A1 down to A5</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">4.</span>What does the formula =SUM(B2:B5) do?</div>
+<div class="squiz-option"><input id="sq4a" name="sq4" type="radio" value="0"/><label for="sq4a">A. Counts the empty cells</label></div>
+<div class="squiz-option"><input id="sq4b" name="sq4" type="radio" value="1"/><label for="sq4b">B. Adds the values in cells B2 to B5</label></div>
+<div class="squiz-option"><input id="sq4c" name="sq4" type="radio" value="2"/><label for="sq4c">C. Finds the largest value</label></div>
+<div class="squiz-option"><input id="sq4d" name="sq4" type="radio" value="3"/><label for="sq4d">D. Deletes cells B2 to B5</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">5.</span>The cells A1 to A5 contain 12, 18, 25, 10 and 35. What does =AVERAGE(A1:A5) give?</div>
+<div class="squiz-option"><input id="sq5a" name="sq5" type="radio" value="0"/><label for="sq5a">A. 25</label></div>
+<div class="squiz-option"><input id="sq5b" name="sq5" type="radio" value="1"/><label for="sq5b">B. 35</label></div>
+<div class="squiz-option"><input id="sq5c" name="sq5" type="radio" value="2"/><label for="sq5c">C. 20</label></div>
+<div class="squiz-option"><input id="sq5d" name="sq5" type="radio" value="3"/><label for="sq5d">D. 100</label></div>
+</div>
+<div class="squiz-item" data-correct="0">
+<div class="squiz-q"><span class="qnum">6.</span>If B2 contains 45, what does =IF(B2&gt;=50,"Pass","Fail") show?</div>
+<div class="squiz-option"><input id="sq6a" name="sq6" type="radio" value="0"/><label for="sq6a">A. Fail</label></div>
+<div class="squiz-option"><input id="sq6b" name="sq6" type="radio" value="1"/><label for="sq6b">B. Pass</label></div>
+<div class="squiz-option"><input id="sq6c" name="sq6" type="radio" value="2"/><label for="sq6c">C. 45</label></div>
+<div class="squiz-option"><input id="sq6d" name="sq6" type="radio" value="3"/><label for="sq6d">D. An error</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">7.</span>What does the dollar sign do in a reference such as $A$1?</div>
+<div class="squiz-option"><input id="sq7a" name="sq7" type="radio" value="0"/><label for="sq7a">A. It changes the cell to a currency</label></div>
+<div class="squiz-option"><input id="sq7b" name="sq7" type="radio" value="1"/><label for="sq7b">B. It keeps the reference fixed when the formula is copied</label></div>
+<div class="squiz-option"><input id="sq7c" name="sq7" type="radio" value="2"/><label for="sq7c">C. It deletes the cell</label></div>
+<div class="squiz-option"><input id="sq7d" name="sq7" type="radio" value="3"/><label for="sq7d">D. It makes the number bigger</label></div>
+</div>
+<div class="squiz-item" data-correct="3">
+<div class="squiz-q"><span class="qnum">8.</span>What does the error message #DIV/0! mean?</div>
+<div class="squiz-option"><input id="sq8a" name="sq8" type="radio" value="0"/><label for="sq8a">A. The column is too narrow</label></div>
+<div class="squiz-option"><input id="sq8b" name="sq8" type="radio" value="1"/><label for="sq8b">B. A function is spelled wrongly</label></div>
+<div class="squiz-option"><input id="sq8c" name="sq8" type="radio" value="2"/><label for="sq8c">C. The sheet is protected</label></div>
+<div class="squiz-option"><input id="sq8d" name="sq8" type="radio" value="3"/><label for="sq8d">D. There was a division by zero</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">9.</span>Which chart type is best for showing change over time?</div>
+<div class="squiz-option"><input id="sq9a" name="sq9" type="radio" value="0"/><label for="sq9a">A. A pie chart with twenty slices</label></div>
+<div class="squiz-option"><input id="sq9b" name="sq9" type="radio" value="1"/><label for="sq9b">B. A line chart</label></div>
+<div class="squiz-option"><input id="sq9c" name="sq9" type="radio" value="2"/><label for="sq9c">C. A table with no title</label></div>
+<div class="squiz-option"><input id="sq9d" name="sq9" type="radio" value="3"/><label for="sq9d">D. A photograph</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">10.</span>Why should you use heading styles in a document?</div>
+<div class="squiz-option"><input id="sq10a" name="sq10" type="radio" value="0"/><label for="sq10a">A. To make the file larger</label></div>
+<div class="squiz-option"><input id="sq10b" name="sq10" type="radio" value="1"/><label for="sq10b">B. To hide the text</label></div>
+<div class="squiz-option"><input id="sq10c" name="sq10" type="radio" value="2"/><label for="sq10c">C. To give a consistent look and allow navigation and an automatic table of contents</label></div>
+<div class="squiz-option"><input id="sq10d" name="sq10" type="radio" value="3"/><label for="sq10d">D. To stop others from reading it</label></div>
+</div>
+<div class="squiz-item" data-correct="0">
+<div class="squiz-q"><span class="qnum">11.</span>What does Ctrl + Z do in most programs?</div>
+<div class="squiz-option"><input id="sq11a" name="sq11" type="radio" value="0"/><label for="sq11a">A. Undoes the last action</label></div>
+<div class="squiz-option"><input id="sq11b" name="sq11" type="radio" value="1"/><label for="sq11b">B. Saves the file</label></div>
+<div class="squiz-option"><input id="sq11c" name="sq11" type="radio" value="2"/><label for="sq11c">C. Prints the page</label></div>
+<div class="squiz-option"><input id="sq11d" name="sq11" type="radio" value="3"/><label for="sq11d">D. Closes the program</label></div>
+</div>
+<div class="squiz-item" data-correct="3">
+<div class="squiz-q"><span class="qnum">12.</span>Which file type is best for sending a final document so that its layout stays the same?</div>
+<div class="squiz-option"><input id="sq12a" name="sq12" type="radio" value="0"/><label for="sq12a">A. A photo of the page</label></div>
+<div class="squiz-option"><input id="sq12b" name="sq12" type="radio" value="1"/><label for="sq12b">B. A voice recording</label></div>
+<div class="squiz-option"><input id="sq12c" name="sq12" type="radio" value="2"/><label for="sq12c">C. A plain list of words</label></div>
+<div class="squiz-option"><input id="sq12d" name="sq12" type="radio" value="3"/><label for="sq12d">D. PDF</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">13.</span>Which is a good habit for entering spreadsheet data?</div>
+<div class="squiz-option"><input id="sq13a" name="sq13" type="radio" value="0"/><label for="sq13a">A. Merging cells inside the data table</label></div>
+<div class="squiz-option"><input id="sq13b" name="sq13" type="radio" value="1"/><label for="sq13b">B. Leaving random blank rows</label></div>
+<div class="squiz-option"><input id="sq13c" name="sq13" type="radio" value="2"/><label for="sq13c">C. One fact per cell, with a clear header row</label></div>
+<div class="squiz-option"><input id="sq13d" name="sq13" type="radio" value="3"/><label for="sq13d">D. Mixing numbers and words in the same column</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">14.</span>In the 3-2-1 backup rule, what does the “1” stand for?</div>
+<div class="squiz-option"><input id="sq14a" name="sq14" type="radio" value="0"/><label for="sq14a">A. One password</label></div>
+<div class="squiz-option"><input id="sq14b" name="sq14" type="radio" value="1"/><label for="sq14b">B. One copy kept in a different place, such as online storage</label></div>
+<div class="squiz-option"><input id="sq14c" name="sq14" type="radio" value="2"/><label for="sq14c">C. One printed page</label></div>
+<div class="squiz-option"><input id="sq14d" name="sq14" type="radio" value="3"/><label for="sq14d">D. One deleted file</label></div>
+</div>
+<button class="squiz-submit-btn" disabled="" id="squizSubmitBtn" onclick="submitQuiz()" type="button">Answer all questions to submit</button>
+</form>
+<div class="article-footer-nav">
+<a href="index.html#gateway">← Gateway</a>
+
+</div>
+</div>
+<script>
+  (function() {
+    const form = document.getElementById('squizForm');
+    const submitBtn = document.getElementById('squizSubmitBtn');
+    const progressFill = document.getElementById('squizProgressFill');
+    const progressLabel = document.getElementById('squizProgressLabel');
+    const totalQuestions = document.querySelectorAll('.squiz-item').length;
+
+    function countAnswered() {
+      let count = 0;
+      for (let i = 1; i <= totalQuestions; i++) {
+        if (form.querySelector(`input[name="sq${i}"]:checked`)) count++;
+      }
+      return count;
+    }
+
+    function updateProgress() {
+      const answered = countAnswered();
+      progressFill.style.width = (answered / totalQuestions * 100) + '%';
+      progressLabel.textContent = answered + ' of ' + totalQuestions + ' answered';
+      submitBtn.disabled = answered < totalQuestions;
+      submitBtn.textContent = answered < totalQuestions ? 'Answer all questions to submit' : 'Submit Quiz';
+      document.querySelectorAll('.squiz-option').forEach(opt => opt.classList.remove('selected'));
+      form.querySelectorAll('input[type="radio"]:checked').forEach(input => {
+        input.closest('.squiz-option').classList.add('selected');
+      });
+    }
+
+    form.addEventListener('change', updateProgress);
+
+    window.submitQuiz = function() {
+      let score = 0;
+      const questions = document.querySelectorAll('.squiz-item');
+      questions.forEach((q, idx) => {
+        const qnum = idx + 1;
+        const correctIdx = q.getAttribute('data-correct');
+        const selected = form.querySelector(`input[name="sq${qnum}"]:checked`);
+        const options = q.querySelectorAll('.squiz-option');
+        options.forEach((opt, optIdx) => {
+          opt.querySelector('input').disabled = true;
+          if (String(optIdx) === correctIdx) opt.classList.add('correct-answer');
+        });
+        if (selected && selected.value === correctIdx) {
+          score++;
+        } else if (selected) {
+          selected.closest('.squiz-option').classList.add('wrong-answer');
+        }
+      });
+
+      const percent = Math.round((score / totalQuestions) * 100);
+      document.getElementById('squizScoreBig').textContent = score + '/' + totalQuestions;
+      document.getElementById('squizScoreLabel').textContent = 'You scored ' + percent + '%';
+
+      let tier = 'Keep practicing';
+      if (percent === 100) tier = 'Perfect score!';
+      else if (percent >= 80) tier = 'Excellent work';
+      else if (percent >= 60) tier = 'Good effort';
+      else if (percent >= 40) tier = 'Getting there';
+      document.getElementById('squizScoreTier').textContent = tier;
+
+      document.getElementById('squizResults').classList.add('visible');
+      submitBtn.style.display = 'none';
+      document.getElementById('squizResults').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    window.retakeQuiz = function() {
+      form.reset();
+      document.querySelectorAll('.squiz-option').forEach(opt => {
+        opt.classList.remove('selected', 'correct-answer', 'wrong-answer');
+        opt.querySelector('input').disabled = false;
+      });
+      document.getElementById('squizResults').classList.remove('visible');
+      submitBtn.style.display = 'block';
+      updateProgress();
+      document.getElementById('squizForm').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    updateProgress();
+  })();
+</script>
+<footer class="edusambam-unified-footer" aria-label="EDUSAMBAM site footer">
+<div class="footer-top">
+<div class="footer-brand">
+<div class="edusambam-footer-brand-row">
+<a class="edusambam-footer-logo-link" href="index.html" aria-label="EDUSAMBAM home">
+<img alt="EDUSAMBAM" class="edusambam-brand-mark edusambam-footer-logo" src="logo-icon-full-white.png" style="width:auto;height:64px;max-width:240px;object-fit:contain;background:none;border-radius:0;"/>
+</a>
+</div>
+<p class="edusambam-footer-statement">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</p>
+<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a></div>
+</div>
+<div class="footer-col"><h4>Learning</h4><ul><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li></ul></div>
+<div class="footer-col"><h4>Practice &amp; Assessment</h4><ul>
+<li><a href="index.html#interactive-activities">Interactive Activities</a></li>
+<li><a href="assessment-arena.html">ASSESSMENT ARENA</a></li>
+<li><a href="assessment-arena.html">What Is Assessment?</a></li>
+<li><a href="index.html#about">Learn Your Way</a></li>
+<li><a href="index.html#resources">Resources &amp; Downloads</a></li>
+</ul></div>
+<div class="footer-col"><h4>About EDUSAMBAM</h4><ul>
+<li><a href="index.html#about-edusambam">What EDUSAMBAM Is</a></li>
+<li><a href="index.html#mission">Our Mission</a></li>
+<li><a href="index.html#team">The Team</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="mailto:feedback.edusambam@gmail.com?subject=EDUSAMBAM%20Feedback">Give Feedback</a></li>
+<li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+<li><a href="privacy-policy.html">Privacy Policy</a></li>
+</ul></div>
+</div>
+<div class="footer-bottom"><p>© 2026 EDUSAMBAM · Learning resources, practice and assessment.</p><ul class="footer-bottom-links">
+<li><a href="#top">Back to Top</a></li>
+<li><a href="index.html#mission">Mission</a></li>
+<li><a href="index.html#team">Team</a></li>
+<li><a href="index.html#resources">Resources</a></li>
+</ul></div>
+</footer>
+
+<script id="edusambam-reader-script">
+(function(){
+ const box=document.querySelector('.edusambam-reader'); if(!box)return;
+ const root=document.querySelector('.article-wrap, .article-wrapper');
+ if(!root)return;
+ const status=box.querySelector('.reader-status'), progress=box.querySelector('.reader-progress span'), rate=box.querySelector('select');
+ let utterance=null, chunks=[], index=0, total=0, paused=false, stopped=false;
+ function text(){
+   const clone=root.cloneNode(true);
+   clone.querySelectorAll('.quiz-section,.drill-section,.squiz-section,.activity-section,.assessment-section,form,button,input,select,textarea,script,style').forEach(el=>el.remove());
+   return clone.textContent.replace(/\s+/g,' ').trim();
+ }
+ function splitText(t){const out=[];const max=1200;for(let i=0;i<t.length;i+=max)out.push(t.slice(i,i+max));return out;}
+ function updateProgress(){progress.style.width=(total?Math.min(100,Math.round((index/total)*100)):0)+'%';}
+ function speakNext(){
+   if(stopped||index>=total){if(index>=total&&!stopped){status.textContent='Reading finished.';progress.style.width='100%';}return;}
+   utterance=new SpeechSynthesisUtterance(chunks[index]);
+   utterance.rate=Number(rate.value)||1;
+   utterance.onend=function(){if(stopped)return;index++;updateProgress();speakNext();};
+   utterance.onerror=function(){if(!stopped)status.textContent='The reader stopped unexpectedly. Tap Resume to continue.';};
+   status.textContent='Reading article…';
+   speechSynthesis.speak(utterance);
+ }
+ function play(){
+   if(!('speechSynthesis' in window)){status.textContent='Audio reading is not supported by this browser.';return;}
+   speechSynthesis.cancel();
+   chunks=splitText(text());index=0;total=chunks.length;paused=false;stopped=false;updateProgress();speakNext();
+ }
+ function pause(){
+   if(!('speechSynthesis' in window))return;
+   if(speechSynthesis.speaking){speechSynthesis.pause();paused=true;status.textContent='Reader paused.';}
+ }
+ function resume(){
+   if(!('speechSynthesis' in window))return;
+   stopped=false;
+   if(speechSynthesis.paused){speechSynthesis.resume();paused=false;status.textContent='Reader resumed.';return;}
+   if(!speechSynthesis.speaking && chunks.length && index<total){paused=false;status.textContent='Reader resumed.';speakNext();return;}
+   if(!chunks.length){status.textContent='Nothing to resume. Tap Play to start.';return;}
+   status.textContent='Reader is already playing.';
+ }
+ function stop(){
+   speechSynthesis.cancel();chunks=[];index=0;total=0;paused=false;stopped=true;progress.style.width='0';status.textContent='Reader stopped.';
+ }
+ box.querySelector('[data-reader="play"]').addEventListener('click',play);
+ box.querySelector('[data-reader="pause"]').addEventListener('click',pause);
+ box.querySelector('[data-reader="resume"]').addEventListener('click',resume);
+ box.querySelector('[data-reader="stop"]').addEventListener('click',stop);
+ window.addEventListener('beforeunload',()=>{stopped=true;speechSynthesis.cancel();});
+})();
+</script>
+<script id="edusambam-unified-nav-js">
+(function(){
+  let pages=[];fetch('nav-search-index.json').then(r=>r.json()).then(d=>{pages=d;});
+  function closeAll(except){
+    document.querySelectorAll('.edusambam-mobile-menu,.edusambam-search-panel').forEach(el=>{
+      if(el!==except) el.classList.remove('open');
+    });
+    const b=document.querySelector('.edusambam-menu-btn');
+    if(b) b.setAttribute('aria-expanded', String(document.querySelector('.edusambam-mobile-menu')?.classList.contains('open')||false));
+  }
+  function setup(){
+    const menu=document.querySelector('.edusambam-mobile-menu');
+    const mb=document.querySelector('.edusambam-menu-btn');
+    const sb=document.querySelector('.edusambam-search-btn');
+    const panel=document.querySelector('.edusambam-search-panel');
+    const input=document.querySelector('.edusambam-search-input');
+    const results=document.querySelector('.edusambam-search-results');
+    if(mb && menu){
+      mb.addEventListener('click',()=>{
+        const open=menu.classList.toggle('open'); closeAll(open?menu:null);
+        mb.setAttribute('aria-expanded',String(open));
+        if(open) panel?.classList.remove('open');
+      });
+    }
+    if(sb && panel){
+      sb.addEventListener('click',()=>{
+        const open=panel.classList.toggle('open'); closeAll(open?panel:null);
+        if(open) setTimeout(()=>input?.focus(),30);
+      });
+    }
+    if(input && results){
+      const render=()=>{
+        const q=input.value.trim().toLowerCase();
+        const hits=q?pages.filter(x=>(x.title+' '+x.url).toLowerCase().includes(q)).slice(0,20):[];
+        results.innerHTML=hits.map(x=>'<a href="'+x.url.replace(/"/g,'&quot;')+'">'+
+          x.title.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</a>').join('') ||
+          (q?'<div style="padding:10px;color:#64748b">No matching pages found.</div>':'');
+      };
+      input.addEventListener('input',render);
+    }
+    document.addEventListener('keydown',e=>{
+      if(e.key==='Escape') closeAll(null);
+    });
+    document.addEventListener('click',e=>{
+      if(!e.target.closest('.edusambam-nav') && !e.target.closest('.edusambam-mobile-menu') && !e.target.closest('.edusambam-search-panel')) closeAll(null);
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',setup); else setup();
+})();
+</script>
+</body>
+</html>
