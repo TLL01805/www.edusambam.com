@@ -12,9 +12,9 @@ gtag('config', 'G-Y35DW0V4HQ');
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Cloud Computing: What "The Cloud" Actually Is — EDUSAMBAM</title>
+<title>Cloud Computing Explained: How the Cloud Works — EDUSAMBAM</title>
 <link href="https://edusambam.com/cloud-computing.html" rel="canonical"/>
-<meta content="There is no actual cloud — your photos and emails sit on a real computer that belongs to someone else. Learn how cloud computing works." name="description"/>
+<meta content="Follow a photo to a data centre and learn virtualisation, IaaS, PaaS, SaaS, sync vs backup and cloud security, with worked examples and a quiz." name="description"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
@@ -1278,6 +1278,58 @@ footer.footer {
 }
 </style><style id="edusambam-footer-social-css">.edusambam-footer-social{margin-top:14px}.edusambam-footer-social a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);color:rgba(255,255,255,.85);transition:background .15s,color .15s}.edusambam-footer-social a:hover{background:rgba(255,255,255,.22);color:#fff}</style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2230995786427221"
      crossorigin="anonymous"></script>
+<style id="cc-extra">
+  .diagram-box {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin: 1.5rem 0 2rem;
+    text-align: center;
+  }
+  .diagram-box svg { max-width: 100%; height: auto; }
+  .diagram-caption {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 0.8rem;
+    font-style: italic;
+  }
+@media (max-width: 600px) { .diagram-box { padding: 0.8rem; } }
+
+  .article-wrap ol { margin: 0 0 1.2rem 1.4rem; color: var(--slate); }
+  .article-wrap a { color: var(--red); }
+  .qa-list details { background: var(--cream); border: 1px solid var(--border); border-left: 4px solid var(--gold); border-radius: var(--radius); padding: 0.8rem 1.1rem; margin: 0 0 0.7rem; }
+  .qa-list summary { cursor: pointer; font-weight: 600; color: var(--navy); }
+  .qa-list details p { margin: 0.7rem 0 0; }
+  .cc-anim .packet.p1 { transform: translateX(40px); }
+  .cc-anim .packet.p2 { transform: translateX(170px); }
+  .cc-anim .packet.p3 { transform: translateX(300px); }
+  .cc-anim .scan { transform: translateX(220px); }
+  @media (prefers-reduced-motion: no-preference) {
+    .cc-anim .packet { animation: ccMove 3.6s linear infinite; }
+    .cc-anim .packet.p2 { animation-delay: 1.2s; }
+    .cc-anim .packet.p3 { animation-delay: 2.4s; }
+    .cc-anim .led { animation: ccBlink 1.6s ease-in-out infinite; }
+    .cc-anim .led.l2 { animation-delay: .4s; } .cc-anim .led.l3 { animation-delay: .8s; } .cc-anim .led.l4 { animation-delay: 1.2s; }
+    .cc-anim .scan { animation: ccScan 9s linear infinite; }
+  }
+  @keyframes ccMove { 0% { transform: translateX(0); opacity: 0; } 8% { opacity: 1; } 92% { opacity: 1; } 100% { transform: translateX(338px); opacity: 0; } }
+  @keyframes ccBlink { 0%,100% { opacity: .25; } 50% { opacity: 1; } }
+  @keyframes ccScan { 0% { transform: translateX(0); } 100% { transform: translateX(440px); } }
+</style>
+<meta name="robots" content="index,follow,max-image-preview:large"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="EDUSAMBAM"/>
+<meta property="og:title" content="Cloud Computing Explained: How the Cloud Works"/>
+<meta property="og:description" content="Follow a photo to a data centre and learn virtualisation, IaaS, PaaS, SaaS, sync vs backup and cloud security, with worked examples and a quiz."/>
+<meta property="og:url" content="https://edusambam.com/cloud-computing.html"/>
+<meta property="og:image" content="https://edusambam.com/logo-icon-full.png"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Cloud Computing Explained: How the Cloud Works"/>
+<meta name="twitter:description" content="Follow a photo to a data centre and learn virtualisation, IaaS, PaaS, SaaS, sync vs backup and cloud security, with worked examples and a quiz."/>
+<meta property="article:modified_time" content="2026-10"/>
+<meta property="article:section" content="Computer &amp; AI"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Cloud Computing: What \"The Cloud\" Actually Is", "description": "Follow a photo to a data centre and learn virtualisation, IaaS, PaaS, SaaS, sync vs backup and cloud security, with worked examples and a quiz.", "inLanguage": "en", "mainEntityOfPage": "https://edusambam.com/cloud-computing.html", "url": "https://edusambam.com/cloud-computing.html", "dateModified": "2026-10", "articleSection": "Computer & AI", "author": {"@type": "Organization", "name": "EDUSAMBAM Editorial Team", "url": "https://edusambam.com/"}, "publisher": {"@type": "Organization", "name": "EDUSAMBAM", "url": "https://edusambam.com/", "logo": {"@type": "ImageObject", "url": "https://edusambam.com/logo-icon-full.png"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Gateway", "item": "https://edusambam.com/index.html#gateway"}, {"@type": "ListItem", "position": 2, "name": "Computer & AI", "item": "https://edusambam.com/index.html#subject-computer"}, {"@type": "ListItem", "position": 3, "name": "Cloud Computing: What \"The Cloud\" Actually Is", "item": "https://edusambam.com/cloud-computing.html"}]}]}</script>
 </head>
 <body id="top">
 <!-- TOP BAR -->
@@ -1296,13 +1348,12 @@ footer.footer {
 <span class="edusambam-brand-subtitle">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</span>
 </span>
 </a>
-<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li></ul>
+<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ Tests</a></li><li><a href="index.html#resources">Resources</a></li></ul>
 <button aria-label="Search" class="edusambam-search-btn" title="Search" type="button">⌕</button>
 <button aria-expanded="false" aria-label="Open menu" class="edusambam-menu-btn" title="Menu" type="button">☰</button>
 </div>
-</nav>
-<div aria-label="Mobile navigation" class="edusambam-mobile-menu">
-<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="assessment-arena.html">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="index.html#about-edusambam">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
+</nav><div aria-label="Mobile navigation" class="edusambam-mobile-menu">
+<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ Tests</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="index.html#subject-assessment">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="index.html#about-edusambam">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
 </div>
 <div aria-label="Site search" class="edusambam-search-panel">
 <div class="edusambam-search-wrap">
@@ -1315,48 +1366,380 @@ footer.footer {
 <div class="breadcrumb"><a href="index.html#gateway">Gateway</a>  /  <a href="index.html#subject-computer">Computer &amp; AI</a>  /  Cloud Computing</div>
 <div class="article-hero-tag">Computer &amp; AI · Computing Fundamentals</div>
 <h1>Cloud Computing: What "The Cloud" Actually Is</h1>
-<p class="sub">There is no actual cloud. Every photo, email, and streamed show "in the cloud" is sitting on a real, physical computer somewhere — just one that belongs to someone else. Here's what that setup actually involves.</p>
+<p class="sub">There is no actual cloud. Every photo, email and streamed show "in the cloud" is stored on a real computer in a real building, one that belongs to someone else. This guide explains how that works, step by step, with diagrams and worked examples.</p>
 <div class="article-hero-meta">
 <span>EDUSAMBAM Editorial Team</span>
 <span>|</span>
-<span>10 min read</span>
+<span>16 min read</span>
 <span>|</span>
 <span>Computing Fundamentals</span>
-</div>
+<span>|</span><span>Last updated: October 2026</span></div>
 </div><div aria-label="EDUSAMBAM article reader" class="edusambam-reader"><strong>🔊 LISTEN TO THIS ARTICLE</strong><div class="reader-slogan">SAVE YOUR EYES • IMPROVE YOUR LISTENING</div><div class="reader-help">Listen to the article instead of relying only on continuous screen reading.</div><div class="reader-controls"><button data-reader="play" type="button">▶ Play</button><button data-reader="pause" type="button">⏸ Pause</button><button data-reader="resume" type="button">▶ Resume</button><button data-reader="stop" type="button">■ Stop</button><select aria-label="Reading speed"><option value="1">1×</option><option value="0.8">0.8×</option><option value="1.2">1.2×</option></select></div><div aria-hidden="true" class="reader-progress"><span></span></div><small class="reader-status">Ready to read the article.</small></div>
 <!-- ARTICLE BODY -->
 <div class="article-wrap">
-<p class="lead">The "How Computers Work" article in this series covered the hardware inside a personal device — a processor, memory, and storage, all physically present in that one machine. Cloud computing is simply the practice of using that same kind of hardware, except it's owned and operated by a company in a data centre far away, and accessed remotely over the internet rather than sitting on the desk. "The cloud" isn't a separate kind of technology — it's someone else's computer, made available as a service.</p>
-<h2><span class="num">1.</span>There Is No Actual Cloud</h2>
-<p>Every file, photo, or app "in the cloud" is physically stored on a real hard drive or solid-state drive, inside a real server, inside a real building called a data centre. The word "cloud" refers to the fact that the exact physical machine handling any given request is hidden from the user and can change moment to moment — not to anything intangible or literally airborne about how the data is stored.</p>
-<div class="example-box">
-<div class="ex-label">Key Idea</div>
-<p>Saving a photo "to the cloud" means sending it, as data packets travelling across the internet — exactly as described in the internet article in this series — to a company's data centre, where it's written to a physical drive alongside millions of other users' files.</p>
+<p class="lead">When you press "back up" on a photo, where does it actually go? The honest answer is not "into the sky". It travels across the internet to a building full of computers owned by a company, and it is written onto a drive there. Cloud computing means using processing power, storage and software that live on those faraway machines instead of on the device in your hand. This article builds the idea from the ground up: the buildings, the machines, the clever trick that lets many customers share one machine, the three main kinds of service, and the trade-offs you should know about. No coding is needed.</p>
+
+<p><strong>Helpful background:</strong> the hardware parts mentioned here (processor, memory, storage) are explained in <a href="how-computers-work.html">How Computers Work</a>, and the way data travels in small pieces is explained in <a href="what-is-the-internet.html">What Is the Internet, Really?</a>. You can read this article without them, but they make it easier.</p>
+
+<h2><span class="num">1.</span>Follow One Photo to the Cloud</h2>
+<p>The quickest way to understand the cloud is to follow a single photo on its journey. Imagine you have taken a photo and your phone is set to back it up online.</p>
+<ol>
+<li><strong>The photo is a file.</strong> On your phone it is stored as a file, perhaps a few megabytes in size (a <strong>megabyte</strong>, written MB, is about a million bytes).</li>
+<li><strong>The file is cut into packets.</strong> The backup app splits the file into many small pieces called <strong>packets</strong>, each labelled with where it is going.</li>
+<li><strong>The packets cross the internet.</strong> They leave through your Wi-Fi or mobile network and pass through many <strong>routers</strong>. A router is a device that reads a packet's destination label and passes it one step closer to where it needs to go.</li>
+<li><strong>A server receives them.</strong> At the end of the route is a <strong>data centre</strong>, a building full of computers. A <strong>server</strong> there collects the packets, puts them back in order and writes the photo onto a storage drive. Usually the system also keeps extra copies on other drives, so one broken drive does not lose your photo.</li>
+<li><strong>Later, you ask for it back.</strong> When you sign in on another device, your request travels to the data centre, the server finds your file and sends it back in packets.</li>
+</ol>
+
+<div class="diagram-box cc-anim">
+<svg viewBox="0 0 560 270" role="img" aria-labelledby="ccJourneyTitle ccJourneyDesc">
+<title id="ccJourneyTitle">A photo travelling from a phone to a data centre</title>
+<desc id="ccJourneyDesc">A phone on the left sends small data packets along a line through three routers to a data centre rack on the right, where servers store the photo on drives.</desc>
+<rect x="0" y="0" width="560" height="270" rx="14" fill="#faf8f4"/>
+<text x="280" y="28" text-anchor="middle" fill="#06244a" font-size="18" font-weight="700" font-family="Arial, sans-serif">Saving a photo "to the cloud"</text>
+<g font-family="Arial, sans-serif">
+<rect x="22" y="80" width="64" height="112" rx="10" fill="#06244a"/>
+<rect x="29" y="92" width="50" height="78" rx="4" fill="#faf8f4"/>
+<rect x="37" y="108" width="34" height="26" rx="3" fill="#d4a017"/>
+<circle cx="54" cy="181" r="4" fill="#faf8f4"/>
+<text x="54" y="214" text-anchor="middle" fill="#06244a" font-size="15" font-weight="700">Your phone</text>
+<text x="54" y="232" text-anchor="middle" fill="#4a4a4a" font-size="13">photo = file</text>
+<line x1="90" y1="136" x2="432" y2="136" stroke="#b8963e" stroke-width="3" stroke-dasharray="6 6"/>
+<circle cx="190" cy="136" r="15" fill="#fff" stroke="#06244a" stroke-width="2.5"/>
+<circle cx="282" cy="136" r="15" fill="#fff" stroke="#06244a" stroke-width="2.5"/>
+<circle cx="374" cy="136" r="15" fill="#fff" stroke="#06244a" stroke-width="2.5"/>
+<text x="282" y="180" text-anchor="middle" fill="#06244a" font-size="15" font-weight="700">The internet</text>
+<text x="282" y="198" text-anchor="middle" fill="#4a4a4a" font-size="13">routers pass packets on</text>
+<rect x="440" y="52" width="100" height="148" rx="8" fill="#06244a"/>
+<rect x="450" y="62" width="80" height="26" rx="3" fill="#1c3151"/>
+<rect x="450" y="94" width="80" height="26" rx="3" fill="#1c3151"/>
+<rect x="450" y="126" width="80" height="26" rx="3" fill="#1c3151"/>
+<rect x="450" y="158" width="80" height="26" rx="3" fill="#1c3151"/>
+<circle class="led l1" cx="518" cy="75" r="3.5" fill="#d4a017"/>
+<circle class="led l2" cx="518" cy="107" r="3.5" fill="#d4a017"/>
+<circle class="led l3" cx="518" cy="139" r="3.5" fill="#d4a017"/>
+<circle class="led l4" cx="518" cy="171" r="3.5" fill="#d4a017"/>
+<text x="490" y="222" text-anchor="middle" fill="#06244a" font-size="15" font-weight="700">Data centre</text>
+<text x="490" y="240" text-anchor="middle" fill="#4a4a4a" font-size="13">servers + drives</text>
+</g>
+<rect class="packet p1" x="94" y="130" width="12" height="12" rx="2" fill="#d4a017"/>
+<rect class="packet p2" x="94" y="130" width="12" height="12" rx="2" fill="#d4a017"/>
+<rect class="packet p3" x="94" y="130" width="12" height="12" rx="2" fill="#d4a017"/>
+</svg>
+<div class="diagram-caption">Figure 1. A photo is cut into packets (gold squares) that pass through routers to a server in a data centre. If your device allows it, you can reduce motion in your system settings and the packets will stay still.</div>
 </div>
-<h2><span class="num">2.</span>Data Centres: The Buildings Behind the Cloud</h2>
-<p>A data centre is a large, purpose-built facility packed with thousands of servers, along with the industrial-scale cooling, power backup, and networking equipment needed to keep them all running continuously. Major cloud providers operate many of these data centres across different countries specifically so that data can be stored physically closer to the people using it, which reduces the delay involved in every request.</p>
-<h2><span class="num">3.</span>Renting Computing Power Instead of Owning It</h2>
-<p>Before cloud computing became common, a company that needed serious computing power had to buy, house, and maintain its own physical servers — a large upfront cost, plus ongoing responsibility for keeping that hardware running and secure. Cloud computing replaced much of that with a rental model: a company pays a cloud provider for the processing power, storage, or software it actually uses, scaling that usage up or down as needed, without ever owning or physically maintaining the hardware itself.</p>
+
+<div class="example-box">
+<div class="ex-label">Worked Example 1: How long does the upload take?</div>
+<p>A photo is <strong>4 MB</strong> and your connection can send data at <strong>8 Mbps</strong>.</p>
+<p><strong>Step 1: Match the units.</strong> File sizes use <em>bytes</em> (capital B). Internet speeds use <em>bits</em> (small b). There are 8 bits in 1 byte. So 4 MB = 4 × 8 = <strong>32 megabits</strong>.</p>
+<p><strong>Step 2: Divide size by speed.</strong> Time = 32 megabits ÷ 8 megabits per second = <strong>4 seconds</strong>.</p>
+<p><strong>Step 3: Scale up.</strong> For 100 such photos: 100 × 4 s = 400 s, which is 6 minutes 40 seconds.</p>
+<p><strong>Reality check:</strong> this is the best case. Real uploads usually take longer, because some of the data sent is labelling, many devices share the connection, and wireless speed rises and falls.</p>
+</div>
+
+<h2><span class="num">2.</span>Why Is It Called "The Cloud"?</h2>
+<p>Network engineers have long drawn diagrams of connected computers. When part of a network was complicated or did not matter for the point being made, it was often drawn as a cloud shape. The shape meant "some network is here, and we do not need to show the details." The internet itself was commonly drawn this way, and the word "cloud" stuck to services that are reached through it.</p>
+<p>A widely used formal definition comes from the United States National Institute of Standards and Technology (NIST). It describes cloud computing as a model for getting convenient, on-demand network access to a shared pool of computing resources, such as servers, storage and applications, which can be quickly provided and released with very little effort from the provider. Put simply: <strong>cloud computing is renting computing resources over a network, and using only what you need, when you need it.</strong></p>
+
+<div class="example-box">
+<div class="ex-label">Key Terms</div>
+<p><strong>Server:</strong> a computer whose job is to provide a service to other computers.<br>
+<strong>Client:</strong> the device or app that asks a server for something. Your phone is a client.<br>
+<strong>Data centre:</strong> a building designed to house many servers with power, cooling and network connections.<br>
+<strong>Latency:</strong> the delay between sending a request and starting to get a reply.<br>
+<strong>Provider:</strong> the company that owns and runs the cloud machines.</p>
+</div>
+
+<p>A server is less mysterious than it sounds. It usually contains the same kinds of parts as an ordinary computer: a processor, memory, storage and a network connection. The differences are that it is built to run all day and night, it normally has no screen or keyboard, and it is fitted into a metal frame called a <strong>rack</strong> alongside many others.</p>
+
+<h2><span class="num">3.</span>Inside a Data Centre</h2>
+<p>A data centre is not just a room of computers. Several systems work together so that the machines keep running:</p>
+<ul>
+<li><strong>Racks of servers and storage:</strong> the computers that do the processing and the drives that hold the data.</li>
+<li><strong>Networking equipment:</strong> switches and cables that connect the servers to each other and to the wider internet.</li>
+<li><strong>Power:</strong> a connection to the electricity supply, plus backup such as batteries and generators so that a power cut does not switch everything off.</li>
+<li><strong>Cooling:</strong> computers turn nearly all the electricity they use into heat, and too much heat damages them. Air conditioning or liquid cooling carries the heat away.</li>
+<li><strong>Physical security and monitoring:</strong> controlled entry, cameras, and software that watches for faults.</li>
+</ul>
+<p>Large providers run data centres in many places, and there are three main reasons:</p>
+<ul>
+<li><strong>Speed.</strong> Signals take time to travel, so a server nearer to you usually responds with lower latency. (Distance is only one cause of delay, but it is a real one.)</li>
+<li><strong>Resilience.</strong> If one site has a power failure, a fire or a flood, another site can keep the service running.</li>
+<li><strong>Rules.</strong> Some countries and regions have laws about where certain kinds of personal data may be stored or processed. Having data centres in several regions helps providers follow these rules.</li>
+</ul>
+
+<h2><span class="num">4.</span>Sharing One Machine: Virtualisation</h2>
+<p>Here is a puzzle. A small business may need only a fraction of a powerful server. If every customer received a whole physical machine, most of the hardware would sit unused. The solution is <strong>virtualisation</strong>.</p>
+<p>Virtualisation uses a special program called a <strong>hypervisor</strong>. The hypervisor sits on top of the physical hardware and divides it into several separate <strong>virtual machines</strong> (VMs). Each virtual machine behaves like a complete computer with its own operating system and programs, but it is really a slice of one real server. The hypervisor keeps the slices apart, so one customer's virtual machine cannot see another's.</p>
+
+<div class="diagram-box">
+<svg viewBox="0 0 520 330" role="img" aria-labelledby="ccVirtTitle ccVirtDesc">
+<title id="ccVirtTitle">One physical server shared by three virtual machines</title>
+<desc id="ccVirtDesc">A layered diagram. The bottom layer is physical server hardware. Above it is a hypervisor layer. On top are three separate virtual machines belonging to customers A, B and C, each with its own operating system and application.</desc>
+<rect x="0" y="0" width="520" height="330" rx="14" fill="#faf8f4"/>
+<g font-family="Arial, sans-serif" text-anchor="middle">
+<text x="260" y="28" fill="#06244a" font-size="18" font-weight="700">One real server, several virtual machines</text>
+<g>
+<rect x="24" y="48" width="150" height="150" rx="8" fill="#fff" stroke="#b8963e" stroke-width="2"/>
+<text x="99" y="72" fill="#06244a" font-size="15" font-weight="700">Customer A</text>
+<rect x="36" y="84" width="126" height="40" rx="5" fill="#f5edd6" stroke="#b8963e"/>
+<text x="99" y="109" fill="#06244a" font-size="14">Operating system</text>
+<rect x="36" y="136" width="126" height="48" rx="5" fill="#f5edd6" stroke="#b8963e"/>
+<text x="99" y="157" fill="#06244a" font-size="14">App</text>
+<text x="99" y="174" fill="#06244a" font-size="14">+ data</text>
+</g>
+<g>
+<rect x="185" y="48" width="150" height="150" rx="8" fill="#fff" stroke="#b8963e" stroke-width="2"/>
+<text x="260" y="72" fill="#06244a" font-size="15" font-weight="700">Customer B</text>
+<rect x="197" y="84" width="126" height="40" rx="5" fill="#f5edd6" stroke="#b8963e"/>
+<text x="260" y="109" fill="#06244a" font-size="14">Operating system</text>
+<rect x="197" y="136" width="126" height="48" rx="5" fill="#f5edd6" stroke="#b8963e"/>
+<text x="260" y="157" fill="#06244a" font-size="14">App</text>
+<text x="260" y="174" fill="#06244a" font-size="14">+ data</text>
+</g>
+<g>
+<rect x="346" y="48" width="150" height="150" rx="8" fill="#fff" stroke="#b8963e" stroke-width="2"/>
+<text x="421" y="72" fill="#06244a" font-size="15" font-weight="700">Customer C</text>
+<rect x="358" y="84" width="126" height="40" rx="5" fill="#f5edd6" stroke="#b8963e"/>
+<text x="421" y="109" fill="#06244a" font-size="14">Operating system</text>
+<rect x="358" y="136" width="126" height="48" rx="5" fill="#f5edd6" stroke="#b8963e"/>
+<text x="421" y="157" fill="#06244a" font-size="14">App</text>
+<text x="421" y="174" fill="#06244a" font-size="14">+ data</text>
+</g>
+<rect x="24" y="210" width="472" height="44" rx="8" fill="#0b4ea2"/>
+<text x="260" y="238" fill="#fff" font-size="16" font-weight="700">Hypervisor (shares the hardware fairly)</text>
+<rect x="24" y="264" width="472" height="46" rx="8" fill="#06244a"/>
+<text x="260" y="284" fill="#fff" font-size="16" font-weight="700">Physical server</text>
+<text x="260" y="302" fill="#d4a017" font-size="13">processor · memory · storage · network</text>
+</g>
+</svg>
+<div class="diagram-caption">Figure 2. Virtualisation: the hypervisor divides one physical server into separate virtual machines. Each customer sees only their own.</div>
+</div>
+
+<p>Virtualisation is one of the main reasons cloud computing is flexible. A virtual machine is just software, so it can be created in minutes, copied, moved to different hardware, or deleted when it is no longer needed. This is very different from buying, delivering and installing a physical computer.</p>
+
+<h2><span class="num">5.</span>What Makes a Service "Cloud"?</h2>
+<p>Not every website is cloud computing. The NIST definition lists five essential characteristics. Here they are in plain language:</p>
 <div class="table-wrap">
 <table class="pos-table">
-<tr><th>Model</th><th>What's Provided</th></tr>
-<tr><td>Infrastructure as a Service</td><td>Raw computing power and storage, with the customer managing everything built on top</td></tr>
-<tr><td>Platform as a Service</td><td>A ready-made environment for building and running an application, without managing the underlying servers</td></tr>
-<tr><td>Software as a Service</td><td>A complete, ready-to-use application accessed directly, like email or an office suite</td></tr>
+<tr><th>Characteristic</th><th>What it means in everyday terms</th></tr>
+<tr><td>On-demand self-service</td><td>You can get more computing resources yourself, when you want them, without phoning someone and waiting.</td></tr>
+<tr><td>Broad network access</td><td>The service is reached over a network, from many kinds of device such as phones, tablets and laptops.</td></tr>
+<tr><td>Resource pooling</td><td>The provider's machines are shared among many customers, and you do not choose or see which exact machine you get.</td></tr>
+<tr><td>Rapid elasticity</td><td>Capacity can grow or shrink quickly as your needs change.</td></tr>
+<tr><td>Measured service</td><td>Use is measured, so you pay for (or are limited to) what you actually use, like water or electricity.</td></tr>
 </table>
 </div>
-<h2><span class="num">4.</span>Why This Model Caught On</h2>
-<p>The rental model solved a specific, expensive problem: a company's computing needs rarely stay constant. A retail website might need ten times its normal server capacity for one holiday sale weekend and barely a fraction of that the rest of the year. Owning enough hardware to handle the busiest possible moment means that hardware sits mostly idle the rest of the time. Renting cloud capacity lets a company scale up temporarily for a spike in demand and scale back down afterward, paying only for what it actually used.</p>
+
+<h2><span class="num">6.</span>Elasticity: Paying for the Peak or Paying for the Use</h2>
+<p>Elasticity solves a problem that is easy to miss. Demand for a website is rarely steady. An online ticket shop may be quiet for weeks and then be flooded with visitors for an hour when a popular event goes on sale. A school results website may be busy on one day of the year.</p>
+<p>If a company owns its servers, it must buy enough for the busiest moment, and that equipment sits mostly idle the rest of the time. With the cloud, it can rent extra capacity for the busy period and release it afterwards. The animation below sweeps across a year of invented demand to show the difference.</p>
+
+<div class="diagram-box cc-anim">
+<svg viewBox="0 0 520 300" role="img" aria-labelledby="ccElasticTitle ccElasticDesc">
+<title id="ccElasticTitle">Fixed capacity compared with elastic capacity</title>
+<desc id="ccElasticDesc">A chart of servers needed over time. Demand is low most of the year with one tall spike. A dashed line shows owned capacity sized for the spike, leaving a large idle gap. A navy line shows rented capacity that rises and falls with demand.</desc>
+<rect x="0" y="0" width="520" height="300" rx="14" fill="#faf8f4"/>
+<g font-family="Arial, sans-serif">
+<text x="260" y="26" text-anchor="middle" fill="#06244a" font-size="17" font-weight="700">Servers needed over one year (example)</text>
+<line x1="50" y1="50" x2="50" y2="230" stroke="#4a4a4a" stroke-width="1.5"/>
+<line x1="50" y1="230" x2="490" y2="230" stroke="#4a4a4a" stroke-width="1.5"/>
+<text x="46" y="54" text-anchor="end" fill="#4a4a4a" font-size="13">10</text>
+<text x="46" y="198" text-anchor="end" fill="#4a4a4a" font-size="13">2</text>
+<text x="46" y="234" text-anchor="end" fill="#4a4a4a" font-size="13">0</text>
+<text x="270" y="250" text-anchor="middle" fill="#4a4a4a" font-size="13">time through the year →</text>
+<rect x="50" y="50" width="440" height="180" fill="#8b0000" opacity="0.07"/>
+<path d="M50 230 L50 194 L190 194 L190 50 L250 50 L250 176 L370 176 L370 140 L410 140 L410 194 L490 194 L490 230 Z" fill="#f5edd6" stroke="none"/>
+<line x1="50" y1="50" x2="490" y2="50" stroke="#8b0000" stroke-width="2.5" stroke-dasharray="7 5"/>
+<path d="M50 194 L190 194 L190 50 L250 50 L250 176 L370 176 L370 140 L410 140 L410 194 L490 194" fill="none" stroke="#06244a" stroke-width="3"/>
+<text x="330" y="82" text-anchor="middle" fill="#8b0000" font-size="13" font-weight="700">idle owned capacity</text>
+<text x="330" y="99" text-anchor="middle" fill="#8b0000" font-size="13">(shaded area)</text>
+<line class="scan" x1="50" y1="46" x2="50" y2="230" stroke="#d4a017" stroke-width="3"/>
+<line x1="60" y1="268" x2="90" y2="268" stroke="#8b0000" stroke-width="2.5" stroke-dasharray="7 5"/>
+<text x="96" y="272" fill="#4a4a4a" font-size="13">Owned: sized for the peak</text>
+<line x1="290" y1="268" x2="320" y2="268" stroke="#06244a" stroke-width="3"/>
+<text x="326" y="272" fill="#4a4a4a" font-size="13">Rented: follows demand</text>
+</g>
+</svg>
+<div class="diagram-caption">Figure 3. The numbers are invented for teaching. The shaded gap shows capacity that is owned but unused outside the busy period; the gold line sweeps through time.</div>
+</div>
+
+<div class="example-box">
+<div class="ex-label">Worked Example 2: Server-days (invented numbers)</div>
+<p>An online shop needs <strong>2 servers</strong> on a normal day, but <strong>10 servers</strong> for <strong>3 sale days</strong> each year. We count capacity in "server-days": one server running for one day.</p>
+<p><strong>Option A: own 10 servers all year.</strong> 10 × 365 = <strong>3,650 server-days</strong> owned.</p>
+<p><strong>Option B: rent what is needed.</strong> Normal days: 2 × 362 = 724. Sale days: 10 × 3 = 30. Total = <strong>754 server-days</strong>.</p>
+<p><strong>Compare:</strong> 3,650 − 754 = 2,896 server-days of capacity would sit idle under Option A. That is about 79% of what was owned (2,896 ÷ 3,650 ≈ 0.79).</p>
+<p><strong>Be fair:</strong> this ignores price. A rented server-day can cost more than an owned one, and owning has other advantages. The example only shows why elasticity is attractive when demand is uneven. The true answer depends on real costs and how steady the demand is.</p>
+</div>
+
+<h2><span class="num">7.</span>Three Service Models: IaaS, PaaS and SaaS</h2>
+<p>Cloud providers offer different amounts of the "stack", which is the set of layers needed to run an application. The more the provider handles, the less you manage yourself.</p>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Model</th><th>What you get</th><th>Everyday picture</th></tr>
+<tr><td><strong>IaaS</strong> (Infrastructure as a Service)</td><td>Basic building blocks: virtual machines, storage and networking. You install and manage the operating system and everything above it.</td><td>A company renting virtual servers to run its own software.</td></tr>
+<tr><td><strong>PaaS</strong> (Platform as a Service)</td><td>A ready-made environment to build and run applications. The provider manages servers and operating systems; you manage your application and its data.</td><td>A developer uploading a web app and letting the platform run it.</td></tr>
+<tr><td><strong>SaaS</strong> (Software as a Service)</td><td>A finished application used through a browser or app. The provider manages nearly everything.</td><td>Web email, online documents, video calls.</td></tr>
+</table>
+</div>
+
+<div class="diagram-box">
+<svg viewBox="0 0 520 330" role="img" aria-labelledby="ccStackTitle ccStackDesc">
+<title id="ccStackTitle">Who manages each layer in on-site, IaaS, PaaS and SaaS</title>
+<desc id="ccStackDesc">A grid with five layers: data, application, runtime and operating system, virtualisation, and hardware and network. Four columns show on-site, IaaS, PaaS and SaaS. Gold cells are managed by you and navy cells by the provider. On-site is all gold; IaaS leaves virtualisation and hardware to the provider; PaaS leaves only data and application to you; SaaS leaves only your data to you.</desc>
+<rect x="0" y="0" width="520" height="330" rx="14" fill="#faf8f4"/>
+<g font-family="Arial, sans-serif">
+<text x="260" y="26" text-anchor="middle" fill="#06244a" font-size="17" font-weight="700">Who manages each layer?</text>
+<g fill="#06244a" font-size="14" font-weight="700" text-anchor="middle">
+<text x="215" y="58">On-site</text>
+<text x="293" y="58">IaaS</text>
+<text x="371" y="58">PaaS</text>
+<text x="449" y="58">SaaS</text>
+</g>
+<g fill="#06244a" font-size="14" font-weight="700">
+<text x="14" y="88">Data</text>
+<text x="14" y="130">Application</text>
+<text x="14" y="172">Runtime + OS</text>
+<text x="14" y="214">Virtualisation</text>
+<text x="14" y="256">Hardware, network</text>
+</g>
+<g stroke="#faf8f4" stroke-width="2">
+<rect x="176" y="68" width="76" height="36" rx="4" fill="#d4a017"/><rect x="254" y="68" width="76" height="36" rx="4" fill="#d4a017"/><rect x="332" y="68" width="76" height="36" rx="4" fill="#d4a017"/><rect x="410" y="68" width="76" height="36" rx="4" fill="#d4a017"/>
+<rect x="176" y="110" width="76" height="36" rx="4" fill="#d4a017"/><rect x="254" y="110" width="76" height="36" rx="4" fill="#d4a017"/><rect x="332" y="110" width="76" height="36" rx="4" fill="#d4a017"/><rect x="410" y="110" width="76" height="36" rx="4" fill="#06244a"/>
+<rect x="176" y="152" width="76" height="36" rx="4" fill="#d4a017"/><rect x="254" y="152" width="76" height="36" rx="4" fill="#d4a017"/><rect x="332" y="152" width="76" height="36" rx="4" fill="#06244a"/><rect x="410" y="152" width="76" height="36" rx="4" fill="#06244a"/>
+<rect x="176" y="194" width="76" height="36" rx="4" fill="#d4a017"/><rect x="254" y="194" width="76" height="36" rx="4" fill="#06244a"/><rect x="332" y="194" width="76" height="36" rx="4" fill="#06244a"/><rect x="410" y="194" width="76" height="36" rx="4" fill="#06244a"/>
+<rect x="176" y="236" width="76" height="36" rx="4" fill="#d4a017"/><rect x="254" y="236" width="76" height="36" rx="4" fill="#06244a"/><rect x="332" y="236" width="76" height="36" rx="4" fill="#06244a"/><rect x="410" y="236" width="76" height="36" rx="4" fill="#06244a"/>
+</g>
+<g font-size="12" text-anchor="middle" font-weight="700">
+<g fill="#06244a"><text x="214" y="91">You</text><text x="292" y="91">You</text><text x="370" y="91">You</text><text x="448" y="91">You</text><text x="214" y="133">You</text><text x="292" y="133">You</text><text x="370" y="133">You</text><text x="214" y="175">You</text><text x="292" y="175">You</text><text x="214" y="217">You</text><text x="214" y="259">You</text></g>
+<g fill="#fff"><text x="448" y="133">Provider</text><text x="370" y="175">Provider</text><text x="448" y="175">Provider</text><text x="292" y="217">Provider</text><text x="370" y="217">Provider</text><text x="448" y="217">Provider</text><text x="292" y="259">Provider</text><text x="370" y="259">Provider</text><text x="448" y="259">Provider</text></g>
+</g>
+<rect x="14" y="296" width="14" height="14" rx="2" fill="#d4a017"/>
+<text x="34" y="308" fill="#4a4a4a" font-size="13">You manage it</text>
+<rect x="150" y="296" width="14" height="14" rx="2" fill="#06244a"/>
+<text x="170" y="308" fill="#4a4a4a" font-size="13">The provider manages it</text>
+</g>
+</svg>
+<div class="diagram-caption">Figure 4. Moving from on-site to SaaS, the provider takes over more layers. Even with SaaS, the data and the choices you make remain yours to look after.</div>
+</div>
+
+<h2><span class="num">8.</span>Public, Private and Hybrid Clouds</h2>
+<p>NIST also describes four ways a cloud can be set up, called <strong>deployment models</strong>:</p>
+<ul>
+<li><strong>Public cloud:</strong> run by a provider and open to many customers, who share the pooled hardware (kept separate by virtualisation).</li>
+<li><strong>Private cloud:</strong> used by a single organisation. It may be run by that organisation or by someone on its behalf.</li>
+<li><strong>Community cloud:</strong> shared by a group of organisations with similar needs.</li>
+<li><strong>Hybrid cloud:</strong> a mix of two or more of the above, joined together so work and data can be shared between them. For example, an organisation might keep very sensitive records on its private systems and use a public cloud for its public website.</li>
+</ul>
+
+<h2><span class="num">9.</span>Cloud Storage: Copies, Sync and Backup</h2>
+<p><strong>Redundancy</strong> means keeping spare copies so that one failure does not destroy the only copy. Cloud storage systems commonly store data on more than one drive, and sometimes in more than one location. That is a big reason why losing a phone no longer has to mean losing every photo on it.</p>
+<p>However, people often confuse two different features:</p>
+<ul>
+<li><strong>Sync</strong> keeps the same files matching across your devices. If you change or delete a file on one device, the change is copied to the others.</li>
+<li><strong>Backup</strong> keeps an extra copy of your files, ideally with older versions, so you can go back to how things were.</li>
+</ul>
+
+<div class="example-box">
+<div class="ex-label">Worked Example 3: The sync trap</div>
+<p>Sara keeps her school project in a synced folder on her laptop, her tablet and an online account.</p>
+<p><strong>Step 1:</strong> On Monday the file exists on all three. If the laptop breaks, she still has two copies. Sync helped.</p>
+<p><strong>Step 2:</strong> On Tuesday she accidentally deletes the project on her tablet.</p>
+<p><strong>Step 3:</strong> The sync system does exactly what it is designed to do. It copies the deletion to the laptop and the online account.</p>
+<p><strong>Result:</strong> all three places now lack the file. Many services keep a "recycle bin" or version history for a limited time, but this varies, so it should not be relied on as the only protection.</p>
+<p><strong>Lesson:</strong> sync is not a backup. A widely used rule of thumb is the "3-2-1" approach: keep <strong>3</strong> copies of important files, on <strong>2</strong> different kinds of storage, with <strong>1</strong> copy kept somewhere else (off-site).</p>
+</div>
+
+<h2><span class="num">10.</span>How the Cloud Helps Services Feel Fast</h2>
+<p>Many services also use a <strong>content delivery network</strong> (CDN). A CDN is a group of servers in many places that keep copies of popular content, such as images, web pages or videos. When you request something, it is often sent from a copy that is physically nearer to you, which cuts the delay and reduces the load on the original server.</p>
 <div class="real-world-box">
 <div class="rw-label">Real-World Example</div>
-<p>Streaming services rely on cloud computing to instantly serve video to millions of simultaneous viewers around the world, dynamically directing each request to whichever data centre is physically closest, which is part of why a show usually starts playing within a second or two rather than buffering from a single distant server.</p>
+<p>When many people watch the same popular video, the service does not need to send every viewer a copy from one distant machine. Large video services commonly keep copies on servers in many locations and direct each viewer to a suitable one. This is one reason a video can start quickly even when millions of people use the service.</p>
 </div>
-<h2><span class="num">5.</span>What Cloud Computing Means for Everyday Devices</h2>
-<p>Cloud computing is also why a modest smartphone or laptop can run demanding services without needing powerful hardware built in. Much of the heavy processing — like training the machine learning models covered elsewhere in this series, or storing years of photos — happens on remote servers, while the device itself mainly just displays results and handles the immediate interaction, relying on the internet connection to do the harder work elsewhere.</p>
-<h2><span class="num">6.</span>The Trade-Off: Convenience for Dependence</h2>
-<p>Relying on someone else's servers brings real trade-offs alongside the convenience. Without an internet connection, cloud-based services and files often become partly or fully inaccessible, since the actual data isn't stored locally. It also means trusting that provider's security and privacy practices with potentially sensitive information — the same kind of trust concern the cybersecurity article in this series covered around encryption and data protection, just applied to a company holding personal files rather than a single account login.</p>
-<h2>A Closing Thought</h2>
-<p>"The cloud" is one of computing's most successful pieces of marketing — it makes an enormous, real, physical network of buildings and machines sound weightless and abstract. Understanding that every cloud service is really just a rented computer somewhere else makes the trade-offs far clearer: real convenience and real scale, in exchange for depending on both an internet connection and someone else's hardware and judgement.</p>
+
+<h2><span class="num">11.</span>Reliability and the Meaning of "Nines"</h2>
+<p>Because a cloud service is used by so many people, how often it is available matters. Reliability is often described as a percentage of time the service works, such as "99.9%". People call these figures "nines". Redundancy makes failures less likely to cause trouble, but it does not make them impossible. Large providers have had outages from time to time, caused by faults, mistakes or events outside their control.</p>
+
+<div class="example-box">
+<div class="ex-label">Worked Example 4: What does 99.9% available allow?</div>
+<p>A year has 365 × 24 = <strong>8,760 hours</strong>.</p>
+<p><strong>Step 1:</strong> 99.9% available means 0.1% unavailable.</p>
+<p><strong>Step 2:</strong> 0.1% of 8,760 = 8,760 × 0.001 = <strong>8.76 hours</strong> of downtime per year.</p>
+<p><strong>Step 3:</strong> For 99.99%, the unavailable part is 0.01%: 8,760 × 0.0001 = 0.876 hours, which is about <strong>52.6 minutes</strong> (0.876 × 60).</p>
+<p><strong>Meaning:</strong> each extra "nine" cuts the allowed downtime by a factor of ten. This is only arithmetic. It does not tell you what any particular provider promises or achieves, so always read the service's own terms.</p>
+</div>
+
+<h2><span class="num">12.</span>Security and Privacy: A Shared Job</h2>
+<p>Putting data in the cloud does not remove the need to protect it. Cloud security is usually described as a <strong>shared responsibility</strong>: the provider protects the buildings, hardware and core systems, and the customer protects what they put there and how they use it.</p>
+<ul>
+<li><strong>The provider's part:</strong> physical security, keeping the infrastructure updated, and protecting the underlying systems. Data is commonly <strong>encrypted</strong> (scrambled so it is unreadable without the key) while travelling across the internet, and often while stored too.</li>
+<li><strong>Your part:</strong> a strong, unique password for each account, <strong>two-step verification</strong> (a second proof of identity, such as a code sent to your phone), careful sharing settings, and recognising <strong>phishing</strong> (fake messages that try to trick you into giving away a password).</li>
+</ul>
+<p>A very common cloud problem is not a clever attack but a simple mistake: a file or folder shared with "anyone with the link", and the link ends up somewhere public. Before sharing, check who can see it.</p>
+<p>Privacy is a separate question from security. Providers have to follow data protection laws, which differ between countries, and each service has a privacy policy explaining what it does with your data. To go deeper, read <a href="cybersecurity-basics.html">Cybersecurity Basics</a> and <a href="digital-footprint-privacy.html">Digital Footprint &amp; Online Privacy</a>.</p>
+
+<h2><span class="num">13.</span>Trade-Offs and Limits</h2>
+<p>The cloud is useful, but it is not free of costs or risks. A balanced view includes:</p>
+<ul>
+<li><strong>It needs a connection.</strong> Without internet access, cloud files and apps may be partly or fully unavailable, unless you have saved offline copies.</li>
+<li><strong>Ongoing cost.</strong> Many services charge regularly or limit free storage. Costs depend on how much you use and can grow if usage is not watched.</li>
+<li><strong>Dependence on one provider.</strong> Moving large amounts of data or software between providers can be slow, costly or technically difficult. People call this <strong>lock-in</strong>.</li>
+<li><strong>Trust.</strong> You rely on the provider's security, honesty and continued operation.</li>
+<li><strong>Energy and environment.</strong> Data centres use a lot of electricity and need cooling, and some use water for cooling. Sharing machines among many customers can use hardware more efficiently than many small, lightly used servers, but estimates of the total effect differ between studies, so be careful with any single figure you read.</li>
+</ul>
+
+<h2><span class="num">14.</span>The Cloud, Your Devices and Artificial Intelligence</h2>
+<p>Because heavy work can be done remotely, a modest phone or laptop can use services that would be too demanding to run locally. The device mainly shows results and handles taps and typing, while remote servers do the harder work. Many artificial intelligence services also run in data centres, because large AI models need far more computing power than a typical personal device has. This is one reason cloud computing and AI are so often mentioned together.</p>
+
+<h2><span class="num">15.</span>Common Mistakes and Misconceptions</h2>
+<ul>
+<li><strong>"The cloud has no physical location."</strong> Every file is on a physical drive in a real building, even if you cannot see which one.</li>
+<li><strong>"Cloud storage is a backup."</strong> Sync mirrors changes, including mistakes. A real backup keeps separate copies and older versions.</li>
+<li><strong>"The provider handles all security."</strong> The provider secures the infrastructure; you must secure your account and sharing choices.</li>
+<li><strong>"The cloud never goes down."</strong> Redundancy reduces risk but does not remove it.</li>
+<li><strong>"The cloud is always cheaper."</strong> It can be, especially when demand is uneven, but it depends on real usage and costs (see Worked Example 2).</li>
+<li><strong>"Everything in the cloud is public."</strong> Not so. Cloud data is private unless it is shared or misconfigured.</li>
+</ul>
+
+<h2><span class="num">16.</span>Check Your Understanding</h2>
+<p>Try each question first, then tap it to reveal the answer. A scored multiple-choice quiz follows below.</p>
+<div class="qa-list">
+<details><summary>1. In your own words, what is "the cloud"?</summary><p>It is computing resources (processing, storage, software) on servers in data centres owned by a provider and used over the internet, instead of on your own device.</p></details>
+<details><summary>2. Give two reasons providers build data centres in many places.</summary><p>Any two of: lower delay for nearby users; keeping the service running if one site fails; following laws about where data may be stored.</p></details>
+<details><summary>3. What does a hypervisor do?</summary><p>It divides one physical server into several separate virtual machines and keeps them isolated from each other.</p></details>
+<details><summary>4. A 6 MB file is uploaded at 12 Mbps. What is the best-case time?</summary><p>6 MB × 8 = 48 megabits. 48 ÷ 12 = 4 seconds.</p></details>
+<details><summary>5. Which service model is web email, and why?</summary><p>SaaS, because it is a finished application used through a browser or app, with the provider managing almost everything underneath.</p></details>
+<details><summary>6. Why is a synced folder not a proper backup?</summary><p>Because deletions and mistakes are copied to every synced device, so all copies can lose the file together. A backup keeps separate copies and older versions.</p></details>
+</div>
+
+<h2><span class="num">17.</span>Summary</h2>
+<ul>
+<li>"The cloud" means renting computing resources from servers in data centres, reached over the internet.</li>
+<li>Data centres provide power, cooling, networking and security, and are spread across many places for speed and resilience.</li>
+<li>Virtualisation lets one physical server be shared safely by many customers.</li>
+<li>NIST's five characteristics (on-demand self-service, broad network access, resource pooling, rapid elasticity, measured service) separate true cloud services from ordinary hosting.</li>
+<li>IaaS, PaaS and SaaS differ in how much the provider manages for you.</li>
+<li>Elasticity helps most when demand is uneven; cost and suitability still need checking.</li>
+<li>Sync is not backup, and security is a shared responsibility.</li>
+<li>The cloud brings convenience and scale in exchange for dependence on connectivity and a provider.</li>
+</ul>
+
+<div class="example-box">
+<div class="ex-label">For Teachers and Parents</div>
+<p><strong>Class activity (no accounts needed):</strong> let students act out Figure 1. Some are the "phone", some are routers, one is the "server". Write a short message on cards, split it into numbered packets, pass them along the line and ask the server to reassemble them in order. Then discuss what would change if one router were missing.</p>
+<p><strong>Discussion prompts:</strong> What files should have a backup? Who can see a file shared by link? What is stored offline on your device and what depends on the internet?</p>
+<p><strong>Safety note:</strong> many online services set minimum ages for accounts and may need a parent's permission, so check each service's terms before students sign up. Please do not have students upload personal photos or documents for classroom demonstrations.</p>
+</div>
+
+<h2><span class="num">18.</span>Sources and Further Reading</h2>
+<p>This article is original EDUSAMBAM writing. The definition, five characteristics, three service models and four deployment models follow the standard reference below. The other ideas (data centres, virtualisation, sync versus backup, shared responsibility) are widely taught concepts of computing, explained here in our own words. All diagrams are original EDUSAMBAM schematics, and all numbers in the worked examples are invented or are simple arithmetic for practice.</p>
+<ul>
+<li><strong>NIST Special Publication 800-145, "The NIST Definition of Cloud Computing"</strong> by Peter Mell and Timothy Grance (2011): <a href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf" target="_blank" rel="noopener">read the PDF</a> or <a href="https://doi.org/10.6028/NIST.SP.800-145" target="_blank" rel="noopener">view the official record</a>.</li>
+</ul>
+<p>Because technology services change, check any provider's current terms, limits and prices for yourself. This article does not recommend or compare particular companies.</p>
+
 <!-- QUIZ SECTION -->
 <div class="quiz-section">
 <div class="section-eyebrow">Test Your Understanding</div>
@@ -1372,79 +1755,79 @@ footer.footer {
 </div>
 <form id="squizForm">
 <div class="squiz-item" data-correct="1">
-<div class="squiz-q"><span class="qnum">1.</span>What does the article say "the cloud" actually refers to?</div>
-<div class="squiz-option"><input id="sq1a" name="sq1" type="radio" value="0"><label for="sq1a">A. Data stored in the atmosphere</label></input></div>
-<div class="squiz-option"><input id="sq1b" name="sq1" type="radio" value="1"/><label for="sq1b">B. Real hardware in a company's data centre, accessed remotely</label></div>
-<div class="squiz-option"><input id="sq1c" name="sq1" type="radio" value="2"/><label for="sq1c">C. A type of wireless signal</label></div>
-<div class="squiz-option"><input id="sq1d" name="sq1" type="radio" value="3"/><label for="sq1d">D. Data with no physical location at all</label></div>
+<div class="squiz-q"><span class="qnum">1.</span>What does "the cloud" really refer to?</div>
+<div class="squiz-option"><input id="sq1a" name="sq1" type="radio" value="0"/><label for="sq1a">A. Data stored in the atmosphere</label></div>
+<div class="squiz-option"><input id="sq1b" name="sq1" type="radio" value="1"/><label for="sq1b">B. Real servers and drives in data centres, used over the internet</label></div>
+<div class="squiz-option"><input id="sq1c" name="sq1" type="radio" value="2"/><label for="sq1c">C. A special kind of wireless signal</label></div>
+<div class="squiz-option"><input id="sq1d" name="sq1" type="radio" value="3"/><label for="sq1d">D. Files that have no physical location</label></div>
 </div>
 <div class="squiz-item" data-correct="2">
-<div class="squiz-q"><span class="qnum">2.</span>What is a data centre, according to the article?</div>
-<div class="squiz-option"><input id="sq2a" name="sq2" type="radio" value="0"/><label for="sq2a">A. A single personal computer</label></div>
-<div class="squiz-option"><input id="sq2b" name="sq2" type="radio" value="1"/><label for="sq2b">B. A type of internet browser</label></div>
-<div class="squiz-option"><input id="sq2c" name="sq2" type="radio" value="2"/><label for="sq2c">C. A large facility packed with thousands of servers, plus cooling and power infrastructure</label></div>
-<div class="squiz-option"><input id="sq2d" name="sq2" type="radio" value="3"/><label for="sq2d">D. A file storage format</label></div>
+<div class="squiz-q"><span class="qnum">2.</span>Which part of a data centre keeps servers running during a power cut?</div>
+<div class="squiz-option"><input id="sq2a" name="sq2" type="radio" value="0"/><label for="sq2a">A. The cooling system</label></div>
+<div class="squiz-option"><input id="sq2b" name="sq2" type="radio" value="1"/><label for="sq2b">B. The network switches</label></div>
+<div class="squiz-option"><input id="sq2c" name="sq2" type="radio" value="2"/><label for="sq2c">C. Backup batteries and generators</label></div>
+<div class="squiz-option"><input id="sq2d" name="sq2" type="radio" value="3"/><label for="sq2d">D. The server racks</label></div>
 </div>
 <div class="squiz-item" data-correct="0">
-<div class="squiz-q"><span class="qnum">3.</span>Why do major cloud providers operate data centres in many different countries?</div>
-<div class="squiz-option"><input id="sq3a" name="sq3" type="radio" value="0"/><label for="sq3a">A. So data can be stored physically closer to users, reducing delay</label></div>
-<div class="squiz-option"><input id="sq3b" name="sq3" type="radio" value="1"/><label for="sq3b">B. To avoid using the internet</label></div>
-<div class="squiz-option"><input id="sq3c" name="sq3" type="radio" value="2"/><label for="sq3c">C. Because a single data centre is illegal</label></div>
-<div class="squiz-option"><input id="sq3d" name="sq3" type="radio" value="3"/><label for="sq3d">D. It has no effect on speed</label></div>
+<div class="squiz-q"><span class="qnum">3.</span>What does a hypervisor do?</div>
+<div class="squiz-option"><input id="sq3a" name="sq3" type="radio" value="0"/><label for="sq3a">A. Divides one physical server into separate virtual machines</label></div>
+<div class="squiz-option"><input id="sq3b" name="sq3" type="radio" value="1"/><label for="sq3b">B. Makes a website load faster by caching images</label></div>
+<div class="squiz-option"><input id="sq3c" name="sq3" type="radio" value="2"/><label for="sq3c">C. Encrypts every file you upload</label></div>
+<div class="squiz-option"><input id="sq3d" name="sq3" type="radio" value="3"/><label for="sq3d">D. Connects a phone to Wi-Fi</label></div>
 </div>
 <div class="squiz-item" data-correct="3">
-<div class="squiz-q"><span class="qnum">4.</span>What model did cloud computing largely replace, according to the article?</div>
-<div class="squiz-option"><input id="sq4a" name="sq4" type="radio" value="0"/><label for="sq4a">A. Using only paper records</label></div>
-<div class="squiz-option"><input id="sq4b" name="sq4" type="radio" value="1"/><label for="sq4b">B. Free unlimited computing for everyone</label></div>
-<div class="squiz-option"><input id="sq4c" name="sq4" type="radio" value="2"/><label for="sq4c">C. Renting servers only during holidays</label></div>
-<div class="squiz-option"><input id="sq4d" name="sq4" type="radio" value="3"/><label for="sq4d">D. Companies buying, housing, and maintaining their own physical servers</label></div>
-</div>
-<div class="squiz-item" data-correct="2">
-<div class="squiz-q"><span class="qnum">5.</span>What does Software as a Service (SaaS) provide?</div>
-<div class="squiz-option"><input id="sq5a" name="sq5" type="radio" value="0"/><label for="sq5a">A. Raw, unmanaged computing power only</label></div>
-<div class="squiz-option"><input id="sq5b" name="sq5" type="radio" value="1"/><label for="sq5b">B. Physical servers shipped to a customer's office</label></div>
-<div class="squiz-option"><input id="sq5c" name="sq5" type="radio" value="2"/><label for="sq5c">C. A complete, ready-to-use application accessed directly, like email</label></div>
-<div class="squiz-option"><input id="sq5d" name="sq5" type="radio" value="3"/><label for="sq5d">D. Only internet cabling</label></div>
+<div class="squiz-q"><span class="qnum">4.</span>Which NIST characteristic describes adding or removing capacity quickly as demand changes?</div>
+<div class="squiz-option"><input id="sq4a" name="sq4" type="radio" value="0"/><label for="sq4a">A. Broad network access</label></div>
+<div class="squiz-option"><input id="sq4b" name="sq4" type="radio" value="1"/><label for="sq4b">B. Resource pooling</label></div>
+<div class="squiz-option"><input id="sq4c" name="sq4" type="radio" value="2"/><label for="sq4c">C. Measured service</label></div>
+<div class="squiz-option"><input id="sq4d" name="sq4" type="radio" value="3"/><label for="sq4d">D. Rapid elasticity</label></div>
 </div>
 <div class="squiz-item" data-correct="1">
-<div class="squiz-q"><span class="qnum">6.</span>Why did the rental model of cloud computing catch on, according to the article?</div>
-<div class="squiz-option"><input id="sq6a" name="sq6" type="radio" value="0"/><label for="sq6a">A. Computing needs are always exactly the same every day</label></div>
-<div class="squiz-option"><input id="sq6b" name="sq6" type="radio" value="1"/><label for="sq6b">B. It lets a company scale usage up or down and pay only for what it uses</label></div>
-<div class="squiz-option"><input id="sq6c" name="sq6" type="radio" value="2"/><label for="sq6c">C. It requires owning more physical hardware</label></div>
-<div class="squiz-option"><input id="sq6d" name="sq6" type="radio" value="3"/><label for="sq6d">D. It eliminates the need for the internet</label></div>
+<div class="squiz-q"><span class="qnum">5.</span>A 6 MB photo is uploaded at 12 Mbps. What is the best-case upload time?</div>
+<div class="squiz-option"><input id="sq5a" name="sq5" type="radio" value="0"/><label for="sq5a">A. 0.5 seconds</label></div>
+<div class="squiz-option"><input id="sq5b" name="sq5" type="radio" value="1"/><label for="sq5b">B. 4 seconds</label></div>
+<div class="squiz-option"><input id="sq5c" name="sq5" type="radio" value="2"/><label for="sq5c">C. 18 seconds</label></div>
+<div class="squiz-option"><input id="sq5d" name="sq5" type="radio" value="3"/><label for="sq5d">D. 72 seconds</label></div>
 </div>
 <div class="squiz-item" data-correct="0">
-<div class="squiz-q"><span class="qnum">7.</span>According to the streaming example, why does a show usually start playing almost instantly?</div>
-<div class="squiz-option"><input id="sq7a" name="sq7" type="radio" value="0"/><label for="sq7a">A. Requests are directed to whichever data centre is physically closest</label></div>
-<div class="squiz-option"><input id="sq7b" name="sq7" type="radio" value="1"/><label for="sq7b">B. All video is stored on the user's own device beforehand</label></div>
-<div class="squiz-option"><input id="sq7c" name="sq7" type="radio" value="2"/><label for="sq7c">C. Streaming does not use the cloud at all</label></div>
-<div class="squiz-option"><input id="sq7d" name="sq7" type="radio" value="3"/><label for="sq7d">D. Every viewer connects to a single central server worldwide</label></div>
-</div>
-<div class="squiz-item" data-correct="3">
-<div class="squiz-q"><span class="qnum">8.</span>Why can a modest smartphone run demanding services, according to the article?</div>
-<div class="squiz-option"><input id="sq8a" name="sq8" type="radio" value="0"/><label for="sq8a">A. Smartphones always have more processing power than any server</label></div>
-<div class="squiz-option"><input id="sq8b" name="sq8" type="radio" value="1"/><label for="sq8b">B. It never connects to remote servers</label></div>
-<div class="squiz-option"><input id="sq8c" name="sq8" type="radio" value="2"/><label for="sq8c">C. All the heavy processing happens inside the battery</label></div>
-<div class="squiz-option"><input id="sq8d" name="sq8" type="radio" value="3"/><label for="sq8d">D. Much of the heavy processing happens on remote servers, while the device mainly displays results</label></div>
-</div>
-<div class="squiz-item" data-correct="1">
-<div class="squiz-q"><span class="qnum">9.</span>What is a real trade-off of relying on cloud services, according to the article?</div>
-<div class="squiz-option"><input id="sq9a" name="sq9" type="radio" value="0"/><label for="sq9a">A. Cloud services are always slower than local storage</label></div>
-<div class="squiz-option"><input id="sq9b" name="sq9" type="radio" value="1"/><label for="sq9b">B. Without an internet connection, cloud-based services and files often become inaccessible</label></div>
-<div class="squiz-option"><input id="sq9c" name="sq9" type="radio" value="2"/><label for="sq9c">C. Cloud services cannot store photos</label></div>
-<div class="squiz-option"><input id="sq9d" name="sq9" type="radio" value="3"/><label for="sq9d">D. There is no trade-off at all</label></div>
+<div class="squiz-q"><span class="qnum">6.</span>In which service model do you rent virtual machines and manage the operating system yourself?</div>
+<div class="squiz-option"><input id="sq6a" name="sq6" type="radio" value="0"/><label for="sq6a">A. IaaS</label></div>
+<div class="squiz-option"><input id="sq6b" name="sq6" type="radio" value="1"/><label for="sq6b">B. PaaS</label></div>
+<div class="squiz-option"><input id="sq6c" name="sq6" type="radio" value="2"/><label for="sq6c">C. SaaS</label></div>
+<div class="squiz-option"><input id="sq6d" name="sq6" type="radio" value="3"/><label for="sq6d">D. None of these</label></div>
 </div>
 <div class="squiz-item" data-correct="2">
-<div class="squiz-q"><span class="qnum">10.</span>What is the article's closing point about "the cloud"?</div>
-<div class="squiz-option"><input id="sq10a" name="sq10" type="radio" value="0"/><label for="sq10a">A. It is a completely wireless, hardware-free system</label></div>
-<div class="squiz-option"><input id="sq10b" name="sq10" type="radio" value="1"/><label for="sq10b">B. It has no real trade-offs compared to local storage</label></div>
-<div class="squiz-option"><input id="sq10c" name="sq10" type="radio" value="2"/><label for="sq10c">C. It's really just a rented computer somewhere else, offering convenience in exchange for dependence</label></div>
-<div class="squiz-option"><input id="sq10d" name="sq10" type="radio" value="3"/><label for="sq10d">D. It only applies to large businesses</label></div>
+<div class="squiz-q"><span class="qnum">7.</span>Web email used through a browser is an example of which model?</div>
+<div class="squiz-option"><input id="sq7a" name="sq7" type="radio" value="0"/><label for="sq7a">A. IaaS</label></div>
+<div class="squiz-option"><input id="sq7b" name="sq7" type="radio" value="1"/><label for="sq7b">B. PaaS</label></div>
+<div class="squiz-option"><input id="sq7c" name="sq7" type="radio" value="2"/><label for="sq7c">C. SaaS</label></div>
+<div class="squiz-option"><input id="sq7d" name="sq7" type="radio" value="3"/><label for="sq7d">D. A private data centre</label></div>
+</div>
+<div class="squiz-item" data-correct="3">
+<div class="squiz-q"><span class="qnum">8.</span>Why is a synced folder not a proper backup?</div>
+<div class="squiz-option"><input id="sq8a" name="sq8" type="radio" value="0"/><label for="sq8a">A. It cannot store photos</label></div>
+<div class="squiz-option"><input id="sq8b" name="sq8" type="radio" value="1"/><label for="sq8b">B. It is always slower</label></div>
+<div class="squiz-option"><input id="sq8c" name="sq8" type="radio" value="2"/><label for="sq8c">C. It needs no internet connection</label></div>
+<div class="squiz-option"><input id="sq8d" name="sq8" type="radio" value="3"/><label for="sq8d">D. Deletions and mistakes are copied to every synced device</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">9.</span>Which task is normally the customer's job under shared responsibility?</div>
+<div class="squiz-option"><input id="sq9a" name="sq9" type="radio" value="0"/><label for="sq9a">A. Guarding the data centre building</label></div>
+<div class="squiz-option"><input id="sq9b" name="sq9" type="radio" value="1"/><label for="sq9b">B. Protecting accounts with strong passwords and two-step verification</label></div>
+<div class="squiz-option"><input id="sq9c" name="sq9" type="radio" value="2"/><label for="sq9c">C. Cooling the servers</label></div>
+<div class="squiz-option"><input id="sq9d" name="sq9" type="radio" value="3"/><label for="sq9d">D. Repairing the provider's network cables</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">10.</span>About how much downtime per year does 99.9% availability allow?</div>
+<div class="squiz-option"><input id="sq10a" name="sq10" type="radio" value="0"/><label for="sq10a">A. About 5 minutes</label></div>
+<div class="squiz-option"><input id="sq10b" name="sq10" type="radio" value="1"/><label for="sq10b">B. About 53 minutes</label></div>
+<div class="squiz-option"><input id="sq10c" name="sq10" type="radio" value="2"/><label for="sq10c">C. About 8.8 hours</label></div>
+<div class="squiz-option"><input id="sq10d" name="sq10" type="radio" value="3"/><label for="sq10d">D. About 3.7 days</label></div>
 </div>
 <button class="squiz-submit-btn" disabled="" id="squizSubmitBtn" onclick="submitQuiz()" type="button">Answer all questions to submit</button>
 </form>
 </div>
-<div class="article-footer-nav"><a href="article-viewer.html#search-engines-browsers.html">← Previous: Search Engines &amp; Web Browsers: How the Internet Finds Things</a><a href="index.html#gateway">Gateway</a></div>
+<div class="article-footer-nav"><a href="search-engines-browsers.html">← Previous: Search Engines &amp; Web Browsers: How the Internet Finds Things</a><a href="index.html#gateway">Gateway</a></div>
 </div>
 <script>
   (function() {
@@ -1628,23 +2011,21 @@ footer.footer {
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',setup); else setup();
 })();
 </script>
-<footer class="edusambam-unified-footer" aria-label="EDUSAMBAM site footer">
+<footer aria-label="EDUSAMBAM site footer" class="edusambam-unified-footer">
 <div class="footer-top">
 <div class="footer-brand">
 <div class="edusambam-footer-brand-row">
-<a class="edusambam-footer-logo-link" href="index.html" aria-label="EDUSAMBAM home">
+<a aria-label="EDUSAMBAM home" class="edusambam-footer-logo-link" href="index.html">
 <img alt="EDUSAMBAM" class="edusambam-brand-mark edusambam-footer-logo" src="logo-icon-full-white.png" style="width:auto;height:64px;max-width:240px;object-fit:contain;background:none;border-radius:0;"/>
 </a>
 </div>
 <p class="edusambam-footer-statement">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</p>
-<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a></div>
+<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a><a aria-label="EDUSAMBAM on YouTube" href="https://youtube.com/@edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></div>
 </div>
-<div class="footer-col"><h4>Learning</h4><ul><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li></ul></div>
+<div class="footer-col"><h4>Learning Areas</h4><ul><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ Tests</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li></ul></div>
 <div class="footer-col"><h4>Practice &amp; Assessment</h4><ul>
 <li><a href="index.html#interactive-activities">Interactive Activities</a></li>
 <li><a href="assessment-arena.html">ASSESSMENT ARENA</a></li>
-<li><a href="assessment-arena.html">What Is Assessment?</a></li>
-<li><a href="index.html#about">Learn Your Way</a></li>
 <li><a href="index.html#resources">Resources &amp; Downloads</a></li>
 </ul></div>
 <div class="footer-col"><h4>About EDUSAMBAM</h4><ul>
@@ -1654,6 +2035,7 @@ footer.footer {
 <li><a href="contact.html">Contact Us</a></li>
 <li><a href="mailto:feedback.edusambam@gmail.com?subject=EDUSAMBAM%20Feedback">Give Feedback</a></li>
 <li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+<li><a href="about.html">About EDUSAMBAM</a></li>
 <li><a href="privacy-policy.html">Privacy Policy</a></li>
 </ul></div>
 </div>

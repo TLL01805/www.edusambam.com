@@ -12,9 +12,9 @@ gtag('config', 'G-Y35DW0V4HQ');
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>What Is the Internet, Really? Servers, Packets and How Data Travels — EDUSAMBAM</title>
+<title>What Is the Internet? Packets, IP and DNS — EDUSAMBAM</title>
 <link href="https://edusambam.com/what-is-the-internet.html" rel="canonical"/>
-<meta content="Billions of devices exchange data every second with no direct wires. Learn how the internet actually works: routers, packets and addresses." name="description"/>
+<meta content="Learn how the internet really works: packets, IP addresses, DNS, routers and undersea cables, with diagrams, worked examples and a quiz." name="description"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
@@ -936,6 +936,56 @@ footer.footer {
 }
 </style><style id="edusambam-footer-social-css">.edusambam-footer-social{margin-top:14px}.edusambam-footer-social a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);color:rgba(255,255,255,.85);transition:background .15s,color .15s}.edusambam-footer-social a:hover{background:rgba(255,255,255,.22);color:#fff}</style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2230995786427221"
      crossorigin="anonymous"></script>
+<style id="in-extra">
+  .diagram-box {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin: 1.5rem 0 2rem;
+    text-align: center;
+  }
+  .diagram-box svg { max-width: 100%; height: auto; }
+  .diagram-caption {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 0.8rem;
+    font-style: italic;
+  }
+@media (max-width: 600px) { .diagram-box { padding: 0.8rem; } }
+
+  .article-wrap ol { margin: 0 0 1.2rem 1.4rem; color: var(--slate); }
+  .article-wrap a { color: var(--red); }
+  .article-wrap code { background: #f5edd6; padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.92em; word-break: break-word; }
+  .qa-list details { background: var(--cream); border: 1px solid var(--border); border-left: 4px solid var(--gold); border-radius: var(--radius); padding: 0.8rem 1.1rem; margin: 0 0 0.7rem; }
+  .qa-list summary { cursor: pointer; font-weight: 600; color: var(--navy); }
+  .qa-list details p { margin: 0.7rem 0 0; }
+  .cc-anim .pk.q1 { transform: translateX(60px); } .cc-anim .pk.q2 { transform: translateX(200px); } .cc-anim .pk.q3 { transform: translateX(340px); }
+  .cc-anim .p1 { transform: translateX(30px); } .cc-anim .p2 { transform: translateX(110px); } .cc-anim .p3 { transform: translateX(190px); } .cc-anim .p4 { transform: translateX(270px); }
+  @media (prefers-reduced-motion: no-preference) {
+    .cc-anim .pk { animation: inHop 4s linear infinite; }
+    .cc-anim .pk.q2 { animation-delay: 1.3s; } .cc-anim .pk.q3 { animation-delay: 2.6s; }
+    .cc-anim .p1 { animation: inRoute 4s linear infinite; }
+    .cc-anim .p3 { animation: inRoute 4s linear infinite 2s; }
+    .cc-anim .p2 { animation: inRoute 5.5s linear infinite 0.6s; }
+    .cc-anim .p4 { animation: inRoute 5.5s linear infinite 3.3s; }
+  }
+  @keyframes inHop { 0% { transform: translateX(0); opacity: 0; } 8% { opacity: 1; } 92% { opacity: 1; } 100% { transform: translateX(448px); opacity: 0; } }
+  @keyframes inRoute { 0% { transform: translateX(0); opacity: 0; } 8% { opacity: 1; } 92% { opacity: 1; } 100% { transform: translateX(286px); opacity: 0; } }
+</style>
+<meta name="robots" content="index,follow,max-image-preview:large"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="EDUSAMBAM"/>
+<meta property="og:title" content="What Is the Internet? Packets, IP and DNS"/>
+<meta property="og:description" content="Learn how the internet really works: packets, IP addresses, DNS, routers and undersea cables, with diagrams, worked examples and a quiz."/>
+<meta property="og:url" content="https://edusambam.com/what-is-the-internet.html"/>
+<meta property="og:image" content="https://edusambam.com/logo-icon-full.png"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="What Is the Internet? Packets, IP and DNS"/>
+<meta name="twitter:description" content="Learn how the internet really works: packets, IP addresses, DNS, routers and undersea cables, with diagrams, worked examples and a quiz."/>
+<meta property="article:modified_time" content="2026-10"/>
+<meta property="article:section" content="Computer &amp; AI"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "What Is the Internet, Really? Servers, Packets and How Data Travels", "description": "Learn how the internet really works: packets, IP addresses, DNS, routers and undersea cables, with diagrams, worked examples and a quiz.", "inLanguage": "en", "mainEntityOfPage": "https://edusambam.com/what-is-the-internet.html", "url": "https://edusambam.com/what-is-the-internet.html", "dateModified": "2026-10", "articleSection": "Computer & AI", "author": {"@type": "Organization", "name": "EDUSAMBAM Editorial Team", "url": "https://edusambam.com/"}, "publisher": {"@type": "Organization", "name": "EDUSAMBAM", "url": "https://edusambam.com/", "logo": {"@type": "ImageObject", "url": "https://edusambam.com/logo-icon-full.png"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Gateway", "item": "https://edusambam.com/index.html#gateway"}, {"@type": "ListItem", "position": 2, "name": "Computer & AI", "item": "https://edusambam.com/index.html#subject-computer"}, {"@type": "ListItem", "position": 3, "name": "What Is the Internet, Really? Servers, Packets and How Data Travels", "item": "https://edusambam.com/what-is-the-internet.html"}]}]}</script>
 </head>
 <body id="top">
 <!-- TOP BAR -->
@@ -954,13 +1004,12 @@ footer.footer {
 <span class="edusambam-brand-subtitle">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</span>
 </span>
 </a>
-<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li></ul>
+<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ Tests</a></li><li><a href="index.html#resources">Resources</a></li></ul>
 <button aria-label="Search" class="edusambam-search-btn" title="Search" type="button">⌕</button>
 <button aria-expanded="false" aria-label="Open menu" class="edusambam-menu-btn" title="Menu" type="button">☰</button>
 </div>
-</nav>
-<div aria-label="Mobile navigation" class="edusambam-mobile-menu">
-<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="index.html#subject-assessment">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="index.html#about-edusambam">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
+</nav><div aria-label="Mobile navigation" class="edusambam-mobile-menu">
+<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ Tests</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="index.html#subject-assessment">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="index.html#about-edusambam">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
 </div>
 <div aria-label="Site search" class="edusambam-search-panel">
 <div class="edusambam-search-wrap">
@@ -973,75 +1022,337 @@ footer.footer {
 <div class="breadcrumb"><a href="index.html#gateway">Gateway</a>  /  <a href="index.html#subject-computer">Computer &amp; AI</a>  /  What Is the Internet, Really?</div>
 <div class="article-hero-tag">Computer &amp; AI · Technology</div>
 <h1>What Is the Internet, Really? Servers, Packets and How Data Travels</h1>
-<p class="sub">Billions of devices exchange information every second without a single wire connecting them all directly. Here's the actual machinery — routers, packets, addresses and cables — behind that everyday miracle.</p>
+<p class="sub">The internet is not one machine but an agreement between millions of networks. This guide shows how packets, addresses, DNS, routers and undersea cables work together, with diagrams, worked examples and the numbers behind them.</p>
 <div class="article-hero-meta">
 <span>EDUSAMBAM Editorial Team</span>
 <span>|</span>
-<span>10 min read</span>
+<span>17 min read</span>
 <span>|</span>
 <span>Technology</span>
-</div>
+<span>|</span><span>Last updated: October 2026</span></div>
 </div><div aria-label="EDUSAMBAM article reader" class="edusambam-reader"><strong>🔊 LISTEN TO THIS ARTICLE</strong><div class="reader-slogan">SAVE YOUR EYES • IMPROVE YOUR LISTENING</div><div class="reader-help">Listen to the article instead of relying only on continuous screen reading.</div><div class="reader-controls"><button data-reader="play" type="button">▶ Play</button><button data-reader="pause" type="button">⏸ Pause</button><button data-reader="resume" type="button">▶ Resume</button><button data-reader="stop" type="button">■ Stop</button><select aria-label="Reading speed"><option value="1">1×</option><option value="0.8">0.8×</option><option value="1.2">1.2×</option></select></div><div aria-hidden="true" class="reader-progress"><span></span></div><small class="reader-status">Ready to read the article.</small></div>
 <!-- ARTICLE BODY -->
 <div class="article-wrap">
-<p class="lead">The internet is not one machine or one place — it's an agreement. Millions of independently owned networks around the world have agreed to speak the same technical "language," so that a message from a phone in Mumbai can reach a server in Oregon in a fraction of a second. There is no single computer running it, and no single company owns it. This guide opens up the actual mechanics behind that agreement.</p>
-<h2><span class="num">1.</span>The Internet vs. the Web: Not the Same Thing</h2>
-<p>People use "the internet" and "the web" interchangeably, but they're different layers. The <strong>internet</strong> is the physical and technical infrastructure — cables, satellites, routers, and the rules that let devices exchange data. The <strong>World Wide Web</strong> is one thing that runs on top of that infrastructure: a system of linked pages viewed through a browser. Email, video calls, online gaming and file transfers also run on the internet, but none of them are "the web" — they're separate services using the same underlying network.</p>
+<p class="lead">The internet is not one machine, one company or one place. It is an agreement. Millions of independently owned networks around the world have agreed to follow the same technical rules, so a message from a phone in Mumbai can reach a server in Oregon in a fraction of a second. No single computer runs it and no single organisation owns it. This guide opens up the machinery behind that agreement: how data is cut into packets, how devices get addresses, how names are turned into numbers, how routers pass data along, and how it crosses oceans through cables on the sea floor. You will also work through the numbers behind it.</p>
+
+<h2><span class="num">1.</span>The Internet and the Web Are Not the Same Thing</h2>
+<p>People often use the two words as if they meant the same, but they are different layers. The <strong>internet</strong> is the worldwide network of networks: the cables, radio links, routers and rules that let devices exchange data. The <strong>World Wide Web</strong> is just one service that runs on top of it, a system of linked pages that you view in a browser. Email, video calls, online games, messaging apps and file downloads also travel over the internet, and many are not part of the web at all.</p>
+
 <div class="stat-highlight">
-<div class="stat-num">5.5B+</div>
-<div class="stat-text">people were estimated to be internet users worldwide by 2024 — more than two-thirds of the global population — all sharing this same underlying infrastructure.</div>
+<div class="stat-num">About 6 billion</div>
+<div class="stat-text">people used the internet in 2025, which is about three-quarters (74%) of the world's population, according to the International Telecommunication Union (ITU). About 2.2 billion people were still offline, most of them in low- and middle-income countries. The ITU revises earlier estimates as better data arrives, so figures from different years are not always directly comparable.</div>
 </div>
-<h2><span class="num">2.</span>Servers and Clients: Who's Asking, Who's Answering</h2>
-<p>Almost everything on the internet works through a <strong>client-server</strong> relationship. Your phone or laptop is the <strong>client</strong> — it asks for something. A <strong>server</strong> is a computer, usually running non-stop in a data centre, whose job is to store information and answer requests. When you open a shopping website, your device (the client) sends a request; the shopping site's server finds the right page and sends it back. Every server is just a computer built and configured to answer requests reliably, all day, every day.</p>
-<div class="table-wrap">
-<table class="pos-table">
-<tr><th>Role</th><th>Client</th><th>Server</th></tr>
-<tr><td>What it does</td><td>Requests information</td><td>Stores and sends back information</td></tr>
-<tr><td>Example device</td><td>Your phone, laptop, tablet</td><td>A data centre computer running non-stop</td></tr>
-<tr><td>Typical action</td><td>Opening an app or website</td><td>Delivering the page, video or file requested</td></tr>
-</table>
+
+<h2><span class="num">2.</span>A Network of Networks</h2>
+<p>The word "internet" comes from <em>inter-network</em>: a network joining many networks. Your home Wi-Fi is a small local network. It connects to the network of an <strong>Internet Service Provider</strong> (ISP), which connects to larger regional and national networks run by other companies, which connect across countries. Where networks meet and swap traffic, they often do so at buildings called <strong>internet exchange points</strong>. Each network is run by its own owner, such as an ISP, a university, a company or a government agency, yet all of them can exchange data because they follow common rules called <strong>protocols</strong>.</p>
+<p>Who is in charge? Nobody controls the whole thing, but several bodies coordinate pieces of it:</p>
+<ul>
+<li>The <strong>Internet Engineering Task Force (IETF)</strong> is an open community that develops the technical standards, published as documents called RFCs.</li>
+<li><strong>ICANN</strong> coordinates the system of domain names and the allocation of internet number resources, working with regional registries that hand out blocks of addresses.</li>
+<li>The <strong>W3C</strong> develops standards for the web itself.</li>
+<li>Each ISP, company and organisation runs and pays for its own part of the network.</li>
+</ul>
+
+<h2><span class="num">3.</span>Clients, Servers and a Journey in Hops</h2>
+<p>Most activity on the internet follows the <strong>client-server</strong> pattern. A <strong>client</strong>, such as your phone or laptop, asks for something. A <strong>server</strong>, a computer built to answer requests all day and night, usually in a data centre, finds it and sends it back. (Some services, such as certain file-sharing and calling systems, connect devices more directly to each other, which is called peer-to-peer.)</p>
+<p>A request does not teleport. It hops from one device to the next. Each device that passes a packet closer to its destination is one <strong>hop</strong>.</p>
+
+<div class="diagram-box cc-anim">
+<svg viewBox="0 0 560 260" role="img" aria-labelledby="inHopTitle inHopDesc">
+<title id="inHopTitle">A request travelling through hops to a server</title>
+<desc id="inHopDesc">A line from your device through your home router, your ISP, an internet exchange and a data centre network to the server. Gold packets move along the line.</desc>
+<rect x="0" y="0" width="560" height="260" rx="14" fill="#faf8f4"/>
+<g font-family="Arial, sans-serif" text-anchor="middle">
+<text x="280" y="28" fill="#06244a" font-size="17" font-weight="700">A request travels hop by hop</text>
+<line x1="44" y1="116" x2="516" y2="116" stroke="#b8963e" stroke-width="3" stroke-dasharray="6 6"/>
+<g fill="#fff" stroke="#06244a" stroke-width="2.5">
+<rect x="22" y="94" width="44" height="44" rx="8" fill="#06244a"/>
+<circle cx="140" cy="116" r="20"/><circle cx="238" cy="116" r="20"/><circle cx="336" cy="116" r="20"/><circle cx="434" cy="116" r="20"/>
+<rect x="494" y="92" width="44" height="48" rx="6" fill="#06244a"/>
+</g>
+<g fill="#06244a" font-size="13" font-weight="700">
+<text x="44" y="164">Your</text><text x="44" y="180">device</text>
+<text x="140" y="164">Home</text><text x="140" y="180">router</text>
+<text x="238" y="164">ISP</text><text x="238" y="180">network</text>
+<text x="336" y="164">Exchange</text><text x="336" y="180">point</text>
+<text x="434" y="164">Data centre</text><text x="434" y="180">network</text>
+<text x="516" y="164">Server</text>
+</g>
+<g fill="#8b0000" font-size="12" font-weight="700"><text x="140" y="90">hop 1</text><text x="238" y="90">hop 2</text><text x="336" y="90">hop 3</text><text x="434" y="90">hop 4</text></g>
+<text x="280" y="226" fill="#4a4a4a" font-size="13">Each router reads the destination address and passes the packet closer.</text>
+</g>
+<rect class="pk q1" x="50" y="110" width="12" height="12" rx="2" fill="#d4a017"/>
+<rect class="pk q2" x="50" y="110" width="12" height="12" rx="2" fill="#d4a017"/>
+<rect class="pk q3" x="50" y="110" width="12" height="12" rx="2" fill="#d4a017"/>
+</svg>
+<div class="diagram-caption">Figure 1. A simplified route. Real routes often have more hops, and the exact path can change from one moment to the next. The gold packets stay still if your device is set to reduce motion.</div>
 </div>
-<h2><span class="num">3.</span>Breaking Information Into Packets</h2>
-<p>When you send anything over the internet — a message, a photo, a webpage — it isn't sent as one solid block. It is broken into small pieces called <strong>packets</strong>, each carrying a fragment of the data plus labels showing where it came from, where it's going, and which piece of the sequence it is. Packets from the same message can even travel different physical routes across the network and still arrive correctly, because the receiving device uses those labels to reassemble them in the right order.</p>
+
+<h2><span class="num">4.</span>Packets: Data Cut Into Pieces</h2>
+<p>When you send a photo or load a page, the data is not sent as one block. It is cut into small pieces called <strong>packets</strong>. Each packet has two parts: a <strong>header</strong>, which carries labels such as the sender's address, the destination address and the packet's position in the sequence, and a <strong>payload</strong>, which carries a fragment of the actual data. Packets from the same message may take different routes, and may even arrive out of order. The receiver uses the sequence labels to put them back in the right order.</p>
+<p>Splitting data into packets is efficient. The millions of messages sharing a cable do not each need a private wire. Packets from many different conversations take turns on the same links, a bit like many cars sharing a road network. It is also resilient, because if one link fails, later packets can go another way.</p>
+
+<div class="diagram-box cc-anim">
+<svg viewBox="0 0 520 300" role="img" aria-labelledby="inPktTitle inPktDesc">
+<title id="inPktTitle">Packets taking two routes and being reassembled</title>
+<desc id="inPktDesc">A message is split into four numbered packets. Packets 1 and 3 travel along an upper route and packets 2 and 4 along a lower route. The receiver puts them back in order 1, 2, 3, 4.</desc>
+<rect x="0" y="0" width="520" height="300" rx="14" fill="#faf8f4"/>
+<g font-family="Arial, sans-serif" text-anchor="middle">
+<text x="260" y="26" fill="#06244a" font-size="17" font-weight="700">Split, travel, reassemble</text>
+<rect x="14" y="80" width="86" height="130" rx="10" fill="#06244a"/>
+<text x="57" y="130" fill="#d4a017" font-size="14" font-weight="700">Sender</text><text x="57" y="150" fill="#fff" font-size="12">message is split</text><text x="57" y="166" fill="#fff" font-size="12">into packets</text>
+<rect x="420" y="80" width="86" height="130" rx="10" fill="#06244a"/>
+<text x="463" y="130" fill="#d4a017" font-size="14" font-weight="700">Receiver</text><text x="463" y="150" fill="#fff" font-size="12">puts them back</text><text x="463" y="166" fill="#fff" font-size="12">in order 1 2 3 4</text>
+<line x1="100" y1="104" x2="420" y2="104" stroke="#b8963e" stroke-width="3" stroke-dasharray="7 6"/>
+<line x1="100" y1="186" x2="420" y2="186" stroke="#0b4ea2" stroke-width="3" stroke-dasharray="7 6"/>
+<g fill="#fff" stroke="#06244a" stroke-width="2.5"><circle cx="260" cy="104" r="16"/><circle cx="260" cy="186" r="16"/></g>
+<text x="260" y="76" fill="#4a4a4a" font-size="12">route A (via one router)</text>
+<text x="260" y="224" fill="#4a4a4a" font-size="12">route B (via another router)</text>
+<g font-size="13" font-weight="700" fill="#06244a">
+<g class="p1"><rect x="108" y="92" width="26" height="24" rx="4" fill="#d4a017"/><text x="121" y="109">1</text></g>
+<g class="p3"><rect x="108" y="92" width="26" height="24" rx="4" fill="#d4a017"/><text x="121" y="109">3</text></g>
+<g class="p2"><rect x="108" y="174" width="26" height="24" rx="4" fill="#7a96c2"/><text x="121" y="191">2</text></g>
+<g class="p4"><rect x="108" y="174" width="26" height="24" rx="4" fill="#7a96c2"/><text x="121" y="191">4</text></g>
+</g>
+<text x="260" y="262" fill="#06244a" font-size="13" font-weight="700">Arrival order may be mixed up. The sequence numbers fix it.</text>
+</g>
+</svg>
+<div class="diagram-caption">Figure 2. Each packet carries its number. Even if packet 2 overtakes packet 1, the receiver can rebuild the message. The packets move unless your device is set to reduce motion.</div>
+</div>
+
+<p>The rules for handling packets are called protocols, and two common transport protocols make different trade-offs. <strong>TCP</strong> is careful: the receiver confirms what it has received, missing packets are sent again and the data is delivered in order. It is used for web pages, email and downloads, where every byte must arrive. <strong>UDP</strong> is lighter and faster but makes no guarantees. It is often used for live video, voice calls and games, where a late packet is worse than a lost one.</p>
+
 <div class="example-box">
-<div class="ex-label">Key Idea</div>
-<p>Splitting data into packets means a network doesn't need one giant dedicated wire between every pair of devices. Instead, packets from millions of unrelated messages share the same cables and routers, each hopping along whichever path is fastest at that moment — similar to how many different cars share the same road network instead of each needing a private road.</p>
+<div class="ex-label">Worked Example 1: How many packets for a file?</div>
+<p>A typical network link carries packets of up to <strong>1,500 bytes</strong>. About <strong>40 bytes</strong> of each is used by headers (a common figure for IPv4 plus TCP), leaving about <strong>1,460 bytes</strong> for data. How many packets does a <strong>3 MB</strong> photo need? Take 3 MB as 3,000,000 bytes.</p>
+<p><strong>Step 1:</strong> Divide the size by the data per packet: 3,000,000 ÷ 1,460 ≈ 2,054.8.</p>
+<p><strong>Step 2:</strong> A packet cannot be part full and still counted as a fraction, so round up: <strong>2,055 packets</strong>.</p>
+<p><strong>Step 3: What does the labelling cost?</strong> 2,055 × 40 bytes = 82,200 bytes of headers. Compared with the file, 82,200 ÷ 3,000,000 ≈ <strong>2.7%</strong>.</p>
+<p><strong>Meaning:</strong> one ordinary photo becomes thousands of small, independently routed pieces, and the labels add only a few percent. The numbers vary with the exact protocols and link, so treat this as a typical case.</p>
 </div>
-<h2><span class="num">4.</span>IP Addresses and DNS: The Internet's Address Book</h2>
-<p>For packets to reach the right destination, every device connected to the internet is given an <strong>IP address</strong> — a unique number that acts like a postal address. Since remembering long strings of numbers isn't practical for people, the internet relies on the <strong>Domain Name System (DNS)</strong>, a distributed directory that automatically translates a website name into its correct IP address the moment a link is clicked.</p>
-<p>DNS works in a hierarchy: your device asks a nearby DNS server, which — if it doesn't already know the answer — asks a more central server further up the chain, until the correct IP address is found and sent back. This entire lookup usually happens in a fraction of a second, invisibly, before a page even starts loading.</p>
-<h2><span class="num">5.</span>How Data Physically Travels: Routers, ISPs and Cables</h2>
-<p>Packets don't teleport — they physically move through hardware. A packet leaving your device typically passes through your home <strong>router</strong>, into the network of your <strong>Internet Service Provider (ISP)</strong>, and then across large-scale connections between ISPs and countries — including, for most international traffic, <strong>undersea fibre-optic cables</strong> running along ocean floors. Each device along this chain that forwards a packet toward its destination is called a <strong>hop</strong>.</p>
+
+<h2><span class="num">5.</span>IP Addresses: Where Packets Go</h2>
+<p>Every device on the internet needs an <strong>IP address</strong> so that packets can be delivered to it, like a postal address. The older system, <strong>IPv4</strong>, writes an address as four numbers from 0 to 255 separated by dots, such as <code>192.168.1.10</code>. Each number is stored in 8 bits, so an IPv4 address is <strong>32 bits</strong> in total. The newer <strong>IPv6</strong> uses <strong>128 bits</strong>, written in hexadecimal, to provide far more addresses.</p>
+
+<div class="example-box">
+<div class="ex-label">Worked Example 2: How many addresses?</div>
+<p><strong>IPv4:</strong> 32 bits give 2<sup>32</sup> = <strong>4,294,967,296</strong> addresses, about 4.3 billion.</p>
+<p><strong>Compare:</strong> in 2025 about 6 billion people used the internet (ITU), and many own several devices. So there are fewer IPv4 addresses than people online, never mind devices. The central pool of unallocated IPv4 addresses ran out in 2011.</p>
+<p><strong>IPv6:</strong> 128 bits give 2<sup>128</sup> ≈ 3.4 × 10<sup>38</sup> addresses. If you share that over 8 billion people, each person could have roughly 4 × 10<sup>28</sup> addresses.</p>
+<p><strong>A byte in binary:</strong> the first number of <code>192.168.1.10</code> is 192 = 128 + 64, which is <strong>11000000</strong> in 8 bits.</p>
+<p><strong>How the shortage is managed:</strong> home and office devices usually get <em>private</em> addresses, such as those starting <code>192.168</code>, which work only inside the local network. The router shares one public address among them, using a technique called network address translation (NAT). IPv6 is gradually being adopted so that every device can have its own.</p>
+</div>
+
+<h2><span class="num">6.</span>DNS: The Internet's Phone Book</h2>
+<p>People prefer names such as <code>www.example.org</code> to numbers. The <strong>Domain Name System (DNS)</strong> translates names into IP addresses. It is a worldwide, distributed system rather than one big list. Your device normally asks a <strong>resolver</strong> (often run by your ISP). If the resolver does not already know the answer, it works down a hierarchy: the <strong>root</strong> servers point to the servers for the ending (the <strong>top-level domain</strong>, such as <code>.org</code>, <code>.edu</code> or a country ending), which point to the servers that hold the records for the specific domain, which give the address. Answers are remembered (<strong>cached</strong>) for a time, so most lookups are instant.</p>
+
+<div class="diagram-box">
+<svg viewBox="0 0 520 380" role="img" aria-labelledby="inDnsTitle inDnsDesc">
+<title id="inDnsTitle">A DNS lookup step by step</title>
+<desc id="inDnsDesc">Five columns: your device, the resolver, the root servers, the top-level domain servers and the domain's own server. The device asks the resolver for an address. The resolver asks the root, then the top-level domain servers, then the domain's server, which gives the address. The resolver returns the address to the device.</desc>
+<rect x="0" y="0" width="520" height="380" rx="14" fill="#faf8f4"/>
+<defs><marker id="inDArr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#06244a"/></marker></defs>
+<g font-family="Arial, sans-serif" text-anchor="middle">
+<g font-size="12" font-weight="700" fill="#fff">
+<rect x="6" y="12" width="88" height="40" rx="6" fill="#06244a"/><text x="50" y="30">Your</text><text x="50" y="45">device</text>
+<rect x="106" y="12" width="88" height="40" rx="6" fill="#0b4ea2"/><text x="150" y="38">Resolver</text>
+<rect x="206" y="12" width="88" height="40" rx="6" fill="#0b4ea2"/><text x="250" y="38">Root</text>
+<rect x="306" y="12" width="88" height="40" rx="6" fill="#0b4ea2"/><text x="350" y="30">.org</text><text x="350" y="45">servers</text>
+<rect x="406" y="12" width="108" height="40" rx="6" fill="#0b4ea2"/><text x="460" y="30">example.org</text><text x="460" y="45">server</text>
+</g>
+<g stroke="#b8963e" stroke-width="2" stroke-dasharray="5 5"><line x1="50" y1="52" x2="50" y2="368"/><line x1="150" y1="52" x2="150" y2="368"/><line x1="250" y1="52" x2="250" y2="368"/><line x1="350" y1="52" x2="350" y2="368"/><line x1="460" y1="52" x2="460" y2="368"/></g>
+<g stroke="#06244a" stroke-width="2.2" marker-end="url(#inDArr)">
+<line x1="52" y1="92" x2="146" y2="92"/>
+<line x1="152" y1="132" x2="246" y2="132"/>
+<line x1="248" y1="168" x2="154" y2="168"/>
+<line x1="152" y1="206" x2="346" y2="206"/>
+<line x1="348" y1="242" x2="154" y2="242"/>
+<line x1="152" y1="280" x2="456" y2="280"/>
+<line x1="458" y1="316" x2="154" y2="316"/>
+<line x1="148" y1="352" x2="54" y2="352"/>
+</g>
+<g fill="#06244a" font-size="11">
+<text x="99" y="84">www.example.org?</text>
+<text x="200" y="124">who has .org?</text>
+<text x="200" y="160">ask .org servers</text>
+<text x="250" y="198">who has example.org?</text>
+<text x="250" y="234">ask its server</text>
+<text x="306" y="272">address of www.example.org?</text>
+<text x="306" y="308" font-weight="700">203.0.113.7</text>
+<text x="101" y="344" font-weight="700">203.0.113.7</text>
+</g>
+<g font-size="11" font-weight="700" fill="#fff">
+<circle cx="14" cy="92" r="8" fill="#8b0000"/><text x="14" y="96">1</text>
+<circle cx="14" cy="132" r="8" fill="#8b0000"/><text x="14" y="136">2</text>
+<circle cx="14" cy="168" r="8" fill="#8b0000"/><text x="14" y="172">3</text>
+<circle cx="14" cy="206" r="8" fill="#8b0000"/><text x="14" y="210">4</text>
+<circle cx="14" cy="242" r="8" fill="#8b0000"/><text x="14" y="246">5</text>
+<circle cx="14" cy="280" r="8" fill="#8b0000"/><text x="14" y="284">6</text>
+<circle cx="14" cy="316" r="8" fill="#8b0000"/><text x="14" y="320">7</text>
+<circle cx="14" cy="352" r="8" fill="#8b0000"/><text x="14" y="356">8</text>
+</g>
+</g>
+</svg>
+<div class="diagram-caption">Figure 3. A full DNS lookup when nothing is cached. The address 203.0.113.7 is from a range reserved for examples. Most real lookups are answered from a cache in step 1 or 2.</div>
+</div>
+
+<div class="example-box">
+<div class="ex-label">Worked Example 3: Reading a domain name from right to left</div>
+<p>Take <code>www.mail.example.org</code>.</p>
+<p><strong>Step 1:</strong> The part on the far right, <strong>org</strong>, is the <em>top-level domain</em>.</p>
+<p><strong>Step 2:</strong> Moving left, <strong>example</strong> is the name registered by an organisation. Together, <strong>example.org</strong> is the <em>domain</em> that someone owns.</p>
+<p><strong>Step 3:</strong> Anything further left, <strong>mail</strong> and <strong>www</strong>, are <em>subdomains</em>, chosen freely by the owner of example.org.</p>
+<p><strong>Why it matters:</strong> the owner controls everything to the left of the domain they have registered. A scam link such as <code>www.mybank.example.verify-login.example</code> looks like a bank at first glance, but the real domain is the last two parts, <strong>verify-login.example</strong> (see <a href="cybersecurity-basics.html">Cybersecurity Basics</a>).</p>
+</div>
+
+<h2><span class="num">7.</span>Routing: How Routers Choose the Way</h2>
+<p>A <strong>router</strong> is a device with several connections. When a packet arrives, the router reads the destination address, checks its <strong>routing table</strong> to find the best next hop, and forwards it. No router knows the whole path. Each one only decides the next step. Routers exchange information with their neighbours, so they can learn about changes and avoid broken links. Between large networks, the protocol used for this is called <strong>BGP</strong> (Border Gateway Protocol), which is sometimes described as the glue that holds the internet's networks together.</p>
+<p>You can see the hops yourself. On many computers the command <code>traceroute</code> (on Windows, <code>tracert</code>) lists the routers a packet passes through on the way to a site, with the time taken for each. Some routers do not reply, so the list may have gaps.</p>
+
+<h2><span class="num">8.</span>The Physical Internet: Wires, Fibre and Waves</h2>
+<p>All this data travels through physical equipment. Your device may connect by Wi-Fi, a cable or a mobile network (4G, 5G). Behind that are ISP networks, with fibre-optic cables, copper lines, cable systems and radio masts. <strong>Fibre-optic cables</strong> carry data as pulses of light through hair-thin strands of glass and are the backbone of long-distance links. Between continents, <strong>undersea cables</strong> do the work. The ITU and the International Cable Protection Committee report that submarine cables carry more than 99% of intercontinental data traffic, and satellites carry only a small remainder. Cables are damaged by anchors, fishing and natural events, with an estimated 150 to 200 faults every year, so ships are regularly used to repair them and networks are designed with alternative routes.</p>
+<p>Data centres, exchange points and the cables between them are all connected in this way, which is why the internet keeps working even when single links fail.</p>
+
+<div class="example-box">
+<div class="ex-label">Worked Example 4: The speed-of-light limit</div>
+<p>Light in an optical fibre travels at roughly two-thirds of its speed in empty space, about <strong>200,000 km per second</strong>. Suppose a cable route between two cities is <strong>10,000 km</strong> long. This distance is for illustration.</p>
+<p><strong>Step 1: One-way time.</strong> 10,000 km ÷ 200,000 km/s = <strong>0.05 s = 50 ms</strong>.</p>
+<p><strong>Step 2: Round trip.</strong> A request goes out and a reply comes back, so the minimum is 2 × 50 = <strong>100 ms</strong>.</p>
+<p><strong>Meaning:</strong> even with perfect equipment, a very distant server cannot respond in under about 100 ms. Real delays are longer, because cables do not run in straight lines, and routers add small delays at every hop. This is why services place copies of popular content closer to users (see <a href="cloud-computing.html">Cloud Computing</a>), and why delay, called <strong>latency</strong>, is a different thing from speed in megabits per second.</p>
+</div>
+
+<div class="example-box">
+<div class="ex-label">Worked Example 5: How long will a download take?</div>
+<p>You download a <strong>500 MB</strong> file on a connection that delivers <strong>50 Mbps</strong>.</p>
+<p><strong>Step 1: Convert bytes to bits.</strong> 500 MB × 8 = <strong>4,000 megabits</strong>.</p>
+<p><strong>Step 2: Divide by the speed.</strong> 4,000 ÷ 50 = <strong>80 seconds</strong>.</p>
+<p><strong>Step 3: Check against reality.</strong> If the connection really delivers only 40 Mbps at that moment, the time is 4,000 ÷ 40 = <strong>100 seconds</strong>.</p>
+<p><strong>Meaning:</strong> the speed advertised for a connection is a maximum. Shared Wi-Fi, busy networks and slow servers can all reduce what you actually get. <strong>Bandwidth</strong> (how much data per second) and latency (how long a trip takes) both affect how fast something feels.</p>
+</div>
+
+<h2><span class="num">9.</span>Layers: Stacking the Rules</h2>
+<p>The rules of the internet are organised in <strong>layers</strong>, each doing one job and relying on the one below. This is often called the <strong>TCP/IP model</strong>. When your device sends data, each layer wraps it with its own header, like putting a letter into a series of envelopes. At the other end, each layer unwraps its own envelope.</p>
+
+<div class="diagram-box">
+<svg viewBox="0 0 520 340" role="img" aria-labelledby="inLayerTitle inLayerDesc">
+<title id="inLayerTitle">The four layers of the TCP/IP model</title>
+<desc id="inLayerDesc">Nested boxes show data wrapped in application data, a transport header, an IP header and a link header. A list on the right names each layer and its job: application, transport, internet and link.</desc>
+<rect x="0" y="0" width="520" height="340" rx="14" fill="#faf8f4"/>
+<g font-family="Arial, sans-serif">
+<text x="260" y="26" text-anchor="middle" fill="#06244a" font-size="17" font-weight="700">Layers wrap the data</text>
+<rect x="14" y="44" width="236" height="280" rx="12" fill="#e9eef7" stroke="#0b4ea2" stroke-width="2"/>
+<text x="26" y="64" fill="#06244a" font-size="12" font-weight="700">Link header (local delivery)</text>
+<rect x="30" y="76" width="204" height="234" rx="10" fill="#dfe7f3" stroke="#0b4ea2" stroke-width="2"/>
+<text x="42" y="96" fill="#06244a" font-size="12" font-weight="700">IP header (addresses)</text>
+<rect x="46" y="108" width="172" height="188" rx="8" fill="#cfdbec" stroke="#0b4ea2" stroke-width="2"/>
+<text x="58" y="128" fill="#06244a" font-size="12" font-weight="700">TCP/UDP header</text>
+<rect x="62" y="140" width="140" height="144" rx="6" fill="#06244a"/>
+<text x="132" y="202" text-anchor="middle" fill="#d4a017" font-size="15" font-weight="700">Your data</text>
+<text x="132" y="222" text-anchor="middle" fill="#fff" font-size="12">e.g. a web request</text>
+<g font-size="13" fill="#06244a">
+<rect x="272" y="56" width="236" height="56" rx="8" fill="#f5edd6" stroke="#b8963e" stroke-width="2"/>
+<text x="284" y="76" font-weight="700">4. Application</text><text x="284" y="96" font-size="12" fill="#4a4a4a">HTTP, email, DNS: what to say</text>
+<rect x="272" y="124" width="236" height="56" rx="8" fill="#f5edd6" stroke="#b8963e" stroke-width="2"/>
+<text x="284" y="144" font-weight="700">3. Transport</text><text x="284" y="164" font-size="12" fill="#4a4a4a">TCP or UDP: delivery to the right app</text>
+<rect x="272" y="192" width="236" height="56" rx="8" fill="#f5edd6" stroke="#b8963e" stroke-width="2"/>
+<text x="284" y="212" font-weight="700">2. Internet</text><text x="284" y="232" font-size="12" fill="#4a4a4a">IP: addresses and routing across networks</text>
+<rect x="272" y="260" width="236" height="56" rx="8" fill="#f5edd6" stroke="#b8963e" stroke-width="2"/>
+<text x="284" y="280" font-weight="700">1. Link</text><text x="284" y="300" font-size="12" fill="#4a4a4a">Wi-Fi, Ethernet, 5G: one hop</text>
+</g>
+</g>
+</svg>
+<div class="diagram-caption">Figure 4. The four layers of the TCP/IP model. Each layer adds its own envelope on the way out and removes it on the way in.</div>
+</div>
+
+<p>Web pages are requested using <strong>HTTP</strong>, and <strong>HTTPS</strong> adds encryption so people on the path cannot read the content. The padlock shows the connection is encrypted, but it does not prove the site is honest (see <a href="search-engines-browsers.html">Search Engines &amp; Web Browsers</a>). Email uses other application protocols, such as SMTP for sending and IMAP for reading. They are all different "languages" riding on the same transport and internet layers.</p>
+
+<h2><span class="num">10.</span>A Short History</h2>
 <div class="timeline">
 <div class="timeline-item">
 <div class="timeline-year">1969</div>
-<div class="timeline-text"><strong>ARPANET</strong> connects four university computers in the US — widely considered the internet's earliest ancestor.</div>
+<div class="timeline-text"><strong>ARPANET</strong>, funded by the US government, links its first four sites (three universities and a research institute in the western US) and sends its first message.</div>
 </div>
 <div class="timeline-item">
 <div class="timeline-year">1983</div>
-<div class="timeline-text">Networks adopt a shared set of rules called <strong>TCP/IP</strong>, allowing separate networks to connect into one larger internet.</div>
+<div class="timeline-text">ARPANET switches to <strong>TCP/IP</strong>, the shared rules that let separate networks join into one internet.</div>
 </div>
 <div class="timeline-item">
 <div class="timeline-year">1991</div>
-<div class="timeline-text">The <strong>World Wide Web</strong> is made publicly available, giving the internet its first easy, browsable interface.</div>
+<div class="timeline-text">The <strong>World Wide Web</strong>, created by Tim Berners-Lee at CERN, opens to the public.</div>
 </div>
 <div class="timeline-item">
 <div class="timeline-year">2000s</div>
-<div class="timeline-text"><strong>Broadband</strong> replaces slow dial-up connections, making always-on, high-speed internet common in homes.</div>
+<div class="timeline-text"><strong>Broadband</strong> replaces dial-up in many homes, and mobile networks begin to carry data.</div>
 </div>
 <div class="timeline-item">
-<div class="timeline-year">2007–Present</div>
-<div class="timeline-text"><strong>Smartphones</strong> and mobile data put the internet permanently in people's pockets, followed by cloud computing and today's AI-powered services.</div>
+<div class="timeline-year">2007 onwards</div>
+<div class="timeline-text"><strong>Smartphones</strong> put the internet in pockets, and cloud computing and AI services grow on top of it.</div>
 </div>
 </div>
-<h2><span class="num">6.</span>HTTP and HTTPS: The Rules Websites Follow</h2>
-<p><strong>HTTP (Hypertext Transfer Protocol)</strong> is the agreed set of rules browsers and servers use to request and deliver web pages. <strong>HTTPS</strong> is the same system with one crucial addition: encryption. It scrambles data in transit so that anyone intercepting the packets between your device and the server sees only unreadable noise, not the actual content — which is why banking, shopping and login pages should always show HTTPS rather than plain HTTP.</p>
-<div class="real-world-box">
-<div class="rw-label">Real-World Example</div>
-<p>Typing a web address and pressing enter sets off a rapid chain: your device asks DNS for the site's IP address, opens a secure HTTPS connection to that server, and sends a request packet through your router and ISP. The server assembles the requested page and sends it back as packets, which may travel through a dozen or more routers and even cross an ocean via undersea cable — all typically completing in well under a second.</p>
+<p>For more on how this fits into the wider story of computers, see <a href="history-of-computing.html">The History of Computing</a>.</p>
+
+<h2><span class="num">11.</span>When "The Internet Is Down": A Troubleshooting Table</h2>
+<p>Wi-Fi is only the wireless link between your device and your router. Being connected to Wi-Fi does not guarantee you can reach the internet. Use what you know about the layers:</p>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Symptom</th><th>What it suggests</th><th>Sensible check</th></tr>
+<tr><td>No Wi-Fi networks, or the connection drops</td><td>A problem at the local link</td><td>Move closer to the router, switch Wi-Fi off and on, and restart the device.</td></tr>
+<tr><td>Connected to Wi-Fi, but no sites load on any device</td><td>The router's connection to the ISP, or an ISP outage</td><td>Check the router's lights, restart the router, and check whether the provider reports a fault.</td></tr>
+<tr><td>Works on one device but not another</td><td>A problem with that device's settings</td><td>Restart it, check its network settings and test on mobile data.</td></tr>
+<tr><td>Sites by number open, but names do not</td><td>A DNS problem</td><td>Restart the router, or ask an adult to check DNS settings.</td></tr>
+<tr><td>One website fails but others work</td><td>A problem at that server or site</td><td>Wait and try again, and check whether others report the same.</td></tr>
+<tr><td>Everything works but feels slow</td><td>Low bandwidth, high latency or a busy network</td><td>Pause big downloads, move closer to the router and test at another time.</td></tr>
+</table>
 </div>
-<h2>A Closing Thought</h2>
-<p>The internet feels seamless because its complexity is deliberately hidden from the people using it. Underneath every tapped link is the same chain: a client asking, packets travelling, DNS translating names into addresses, routers and cables carrying data across the physical world, and a server answering back. None of it requires magic — just an agreed set of rules, followed by an enormous number of machines, at a scale that would have been unimaginable to the engineers who built the first four-computer network in 1969.</p>
+
+<h2><span class="num">12.</span>Common Mistakes and Misconceptions</h2>
+<ul>
+<li><strong>"The internet and the web are the same."</strong> The web is one service that uses the internet.</li>
+<li><strong>"Wi-Fi is the internet."</strong> Wi-Fi is a local wireless link. The internet is the global network beyond your router.</li>
+<li><strong>"Data travels through the air or satellites."</strong> Most long-distance traffic travels along cables, with more than 99% of intercontinental traffic using undersea cables.</li>
+<li><strong>"Someone owns the internet."</strong> Thousands of organisations own different parts, and open standards connect them.</li>
+<li><strong>"Faster speed always means lower delay."</strong> Bandwidth and latency are different, so a fast link can still feel slow if the distance is long.</li>
+<li><strong>"Each message travels as one block along one path."</strong> It is split into packets that may take different routes.</li>
+</ul>
+
+<h2><span class="num">13.</span>Check Your Understanding</h2>
+<p>Try each question first, then tap it to reveal the answer. A scored multiple-choice quiz follows below.</p>
+<div class="qa-list">
+<details><summary>1. What is the difference between the internet and the web?</summary><p>The internet is the global network of networks. The web is a system of linked pages that runs on it. Email, calls and games also use the internet but are not the web.</p></details>
+<details><summary>2. Why are messages split into packets?</summary><p>So many conversations can share the same links, packets can take different routes if a link fails, and only damaged or missing pieces need to be sent again.</p></details>
+<details><summary>3. Why do packets have sequence numbers?</summary><p>Packets can arrive out of order, so the receiver uses the numbers to put them back in the right order.</p></details>
+<details><summary>4. What does DNS do?</summary><p>It translates a domain name such as www.example.org into the IP address of the server, using a worldwide hierarchy of servers and caching.</p></details>
+<details><summary>5. A 2 MB file is sent at 4 Mbps. What is the best-case time?</summary><p>2 MB × 8 = 16 megabits. 16 ÷ 4 = 4 seconds.</p></details>
+<details><summary>6. A cable is 6,000 km long and light travels at 200,000 km/s in it. What is the minimum round-trip time?</summary><p>One way: 6,000 ÷ 200,000 = 0.03 s = 30 ms. Round trip: 2 × 30 = 60 ms.</p></details>
+</div>
+
+<h2><span class="num">14.</span>Summary</h2>
+<ul>
+<li>The internet is a worldwide network of independently run networks that follow shared rules. The web is only one service on it.</li>
+<li>Data is cut into packets with headers, sent along possibly different routes and reassembled in order.</li>
+<li>IP addresses locate devices. IPv4 has about 4.3 billion addresses, and IPv6 provides vastly more.</li>
+<li>DNS turns names into addresses through a hierarchy of servers and caches.</li>
+<li>Routers decide only the next hop, and protocols such as BGP share routing information between networks.</li>
+<li>Fibre cables, including undersea cables that carry over 99% of intercontinental traffic, form the physical backbone.</li>
+<li>Layered protocols (link, internet, transport, application) wrap data like nested envelopes.</li>
+<li>Bandwidth and latency are different, and physics sets a minimum delay for long distances.</li>
+</ul>
+
+<div class="example-box">
+<div class="ex-label">For Teachers and Parents</div>
+<p><strong>Human packet network (no devices needed):</strong> write a short sentence, split it into numbered word cards, and send the cards through "routers" (students) to a "receiver" who must reassemble the sentence. Let some cards take a different route, and ask what happens if a card is lost.</p>
+<p><strong>Traceroute with an adult:</strong> on a home or school computer, run <code>tracert</code> (Windows) or <code>traceroute</code> (macOS and Linux) to a well-known educational website, and count the hops and their times. Talk about why the numbers differ between sites.</p>
+<p><strong>Calculation practice:</strong> repeat Worked Examples 1, 4 and 5 with different file sizes, speeds and distances.</p>
+<p><strong>Safety note:</strong> only run network tools on devices and networks you have permission to use, and only against ordinary public websites. Never scan other people's devices or networks.</p>
+</div>
+
+<h2><span class="num">15.</span>Sources and Further Reading</h2>
+<p>This article is original EDUSAMBAM writing. The user figures come from the ITU, and the submarine-cable figures come from statements by the ITU and the International Cable Protection Committee. The explanations of packets, addressing, DNS, routing and layers follow the standard internet specifications, called RFCs, including RFC 791 (Internet Protocol), RFC 793 (TCP), RFCs 1034 and 1035 (domain names) and RFC 8200 (IPv6). These are freely available from the IETF. The diagrams are original EDUSAMBAM schematics, and the calculations use rounded figures for teaching.</p>
+<ul>
+<li><strong>International Telecommunication Union (ITU), "Measuring digital development: Facts and Figures 2025":</strong> estimates of internet use. <a href="https://www.itu.int/en/ITU-D/Statistics/Pages/stat/" target="_blank" rel="noopener">itu.int statistics</a></li>
+</ul>
+<p>Statistics are revised and technology changes, so check the latest figures from the ITU and your own provider's information. This article does not recommend any particular provider.</p>
+
 <!-- QUIZ SECTION -->
 <div class="quiz-section">
 <div class="section-eyebrow">Test Your Understanding</div>
@@ -1057,81 +1368,81 @@ footer.footer {
 </div>
 <form id="squizForm">
 <div class="squiz-item" data-correct="1">
-<div class="squiz-q"><span class="qnum">1.</span>What is the key difference between "the internet" and "the web"?</div>
-<div class="squiz-option"><input id="sq1a" name="sq1" type="radio" value="0"><label for="sq1a">A. They are exactly the same thing</label></input></div>
-<div class="squiz-option"><input id="sq1b" name="sq1" type="radio" value="1"/><label for="sq1b">B. The internet is the infrastructure; the web is one service (linked pages) that runs on it</label></div>
-<div class="squiz-option"><input id="sq1c" name="sq1" type="radio" value="2"/><label for="sq1c">C. The web is the infrastructure; the internet is a single website</label></div>
-<div class="squiz-option"><input id="sq1d" name="sq1" type="radio" value="3"/><label for="sq1d">D. The internet only carries email, not websites</label></div>
-</div>
-<div class="squiz-item" data-correct="0">
-<div class="squiz-q"><span class="qnum">2.</span>In a client-server relationship, what does the client do?</div>
-<div class="squiz-option"><input id="sq2a" name="sq2" type="radio" value="0"/><label for="sq2a">A. Requests information</label></div>
-<div class="squiz-option"><input id="sq2b" name="sq2" type="radio" value="1"/><label for="sq2b">B. Stores the website permanently</label></div>
-<div class="squiz-option"><input id="sq2c" name="sq2" type="radio" value="2"/><label for="sq2c">C. Runs non-stop in a data centre</label></div>
-<div class="squiz-option"><input id="sq2d" name="sq2" type="radio" value="3"/><label for="sq2d">D. Translates domain names into IP addresses</label></div>
+<div class="squiz-q"><span class="qnum">1.</span>Which statement about the internet and the web is correct?</div>
+<div class="squiz-option"><input id="sq1a" name="sq1" type="radio" value="0"/><label for="sq1a">A. They are exactly the same thing</label></div>
+<div class="squiz-option"><input id="sq1b" name="sq1" type="radio" value="1"/><label for="sq1b">B. The web is one service that runs on the internet</label></div>
+<div class="squiz-option"><input id="sq1c" name="sq1" type="radio" value="2"/><label for="sq1c">C. The internet runs on the web</label></div>
+<div class="squiz-option"><input id="sq1d" name="sq1" type="radio" value="3"/><label for="sq1d">D. Email is part of the web</label></div>
 </div>
 <div class="squiz-item" data-correct="2">
-<div class="squiz-q"><span class="qnum">3.</span>What is a "packet"?</div>
-<div class="squiz-option"><input id="sq3a" name="sq3" type="radio" value="0"/><label for="sq3a">A. A type of internet cable</label></div>
-<div class="squiz-option"><input id="sq3b" name="sq3" type="radio" value="1"/><label for="sq3b">B. A physical router in a home</label></div>
-<div class="squiz-option"><input id="sq3c" name="sq3" type="radio" value="2"/><label for="sq3c">C. A small piece of a message, labelled so it can be reassembled correctly</label></div>
-<div class="squiz-option"><input id="sq3d" name="sq3" type="radio" value="3"/><label for="sq3d">D. A password used to access a website</label></div>
-</div>
-<div class="squiz-item" data-correct="1">
-<div class="squiz-q"><span class="qnum">4.</span>Why is data broken into packets instead of sent as one solid block?</div>
-<div class="squiz-option"><input id="sq4a" name="sq4" type="radio" value="0"/><label for="sq4a">A. It makes data impossible to intercept</label></div>
-<div class="squiz-option"><input id="sq4b" name="sq4" type="radio" value="1"/><label for="sq4b">B. It lets many messages share the same cables and routers efficiently</label></div>
-<div class="squiz-option"><input id="sq4c" name="sq4" type="radio" value="2"/><label for="sq4c">C. It is required by web browsers only</label></div>
-<div class="squiz-option"><input id="sq4d" name="sq4" type="radio" value="3"/><label for="sq4d">D. It reduces the number of devices that can connect</label></div>
+<div class="squiz-q"><span class="qnum">2.</span>Why are messages split into packets?</div>
+<div class="squiz-option"><input id="sq2a" name="sq2" type="radio" value="0"/><label for="sq2a">A. To make files bigger</label></div>
+<div class="squiz-option"><input id="sq2b" name="sq2" type="radio" value="1"/><label for="sq2b">B. To hide them from the router</label></div>
+<div class="squiz-option"><input id="sq2c" name="sq2" type="radio" value="2"/><label for="sq2c">C. So many conversations can share links and be rerouted around failures</label></div>
+<div class="squiz-option"><input id="sq2d" name="sq2" type="radio" value="3"/><label for="sq2d">D. Because routers cannot read long messages</label></div>
 </div>
 <div class="squiz-item" data-correct="0">
-<div class="squiz-q"><span class="qnum">5.</span>What is an IP address used for?</div>
-<div class="squiz-option"><input id="sq5a" name="sq5" type="radio" value="0"/><label for="sq5a">A. Acting as a unique address identifying a device on a network</label></div>
-<div class="squiz-option"><input id="sq5b" name="sq5" type="radio" value="1"/><label for="sq5b">B. Encrypting a website's traffic</label></div>
-<div class="squiz-option"><input id="sq5c" name="sq5" type="radio" value="2"/><label for="sq5c">C. Storing a webpage permanently</label></div>
-<div class="squiz-option"><input id="sq5d" name="sq5" type="radio" value="3"/><label for="sq5d">D. Measuring internet speed</label></div>
-</div>
-<div class="squiz-item" data-correct="2">
-<div class="squiz-q"><span class="qnum">6.</span>What does DNS do?</div>
-<div class="squiz-option"><input id="sq6a" name="sq6" type="radio" value="0"/><label for="sq6a">A. Breaks webpages into packets</label></div>
-<div class="squiz-option"><input id="sq6b" name="sq6" type="radio" value="1"/><label for="sq6b">B. Encrypts banking and login pages</label></div>
-<div class="squiz-option"><input id="sq6c" name="sq6" type="radio" value="2"/><label for="sq6c">C. Translates a website name into its correct IP address</label></div>
-<div class="squiz-option"><input id="sq6d" name="sq6" type="radio" value="3"/><label for="sq6d">D. Connects a router to an ISP</label></div>
+<div class="squiz-q"><span class="qnum">3.</span>What is an IP address?</div>
+<div class="squiz-option"><input id="sq3a" name="sq3" type="radio" value="0"/><label for="sq3a">A. A number that identifies a device so packets can be delivered to it</label></div>
+<div class="squiz-option"><input id="sq3b" name="sq3" type="radio" value="1"/><label for="sq3b">B. A password for a website</label></div>
+<div class="squiz-option"><input id="sq3c" name="sq3" type="radio" value="2"/><label for="sq3c">C. The name of an ISP</label></div>
+<div class="squiz-option"><input id="sq3d" name="sq3" type="radio" value="3"/><label for="sq3d">D. The speed of a connection</label></div>
 </div>
 <div class="squiz-item" data-correct="3">
-<div class="squiz-q"><span class="qnum">7.</span>What is a "hop" in how data travels?</div>
-<div class="squiz-option"><input id="sq7a" name="sq7" type="radio" value="0"/><label for="sq7a">A. A unit of internet speed</label></div>
-<div class="squiz-option"><input id="sq7b" name="sq7" type="radio" value="1"/><label for="sq7b">B. A type of DNS server</label></div>
-<div class="squiz-option"><input id="sq7c" name="sq7" type="radio" value="2"/><label for="sq7c">C. A packet that gets lost in transit</label></div>
-<div class="squiz-option"><input id="sq7d" name="sq7" type="radio" value="3"/><label for="sq7d">D. Each device along the chain that forwards a packet toward its destination</label></div>
+<div class="squiz-q"><span class="qnum">4.</span>What does DNS do?</div>
+<div class="squiz-option"><input id="sq4a" name="sq4" type="radio" value="0"/><label for="sq4a">A. Encrypts all web traffic</label></div>
+<div class="squiz-option"><input id="sq4b" name="sq4" type="radio" value="1"/><label for="sq4b">B. Speeds up downloads</label></div>
+<div class="squiz-option"><input id="sq4c" name="sq4" type="radio" value="2"/><label for="sq4c">C. Stores your photos</label></div>
+<div class="squiz-option"><input id="sq4d" name="sq4" type="radio" value="3"/><label for="sq4d">D. Translates a domain name into an IP address</label></div>
 </div>
 <div class="squiz-item" data-correct="1">
-<div class="squiz-q"><span class="qnum">8.</span>Which historical event is generally considered the internet's earliest ancestor?</div>
-<div class="squiz-option"><input id="sq8a" name="sq8" type="radio" value="0"/><label for="sq8a">A. The invention of the World Wide Web in 1991</label></div>
-<div class="squiz-option"><input id="sq8b" name="sq8" type="radio" value="1"/><label for="sq8b">B. ARPANET connecting four university computers in 1969</label></div>
-<div class="squiz-option"><input id="sq8c" name="sq8" type="radio" value="2"/><label for="sq8c">C. The launch of the first smartphone</label></div>
-<div class="squiz-option"><input id="sq8d" name="sq8" type="radio" value="3"/><label for="sq8d">D. The rollout of home broadband</label></div>
-</div>
-<div class="squiz-item" data-correct="0">
-<div class="squiz-q"><span class="qnum">9.</span>What does HTTPS add on top of standard HTTP?</div>
-<div class="squiz-option"><input id="sq9a" name="sq9" type="radio" value="0"/><label for="sq9a">A. Encryption, so intercepted data can't be easily read</label></div>
-<div class="squiz-option"><input id="sq9b" name="sq9" type="radio" value="1"/><label for="sq9b">B. Faster loading speeds only</label></div>
-<div class="squiz-option"><input id="sq9c" name="sq9" type="radio" value="2"/><label for="sq9c">C. The ability to send emails</label></div>
-<div class="squiz-option"><input id="sq9d" name="sq9" type="radio" value="3"/><label for="sq9d">D. Unlimited data storage</label></div>
+<div class="squiz-q"><span class="qnum">5.</span>About how many addresses does IPv4 provide?</div>
+<div class="squiz-option"><input id="sq5a" name="sq5" type="radio" value="0"/><label for="sq5a">A. About 4.3 million</label></div>
+<div class="squiz-option"><input id="sq5b" name="sq5" type="radio" value="1"/><label for="sq5b">B. About 4.3 billion</label></div>
+<div class="squiz-option"><input id="sq5c" name="sq5" type="radio" value="2"/><label for="sq5c">C. About 4.3 trillion</label></div>
+<div class="squiz-option"><input id="sq5d" name="sq5" type="radio" value="3"/><label for="sq5d">D. About 340 undecillion</label></div>
 </div>
 <div class="squiz-item" data-correct="2">
-<div class="squiz-q"><span class="qnum">10.</span>Which of these commonly carries international internet traffic between continents?</div>
-<div class="squiz-option"><input id="sq10a" name="sq10" type="radio" value="0"/><label for="sq10a">A. Home Wi-Fi routers</label></div>
-<div class="squiz-option"><input id="sq10b" name="sq10" type="radio" value="1"/><label for="sq10b">B. DNS servers alone</label></div>
-<div class="squiz-option"><input id="sq10c" name="sq10" type="radio" value="2"/><label for="sq10c">C. Undersea fibre-optic cables</label></div>
-<div class="squiz-option"><input id="sq10d" name="sq10" type="radio" value="3"/><label for="sq10d">D. Satellite dishes exclusively</label></div>
+<div class="squiz-q"><span class="qnum">6.</span>How is TCP different from UDP?</div>
+<div class="squiz-option"><input id="sq6a" name="sq6" type="radio" value="0"/><label for="sq6a">A. TCP is only for video</label></div>
+<div class="squiz-option"><input id="sq6b" name="sq6" type="radio" value="1"/><label for="sq6b">B. UDP always delivers every packet</label></div>
+<div class="squiz-option"><input id="sq6c" name="sq6" type="radio" value="2"/><label for="sq6c">C. TCP confirms delivery and resends lost packets, while UDP makes no guarantees</label></div>
+<div class="squiz-option"><input id="sq6d" name="sq6" type="radio" value="3"/><label for="sq6d">D. They are identical</label></div>
+</div>
+<div class="squiz-item" data-correct="0">
+<div class="squiz-q"><span class="qnum">7.</span>Roughly what share of intercontinental data traffic travels through undersea cables?</div>
+<div class="squiz-option"><input id="sq7a" name="sq7" type="radio" value="0"/><label for="sq7a">A. Over 99%</label></div>
+<div class="squiz-option"><input id="sq7b" name="sq7" type="radio" value="1"/><label for="sq7b">B. About 50%</label></div>
+<div class="squiz-option"><input id="sq7c" name="sq7" type="radio" value="2"/><label for="sq7c">C. About 10%</label></div>
+<div class="squiz-option"><input id="sq7d" name="sq7" type="radio" value="3"/><label for="sq7d">D. Less than 1%</label></div>
+</div>
+<div class="squiz-item" data-correct="3">
+<div class="squiz-q"><span class="qnum">8.</span>Light in fibre travels at about 200,000 km/s. What is the minimum round-trip time over a 10,000 km cable?</div>
+<div class="squiz-option"><input id="sq8a" name="sq8" type="radio" value="0"/><label for="sq8a">A. 10 ms</label></div>
+<div class="squiz-option"><input id="sq8b" name="sq8" type="radio" value="1"/><label for="sq8b">B. 50 ms</label></div>
+<div class="squiz-option"><input id="sq8c" name="sq8" type="radio" value="2"/><label for="sq8c">C. 20 ms</label></div>
+<div class="squiz-option"><input id="sq8d" name="sq8" type="radio" value="3"/><label for="sq8d">D. 100 ms</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">9.</span>A 500 MB file downloads at 50 Mbps. About how long does it take?</div>
+<div class="squiz-option"><input id="sq9a" name="sq9" type="radio" value="0"/><label for="sq9a">A. 10 seconds</label></div>
+<div class="squiz-option"><input id="sq9b" name="sq9" type="radio" value="1"/><label for="sq9b">B. 80 seconds</label></div>
+<div class="squiz-option"><input id="sq9c" name="sq9" type="radio" value="2"/><label for="sq9c">C. 500 seconds</label></div>
+<div class="squiz-option"><input id="sq9d" name="sq9" type="radio" value="3"/><label for="sq9d">D. 8 minutes</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">10.</span>You are connected to Wi-Fi but no website loads on any device. What is the most likely cause?</div>
+<div class="squiz-option"><input id="sq10a" name="sq10" type="radio" value="0"/><label for="sq10a">A. Your keyboard is broken</label></div>
+<div class="squiz-option"><input id="sq10b" name="sq10" type="radio" value="1"/><label for="sq10b">B. The websites have closed</label></div>
+<div class="squiz-option"><input id="sq10c" name="sq10" type="radio" value="2"/><label for="sq10c">C. The router's connection to the ISP, or an ISP outage</label></div>
+<div class="squiz-option"><input id="sq10d" name="sq10" type="radio" value="3"/><label for="sq10d">D. Wi-Fi has been switched off at the website</label></div>
 </div>
 <button class="squiz-submit-btn" disabled="" id="squizSubmitBtn" onclick="submitQuiz()" type="button">Answer all questions to submit</button>
 </form>
 </div>
 <div class="article-footer-nav">
 <a href="index.html#gateway">← Gateway</a>
-<a href="article-viewer.html#what-is-coding.html">Next: What Is Coding? →</a>
+<a href="what-is-coding.html">Next: What Is Coding? →</a>
 </div>
 </div>
 <script>
@@ -1316,23 +1627,21 @@ footer.footer {
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',setup); else setup();
 })();
 </script>
-<footer class="edusambam-unified-footer" aria-label="EDUSAMBAM site footer">
+<footer aria-label="EDUSAMBAM site footer" class="edusambam-unified-footer">
 <div class="footer-top">
 <div class="footer-brand">
 <div class="edusambam-footer-brand-row">
-<a class="edusambam-footer-logo-link" href="index.html" aria-label="EDUSAMBAM home">
+<a aria-label="EDUSAMBAM home" class="edusambam-footer-logo-link" href="index.html">
 <img alt="EDUSAMBAM" class="edusambam-brand-mark edusambam-footer-logo" src="logo-icon-full-white.png" style="width:auto;height:64px;max-width:240px;object-fit:contain;background:none;border-radius:0;"/>
 </a>
 </div>
 <p class="edusambam-footer-statement">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</p>
-<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a></div>
+<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a><a aria-label="EDUSAMBAM on YouTube" href="https://youtube.com/@edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></div>
 </div>
-<div class="footer-col"><h4>Learning</h4><ul><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li></ul></div>
+<div class="footer-col"><h4>Learning Areas</h4><ul><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ Tests</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li></ul></div>
 <div class="footer-col"><h4>Practice &amp; Assessment</h4><ul>
 <li><a href="index.html#interactive-activities">Interactive Activities</a></li>
 <li><a href="assessment-arena.html">ASSESSMENT ARENA</a></li>
-<li><a href="assessment-arena.html">What Is Assessment?</a></li>
-<li><a href="index.html#about">Learn Your Way</a></li>
 <li><a href="index.html#resources">Resources &amp; Downloads</a></li>
 </ul></div>
 <div class="footer-col"><h4>About EDUSAMBAM</h4><ul>
@@ -1342,6 +1651,7 @@ footer.footer {
 <li><a href="contact.html">Contact Us</a></li>
 <li><a href="mailto:feedback.edusambam@gmail.com?subject=EDUSAMBAM%20Feedback">Give Feedback</a></li>
 <li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+<li><a href="about.html">About EDUSAMBAM</a></li>
 <li><a href="privacy-policy.html">Privacy Policy</a></li>
 </ul></div>
 </div>

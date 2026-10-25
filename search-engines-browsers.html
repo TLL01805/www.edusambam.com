@@ -12,9 +12,9 @@ gtag('config', 'G-Y35DW0V4HQ');
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Search Engines &amp; Web Browsers: How the Internet Finds Things — EDUSAMBAM</title>
+<title>Search Engines vs Web Browsers: How Search Works — EDUSAMBAM</title>
 <link href="https://edusambam.com/search-engines-browsers.html" rel="canonical"/>
-<meta content="Billions of pages exist online, yet a search engine finds the right one instantly. Learn the difference between a browser and search engine." name="description"/>
+<meta content="Learn the difference between a browser and a search engine, how crawling, indexing and ranking work, and how to search safely, with worked examples." name="description"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
@@ -1278,6 +1278,52 @@ footer.footer {
 }
 </style><style id="edusambam-footer-social-css">.edusambam-footer-social{margin-top:14px}.edusambam-footer-social a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);color:rgba(255,255,255,.85);transition:background .15s,color .15s}.edusambam-footer-social a:hover{background:rgba(255,255,255,.22);color:#fff}</style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2230995786427221"
      crossorigin="anonymous"></script>
+<style id="se-extra">
+  .diagram-box {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin: 1.5rem 0 2rem;
+    text-align: center;
+  }
+  .diagram-box svg { max-width: 100%; height: auto; }
+  .diagram-caption {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 0.8rem;
+    font-style: italic;
+  }
+@media (max-width: 600px) { .diagram-box { padding: 0.8rem; } }
+
+  .article-wrap ol { margin: 0 0 1.2rem 1.4rem; color: var(--slate); }
+  .article-wrap a { color: var(--red); }
+  .article-wrap code { background: #f5edd6; padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.92em; word-break: break-word; }
+  .article-wrap h3 { color: var(--navy); margin: 1.4rem 0 0.6rem; font-size: 1.15rem; }
+  .qa-list details { background: var(--cream); border: 1px solid var(--border); border-left: 4px solid var(--gold); border-radius: var(--radius); padding: 0.8rem 1.1rem; margin: 0 0 0.7rem; }
+  .qa-list summary { cursor: pointer; font-weight: 600; color: var(--navy); }
+  .qa-list details p { margin: 0.7rem 0 0; }
+  @media (prefers-reduced-motion: no-preference) {
+    .cc-anim .arr { animation: seArrow 4.5s ease-in-out infinite; opacity: .25; }
+    .cc-anim .arr.a2 { animation-delay: 1.1s; } .cc-anim .arr.a3 { animation-delay: 2.2s; }
+    .cc-anim .pulse { transform-box: fill-box; transform-origin: center; animation: sePulse 2.4s ease-in-out infinite; }
+  }
+  @keyframes seArrow { 0%,10% { opacity: .25; } 25%,45% { opacity: 1; } 60%,100% { opacity: .25; } }
+  @keyframes sePulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.07); } }
+</style>
+<meta name="robots" content="index,follow,max-image-preview:large"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="EDUSAMBAM"/>
+<meta property="og:title" content="Search Engines vs Web Browsers: How Search Works"/>
+<meta property="og:description" content="Learn the difference between a browser and a search engine, how crawling, indexing and ranking work, and how to search safely, with worked examples."/>
+<meta property="og:url" content="https://edusambam.com/search-engines-browsers.html"/>
+<meta property="og:image" content="https://edusambam.com/logo-icon-full.png"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Search Engines vs Web Browsers: How Search Works"/>
+<meta name="twitter:description" content="Learn the difference between a browser and a search engine, how crawling, indexing and ranking work, and how to search safely, with worked examples."/>
+<meta property="article:modified_time" content="2026-10"/>
+<meta property="article:section" content="Computer &amp; AI"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Search Engines & Web Browsers: How the Internet Finds Things", "description": "Learn the difference between a browser and a search engine, how crawling, indexing and ranking work, and how to search safely, with worked examples.", "inLanguage": "en", "mainEntityOfPage": "https://edusambam.com/search-engines-browsers.html", "url": "https://edusambam.com/search-engines-browsers.html", "dateModified": "2026-10", "articleSection": "Computer & AI", "author": {"@type": "Organization", "name": "EDUSAMBAM Editorial Team", "url": "https://edusambam.com/"}, "publisher": {"@type": "Organization", "name": "EDUSAMBAM", "url": "https://edusambam.com/", "logo": {"@type": "ImageObject", "url": "https://edusambam.com/logo-icon-full.png"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Gateway", "item": "https://edusambam.com/index.html#gateway"}, {"@type": "ListItem", "position": 2, "name": "Computer & AI", "item": "https://edusambam.com/index.html#subject-computer"}, {"@type": "ListItem", "position": 3, "name": "Search Engines & Web Browsers: How the Internet Finds Things", "item": "https://edusambam.com/search-engines-browsers.html"}]}]}</script>
 </head>
 <body id="top">
 <!-- TOP BAR -->
@@ -1296,13 +1342,12 @@ footer.footer {
 <span class="edusambam-brand-subtitle">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</span>
 </span>
 </a>
-<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li></ul>
+<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ Tests</a></li><li><a href="index.html#resources">Resources</a></li></ul>
 <button aria-label="Search" class="edusambam-search-btn" title="Search" type="button">⌕</button>
 <button aria-expanded="false" aria-label="Open menu" class="edusambam-menu-btn" title="Menu" type="button">☰</button>
 </div>
-</nav>
-<div aria-label="Mobile navigation" class="edusambam-mobile-menu">
-<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="index.html#subject-assessment">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="index.html#about-edusambam">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
+</nav><div aria-label="Mobile navigation" class="edusambam-mobile-menu">
+<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ Tests</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="index.html#subject-assessment">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="index.html#about-edusambam">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
 </div>
 <div aria-label="Site search" class="edusambam-search-panel">
 <div class="edusambam-search-wrap">
@@ -1315,49 +1360,389 @@ footer.footer {
 <div class="breadcrumb"><a href="index.html#gateway">Gateway</a>  /  <a href="index.html#subject-computer">Computer &amp; AI</a>  /  Search Engines &amp; Browsers</div>
 <div class="article-hero-tag">Computer &amp; AI · Computing Fundamentals</div>
 <h1>Search Engines &amp; Web Browsers: How the Internet Finds Things</h1>
-<p class="sub">Billions of pages exist online, yet a search engine finds the right one in a fraction of a second. Here's the difference between a browser and a search engine, and how ranking actually decides what shows up first.</p>
+<p class="sub">Billions of pages exist online, yet a search takes a fraction of a second. This guide explains what a browser does, how a search engine crawls, indexes and ranks pages, and how to search, judge and protect yourself online, with diagrams and worked examples.</p>
 <div class="article-hero-meta">
 <span>EDUSAMBAM Editorial Team</span>
 <span>|</span>
-<span>10 min read</span>
+<span>17 min read</span>
 <span>|</span>
 <span>Computing Fundamentals</span>
-</div>
+<span>|</span><span>Last updated: October 2026</span></div>
 </div><div aria-label="EDUSAMBAM article reader" class="edusambam-reader"><strong>🔊 LISTEN TO THIS ARTICLE</strong><div class="reader-slogan">SAVE YOUR EYES • IMPROVE YOUR LISTENING</div><div class="reader-help">Listen to the article instead of relying only on continuous screen reading.</div><div class="reader-controls"><button data-reader="play" type="button">▶ Play</button><button data-reader="pause" type="button">⏸ Pause</button><button data-reader="resume" type="button">▶ Resume</button><button data-reader="stop" type="button">■ Stop</button><select aria-label="Reading speed"><option value="1">1×</option><option value="0.8">0.8×</option><option value="1.2">1.2×</option></select></div><div aria-hidden="true" class="reader-progress"><span></span></div><small class="reader-status">Ready to read the article.</small></div>
 <!-- ARTICLE BODY -->
 <div class="article-wrap">
-<p class="lead">The internet article in this series explained how data physically travels between devices as packets across a network. But knowing how to reach any website doesn't help if there's no way to find which website has what's being looked for among billions of possible pages. That's the specific job a search engine does, and it's a genuinely separate piece of software from the web browser most people use to access it — a distinction this guide starts with before getting into how ranking actually works.</p>
+<p class="lead">You type a few words, press search, and within a second a ranked list of pages appears from a web with billions of pages. It feels like magic, but it is the result of careful preparation done long before you typed anything. Two different tools are involved, and people mix them up all the time: the <strong>web browser</strong>, which displays pages, and the <strong>search engine</strong>, which helps you find them. This article explains what each one does, follows a page from the moment you click until it appears on screen, and then opens up the search engine to show how it crawls, indexes and ranks pages. You will also learn how to search better, judge what you find, and protect your privacy.</p>
+
+<p><strong>Helpful background:</strong> <a href="what-is-the-internet.html">What Is the Internet, Really?</a> explains how data travels as packets, which this article builds on. You can read this one on its own, too.</p>
+
 <h2><span class="num">1.</span>A Browser and a Search Engine Are Not the Same Thing</h2>
-<p>A web browser — like Chrome, Safari, or Firefox — is a program that requests and displays web pages, following the addressing and data-transfer process the internet article described. A search engine, such as Google or Bing, is a website that runs inside that browser, whose specific job is finding and ranking other pages that match what someone is looking for. The browser is the tool for viewing the web; the search engine is one particular website, viewed through that tool, whose job is helping find other websites.</p>
-<div class="example-box">
-<div class="ex-label">Key Idea</div>
-<p>Typing a search into a browser's address bar doesn't search the browser itself — the browser simply sends that text to a search engine's website, which does the actual finding and sends back a page of results to display.</p>
-</div>
-<h2><span class="num">2.</span>Crawling: Finding Pages Before Anyone Searches</h2>
-<p>A search engine can't search the entire web in real time every time someone types a query — it would be far too slow. Instead, it continuously runs automated programs called crawlers, or spiders, that visit pages, follow every link found on them to discover more pages, and repeat this process constantly across the web, long before any specific search happens.</p>
-<h2><span class="num">3.</span>Indexing: Building a Giant Lookup Table</h2>
-<p>As crawlers visit pages, the search engine builds an index — essentially a massive, constantly updated lookup table connecting words and phrases to every page where they appear. This is conceptually similar to the index at the back of a textbook, just built automatically and covering essentially every page a crawler has found, rather than one book's worth of topics.</p>
+<p>Think of a huge library. The <strong>browser</strong> is like the door, the reading desk and your eyes: it is how you enter and read whatever you choose. The <strong>search engine</strong> is like the library's catalogue and its helpful librarian: it tells you which shelves are worth visiting. You need the first to read anything, but you do not need the second if you already know exactly where to go.</p>
 <div class="table-wrap">
 <table class="pos-table">
-<tr><th>Stage</th><th>What Happens</th></tr>
-<tr><td>Crawling</td><td>Automated programs discover pages by following links across the web</td></tr>
-<tr><td>Indexing</td><td>Discovered pages are analysed and stored in a searchable lookup structure</td></tr>
-<tr><td>Ranking</td><td>At the moment of a search, matching pages are ordered by relevance</td></tr>
+<tr><th></th><th>Web browser</th><th>Search engine</th></tr>
+<tr><td><strong>What it is</strong></td><td>A program or app installed on your device</td><td>A website (and service) run by a company</td></tr>
+<tr><td><strong>Main job</strong></td><td>Fetch web pages and display them</td><td>Find and rank pages that match your words</td></tr>
+<tr><td><strong>Where it runs</strong></td><td>On your phone or computer</td><td>On the company's servers in data centres</td></tr>
+<tr><td><strong>Examples</strong></td><td>Chrome, Safari, Firefox, Edge</td><td>Google, Bing, DuckDuckGo</td></tr>
 </table>
 </div>
-<p>A search only becomes fast because the crawling and indexing work has already happened well in advance — a query mostly just looks something up in a structure that already exists, rather than scanning the entire web on the spot.</p>
-<h2><span class="num">4.</span>Ranking: Deciding What Shows Up First</h2>
-<p>Once a search engine has found every indexed page that matches a query's words, it has to decide which order to show them in — this is ranking, and it's based on a large number of signals combined together, not just whether a word appears on a page. Common ranking signals include how relevant the page's content is to the exact words searched, how many other reputable pages link to it, how quickly the page loads, and how well it works on a mobile device.</p>
-<div class="real-world-box">
-<div class="rw-label">Real-World Example</div>
-<p>Search engine optimisation, or SEO, is the practice of adjusting a website to rank higher for certain searches — writing content that directly answers common questions, improving loading speed, and earning links from other trustworthy sites are all legitimate SEO techniques aimed at these same ranking signals.</p>
+<div class="example-box">
+<div class="ex-label">Key Idea</div>
+<p>When you type words into a browser's address bar, the browser does not search anything itself. It sends your words to the search engine that is set as its default, and that search engine does the finding. You can change the default in your browser settings, and you can use any browser with any search engine.</p>
 </div>
-<h2><span class="num">5.</span>Why the Same Search Gives Different Results</h2>
-<p>Two people searching the exact same words can see somewhat different results, because many search engines personalise rankings using signals like general location, past search history, and device type. A search for "best pizza" naturally returns different local results in different cities, even though the words typed were identical.</p>
-<h2><span class="num">6.</span>What a Browser Actually Does</h2>
-<p>Separately from search, a browser's core job is requesting a specific web page's underlying code from a server and rendering it — turning that code into the readable, clickable page a person actually sees, complete with text, images, and interactive elements. Every browser does this same basic job, which is why the same website generally looks and works similarly across Chrome, Safari, and Firefox, even though each browser is built by a different company.</p>
-<h2>A Closing Thought</h2>
-<p>Finding information on the web feels instant, but it rests on an enormous amount of preparation done in advance — constant crawling, constant indexing, and a ranking system weighing many signals at once, all before a single search is ever typed. Understanding that a browser displays the web while a search engine finds a specific corner of it makes the whole process far less mysterious, and makes it easier to judge why one result appears above another.</p>
+
+<div class="diagram-box cc-anim">
+<svg viewBox="0 0 560 250" role="img" aria-labelledby="seFlowTitle seFlowDesc">
+<title id="seFlowTitle">What happens when you search</title>
+<desc id="seFlowDesc">Four steps from left to right: your browser sends your words, the search engine looks them up in its index, a ranked results page comes back, and you click through to a website.</desc>
+<rect x="0" y="0" width="560" height="250" rx="14" fill="#faf8f4"/>
+<g font-family="Arial, sans-serif" text-anchor="middle">
+<text x="280" y="28" fill="#06244a" font-size="18" font-weight="700">What happens when you search</text>
+<g>
+<rect x="14" y="50" width="112" height="86" rx="10" fill="#06244a"/>
+<text x="70" y="78" fill="#d4a017" font-size="22" font-weight="700">1</text>
+<text x="70" y="102" fill="#fff" font-size="15" font-weight="700">Browser</text>
+<text x="70" y="122" fill="#fff" font-size="12">you type words</text>
+<rect x="154" y="50" width="112" height="86" rx="10" fill="#0b4ea2"/>
+<text x="210" y="78" fill="#d4a017" font-size="22" font-weight="700">2</text>
+<text x="210" y="102" fill="#fff" font-size="15" font-weight="700">Search engine</text>
+<text x="210" y="122" fill="#fff" font-size="12">checks its index</text>
+<rect x="294" y="50" width="112" height="86" rx="10" fill="#0b4ea2"/>
+<text x="350" y="78" fill="#d4a017" font-size="22" font-weight="700">3</text>
+<text x="350" y="102" fill="#fff" font-size="15" font-weight="700">Results page</text>
+<text x="350" y="122" fill="#fff" font-size="12">ranked list</text>
+<rect x="434" y="50" width="112" height="86" rx="10" fill="#06244a"/>
+<text x="490" y="78" fill="#d4a017" font-size="22" font-weight="700">4</text>
+<text x="490" y="102" fill="#fff" font-size="15" font-weight="700">Website</text>
+<text x="490" y="122" fill="#fff" font-size="12">you click one</text>
+</g>
+<g fill="#d4a017" font-size="26" font-weight="700">
+<text class="arr a1" x="140" y="102">›</text>
+<text class="arr a2" x="280" y="102">›</text>
+<text class="arr a3" x="420" y="102">›</text>
+</g>
+<g fill="#4a4a4a" font-size="13">
+<text x="70" y="168">Your words travel</text><text x="70" y="186">across the internet</text>
+<text x="210" y="168">No live scan of the web:</text><text x="210" y="186">it looks things up</text>
+<text x="350" y="168">Pages are ordered by</text><text x="350" y="186">likely usefulness</text>
+<text x="490" y="168">Your browser now</text><text x="490" y="186">loads that page</text>
+</g>
+<text x="280" y="228" fill="#06244a" font-size="14" font-weight="700">The browser appears twice: it sends the search and it displays the page.</text>
+</g>
+</svg>
+<div class="diagram-caption">Figure 1. The journey of a search. The gold arrows light up one after another; with reduced motion switched on they stay lit.</div>
+</div>
+
+<h2><span class="num">2.</span>What a Browser Does When You Open a Page</h2>
+<p>Opening a web page involves a surprising number of steps, and a good browser does all of them in a fraction of a second. First, learn to read the address you type. It is called a <strong>URL</strong> (Uniform Resource Locator). Here is an example address, using <code>example.org</code>, a name reserved for examples:</p>
+<div class="example-box">
+<div class="ex-label">Worked Example 1: Taking a URL apart</div>
+<p><code>https://www.example.org/articles/cloud.html?lang=en#intro</code></p>
+<ul>
+<li><strong>https://</strong> is the <em>protocol</em>, the set of rules used to talk to the server. The "s" means the connection is encrypted.</li>
+<li><strong>www.example.org</strong> is the <em>domain name</em>, the human-friendly name of the site's server.</li>
+<li><strong>/articles/cloud.html</strong> is the <em>path</em>, which tells the server which page you want.</li>
+<li><strong>?lang=en</strong> is the <em>query</em>, extra information sent to the page (here, a language choice).</li>
+<li><strong>#intro</strong> is the <em>fragment</em>, which tells the browser to jump to one part of the page.</li>
+</ul>
+</div>
+<p>After you press Enter, the browser works through these steps:</p>
+<ol>
+<li><strong>Find the address.</strong> Computers on the internet find each other with numbers called <strong>IP addresses</strong>, not names. The browser asks a <strong>DNS</strong> (Domain Name System) server, a kind of internet phone book, to turn the domain name into an IP address.</li>
+<li><strong>Connect securely.</strong> With HTTPS, the browser and the server agree on a way to scramble (<em>encrypt</em>) the conversation so others on the network cannot read it.</li>
+<li><strong>Ask for the page.</strong> The browser sends a request for the path you asked for.</li>
+<li><strong>Receive the files.</strong> The server sends back the page's files: <strong>HTML</strong> (the structure and text), <strong>CSS</strong> (the colours, fonts and layout) and often <strong>JavaScript</strong> (a programming language that makes pages interactive), along with images.</li>
+<li><strong>Build the page.</strong> The browser's <strong>rendering engine</strong> reads those files and draws the page. Chrome, Edge and Opera use an engine called Blink, Safari uses WebKit and Firefox uses Gecko. This is why a well-built website looks similar in all of them.</li>
+</ol>
+
+<div class="diagram-box">
+<svg viewBox="0 0 520 350" role="img" aria-labelledby="seLoadTitle seLoadDesc">
+<title id="seLoadTitle">How a browser loads a web page</title>
+<desc id="seLoadDesc">A message diagram with three columns: the browser, a DNS server and the website's server. The browser asks DNS for an address, gets it, sets up a secure connection with the server, requests the page, receives the files and builds the page.</desc>
+<rect x="0" y="0" width="520" height="350" rx="14" fill="#faf8f4"/>
+<g font-family="Arial, sans-serif" text-anchor="middle">
+<rect x="20" y="14" width="100" height="32" rx="6" fill="#06244a"/><text x="70" y="35" fill="#fff" font-size="14" font-weight="700">Browser</text>
+<rect x="210" y="14" width="100" height="32" rx="6" fill="#0b4ea2"/><text x="260" y="35" fill="#fff" font-size="14" font-weight="700">DNS server</text>
+<rect x="400" y="14" width="100" height="32" rx="6" fill="#06244a"/><text x="450" y="35" fill="#fff" font-size="14" font-weight="700">Web server</text>
+<g stroke="#b8963e" stroke-width="2" stroke-dasharray="5 5"><line x1="70" y1="46" x2="70" y2="330"/><line x1="260" y1="46" x2="260" y2="330"/><line x1="450" y1="46" x2="450" y2="330"/></g>
+<defs><marker id="seArr" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 Z" fill="#06244a"/></marker></defs>
+<g stroke="#06244a" stroke-width="2.5" marker-end="url(#seArr)">
+<line x1="72" y1="92" x2="256" y2="92"/>
+<line x1="258" y1="132" x2="76" y2="132"/>
+<line x1="72" y1="182" x2="444" y2="182"/>
+<line x1="72" y1="222" x2="444" y2="222"/>
+<line x1="448" y1="262" x2="76" y2="262"/>
+</g>
+<g fill="#06244a" font-size="13">
+<text x="165" y="82">Where is example.org?</text>
+<text x="167" y="122">It is at this IP address</text>
+<text x="260" y="172">Set up a secure connection (HTTPS)</text>
+<text x="260" y="212">Please send /articles/cloud.html</text>
+<text x="262" y="252">HTML, CSS, JavaScript, images</text>
+</g>
+<g font-size="12" font-weight="700" fill="#fff">
+<circle cx="30" cy="92" r="10" fill="#8b0000"/><text x="30" y="96">1</text>
+<circle cx="30" cy="132" r="10" fill="#8b0000"/><text x="30" y="136">2</text>
+<circle cx="30" cy="182" r="10" fill="#8b0000"/><text x="30" y="186">3</text>
+<circle cx="30" cy="222" r="10" fill="#8b0000"/><text x="30" y="226">4</text>
+<circle cx="30" cy="262" r="10" fill="#8b0000"/><text x="30" y="266">5</text>
+</g>
+<rect x="20" y="290" width="200" height="44" rx="8" fill="#d4a017"/>
+<text x="120" y="310" fill="#06244a" font-size="14" font-weight="700">6. The browser builds</text>
+<text x="120" y="327" fill="#06244a" font-size="14" font-weight="700">and shows the page</text>
+</g>
+</svg>
+<div class="diagram-caption">Figure 2. The steps behind opening one page. Real browsers often repeat steps 4 and 5 many times for the images, scripts and styles a page needs.</div>
+</div>
+
+<h3>Other jobs of a browser</h3>
+<ul>
+<li><strong>Cache:</strong> the browser keeps copies of files it has already downloaded, such as logos, so the next visit loads faster.</li>
+<li><strong>Cookies:</strong> small pieces of information a website asks the browser to store. They can keep you logged in or remember a setting, but they can also be used to track you across sites.</li>
+<li><strong>Security warnings:</strong> browsers warn you about pages that are known to be dangerous or connections that are not secure.</li>
+<li><strong>Updates:</strong> keeping your browser updated matters, because updates fix security weaknesses that attackers can use.</li>
+</ul>
+<p>One common belief needs correcting. A padlock (or similar icon) beside the address means the <em>connection</em> between you and the site is encrypted. It does <strong>not</strong> mean the site is honest or safe. Criminals can also use HTTPS on fake sites, so you must still check the address carefully and be wary of unexpected requests for passwords or money.</p>
+
+<h2><span class="num">3.</span>The Three Jobs of a Search Engine</h2>
+<p>A search engine cannot scan the entire web every time someone types a query. That would take far too long. Instead, its work is split into stages. Google's own guide to its search system describes three stages, and other search engines work in broadly similar ways: <strong>crawling</strong>, <strong>indexing</strong> and <strong>serving results</strong> (which includes ranking). The first two are done in advance. Only the last happens while you wait.</p>
+
+<div class="diagram-box">
+<svg viewBox="0 0 560 300" role="img" aria-labelledby="sePipeTitle sePipeDesc">
+<title id="sePipeTitle">Crawl, index, rank</title>
+<desc id="sePipeDesc">Three boxes. Crawl: programs follow links to discover pages. Index: words are stored with the pages that contain them. Rank: matching pages are ordered when you search. The first two happen in advance and the third happens when you search.</desc>
+<rect x="0" y="0" width="560" height="300" rx="14" fill="#faf8f4"/>
+<g font-family="Arial, sans-serif" text-anchor="middle">
+<rect x="14" y="14" width="360" height="26" rx="6" fill="#f5edd6" stroke="#b8963e"/>
+<text x="194" y="32" fill="#06244a" font-size="14" font-weight="700">Done in advance, all the time</text>
+<rect x="386" y="14" width="160" height="26" rx="6" fill="#06244a"/>
+<text x="466" y="32" fill="#fff" font-size="14" font-weight="700">Done when you search</text>
+<g>
+<rect x="14" y="52" width="172" height="170" rx="10" fill="#fff" stroke="#06244a" stroke-width="2"/>
+<g stroke="#06244a" stroke-width="2"><line x1="60" y1="100" x2="100" y2="130"/><line x1="100" y1="130" x2="146" y2="96"/><line x1="100" y1="130" x2="100" y2="176"/><line x1="146" y1="96" x2="150" y2="168"/></g>
+<g fill="#d4a017" stroke="#06244a" stroke-width="2"><circle cx="60" cy="100" r="12"/><circle cx="100" cy="130" r="14"/><circle cx="146" cy="96" r="12"/><circle cx="100" cy="178" r="12"/><circle cx="150" cy="170" r="12"/></g>
+<text x="100" y="206" fill="#4a4a4a" font-size="13">pages joined by links</text>
+</g>
+<g>
+<rect x="194" y="52" width="172" height="170" rx="10" fill="#fff" stroke="#06244a" stroke-width="2"/>
+<g font-size="14" fill="#06244a" text-anchor="start">
+<text x="210" y="92" font-weight="700">solar</text><text x="270" y="92">→ pages 1, 2</text>
+<text x="210" y="122" font-weight="700">wind</text><text x="270" y="122">→ page 2</text>
+<text x="210" y="152" font-weight="700">coal</text><text x="270" y="152">→ page 3</text>
+<text x="210" y="182" font-weight="700">fuel</text><text x="270" y="182">→ page 3</text>
+</g>
+<text x="280" y="206" fill="#4a4a4a" font-size="13">words → where they appear</text>
+</g>
+<g>
+<rect x="374" y="52" width="172" height="170" rx="10" fill="#fff" stroke="#06244a" stroke-width="2"/>
+<rect x="394" y="76" width="132" height="26" rx="4" fill="#06244a"/><text x="410" y="94" fill="#fff" font-size="14" font-weight="700" text-anchor="start">1  best match</text>
+<rect x="394" y="110" width="104" height="26" rx="4" fill="#0b4ea2"/><text x="410" y="128" fill="#fff" font-size="14" font-weight="700" text-anchor="start">2  next</text>
+<rect x="394" y="144" width="76" height="26" rx="4" fill="#7a96c2"/><text x="410" y="162" fill="#fff" font-size="14" font-weight="700" text-anchor="start">3  then</text>
+<text x="460" y="206" fill="#4a4a4a" font-size="13">ordered list</text>
+</g>
+<text x="100" y="250" fill="#06244a" font-size="16" font-weight="700">1. Crawl</text>
+<text x="280" y="250" fill="#06244a" font-size="16" font-weight="700">2. Index</text>
+<text x="460" y="250" fill="#06244a" font-size="16" font-weight="700">3. Rank</text>
+<text x="100" y="270" fill="#4a4a4a" font-size="13">discover pages</text>
+<text x="280" y="270" fill="#4a4a4a" font-size="13">store and organise</text>
+<text x="460" y="270" fill="#4a4a4a" font-size="13">order the matches</text>
+</g>
+</svg>
+<div class="diagram-caption">Figure 3. The three stages of a search engine. The index in the middle box is the same tiny example used in Worked Example 2.</div>
+</div>
+
+<h2><span class="num">4.</span>Stage One: Crawling</h2>
+<p><strong>Crawlers</strong> (also called spiders, robots or bots) are automated programs that visit a web page, read it, collect every link on it, and then visit those linked pages in turn. Repeating this over and over lets them discover enormous numbers of pages. A site owner can also hand over a list of pages, called a <strong>sitemap</strong>, to help crawlers find everything.</p>
+<p>Crawlers cannot see everything. Some pages are not reachable because nothing links to them. Others need a login, such as your email inbox, so crawlers cannot open them. Site owners can also place a text file called <strong>robots.txt</strong> at the top of their site to ask crawlers not to visit certain areas. It is a polite request that well-behaved crawlers follow. It is <em>not</em> a lock, so it should never be used to protect private information.</p>
+
+<h2><span class="num">5.</span>Stage Two: Indexing</h2>
+<p>After a page is crawled, the search engine works out what it is about and stores a summary in a giant database called the <strong>index</strong>. Not every page that is crawled gets indexed, because pages may be duplicates, have very little content, or be marked by their owners as "do not index".</p>
+<p>The index works like the index at the back of a textbook, except that it is built automatically. Rather than listing pages and what is on them, it lists <em>words</em> and which pages contain them. This is called an <strong>inverted index</strong>, and it is the reason a search takes a fraction of a second: the engine looks up your words in the index instead of reading pages.</p>
+
+<div class="example-box">
+<div class="ex-label">Worked Example 2: Building a tiny index</div>
+<p>Imagine a search engine has crawled only three pages:</p>
+<ul>
+<li><strong>Page 1:</strong> "Solar energy is clean energy."</li>
+<li><strong>Page 2:</strong> "Wind energy and solar panels."</li>
+<li><strong>Page 3:</strong> "Coal is a fossil fuel."</li>
+</ul>
+<p><strong>Step 1: Tidy the words.</strong> Engines commonly change everything to lower case and ignore very common words such as "is", "and" and "a" (called <em>stop words</em>).</p>
+<p><strong>Step 2: Record where each word appears.</strong></p>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Word</th><th>Pages</th></tr>
+<tr><td>solar</td><td>1, 2</td></tr>
+<tr><td>energy</td><td>1, 2</td></tr>
+<tr><td>clean</td><td>1</td></tr>
+<tr><td>wind</td><td>2</td></tr>
+<tr><td>panels</td><td>2</td></tr>
+<tr><td>coal</td><td>3</td></tr>
+<tr><td>fossil</td><td>3</td></tr>
+<tr><td>fuel</td><td>3</td></tr>
+</table>
+</div>
+<p><strong>Step 3: Answer a search.</strong> For "solar energy", look up both words. "solar" is on pages {1, 2} and "energy" is on pages {1, 2}. The pages that have <em>both</em> are {1, 2}. Page 3 is never even touched.</p>
+<p><strong>Step 4: Order them.</strong> Both pages match, so ranking must decide. Page 1 uses "energy" twice in a very short sentence, which hints that it is closely about the topic, so a simple engine might put it first.</p>
+<p><strong>Limits of this model:</strong> a real engine also understands that "photovoltaic" is related to "solar" and that "run" and "running" are forms of one word. Modern engines try to match <em>meaning</em>, not just exact words.</p>
+</div>
+
+<h2><span class="num">6.</span>Stage Three: Ranking</h2>
+<p>For common searches, thousands or millions of pages may match. <strong>Ranking</strong> decides which come first. Search engines use many signals together and change them regularly, and they do not publish exact formulas, partly to make cheating harder. Google states that it does not accept payment to rank a site higher in its ordinary (organic) results. Commonly discussed signals include:</p>
+<ul>
+<li><strong>Relevance:</strong> do the page's title, headings and text match what you asked, including similar words and meanings?</li>
+<li><strong>Links from other pages:</strong> a link to a page works a bit like a recommendation, and links from trusted pages count for more.</li>
+<li><strong>Quality and trustworthiness:</strong> original, accurate, well-sourced content, written by people who know the topic.</li>
+<li><strong>Freshness:</strong> for a topic like news, newer pages matter more.</li>
+<li><strong>Page experience:</strong> a page that loads quickly, works on a phone and uses a secure connection is a better experience.</li>
+<li><strong>Context:</strong> your language, your general location and sometimes your settings or device.</li>
+</ul>
+<p>The idea that links act as votes is the heart of <strong>PageRank</strong>, a method described by Sergey Brin and Lawrence Page at Stanford University in 1998. Their paper explains that using the link structure of the web helps calculate a quality ranking for each page. Modern ranking uses far more than links, but the central idea is still useful for understanding why well-linked pages tend to rise.</p>
+
+<div class="diagram-box cc-anim">
+<svg viewBox="0 0 520 300" role="img" aria-labelledby="seLinkTitle seLinkDesc">
+<title id="seLinkTitle">Four pages and the links between them</title>
+<desc id="seLinkDesc">Pages B and D each link to page C. Page A links to page C and page C links to page A. Page C has three incoming links and the highest score, 0.75. Page A scores 0.25. Pages B and D score 0.</desc>
+<rect x="0" y="0" width="520" height="300" rx="14" fill="#faf8f4"/>
+<defs><marker id="seLArr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#06244a"/></marker></defs>
+<g font-family="Arial, sans-serif" text-anchor="middle">
+<text x="260" y="26" fill="#06244a" font-size="17" font-weight="700">Links act like votes</text>
+<g stroke="#06244a" stroke-width="2.5" marker-end="url(#seLArr)"><line x1="100" y1="69" x2="226" y2="129"/><line x1="100" y1="231" x2="226" y2="171"/><path d="M439 131 Q365 62 306 117" fill="none"/><path d="M304 181 Q365 238 437 171" fill="none"/></g>
+<circle cx="80" cy="60" r="22" fill="#f5edd6" stroke="#06244a" stroke-width="2.5"/><text x="80" y="66" fill="#06244a" font-size="18" font-weight="700">B</text>
+<text x="80" y="98" fill="#4a4a4a" font-size="13">score 0</text>
+<circle cx="80" cy="240" r="22" fill="#f5edd6" stroke="#06244a" stroke-width="2.5"/><text x="80" y="246" fill="#06244a" font-size="18" font-weight="700">D</text>
+<text x="80" y="278" fill="#4a4a4a" font-size="13">score 0</text>
+<circle class="pulse" cx="270" cy="150" r="46" fill="#06244a" stroke="#d4a017" stroke-width="3"/>
+<text x="270" y="148" fill="#fff" font-size="22" font-weight="700">C</text><text x="270" y="170" fill="#d4a017" font-size="16" font-weight="700">0.75</text>
+<circle cx="460" cy="150" r="28" fill="#0b4ea2" stroke="#06244a" stroke-width="2.5"/>
+<text x="460" y="148" fill="#fff" font-size="18" font-weight="700">A</text><text x="460" y="166" fill="#fff" font-size="13" font-weight="700">0.25</text>
+<text x="365" y="46" fill="#4a4a4a" font-size="13">A → C</text>
+<text x="365" y="268" fill="#4a4a4a" font-size="13">C → A</text>
+</g>
+</svg>
+<div class="diagram-caption">Figure 4. Four pages and their links. C receives three links, so it ends up with the highest score. Circle size shows the score.</div>
+</div>
+
+<div class="example-box">
+<div class="ex-label">Worked Example 3: Links as votes (a simplified PageRank)</div>
+<p>Four pages exist: A, B, C and D. The links are A→C, B→C, D→C and C→A (an arrow means "this page links to that page").</p>
+<p><strong>Step 1: Count incoming links.</strong> C has 3. A has 1. B and D have 0.</p>
+<p><strong>Step 2: Give each page the same starting score.</strong> With 4 pages, each starts at 1 ÷ 4 = 0.25, so the total is 1.</p>
+<p><strong>Step 3: Each page shares its score equally among the pages it links to.</strong> A, B and D each link to one page (C), so each hands over all of its 0.25. C also links to just one page (A), so it hands over all of its 0.25.</p>
+<p><strong>Step 4: Add up what each page receives.</strong></p>
+<ul>
+<li>C receives 0.25 + 0.25 + 0.25 = <strong>0.75</strong></li>
+<li>A receives <strong>0.25</strong> (from C)</li>
+<li>B and D receive <strong>0</strong></li>
+</ul>
+<p><strong>Check:</strong> 0.75 + 0.25 + 0 + 0 = 1, so no score was lost.</p>
+<p><strong>Reality check:</strong> the real method repeats this sharing many times and also includes a "random jump" factor so scores settle fairly. It is one signal among many, and it can be fooled, which is why search engines fight link schemes and spam. This example is deliberately simplified for learning.</p>
+</div>
+
+<h2><span class="num">7.</span>Reading a Results Page</h2>
+<p>A results page is more than ten blue links. You may see:</p>
+<ul>
+<li><strong>Ordinary (organic) results:</strong> pages ranked by the search engine's methods.</li>
+<li><strong>Paid results:</strong> adverts that companies pay to show. They are usually marked with a label such as "Ad" or "Sponsored". They are not placed by the same quality process, so look for the label before you click.</li>
+<li><strong>Quick answers and boxes:</strong> a short answer, a map, images, videos or a "people also ask" list.</li>
+<li><strong>AI-generated summaries:</strong> some search engines now place a written summary above the results. These can be helpful, but they can also be wrong or oversimplified, so treat them as a starting point and check the sources they point to.</li>
+</ul>
+
+<h2><span class="num">8.</span>Why Two People See Different Results</h2>
+<p>Two people who type the same words may see different results. A search for "best pizza" shows local places that depend on where you are. Language, device, time and, in some cases, your past searches and account settings can also change the order. Researchers disagree about how strongly personalisation traps people in an information "bubble", so it is wise not to assume it either does or does not matter. The practical advice is the same: if a topic is important, look at more than one source and, when you can, try a different search engine or a private window.</p>
+
+<h2><span class="num">9.</span>Searching Better</h2>
+<p>Good searching is a skill. These tips work in most major search engines, although the exact symbols can differ slightly:</p>
+<ul>
+<li><strong>Use specific words.</strong> Names, technical terms and the exact thing you need beat vague words.</li>
+<li><strong>Quotation marks</strong> around a phrase ask for those words together, in that order: <code>"light-independent reactions"</code>.</li>
+<li><strong>A minus sign</strong> before a word excludes it: <code>jaguar -car</code>.</li>
+<li><strong>site:</strong> limits results to one website or kind of site: <code>site:.edu</code> or <code>site:nasa.gov</code>.</li>
+<li><strong>Ask a full question</strong> when the engine understands natural language.</li>
+<li><strong>Change your words</strong> if the results are poor, instead of scrolling through pages of them.</li>
+</ul>
+
+<div class="example-box">
+<div class="ex-label">Worked Example 4: Improving a search step by step</div>
+<p><strong>Goal:</strong> find reliable information about the animal called the jaguar for a school report.</p>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Try</th><th>Search</th><th>What happens and why</th></tr>
+<tr><td>1</td><td><code>jaguar</code></td><td>Too broad. The word names an animal, a car brand and more, so results are mixed.</td></tr>
+<tr><td>2</td><td><code>jaguar animal habitat</code></td><td>Better. The extra words show which meaning you want.</td></tr>
+<tr><td>3</td><td><code>jaguar -car habitat diet</code></td><td>The minus sign removes car pages, and "diet" narrows the topic.</td></tr>
+<tr><td>4</td><td><code>jaguar habitat site:.edu</code></td><td>Limits results to educational sites, which are often (but not always) more careful sources.</td></tr>
+</table>
+</div>
+<p><strong>Last step:</strong> do not stop at the first result. Open two or three pages and see if they agree.</p>
+</div>
+
+<h2><span class="num">10.</span>Judging What You Find</h2>
+<p>A high ranking means a page matched many signals. It does not prove the page is true. Anyone can publish on the web, so you need to check. Ask:</p>
+<ul>
+<li><strong>Who</strong> wrote this, and do they have knowledge or experience in the topic?</li>
+<li><strong>When</strong> was it published or updated? Is it still current?</li>
+<li><strong>What evidence</strong> is given, and are sources named?</li>
+<li><strong>Why</strong> does this page exist: to inform, to sell, to persuade or to entertain?</li>
+</ul>
+<p>A powerful habit is <strong>lateral reading</strong>: instead of staying on the unfamiliar page, open new tabs and search for what other trusted sources say about the page and its author. Fact-checkers use this approach because it quickly shows whether a site can be trusted.</p>
+
+<h2><span class="num">11.</span>Privacy: What Browsers and Search Engines Can Learn About You</h2>
+<p>Using the web leaves traces. A search engine may record your searches, and websites can see your IP address and details such as your device and browser type. Cookies and similar tools can be used to follow your activity from site to site. Many services use this data to personalise results and show adverts, and the rules differ between companies and countries.</p>
+<p>A <strong>private</strong> or <strong>incognito</strong> window is often misunderstood. It mainly stops your <em>own device</em> from saving your history, cookies and form entries after you close the window. It does <strong>not</strong> make you invisible. The websites you visit, your school, workplace or internet provider can still see activity. It is useful on a shared computer, but it is not a shield.</p>
+<p>Sensible habits: review privacy and cookie settings, keep your browser updated, be careful what personal details you type into forms, and sign out on shared devices. Read more in <a href="digital-footprint-privacy.html">Digital Footprint &amp; Online Privacy</a> and <a href="cybersecurity-basics.html">Cybersecurity Basics</a>. If you are curious how services store your data, see <a href="cloud-computing.html">Cloud Computing</a>.</p>
+
+<h2><span class="num">12.</span>A Word About SEO</h2>
+<p><strong>Search engine optimisation</strong> (SEO) means improving a website so that search engines can find and understand it, and so that it ranks well for the right searches. Honest SEO includes writing clear, original and accurate content, using descriptive titles, making the site fast and mobile-friendly, and earning real links. Dishonest tricks, such as stuffing a page with repeated keywords or buying links, go against search engine guidelines and can cause a site to be ranked lower or removed. In the long run, being genuinely useful is the best strategy.</p>
+
+<h2><span class="num">13.</span>Common Mistakes and Misconceptions</h2>
+<ul>
+<li><strong>"The browser and the search engine are the same."</strong> A browser displays pages; a search engine is a website that finds them.</li>
+<li><strong>"A search scans the live internet."</strong> It looks things up in a prepared index, which is why it is fast and why very new pages may be missing.</li>
+<li><strong>"The first result is the truest."</strong> Rank reflects many signals, not a guarantee of accuracy.</li>
+<li><strong>"A padlock means a site is safe."</strong> It only means the connection is encrypted.</li>
+<li><strong>"Incognito mode makes me anonymous."</strong> It only limits what your own device remembers.</li>
+<li><strong>"Search engines can find everything online."</strong> Pages behind logins, blocked pages and pages with no links are often missed.</li>
+</ul>
+
+<h2><span class="num">14.</span>Check Your Understanding</h2>
+<p>Try each question first, then tap it to reveal the answer. A scored multiple-choice quiz follows below.</p>
+<div class="qa-list">
+<details><summary>1. In one sentence, what is the difference between a browser and a search engine?</summary><p>A browser is an app that fetches and displays web pages, while a search engine is a website that finds and ranks pages matching your words.</p></details>
+<details><summary>2. Why can a search engine answer in a fraction of a second?</summary><p>Because crawling and indexing were done in advance. A search only looks up your words in the prepared index instead of scanning the web.</p></details>
+<details><summary>3. Using the index in Worked Example 2, which pages match the search "wind solar"?</summary><p>"wind" is on page 2 and "solar" is on pages 1 and 2. Only page 2 has both, so page 2 matches.</p></details>
+<details><summary>4. In Worked Example 3, why does C end with a higher score than A?</summary><p>C has three incoming links, each passing it a score of 0.25, so it receives 0.75. A has only one incoming link, from C, so it receives 0.25.</p></details>
+<details><summary>5. What does a padlock beside a web address tell you, and what does it not tell you?</summary><p>It tells you the connection to the site is encrypted. It does not tell you that the site itself is honest or safe.</p></details>
+<details><summary>6. Name two things a private window does <em>not</em> hide.</summary><p>Any two of: the websites you visit can still see your visit; your school or workplace network can still see activity; your internet provider can still see activity.</p></details>
+</div>
+
+<h2><span class="num">15.</span>Summary</h2>
+<ul>
+<li>A browser displays web pages; a search engine finds them. They are separate tools.</li>
+<li>Opening a page involves a DNS lookup, a secure connection, a request, and the browser building the page from HTML, CSS and JavaScript.</li>
+<li>Search engines crawl pages by following links, index the words they contain, and rank matches using many signals.</li>
+<li>Crawling and indexing happen in advance, which is why search is fast.</li>
+<li>Links act as votes in the PageRank idea, but modern ranking uses many more signals.</li>
+<li>Results differ between people, and rank is not proof of truth, so check sources.</li>
+<li>Private windows and padlocks are helpful but do not mean anonymity or trustworthiness.</li>
+</ul>
+
+<div class="example-box">
+<div class="ex-label">For Teachers and Parents</div>
+<p><strong>"Be the search engine" (no devices needed):</strong> give groups three or four short paper "web pages" containing a few sentences. Ask each group to build an index on a sheet of paper (word → page numbers), then answer search questions from other groups using only the index. Finish by asking how they would rank pages that all match.</p>
+<p><strong>Search challenge:</strong> give students a question with an ambiguous word and ask them to improve their search wording in at least three steps, noting what changed each time.</p>
+<p><strong>Lateral reading practice:</strong> choose an unfamiliar website and have students find what two independent sources say about it before deciding whether to trust it.</p>
+<p><strong>Safety note:</strong> remind students not to type personal details such as full names, addresses or school information into search boxes or forms, and to ask a trusted adult if something online makes them uncomfortable.</p>
+</div>
+
+<h2><span class="num">16.</span>Sources and Further Reading</h2>
+<p>This article is original EDUSAMBAM writing. The description of crawling, indexing and serving follows the public documentation below, and the PageRank idea follows the original research paper. The tiny index and link examples are invented for practice, and the diagrams are original EDUSAMBAM schematics. Other ideas (URLs, DNS, HTTPS, cookies, browser engines, private browsing) are widely taught web fundamentals explained here in our own words.</p>
+<ul>
+<li><strong>Google Search Central, "In-depth guide to how Google Search works":</strong> <a href="https://developers.google.com/search/docs/fundamentals/how-search-works" target="_blank" rel="noopener">developers.google.com/search/docs/fundamentals/how-search-works</a></li>
+<li><strong>Sergey Brin and Lawrence Page, "The Anatomy of a Large-Scale Hypertextual Web Search Engine" (1998):</strong> <a href="https://courses.cs.washington.edu/courses/cse454/15wi/papers/google.html" target="_blank" rel="noopener">read a copy of the paper</a></li>
+</ul>
+<p>Search tools and their features change often, so check each service's current settings and policies yourself. This article does not recommend one search engine or browser over another.</p>
+
 <!-- QUIZ SECTION -->
 <div class="quiz-section">
 <div class="section-eyebrow">Test Your Understanding</div>
@@ -1373,79 +1758,79 @@ footer.footer {
 </div>
 <form id="squizForm">
 <div class="squiz-item" data-correct="2">
-<div class="squiz-q"><span class="qnum">1.</span>What is the key difference between a web browser and a search engine, according to the article?</div>
-<div class="squiz-option"><input id="sq1a" name="sq1" type="radio" value="0"><label for="sq1a">A. They are exactly the same thing</label></input></div>
-<div class="squiz-option"><input id="sq1b" name="sq1" type="radio" value="1"/><label for="sq1b">B. A search engine displays pages; a browser finds them</label></div>
-<div class="squiz-option"><input id="sq1c" name="sq1" type="radio" value="2"/><label for="sq1c">C. A browser displays web pages; a search engine is a website that finds and ranks other pages</label></div>
-<div class="squiz-option"><input id="sq1d" name="sq1" type="radio" value="3"/><label for="sq1d">D. A search engine only works offline</label></div>
-</div>
-<div class="squiz-item" data-correct="1">
-<div class="squiz-q"><span class="qnum">2.</span>What happens when someone types a search into a browser's address bar?</div>
-<div class="squiz-option"><input id="sq2a" name="sq2" type="radio" value="0"/><label for="sq2a">A. The browser searches its own files</label></div>
-<div class="squiz-option"><input id="sq2b" name="sq2" type="radio" value="1"/><label for="sq2b">B. The browser sends the text to a search engine's website, which does the actual finding</label></div>
-<div class="squiz-option"><input id="sq2c" name="sq2" type="radio" value="2"/><label for="sq2c">C. Nothing happens until a page is manually selected</label></div>
-<div class="squiz-option"><input id="sq2d" name="sq2" type="radio" value="3"/><label for="sq2d">D. It only works on mobile browsers</label></div>
-</div>
-<div class="squiz-item" data-correct="3">
-<div class="squiz-q"><span class="qnum">3.</span>What do crawlers, or spiders, do?</div>
-<div class="squiz-option"><input id="sq3a" name="sq3" type="radio" value="0"/><label for="sq3a">A. They rank search results in real time</label></div>
-<div class="squiz-option"><input id="sq3b" name="sq3" type="radio" value="1"/><label for="sq3b">B. They only run once a year</label></div>
-<div class="squiz-option"><input id="sq3c" name="sq3" type="radio" value="2"/><label for="sq3c">C. They personalise search results by location</label></div>
-<div class="squiz-option"><input id="sq3d" name="sq3" type="radio" value="3"/><label for="sq3d">D. They visit pages and follow links to continuously discover more pages</label></div>
+<div class="squiz-q"><span class="qnum">1.</span>Which statement about browsers and search engines is correct?</div>
+<div class="squiz-option"><input id="sq1a" name="sq1" type="radio" value="0"/><label for="sq1a">A. They are two names for the same program</label></div>
+<div class="squiz-option"><input id="sq1b" name="sq1" type="radio" value="1"/><label for="sq1b">B. A search engine is installed on your phone like an app, and a browser is a website</label></div>
+<div class="squiz-option"><input id="sq1c" name="sq1" type="radio" value="2"/><label for="sq1c">C. A browser displays web pages, while a search engine is a website that helps you find them</label></div>
+<div class="squiz-option"><input id="sq1d" name="sq1" type="radio" value="3"/><label for="sq1d">D. A browser ranks pages and a search engine displays them</label></div>
 </div>
 <div class="squiz-item" data-correct="0">
-<div class="squiz-q"><span class="qnum">4.</span>What is a search engine's index, as described in the article?</div>
-<div class="squiz-option"><input id="sq4a" name="sq4" type="radio" value="0"/><label for="sq4a">A. A massive, constantly updated lookup table connecting words to the pages they appear on</label></div>
-<div class="squiz-option"><input id="sq4b" name="sq4" type="radio" value="1"/><label for="sq4b">B. A single copy of the entire internet</label></div>
-<div class="squiz-option"><input id="sq4c" name="sq4" type="radio" value="2"/><label for="sq4c">C. A type of web browser</label></div>
-<div class="squiz-option"><input id="sq4d" name="sq4" type="radio" value="3"/><label for="sq4d">D. A ranking signal used only for mobile pages</label></div>
-</div>
-<div class="squiz-item" data-correct="2">
-<div class="squiz-q"><span class="qnum">5.</span>Why is a search fast, according to the article?</div>
-<div class="squiz-option"><input id="sq5a" name="sq5" type="radio" value="0"/><label for="sq5a">A. Because the internet has no other traffic</label></div>
-<div class="squiz-option"><input id="sq5b" name="sq5" type="radio" value="1"/><label for="sq5b">B. Because it scans the entire web at the moment of the search</label></div>
-<div class="squiz-option"><input id="sq5c" name="sq5" type="radio" value="2"/><label for="sq5c">C. Because crawling and indexing already happened well in advance</label></div>
-<div class="squiz-option"><input id="sq5d" name="sq5" type="radio" value="3"/><label for="sq5d">D. Because only one page exists per topic</label></div>
-</div>
-<div class="squiz-item" data-correct="1">
-<div class="squiz-q"><span class="qnum">6.</span>What is ranking, as defined in the article?</div>
-<div class="squiz-option"><input id="sq6a" name="sq6" type="radio" value="0"/><label for="sq6a">A. Deleting pages that are out of date</label></div>
-<div class="squiz-option"><input id="sq6b" name="sq6" type="radio" value="1"/><label for="sq6b">B. Deciding what order matching pages are shown in, based on multiple combined signals</label></div>
-<div class="squiz-option"><input id="sq6c" name="sq6" type="radio" value="2"/><label for="sq6c">C. Counting how many browsers a page works on</label></div>
-<div class="squiz-option"><input id="sq6d" name="sq6" type="radio" value="3"/><label for="sq6d">D. A step that happens before crawling</label></div>
+<div class="squiz-q"><span class="qnum">2.</span>What are crawlers?</div>
+<div class="squiz-option"><input id="sq2a" name="sq2" type="radio" value="0"/><label for="sq2a">A. Automated programs that follow links to discover pages</label></div>
+<div class="squiz-option"><input id="sq2b" name="sq2" type="radio" value="1"/><label for="sq2b">B. People who check web pages by hand</label></div>
+<div class="squiz-option"><input id="sq2c" name="sq2" type="radio" value="2"/><label for="sq2c">C. Viruses that slow down browsers</label></div>
+<div class="squiz-option"><input id="sq2d" name="sq2" type="radio" value="3"/><label for="sq2d">D. Cables that connect data centres</label></div>
 </div>
 <div class="squiz-item" data-correct="3">
-<div class="squiz-q"><span class="qnum">7.</span>Which of these is given as a ranking signal?</div>
-<div class="squiz-option"><input id="sq7a" name="sq7" type="radio" value="0"/><label for="sq7a">A. The number of images on a page only</label></div>
-<div class="squiz-option"><input id="sq7b" name="sq7" type="radio" value="1"/><label for="sq7b">B. The colour scheme of the page</label></div>
-<div class="squiz-option"><input id="sq7c" name="sq7" type="radio" value="2"/><label for="sq7c">C. The exact file size of the page</label></div>
-<div class="squiz-option"><input id="sq7d" name="sq7" type="radio" value="3"/><label for="sq7d">D. How many other reputable pages link to it</label></div>
-</div>
-<div class="squiz-item" data-correct="0">
-<div class="squiz-q"><span class="qnum">8.</span>What is SEO, according to the article?</div>
-<div class="squiz-option"><input id="sq8a" name="sq8" type="radio" value="0"/><label for="sq8a">A. The practice of adjusting a website to rank higher for certain searches</label></div>
-<div class="squiz-option"><input id="sq8b" name="sq8" type="radio" value="1"/><label for="sq8b">B. A type of web browser</label></div>
-<div class="squiz-option"><input id="sq8c" name="sq8" type="radio" value="2"/><label for="sq8c">C. A method for crawling pages faster</label></div>
-<div class="squiz-option"><input id="sq8d" name="sq8" type="radio" value="3"/><label for="sq8d">D. A form of malware</label></div>
-</div>
-<div class="squiz-item" data-correct="2">
-<div class="squiz-q"><span class="qnum">9.</span>Why might two people searching the exact same words see different results?</div>
-<div class="squiz-option"><input id="sq9a" name="sq9" type="radio" value="0"/><label for="sq9a">A. Search engines only allow one result per query</label></div>
-<div class="squiz-option"><input id="sq9b" name="sq9" type="radio" value="1"/><label for="sq9b">B. The internet changes every second for every user</label></div>
-<div class="squiz-option"><input id="sq9c" name="sq9" type="radio" value="2"/><label for="sq9c">C. Results can be personalised using signals like location and search history</label></div>
-<div class="squiz-option"><input id="sq9d" name="sq9" type="radio" value="3"/><label for="sq9d">D. Different browsers cannot access the same search engine</label></div>
+<div class="squiz-q"><span class="qnum">3.</span>Why can a search engine return results so quickly?</div>
+<div class="squiz-option"><input id="sq3a" name="sq3" type="radio" value="0"/><label for="sq3a">A. It scans the whole internet when you press search</label></div>
+<div class="squiz-option"><input id="sq3b" name="sq3" type="radio" value="1"/><label for="sq3b">B. It only stores very short pages</label></div>
+<div class="squiz-option"><input id="sq3c" name="sq3" type="radio" value="2"/><label for="sq3c">C. It asks other users for the answer</label></div>
+<div class="squiz-option"><input id="sq3d" name="sq3" type="radio" value="3"/><label for="sq3d">D. Crawling and indexing were done in advance, so it just looks things up</label></div>
 </div>
 <div class="squiz-item" data-correct="1">
-<div class="squiz-q"><span class="qnum">10.</span>What is a browser's core job, according to the article?</div>
-<div class="squiz-option"><input id="sq10a" name="sq10" type="radio" value="0"/><label for="sq10a">A. Crawling and indexing the entire web</label></div>
-<div class="squiz-option"><input id="sq10b" name="sq10" type="radio" value="1"/><label for="sq10b">B. Requesting a page's underlying code from a server and rendering it for viewing</label></div>
-<div class="squiz-option"><input id="sq10c" name="sq10" type="radio" value="2"/><label for="sq10c">C. Ranking pages by relevance</label></div>
-<div class="squiz-option"><input id="sq10d" name="sq10" type="radio" value="3"/><label for="sq10d">D. Storing every website's data permanently</label></div>
+<div class="squiz-q"><span class="qnum">4.</span>In an inverted index, "solar → pages 1, 2" means:</div>
+<div class="squiz-option"><input id="sq4a" name="sq4" type="radio" value="0"/><label for="sq4a">A. The word solar was searched twice</label></div>
+<div class="squiz-option"><input id="sq4b" name="sq4" type="radio" value="1"/><label for="sq4b">B. The word solar appears on pages 1 and 2</label></div>
+<div class="squiz-option"><input id="sq4c" name="sq4" type="radio" value="2"/><label for="sq4c">C. Pages 1 and 2 are the best pages on the web</label></div>
+<div class="squiz-option"><input id="sq4d" name="sq4" type="radio" value="3"/><label for="sq4d">D. Page 1 links to page 2</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">5.</span>In Worked Example 3, why does page C score 0.75?</div>
+<div class="squiz-option"><input id="sq5a" name="sq5" type="radio" value="0"/><label for="sq5a">A. It is the newest page</label></div>
+<div class="squiz-option"><input id="sq5b" name="sq5" type="radio" value="1"/><label for="sq5b">B. It has the longest address</label></div>
+<div class="squiz-option"><input id="sq5c" name="sq5" type="radio" value="2"/><label for="sq5c">C. Three pages link to it and each passes on 0.25</label></div>
+<div class="squiz-option"><input id="sq5d" name="sq5" type="radio" value="3"/><label for="sq5d">D. It links to every other page</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">6.</span>Which of these is NOT a common ranking signal?</div>
+<div class="squiz-option"><input id="sq6a" name="sq6" type="radio" value="0"/><label for="sq6a">A. How relevant the page is to your words</label></div>
+<div class="squiz-option"><input id="sq6b" name="sq6" type="radio" value="1"/><label for="sq6b">B. The colour of the device you are using</label></div>
+<div class="squiz-option"><input id="sq6c" name="sq6" type="radio" value="2"/><label for="sq6c">C. Links from trusted pages</label></div>
+<div class="squiz-option"><input id="sq6d" name="sq6" type="radio" value="3"/><label for="sq6d">D. Whether the page loads well on a phone</label></div>
+</div>
+<div class="squiz-item" data-correct="3">
+<div class="squiz-q"><span class="qnum">7.</span>What does DNS do when you open a page?</div>
+<div class="squiz-option"><input id="sq7a" name="sq7" type="radio" value="0"/><label for="sq7a">A. Encrypts the page</label></div>
+<div class="squiz-option"><input id="sq7b" name="sq7" type="radio" value="1"/><label for="sq7b">B. Draws the page on screen</label></div>
+<div class="squiz-option"><input id="sq7c" name="sq7" type="radio" value="2"/><label for="sq7c">C. Deletes your cookies</label></div>
+<div class="squiz-option"><input id="sq7d" name="sq7" type="radio" value="3"/><label for="sq7d">D. Turns a domain name into an IP address</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">8.</span>What does the padlock icon (HTTPS) tell you?</div>
+<div class="squiz-option"><input id="sq8a" name="sq8" type="radio" value="0"/><label for="sq8a">A. The website is guaranteed to be honest</label></div>
+<div class="squiz-option"><input id="sq8b" name="sq8" type="radio" value="1"/><label for="sq8b">B. The connection between you and the site is encrypted</label></div>
+<div class="squiz-option"><input id="sq8c" name="sq8" type="radio" value="2"/><label for="sq8c">C. The page has been checked by the government</label></div>
+<div class="squiz-option"><input id="sq8d" name="sq8" type="radio" value="3"/><label for="sq8d">D. You are completely anonymous</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">9.</span>What does a private (incognito) window mainly do?</div>
+<div class="squiz-option"><input id="sq9a" name="sq9" type="radio" value="0"/><label for="sq9a">A. Hides your visit from the websites you open</label></div>
+<div class="squiz-option"><input id="sq9b" name="sq9" type="radio" value="1"/><label for="sq9b">B. Hides your visit from your internet provider</label></div>
+<div class="squiz-option"><input id="sq9c" name="sq9" type="radio" value="2"/><label for="sq9c">C. Stops your own device from saving your history and cookies afterwards</label></div>
+<div class="squiz-option"><input id="sq9d" name="sq9" type="radio" value="3"/><label for="sq9d">D. Makes the internet faster</label></div>
+</div>
+<div class="squiz-item" data-correct="3">
+<div class="squiz-q"><span class="qnum">10.</span>You find a surprising claim on an unfamiliar site. What is a good first step?</div>
+<div class="squiz-option"><input id="sq10a" name="sq10" type="radio" value="0"/><label for="sq10a">A. Share it quickly in case it is true</label></div>
+<div class="squiz-option"><input id="sq10b" name="sq10" type="radio" value="1"/><label for="sq10b">B. Trust it because it ranked high</label></div>
+<div class="squiz-option"><input id="sq10c" name="sq10" type="radio" value="2"/><label for="sq10c">C. Check it only on the same site</label></div>
+<div class="squiz-option"><input id="sq10d" name="sq10" type="radio" value="3"/><label for="sq10d">D. Open new tabs and see what other trusted sources say about it</label></div>
 </div>
 <button class="squiz-submit-btn" disabled="" id="squizSubmitBtn" onclick="submitQuiz()" type="button">Answer all questions to submit</button>
 </form>
 </div>
-<div class="article-footer-nav"><a href="article-viewer.html#operating-systems.html">← Previous: Operating Systems: The Software Behind Every Device</a><a href="index.html#gateway">Gateway</a></div>
+<div class="article-footer-nav"><a href="operating-systems.html">← Previous: Operating Systems: The Software Behind Every Device</a><a href="index.html#gateway">Gateway</a></div>
 </div>
 <script>
   (function() {
@@ -1629,23 +2014,21 @@ footer.footer {
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',setup); else setup();
 })();
 </script>
-<footer class="edusambam-unified-footer" aria-label="EDUSAMBAM site footer">
+<footer aria-label="EDUSAMBAM site footer" class="edusambam-unified-footer">
 <div class="footer-top">
 <div class="footer-brand">
 <div class="edusambam-footer-brand-row">
-<a class="edusambam-footer-logo-link" href="index.html" aria-label="EDUSAMBAM home">
+<a aria-label="EDUSAMBAM home" class="edusambam-footer-logo-link" href="index.html">
 <img alt="EDUSAMBAM" class="edusambam-brand-mark edusambam-footer-logo" src="logo-icon-full-white.png" style="width:auto;height:64px;max-width:240px;object-fit:contain;background:none;border-radius:0;"/>
 </a>
 </div>
 <p class="edusambam-footer-statement">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</p>
-<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a></div>
+<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a><a aria-label="EDUSAMBAM on YouTube" href="https://youtube.com/@edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></div>
 </div>
-<div class="footer-col"><h4>Learning</h4><ul><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li></ul></div>
+<div class="footer-col"><h4>Learning Areas</h4><ul><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ Tests</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li></ul></div>
 <div class="footer-col"><h4>Practice &amp; Assessment</h4><ul>
 <li><a href="index.html#interactive-activities">Interactive Activities</a></li>
 <li><a href="assessment-arena.html">ASSESSMENT ARENA</a></li>
-<li><a href="assessment-arena.html">What Is Assessment?</a></li>
-<li><a href="index.html#about">Learn Your Way</a></li>
 <li><a href="index.html#resources">Resources &amp; Downloads</a></li>
 </ul></div>
 <div class="footer-col"><h4>About EDUSAMBAM</h4><ul>
@@ -1655,6 +2038,7 @@ footer.footer {
 <li><a href="contact.html">Contact Us</a></li>
 <li><a href="mailto:feedback.edusambam@gmail.com?subject=EDUSAMBAM%20Feedback">Give Feedback</a></li>
 <li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+<li><a href="about.html">About EDUSAMBAM</a></li>
 <li><a href="privacy-policy.html">Privacy Policy</a></li>
 </ul></div>
 </div>

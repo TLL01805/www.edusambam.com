@@ -12,9 +12,9 @@ gtag('config', 'G-Y35DW0V4HQ');
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>What Is Coding? Programming Languages Explained, From Basics to Advanced — EDUSAMBAM</title>
+<title>What Is Coding? Basics, Algorithms and Debugging — EDUSAMBAM</title>
 <link href="https://edusambam.com/what-is-coding.html" rel="canonical"/>
-<meta content="Every app, game and website is built from written instructions. Learn what coding is, from your first line of code to real dev ideas." name="description"/>
+<meta content="Learn what coding is: Python basics, flowcharts, searching, debugging and good habits, with tested code, worked examples and a quiz." name="description"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
@@ -984,6 +984,56 @@ footer.footer {
 }
 </style><style id="edusambam-footer-social-css">.edusambam-footer-social{margin-top:14px}.edusambam-footer-social a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);color:rgba(255,255,255,.85);transition:background .15s,color .15s}.edusambam-footer-social a:hover{background:rgba(255,255,255,.22);color:#fff}</style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2230995786427221"
      crossorigin="anonymous"></script>
+<style id="cd-extra">
+  .diagram-box {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin: 1.5rem 0 2rem;
+    text-align: center;
+  }
+  .diagram-box svg { max-width: 100%; height: auto; }
+  .diagram-caption {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 0.8rem;
+    font-style: italic;
+  }
+@media (max-width: 600px) { .diagram-box { padding: 0.8rem; } }
+
+  .article-wrap ol { margin: 0 0 1.2rem 1.4rem; color: var(--slate); }
+  .article-wrap a { color: var(--red); }
+  .article-wrap code { background: #f5edd6; padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.92em; word-break: break-word; }
+  .code-block pre .cm { color: #8aa0b8; font-style: italic; }
+  .qa-list details { background: var(--cream); border: 1px solid var(--border); border-left: 4px solid var(--gold); border-radius: var(--radius); padding: 0.8rem 1.1rem; margin: 0 0 0.7rem; }
+  .qa-list summary { cursor: pointer; font-weight: 600; color: var(--navy); }
+  .qa-list details p { margin: 0.7rem 0 0; }
+  @media (prefers-reduced-motion: no-preference) {
+    .cc-anim .pulseArr { animation: cdPulse 2.4s ease-in-out infinite; }
+    .cc-anim .loopArr { animation: cdDash 1.6s linear infinite; }
+    .cc-anim .gb { transform-box: fill-box; transform-origin: left center; animation: cdGrow 1.4s ease-out both; }
+    .cc-anim .dn { animation: cdNode 5s ease-in-out infinite; }
+    .cc-anim .dn.d2 { animation-delay: 1s; } .cc-anim .dn.d3 { animation-delay: 2s; } .cc-anim .dn.d4 { animation-delay: 3s; } .cc-anim .dn.d5 { animation-delay: 4s; }
+  }
+  @keyframes cdPulse { 0%,100% { opacity: .35; } 50% { opacity: 1; } }
+  @keyframes cdDash { to { stroke-dashoffset: -24; } }
+  @keyframes cdGrow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @keyframes cdNode { 0%,100% { opacity: .6; } 10%,25% { opacity: 1; } 40% { opacity: .6; } }
+</style>
+<meta name="robots" content="index,follow,max-image-preview:large"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="EDUSAMBAM"/>
+<meta property="og:title" content="What Is Coding? Basics, Algorithms and Debugging"/>
+<meta property="og:description" content="Learn what coding is: Python basics, flowcharts, searching, debugging and good habits, with tested code, worked examples and a quiz."/>
+<meta property="og:url" content="https://edusambam.com/what-is-coding.html"/>
+<meta property="og:image" content="https://edusambam.com/logo-icon-full.png"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="What Is Coding? Basics, Algorithms and Debugging"/>
+<meta name="twitter:description" content="Learn what coding is: Python basics, flowcharts, searching, debugging and good habits, with tested code, worked examples and a quiz."/>
+<meta property="article:modified_time" content="2026-10"/>
+<meta property="article:section" content="Computer &amp; AI"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "What Is Coding? Programming Languages Explained, From Basics to Advanced", "description": "Learn what coding is: Python basics, flowcharts, searching, debugging and good habits, with tested code, worked examples and a quiz.", "inLanguage": "en", "mainEntityOfPage": "https://edusambam.com/what-is-coding.html", "url": "https://edusambam.com/what-is-coding.html", "dateModified": "2026-10", "articleSection": "Computer & AI", "author": {"@type": "Organization", "name": "EDUSAMBAM Editorial Team", "url": "https://edusambam.com/"}, "publisher": {"@type": "Organization", "name": "EDUSAMBAM", "url": "https://edusambam.com/", "logo": {"@type": "ImageObject", "url": "https://edusambam.com/logo-icon-full.png"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Gateway", "item": "https://edusambam.com/index.html#gateway"}, {"@type": "ListItem", "position": 2, "name": "Computer & AI", "item": "https://edusambam.com/index.html#subject-computer"}, {"@type": "ListItem", "position": 3, "name": "What Is Coding? Programming Languages Explained, From Basics to Advanced", "item": "https://edusambam.com/what-is-coding.html"}]}]}</script>
 </head>
 <body id="top">
 <!-- TOP BAR -->
@@ -1002,13 +1052,12 @@ footer.footer {
 <span class="edusambam-brand-subtitle">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</span>
 </span>
 </a>
-<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li></ul>
+<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ Tests</a></li><li><a href="index.html#resources">Resources</a></li></ul>
 <button aria-label="Search" class="edusambam-search-btn" title="Search" type="button">⌕</button>
 <button aria-expanded="false" aria-label="Open menu" class="edusambam-menu-btn" title="Menu" type="button">☰</button>
 </div>
-</nav>
-<div aria-label="Mobile navigation" class="edusambam-mobile-menu">
-<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="index.html#subject-assessment">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="index.html#about-edusambam">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
+</nav><div aria-label="Mobile navigation" class="edusambam-mobile-menu">
+<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ Tests</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="index.html#subject-assessment">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="index.html#about-edusambam">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
 </div>
 <div aria-label="Site search" class="edusambam-search-panel">
 <div class="edusambam-search-wrap">
@@ -1021,156 +1070,558 @@ footer.footer {
 <div class="breadcrumb"><a href="index.html#gateway">Gateway</a>  /  <a href="index.html#subject-computer">Computer &amp; AI</a>  /  What Is Coding?</div>
 <div class="article-hero-tag">Computer &amp; AI · Programming</div>
 <h1>What Is Coding? Programming Languages Explained, From Basics to Advanced</h1>
-<p class="sub">Every app, game and website is built from written instructions a human typed out, line by line. This guide takes you from your very first line of code to the ideas real developers use every day.</p>
+<p class="sub">Every app, game and website is built from precise written instructions. This guide takes you from your first line of Python to tracing code, flowcharts, searching, debugging and good habits, with tested code and worked examples.</p>
 <div class="article-hero-meta">
 <span>EDUSAMBAM Editorial Team</span>
 <span>|</span>
-<span>15 min read</span>
+<span>20 min read</span>
 <span>|</span>
 <span>Programming</span>
-</div>
+<span>|</span><span>Last updated: October 2026</span></div>
 </div><div aria-label="EDUSAMBAM article reader" class="edusambam-reader"><strong>🔊 LISTEN TO THIS ARTICLE</strong><div class="reader-slogan">SAVE YOUR EYES • IMPROVE YOUR LISTENING</div><div class="reader-help">Listen to the article instead of relying only on continuous screen reading.</div><div class="reader-controls"><button data-reader="play" type="button">▶ Play</button><button data-reader="pause" type="button">⏸ Pause</button><button data-reader="resume" type="button">▶ Resume</button><button data-reader="stop" type="button">■ Stop</button><select aria-label="Reading speed"><option value="1">1×</option><option value="0.8">0.8×</option><option value="1.2">1.2×</option></select></div><div aria-hidden="true" class="reader-progress"><span></span></div><small class="reader-status">Ready to read the article.</small></div>
 <!-- ARTICLE BODY -->
 <div class="article-wrap">
-<p class="lead">Coding is the practice of writing precise, step-by-step instructions that a computer can carry out. That's the whole idea — everything else, from a simple calculator app to a self-driving car's software, is that same idea scaled up. This guide starts at the very beginning and builds all the way to the concepts professional developers use daily, with real, working code along the way.</p>
+<p class="lead">Coding is the practice of writing precise, step-by-step instructions that a computer can carry out. That is the whole idea. Everything else, from a calculator app to the software in a self-driving car, is the same idea scaled up. This guide starts at the very beginning and builds towards the concepts professional developers use every day. The code examples are in Python, and every one of them was run to check the output shown. By the end you should be able to read simple programs, trace what they do by hand, find bugs, and know what to practise next.</p>
+
+<p><strong>Helpful background:</strong> <a href="how-computers-work.html">How Computers Work</a> explains the processor and binary that your code is eventually turned into.</p>
+
 <h2><span class="num">1.</span>What Coding Actually Is</h2>
-<p>A computer's CPU only understands binary instructions — sequences of 0s and 1s. Writing directly in binary would be painfully slow for a human, so people write in <strong>programming languages</strong> instead: structured, readable text that follows strict rules, which a separate program then translates into the binary the CPU can execute. "Coding," "programming," and "writing software" all mean essentially the same thing: telling a computer exactly what to do, in a language it can be converted into and understand precisely.</p>
-<p>The key word is <em>precisely</em>. Human languages are full of assumed context and flexible meaning ("put the kettle on" is understood despite being imprecise). Code has none of that flexibility — a computer will do exactly what it is told, including your mistakes, which is why precision and logical thinking matter more in coding than raw memorisation.</p>
+<p>A computer's processor only understands binary instructions, patterns of 0s and 1s. Writing directly in binary would be painfully slow for people, so we write in <strong>programming languages</strong>: structured, readable text that follows strict rules, which another program then translates into binary. "Coding", "programming" and "writing software" all mean essentially the same thing: telling a computer exactly what to do in a form it can follow.</p>
+<p>The key word is <em>precisely</em>. Human language is full of shared context ("put the kettle on" is understood even though it is vague). A computer has none of that. It does exactly what it is told, including your mistakes, which is why logical thinking matters more in coding than memorising.</p>
+<p>It helps to separate three words:</p>
+<ul>
+<li>An <strong>algorithm</strong> is a step-by-step method for solving a problem, which you can describe in plain words.</li>
+<li><strong>Source code</strong> is an algorithm written in a particular programming language.</li>
+<li>A <strong>program</strong> is the complete set of code that does a job, ready to run.</li>
+</ul>
+
 <div class="example-box">
 <div class="ex-label">Key Idea</div>
-<p>If you've ever followed a recipe exactly, in order, with no steps skipped — crack the egg, then whisk, then add sugar — you've already done the core mental work of coding. A program is a recipe for a computer: a precise, ordered list of steps, plus decisions ("if the mixture is too thick, add more milk") and repetition ("stir for 2 minutes").</p>
+<p>If you have ever followed a recipe exactly, in order, you have done the core mental work of coding. A program is a recipe for a computer: an ordered list of steps, plus <strong>decisions</strong> ("if the mixture is too thick, add milk") and <strong>repetition</strong> ("stir for two minutes"). Every program you will ever read is built from these three things: sequence, decisions and repetition.</p>
 </div>
-<h2><span class="num">2.</span>From Code to Machine Instructions: Compilers and Interpreters</h2>
-<p>Code written by a human is called <strong>source code</strong>. It has to be converted into binary machine instructions before a CPU can run it, and there are two main ways this happens:</p>
+
+<div class="diagram-box cc-anim">
+<svg viewBox="0 0 520 360" role="img" aria-labelledby="cdPipeTitle cdPipeDesc">
+<title id="cdPipeTitle">From an idea to a running program</title>
+<desc id="cdPipeDesc">Five steps from top to bottom: define the problem, plan an algorithm in plain steps, write source code in a language such as Python, translate it with a compiler or interpreter, and run the machine code on the processor.</desc>
+<rect x="0" y="0" width="520" height="360" rx="14" fill="#faf8f4"/>
+<defs><marker id="cdArr" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 Z" fill="#06244a"/></marker></defs>
+<g font-family="Arial, sans-serif">
+<text x="260" y="26" text-anchor="middle" fill="#06244a" font-size="17" font-weight="700">From idea to running program</text>
+<g stroke="#06244a" stroke-width="3" marker-end="url(#cdArr)" class="pulseArr"><line x1="260" y1="82" x2="260" y2="96"/><line x1="260" y1="142" x2="260" y2="156"/><line x1="260" y1="202" x2="260" y2="216"/><line x1="260" y1="262" x2="260" y2="276"/></g>
+<rect x="60" y="40" width="400" height="42" rx="10" fill="#f5edd6" stroke="#b8963e" stroke-width="2"/>
+<circle cx="86" cy="61" r="13" fill="#d4a017"/><text x="86" y="66" text-anchor="middle" fill="#06244a" font-size="14" font-weight="700">1</text>
+<text x="110" y="58" fill="#06244a" font-size="14" font-weight="700">The problem</text><text x="110" y="74" fill="#4a4a4a" font-size="12">What must the program do?</text>
+<rect x="60" y="100" width="400" height="42" rx="10" fill="#f5edd6" stroke="#b8963e" stroke-width="2"/>
+<circle cx="86" cy="121" r="13" fill="#d4a017"/><text x="86" y="126" text-anchor="middle" fill="#06244a" font-size="14" font-weight="700">2</text>
+<text x="110" y="118" fill="#06244a" font-size="14" font-weight="700">The algorithm</text><text x="110" y="134" fill="#4a4a4a" font-size="12">The steps, in plain words or a flowchart</text>
+<rect x="60" y="160" width="400" height="42" rx="10" fill="#0b4ea2"/>
+<circle cx="86" cy="181" r="13" fill="#d4a017"/><text x="86" y="186" text-anchor="middle" fill="#06244a" font-size="14" font-weight="700">3</text>
+<text x="110" y="178" fill="#fff" font-size="14" font-weight="700">Source code</text><text x="110" y="194" fill="#cfdbec" font-size="12">The steps written in Python, JavaScript, etc.</text>
+<rect x="60" y="220" width="400" height="42" rx="10" fill="#06244a"/>
+<circle cx="86" cy="241" r="13" fill="#d4a017"/><text x="86" y="246" text-anchor="middle" fill="#06244a" font-size="14" font-weight="700">4</text>
+<text x="110" y="238" fill="#fff" font-size="14" font-weight="700">Translator</text><text x="110" y="254" fill="#cfdbec" font-size="12">A compiler or interpreter converts it</text>
+<rect x="60" y="280" width="400" height="42" rx="10" fill="#8b0000"/>
+<circle cx="86" cy="301" r="13" fill="#d4a017"/><text x="86" y="306" text-anchor="middle" fill="#06244a" font-size="14" font-weight="700">5</text>
+<text x="110" y="298" fill="#fff" font-size="14" font-weight="700">Machine code runs on the CPU</text><text x="110" y="314" fill="#fff" font-size="12">Binary instructions, executed by the processor</text>
+<text x="260" y="346" text-anchor="middle" fill="#4a4a4a" font-size="12">Most of a programmer's time goes on steps 2 and 3, plus fixing mistakes.</text>
+</g>
+</svg>
+<div class="diagram-caption">Figure 1. The path from an idea to a running program. The arrows pulse unless your device is set to reduce motion.</div>
+</div>
+
+<h2><span class="num">2.</span>Compilers and Interpreters</h2>
+<p>Source code has to be converted into machine instructions before the processor can run it. There are two main approaches:</p>
 <ul>
-<li><strong>Compiled languages</strong> (like C++ or Rust) are translated <em>entirely</em> into machine code by a program called a compiler, before the program ever runs. This produces a fast, standalone file, but the whole program must be re-compiled after every change.</li>
-<li><strong>Interpreted languages</strong> (like Python or JavaScript) are translated <em>line by line, as the program runs</em>, by a program called an interpreter. This makes testing and changing code faster, at some cost to raw execution speed.</li>
+<li><strong>Compiled languages</strong> (such as C, C++ and Rust) are translated entirely into machine code by a program called a <strong>compiler</strong> before the program runs. The result is a fast, standalone file, but the program must be compiled again after each change.</li>
+<li><strong>Interpreted languages</strong> (such as Python and JavaScript) are read and carried out by a program called an <strong>interpreter</strong> as the program runs. Testing a change is quick, at some cost to raw speed.</li>
 </ul>
-<p>Many modern languages, including Python and JavaScript, actually use a mix of both techniques behind the scenes for better performance — but the distinction between "translate everything up front" and "translate as you go" is still the important idea to understand.</p>
-<h2><span class="num">3.</span>The Building Blocks Every Language Shares</h2>
-<p>Programming languages look different on the surface — Python, JavaScript and C++ all have their own style — but almost every one of them is built from the same handful of core ideas. Once you know these, learning a new language mostly becomes learning new vocabulary for concepts you already understand. The examples below use Python, one of the most widely used languages for beginners because of its plain, readable syntax.</p>
-<p><strong>Variables</strong> store a piece of information under a name, so it can be reused later.</p>
+<p>The line between the two has blurred. Many languages first translate code into an intermediate form and then use further tricks to speed it up while it runs. But the useful picture is still "translate everything first" versus "translate as you go".</p>
+
+<h2><span class="num">3.</span>Why There Are So Many Languages</h2>
+<p>No language is best for every job, because each makes different trade-offs between ease, speed, safety and the ecosystem of ready-made tools around it. Here are some well-known ones and what they are commonly used for:</p>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Language</th><th>Commonly used for</th></tr>
+<tr><td><strong>Python</strong></td><td>Learning to code, data analysis, automation, science and AI</td></tr>
+<tr><td><strong>JavaScript</strong></td><td>Making web pages interactive; it also runs on servers</td></tr>
+<tr><td><strong>Java</strong> and <strong>C#</strong></td><td>Large business applications, and (for C#) many games and Windows software</td></tr>
+<tr><td><strong>C</strong> and <strong>C++</strong></td><td>Operating systems, game engines and software where speed matters</td></tr>
+<tr><td><strong>Swift</strong> and <strong>Kotlin</strong></td><td>Apps for Apple devices and Android</td></tr>
+<tr><td><strong>Rust</strong></td><td>Systems software, with a focus on safe memory use</td></tr>
+<tr><td><strong>SQL</strong></td><td>Asking questions of databases</td></tr>
+<tr><td><strong>Scratch</strong></td><td>Learning the ideas by snapping together visual blocks</td></tr>
+</table>
+</div>
+<p>A common confusion: <strong>HTML</strong> and <strong>CSS</strong> are not usually called programming languages. HTML describes the structure of a web page and CSS describes how it looks. They do not contain decisions and repetition in the same way. They are still essential for building websites, and they work alongside languages like JavaScript.</p>
+
+<h2><span class="num">4.</span>The Building Blocks Every Language Shares</h2>
+<p>Languages look different, but nearly all are built from the same handful of ideas. Once you know them, learning a new language mostly means learning new vocabulary. The examples use Python because its syntax is plain and readable.</p>
+
+<p><strong>Variables</strong> store a value under a name so it can be used again. The <code>=</code> sign here means "store this value", not "is equal to".</p>
 <div class="code-block">
 <div class="code-label">Python</div>
 <pre>age = 12
-name = <span class="st">"Amara"</span>
-is_studying = <span class="kw">True</span></pre>
+name = <span class="st">&quot;Amara&quot;</span>
+is_studying = <span class="kw">True</span>
+<span class="fn">print</span>(name, <span class="st">&quot;is&quot;</span>, age, <span class="st">&quot;years old&quot;</span>)</pre>
+<div class="code-output"><div class="out-label">Output</div>Amara is 12 years old</div>
 </div>
-<p><strong>Data types</strong> describe what kind of value a variable holds — this affects what you can do with it.</p>
+
+<p><strong>Data types</strong> describe what kind of value something is, and the type decides what you can do with it.</p>
 <div class="table-wrap">
 <table class="pos-table">
-<tr><th>Data Type</th><th>Example</th><th>Used For</th></tr>
+<tr><th>Data type</th><th>Example</th><th>Used for</th></tr>
 <tr><td>Integer (int)</td><td>12, -5, 1000</td><td>Whole numbers</td></tr>
 <tr><td>Float</td><td>3.14, 0.5</td><td>Decimal numbers</td></tr>
 <tr><td>String (str)</td><td>"hello"</td><td>Text</td></tr>
-<tr><td>Boolean (bool)</td><td>True / False</td><td>Yes/no, on/off decisions</td></tr>
-<tr><td>List / Array</td><td>[1, 2, 3]</td><td>An ordered collection of values</td></tr>
+<tr><td>Boolean (bool)</td><td>True or False</td><td>Yes/no decisions</td></tr>
+<tr><td>List</td><td>[1, 2, 3]</td><td>An ordered collection of values</td></tr>
 </table>
 </div>
-<p><strong>Conditionals</strong> let a program make decisions and behave differently depending on the situation.</p>
+<p>Types matter because the same symbol can behave differently. With two pieces of <em>text</em>, <code>+</code> joins them. With two <em>numbers</em>, it adds them:</p>
 <div class="code-block">
 <div class="code-label">Python</div>
-<pre><span class="kw">if</span> age &gt;= 13:
-    <span class="fn">print</span>(<span class="st">"You can join the teen club"</span>)
-<span class="kw">else</span>:
-    <span class="fn">print</span>(<span class="st">"You're in the junior group"</span>)</pre>
-<div class="code-output"><div class="out-label">Output</div>You're in the junior group</div>
+<pre>a = <span class="st">&quot;5&quot;</span>
+b = <span class="st">&quot;3&quot;</span>
+<span class="fn">print</span>(a + b)
+<span class="fn">print</span>(<span class="fn">int</span>(a) + <span class="fn">int</span>(b))</pre>
+<div class="code-output"><div class="out-label">Output</div>53<br/>8</div>
 </div>
-<p><strong>Loops</strong> repeat a set of instructions without forcing the programmer to write them out over and over.</p>
+
+<p><strong>Conditionals</strong> let a program make decisions. Python uses indentation (the spaces at the start of a line) to show which lines belong to each branch.</p>
 <div class="code-block">
 <div class="code-label">Python</div>
-<pre><span class="kw">for</span> i <span class="kw">in</span> <span class="fn">range</span>(1, 4):
-    <span class="fn">print</span>(<span class="st">"Lap"</span>, i)</pre>
+<pre>score = 72
+<span class="kw">if</span> score &gt;= 80:
+    grade = <span class="st">&quot;A&quot;</span>
+<span class="kw">elif</span> score &gt;= 60:
+    grade = <span class="st">&quot;B&quot;</span>
+<span class="kw">else</span>:
+    grade = <span class="st">&quot;C&quot;</span>
+<span class="fn">print</span>(grade)</pre>
+<div class="code-output"><div class="out-label">Output</div>B</div>
+</div>
+
+<p><strong>Loops</strong> repeat instructions without having to write them out again and again. In Python, <code>range(1, 4)</code> gives the numbers 1, 2 and 3, stopping <em>before</em> 4.</p>
+<div class="code-block">
+<div class="code-label">Python</div>
+<pre><span class="kw">for</span> lap <span class="kw">in</span> <span class="fn">range</span>(1, 4):
+    <span class="fn">print</span>(<span class="st">&quot;Lap&quot;</span>, lap)</pre>
 <div class="code-output"><div class="out-label">Output</div>Lap 1<br/>Lap 2<br/>Lap 3</div>
 </div>
-<p><strong>Functions</strong> package up a set of instructions under one name, so they can be reused without rewriting them each time.</p>
+
+<p><strong>Functions</strong> package up a set of instructions under a name so you can reuse them. A function takes <strong>inputs</strong> (called parameters) and can give back an output with <code>return</code>.</p>
 <div class="code-block">
 <div class="code-label">Python</div>
-<pre><span class="kw">def</span> <span class="fn">greet</span>(name):
-    <span class="kw">return</span> <span class="st">"Hello, "</span> + name + <span class="st">"!"</span>
+<pre><span class="kw">def</span> <span class="fn">celsius_to_fahrenheit</span>(c):
+    <span class="kw">return</span> c * 9 / 5 + 32
 
-<span class="fn">print</span>(greet(<span class="st">"Amara"</span>))</pre>
-<div class="code-output"><div class="out-label">Output</div>Hello, Amara!</div>
+<span class="fn">print</span>(<span class="fn">celsius_to_fahrenheit</span>(100))
+<span class="fn">print</span>(<span class="fn">celsius_to_fahrenheit</span>(37))</pre>
+<div class="code-output"><div class="out-label">Output</div>212.0<br/>98.6</div>
 </div>
-<h2><span class="num">4.</span>Data Structures: Organising Information</h2>
-<p>Real programs rarely deal with just one value at a time — they need to organise many related pieces of data. A <strong>list</strong> (sometimes called an array) holds an ordered collection of items. A <strong>dictionary</strong> (sometimes called an object or a map) stores information as labelled pairs, so each value has a name attached to it rather than just a position.</p>
+
+<div class="example-box">
+<div class="ex-label">Worked Example 1: Tracing a loop by hand</div>
+<p>One of the most useful coding skills is working out what code does <em>without</em> running it. This is called <strong>tracing</strong>. Take this program, which adds the numbers 1 to 5:</p>
+<div class="code-block">
+<div class="code-label">Python</div>
+<pre>total = 0
+<span class="kw">for</span> n <span class="kw">in</span> <span class="fn">range</span>(1, 6):
+    total = total + n
+<span class="fn">print</span>(total)</pre>
+<div class="code-output"><div class="out-label">Output</div>15</div>
+</div>
+<p><strong>Step 1:</strong> Before the loop, <code>total</code> is 0.</p>
+<p><strong>Step 2:</strong> The loop runs once for each value of <code>n</code> from 1 up to 5. Write down both variables after each pass:</p>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Pass</th><th>n</th><th>total (before)</th><th>total (after)</th></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>3</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>6</td></tr>
+<tr><td>4</td><td>4</td><td>6</td><td>10</td></tr>
+<tr><td>5</td><td>5</td><td>10</td><td>15</td></tr>
+</table>
+</div>
+<p><strong>Step 3:</strong> After the loop ends, <code>print(total)</code> shows <strong>15</strong>. It matches the output above, and also 1 + 2 + 3 + 4 + 5 = 15.</p>
+<p><strong>Habit to build:</strong> predict the output first, then run the code. When your prediction is wrong, you have found something to learn.</p>
+</div>
+
+<h2><span class="num">5.</span>Planning With a Flowchart</h2>
+<p>Before writing code it often helps to sketch the steps. A <strong>flowchart</strong> shows a program as boxes and arrows: rounded boxes for start and end, rectangles for actions, parallelograms for input or output, and diamonds for decisions. A loop appears as an arrow that goes back up.</p>
+
+<div class="diagram-box cc-anim">
+<svg viewBox="0 0 520 350" role="img" aria-labelledby="cdFlowTitle cdFlowDesc">
+<title id="cdFlowTitle">Flowchart of a number guessing game</title>
+<desc id="cdFlowDesc">Start, pick a secret number, ask the player for a guess, then a decision: does the guess equal the secret? If yes, say you win and end. If no, say too high or too low and go back to ask for another guess.</desc>
+<rect x="0" y="0" width="520" height="350" rx="14" fill="#faf8f4"/>
+<defs><marker id="cdFArr" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 Z" fill="#06244a"/></marker></defs>
+<g font-family="Arial, sans-serif" text-anchor="middle">
+<g stroke="#06244a" stroke-width="2.5" fill="none" marker-end="url(#cdFArr)">
+<line x1="260" y1="54" x2="260" y2="72"/><line x1="260" y1="108" x2="260" y2="128"/><line x1="260" y1="168" x2="260" y2="196"/>
+<line x1="340" y1="236" x2="398" y2="236"/><line x1="450" y1="256" x2="450" y2="292"/>
+<line x1="260" y1="274" x2="260" y2="294"/>
+</g>
+<path class="loopArr" d="M170 312 H100 V150 H166" stroke="#8b0000" stroke-width="2.5" fill="none" stroke-dasharray="7 5" marker-end="url(#cdFArr)"/>
+<rect x="200" y="20" width="120" height="34" rx="17" fill="#06244a"/><text x="260" y="42" fill="#fff" font-size="14" font-weight="700">Start</text>
+<rect x="170" y="72" width="180" height="36" rx="6" fill="#f5edd6" stroke="#b8963e" stroke-width="2"/><text x="260" y="95" fill="#06244a" font-size="13" font-weight="700">Pick a secret number</text>
+<polygon points="190,128 350,128 330,168 170,168" fill="#dfe7f3" stroke="#0b4ea2" stroke-width="2"/><text x="260" y="153" fill="#06244a" font-size="13" font-weight="700">Ask player for a guess</text>
+<polygon points="260,196 340,236 260,276 180,236" fill="#fff" stroke="#06244a" stroke-width="2.5"/><text x="260" y="232" fill="#06244a" font-size="12" font-weight="700">Guess equals</text><text x="260" y="248" fill="#06244a" font-size="12" font-weight="700">the secret?</text>
+<rect x="170" y="294" width="180" height="36" rx="6" fill="#f5edd6" stroke="#b8963e" stroke-width="2"/><text x="260" y="317" fill="#06244a" font-size="13" font-weight="700">Say too high or too low</text>
+<rect x="398" y="218" width="104" height="38" rx="6" fill="#f5edd6" stroke="#b8963e" stroke-width="2"/><text x="450" y="242" fill="#06244a" font-size="13" font-weight="700">Say "You win!"</text>
+<rect x="398" y="292" width="104" height="34" rx="17" fill="#06244a"/><text x="450" y="314" fill="#fff" font-size="14" font-weight="700">End</text>
+<text x="370" y="228" fill="#06244a" font-size="12" font-weight="700">Yes</text><text x="274" y="289" fill="#06244a" font-size="12" font-weight="700" text-anchor="start">No</text>
+<text x="84" y="236" fill="#8b0000" font-size="12" font-weight="700" text-anchor="end" transform="rotate(0)">loop</text>
+</g>
+</svg>
+<div class="diagram-caption">Figure 2. The decision (diamond) and the loop (red arrow) are the two ideas that make programs more than a list of steps. The red dashes move unless your device is set to reduce motion.</div>
+</div>
+
+<p>The same plan written as <strong>pseudocode</strong>, which is plain-English steps that are not tied to any language:</p>
+<div class="example-box">
+<p><code>pick a secret number</code><br>
+<code>repeat:</code><br>
+<code>&nbsp;&nbsp;ask for a guess</code><br>
+<code>&nbsp;&nbsp;if guess equals secret: say "You win!" and stop</code><br>
+<code>&nbsp;&nbsp;otherwise: say whether the guess was too high or too low</code></p>
+</div>
+
+<h2><span class="num">6.</span>Data Structures: Organising Information</h2>
+<p>Real programs deal with many related values. A <strong>list</strong> holds an ordered collection. A <strong>dictionary</strong> stores labelled pairs, so each value has a name instead of just a position. Items in a list are numbered from <strong>0</strong>, not 1, so the first item is at position 0.</p>
 <div class="code-block">
 <div class="code-label">Python</div>
 <pre>student = {
-    <span class="st">"name"</span>: <span class="st">"Amara"</span>,
-    <span class="st">"age"</span>: 12,
-    <span class="st">"subjects"</span>: [<span class="st">"Math"</span>, <span class="st">"Science"</span>, <span class="st">"English"</span>]
+    <span class="st">&quot;name&quot;</span>: <span class="st">&quot;Amara&quot;</span>,
+    <span class="st">&quot;age&quot;</span>: 12,
+    <span class="st">&quot;subjects&quot;</span>: [<span class="st">&quot;Math&quot;</span>, <span class="st">&quot;Science&quot;</span>, <span class="st">&quot;English&quot;</span>]
 }
-
-<span class="fn">print</span>(student[<span class="st">"subjects"</span>][0])</pre>
-<div class="code-output"><div class="out-label">Output</div>Math</div>
+<span class="fn">print</span>(student[<span class="st">&quot;subjects&quot;</span>][0])
+<span class="fn">print</span>(<span class="fn">len</span>(student[<span class="st">&quot;subjects&quot;</span>]))</pre>
+<div class="code-output"><div class="out-label">Output</div>Math<br/>3</div>
 </div>
-<p>Choosing the right data structure for a problem is one of the practical skills that separates a beginner's code from a professional's — the wrong choice can make a program needlessly slow or confusing.</p>
-<h2><span class="num">5.</span>Programming Paradigms: Procedural vs. Object-Oriented</h2>
-<p>The examples so far follow a <strong>procedural</strong> style — a straightforward sequence of steps and functions. Many modern languages also support <strong>object-oriented programming (OOP)</strong>, which groups related data and the functions that act on it into a single reusable unit called a <strong>class</strong>. Each specific instance created from a class is called an <strong>object</strong>.</p>
+<p>Choosing the right data structure for the job is a real skill. The wrong choice can make a program slow or hard to follow.</p>
+
+<h2><span class="num">7.</span>Algorithms and Efficiency: Beyond "It Works"</h2>
+<p>Getting a correct answer is the first goal. Professionals also care about <strong>efficiency</strong>: how the time a program needs grows as the amount of data grows. Compare two ways of finding a number in a sorted list:</p>
+<ul>
+<li><strong>Linear search</strong> checks every item from the start until it finds the target.</li>
+<li><strong>Binary search</strong> only works on a <em>sorted</em> list. It looks at the middle item, throws away the half that cannot contain the target, and repeats on the half that remains.</li>
+</ul>
 <div class="code-block">
 <div class="code-label">Python</div>
-<pre><span class="kw">class</span> <span class="fn">Student</span>:
+<pre><span class="kw">def</span> <span class="fn">linear_search</span>(items, target):
+    steps = 0
+    <span class="kw">for</span> index <span class="kw">in</span> <span class="fn">range</span>(<span class="fn">len</span>(items)):
+        steps += 1
+        <span class="kw">if</span> items[index] == target:
+            <span class="kw">return</span> index, steps
+    <span class="kw">return</span> -1, steps
+
+numbers = [3, 8, 12, 17, 23, 29, 35, 41]
+<span class="fn">print</span>(<span class="fn">linear_search</span>(numbers, 29))</pre>
+<div class="code-output"><div class="out-label">Output</div>(5, 6)</div>
+</div>
+<div class="code-block">
+<div class="code-label">Python</div>
+<pre><span class="kw">def</span> <span class="fn">binary_search</span>(items, target):
+    low = 0
+    high = <span class="fn">len</span>(items) - 1
+    steps = 0
+    <span class="kw">while</span> low &lt;= high:
+        steps += 1
+        mid = (low + high) // 2
+        <span class="kw">if</span> items[mid] == target:
+            <span class="kw">return</span> mid, steps
+        <span class="kw">elif</span> items[mid] &lt; target:
+            low = mid + 1
+        <span class="kw">else</span>:
+            high = mid - 1
+    <span class="kw">return</span> -1, steps
+
+numbers = [3, 8, 12, 17, 23, 29, 35, 41]
+<span class="fn">print</span>(<span class="fn">binary_search</span>(numbers, 29))
+<span class="fn">print</span>(<span class="fn">binary_search</span>(numbers, 41))</pre>
+<div class="code-output"><div class="out-label">Output</div>(5, 2)<br/>(7, 4)</div>
+</div>
+<p>The result is a pair: the position found, and how many steps it took. Searching for 29 in a list of 8 numbers took 6 steps with linear search but only 2 with binary search.</p>
+
+<div class="example-box">
+<div class="ex-label">Worked Example 2: Tracing a binary search</div>
+<p>List (positions 0 to 7): <code>[3, 8, 12, 17, 23, 29, 35, 41]</code>. Find <strong>29</strong>.</p>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Step</th><th>low</th><th>high</th><th>mid</th><th>Item at mid</th><th>Decision</th></tr>
+<tr><td>1</td><td>0</td><td>7</td><td>(0+7)//2 = 3</td><td>17</td><td>17 &lt; 29, so look to the right: low = 4</td></tr>
+<tr><td>2</td><td>4</td><td>7</td><td>(4+7)//2 = 5</td><td>29</td><td>Found at position 5</td></tr>
+</table>
+</div>
+<p>Two steps, matching the output <code>(5, 2)</code>. The <code>//</code> operator divides and drops the fraction.</p>
+<p><strong>Searching for 41</strong> (the last item) takes 4 steps, which is the most that a list of 8 items can need, because each step halves what is left: 8 → 4 → 2 → 1.</p>
+</div>
+
+<div class="example-box">
+<div class="ex-label">Worked Example 3: How many comparisons in the worst case?</div>
+<p>Each binary-search step halves the remaining items, so the worst case is about the number of times you can halve <em>n</em> before reaching 1, plus the final check.</p>
+<p><strong>For 1,000,000 items:</strong> 2<sup>20</sup> = 1,048,576, which is more than 1,000,000, so at most <strong>20</strong> comparisons are needed.</p>
+<p><strong>For 1,000,000,000 items:</strong> 2<sup>30</sup> = 1,073,741,824, more than a billion, so at most <strong>30</strong> comparisons.</p>
+<p><strong>Linear search</strong> in the worst case checks every item: 1,000,000 or 1,000,000,000 comparisons.</p>
+<p><strong>Ratio for a billion items:</strong> 1,000,000,000 ÷ 30 ≈ <strong>33 million</strong> times fewer comparisons with binary search.</p>
+<p><strong>The catch:</strong> binary search needs the list sorted first, and sorting takes work too. It pays off when you search the same data many times.</p>
+</div>
+
+<div class="diagram-box cc-anim">
+<svg viewBox="0 0 520 340" role="img" aria-labelledby="cdGrowTitle cdGrowDesc">
+<title id="cdGrowTitle">Worst-case comparisons: linear search against binary search</title>
+<desc id="cdGrowDesc">A bar chart on a logarithmic scale. For 8 items: linear 8, binary 4. For 1,000 items: linear 1,000, binary 10. For 1 million items: linear 1 million, binary 20. For 1 billion items: linear 1 billion, binary 30.</desc>
+<rect x="0" y="0" width="520" height="340" rx="14" fill="#faf8f4"/>
+<g font-family="Arial, sans-serif">
+<text x="260" y="26" text-anchor="middle" fill="#06244a" font-size="17" font-weight="700">Worst-case comparisons (log scale)</text>
+<g fill="#06244a" font-size="13" font-weight="700" text-anchor="end">
+<text x="146" y="66">8 items</text><text x="146" y="116">1,000 items</text><text x="146" y="166">1 million items</text><text x="146" y="216">1 billion items</text>
+</g>
+<g>
+<rect class="gb" x="154" y="46" width="27" height="14" rx="3" fill="#8b0000"/><rect class="gb" x="154" y="62" width="18" height="14" rx="3" fill="#0b4ea2"/>
+<rect class="gb" x="154" y="96" width="90" height="14" rx="3" fill="#8b0000"/><rect class="gb" x="154" y="112" width="30" height="14" rx="3" fill="#0b4ea2"/>
+<rect class="gb" x="154" y="146" width="180" height="14" rx="3" fill="#8b0000"/><rect class="gb" x="154" y="162" width="39" height="14" rx="3" fill="#0b4ea2"/>
+<rect class="gb" x="154" y="196" width="270" height="14" rx="3" fill="#8b0000"/><rect class="gb" x="154" y="212" width="44" height="14" rx="3" fill="#0b4ea2"/>
+</g>
+<g fill="#333" font-size="12" font-weight="700">
+<text x="187" y="57">8</text><text x="178" y="73">4</text>
+<text x="250" y="107">1,000</text><text x="190" y="123">10</text>
+<text x="340" y="157">1 million</text><text x="199" y="173">20</text>
+<text x="430" y="207">1 billion</text><text x="204" y="223">30</text>
+</g>
+<rect x="154" y="258" width="14" height="14" rx="3" fill="#8b0000"/><text x="174" y="270" fill="#4a4a4a" font-size="13">Linear search</text>
+<rect x="300" y="258" width="14" height="14" rx="3" fill="#0b4ea2"/><text x="320" y="270" fill="#4a4a4a" font-size="13">Binary search</text>
+<text x="260" y="304" text-anchor="middle" fill="#4a4a4a" font-size="12">Each bar length is on a log scale, so small bars can hide huge differences.</text>
+</g>
+</svg>
+<div class="diagram-caption">Figure 3. The bar for binary search barely grows while the data grows by more than a hundred million times. The bars grow into place when the page loads unless your device is set to reduce motion.</div>
+</div>
+
+<p>Programmers describe this growth with <strong>Big O notation</strong>:</p>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Notation</th><th>Name</th><th>Example</th><th>If the data doubles</th></tr>
+<tr><td>O(1)</td><td>Constant</td><td>Reading an item by its position</td><td>Time stays the same</td></tr>
+<tr><td>O(log n)</td><td>Logarithmic</td><td>Binary search</td><td>One extra step</td></tr>
+<tr><td>O(n)</td><td>Linear</td><td>Linear search</td><td>Time doubles</td></tr>
+<tr><td>O(n log n)</td><td>Linearithmic</td><td>Efficient sorting methods</td><td>A little more than double</td></tr>
+<tr><td>O(n&sup2;)</td><td>Quadratic</td><td>Comparing every pair of items</td><td>Time grows four times</td></tr>
+</table>
+</div>
+<p>For 1,000 items, an O(n&sup2;) method does about 1,000 × 1,000 = 1,000,000 steps, while an O(n log n) method does about 1,000 × 10 = 10,000, roughly a hundred times fewer. Big O ignores constant factors, so it is a guide to how a method scales, not an exact stopwatch.</p>
+
+<h2><span class="num">8.</span>Bugs and Debugging</h2>
+<p>Every programmer, however experienced, writes bugs. A <strong>bug</strong> is a mistake in a program, and <strong>debugging</strong> is finding and fixing it. There are three broad kinds:</p>
+<ul>
+<li><strong>Syntax errors</strong> break the language's grammar, so the program will not start. The translator reports them.</li>
+<li><strong>Runtime errors</strong> happen while the program is running, such as dividing by zero. The program stops with an error message.</li>
+<li><strong>Logic errors</strong> are the hardest. The program runs without complaint but gives the wrong answer.</li>
+</ul>
+<p>A syntax error, caused by a missing closing bracket:</p>
+<div class="code-block">
+<div class="code-label">Python</div>
+<pre><span class="fn">print</span>(<span class="st">&quot;Hello&quot;</span></pre>
+<div class="code-output"><div class="out-label">Error message (recent Python versions)</div>SyntaxError: '(' was never closed</div>
+</div>
+<p>A runtime error, caused by an impossible operation:</p>
+<div class="code-block">
+<div class="code-label">Python</div>
+<pre><span class="fn">print</span>(10 / 0)</pre>
+<div class="code-output"><div class="out-label">Error message</div>Traceback (most recent call last):<br/>&nbsp;&nbsp;File "example.py", line 1, in &lt;module&gt;<br/>ZeroDivisionError: division by zero</div>
+</div>
+<p><strong>Read error messages from the bottom up.</strong> The last line says what went wrong, and the lines above show where. (Your Python version may print extra marker lines.) A logic error gives no message at all, as in this attempt to find the average of three numbers:</p>
+<div class="code-block">
+<div class="code-label">Python</div>
+<pre>a, b, c = 6, 9, 12
+average = a + b + c / 3
+<span class="fn">print</span>(average)
+
+average = (a + b + c) / 3
+<span class="fn">print</span>(average)</pre>
+<div class="code-output"><div class="out-label">Output</div>19.0<br/>9.0</div>
+</div>
+<p>The first answer, 19.0, is wrong. Python does division before addition, so <code>c / 3</code> was calculated first. Brackets fix it, giving the correct 9.0.</p>
+
+<div class="diagram-box cc-anim">
+<svg viewBox="0 0 520 330" role="img" aria-labelledby="cdDebugTitle cdDebugDesc">
+<title id="cdDebugTitle">The debugging loop</title>
+<desc id="cdDebugDesc">Five steps in a loop: reproduce the problem, isolate where it happens, form a hypothesis about the cause, fix it, and test. If the test fails, go round again.</desc>
+<rect x="0" y="0" width="520" height="330" rx="14" fill="#faf8f4"/>
+<defs><marker id="cdDArr" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 Z" fill="#06244a"/></marker></defs>
+<g font-family="Arial, sans-serif" text-anchor="middle">
+<text x="260" y="24" fill="#06244a" font-size="17" font-weight="700">The debugging loop</text>
+<g stroke="#06244a" stroke-width="3" fill="none" marker-end="url(#cdDArr)">
+<line x1="322" y1="72" x2="380" y2="106"/>
+<line x1="418" y1="152" x2="392" y2="226"/>
+<line x1="300" y1="262" x2="226" y2="262"/>
+<line x1="136" y1="236" x2="110" y2="160"/>
+<line x1="132" y1="108" x2="198" y2="72"/>
+</g>
+<g font-size="14" font-weight="700" fill="#fff">
+<rect class="dn d1" x="200" y="46" width="120" height="44" rx="10" fill="#0b4ea2"/><text x="260" y="66">1. Reproduce</text><text x="260" y="82" font-size="11" font-weight="400">make it fail every time</text>
+<rect class="dn d2" x="360" y="106" width="120" height="44" rx="10" fill="#0b4ea2"/><text x="420" y="126">2. Isolate</text><text x="420" y="142" font-size="11" font-weight="400">narrow down where</text>
+<rect class="dn d3" x="300" y="236" width="120" height="44" rx="10" fill="#06244a"/><text x="360" y="256">3. Hypothesise</text><text x="360" y="272" font-size="11" font-weight="400">guess the cause</text>
+<rect class="dn d4" x="100" y="236" width="120" height="44" rx="10" fill="#06244a"/><text x="160" y="256">4. Fix</text><text x="160" y="272" font-size="11" font-weight="400">change one thing</text>
+<rect class="dn d5" x="40" y="106" width="120" height="44" rx="10" fill="#8b0000"/><text x="100" y="126">5. Test</text><text x="100" y="142" font-size="11" font-weight="400">did it work?</text>
+</g>
+<text x="260" y="172" fill="#06244a" font-size="14" font-weight="700">If the test fails,</text>
+<text x="260" y="192" fill="#06244a" font-size="14" font-weight="700">go round again</text>
+</g>
+</svg>
+<div class="diagram-caption">Figure 4. Debugging is a method, not luck. Change one thing at a time, and always test. The highlight moves round the loop unless your device is set to reduce motion.</div>
+</div>
+
+<p>Practical debugging habits:</p>
+<ul>
+<li><strong>Make it fail on purpose.</strong> A bug you cannot repeat is almost impossible to fix.</li>
+<li><strong>Use <code>print</code> to look inside.</strong> Printing a variable at key points shows where reality and your expectation first differ.</li>
+<li><strong>Change one thing at a time</strong>, so you know what fixed it.</li>
+<li><strong>Explain the code aloud</strong>, line by line, to a friend or even a toy. Often you find the mistake while explaining it.</li>
+<li><strong>Take a break.</strong> Fresh eyes spot what tired eyes miss.</li>
+</ul>
+
+<h2><span class="num">9.</span>Writing Code That Others (and You) Can Read</h2>
+<p>Code is read far more often than it is written, and the next reader is usually you in a month's time. Good habits include:</p>
+<ul>
+<li><strong>Meaningful names:</strong> <code>total_price</code> says more than <code>x</code>.</li>
+<li><strong>Small functions</strong> that do one job each, so they are easy to understand and test.</li>
+<li><strong>Comments</strong> that explain <em>why</em> something is done, not just what the code already says.</li>
+<li><strong>Not repeating yourself:</strong> if you copy the same lines three times, make a function.</li>
+<li><strong>Testing:</strong> write small checks that confirm your code gives the right answers.</li>
+</ul>
+<div class="code-block">
+<div class="code-label">Python</div>
+<pre><span class="kw">def</span> <span class="fn">celsius_to_fahrenheit</span>(c):
+    <span class="kw">return</span> c * 9 / 5 + 32
+
+<span class="kw">assert</span> <span class="fn">celsius_to_fahrenheit</span>(0) == 32
+<span class="kw">assert</span> <span class="fn">celsius_to_fahrenheit</span>(100) == 212
+<span class="fn">print</span>(<span class="st">&quot;All tests passed&quot;</span>)</pre>
+<div class="code-output"><div class="out-label">Output</div>All tests passed</div>
+</div>
+<p>An <code>assert</code> statement stops the program with an error if the claim is false. So the program printing "All tests passed" means each claim was true. Writing a test <em>before</em> the code, then making it pass, is a method professionals use called test-driven development.</p>
+
+<h2><span class="num">10.</span>Organising Larger Programs: Objects</h2>
+<p>The examples so far follow a <strong>procedural</strong> style, a sequence of steps and functions. Many languages also support <strong>object-oriented programming (OOP)</strong>, which bundles related data and the functions that use it into a <strong>class</strong>. Each thing created from a class is an <strong>object</strong>.</p>
+<div class="code-block">
+<div class="code-label">Python</div>
+<pre><span class="kw">class</span> Student:
     <span class="kw">def</span> <span class="fn">__init__</span>(self, name, age):
         self.name = name
         self.age = age
 
     <span class="kw">def</span> <span class="fn">introduce</span>(self):
-        <span class="kw">return</span> <span class="st">f"Hi, I'm {self.name}, age {self.age}."</span>
+        <span class="kw">return</span> <span class="st">f&quot;Hi, I&#x27;m {self.name}, age {self.age}.&quot;</span>
 
-amara = Student(<span class="st">"Amara"</span>, 12)
-<span class="fn">print</span>(amara.introduce())</pre>
-<div class="code-output"><div class="out-label">Output</div>Hi, I'm Amara, age 12.</div>
+amara = <span class="fn">Student</span>(<span class="st">&quot;Amara&quot;</span>, 12)
+<span class="fn">print</span>(amara.<span class="fn">introduce</span>())</pre>
+<div class="code-output"><div class="out-label">Output</div>Hi, I&#x27;m Amara, age 12.</div>
 </div>
-<p>OOP becomes valuable as programs grow larger, because it keeps related data and behaviour bundled together instead of scattered across many separate functions — making large codebases easier to organise, test and extend.</p>
-<h2><span class="num">6.</span>Algorithms and Efficiency: Thinking Beyond "It Works"</h2>
-<p>An <strong>algorithm</strong> is simply a step-by-step method for solving a problem — a recipe, in the earlier sense, but focused specifically on solving something (sorting a list, finding a route, searching for a word). Writing code that produces a correct result is only the first goal; professional developers also care about <strong>efficiency</strong> — how the time or memory a program needs grows as the amount of data grows.</p>
-<p>This is often measured using <strong>Big O notation</strong>, a way of describing how an algorithm's running time scales. An algorithm that checks every item in a list one by one is described as O(n) — its time grows in direct proportion to the list's size. A well-designed search on sorted data can achieve O(log n) — barely slowing down at all even as the data grows enormous, because it repeatedly eliminates half the remaining possibilities rather than checking everything.</p>
-<div class="stat-highlight">
-<div class="stat-num">O(log n)</div>
-<div class="stat-text">a binary search can find one item in a sorted list of a billion entries in roughly 30 comparisons — instead of the up to one billion comparisons a basic one-by-one search might need.</div>
+<p>In the class, <code>__init__</code> sets up each new object, and <code>self</code> refers to the object itself. OOP is useful as programs grow because it keeps related data and behaviour together. It is one of several styles, and another common one is functional programming, which builds programs mostly from functions that do not change shared data.</p>
+
+<h2><span class="num">11.</span>Version Control: How Teams Manage Code</h2>
+<p>Real software changes constantly and is often written by many people. <strong>Version control</strong> records every change to a project, so you can see who changed what, work in parallel without overwriting each other, and go back to an earlier version if something breaks. The most widely used tool is <strong>Git</strong>. Platforms such as <strong>GitHub</strong> and <strong>GitLab</strong> host Git projects online so people can collaborate. Even if you work alone, learning basic Git early is a very good habit.</p>
+<div class="real-world-box">
+<div class="rw-label">Real-World Example</div>
+<p>On a team of five building a shopping app, one developer can work on checkout while another works on search. Git lets them combine their changes into one version, flags conflicts where two people edited the same lines, and keeps the full history, so a mistake can be undone.</p>
 </div>
-<h2><span class="num">7.</span>A Brief History of Programming Languages</h2>
-<p>Programming languages have evolved for over 70 years, each generation making it easier for humans to express instructions computers can follow.</p>
+
+<h2><span class="num">12.</span>A Brief History of Programming Languages</h2>
 <div class="timeline">
 <div class="timeline-item">
+<div class="timeline-year">1843</div>
+<div class="timeline-text"><strong>Ada Lovelace</strong> publishes a step-by-step method intended for Babbage's Analytical Engine, often described as the first published computer program.</div>
+</div>
+<div class="timeline-item">
 <div class="timeline-year">1957</div>
-<div class="timeline-text"><strong>Fortran</strong> is released, one of the first widely used high-level languages, designed for scientific and mathematical calculation.</div>
+<div class="timeline-text"><strong>Fortran</strong> is released by an IBM team, one of the first widely used high-level languages, designed for science and mathematics.</div>
 </div>
 <div class="timeline-item">
 <div class="timeline-year">1972</div>
-<div class="timeline-text"><strong>C</strong> is created at Bell Labs, becoming the foundation for operating systems and countless later languages.</div>
+<div class="timeline-text"><strong>C</strong> is created by Dennis Ritchie at Bell Labs, becoming the foundation for operating systems and many later languages.</div>
 </div>
 <div class="timeline-item">
 <div class="timeline-year">1991</div>
-<div class="timeline-text"><strong>Python</strong> is released, prioritising readable syntax — now one of the most widely taught first languages in the world.</div>
+<div class="timeline-text"><strong>Python</strong>, created by Guido van Rossum, is first released, with an emphasis on readable code.</div>
 </div>
 <div class="timeline-item">
 <div class="timeline-year">1995</div>
-<div class="timeline-text"><strong>JavaScript</strong> is created in just ten days to make web pages interactive — today it runs in every major web browser.</div>
+<div class="timeline-text"><strong>JavaScript</strong> is created at Netscape (the first version in about ten days) to make web pages interactive. <strong>Java</strong> is released in the same year.</div>
 </div>
 <div class="timeline-item">
-<div class="timeline-year">2009–Present</div>
-<div class="timeline-text">Languages like <strong>Go, Rust and Swift</strong> emerge to address modern needs — safety, speed, and large-scale software built by big teams.</div>
+<div class="timeline-year">2009 to 2014</div>
+<div class="timeline-text"><strong>Go</strong> (2009), <strong>Rust</strong> (2010) and <strong>Swift</strong> (2014) appear, aimed at modern needs such as safety, speed and large codebases.</div>
 </div>
 </div>
-<h2><span class="num">8.</span>Version Control: How Real Developers Manage Code</h2>
-<p>Professional software is rarely written by one person in one sitting — it changes constantly, often with many people editing the same project. <strong>Version control</strong> systems, most commonly <strong>Git</strong>, track every change made to a project's code over time, allow multiple people to work on the same project without overwriting each other's work, and make it possible to undo a mistake by reverting to an earlier saved version. <strong>GitHub</strong> and <strong>GitLab</strong> are popular online platforms for storing and collaborating on Git projects. Learning basic version control early is one of the most valuable habits a new programmer can build.</p>
-<div class="real-world-box">
-<div class="rw-label">Real-World Example</div>
-<p>A team of five developers building a shopping app can each work on a different feature at the same time — one on the checkout page, another on the search bar — using Git to combine everyone's changes safely into one final version, without anyone's work being lost or overwritten.</p>
-</div>
-<h2><span class="num">9.</span>How to Actually Start Learning to Code</h2>
-<p>The concepts above are the same ones every programmer eventually learns — but the most effective route into coding is hands-on, not theoretical. A sensible starting path:</p>
+<p>For a wider look at how computers developed, see <a href="history-of-computing.html">The History of Computing</a>.</p>
+
+<h2><span class="num">13.</span>Coding in the Age of AI Assistants</h2>
+<p>AI tools can now suggest or write code from a plain-language request. They can be a helpful tutor and speed up routine work, but they can also produce code that looks right and is wrong, or that is insecure or does not do what you meant. You are still responsible for understanding it. That is why the skills in this article matter more, not less: reading code, tracing it, testing it and debugging it. Never paste passwords, private keys or other people's personal data into any tool, and test generated code on small examples before trusting it.</p>
+
+<h2><span class="num">14.</span>How to Start Learning</h2>
 <ul>
-<li><strong>Pick one beginner-friendly language first</strong> — Python is the most common recommendation because of its readable syntax and huge learning community.</li>
-<li><strong>Type real code yourself</strong>, rather than only reading it. Small, working programs teach far more than passively reading examples.</li>
-<li><strong>Build tiny projects</strong> early — a number guessing game, a to-do list, a simple calculator — since finishing something real is the fastest way to lock in new concepts.</li>
-<li><strong>Get comfortable reading error messages.</strong> Debugging — finding and fixing what went wrong — is a core, everyday skill, not a sign that something is wrong with you as a learner.</li>
-<li><strong>Learn Git early</strong>, even for solo projects, so the habit is already in place before it becomes essential in team settings.</li>
+<li><strong>Pick one beginner-friendly language.</strong> Python is a common choice because of its readable syntax and its huge community. Block-based tools such as Scratch (a free tool from MIT) are a gentle way to learn the ideas first.</li>
+<li><strong>Type the code yourself.</strong> Reading is not enough. Typing, running and changing examples teaches far more.</li>
+<li><strong>Predict, then run.</strong> Trace small programs by hand as in Worked Examples 1 and 2.</li>
+<li><strong>Build tiny projects early:</strong> a number guessing game, a quiz, a unit converter. Finishing something real locks in the ideas.</li>
+<li><strong>Welcome error messages.</strong> They are information, not a verdict on you.</li>
+<li><strong>Practise a little every day.</strong> Thirty focused minutes a day beats one long weekly session.</li>
+<li><strong>Learn Git early</strong> so the habit is already there when you work with others.</li>
 </ul>
-<h2>A Closing Thought</h2>
-<p>Coding can look intimidating from the outside because finished software hides an enormous number of small decisions behind a smooth interface. But every one of those decisions is built from the same handful of ideas covered here: variables, conditionals, loops, functions, and increasingly, ways of organising them as programs grow larger. Learning to code is less about memorising syntax and more about learning to think in precise, ordered steps — a skill that transfers to nearly every other subject once it clicks.</p>
+
+<h2><span class="num">15.</span>Common Mistakes and Misconceptions</h2>
+<ul>
+<li><strong>"You need to be a maths genius."</strong> Logical, careful thinking matters most. Most everyday coding uses only simple arithmetic.</li>
+<li><strong>"You have to memorise everything."</strong> Professionals look things up constantly. Understanding the ideas matters more than recalling syntax.</li>
+<li><strong>"A good programmer writes code without errors."</strong> Everyone writes bugs. Skill lies in finding them quickly.</li>
+<li><strong>"HTML is a programming language."</strong> It is a markup language that describes page structure. It is usually used alongside programming languages.</li>
+<li><strong>"The computer understands what I mean."</strong> It follows exactly what you wrote. If the result is wrong, the instructions were wrong.</li>
+<li><strong>"AI means there is no point learning to code."</strong> AI-generated code still has to be understood, tested and fixed by someone.</li>
+</ul>
+
+<h2><span class="num">16.</span>Check Your Understanding</h2>
+<p>Try each question first, then tap it to reveal the answer. A scored multiple-choice quiz follows below.</p>
+<div class="qa-list">
+<details><summary>1. What is the difference between an algorithm and source code?</summary><p>An algorithm is the step-by-step method, which can be described in plain words. Source code is that method written in a particular programming language.</p></details>
+<details><summary>2. What does <code>print("5" + "3")</code> show, and why?</summary><p>53, because the values are text, so + joins them instead of adding.</p></details>
+<details><summary>3. What does this code print? <code>total = 0</code>, then <code>for n in range(1, 4): total = total + n</code>, then <code>print(total)</code></summary><p>6, because n takes the values 1, 2 and 3, and 0 + 1 + 2 + 3 = 6.</p></details>
+<details><summary>4. A sorted list has 1,000 items. About how many comparisons does binary search need at most?</summary><p>About 10, because 2<sup>10</sup> = 1,024 is more than 1,000.</p></details>
+<details><summary>5. Why is a logic error harder to find than a syntax error?</summary><p>A syntax error is reported by the translator, while a logic error runs without any message and just gives the wrong answer.</p></details>
+<details><summary>6. What is the first step of the debugging loop, and why?</summary><p>Reproduce the problem, because a bug that cannot be made to happen reliably cannot be tested or fixed.</p></details>
+</div>
+
+<h2><span class="num">17.</span>Summary</h2>
+<ul>
+<li>Coding is writing precise instructions. Every program is built from sequence, decisions and repetition.</li>
+<li>An algorithm is the method, source code is the method written in a language, and a compiler or interpreter turns it into machine code.</li>
+<li>Variables, data types, conditionals, loops and functions are shared by nearly every language.</li>
+<li>Tracing code by hand and planning with flowcharts or pseudocode build real understanding.</li>
+<li>Efficiency matters as data grows: binary search needs about 30 comparisons for a billion sorted items, while linear search may need a billion.</li>
+<li>Bugs are normal. Syntax, runtime and logic errors are found with a method: reproduce, isolate, hypothesise, fix and test.</li>
+<li>Readable code, tests and version control make programs maintainable and teams effective.</li>
+<li>AI tools help but do not replace understanding. Learn by typing, predicting, running and building small projects.</li>
+</ul>
+
+<div class="example-box">
+<div class="ex-label">For Teachers and Parents</div>
+<p><strong>Program a classmate (no computer needed):</strong> one student gives exact step-by-step instructions to guide another around an obstacle course, or to build a drawing, while the "robot" follows them literally. Discuss what happened when an instruction was vague. This is the lesson of "precisely".</p>
+<p><strong>Trace and predict:</strong> give students short programs on paper and have them fill in a table of variable values like Worked Example 1 before any code is run.</p>
+<p><strong>Guess-the-number search game:</strong> pick a number from 1 to 100 and let students guess with "higher or lower" hints. Compare the strategy of guessing 1, 2, 3... with always guessing the middle, to feel binary search.</p>
+<p><strong>Bug hunt:</strong> give students working code with one deliberate mistake and ask them to follow the debugging loop to find it.</p>
+<p><strong>Safety note:</strong> only run code from sources you trust, and never type real passwords or personal details into practice programs or online tools. Use a school-approved or parent-approved coding environment.</p>
+</div>
+
+<h2><span class="num">18.</span>Sources and Further Reading</h2>
+<p>This article is original EDUSAMBAM writing. Every code example was run with Python 3.12 and the outputs shown are the real results (some error messages vary slightly between Python versions). The ideas follow standard introductory computer science teaching, the history is from the public record, and the diagrams are original EDUSAMBAM schematics. The comparison counts in the worked examples are calculated from powers of two.</p>
+<ul>
+<li><strong>Python Software Foundation, "The Python Tutorial":</strong> the official free introduction to the language. <a href="https://docs.python.org/3/tutorial/" target="_blank" rel="noopener">docs.python.org/3/tutorial</a></li>
+</ul>
+<p>Languages and tools change quickly, so check the current documentation for any tool you use. This article does not recommend any particular course, company or product.</p>
+
 <!-- QUIZ SECTION -->
 <div class="quiz-section">
 <div class="section-eyebrow">Test Your Understanding</div>
@@ -1186,79 +1637,79 @@ amara = Student(<span class="st">"Amara"</span>, 12)
 </div>
 <form id="squizForm">
 <div class="squiz-item" data-correct="1">
-<div class="squiz-q"><span class="qnum">1.</span>What is coding, at its core?</div>
-<div class="squiz-option"><input id="sq1a" name="sq1" type="radio" value="0"><label for="sq1a">A. Designing app icons and colours</label></input></div>
-<div class="squiz-option"><input id="sq1b" name="sq1" type="radio" value="1"/><label for="sq1b">B. Writing precise, step-by-step instructions a computer can carry out</label></div>
-<div class="squiz-option"><input id="sq1c" name="sq1" type="radio" value="2"/><label for="sq1c">C. Fixing broken computer hardware</label></div>
-<div class="squiz-option"><input id="sq1d" name="sq1" type="radio" value="3"/><label for="sq1d">D. Connecting devices to Wi-Fi</label></div>
-</div>
-<div class="squiz-item" data-correct="2">
-<div class="squiz-q"><span class="qnum">2.</span>What is the key difference between a compiled and an interpreted language?</div>
-<div class="squiz-option"><input id="sq2a" name="sq2" type="radio" value="0"/><label for="sq2a">A. Compiled languages don't use variables</label></div>
-<div class="squiz-option"><input id="sq2b" name="sq2" type="radio" value="1"/><label for="sq2b">B. Interpreted languages can't have functions</label></div>
-<div class="squiz-option"><input id="sq2c" name="sq2" type="radio" value="2"/><label for="sq2c">C. Compiled code is translated entirely before running; interpreted code is translated line by line as it runs</label></div>
-<div class="squiz-option"><input id="sq2d" name="sq2" type="radio" value="3"/><label for="sq2d">D. There is no real difference between them</label></div>
-</div>
-<div class="squiz-item" data-correct="0">
-<div class="squiz-q"><span class="qnum">3.</span>What does a "conditional" (like an if/else statement) let a program do?</div>
-<div class="squiz-option"><input id="sq3a" name="sq3" type="radio" value="0"/><label for="sq3a">A. Make decisions and behave differently depending on the situation</label></div>
-<div class="squiz-option"><input id="sq3b" name="sq3" type="radio" value="1"/><label for="sq3b">B. Repeat the same action many times</label></div>
-<div class="squiz-option"><input id="sq3c" name="sq3" type="radio" value="2"/><label for="sq3c">C. Store a value permanently on disk</label></div>
-<div class="squiz-option"><input id="sq3d" name="sq3" type="radio" value="3"/><label for="sq3d">D. Connect to the internet</label></div>
-</div>
-<div class="squiz-item" data-correct="1">
-<div class="squiz-q"><span class="qnum">4.</span>Why are loops useful in code?</div>
-<div class="squiz-option"><input id="sq4a" name="sq4" type="radio" value="0"/><label for="sq4a">A. They store text values</label></div>
-<div class="squiz-option"><input id="sq4b" name="sq4" type="radio" value="1"/><label for="sq4b">B. They repeat instructions without rewriting them each time</label></div>
-<div class="squiz-option"><input id="sq4c" name="sq4" type="radio" value="2"/><label for="sq4c">C. They translate code into binary</label></div>
-<div class="squiz-option"><input id="sq4d" name="sq4" type="radio" value="3"/><label for="sq4d">D. They connect a program to a server</label></div>
-</div>
-<div class="squiz-item" data-correct="0">
-<div class="squiz-q"><span class="qnum">5.</span>What is a function used for?</div>
-<div class="squiz-option"><input id="sq5a" name="sq5" type="radio" value="0"/><label for="sq5a">A. Packaging a set of instructions under one reusable name</label></div>
-<div class="squiz-option"><input id="sq5b" name="sq5" type="radio" value="1"/><label for="sq5b">B. Storing a single number only</label></div>
-<div class="squiz-option"><input id="sq5c" name="sq5" type="radio" value="2"/><label for="sq5c">C. Compiling a program into machine code</label></div>
-<div class="squiz-option"><input id="sq5d" name="sq5" type="radio" value="3"/><label for="sq5d">D. Connecting to a database</label></div>
+<div class="squiz-q"><span class="qnum">1.</span>What is source code?</div>
+<div class="squiz-option"><input id="sq1a" name="sq1" type="radio" value="0"/><label for="sq1a">A. The binary a processor runs</label></div>
+<div class="squiz-option"><input id="sq1b" name="sq1" type="radio" value="1"/><label for="sq1b">B. An algorithm written in a programming language</label></div>
+<div class="squiz-option"><input id="sq1c" name="sq1" type="radio" value="2"/><label for="sq1c">C. A type of error message</label></div>
+<div class="squiz-option"><input id="sq1d" name="sq1" type="radio" value="3"/><label for="sq1d">D. The speed of a program</label></div>
 </div>
 <div class="squiz-item" data-correct="3">
-<div class="squiz-q"><span class="qnum">6.</span>How does a dictionary (or object) differ from a list?</div>
-<div class="squiz-option"><input id="sq6a" name="sq6" type="radio" value="0"/><label for="sq6a">A. A dictionary can only store numbers</label></div>
-<div class="squiz-option"><input id="sq6b" name="sq6" type="radio" value="1"/><label for="sq6b">B. A list cannot be repeated with a loop</label></div>
-<div class="squiz-option"><input id="sq6c" name="sq6" type="radio" value="2"/><label for="sq6c">C. There is no difference — they are the same thing</label></div>
-<div class="squiz-option"><input id="sq6d" name="sq6" type="radio" value="3"/><label for="sq6d">D. A dictionary stores labelled name-value pairs, while a list stores items in order by position</label></div>
+<div class="squiz-q"><span class="qnum">2.</span>What does print(int("5") + int("3")) show?</div>
+<div class="squiz-option"><input id="sq2a" name="sq2" type="radio" value="0"/><label for="sq2a">A. 53</label></div>
+<div class="squiz-option"><input id="sq2b" name="sq2" type="radio" value="1"/><label for="sq2b">B. 5 + 3</label></div>
+<div class="squiz-option"><input id="sq2c" name="sq2" type="radio" value="2"/><label for="sq2c">C. Nothing</label></div>
+<div class="squiz-option"><input id="sq2d" name="sq2" type="radio" value="3"/><label for="sq2d">D. 8</label></div>
 </div>
 <div class="squiz-item" data-correct="2">
-<div class="squiz-q"><span class="qnum">7.</span>In object-oriented programming, what is a "class"?</div>
-<div class="squiz-option"><input id="sq7a" name="sq7" type="radio" value="0"/><label for="sq7a">A. A type of loop</label></div>
-<div class="squiz-option"><input id="sq7b" name="sq7" type="radio" value="1"/><label for="sq7b">B. A single stored number</label></div>
-<div class="squiz-option"><input id="sq7c" name="sq7" type="radio" value="2"/><label for="sq7c">C. A reusable blueprint that groups related data and functions together</label></div>
-<div class="squiz-option"><input id="sq7d" name="sq7" type="radio" value="3"/><label for="sq7d">D. A file that stores images</label></div>
+<div class="squiz-q"><span class="qnum">3.</span>What does the grade code print when score = 72? (A if 80 or more, B if 60 or more, otherwise C)</div>
+<div class="squiz-option"><input id="sq3a" name="sq3" type="radio" value="0"/><label for="sq3a">A. A</label></div>
+<div class="squiz-option"><input id="sq3b" name="sq3" type="radio" value="1"/><label for="sq3b">B. C</label></div>
+<div class="squiz-option"><input id="sq3c" name="sq3" type="radio" value="2"/><label for="sq3c">C. B</label></div>
+<div class="squiz-option"><input id="sq3d" name="sq3" type="radio" value="3"/><label for="sq3d">D. 72</label></div>
 </div>
-<div class="squiz-item" data-correct="1">
-<div class="squiz-q"><span class="qnum">8.</span>What does Big O notation describe?</div>
-<div class="squiz-option"><input id="sq8a" name="sq8" type="radio" value="0"/><label for="sq8a">A. How many lines of code a program has</label></div>
-<div class="squiz-option"><input id="sq8b" name="sq8" type="radio" value="1"/><label for="sq8b">B. How an algorithm's time or memory needs grow as the data grows</label></div>
-<div class="squiz-option"><input id="sq8c" name="sq8" type="radio" value="2"/><label for="sq8c">C. The number of programming languages in use worldwide</label></div>
-<div class="squiz-option"><input id="sq8d" name="sq8" type="radio" value="3"/><label for="sq8d">D. How many people worked on a program</label></div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">4.</span>What does this print? total = 0, then for n in range(1, 6): total = total + n, then print(total)</div>
+<div class="squiz-option"><input id="sq4a" name="sq4" type="radio" value="0"/><label for="sq4a">A. 10</label></div>
+<div class="squiz-option"><input id="sq4b" name="sq4" type="radio" value="1"/><label for="sq4b">B. 21</label></div>
+<div class="squiz-option"><input id="sq4c" name="sq4" type="radio" value="2"/><label for="sq4c">C. 15</label></div>
+<div class="squiz-option"><input id="sq4d" name="sq4" type="radio" value="3"/><label for="sq4d">D. 5</label></div>
 </div>
 <div class="squiz-item" data-correct="0">
-<div class="squiz-q"><span class="qnum">9.</span>What is Git primarily used for?</div>
-<div class="squiz-option"><input id="sq9a" name="sq9" type="radio" value="0"/><label for="sq9a">A. Tracking changes to code and letting multiple people collaborate safely</label></div>
-<div class="squiz-option"><input id="sq9b" name="sq9" type="radio" value="1"/><label for="sq9b">B. Compiling code into an app icon</label></div>
-<div class="squiz-option"><input id="sq9c" name="sq9" type="radio" value="2"/><label for="sq9c">C. Translating a language name into its IP address</label></div>
-<div class="squiz-option"><input id="sq9d" name="sq9" type="radio" value="3"/><label for="sq9d">D. Encrypting a website's traffic</label></div>
+<div class="squiz-q"><span class="qnum">5.</span>What does celsius_to_fahrenheit(100) return, using c * 9 / 5 + 32?</div>
+<div class="squiz-option"><input id="sq5a" name="sq5" type="radio" value="0"/><label for="sq5a">A. 212.0</label></div>
+<div class="squiz-option"><input id="sq5b" name="sq5" type="radio" value="1"/><label for="sq5b">B. 132.0</label></div>
+<div class="squiz-option"><input id="sq5c" name="sq5" type="radio" value="2"/><label for="sq5c">C. 100.0</label></div>
+<div class="squiz-option"><input id="sq5d" name="sq5" type="radio" value="3"/><label for="sq5d">D. 68.0</label></div>
+</div>
+<div class="squiz-item" data-correct="3">
+<div class="squiz-q"><span class="qnum">6.</span>In student["subjects"][0], why does the 0 give the first subject?</div>
+<div class="squiz-option"><input id="sq6a" name="sq6" type="radio" value="0"/><label for="sq6a">A. The first subject is always Math</label></div>
+<div class="squiz-option"><input id="sq6b" name="sq6" type="radio" value="1"/><label for="sq6b">B. Lists are numbered from 1</label></div>
+<div class="squiz-option"><input id="sq6c" name="sq6" type="radio" value="2"/><label for="sq6c">C. Zero means none</label></div>
+<div class="squiz-option"><input id="sq6d" name="sq6" type="radio" value="3"/><label for="sq6d">D. Lists are numbered from 0</label></div>
 </div>
 <div class="squiz-item" data-correct="2">
-<div class="squiz-q"><span class="qnum">10.</span>According to the article, what's the most effective way to start learning to code?</div>
-<div class="squiz-option"><input id="sq10a" name="sq10" type="radio" value="0"/><label for="sq10a">A. Memorising every keyword in every language before writing anything</label></div>
-<div class="squiz-option"><input id="sq10b" name="sq10" type="radio" value="1"/><label for="sq10b">B. Avoiding error messages until you're more experienced</label></div>
-<div class="squiz-option"><input id="sq10c" name="sq10" type="radio" value="2"/><label for="sq10c">C. Writing real code hands-on, starting with one beginner-friendly language and small projects</label></div>
-<div class="squiz-option"><input id="sq10d" name="sq10" type="radio" value="3"/><label for="sq10d">D. Learning five languages at once</label></div>
+<div class="squiz-q"><span class="qnum">7.</span>Why is binary search so much faster than linear search on sorted data?</div>
+<div class="squiz-option"><input id="sq7a" name="sq7" type="radio" value="0"/><label for="sq7a">A. It checks every item twice</label></div>
+<div class="squiz-option"><input id="sq7b" name="sq7" type="radio" value="1"/><label for="sq7b">B. It looks at items at random</label></div>
+<div class="squiz-option"><input id="sq7c" name="sq7" type="radio" value="2"/><label for="sq7c">C. It halves the remaining items each step</label></div>
+<div class="squiz-option"><input id="sq7d" name="sq7" type="radio" value="3"/><label for="sq7d">D. It skips the sorting step</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">8.</span>A program runs without any error message but gives the wrong average. What kind of error is this?</div>
+<div class="squiz-option"><input id="sq8a" name="sq8" type="radio" value="0"/><label for="sq8a">A. A syntax error</label></div>
+<div class="squiz-option"><input id="sq8b" name="sq8" type="radio" value="1"/><label for="sq8b">B. A logic error</label></div>
+<div class="squiz-option"><input id="sq8c" name="sq8" type="radio" value="2"/><label for="sq8c">C. A runtime error</label></div>
+<div class="squiz-option"><input id="sq8d" name="sq8" type="radio" value="3"/><label for="sq8d">D. A hardware error</label></div>
+</div>
+<div class="squiz-item" data-correct="0">
+<div class="squiz-q"><span class="qnum">9.</span>What is HTML best described as?</div>
+<div class="squiz-option"><input id="sq9a" name="sq9" type="radio" value="0"/><label for="sq9a">A. A markup language that describes page structure</label></div>
+<div class="squiz-option"><input id="sq9b" name="sq9" type="radio" value="1"/><label for="sq9b">B. A compiler</label></div>
+<div class="squiz-option"><input id="sq9c" name="sq9" type="radio" value="2"/><label for="sq9c">C. A database</label></div>
+<div class="squiz-option"><input id="sq9d" name="sq9" type="radio" value="3"/><label for="sq9d">D. A type of loop</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">10.</span>What is the best first step when debugging?</div>
+<div class="squiz-option"><input id="sq10a" name="sq10" type="radio" value="0"/><label for="sq10a">A. Rewrite everything</label></div>
+<div class="squiz-option"><input id="sq10b" name="sq10" type="radio" value="1"/><label for="sq10b">B. Ignore the error</label></div>
+<div class="squiz-option"><input id="sq10c" name="sq10" type="radio" value="2"/><label for="sq10c">C. Reproduce the problem reliably</label></div>
+<div class="squiz-option"><input id="sq10d" name="sq10" type="radio" value="3"/><label for="sq10d">D. Delete the program</label></div>
 </div>
 <button class="squiz-submit-btn" disabled="" id="squizSubmitBtn" onclick="submitQuiz()" type="button">Answer all questions to submit</button>
 </form>
 </div>
-<div class="article-footer-nav"><a href="article-viewer.html#what-is-the-internet.html">← Previous: What Is the Internet, Really?</a><a href="index.html#gateway">Gateway</a><a href="article-viewer.html#what-is-an-algorithm.html">Next: What Is an Algorithm? →</a></div>
+<div class="article-footer-nav"><a href="what-is-the-internet.html">← Previous: What Is the Internet, Really?</a><a href="index.html#gateway">Gateway</a><a href="what-is-an-algorithm.html">Next: What Is an Algorithm? →</a></div>
 </div>
 <script>
   (function() {
@@ -1442,23 +1893,21 @@ amara = Student(<span class="st">"Amara"</span>, 12)
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',setup); else setup();
 })();
 </script>
-<footer class="edusambam-unified-footer" aria-label="EDUSAMBAM site footer">
+<footer aria-label="EDUSAMBAM site footer" class="edusambam-unified-footer">
 <div class="footer-top">
 <div class="footer-brand">
 <div class="edusambam-footer-brand-row">
-<a class="edusambam-footer-logo-link" href="index.html" aria-label="EDUSAMBAM home">
+<a aria-label="EDUSAMBAM home" class="edusambam-footer-logo-link" href="index.html">
 <img alt="EDUSAMBAM" class="edusambam-brand-mark edusambam-footer-logo" src="logo-icon-full-white.png" style="width:auto;height:64px;max-width:240px;object-fit:contain;background:none;border-radius:0;"/>
 </a>
 </div>
 <p class="edusambam-footer-statement">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</p>
-<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a></div>
+<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a><a aria-label="EDUSAMBAM on YouTube" href="https://youtube.com/@edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></div>
 </div>
-<div class="footer-col"><h4>Learning</h4><ul><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li></ul></div>
+<div class="footer-col"><h4>Learning Areas</h4><ul><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ Tests</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li></ul></div>
 <div class="footer-col"><h4>Practice &amp; Assessment</h4><ul>
 <li><a href="index.html#interactive-activities">Interactive Activities</a></li>
 <li><a href="assessment-arena.html">ASSESSMENT ARENA</a></li>
-<li><a href="assessment-arena.html">What Is Assessment?</a></li>
-<li><a href="index.html#about">Learn Your Way</a></li>
 <li><a href="index.html#resources">Resources &amp; Downloads</a></li>
 </ul></div>
 <div class="footer-col"><h4>About EDUSAMBAM</h4><ul>
@@ -1468,6 +1917,7 @@ amara = Student(<span class="st">"Amara"</span>, 12)
 <li><a href="contact.html">Contact Us</a></li>
 <li><a href="mailto:feedback.edusambam@gmail.com?subject=EDUSAMBAM%20Feedback">Give Feedback</a></li>
 <li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+<li><a href="about.html">About EDUSAMBAM</a></li>
 <li><a href="privacy-policy.html">Privacy Policy</a></li>
 </ul></div>
 </div>

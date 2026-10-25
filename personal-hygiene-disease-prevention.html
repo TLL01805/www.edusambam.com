@@ -12,9 +12,9 @@ gtag('config', 'G-Y35DW0V4HQ');
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Personal Hygiene and Disease Prevention — EDUSAMBAM</title>
+<title>Personal Hygiene and Disease Prevention: A Guide — EDUSAMBAM</title>
 <link href="https://edusambam.com/personal-hygiene-disease-prevention.html" rel="canonical"/>
-<meta content="Washing your hands properly can stop illness from spreading. Learn why personal hygiene is one of the cheapest, most effective health tools." name="description"/>
+<meta content="How germs spread, the chain of infection, how to wash your hands, food and body hygiene, a worked example on bacteria growth, myths and a quiz." name="description"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
@@ -582,6 +582,53 @@ gtag('config', 'G-Y35DW0V4HQ');
     cursor: pointer;
   }
   .squiz-retake-btn:hover { background: rgba(255,255,255,0.1); }
+
+  /* ── EDUSAMBAM hygiene upgrade ── */
+  .hy-card{background:var(--cream);border:1px solid var(--border);border-radius:var(--radius);padding:1.3rem 1.2rem;margin:1.5rem 0}
+  .hy-title{font-family:'EB Garamond',serif;font-weight:600;color:var(--navy);font-size:1.1rem;text-align:center}
+  .hy-sub{text-align:center;color:var(--muted);font-size:.85rem;margin-bottom:.8rem}
+  .hy-st{display:flex;gap:.8rem;align-items:center;background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:.6rem .8rem;animation:hyLight 10.2s ease-in-out infinite}
+  .hy-n{flex:0 0 2rem;height:2rem;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:700}
+  .hy-st div:last-child{display:flex;flex-direction:column;font-size:.9rem}
+  .hy-st strong{color:var(--navy)}.hy-st em{color:#2F6F4E;font-style:normal;font-weight:600;margin-top:.15rem}
+  .hy-ar{text-align:center;color:var(--muted);font-size:.9rem;margin:.1rem 0}
+  .hy-hw{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:center;margin-top:.6rem}
+  .hy-timer{text-align:center;font-size:.8rem;color:var(--muted);max-width:7rem}
+  .hy-ring{stroke-dasharray:214;stroke-dashoffset:214;animation:hyTick 20s linear infinite}
+  .hy-steps{flex:1;min-width:15rem;display:grid;gap:.5rem}
+  .hy-hs{display:flex;gap:.7rem;align-items:flex-start;background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:.55rem .8rem}
+  .hy-hn{flex:0 0 1.8rem;height:1.8rem;border-radius:50%;background:#2F6F4E;color:#fff;display:grid;place-items:center;font-weight:700;font-size:.9rem}
+  .hy-hs div:last-child{display:flex;flex-direction:column;font-size:.9rem}.hy-hs strong{color:var(--navy)}
+  .hy-calc{background:var(--cream);border:1px solid var(--border);border-left:4px solid #2F6F4E;border-radius:var(--radius);padding:1.3rem 1.5rem;margin:1.5rem 0}
+  .hy-calc h3{font-family:'EB Garamond',serif;color:var(--navy);margin:0 0 .6rem}
+  .hy-s{display:flex;gap:.7rem;align-items:flex-start;margin:.45rem 0}
+  .hy-s b{flex:0 0 1.7rem;height:1.7rem;border-radius:50%;background:#2F6F4E;color:#fff;display:grid;place-items:center;font-size:.85rem}
+  .hy-s span{flex:1}
+  .hy-bars{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:1rem .8rem;margin:1rem 0}
+  .hy-bt{text-align:center;font-weight:600;color:var(--navy);font-size:.92rem;margin-bottom:.5rem}
+  .hy-bg{display:flex;align-items:flex-end;justify-content:space-around;height:165px;border-bottom:1px solid var(--border)}
+  .hy-col{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;width:13%}
+  .hy-v{font-size:.8rem;font-weight:700;color:var(--navy)}
+  .hy-b{width:70%;background:#8B0000;border-radius:4px 4px 0 0;transform-origin:bottom;animation:hyGrow .8s ease both}
+  .hy-m{position:absolute}
+  .hy-bx{text-align:center;font-size:.75rem;color:var(--muted);margin-top:.2rem}
+  .hy-myths{display:grid;gap:.9rem;margin:1.3rem 0}
+  .hy-myth{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;animation:hyIn .6s ease both}
+  .hy-myth:nth-child(2){animation-delay:.12s}.hy-myth:nth-child(3){animation-delay:.24s}.hy-myth:nth-child(4){animation-delay:.36s}
+  .hy-myth .m{background:#FBEAEA;color:#8B0000;padding:.6rem 1rem;font-weight:600}
+  .hy-myth .f{background:#EAF4EE;color:#1E4D36;padding:.6rem 1rem}
+  .hy-myth b{text-transform:uppercase;font-size:.72rem;letter-spacing:.08em;margin-right:.4rem}
+  .hy-key{background:var(--navy);border-radius:var(--radius);padding:1.5rem 1.7rem;margin:2rem 0}
+  .hy-key .kp{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
+  .hy-key ul{margin:0;padding-left:1.2rem;color:rgba(255,255,255,.88)}.hy-key li{margin:.35rem 0}
+  .hy-tp{background:var(--gold-lt);border:1px solid rgba(184,150,62,.45);border-radius:var(--radius);padding:1.2rem 1.5rem;margin:1.5rem 0}
+  .hy-tp .tl{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#7a5f1c}
+  .hy-tp p{margin:.4rem 0 0}
+  @keyframes hyTick{to{stroke-dashoffset:0}}
+  @keyframes hyGrow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+  @keyframes hyIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  @keyframes hyLight{0%,17%,100%{background:#fff;border-color:var(--border)}3%,14%{background:#FFF6DC;border-color:#B8963E}}
+  @media (prefers-reduced-motion:reduce){.hy-ring{animation:none;stroke-dashoffset:0}.hy-st,.hy-b,.hy-myth{animation:none}}
 </style>
 <style id="edusambam-reader-style">
 .mark{width:48px;height:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px;border-radius:14px;background:#eef6ff;box-shadow:0 2px 7px rgba(8,47,99,.10);flex:0 0 48px}.mark i{display:block;border-radius:50%;background:#0b4ea2;min-width:0;min-height:0}.mark i:nth-child(5){background:#d4a017}.edusambam-reader{max-width:980px;margin:1.2rem auto 0;padding:1rem 1.1rem;border:1px solid #d7e4ef;border-radius:14px;background:linear-gradient(135deg,#f7fbff,#fff);box-shadow:0 6px 18px rgba(11,45,92,.08)}.edusambam-reader strong{display:block;color:#0b55a5;font-size:.9rem;letter-spacing:.04em}.edusambam-reader .reader-slogan{color:#b27e08;font-weight:900;margin-top:.25rem;font-size:.82rem}.edusambam-reader .reader-help{color:#607086;font-size:.8rem;margin:.3rem 0 .7rem}.edusambam-reader .reader-controls{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}.edusambam-reader button,.edusambam-reader select{border:1px solid #c9d9e8;background:#fff;color:#153b6e;border-radius:8px;padding:.48rem .65rem;font-weight:800;cursor:pointer}.edusambam-reader button:first-child{background:#0b55a5;color:#fff;border-color:#0b55a5}.edusambam-reader .reader-status{display:block;color:#607086;font-size:.75rem;margin-top:.55rem}.edusambam-reader .reader-progress{height:4px;background:#e4edf6;border-radius:99px;margin-top:.6rem;overflow:hidden}.edusambam-reader .reader-progress span{display:block;width:0;height:100%;background:#e1ad1c;transition:width .2s linear}@media(max-width:600px){.edusambam-reader{margin-left:0;margin-right:0}.edusambam-reader .reader-controls button,.edusambam-reader .reader-controls select{flex:1;min-width:75px}}
@@ -971,6 +1018,20 @@ footer.footer {
 }
 </style><style id="edusambam-footer-social-css">.edusambam-footer-social{margin-top:14px}.edusambam-footer-social a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);color:rgba(255,255,255,.85);transition:background .15s,color .15s}.edusambam-footer-social a:hover{background:rgba(255,255,255,.22);color:#fff}</style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2230995786427221"
      crossorigin="anonymous"></script>
+<meta content="2026-10-12" property="article:modified_time"/>
+<meta name="robots" content="index,follow,max-image-preview:large"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="EDUSAMBAM"/>
+<meta property="og:title" content="Personal Hygiene and Disease Prevention: A Guide"/>
+<meta property="og:description" content="How germs spread, the chain of infection, how to wash your hands, food and body hygiene, a worked example on bacteria growth, myths and a quiz."/>
+<meta property="og:url" content="https://edusambam.com/personal-hygiene-disease-prevention.html"/>
+<meta property="og:image" content="https://edusambam.com/logo-icon-full.png"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Personal Hygiene and Disease Prevention: A Guide"/>
+<meta name="twitter:description" content="How germs spread, the chain of infection, how to wash your hands, food and body hygiene, a worked example on bacteria growth, myths and a quiz."/>
+<meta property="article:modified_time" content="2026-10"/>
+<meta property="article:section" content="Nutrition"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Personal Hygiene and Disease Prevention", "description": "How germs spread, the chain of infection, how to wash your hands, food and body hygiene, a worked example on bacteria growth, myths and a quiz.", "inLanguage": "en", "mainEntityOfPage": "https://edusambam.com/personal-hygiene-disease-prevention.html", "url": "https://edusambam.com/personal-hygiene-disease-prevention.html", "dateModified": "2026-10", "articleSection": "Nutrition", "author": {"@type": "Organization", "name": "EDUSAMBAM Editorial Team", "url": "https://edusambam.com/"}, "publisher": {"@type": "Organization", "name": "EDUSAMBAM", "url": "https://edusambam.com/", "logo": {"@type": "ImageObject", "url": "https://edusambam.com/logo-icon-full.png"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Gateway", "item": "https://edusambam.com/index.html#gateway"}, {"@type": "ListItem", "position": 2, "name": "Nutrition", "item": "https://edusambam.com/index.html#subject-nutrition"}, {"@type": "ListItem", "position": 3, "name": "Personal Hygiene and Disease Prevention", "item": "https://edusambam.com/personal-hygiene-disease-prevention.html"}]}]}</script>
 </head>
 <body id="top">
 <!-- TOP BAR -->
@@ -989,13 +1050,12 @@ footer.footer {
 <span class="edusambam-brand-subtitle">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</span>
 </span>
 </a>
-<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li></ul>
+<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ Tests</a></li><li><a href="index.html#resources">Resources</a></li></ul>
 <button aria-label="Search" class="edusambam-search-btn" title="Search" type="button">⌕</button>
 <button aria-expanded="false" aria-label="Open menu" class="edusambam-menu-btn" title="Menu" type="button">☰</button>
 </div>
-</nav>
-<div aria-label="Mobile navigation" class="edusambam-mobile-menu">
-<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="assessment-arena.html">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="index.html#about-edusambam">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
+</nav><div aria-label="Mobile navigation" class="edusambam-mobile-menu">
+<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ Tests</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="index.html#subject-assessment">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="index.html#about-edusambam">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
 </div>
 <div aria-label="Site search" class="edusambam-search-panel">
 <div class="edusambam-search-wrap">
@@ -1005,71 +1065,110 @@ footer.footer {
 </div>
 <!-- ARTICLE HERO -->
 <div class="article-hero">
-<div class="breadcrumb"><a href="index.html#gateway">Gateway</a>  /  <a href="index.html#subject-optometry">Health</a>  /  Personal Hygiene &amp; Disease Prevention</div>
+<div class="breadcrumb"><a href="index.html#gateway">Gateway</a>  /  <a href="index.html#subject-nutrition">Nutrition</a>  /  Personal Hygiene &amp; Disease Prevention</div>
 <div class="article-hero-tag">Health · Hygiene</div>
 <h1>Personal Hygiene and Disease Prevention</h1>
 <p class="sub">Something as simple as washing your hands properly can stop the spread of illness to yourself and everyone around you. Hygiene is one of the cheapest, most effective forms of healthcare there is.</p>
 <div class="article-hero-meta">
 <span>EDUSAMBAM Editorial Team</span>
 <span>|</span>
-<span>8 min read</span>
+<span>14 min read</span> <span>|</span> <span>Last updated: October 2026</span>
 <span>|</span>
 <span>Health</span>
 </div>
 </div><div aria-label="EDUSAMBAM article reader" class="edusambam-reader"><strong>🔊 LISTEN TO THIS ARTICLE</strong><div class="reader-slogan">SAVE YOUR EYES • IMPROVE YOUR LISTENING</div><div class="reader-help">Listen to the article instead of relying only on continuous screen reading.</div><div class="reader-controls"><button data-reader="play" type="button">▶ Play</button><button data-reader="pause" type="button">⏸ Pause</button><button data-reader="resume" type="button">▶ Resume</button><button data-reader="stop" type="button">■ Stop</button><select aria-label="Reading speed"><option value="1">1×</option><option value="0.8">0.8×</option><option value="1.2">1.2×</option></select></div><div aria-hidden="true" class="reader-progress"><span></span></div><small class="reader-status">Ready to read the article.</small></div>
 <!-- ARTICLE BODY -->
 <div class="article-wrap">
-<p class="lead">Long before vaccines and modern medicine existed, doctors noticed that simple cleanliness dramatically reduced disease and death. In the 1840s, physician Ignaz Semmelweis discovered that handwashing alone could cut deaths in maternity wards by more than half — a discovery that laid the foundation for modern hygiene practices.</p>
-<h2><span class="num">1.</span>What is Personal Hygiene?</h2>
-<p>Personal hygiene refers to the practices that keep the body clean and prevent the spread of germs — including bacteria, viruses, and fungi — that can cause illness.</p>
-<h2><span class="num">2.</span>Key Hygiene Practices</h2>
-<table class="pos-table">
-<tr><th>Practice</th><th>Purpose</th></tr>
+<p class="lead">Long before vaccines and modern medicine existed, doctors noticed that simple cleanliness could dramatically reduce disease and death. In the 1840s, the physician Ignaz Semmelweis found that when doctors washed their hands, deaths among mothers in the maternity ward he studied dropped sharply, by more than half. His discovery helped lay the foundation for modern hygiene. This guide explains how germs spread, how to break the chain, and which everyday habits protect you and the people around you.</p>
+<h2><span class="num">1.</span>What Is Personal Hygiene?</h2>
+<p><strong>Personal hygiene</strong> means the practices that keep the body clean and prevent the spread of germs. <strong>Germs</strong> are tiny living things, such as bacteria, viruses, fungi and parasites, that can cause illness. Most of the bacteria around us and on our skin are harmless, and some are even helpful. Hygiene is not about removing every germ. It is about removing the harmful ones at the right moments.</p>
+<div class="table-wrap"><table class="pos-table"><tr><th>Practice</th><th>Purpose</th></tr>
 <tr><td>Handwashing</td><td>Removes germs picked up from surfaces before they enter the body</td></tr>
-<tr><td>Bathing/Showering</td><td>Removes sweat, dirt, and bacteria from the skin</td></tr>
-<tr><td>Brushing &amp; Flossing Teeth</td><td>Prevents tooth decay and gum disease</td></tr>
-<tr><td>Clean Clothing</td><td>Reduces bacteria and odour-causing microbes</td></tr>
-<tr><td>Covering Coughs/Sneezes</td><td>Stops airborne germs spreading to others</td></tr>
-</table>
-<h2><span class="num">3.</span>The Science of Handwashing</h2>
-<p>Soap doesn't just rinse germs away — it chemically breaks apart the outer membrane of many viruses and bacteria, destroying them. This is why washing with soap for at least 20 seconds is far more effective than rinsing with water alone.</p>
-<div class="diagram-box">
-<svg viewbox="0 0 380 160" xmlns="http://www.w3.org/2000/svg">
-<rect fill="#06244a" height="40" rx="6" width="90" x="10" y="60"></rect>
-<text fill="#FFFFFF" font-family="Source Sans 3, sans-serif" font-size="12" text-anchor="middle" x="55" y="85">Wet Hands</text>
-<rect fill="#8B0000" height="40" rx="6" width="90" x="115" y="60"></rect>
-<text fill="#FFFFFF" font-family="Source Sans 3, sans-serif" font-size="12" text-anchor="middle" x="160" y="85">Apply Soap</text>
-<rect fill="#B8963E" height="40" rx="6" width="90" x="220" y="60"></rect>
-<text fill="#FFFFFF" font-family="Source Sans 3, sans-serif" font-size="12" text-anchor="middle" x="265" y="79">Scrub 20s</text>
-<rect fill="#06244a" height="40" rx="6" width="45" x="325" y="60"></rect>
-<text fill="#FFFFFF" font-family="Source Sans 3, sans-serif" font-size="10" text-anchor="middle" x="347" y="79">Rinse</text>
-<text fill="#FFFFFF" font-family="Source Sans 3, sans-serif" font-size="10" text-anchor="middle" x="347" y="91">&amp; Dry</text>
-<line stroke="#767676" stroke-width="2" x1="105" x2="112" y1="80" y2="80"></line>
-<line stroke="#767676" stroke-width="2" x1="210" x2="217" y1="80" y2="80"></line>
-<line stroke="#767676" stroke-width="2" x1="315" x2="322" y1="80" y2="80"></line>
-</svg>
-<p class="diagram-caption">The four steps of effective handwashing recommended by health organisations worldwide.</p>
-</div>
-<h2><span class="num">4.</span>How Poor Hygiene Spreads Disease</h2>
-<p>Many common illnesses spread through simple, everyday contact rather than dramatic events. Understanding these pathways explains why hygiene habits matter so much.</p>
+<tr><td>Bathing or showering</td><td>Removes sweat, dirt and bacteria from the skin</td></tr>
+<tr><td>Brushing and cleaning between teeth</td><td>Prevents tooth decay and gum disease</td></tr>
+<tr><td>Clean clothing</td><td>Reduces bacteria and odour-causing microbes</td></tr>
+<tr><td>Covering coughs and sneezes</td><td>Stops airborne germs spreading to others</td></tr></table></div>
+<h2><span class="num">2.</span>How Poor Hygiene Spreads Disease</h2>
+<p>Many common illnesses spread through simple, everyday contact rather than dramatic events. Understanding the pathways explains why hygiene habits matter.</p>
 <ul>
-<li><strong>Direct contact</strong> — touching an infected person or shaking hands</li>
-<li><strong>Contaminated surfaces</strong> — door handles, phones, and desks can carry germs for hours</li>
-<li><strong>Airborne droplets</strong> — released when coughing, sneezing, or talking</li>
-<li><strong>Contaminated food or water</strong> — unwashed hands preparing food can transfer bacteria</li>
+<li><strong>Direct contact:</strong> touching an infected person or shaking hands.</li>
+<li><strong>Contaminated surfaces:</strong> door handles, phones and desks can carry germs for hours.</li>
+<li><strong>Airborne droplets:</strong> released when a person coughs, sneezes or talks.</li>
+<li><strong>Contaminated food or water:</strong> unwashed hands preparing food can transfer bacteria, and unsafe water can carry disease.</li>
 </ul>
-<div class="example-box">
-<div class="ex-label">Example</div>
-<p>A student touches a doorknob used by someone with a cold, then eats a snack without washing their hands. The virus transfers from hand to mouth, and within a few days the student develops symptoms — despite never having direct contact with the sick person.</p>
+<div class="example-box"><div class="ex-label">Example</div><p>A student touches a doorknob used by someone with a cold, then eats a snack without washing their hands. The virus passes from hand to mouth, and within a few days the student develops symptoms, even though they never had direct contact with the sick person.</p></div>
+<p>Scientists describe the spread of infection as a <strong>chain</strong> with six links. If any one link is broken, the infection cannot continue. Hygiene habits are some of the easiest ways to break the chain.</p>
+<div class="hy-card"><div class="hy-title">The chain of infection</div><div class="hy-sub">Each link can be broken by a different habit.</div><div class="hy-chain"><div class="hy-st" style="animation-delay:0.0s"><div class="hy-n">1</div><div><strong>The germ</strong><span>A bacterium, virus, fungus or parasite that can cause disease.</span><em>Break it: Treatment and vaccines</em></div></div><div class="hy-ar">&#8595;</div><div class="hy-st" style="animation-delay:1.7s"><div class="hy-n">2</div><div><strong>Where it lives</strong><span>A sick person, an animal, dirty water or a contaminated surface.</span><em>Break it: Clean surfaces and safe water</em></div></div><div class="hy-ar">&#8595;</div><div class="hy-st" style="animation-delay:3.4s"><div class="hy-n">3</div><div><strong>Way out</strong><span>A cough, a sneeze, stool, or an open wound.</span><em>Break it: Cover coughs and sneezes</em></div></div><div class="hy-ar">&#8595;</div><div class="hy-st" style="animation-delay:5.1s"><div class="hy-n">4</div><div><strong>How it travels</strong><span>On hands, surfaces, food, water or in airborne droplets.</span><em>Break it: Wash hands, safe food</em></div></div><div class="hy-ar">&#8595;</div><div class="hy-st" style="animation-delay:6.8s"><div class="hy-n">5</div><div><strong>Way in</strong><span>The mouth, nose, eyes or a cut in the skin.</span><em>Break it: Do not touch your face; cover cuts</em></div></div><div class="hy-ar">&#8595;</div><div class="hy-st" style="animation-delay:8.5s"><div class="hy-n">6</div><div><strong>A new person</strong><span>Someone who can become ill, especially if young, old or weak.</span><em>Break it: Vaccines, sleep, good nutrition</em></div></div></div></div>
+<h2><span class="num">3.</span>The Science of Handwashing</h2>
+<p>Soap and rubbing lift dirt and germs off the skin so that water can wash them away. Soap also chemically breaks apart the fatty outer membrane of many viruses and bacteria, which destroys them. This is why washing with soap for at least 20 seconds is far more effective than rinsing with water alone.</p>
+<div class="hy-card"><div class="hy-title">Four steps of effective handwashing</div><div class="hy-hw"><div class="hy-timer"><svg viewBox="0 0 80 80" width="96" height="96" role="img" aria-label="A 20 second timer ring"><circle cx="40" cy="40" r="34" fill="none" stroke="#EDE8E0" stroke-width="7"/><circle class="hy-ring" cx="40" cy="40" r="34" fill="none" stroke="#2F6F4E" stroke-width="7" stroke-linecap="round" transform="rotate(-90 40 40)"/><text x="40" y="45" text-anchor="middle" font-size="15" font-weight="700" fill="#06244a">20 s</text></svg><small>Scrub for at least 20 seconds</small></div><div class="hy-steps"><div class="hy-hs"><div class="hy-hn">1</div><div><strong>Wet</strong><span>Wet your hands with clean, running water.</span></div></div><div class="hy-hs"><div class="hy-hn">2</div><div><strong>Soap</strong><span>Apply enough soap to cover all surfaces of both hands.</span></div></div><div class="hy-hs"><div class="hy-hn">3</div><div><strong>Scrub for 20 seconds</strong><span>Rub palms, backs of hands, between fingers, thumbs, fingertips and under nails.</span></div></div><div class="hy-hs"><div class="hy-hn">4</div><div><strong>Rinse and dry</strong><span>Rinse well, then dry with a clean towel or let them air dry.</span></div></div></div></div></div>
+<p>The whole process, from wetting to drying, usually takes 40 to 60 seconds. Studies suggest that regular handwashing with soap can cut cases of diarrhoea by roughly a quarter to a third, and can also reduce respiratory infections such as colds.</p>
+<p><strong>When to wash your hands:</strong></p>
+<ul>
+<li>before eating, and before and while preparing food</li>
+<li>after using the toilet, or helping a child who has used it</li>
+<li>after coughing, sneezing or blowing your nose</li>
+<li>after touching animals, rubbish or anything dirty</li>
+<li>after caring for someone who is ill, and before and after treating a wound</li>
+<li>whenever your hands look dirty</li>
+</ul>
+<p>If soap and water are not available, a <strong>hand sanitiser</strong> with at least 60 percent alcohol is a good second choice. It works less well on hands that are visibly dirty or greasy, and young children should use it only with adult supervision.</p>
+<h2><span class="num">4.</span>Worked Example: Why Time Matters</h2>
+<div class="hy-calc"><h3>How fast can bacteria multiply?</h3>
+<p>Under ideal warm, moist conditions, some bacteria can divide into two roughly every 20 minutes. Let us see what that means for food left out in a warm kitchen, starting from 1 bacterium.</p>
+<div class="hy-s"><b>1</b><span>After 20 minutes: 1 × 2 = <strong>2</strong> bacteria.</span></div>
+<div class="hy-s"><b>2</b><span>After 40 minutes: 2 × 2 = <strong>4</strong>. After 60 minutes: <strong>8</strong>.</span></div>
+<div class="hy-s"><b>3</b><span>After 2 hours there have been 6 divisions: 2 × 2 × 2 × 2 × 2 × 2 = 2<sup>6</sup> = <strong>64</strong>.</span></div>
+<div class="hy-s"><b>4</b><span>After 4 hours there have been 12 divisions: 2<sup>12</sup> = <strong>4,096</strong>.</span></div>
+<p>The numbers grow very fast, which is called exponential growth. Real conditions slow this down, and many germs divide more slowly, but the idea explains why cooked food should not sit in the warmth for hours and why clean hands, clean surfaces and cold storage matter.</p>
+<div class="hy-bars"><div class="hy-bt">Bacteria from 1 cell, dividing every 20 minutes</div><div class="hy-bg"><div class="hy-col"><div class="hy-v">1</div><div class="hy-b" style="height:3px;animation-delay:0.0s"></div><div class="hy-m" style="position:static;font-size:.72rem;color:#767676;margin-top:.25rem;margin-bottom:0">0</div></div><div class="hy-col"><div class="hy-v">2</div><div class="hy-b" style="height:3px;animation-delay:0.15s"></div><div class="hy-m" style="position:static;font-size:.72rem;color:#767676;margin-top:.25rem;margin-bottom:0">20</div></div><div class="hy-col"><div class="hy-v">4</div><div class="hy-b" style="height:7px;animation-delay:0.3s"></div><div class="hy-m" style="position:static;font-size:.72rem;color:#767676;margin-top:.25rem;margin-bottom:0">40</div></div><div class="hy-col"><div class="hy-v">8</div><div class="hy-b" style="height:14px;animation-delay:0.44999999999999996s"></div><div class="hy-m" style="position:static;font-size:.72rem;color:#767676;margin-top:.25rem;margin-bottom:0">60</div></div><div class="hy-col"><div class="hy-v">16</div><div class="hy-b" style="height:28px;animation-delay:0.6s"></div><div class="hy-m" style="position:static;font-size:.72rem;color:#767676;margin-top:.25rem;margin-bottom:0">80</div></div><div class="hy-col"><div class="hy-v">32</div><div class="hy-b" style="height:55px;animation-delay:0.75s"></div><div class="hy-m" style="position:static;font-size:.72rem;color:#767676;margin-top:.25rem;margin-bottom:0">100</div></div><div class="hy-col"><div class="hy-v">64</div><div class="hy-b" style="height:110px;animation-delay:0.8999999999999999s"></div><div class="hy-m" style="position:static;font-size:.72rem;color:#767676;margin-top:.25rem;margin-bottom:0">120</div></div></div><div class="hy-bx">Minutes</div></div>
+<p><strong>Try it yourself:</strong> how many bacteria would there be after 3 hours? <em>Answer: 3 hours = 9 divisions, so 2<sup>9</sup> = 512.</em></p></div>
+<h2><span class="num">5.</span>Caring for Your Body</h2>
+<div class="table-wrap"><table class="pos-table"><tr><th>Area</th><th>Good habits</th></tr>
+<tr><td>Skin</td><td>Bathe or shower regularly, especially after sweating or sport. Body odour comes from bacteria breaking down sweat, and it often becomes stronger in puberty.</td></tr>
+<tr><td>Hair</td><td>Wash regularly. Do not share combs, brushes or hats, which helps prevent head lice, which are not a sign of being dirty.</td></tr>
+<tr><td>Nails</td><td>Keep them short and clean. Germs collect under nails and are easily carried to the mouth.</td></tr>
+<tr><td>Teeth</td><td>Brush twice a day for two minutes with fluoride toothpaste, clean between teeth daily, limit sugary snacks, and visit a dentist for check-ups.</td></tr>
+<tr><td>Clothes</td><td>Wear clean clothes, change underwear and socks daily, and dry clothes fully.</td></tr>
+<tr><td>Feet</td><td>Wash daily and dry well between the toes, because moist skin allows fungal infections such as athlete's foot.</td></tr></table></div>
+<h2><span class="num">6.</span>Coughs, Sneezes and Staying Home When Ill</h2>
+<p>When you cough or sneeze, tiny droplets can travel and land on other people and on surfaces. Cough or sneeze into a tissue or into the bend of your elbow, not into your hands. Throw tissues away straight after use and wash your hands. If you have a fever or a cough that spreads easily, staying at home when you can protects classmates and teachers.</p>
+<h2><span class="num">7.</span>Food and Water Hygiene</h2>
+<p>The World Health Organization teaches five keys to safer food:</p>
+<ul>
+<li><strong>Keep clean:</strong> wash your hands, and keep kitchen surfaces and utensils clean.</li>
+<li><strong>Separate raw and cooked food:</strong> use different boards and knives for raw meat and ready-to-eat food.</li>
+<li><strong>Cook thoroughly:</strong> especially meat, poultry, eggs and fish.</li>
+<li><strong>Keep food at safe temperatures:</strong> do not leave cooked food out for hours, and keep perishable food in the fridge.</li>
+<li><strong>Use safe water and raw materials:</strong> wash fruit and vegetables, and boil or treat water when you are unsure it is safe.</li>
+</ul>
+<h2><span class="num">8.</span>Hygiene During Puberty</h2>
+<p>During puberty the sweat glands become more active and the skin and hair change, so daily washing, clean clothes and a regular bath or shower become more important. Girls who have periods should change their pads or other materials regularly, usually every 4 to 8 hours, wash their hands before and after, and keep reusable cloth clean and fully dry. Periods are a normal part of growing up, and a trusted adult or doctor can answer any questions.</p>
+<h2><span class="num">9.</span>Hygiene at School and in Shared Spaces</h2>
+<p>Schools are places where germs pass easily from person to person. Simple habits help a lot: wash your hands after sport, playtime and the toilet, do not share towels, drinks, spoons or toothbrushes, and wash your own water bottle every day. Clean your phone screen from time to time, because phones go everywhere with you and are rarely washed. If you have a cut or sore, cover it with a clean dressing. Keeping desks and shared equipment tidy also helps, because clean surroundings give germs fewer places to live.</p>
+<h2><span class="num">10.</span>Hygiene Beyond the Individual</h2>
+<p>Good hygiene protects not only you but also everyone around you, especially those who are more vulnerable to infection, such as young children, elderly people and those with weakened immune systems. Clean water, safe toilets and handwashing facilities are among the most important public health tools in the world, because they prevent many illnesses before they start. Hygiene works together with vaccines. It does not replace them.</p>
+<div class="real-world-box"><div class="rw-label">Real-World Example</div><p>During disease outbreaks, health authorities consistently emphasise handwashing and covering coughs as first-line defences. This is not because they are complicated but because they are proven to interrupt the chain of transmission at almost no cost, making them among the most powerful public health tools available to everyone.</p></div>
+<h2><span class="num">11.</span>Common Hygiene Myths</h2>
+<div class="hy-myths">
+<div class="hy-myth"><div class="m"><b>Myth</b>Rinsing with water is enough.</div><div class="f"><b>Fact</b>Soap and 20 seconds of scrubbing remove far more germs than water alone.</div></div>
+<div class="hy-myth"><div class="m"><b>Myth</b>Hand sanitiser can replace handwashing.</div><div class="f"><b>Fact</b>Sanitiser is a good backup, but soap and water work better, especially on dirty hands.</div></div>
+<div class="hy-myth"><div class="m"><b>Myth</b>The more germs you kill, the healthier you are.</div><div class="f"><b>Fact</b>Most germs are harmless or helpful. Hygiene targets the harmful ones at the right moments.</div></div>
+<div class="hy-myth"><div class="m"><b>Myth</b>Only people who look dirty spread germs.</div><div class="f"><b>Fact</b>Clean-looking hands and surfaces can still carry germs, so habits matter more than appearance.</div></div>
 </div>
-<h2><span class="num">5.</span>Hygiene Beyond the Individual</h2>
-<p>Good hygiene doesn't just protect you — it protects everyone around you, especially those who are more vulnerable to infection, such as young children, elderly people, and those with weakened immune systems.</p>
-<div class="real-world-box">
-<div class="rw-label">Real-World Example</div>
-<p>During disease outbreaks, health authorities consistently emphasise handwashing and covering coughs as first-line defences — not because they are complicated, but because they are proven to interrupt the chain of transmission at almost no cost, making them among the most powerful public health tools available to everyone.</p>
-</div>
-<h2>A Closing Thought</h2>
-<p>Personal hygiene may seem like a small, everyday habit, but its impact on public health has been enormous throughout history. Simple, consistent actions — washing hands, covering coughs, keeping clean — remain one of the most effective ways to prevent disease for yourself and your community.</p>
+<div class="hy-key"><div class="kp">Key points to remember</div><ul>
+<li>Hygiene means keeping the body clean to stop harmful germs spreading.</li>
+<li>Disease spreads through contact, surfaces, droplets, and food or water.</li>
+<li>Wash hands with soap for at least 20 seconds at the right moments.</li>
+<li>Cover coughs and sneezes, keep food safe and look after your teeth, skin and clothes.</li>
+<li>Hygiene protects you and the people around you.</li>
+</ul></div>
+<div class="hy-tp"><div class="tl">For teachers and parents</div><p><strong>Activity:</strong> put a little glitter or flour on one student's hands, let students shake hands or touch objects, and see how far it spreads. Then practise the four handwashing steps with a timer.</p><p><strong>Please note:</strong> this article is general education and not medical advice. For illness, symptoms or skin and dental problems, please see a doctor or dentist.</p></div>
+<div class="further-box"><div class="fr-label">Further Reading</div><ul>
+<li><a href="https://www.cdc.gov/handwashing/" rel="noopener" target="_blank">US CDC: Handwashing</a><span class="src-note">When and how to wash your hands</span></li>
+<li><a href="https://www.who.int/campaigns/world-hand-hygiene-day" rel="noopener" target="_blank">World Health Organization: Hand Hygiene</a><span class="src-note">Global hand hygiene information</span></li>
+<li><a href="https://www.who.int/news-room/fact-sheets/detail/food-safety" rel="noopener" target="_blank">World Health Organization: Food Safety</a><span class="src-note">The five keys to safer food</span></li>
+</ul></div>
 <!-- QUIZ SECTION -->
 <div class="quiz-section">
 <div class="section-eyebrow">Test Your Understanding</div>
@@ -1344,23 +1443,21 @@ footer.footer {
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',setup); else setup();
 })();
 </script>
-<footer class="edusambam-unified-footer" aria-label="EDUSAMBAM site footer">
+<footer aria-label="EDUSAMBAM site footer" class="edusambam-unified-footer">
 <div class="footer-top">
 <div class="footer-brand">
 <div class="edusambam-footer-brand-row">
-<a class="edusambam-footer-logo-link" href="index.html" aria-label="EDUSAMBAM home">
+<a aria-label="EDUSAMBAM home" class="edusambam-footer-logo-link" href="index.html">
 <img alt="EDUSAMBAM" class="edusambam-brand-mark edusambam-footer-logo" src="logo-icon-full-white.png" style="width:auto;height:64px;max-width:240px;object-fit:contain;background:none;border-radius:0;"/>
 </a>
 </div>
 <p class="edusambam-footer-statement">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</p>
-<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a></div>
+<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a><a aria-label="EDUSAMBAM on YouTube" href="https://youtube.com/@edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></div>
 </div>
-<div class="footer-col"><h4>Learning</h4><ul><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li></ul></div>
+<div class="footer-col"><h4>Learning Areas</h4><ul><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ Tests</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li></ul></div>
 <div class="footer-col"><h4>Practice &amp; Assessment</h4><ul>
 <li><a href="index.html#interactive-activities">Interactive Activities</a></li>
 <li><a href="assessment-arena.html">ASSESSMENT ARENA</a></li>
-<li><a href="assessment-arena.html">What Is Assessment?</a></li>
-<li><a href="index.html#about">Learn Your Way</a></li>
 <li><a href="index.html#resources">Resources &amp; Downloads</a></li>
 </ul></div>
 <div class="footer-col"><h4>About EDUSAMBAM</h4><ul>
@@ -1370,6 +1467,7 @@ footer.footer {
 <li><a href="contact.html">Contact Us</a></li>
 <li><a href="mailto:feedback.edusambam@gmail.com?subject=EDUSAMBAM%20Feedback">Give Feedback</a></li>
 <li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+<li><a href="about.html">About EDUSAMBAM</a></li>
 <li><a href="privacy-policy.html">Privacy Policy</a></li>
 </ul></div>
 </div>

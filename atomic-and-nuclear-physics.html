@@ -1,0 +1,1771 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<!-- Google Analytics 4 — EDUSAMBAM -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Y35DW0V4HQ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-Y35DW0V4HQ');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Atomic and Nuclear Physics: Radioactivity and Half-Life</title>
+<link href="https://edusambam.com/atomic-and-nuclear-physics.html" rel="canonical"/>
+<meta content="Learn atomic structure, isotopes, alpha, beta and gamma radiation, decay equations, half-life, fission, fusion and radiation safety with worked examples." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --red: #0b4ea2;
+    --red-mid: #0b55a5;
+    --red-lt:    #eef5fc;
+    --navy:      #06244a;
+    --navy-mid:  #0b4ea2;
+    --gold:      #d4a017;
+    --gold-lt:   #fff7dc;
+    --cream:     #f7faff;
+    --white:     #FFFFFF;
+    --ink:       #142033;
+    --slate:     #607086;
+    --muted:     #607086;
+    --border:    #dce7f4;
+    --border-lt: #eef5fc;
+    --radius:    4px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--ink);
+    background: var(--white);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── TOP BAR ── */
+  .top-bar {
+    background: var(--navy);
+    padding: 0.45rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .top-bar p {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.03em;
+  }
+  .top-bar-links { display: flex; gap: 1.5rem; list-style: none; }
+  .top-bar-links a {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+  .top-bar-links a:hover { color: white; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 200;
+    background: var(--navy);
+    border-bottom: 3px solid var(--red);
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  }
+  .nav-brand { display: flex; flex-direction: column; line-height: 1; text-decoration: none; }
+  .nav-brand-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 0.01em;
+  }
+  .nav-brand-name span { color: var(--red); }
+  .nav-brand-sub {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.65);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 0.25rem;
+  }
+  .nav-links { display: flex; gap: 0; list-style: none; }
+  .nav-links a {
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.75);
+    padding: 0 1.1rem;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: white; }
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+  }
+
+  /* ── DIAGRAM BOX (for CSS/SVG illustrations) ── */
+  .diagram-box {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin: 1.5rem 0 2rem;
+    text-align: center;
+  }
+  .diagram-box svg { max-width: 100%; height: auto; }
+  .diagram-caption {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 0.8rem;
+    font-style: italic;
+  }
+  .bar-chart { display: flex; align-items: flex-end; gap: 0.9rem; height: 180px; padding: 0 0.5rem; justify-content: center; }
+  .bar-chart .bar-col { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; width: 60px; }
+  .bar-chart .bar { width: 100%; background: var(--gold); border-radius: 3px 3px 0 0; position: relative; }
+  .bar-chart .bar.red { background: var(--red); }
+  .bar-chart .bar-val { font-size: 0.75rem; font-weight: 600; color: var(--ink); margin-bottom: 0.3rem; }
+  .bar-chart .bar-label { font-size: 0.72rem; color: var(--slate); margin-top: 0.5rem; text-align: center; }
+
+  /* ── ARTICLE HERO ── */
+  .article-hero {
+    background: linear-gradient(135deg,#06244a,#0b4ea2);
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+  }
+  .breadcrumb {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 1.1rem;
+    letter-spacing: 0.02em;
+  }
+  .breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--gold); }
+  .article-hero-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(184,150,62,0.4);
+    padding: 0.35rem 0.9rem;
+    border-radius: 30px;
+    margin-bottom: 1.25rem;
+  }
+  .article-hero h1 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 2.4rem;
+    color: white;
+    max-width: 760px;
+    margin: 0 auto 1rem;
+    line-height: 1.25;
+  }
+  .article-hero p.sub {
+    color: rgba(255,255,255,0.6);
+    max-width: 620px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.02rem;
+  }
+  .article-hero-meta {
+    display: flex; justify-content: center; gap: 0.9rem;
+    font-size: 0.8rem; color: rgba(255,255,255,0.45);
+    flex-wrap: wrap;
+  }
+
+  /* ── ARTICLE BODY ── */
+  .article-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+  .article-wrap h2 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 1.65rem;
+    color: var(--navy);
+    margin: 2.6rem 0 1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--border-lt);
+  }
+  .article-wrap h2 span.num {
+    color: var(--red);
+    margin-right: 0.5rem;
+    font-style: italic;
+  }
+  .article-wrap p { color: var(--slate); margin-bottom: 1rem; font-size: 1.02rem; }
+  .article-wrap ul { margin: 0 0 1.2rem 1.4rem; color: var(--slate); }
+  .article-wrap li { margin-bottom: 0.5rem; }
+  .article-wrap strong { color: var(--ink); }
+  .lead {
+    font-size: 1.15rem;
+    color: var(--ink);
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    border-left: 3px solid var(--gold);
+    padding-left: 1.2rem;
+    margin: 1.5rem 0 2rem;
+  }
+  .example-box {
+    background: var(--gold-lt);
+    border: 1px solid rgba(184,150,62,0.35);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 1.3rem 1.5rem;
+    margin: 1.3rem 0 1.8rem;
+  }
+  .example-box .ex-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.5rem;
+  }
+  .example-box p { color: var(--ink); margin-bottom: 0.4rem; font-size: 0.98rem; }
+  .example-box p:last-child { margin-bottom: 0; }
+
+  .real-world-box {
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 1.6rem 1.7rem;
+    margin: 2.4rem 0;
+  }
+  .real-world-box .rw-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.7rem;
+  }
+  .real-world-box p { color: rgba(255,255,255,0.8); margin-bottom: 0; font-size: 1rem; }
+
+  .further-reading-box {
+    background: var(--cream);
+    border: 1px solid rgba(184,150,62,0.35);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.5rem;
+    margin: 2.4rem 0;
+  }
+  .further-reading-box .fr-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.7rem;
+  }
+  .further-reading-box ul {
+    list-style: none;
+    margin: 0;
+  }
+  .further-reading-box li {
+    margin-bottom: 0.5rem;
+    font-size: 0.82rem;
+  }
+  .further-reading-box li:last-child { margin-bottom: 0; }
+  .further-reading-box a {
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 0.82rem;
+    border-bottom: 1px solid rgba(184,150,62,0.3);
+    transition: border-color 0.2s;
+  }
+  .further-reading-box a:hover { border-color: var(--gold); }
+  .further-reading-box .fr-source {
+    color: var(--muted);
+    font-size: 0.78rem;
+  }
+
+
+
+  .table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+  table.pos-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+  table.pos-table th {
+    background: var(--navy);
+    color: white;
+    text-align: left;
+    padding: 0.7rem 0.9rem;
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+  }
+  table.pos-table td {
+    padding: 0.7rem 0.9rem;
+    border-bottom: 1px solid var(--border-lt);
+    color: var(--slate);
+  }
+  table.pos-table tr:nth-child(even) td { background: var(--cream); }
+
+  /* ── QUIZ ── */
+  .quiz-section {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem 1.7rem 1.5rem;
+    margin-top: 3rem;
+  }
+  .quiz-section .section-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.4rem;
+  }
+  .quiz-section h2 {
+    border: none; margin: 0 0 0.4rem; padding: 0;
+  }
+  .quiz-intro { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.6rem; }
+  .quiz-item {
+    background: var(--white);
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .quiz-q {
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.7rem;
+    font-size: 1rem;
+  }
+  .quiz-q .qnum { color: var(--red); margin-right: 0.4rem; }
+  .quiz-options { list-style: none; margin: 0 0 0.9rem; }
+  .quiz-options li {
+    padding: 0.4rem 0;
+    color: var(--slate);
+    font-size: 0.96rem;
+    padding-left: 1.4rem;
+    position: relative;
+  }
+  .quiz-options li::before {
+    content: "";
+    position: absolute; left: 0; top: 0.85rem;
+    width: 6px; height: 6px;
+    background: var(--border);
+    border-radius: 50%;
+  }
+  .show-answer-btn {
+    background: var(--navy);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 0.5rem 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .show-answer-btn:hover { background: var(--navy-mid); }
+  .quiz-answer {
+    display: none;
+    margin-top: 0.9rem;
+    background: var(--gold-lt);
+    border-left: 3px solid var(--gold);
+    padding: 0.7rem 1rem;
+    font-size: 0.92rem;
+    color: var(--ink);
+    border-radius: var(--radius);
+  }
+  .quiz-answer.visible { display: block; }
+  .quiz-answer strong { color: var(--red); }
+
+  .answer-key-toggle {
+    display: block;
+    width: 100%;
+    background: var(--red);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding: 0.9rem 1rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    margin-top: 0.6rem;
+    transition: background 0.2s;
+  }
+  .answer-key-toggle:hover { background: var(--red-mid); }
+
+  .article-footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-lt);
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .article-footer-nav a {
+    text-decoration: none;
+    color: var(--red);
+    font-weight: 600;
+    font-size: 0.92rem;
+  }
+  .article-footer-nav a:hover { text-decoration: underline; }
+
+  @media (max-width: 700px) {
+    .article-hero h1 { font-size: 1.7rem; }
+    .article-wrap { padding: 2rem 1.25rem 3rem; }
+  }
+  @media (max-width: 680px) {
+    .top-bar { display: none; }
+    nav {
+      padding: 0 1rem;
+      height: 68px;
+      border-bottom-width: 2px;
+    }
+    .nav-links { display: none; }
+    .nav-brand-name {
+      font-size: 1.35rem;
+      white-space: nowrap;
+    }
+    .nav-brand-sub {
+      font-size: 0.62rem;
+      letter-spacing: 0.07em;
+    }
+    .footer-top { grid-template-columns: 1fr; gap: 2rem; padding: 2rem 1.25rem; }
+    footer { padding: 2rem 1.25rem 0; }
+  }
+
+  /* ── FOOTER (copied from site) ── */
+  footer { background: var(--navy); padding: 3.5rem 3rem 0; }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 2.5rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .footer-brand-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+  }
+  .footer-brand-name span { color: var(--red); }
+  .footer-desc { color: rgba(255,255,255,0.45); font-size: 0.9rem; margin-top: 0.8rem; max-width: 320px; }
+  .footer-col h4 {
+    font-family: 'EB Garamond', serif;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 0.7rem; }
+  .footer-col a {
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.2s;
+  }
+  .footer-col a:hover { color: var(--gold); }
+  .footer-bottom {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer-bottom p { color: rgba(255,255,255,0.35); font-size: 0.8rem; }
+  .footer-bottom-links { display: flex; gap: 1.3rem; list-style: none; }
+  .footer-bottom-links a { color: rgba(255,255,255,0.35); text-decoration: none; font-size: 0.8rem; }
+  .footer-bottom-links a:hover { color: rgba(255,255,255,0.6); }
+  @media (max-width: 900px) {
+    .footer-top { grid-template-columns: 1fr 1fr; }
+    footer { padding: 2rem 1.25rem 0; }
+  }
+
+  /* SCORED QUIZ (click-to-highlight + real scoring) */
+  .squiz-progress {
+    background: var(--cream);
+    border-radius: 30px;
+    height: 8px;
+    overflow: hidden;
+    margin-bottom: 0.4rem;
+  }
+  .squiz-progress-fill {
+    background: var(--gold);
+    height: 100%;
+    width: 0%;
+    transition: width 0.25s ease;
+  }
+  .squiz-progress-label {
+    font-size: 0.78rem;
+    color: var(--muted);
+    text-align: right;
+    margin-bottom: 1.3rem;
+  }
+  .squiz-item {
+    background: var(--white);
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .squiz-q {
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+  }
+  .squiz-q .qnum { color: var(--red); margin-right: 0.4rem; }
+  .squiz-option {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .squiz-option:hover { border-color: var(--gold); }
+  .squiz-option input[type="radio"] { accent-color: var(--red); width: 16px; height: 16px; flex-shrink: 0; }
+  .squiz-option label { cursor: pointer; font-size: 0.94rem; color: var(--slate); flex: 1; }
+  .squiz-option.selected { border-color: var(--red); background: rgba(139,0,0,0.04); }
+  .squiz-option.correct-answer { border-color: #2e7d32; background: rgba(46,125,50,0.08); }
+  .squiz-option.wrong-answer { border-color: var(--red); background: rgba(139,0,0,0.08); }
+  .squiz-submit-btn {
+    display: block;
+    width: 100%;
+    background: var(--red);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.98rem;
+    font-weight: 600;
+    padding: 0.9rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    margin-top: 0.6rem;
+    transition: background 0.2s;
+  }
+  .squiz-submit-btn:hover { background: var(--red-mid); }
+  .squiz-submit-btn:disabled { background: var(--border); cursor: not-allowed; }
+  .squiz-results {
+    display: none;
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 2rem 1.6rem;
+    text-align: center;
+    margin-bottom: 1.8rem;
+  }
+  .squiz-results.visible { display: block; }
+  .squiz-results .squiz-score-big {
+    font-family: 'EB Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .squiz-results .squiz-score-label { color: rgba(255,255,255,0.7); font-size: 0.98rem; margin-bottom: 1rem; }
+  .squiz-results .squiz-score-tier {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    border-radius: 30px;
+    background: rgba(184,150,62,0.15);
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+  }
+  .squiz-retake-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 0.65rem 1.4rem;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  .squiz-retake-btn:hover { background: rgba(255,255,255,0.1); }
+</style>
+<style id="edusambam-mark-style">
+.mark{width:48px;height:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px;border-radius:14px;background:#eef6ff;box-shadow:0 2px 7px rgba(8,47,99,.10);flex:0 0 48px}
+.mark i{display:block;border-radius:50%;background:#0b4ea2;min-width:0;min-height:0}
+.mark i:nth-child(5){background:#d4a017}
+</style>
+<style id="edusambam-reader-style">
+.mark{width:48px;height:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px;border-radius:14px;background:#eef6ff;box-shadow:0 2px 7px rgba(8,47,99,.10);flex:0 0 48px}.mark i{display:block;border-radius:50%;background:#0b4ea2;min-width:0;min-height:0}.mark i:nth-child(5){background:#d4a017}.edusambam-reader{max-width:980px;margin:1.2rem auto 0;padding:1rem 1.1rem;border:1px solid #d7e4ef;border-radius:14px;background:linear-gradient(135deg,#f7fbff,#fff);box-shadow:0 6px 18px rgba(11,45,92,.08)}.edusambam-reader strong{display:block;color:#0b55a5;font-size:.9rem;letter-spacing:.04em}.edusambam-reader .reader-slogan{color:#a87900;font-weight:900;margin-top:.25rem;font-size:.82rem}.edusambam-reader .reader-help{color:#607086;font-size:.8rem;margin:.3rem 0 .7rem}.edusambam-reader .reader-controls{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}.edusambam-reader button,.edusambam-reader select{border:1px solid #c9d9e8;background:#fff;color:#153b6e;border-radius:8px;padding:.48rem .65rem;font-weight:800;cursor:pointer}.edusambam-reader button:first-child{background:#0b55a5;color:#fff;border-color:#0b55a5}.edusambam-reader .reader-status{display:block;color:#607086;font-size:.75rem;margin-top:.55rem}.edusambam-reader .reader-progress{height:4px;background:#e4edf6;border-radius:99px;margin-top:.6rem;overflow:hidden}.edusambam-reader .reader-progress span{display:block;width:0;height:100%;background:#d4a017;transition:width .2s linear}@media(max-width:600px){.edusambam-reader{margin-left:0;margin-right:0}.edusambam-reader .reader-controls button,.edusambam-reader .reader-controls select{flex:1;min-width:75px}}
+</style>
+<style id="edusambam-frame-final">html{box-sizing:border-box;max-width:100%;overflow-x:hidden}*,*:before,*:after{box-sizing:inherit}body{max-width:100%;min-width:0;overflow-x:hidden;border:3px solid #d4a017;box-sizing:border-box}img,svg,video,iframe{max-width:100%;height:auto}h1,h2,h3,h4,p,a,span,small,b,strong{overflow-wrap:anywhere}section,header,footer,main,nav{max-width:100%;box-sizing:border-box}@media(max-width:600px){body{border-width:3px}h1,h2,h3{margin-left:0!important;margin-right:0!important}}</style><style id="edusambam-unified-nav-css">
+/* EDUSAMBAM unified navigation */
+.edusambam-nav{
+  position:sticky;top:0;z-index:10000;
+  min-height:72px;box-sizing:border-box;
+  display:flex;align-items:center;
+  padding:10px 20px;
+  background:#fff;border-bottom:1px solid #e5e7eb;
+  font-family:inherit;
+}
+.edusambam-nav-inner{
+  width:100%;max-width:1400px;margin:0 auto;
+  display:flex;align-items:center;gap:18px;min-width:0;
+}
+.edusambam-brand{
+  display:flex;align-items:center;gap:10px;min-width:0;
+  text-decoration:none;color:#0b3b66;flex:0 1 auto;
+}
+.edusambam-brand-copy{display:flex;flex-direction:column;line-height:1;min-width:0;overflow:hidden}
+.edusambam-brand-name{
+  font-family:"EB Garamond",Georgia,serif;
+  font-size:1.6rem;font-weight:600;letter-spacing:.01em;
+  color:#0b3b66;white-space:nowrap;
+}
+.edusambam-brand-subtitle{
+  margin-top:4px;
+  font-size:.62rem;font-weight:600;letter-spacing:.08em;
+  color:#64748b;white-space:nowrap;
+}
+.edusambam-nav-links{
+  display:flex;align-items:center;gap:14px;margin-left:auto;
+  list-style:none;padding:0;margin-top:0;margin-bottom:0;
+}
+.edusambam-nav-links a{
+  color:#334155;text-decoration:none;font-size:.9rem;
+  padding:8px 5px;border-radius:7px;white-space:nowrap;
+}
+.edusambam-nav-links a:hover,.edusambam-nav-links a:focus-visible{
+  color:#0b3b66;background:#f3f6f9;outline:none;
+}
+.edusambam-search-btn,.edusambam-menu-btn{
+  appearance:none;border:1px solid #d8dee6;background:#fff;
+  color:#0b3b66;border-radius:9px;min-width:40px;height:40px;
+  display:inline-flex;align-items:center;justify-content:center;
+  cursor:pointer;font-size:1.15rem;flex:0 0 auto;
+}
+.edusambam-search-btn:hover,.edusambam-menu-btn:hover,
+.edusambam-search-btn:focus-visible,.edusambam-menu-btn:focus-visible{
+  background:#f3f6f9;border-color:#b9c6d4;outline:2px solid rgba(214,162,58,.35);
+  outline-offset:2px;
+}
+.edusambam-menu-btn{display:none;font-size:1.2rem}
+.edusambam-mobile-menu{
+  display:none;position:fixed;top:72px;left:0;right:0;
+  z-index:9999;background:#fff;border-bottom:1px solid #e5e7eb;
+  box-shadow:0 8px 24px rgba(15,23,42,.12);
+  max-height:calc(100vh - 72px);overflow:auto;
+}
+.edusambam-mobile-menu.open{display:block}
+.edusambam-mobile-menu ul{list-style:none;margin:0;padding:10px 16px 16px}
+.edusambam-mobile-menu a{
+  display:block;padding:12px 10px;color:#0b3b66;text-decoration:none;
+  border-radius:8px;font-size:.98rem;
+}
+.edusambam-mobile-menu a:hover,.edusambam-mobile-menu a:focus-visible{
+  background:#f3f6f9;outline:none;
+}
+.edusambam-search-panel{
+  display:none;position:fixed;top:72px;left:0;right:0;z-index:9998;
+  background:#fff;border-bottom:1px solid #e5e7eb;
+  box-shadow:0 8px 24px rgba(15,23,42,.10);padding:12px 16px;
+}
+.edusambam-search-panel.open{display:block}
+.edusambam-search-wrap{max-width:900px;margin:0 auto;position:relative}
+.edusambam-search-input{
+  width:100%;box-sizing:border-box;padding:12px 14px;
+  border:1px solid #cbd5e1;border-radius:9px;font-size:1rem;
+}
+.edusambam-search-results{margin-top:8px;max-height:50vh;overflow:auto}
+.edusambam-search-results a{
+  display:block;padding:9px 10px;border-radius:7px;color:#0b3b66;text-decoration:none;
+}
+.edusambam-search-results a:hover{background:#f3f6f9}
+@media (max-width:1100px){
+  .edusambam-nav-links{gap:8px}
+  .edusambam-nav-links a{font-size:.84rem;padding-inline:3px}
+}
+@media (max-width:1100px){
+  .edusambam-nav{min-height:68px;padding:8px 14px}
+  .edusambam-brand-mark{width:44px;height:44px;flex-basis:44px}
+  .edusambam-brand-mark span{width:12px;height:12px}
+  .edusambam-brand-mark .c3,.edusambam-brand-mark .c6{left:16px}
+  .edusambam-brand-name{font-size:1.42rem}
+  .edusambam-brand-subtitle{font-size:.52rem;letter-spacing:.06em}
+  .edusambam-nav-links{display:none}
+  .edusambam-menu-btn{display:inline-flex}
+  .edusambam-search-btn{margin-left:auto}
+  .edusambam-mobile-menu{top:68px;max-height:calc(100vh - 68px)}
+  .edusambam-search-panel{top:68px}
+}
+@media (max-width:480px){
+  .edusambam-nav-inner{gap:8px}
+  .edusambam-brand{gap:7px}
+  .edusambam-brand-mark{width:40px;height:40px;flex-basis:40px}
+  .edusambam-brand-mark span{width:11px;height:11px}
+  .edusambam-brand-mark .c3,.edusambam-brand-mark .c6{left:14.5px}
+  .edusambam-brand-name{font-size:1.28rem}
+  .edusambam-brand-subtitle{font-size:.46rem;letter-spacing:.045em}
+  .edusambam-search-btn,.edusambam-menu-btn{min-width:38px;height:38px}
+}
+</style><style id="edusambam-logo-visibility-fix">
+/* EDUSAMBAM logo visibility fix */
+.edusambam-brand-mark{
+  position:relative !important;
+  display:inline-block !important;
+  width:48px !important;
+  height:48px !important;
+  min-width:48px !important;
+  flex:0 0 48px !important;
+  overflow:visible !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+.edusambam-brand-mark > span{
+  position:absolute !important;
+  display:block !important;
+  width:13px !important;
+  height:13px !important;
+  min-width:13px !important;
+  min-height:13px !important;
+  padding:0 !important;
+  margin:0 !important;
+  border:0 !important;
+  border-radius:50% !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  box-sizing:border-box !important;
+}
+.edusambam-brand-mark > .c1{left:0 !important;top:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c2{right:0 !important;top:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c3{left:17.5px !important;top:8px !important;background:#d6a23a !important;}
+.edusambam-brand-mark > .c4{left:0 !important;bottom:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c5{right:0 !important;bottom:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c6{left:17.5px !important;bottom:8px !important;background:#d6a23a !important;}
+
+@media (max-width:1100px){
+  .edusambam-brand-mark{
+    width:44px !important;height:44px !important;min-width:44px !important;flex-basis:44px !important;
+  }
+  .edusambam-brand-mark > span{
+    width:12px !important;height:12px !important;min-width:12px !important;min-height:12px !important;
+  }
+  .edusambam-brand-mark > .c3,.edusambam-brand-mark > .c6{left:16px !important;}
+}
+@media (max-width:480px){
+  .edusambam-brand-mark{
+    width:40px !important;height:40px !important;min-width:40px !important;flex-basis:40px !important;
+  }
+  .edusambam-brand-mark > span{
+    width:11px !important;height:11px !important;min-width:11px !important;min-height:11px !important;
+  }
+  .edusambam-brand-mark > .c3,.edusambam-brand-mark > .c6{left:14.5px !important;}
+}
+</style>
+<link href="favicon.webp" rel="icon" type="image/webp"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<style id="edusambam-menu-extra-css">
+.edusambam-mobile-menu .edusambam-menu-extra:first-of-type{
+  margin-top:8px;padding-top:8px;border-top:1px solid #e5e7eb;
+}
+.edusambam-mobile-menu .edusambam-menu-extra a{
+  font-weight:600;
+}
+</style>
+<style id="edusambam-article-footer-theme">
+.edusambam-article-footer{
+  background:linear-gradient(135deg,#06244a,#0b4ea2)!important;
+}
+</style>
+<style id="edusambam-unified-footer-fix">
+/* EDUSAMBAM unified footer: same visual language and neutral brand statement across all pages. */
+.edusambam-unified-footer,
+.edusambam-article-footer,
+footer.footer {
+  background: linear-gradient(135deg, #06244a, #0b4ea2) !important;
+  color: #fff !important;
+  border-top: 3px solid #d4a017 !important;
+  box-sizing: border-box;
+}
+.edusambam-footer-statement{margin:.25rem 0 0 !important;color:rgba(255,255,255,.88) !important;font-size:.78rem !important;letter-spacing:.08em !important;text-transform:uppercase !important}
+.edusambam-unified-footer .footer-brand-name,.edusambam-article-footer .footer-brand-name{color:#fff !important}
+</style>
+<style id="edusambam-final-unified-footer">
+/* Final unified footer — same structure, visual language, and approved nav logo on every page. */
+.edusambam-unified-footer{
+  width:100% !important;
+  margin:0 !important;
+  padding:44px 0 0 !important;
+  background:linear-gradient(135deg,#06244a,#0b4ea2) !important;
+  color:#d6e4f2 !important;
+  border-top:4px solid #d4a017 !important;
+  box-sizing:border-box !important;
+  overflow:hidden !important;
+}
+.edusambam-unified-footer .footer-top{
+  width:min(1180px,92%) !important;
+  max-width:1180px !important;
+  margin:0 auto !important;
+  padding:0 0 34px !important;
+  display:grid !important;
+  grid-template-columns:1.5fr repeat(3,1fr) !important;
+  gap:34px !important;
+  box-sizing:border-box !important;
+}
+.edusambam-unified-footer .footer-brand{min-width:0 !important;}
+.edusambam-footer-brand-row{margin:0 0 10px !important;}
+.edusambam-footer-logo-link{
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:12px !important;
+  min-width:0 !important;
+  color:#fff !important;
+  text-decoration:none !important;
+}
+.edusambam-footer-logo{
+  width:48px !important;
+  height:48px !important;
+  min-width:48px !important;
+  flex:0 0 48px !important;
+}
+.edusambam-footer-logo > span{width:13px !important;height:13px !important;min-width:13px !important;min-height:13px !important;}
+.edusambam-footer-logo > .c3,.edusambam-footer-logo > .c6{left:17.5px !important;}
+.edusambam-footer-brand-name{
+  color:#fff !important;
+  font-family:"EB Garamond",Georgia,serif !important;
+  font-size:1.65rem !important;
+  font-weight:600 !important;
+  letter-spacing:.01em !important;
+  line-height:1 !important;
+  white-space:nowrap !important;
+}
+.edusambam-unified-footer .edusambam-footer-statement{
+  margin:0 !important;
+  max-width:360px !important;
+  color:rgba(255,255,255,.88) !important;
+  font-size:.78rem !important;
+  line-height:1.7 !important;
+  letter-spacing:.08em !important;
+  text-transform:uppercase !important;
+}
+.edusambam-unified-footer .footer-col{min-width:0 !important;}
+.edusambam-unified-footer .footer-col h4{
+  margin:0 0 12px !important;
+  color:#fff !important;
+  font-family:"EB Garamond",Georgia,serif !important;
+  font-size:1rem !important;
+  font-weight:600 !important;
+  line-height:1.25 !important;
+}
+.edusambam-unified-footer .footer-col ul{
+  list-style:none !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+.edusambam-unified-footer .footer-col li{margin:0 0 8px !important;padding:0 !important;}
+.edusambam-unified-footer .footer-col a{
+  color:rgba(255,255,255,.68) !important;
+  text-decoration:none !important;
+  font-size:.84rem !important;
+  line-height:1.5 !important;
+  overflow-wrap:anywhere !important;
+}
+.edusambam-unified-footer .footer-col a:hover,
+.edusambam-unified-footer .footer-col a:focus-visible{color:#fff !important;}
+.edusambam-unified-footer .footer-bottom{
+  width:min(1180px,92%) !important;
+  max-width:1180px !important;
+  margin:0 auto !important;
+  padding:18px 0 22px !important;
+  border-top:1px solid rgba(255,255,255,.12) !important;
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:center !important;
+  gap:20px !important;
+  box-sizing:border-box !important;
+}
+.edusambam-unified-footer .footer-bottom p{
+  margin:0 !important;
+  color:rgba(255,255,255,.55) !important;
+  font-size:.8rem !important;
+  line-height:1.5 !important;
+}
+.edusambam-unified-footer .footer-bottom-links{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:18px !important;
+  list-style:none !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+.edusambam-unified-footer .footer-bottom-links a{
+  color:rgba(255,255,255,.55) !important;
+  font-size:.78rem !important;
+  line-height:1.5 !important;
+  text-decoration:none !important;
+}
+.edusambam-unified-footer .footer-bottom-links a:hover,
+.edusambam-unified-footer .footer-bottom-links a:focus-visible{color:#fff !important;}
+@media(max-width:900px){
+  .edusambam-unified-footer{padding-top:32px !important;}
+  .edusambam-unified-footer .footer-top{grid-template-columns:1fr 1fr !important;gap:28px 22px !important;}
+  .edusambam-unified-footer .footer-brand{grid-column:1/-1 !important;}
+}
+@media(max-width:600px){
+  .edusambam-unified-footer{padding-top:30px !important;}
+  .edusambam-unified-footer .footer-top{width:calc(100% - 28px) !important;grid-template-columns:1fr 1fr !important;gap:26px 20px !important;padding-bottom:28px !important;}
+  .edusambam-unified-footer .footer-bottom{width:calc(100% - 28px) !important;display:block !important;padding:16px 0 20px !important;}
+  .edusambam-unified-footer .footer-bottom-links{margin-top:10px !important;gap:16px !important;}
+  .edusambam-footer-logo{width:44px !important;height:44px !important;min-width:44px !important;flex-basis:44px !important;}
+  .edusambam-footer-logo > span{width:12px !important;height:12px !important;min-width:12px !important;min-height:12px !important;}
+  .edusambam-footer-logo > .c3,.edusambam-footer-logo > .c6{left:16px !important;}
+  .edusambam-footer-brand-name{font-size:1.48rem !important;}
+}
+@media(max-width:430px){
+  .edusambam-unified-footer .footer-top{grid-template-columns:1fr !important;gap:22px !important;}
+  .edusambam-unified-footer .footer-brand{grid-column:auto !important;}
+}
+</style>
+<style id="edusambam-footer-final-alignment">
+/* Final EDUSAMBAM footer consistency pass: identical royal-blue footer and left alignment on every page. */
+.edusambam-unified-footer {
+  background: linear-gradient(135deg,#06244a,#0b4ea2) !important;
+  color:#d6e4f2 !important;
+  text-align:left !important;
+  width:100% !important;
+  box-sizing:border-box !important;
+}
+.edusambam-unified-footer,
+.edusambam-unified-footer *,
+.edusambam-unified-footer h1,
+.edusambam-unified-footer h2,
+.edusambam-unified-footer h3,
+.edusambam-unified-footer h4,
+.edusambam-unified-footer p,
+.edusambam-unified-footer ul,
+.edusambam-unified-footer li,
+.edusambam-unified-footer a,
+.edusambam-unified-footer span {
+  text-align:left !important;
+}
+.edusambam-unified-footer .footer-top,
+.edusambam-unified-footer .footer-brand,
+.edusambam-unified-footer .footer-col,
+.edusambam-unified-footer .footer-bottom {
+  margin-left:0 !important;
+}
+.edusambam-unified-footer .footer-top {
+  margin-right:auto !important;
+}
+.edusambam-unified-footer .edusambam-footer-brand-row {
+  text-align:left !important;
+}
+.edusambam-unified-footer .edusambam-footer-logo-link {
+  justify-content:flex-start !important;
+  text-align:left !important;
+}
+.edusambam-unified-footer .footer-bottom {
+  justify-content:flex-start !important;
+  align-items:flex-start !important;
+  flex-direction:column !important;
+}
+.edusambam-unified-footer .footer-bottom-links {
+  justify-content:flex-start !important;
+  align-items:flex-start !important;
+}
+@media (max-width:600px) {
+  .edusambam-unified-footer .footer-top,
+  .edusambam-unified-footer .footer-bottom {
+    margin-left:0 !important;
+    margin-right:auto !important;
+  }
+}
+</style><style id="edusambam-footer-social-css">.edusambam-footer-social{margin-top:14px}.edusambam-footer-social a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);color:rgba(255,255,255,.85);transition:background .15s,color .15s}.edusambam-footer-social a:hover{background:rgba(255,255,255,.22);color:#fff}</style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2230995786427221"
+     crossorigin="anonymous"></script>
+<meta name="robots" content="index,follow,max-image-preview:large"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="EDUSAMBAM"/>
+<meta property="og:title" content="Atomic and Nuclear Physics: Radioactivity and Half-Life"/>
+<meta property="og:description" content="Learn atomic structure, isotopes, alpha, beta and gamma radiation, decay equations, half-life, fission, fusion and radiation safety with worked examples."/>
+<meta property="og:url" content="https://edusambam.com/atomic-and-nuclear-physics.html"/>
+<meta property="og:image" content="https://edusambam.com/logo-icon-full.png"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Atomic and Nuclear Physics: Radioactivity and Half-Life"/>
+<meta name="twitter:description" content="Learn atomic structure, isotopes, alpha, beta and gamma radiation, decay equations, half-life, fission, fusion and radiation safety with worked examples."/>
+<meta property="article:modified_time" content="2026-10"/>
+<meta property="article:section" content="Physics"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Atomic and Nuclear Physics: Atoms, Radioactivity and Nuclear Energy", "description": "Learn atomic structure, isotopes, alpha, beta and gamma radiation, decay equations, half-life, fission, fusion and radiation safety with worked examples.", "inLanguage": "en", "mainEntityOfPage": "https://edusambam.com/atomic-and-nuclear-physics.html", "url": "https://edusambam.com/atomic-and-nuclear-physics.html", "datePublished": "2026-01-01", "dateModified": "2026-10", "articleSection": "Physics", "about": ["Atomic physics", "Nuclear physics", "Radioactivity", "Half-life", "Nuclear energy"], "educationalLevel": "Secondary school (O-Level, grades 8-10)", "learningResourceType": "Article", "wordCount": 5176, "keywords": "atomic structure, nucleus, isotopes, radioactivity, alpha beta gamma, half-life, decay equations, carbon dating, nuclear fission, nuclear fusion, binding energy, radiation safety, O-Level physics", "author": {"@type": "Organization", "name": "EDUSAMBAM Editorial Team", "url": "https://edusambam.com/"}, "publisher": {"@type": "Organization", "name": "EDUSAMBAM", "url": "https://edusambam.com/", "logo": {"@type": "ImageObject", "url": "https://edusambam.com/logo-icon-full.png"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Gateway", "item": "https://edusambam.com/index.html#gateway"}, {"@type": "ListItem", "position": 2, "name": "Physics", "item": "https://edusambam.com/index.html#subject-physics"}, {"@type": "ListItem", "position": 3, "name": "Atomic and Nuclear Physics: Atoms, Radioactivity and Nuclear Energy", "item": "https://edusambam.com/atomic-and-nuclear-physics.html"}]}]}</script>
+<style id="edusambam-edge-fix">.article-wrap,.article-hero,.nav-brand{min-width:0;overflow:visible}.article-wrap h1,.article-wrap h2,.article-wrap h3,.article-hero h1,.article-hero .sub{overflow-wrap:anywhere;word-break:normal}.article-wrap{padding-left:max(1.25rem,3vw);padding-right:max(1.25rem,3vw)}@media(max-width:600px){.article-wrap{padding-left:1rem;padding-right:1rem}.article-hero{padding-left:1rem;padding-right:1rem}.nav-brand{overflow:visible!important}.nav-brand-name,.nav-brand-sub{overflow-wrap:anywhere}}</style>
+<style id="edusambam-new-article-mobile-fixed-nav">
+/* New EDUSAMBAM article: keep the approved mobile header continuously available while scrolling. */
+@media (max-width:1100px){
+  body{padding-top:68px !important;}
+  .edusambam-nav{position:fixed !important;top:0 !important;left:0 !important;right:0 !important;width:100% !important;}
+  .top-bar{display:none !important;}
+}
+</style>
+<style id="edusambam-physics-upgrade">
+.article-wrap h3{font-family:'EB Garamond',serif;font-weight:600;font-size:1.25rem;color:var(--navy);margin:1.6rem 0 .6rem}
+.article-wrap ol{margin:0 0 1.2rem 1.4rem;color:var(--slate)}.article-wrap ol li{margin-bottom:.5rem}
+.toc-box{background:var(--cream);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.3rem;margin:0 0 2rem}
+.toc-box .toc-label{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--red);margin-bottom:.4rem}
+.toc-box ol{columns:2;column-gap:2rem;margin:0 0 0 1.2rem;font-size:.93rem}.toc-box a{color:var(--navy);text-decoration:none}.toc-box a:hover{text-decoration:underline}
+@media(max-width:600px){.toc-box ol{columns:1}}
+.key-box{background:var(--navy);border-radius:var(--radius);padding:1.2rem 1.5rem;margin:1.5rem 0}
+.key-box .rw-label{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
+.key-box ul{margin:0 0 0 1.2rem}.key-box li{color:rgba(255,255,255,.85);margin-bottom:.35rem}.key-box strong{color:#fff}
+.mistake-box{background:#fff4f2;border:1px solid #f0c9c2;border-left:4px solid #b3261e;border-radius:var(--radius);padding:1.1rem 1.4rem;margin:1.3rem 0 1.8rem}
+.mistake-box .ex-label{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#b3261e;margin-bottom:.4rem}
+.mistake-box ul{margin:0 0 0 1.2rem}.mistake-box li{color:var(--ink);margin-bottom:.4rem}
+.worked{background:#fff;border:1px solid var(--border);border-left:4px solid var(--navy-mid);border-radius:var(--radius);padding:1.1rem 1.4rem;margin:1.3rem 0 1.8rem}
+.worked .ex-label{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--navy-mid);margin-bottom:.5rem}
+.worked p{color:var(--ink);margin-bottom:.45rem;font-size:.98rem}.worked p:last-child{margin-bottom:0}
+.worked .step{padding-left:.2rem}
+.cyu details{background:#fff;border:1px solid var(--border-lt);border-radius:var(--radius);padding:.8rem 1.1rem;margin-bottom:.7rem}
+.cyu summary{cursor:pointer;font-weight:600;color:var(--ink)}.cyu details p{margin:.7rem 0 0;color:var(--ink)}
+.cyu details[open]{border-color:var(--gold)}
+.teacher-note{background:var(--gold-lt);border:1px solid rgba(184,150,62,.35);border-radius:var(--radius);padding:1.2rem 1.5rem;margin:1.5rem 0}
+.teacher-note .ex-label{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--red);margin-bottom:.4rem}
+.teacher-note p{color:var(--ink)}.teacher-note p:last-child{margin-bottom:0}
+.related-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem;margin:1rem 0 1.5rem}
+.related-grid a{display:block;background:var(--cream);border:1px solid var(--border);border-radius:var(--radius);padding:.8rem 1rem;color:var(--navy);text-decoration:none;font-weight:600;font-size:.92rem}
+.related-grid a span{display:block;font-weight:400;color:var(--slate);font-size:.8rem;margin-top:.2rem}
+.related-grid a:hover{border-color:var(--gold)}
+@media(max-width:600px){.related-grid{grid-template-columns:minmax(0,1fr)}}
+.diagram-box svg{width:100%;height:auto;max-width:640px}
+.diagram-box svg text{font-family:'Source Sans 3',Arial,sans-serif}
+.sources-list li{font-size:.95rem}
+.flow-dash{stroke-dasharray:2 14;stroke-linecap:round;animation:flowmove 1.6s linear infinite}
+@keyframes flowmove{to{stroke-dashoffset:-32}}
+.coil-spin{transform-box:fill-box;transform-origin:center;animation:coilspin 4s linear infinite}
+@keyframes coilspin{to{transform:rotate(360deg)}}
+.draw-wave{stroke-dasharray:1;stroke-dashoffset:1;animation:drawwave 4s linear infinite}
+@keyframes drawwave{0%{stroke-dashoffset:1}90%{stroke-dashoffset:0}100%{stroke-dashoffset:0}}
+.pulse-ring{transform-box:fill-box;transform-origin:center;animation:pulsering 2.4s ease-out infinite}
+@keyframes pulsering{0%{transform:scale(.3);opacity:.9}100%{transform:scale(1);opacity:0}}
+.bob{animation:bob 2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.slide-x{animation:slidex 3s ease-in-out infinite alternate}
+@keyframes slidex{from{transform:translateX(0)}to{transform:translateX(var(--dx,30px))}}
+.wob{animation:wob 2s ease-in-out infinite}
+@keyframes wob{0%,100%{transform:translateX(-9px)}50%{transform:translateX(9px)}}
+.jig{animation:jig .35s ease-in-out infinite alternate}
+@keyframes jig{from{transform:translate(-1.6px,-1.2px)}to{transform:translate(1.6px,1.2px)}}
+.wan{animation:wan 2.4s ease-in-out infinite alternate}
+@keyframes wan{from{transform:translate(-7px,3px)}to{transform:translate(8px,-5px)}}
+.zoom{animation:zoom 2.8s ease-in-out infinite alternate}
+@keyframes zoom{from{transform:translate(-26px,16px)}to{transform:translate(28px,-22px)}}
+.swing{transform-box:view-box;animation:swing 1.5s ease-in-out infinite alternate}
+@keyframes swing{from{transform:rotate(-35deg)}to{transform:rotate(35deg)}}
+.rock{transform-box:view-box;animation:rock 2.4s ease-in-out infinite alternate}
+@keyframes rock{from{transform:rotate(-5deg)}to{transform:rotate(5deg)}}
+.slide-xy{animation:slidexy 3.2s ease-in-out infinite alternate}
+@keyframes slidexy{from{transform:translate(0,0)}to{transform:translate(var(--dx,100px),var(--dy,-30px))}}
+.orbit{transform-box:view-box;animation:coilspin 6s linear infinite}
+.car-quad{animation:carquad 5s cubic-bezier(.55,.085,.68,.53) infinite}
+@keyframes carquad{0%{transform:translateX(0)}90%,100%{transform:translateX(var(--dx,400px))}}
+.throw{animation:throwup 4s infinite}
+@keyframes throwup{0%{transform:translateY(0);animation-timing-function:cubic-bezier(.25,.46,.45,.94)}50%{transform:translateY(var(--dy,-157px));animation-timing-function:cubic-bezier(.55,.085,.68,.53)}100%{transform:translateY(0)}}
+.fade-cycle{animation:fadecycle 4s ease-in-out infinite}
+@keyframes fadecycle{0%,100%{opacity:.15}50%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.flow-dash,.coil-spin,.draw-wave,.pulse-ring,.bob,.slide-x,.fade-cycle,.wob,.jig,.wan,.zoom,.swing,.rock,.slide-xy,.orbit,.car-quad,.throw{animation:none!important}.draw-wave{stroke-dashoffset:0}.pulse-ring{opacity:.5;transform:scale(.7)}}
+</style>
+</head>
+<body id="top">
+<!-- TOP BAR -->
+<div class="top-bar">
+<p>Established 2026  ·  Free Educational Resources for All</p>
+<ul class="top-bar-links">
+<li><a href="contact.html">Contact</a></li><li><a href="index.html#about-edusambam">About</a></li><li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+</ul>
+</div>
+<!-- NAV -->
+<nav aria-label="Primary navigation" class="edusambam-nav">
+<div class="edusambam-nav-inner">
+<a aria-label="EDUSAMBAM home" class="edusambam-brand" href="index.html">
+<img alt="EDUSAMBAM" class="edusambam-brand-mark" src="logo-icon-full.png" style="width:auto;height:56px;max-width:220px;object-fit:contain;background:none;border-radius:0;flex-basis:auto;"/>
+<span class="edusambam-brand-copy">
+<span class="edusambam-brand-subtitle">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</span>
+</span>
+</a>
+<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ Tests</a></li><li><a href="index.html#resources">Resources</a></li></ul>
+<button aria-label="Search" class="edusambam-search-btn" title="Search" type="button">⌕</button>
+<button aria-expanded="false" aria-label="Open menu" class="edusambam-menu-btn" title="Menu" type="button">☰</button>
+</div>
+</nav><div aria-label="Mobile navigation" class="edusambam-mobile-menu">
+<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ Tests</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="index.html#subject-assessment">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="index.html#about-edusambam">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
+</div>
+<div aria-label="Site search" class="edusambam-search-panel">
+<div class="edusambam-search-wrap">
+<input aria-label="Search EDUSAMBAM" class="edusambam-search-input" placeholder="Search EDUSAMBAM…" type="search"/>
+<div class="edusambam-search-results"></div>
+</div>
+</div>
+<!-- ARTICLE HERO -->
+<div class="article-hero">
+<div class="breadcrumb"><a href="index.html#gateway">Gateway</a>  /  <a href="index.html#subject-physics">Science</a>  /  Motion: Speed, Velocity, and Distance</div>
+<div class="article-hero-tag">Science · Physics</div>
+<h1>Atomic and Nuclear Physics: Atoms, Radioactivity and Nuclear Energy</h1>
+<p class="sub">From Rutherford's gold foil to nuclear reactors: atoms, isotopes, radioactive decay, half-life, fission and fusion, explained with diagrams, animations and worked examples.</p>
+<div class="article-hero-meta">
+<span>EDUSAMBAM Editorial Team</span>
+<span>|</span>
+<span>26 min read</span>
+<span>|</span>
+<span>Science</span>
+<span>|</span>
+<span>Last updated: October 2026</span>
+</div>
+</div>
+<!-- ARTICLE BODY -->
+<div aria-label="EDUSAMBAM article reader" class="edusambam-reader"><strong>🔊 LISTEN TO THIS ARTICLE</strong><div class="reader-slogan">SAVE YOUR EYES • IMPROVE YOUR LISTENING</div><div class="reader-help">Listen to the article instead of relying only on continuous screen reading.</div><div class="reader-controls"><button data-reader="play" type="button">▶ Play</button><button data-reader="pause" type="button">⏸ Pause</button><button data-reader="resume" type="button">▶ Resume</button><button data-reader="stop" type="button">■ Stop</button><select aria-label="Reading speed"><option value="1">1×</option><option value="0.8">0.8×</option><option value="1.2">1.2×</option></select></div><div aria-hidden="true" class="reader-progress"><span></span></div><small class="reader-status">Ready to read the article.</small></div>
+<div class="article-wrap">
+<p class="lead">Everything you can touch, from a pencil to a planet, is made of atoms, and at the centre of every atom lies a nucleus about a hundred thousand times smaller than the atom itself. Some nuclei are unstable and break apart by themselves, releasing invisible radiation. That radiation can damage living cells, but it can also image a broken bone, treat cancer, date an ancient skeleton and light millions of homes. This article follows the story from the first discovery of the electron to the nuclear reactors of today. It explains what atoms are made of, what radioactivity is, how half-life works, where nuclear energy comes from, and how to stay safe.</p>
+
+<div class="toc-box"><div class="toc-label">In this article</div>
+<ol>
+<li><a href="#atom">The structure of the atom</a></li>
+<li><a href="#rutherford">How we found the nucleus</a></li>
+<li><a href="#isotopes">Atomic number, mass number and isotopes</a></li>
+<li><a href="#radio">Radioactivity</a></li>
+<li><a href="#types">Alpha, beta and gamma radiation</a></li>
+<li><a href="#equations">Nuclear decay equations</a></li>
+<li><a href="#halflife">Half-life</a></li>
+<li><a href="#uses">Uses of radioactivity</a></li>
+<li><a href="#safety">Radiation dose and safety</a></li>
+<li><a href="#binding">Binding energy and E = mc²</a></li>
+<li><a href="#fission">Nuclear fission and reactors</a></li>
+<li><a href="#fusion">Nuclear fusion</a></li>
+<li><a href="#particles">Inside the nucleon</a></li>
+<li><a href="#mistakes">Common mistakes</a></li>
+<li><a href="#check">Check your understanding</a></li>
+</ol></div>
+
+<div class="key-box"><div class="rw-label">What you will be able to do</div>
+<ul>
+<li>Describe the structure of the atom and explain how Rutherford's experiment showed that it has a tiny, dense nucleus.</li>
+<li>Use proton number, nucleon number and isotopes, and write balanced alpha and beta decay equations.</li>
+<li>Compare alpha, beta and gamma radiation, and calculate with half-life, including carbon dating.</li>
+<li>Explain fission, fusion and nuclear reactors, and describe the risks and benefits of nuclear technology.</li>
+</ul></div>
+
+<h2 id="atom"><span class="num">1.</span>The Structure of the Atom</h2>
+<p>The idea that matter is made of tiny indivisible particles goes back to ancient Greece, where the word <em>atomos</em> (uncuttable) was first used. The modern atomic theory began with the English chemist John Dalton in 1803. We now know that atoms can be divided: each is made of three kinds of <strong>subatomic particles</strong>.</p>
+<table class="pos-table"><tr><th>Particle</th><th>Charge</th><th>Relative mass</th><th>Where it is</th></tr>
+<tr><td>Proton</td><td>+1 (+1.602 × 10⁻¹⁹ C)</td><td>1</td><td>In the nucleus</td></tr>
+<tr><td>Neutron</td><td>0</td><td>1</td><td>In the nucleus</td></tr>
+<tr><td>Electron</td><td>−1 (−1.602 × 10⁻¹⁹ C)</td><td>about 1/1840</td><td>Around the nucleus, in shells</td></tr></table>
+<p>The <strong>protons and neutrons</strong> together are called <strong>nucleons</strong>. The <strong>nucleus</strong> holds almost all of the atom's mass but occupies only a tiny volume, about 10⁻¹⁵ m across, while the whole atom is about 10⁻¹⁰ m across. A neutral atom has equal numbers of protons and electrons, so the positive and negative charges cancel. The electrons are arranged in energy levels called <strong>shells</strong>, and the way they are arranged decides the atom's chemistry.</p>
+<div class="diagram-box">
+<svg viewBox="0 0 560 300" role="img" aria-labelledby="a2t a2d">
+<title id="a2t">A carbon-12 atom</title>
+<desc id="a2d">A small nucleus of six red protons and six grey neutrons in the centre. Two electrons orbit in the first shell and four in the second shell. The electrons move around the nucleus in the animation.</desc>
+<rect width="560" height="300" rx="14" fill="#faf8f4"/>
+<circle cx="280" cy="150" r="60" fill="none" stroke="#c9ced6" stroke-width="1.5" stroke-dasharray="4 5"/>
+<circle cx="280" cy="150" r="105" fill="none" stroke="#c9ced6" stroke-width="1.5" stroke-dasharray="4 5"/>
+<circle cx="280.0" cy="150.0" r="7.5" fill="#b3261e" stroke="#06244a" stroke-width="1"/>
+<circle cx="291.0" cy="150.0" r="7.5" fill="#8c8c8c" stroke="#06244a" stroke-width="1"/>
+<circle cx="283.4" cy="160.5" r="7.5" fill="#b3261e" stroke="#06244a" stroke-width="1"/>
+<circle cx="271.1" cy="156.5" r="7.5" fill="#8c8c8c" stroke="#06244a" stroke-width="1"/>
+<circle cx="271.1" cy="143.5" r="7.5" fill="#b3261e" stroke="#06244a" stroke-width="1"/>
+<circle cx="283.4" cy="139.5" r="7.5" fill="#8c8c8c" stroke="#06244a" stroke-width="1"/>
+<circle cx="300.1" cy="156.2" r="7.5" fill="#b3261e" stroke="#06244a" stroke-width="1"/>
+<circle cx="284.7" cy="170.5" r="7.5" fill="#8c8c8c" stroke="#06244a" stroke-width="1"/>
+<circle cx="264.6" cy="164.3" r="7.5" fill="#b3261e" stroke="#06244a" stroke-width="1"/>
+<circle cx="259.9" cy="143.8" r="7.5" fill="#8c8c8c" stroke="#06244a" stroke-width="1"/>
+<circle cx="275.3" cy="129.5" r="7.5" fill="#b3261e" stroke="#06244a" stroke-width="1"/>
+<circle cx="295.4" cy="135.7" r="7.5" fill="#8c8c8c" stroke="#06244a" stroke-width="1"/>
+<g class="orbit" style="transform-origin:280px 150px;animation-duration:3.2s"><circle cx="329.5" cy="183.9" r="5.5" fill="#0b4ea2" stroke="#06244a" stroke-width="1"/><circle cx="230.5" cy="116.1" r="5.5" fill="#0b4ea2" stroke="#06244a" stroke-width="1"/></g>
+<g class="orbit" style="transform-origin:280px 150px;animation-duration:7.5s"><circle cx="382.9" cy="170.9" r="5.5" fill="#0b4ea2" stroke="#06244a" stroke-width="1"/><circle cx="259.1" cy="252.9" r="5.5" fill="#0b4ea2" stroke="#06244a" stroke-width="1"/><circle cx="177.1" cy="129.1" r="5.5" fill="#0b4ea2" stroke="#06244a" stroke-width="1"/><circle cx="300.9" cy="47.1" r="5.5" fill="#0b4ea2" stroke="#06244a" stroke-width="1"/></g>
+<g font-size="13" fill="#06244a"><rect x="14" y="14" width="12" height="12" fill="#b3261e" stroke="#06244a"/><text x="32" y="25">proton (+)</text><rect x="14" y="36" width="12" height="12" fill="#8c8c8c" stroke="#06244a"/><text x="32" y="47">neutron (0)</text><rect x="14" y="58" width="12" height="12" fill="#0b4ea2" stroke="#06244a"/><text x="32" y="69">electron (−)</text></g>
+<g font-size="13" fill="#4a4a4a" text-anchor="end"><text x="546" y="26" font-weight="700" fill="#06244a">Carbon-12</text><text x="546" y="44">6 protons, 6 neutrons</text><text x="546" y="62">6 electrons (2 + 4)</text></g>
+<text x="280" y="290" text-anchor="middle" font-size="12" fill="#4a4a4a">Not to scale: the real nucleus is about 100 000 times smaller than the atom</text>
+</svg>
+<div class="diagram-caption">Figure 1. A carbon-12 atom. The electrons orbit in shells (the inner shell moves faster in the animation). If drawn to scale, the nucleus would be too small to see. (Original EDUSAMBAM diagram.)</div>
+</div>
+<div class="worked"><div class="ex-label">Worked example 1: the emptiness of the atom</div>
+<p>The nucleus has a diameter of about 10⁻¹⁵ m and the atom about 10⁻¹⁰ m. If the nucleus were enlarged to the size of a pea (7 mm), how wide would the atom be?</p>
+<p class="step">Step 1. Ratio of diameters = 10⁻¹⁰ ÷ 10⁻¹⁵ = 10⁵ (100 000 times).</p>
+<p class="step">Step 2. Atom diameter = 7 mm × 10⁵ = 700 000 mm = <strong>700 m</strong>, roughly the length of several football pitches.</p>
+<p>Almost all of an atom is empty space, with the electrons somewhere in it. Solid objects feel solid because of the electric forces between the electron clouds of their atoms, not because the atoms are filled with matter.</p></div>
+
+<h2 id="rutherford"><span class="num">2.</span>How We Found the Nucleus</h2>
+<p>In 1897 J. J. Thomson discovered the electron and proposed the "plum pudding" model, in which negative electrons were scattered through a ball of positive charge. In 1909 Hans Geiger and Ernest Marsden, working in Ernest Rutherford's laboratory in Manchester, fired <strong>alpha particles</strong> (fast, positively charged particles from a radioactive source) at a very thin sheet of gold foil, and counted how many were deflected.</p>
+<div class="diagram-box">
+<svg viewBox="0 0 560 300" role="img" aria-labelledby="a1t a1d">
+<title id="a1t">The alpha particle scattering experiment</title>
+<desc id="a1d">Alpha particles travel from the left towards a thin gold foil. Most pass straight through, a few are deflected by small or large angles by a tiny positive nucleus, and a very few bounce almost straight back. Moving gold dashes show the paths.</desc>
+<rect width="560" height="300" rx="14" fill="#faf8f4"/>
+<g fill="#f6efd0" stroke="#d4a017" stroke-width="1.5"><circle cx="280" cy="30" r="15"/><circle cx="280" cy="70" r="15"/><circle cx="280" cy="110" r="15"/><circle cx="280" cy="150" r="15"/><circle cx="280" cy="190" r="15"/><circle cx="280" cy="230" r="15"/><circle cx="280" cy="270" r="15"/></g>
+<circle cx="280" cy="150" r="5" fill="#b3261e" stroke="#06244a" stroke-width="1.5"/>
+<g fill="none" stroke="#0b4ea2" stroke-width="3" class="flow-dash"><path d="M20 62 H540"/><path d="M20 102 H540"/><path d="M20 202 H540"/><path d="M20 242 H540"/><path d="M20 128 L225 128 Q 290 122 330 88 L 530 18"/><path d="M20 164 L220 164 Q 285 170 308 215 L 370 292"/><path d="M20 152 H262 Q 272 150 262 148 H40"/></g>
+<g font-size="13" fill="#06244a" font-weight="700"><text x="20" y="22">alpha particles →</text><text x="300" y="58" fill="#4a4a4a" font-weight="400">most go straight through</text></g>
+<g font-size="12" fill="#4a4a4a"><text x="338" y="94">small deflection</text><text x="372" y="274">large deflection</text><text x="30" y="142" fill="#b3261e">a very few bounce back</text><text x="30" y="276">thin gold foil (one layer of atoms shown)</text></g>
+</svg>
+<div class="diagram-caption">Figure 2. The scattering of alpha particles by a thin gold foil (not to scale: the nucleus is much smaller than shown). (Original EDUSAMBAM diagram.)</div>
+</div>
+<p>The results shocked the experimenters:</p>
+<ul>
+<li><strong>Most alpha particles went straight through</strong>, so most of an atom must be empty space.</li>
+<li><strong>A small number were deflected through large angles</strong>, and about <strong>1 in 8000</strong> bounced almost straight back. Rutherford later compared it to firing a shell at tissue paper and seeing it bounce back.</li>
+</ul>
+<p>In 1911 Rutherford explained these observations: the positive charge and nearly all the mass are packed into a tiny <strong>nucleus</strong>. The few alpha particles that happened to be aimed close to a nucleus were strongly repelled (positive charges repel). In 1913 Niels Bohr improved the model by placing the electrons in fixed energy levels. In 1932 James Chadwick discovered the <strong>neutron</strong>, completing the picture of the nucleus.</p>
+
+<h2 id="isotopes"><span class="num">3.</span>Atomic Number, Mass Number and Isotopes</h2>
+<ul>
+<li>The <strong>proton number</strong> (atomic number), <strong>Z</strong>, is the number of protons in the nucleus. It defines the element: every atom with Z = 6 is carbon.</li>
+<li>The <strong>nucleon number</strong> (mass number), <strong>A</strong>, is the total number of protons plus neutrons.</li>
+<li>The number of neutrons is <strong>N = A − Z</strong>.</li>
+</ul>
+<p>A nuclide is written with A and Z beside the chemical symbol, for example carbon-12 has A = 12 and Z = 6. <strong>Isotopes</strong> are atoms of the same element (same Z) with different numbers of neutrons (different A). They have the same chemical behaviour but different masses, and some are radioactive.</p>
+<table class="pos-table"><tr><th>Element</th><th>Isotope</th><th>Protons</th><th>Neutrons</th><th>Notes</th></tr>
+<tr><td>Hydrogen</td><td>hydrogen-1</td><td>1</td><td>0</td><td>The common form, one proton</td></tr>
+<tr><td>Hydrogen</td><td>hydrogen-2 (deuterium)</td><td>1</td><td>1</td><td>Stable; used in fusion research</td></tr>
+<tr><td>Hydrogen</td><td>hydrogen-3 (tritium)</td><td>1</td><td>2</td><td>Radioactive</td></tr>
+<tr><td>Carbon</td><td>carbon-12</td><td>6</td><td>6</td><td>Most common (about 99%)</td></tr>
+<tr><td>Carbon</td><td>carbon-14</td><td>6</td><td>8</td><td>Radioactive; used in dating</td></tr>
+<tr><td>Uranium</td><td>uranium-235</td><td>92</td><td>143</td><td>Fissile, used as fuel</td></tr>
+<tr><td>Uranium</td><td>uranium-238</td><td>92</td><td>146</td><td>Most of natural uranium</td></tr></table>
+<div class="worked"><div class="ex-label">Worked example 2: counting particles and average mass</div>
+<p>(a) How many protons, neutrons and electrons are in a neutral atom of potassium-39 (Z = 19)? (b) Chlorine occurs naturally as about 75% chlorine-35 and 25% chlorine-37. Find the average relative atomic mass.</p>
+<p class="step">(a) Protons = Z = 19. Neutrons = A − Z = 39 − 19 = 20. Electrons = 19 (neutral atom).</p>
+<p class="step">(b) Average = (0.75 × 35) + (0.25 × 37) = 26.25 + 9.25 = <strong>35.5</strong>, which is the value printed on the periodic table.</p></div>
+
+<h2 id="radio"><span class="num">4.</span>Radioactivity</h2>
+<p>The forces inside a nucleus must hold the protons together against their mutual electric repulsion. Some nuclei, with too many neutrons, too few, or simply too many particles, are <strong>unstable</strong>. They <strong>decay</strong> by emitting radiation and become a more stable nucleus. This is <strong>radioactivity</strong>, and it was discovered by the French physicist Henri Becquerel in 1896 when uranium salts fogged photographic plates. Marie and Pierre Curie soon found the new radioactive elements polonium and radium (1898), and in 1899 Rutherford showed that the radiation had at least two types, which he called alpha and beta. Gamma was identified shortly afterwards.</p>
+<p>Radioactive decay has four key properties:</p>
+<ul>
+<li><strong>Spontaneous:</strong> it happens with no outside cause. Heating, cooling or chemical reactions do not change the rate.</li>
+<li><strong>Random:</strong> you cannot predict when any <em>one</em> nucleus will decay, only the probability. With vast numbers of nuclei, the overall behaviour is very predictable.</li>
+<li><strong>Nuclear:</strong> it involves changes in the nucleus, not the electrons.</li>
+<li><strong>Ionising:</strong> the radiation knocks electrons off atoms it passes, creating charged ions.</li>
+</ul>
+<p>The <strong>activity</strong> of a source is the number of nuclei that decay each second. The unit is the <strong>becquerel (Bq)</strong>: 1 Bq = 1 decay per second. In experiments we measure the <strong>count rate</strong>, the number of detected particles per minute or second.</p>
+<p><strong>Background radiation</strong> is the low level of radiation that is always present. Its main natural sources are <strong>radon gas</strong> from rocks and soil, <strong>cosmic rays</strong> from space, rocks and building materials, and traces of radioactive elements such as potassium-40 in food and in our own bodies. Man-made sources include medical X-rays. The average natural background dose worldwide is about 2.4 millisieverts (mSv) a year according to the UN scientific committee on radiation (UNSCEAR), though it varies a lot from place to place. When measuring a source, always <strong>subtract the background count</strong> from the readings.</p>
+<p><strong>Detectors.</strong> A <strong>Geiger–Müller tube</strong> clicks or counts each time radiation ionises the gas inside it. <strong>Photographic film</strong> (used in badges) darkens when exposed. A <strong>cloud chamber</strong> shows the tracks of particles as tiny trails of droplets. <strong>Scintillation counters</strong> convert radiation to flashes of light.</p>
+
+<h2 id="types"><span class="num">5.</span>Alpha, Beta and Gamma Radiation</h2>
+<table class="pos-table"><tr><th></th><th>Alpha (α)</th><th>Beta-minus (β⁻)</th><th>Gamma (γ)</th></tr>
+<tr><td>What it is</td><td>A helium nucleus: 2 protons + 2 neutrons</td><td>A fast electron from the nucleus</td><td>High-energy electromagnetic wave (photon)</td></tr>
+<tr><td>Charge</td><td>+2</td><td>−1</td><td>0</td></tr>
+<tr><td>Relative mass</td><td>4</td><td>about 1/1840</td><td>0</td></tr>
+<tr><td>Ionising power</td><td>Very strong</td><td>Moderate</td><td>Weak</td></tr>
+<tr><td>Penetration</td><td>Stopped by paper or a few cm of air</td><td>Stopped by a few mm of aluminium</td><td>Reduced by thick lead or concrete; never completely stopped</td></tr>
+<tr><td>Deflection by a magnetic or electric field</td><td>Small, towards the negative side</td><td>Large, in the opposite direction</td><td>None</td></tr></table>
+<div class="diagram-box">
+<svg viewBox="0 0 560 270" role="img" aria-labelledby="a3t a3d">
+<title id="a3t">Penetrating power of alpha, beta and gamma radiation</title>
+<desc id="a3d">Three rows show radiation from a source on the left meeting three barriers: paper, aluminium and lead. Alpha is stopped by the paper, beta passes the paper but is stopped by the aluminium, and gamma passes both and is reduced by the lead. Moving dashes show each ray.</desc>
+<rect width="560" height="270" rx="14" fill="#faf8f4"/>
+<g fill="#06244a"><rect x="20" y="50" width="26" height="26" rx="4"/><rect x="20" y="120" width="26" height="26" rx="4"/><rect x="20" y="190" width="26" height="26" rx="4"/></g>
+<g font-size="15" font-weight="700" fill="#fff"><text x="26" y="69">α</text><text x="27" y="139">β</text><text x="27" y="209">γ</text></g>
+<rect x="200" y="36" width="6" height="190" fill="#e4d4a8" stroke="#8a7a5c"/><rect x="330" y="36" width="14" height="190" fill="#c9ced6" stroke="#8892a0" stroke-width="1.5"/><rect x="450" y="36" width="30" height="190" fill="#59606e" stroke="#06244a" stroke-width="1.5"/>
+<g fill="none" stroke="#b3261e" stroke-width="4" class="flow-dash"><path d="M50 63 H196"/><path d="M50 133 H326"/><path d="M50 203 H446"/></g>
+<path d="M484 203 H540" stroke="#b3261e" stroke-width="2" stroke-dasharray="2 8" fill="none"/>
+<g font-size="13" font-weight="700" fill="#06244a" text-anchor="middle"><text x="203" y="248">paper</text><text x="337" y="248">aluminium</text><text x="465" y="248">lead</text></g>
+<g font-size="12" fill="#b3261e" font-weight="700"><text x="212" y="57">stopped</text><text x="352" y="127">stopped</text><text x="488" y="197">reduced</text></g>
+<text x="280" y="22" text-anchor="middle" font-size="13" fill="#4a4a4a">Alpha is stopped by paper, beta by a few mm of aluminium, gamma needs thick lead</text>
+</svg>
+<div class="diagram-caption">Figure 3. The penetrating power of the three radiations. A thicker barrier gives more protection, but gamma rays are never entirely blocked. (Original EDUSAMBAM diagram; barriers not to scale.)</div>
+</div>
+<p>Because alpha particles are so strongly ionising and cannot get through skin or even paper, an alpha source outside the body is relatively harmless, but one that is <strong>swallowed, inhaled or inside the body</strong> (such as radon gas or polonium) is very dangerous because it delivers all its energy to nearby cells. Gamma rays are the most penetrating, so they are the main hazard from a source outside the body.</p>
+
+<h2 id="equations"><span class="num">6.</span>Nuclear Decay Equations</h2>
+<p>When a nucleus decays it changes into another nucleus. In writing the decay we must keep two things equal on both sides: the total <strong>nucleon number</strong> (A) and the total <strong>charge</strong> (Z).</p>
+<ul>
+<li><strong>Alpha decay:</strong> the nucleus emits ⁴₂He. A decreases by 4 and Z decreases by 2.</li>
+<li><strong>Beta-minus decay:</strong> a neutron changes into a proton, an electron and an antineutrino. A stays the same and Z increases by 1.</li>
+<li><strong>Beta-plus decay:</strong> a proton changes into a neutron, a positron (the antiparticle of the electron) and a neutrino. A stays the same and Z decreases by 1. This is the basis of PET scanning.</li>
+<li><strong>Gamma emission:</strong> the nucleus loses surplus energy by emitting a gamma photon. A and Z do not change. It usually follows alpha or beta decay.</li>
+</ul>
+<div class="worked"><div class="ex-label">Worked example 3: alpha decay</div>
+<p>Americium-241 (Z = 95), used in smoke detectors, decays by alpha emission. Write the equation.</p>
+<p class="step">Daughter nucleus: A = 241 − 4 = 237, Z = 95 − 2 = 93. Element 93 is neptunium (Np).</p>
+<p class="step"><strong>Am-241 → Np-237 + He-4</strong>. Check: 241 = 237 + 4 ✓ and 95 = 93 + 2 ✓.</p></div>
+<div class="worked"><div class="ex-label">Worked example 4: beta decay</div>
+<p>Cobalt-60 (Z = 27) decays by beta-minus emission to an isotope of nickel (Z = 28). Write the equation.</p>
+<p class="step">A stays 60 and Z rises to 28: <strong>Co-60 → Ni-60 + e⁻ + antineutrino</strong>. Check charge: 27 = 28 + (−1) ✓.</p>
+<p class="step">The nickel nucleus is left in an excited state and sheds energy by emitting two gamma rays (of about 1.17 and 1.33 MeV). These gamma rays are why cobalt-60 is used in radiotherapy and sterilisation.</p></div>
+<div class="worked"><div class="ex-label">Worked example 5: a decay chain</div>
+<p>Uranium-238 (Z = 92) emits an alpha particle, giving thorium-234, which emits a beta-minus particle. Find the nucleus produced.</p>
+<p class="step">Alpha: Z = 92 − 2 = 90 (thorium), A = 238 − 4 = 234.</p>
+<p class="step">Beta-minus from Th-234: A stays 234, Z = 90 + 1 = 91 (protactinium). Result: <strong>Pa-234</strong>.</p>
+<p>The process continues through a long series of decays and ends at stable lead-206.</p></div>
+
+<h2 id="halflife"><span class="num">7.</span>Half-Life</h2>
+<p>Since decay is random, we cannot say when a particular nucleus will decay, but we can say how long it takes for <strong>half</strong> of a large sample to decay. The <strong>half-life (T½)</strong> of an isotope is the time taken for half of the radioactive nuclei in a sample to decay, which is also the time for the <strong>activity</strong> (and the count rate) to fall to half. After each half-life, half of what remained decays again, so the amount follows a repeating-halving pattern:</p>
+<div class="example-box"><div class="ex-label">Formula</div><p><strong>N = N₀ × (½)ⁿ</strong> where n = t ÷ T½ is the number of half-lives that have passed.</p><p>The same formula applies to activity A and count rate. The half-life of a given isotope is a fixed property, unaffected by temperature, pressure or chemical state.</p></div>
+<div class="diagram-box">
+<svg viewBox="0 0 560 290" role="img" aria-labelledby="a4t a4d">
+<title id="a4t">Radioactive decay curve</title>
+<desc id="a4d">A graph of activity against time measured in half-lives. The curve falls from 100 percent to 50 percent after one half-life, 25 percent after two, 12.5 percent after three and about 6 percent after four. The curve draws itself repeatedly.</desc>
+<rect width="560" height="290" rx="14" fill="#faf8f4"/>
+<g stroke="#06244a" stroke-width="2"><line x1="70" y1="30" x2="70" y2="250"/><line x1="70" y1="250" x2="520" y2="250"/></g>
+<g stroke="#8892a0" stroke-width="1.5" stroke-dasharray="5 4"><line x1="70" y1="150" x2="155" y2="150"/><line x1="155" y1="150" x2="155" y2="250"/><line x1="70" y1="200" x2="240" y2="200"/><line x1="240" y1="200" x2="240" y2="250"/><line x1="70" y1="225" x2="325" y2="225"/><line x1="325" y1="225" x2="325" y2="250"/></g>
+<path class="draw-wave" pathLength="1" d="M70.0 50.0 L80.6 66.6 L91.2 81.8 L101.9 95.8 L112.5 108.6 L123.1 120.3 L133.8 131.1 L144.4 140.9 L155.0 150.0 L165.6 158.3 L176.2 165.9 L186.9 172.9 L197.5 179.3 L208.1 185.2 L218.8 190.5 L229.4 195.5 L240.0 200.0 L250.6 204.1 L261.2 208.0 L271.9 211.4 L282.5 214.6 L293.1 217.6 L303.8 220.3 L314.4 222.7 L325.0 225.0 L335.6 227.1 L346.2 229.0 L356.9 230.7 L367.5 232.3 L378.1 233.8 L388.8 235.1 L399.4 236.4 L410.0 237.5 L420.6 238.5 L431.2 239.5 L441.9 240.4 L452.5 241.2 L463.1 241.9 L473.8 242.6 L484.4 243.2 L495.0 243.8" fill="none" stroke="#b3261e" stroke-width="4"/>
+<g font-size="13" fill="#4a4a4a" text-anchor="end"><text x="62" y="54">100%</text><text x="62" y="154">50%</text><text x="62" y="204">25%</text><text x="62" y="229">12.5%</text></g>
+<g font-size="13" fill="#4a4a4a" text-anchor="middle"><text x="70" y="268">0</text><text x="155" y="268">1 T½</text><text x="240" y="268">2 T½</text><text x="325" y="268">3 T½</text><text x="410" y="268">4 T½</text><text x="495" y="268">5 T½</text></g>
+<g font-size="13" fill="#06244a" font-weight="700"><text x="20" y="22">activity or amount of radioactive nuclei</text><text x="270" y="130">after each half-life,</text><text x="270" y="146">half of what is left decays</text></g>
+<text x="300" y="286" font-size="12" fill="#4a4a4a">time (in half-lives) →</text>
+</svg>
+<div class="diagram-caption">Figure 4. A radioactive decay curve. The amount halves in each equal time interval, but never quite reaches zero. (Original EDUSAMBAM diagram.)</div>
+</div>
+<div class="worked"><div class="ex-label">Worked example 6: remaining mass</div>
+<p>A sample of 80 g of a radioisotope with a half-life of 6.0 hours is left for 24 hours. How much remains?</p>
+<p class="step">Step 1. n = 24 ÷ 6.0 = 4 half-lives.</p>
+<p class="step">Step 2. 80 → 40 → 20 → 10 → 5. Or N = 80 × (½)⁴ = 80 ÷ 16 = <strong>5.0 g</strong>.</p></div>
+<div class="worked"><div class="ex-label">Worked example 7: count rate with background</div>
+<p>A student measures 420 counts per minute from a source and 20 counts per minute with the source removed. The half-life is 5.0 min. What count rate will she measure after 15 minutes?</p>
+<p class="step">Step 1. Corrected count rate = 420 − 20 = 400 counts/min.</p>
+<p class="step">Step 2. n = 15 ÷ 5.0 = 3 half-lives, so corrected rate = 400 × (½)³ = 50 counts/min.</p>
+<p class="step">Step 3. The detector will read 50 + 20 = <strong>70 counts/min</strong>, because the background is still there.</p></div>
+<table class="pos-table"><tr><th>Isotope</th><th>Half-life (approximate)</th><th>Use or comment</th></tr>
+<tr><td>Polonium-212</td><td>0.3 microseconds</td><td>Extremely short-lived</td></tr>
+<tr><td>Technetium-99m</td><td>6 hours</td><td>Medical imaging</td></tr>
+<tr><td>Iodine-131</td><td>8 days</td><td>Thyroid treatment</td></tr>
+<tr><td>Radon-222</td><td>3.8 days</td><td>Natural radioactive gas</td></tr>
+<tr><td>Cobalt-60</td><td>5.3 years</td><td>Radiotherapy, sterilisation</td></tr>
+<tr><td>Caesium-137</td><td>30 years</td><td>Industrial gauges; nuclear waste</td></tr>
+<tr><td>Carbon-14</td><td>5730 years</td><td>Radiocarbon dating</td></tr>
+<tr><td>Plutonium-239</td><td>24 000 years</td><td>Nuclear fuel and waste</td></tr>
+<tr><td>Uranium-238</td><td>4.5 billion years</td><td>Natural uranium; dating rocks</td></tr></table>
+<p><strong>Radiocarbon dating.</strong> Cosmic rays constantly make carbon-14 in the upper atmosphere, and living plants and animals take it in, so the fraction of carbon-14 in living things stays constant. When an organism dies it stops taking in carbon, and the carbon-14 already in it decays with a half-life of 5730 years. By measuring how much is left, we can estimate how long ago it died. For example, a wooden tool with a quarter of the carbon-14 of living wood has passed through two half-lives, so it is about 2 × 5730 = <strong>11 460 years</strong> old. The method works to about 50 000 years, and the results are calibrated against other records such as tree rings.</p>
+<div class="example-box"><div class="ex-label">Extension: the decay constant</div><p>The probability per second that a given nucleus decays is the <strong>decay constant λ</strong>. The activity is <strong>A = λN</strong> and the half-life is <strong>T½ = ln 2 ÷ λ = 0.693 ÷ λ</strong>. For carbon-14, λ = 0.693 ÷ 5730 years ≈ 1.2 × 10⁻⁴ per year.</p></div>
+
+<h2 id="uses"><span class="num">8.</span>Uses of Radioactivity</h2>
+<ul>
+<li><strong>Medical imaging:</strong> technetium-99m (a gamma emitter with a half-life of 6 hours) is attached to a chemical that goes to a chosen organ; a gamma camera then maps it. In <strong>PET scans</strong> a positron emitter such as fluorine-18 (half-life about 110 minutes) is used.</li>
+<li><strong>Radiotherapy:</strong> beams of gamma rays or other radiation are aimed at a tumour from several directions to kill cancer cells while sparing healthy tissue. Iodine-131 is given to treat some thyroid conditions.</li>
+<li><strong>Sterilising:</strong> gamma rays from cobalt-60 kill bacteria on surgical equipment and some foods, without making them radioactive.</li>
+<li><strong>Smoke detectors:</strong> a tiny source of americium-241 produces alpha particles that ionise the air between two electrodes; smoke particles reduce the current and set off the alarm.</li>
+<li><strong>Thickness gauges:</strong> in paper and metal mills, a beta source on one side of the sheet and a detector on the other; the count rate falls if the sheet is too thick.</li>
+<li><strong>Tracers:</strong> a gamma emitter with a short half-life is added to water or oil in a pipe, and a detector outside finds leaks; in plants and animals tracers show how substances move.</li>
+<li><strong>Dating:</strong> carbon-14 for once-living things, and uranium–lead dating for rocks (the oldest Earth minerals are about 4.4 billion years old, and the Earth is about 4.5 billion).</li>
+<li><strong>Power in space:</strong> radioisotope thermoelectric generators convert the heat from plutonium-238 decay into electricity for probes such as Voyager 1 and 2, far from the Sun.</li>
+</ul>
+
+<h2 id="safety"><span class="num">9.</span>Radiation Dose and Safety</h2>
+<p>Ionising radiation can break chemical bonds and damage DNA. Large doses can cause radiation sickness, burns and cancer; small doses carry a small increase in the risk of cancer later. The effect on the body is measured in <strong>sieverts (Sv)</strong>, but since a sievert is large, we use <strong>millisieverts (mSv)</strong>, where 1 mSv = 0.001 Sv. Some typical values are given below (approximate and variable).</p>
+<table class="pos-table"><tr><th>Source of dose</th><th>Approximate dose</th></tr>
+<tr><td>Chest X-ray</td><td>0.02–0.1 mSv</td></tr>
+<tr><td>Natural background (world average, per year)</td><td>about 2.4 mSv</td></tr>
+<tr><td>CT scan of the head</td><td>about 2 mSv</td></tr>
+<tr><td>Recommended limit for the public from artificial sources (per year)</td><td>1 mSv</td></tr>
+<tr><td>Recommended limit for radiation workers (averaged over 5 years)</td><td>20 mSv per year</td></tr></table>
+<p>Limits are set by international bodies such as the International Commission on Radiological Protection (ICRP). Medical exposures are justified when the benefit to the patient is clearly greater than the small risk. Radiation workers protect themselves with three rules:</p>
+<ul>
+<li><strong>Time:</strong> keep exposure as short as possible.</li>
+<li><strong>Distance:</strong> stay as far away as practical. The intensity from a small source follows the inverse-square law, so doubling the distance reduces the dose rate to a quarter.</li>
+<li><strong>Shielding:</strong> put suitable material (lead, concrete, water) between you and the source.</li>
+</ul>
+<p>In addition, sources are handled with tongs, stored in labelled lead-lined containers, never pointed at people, and workers wear <strong>film badges</strong> or electronic dosimeters. Unsealed sources are handled with gloves and a ban on eating or drinking in the area to prevent contamination. Note the difference between <strong>irradiation</strong> (being exposed to radiation from a source outside the body, which does not make you radioactive) and <strong>contamination</strong> (having radioactive material on or in your body).</p>
+
+<h2 id="binding"><span class="num">10.</span>Binding Energy and E = mc²</h2>
+<p>If you weigh a helium-4 nucleus carefully, its mass is slightly <strong>less</strong> than the total mass of the two protons and two neutrons separately. The missing mass is the <strong>mass defect</strong>. It has not vanished: in 1905 Einstein showed that mass and energy are equivalent, with <strong>E = mc²</strong>, where c is the speed of light. The mass defect corresponds to the energy that was released when the nucleons joined, and the same amount of energy is needed to pull them apart again. It is called the <strong>binding energy</strong>.</p>
+<div class="worked"><div class="ex-label">Worked example 8: binding energy of helium-4</div>
+<p>Masses in atomic mass units (u): proton 1.007276, neutron 1.008665, helium-4 nucleus 4.001506. Find the binding energy (1 u is equivalent to 931.5 MeV).</p>
+<p class="step">Step 1. Separate nucleons: 2 × 1.007276 + 2 × 1.008665 = 2.014552 + 2.017330 = 4.031882 u.</p>
+<p class="step">Step 2. Mass defect = 4.031882 − 4.001506 = 0.030376 u.</p>
+<p class="step">Step 3. Binding energy = 0.030376 × 931.5 ≈ <strong>28.3 MeV</strong>, or about 7.1 MeV per nucleon.</p></div>
+<p>A graph of binding energy <em>per nucleon</em> against nucleon number explains why both fission and fusion release energy. Nuclei near iron-56 are the most tightly bound.</p>
+<div class="diagram-box">
+<svg viewBox="0 0 560 300" role="img" aria-labelledby="a5t a5d">
+<title id="a5t">Binding energy per nucleon against nucleon number</title>
+<desc id="a5d">A graph of binding energy per nucleon, in million electron volts, against the number of nucleons. The curve rises steeply for the lightest nuclei, peaks near iron-56 at about 8.8, and falls slowly for the heaviest nuclei such as uranium-238. Fusion of light nuclei and fission of heavy nuclei both move towards the peak. The curve draws itself repeatedly.</desc>
+<rect width="560" height="300" rx="14" fill="#faf8f4"/>
+<g stroke="#06244a" stroke-width="2"><line x1="70" y1="40" x2="70" y2="250"/><line x1="70" y1="250" x2="520" y2="250"/></g>
+<g stroke="#8892a0" stroke-width="1" stroke-dasharray="4 4"><line x1="70" y1="74" x2="171" y2="74"/><line x1="171" y1="74" x2="171" y2="250"/></g>
+<path class="draw-wave" pathLength="1" d="M71.8 250.0 L73.6 227.8 L75.4 198.6 L77.2 108.6 L80.8 143.4 L84.4 108.8 L91.6 96.4 L98.8 90.4 L106.0 89.4 L120.4 81.0 L142.0 79.0 L170.8 74.2 L214.0 75.8 L250.0 77.8 L286.0 79.8 L322.0 82.4 L358.0 86.0 L430.0 92.6 L498.4 98.6" fill="none" stroke="#b3261e" stroke-width="4"/>
+<g font-size="13" fill="#4a4a4a" text-anchor="end"><text x="62" y="254">0</text><text x="62" y="214">2</text><text x="62" y="174">4</text><text x="62" y="134">6</text><text x="62" y="94">8</text></g>
+<g font-size="13" fill="#4a4a4a" text-anchor="middle"><text x="70" y="268">0</text><text x="250" y="268">100</text><text x="430" y="268">200</text></g>
+<g font-size="13" fill="#06244a" font-weight="700"><text x="20" y="30">binding energy per nucleon (MeV)</text><text x="300" y="290">number of nucleons (A) →</text><text x="176" y="66">Fe-56 (most stable)</text><text x="98" y="128" fill="#b3261e">He-4</text><text x="76" y="202" fill="#4a4a4a" font-weight="400">H-2</text><text x="390" y="140">U-238</text></g>
+<g font-size="12" fill="#4a4a4a"><text x="96" y="165">FUSION: light nuclei join</text><text x="96" y="181">and energy is released</text><text x="320" y="190">FISSION: heavy nuclei split</text><text x="320" y="206">and energy is released</text></g>
+</svg>
+<div class="diagram-caption">Figure 5. Binding energy per nucleon. Energy is released when nuclei change towards the peak near iron-56, by fusing (light nuclei) or by splitting (heavy nuclei). (Original EDUSAMBAM diagram; values approximate.)</div>
+</div>
+
+<h2 id="fission"><span class="num">11.</span>Nuclear Fission and Reactors</h2>
+<p><strong>Nuclear fission</strong> is the splitting of a large nucleus into two smaller ones. It was discovered in 1938 by the German chemists Otto Hahn and Fritz Strassmann, and explained in early 1939 by Lise Meitner and Otto Frisch. When a slow neutron strikes a uranium-235 nucleus, the nucleus absorbs it, becomes unstable, and splits, releasing about <strong>200 MeV</strong> of energy as kinetic energy of the fragments, plus <strong>two or three more neutrons</strong>. A typical reaction is:</p>
+<p style="text-align:center"><strong>U-235 + n → Ba-141 + Kr-92 + 3 n + energy</strong> &nbsp; (check: 235 + 1 = 141 + 92 + 3 ✓ and 92 = 56 + 36 ✓)</p>
+<div class="diagram-box">
+<svg viewBox="0 0 560 290" role="img" aria-labelledby="a6t a6d">
+<title id="a6t">Fission of uranium-235</title>
+<desc id="a6d">A neutron strikes a uranium-235 nucleus, forming an unstable uranium-236 nucleus that splits into barium-141 and krypton-92, releasing three neutrons and energy. Each released neutron can cause another fission, which is a chain reaction. Moving dashes show the direction of the process.</desc>
+<rect width="560" height="290" rx="14" fill="#faf8f4"/>
+<circle cx="40" cy="150" r="7" fill="#8c8c8c" stroke="#06244a" stroke-width="1.5"/>
+<circle cx="150" cy="150" r="32" fill="#cdb8e6" stroke="#06244a" stroke-width="2.5"/><circle cx="270" cy="150" r="36" fill="#e8c9f0" stroke="#06244a" stroke-width="2.5" stroke-dasharray="6 4"/>
+<circle cx="430" cy="80" r="28" fill="#f3c9b8" stroke="#06244a" stroke-width="2.5"/><circle cx="430" cy="220" r="24" fill="#bcdcf5" stroke="#06244a" stroke-width="2.5"/>
+<g fill="#8c8c8c" stroke="#06244a" stroke-width="1.5"><circle cx="500" cy="130" r="7"/><circle cx="520" cy="150" r="7"/><circle cx="500" cy="170" r="7"/></g>
+<g fill="none" stroke="#d4a017" stroke-width="4" class="flow-dash"><path d="M50 150 H112"/><path d="M186 150 H228"/><path d="M304 135 L400 94"/><path d="M304 165 L406 210"/><path d="M308 150 H480"/></g>
+<g font-size="13" font-weight="700" fill="#06244a" text-anchor="middle"><text x="150" y="154">U-235</text><text x="270" y="146">U-236</text><text x="270" y="162" font-size="11" font-weight="400">(unstable)</text><text x="430" y="84">Ba-141</text><text x="430" y="224">Kr-92</text><text x="40" y="132" font-weight="400">neutron</text></g>
+<g font-size="13" fill="#4a4a4a"><text x="476" y="116" font-weight="700" fill="#06244a">3 neutrons</text><text x="150" y="270">energy released: about 200 MeV per fission</text></g>
+<text x="20" y="24" font-size="14" font-weight="700" fill="#06244a">Each released neutron can split another nucleus: a chain reaction</text>
+</svg>
+<div class="diagram-caption">Figure 6. The fission of uranium-235. If, on average, at least one of the neutrons released goes on to cause another fission, a self-sustaining chain reaction results. (Original EDUSAMBAM diagram; nuclei not to scale.)</div>
+</div>
+<p>Because each fission releases up to three neutrons, each of which can cause another fission, a <strong>chain reaction</strong> can build up. In a bomb, the chain reaction is allowed to grow uncontrolled. In a <strong>nuclear reactor</strong> it is carefully controlled so that, on average, exactly one neutron from each fission causes another fission. The first controlled chain reaction was achieved by Enrico Fermi's team at Chicago on 2 December 1942.</p>
+<div class="worked"><div class="ex-label">Worked example 9: energy from 1 kg of uranium-235</div>
+<p>Estimate the energy released if all of the uranium-235 in 1.0 kg fissions, at 200 MeV per fission. (Take 1 MeV = 1.6 × 10⁻¹³ J and 235 g of U-235 contains 6.0 × 10²³ atoms.)</p>
+<p class="step">Step 1. Atoms = (1000 ÷ 235) × 6.0 × 10²³ ≈ 2.6 × 10²⁴.</p>
+<p class="step">Step 2. Energy per fission = 200 × 1.6 × 10⁻¹³ = 3.2 × 10⁻¹¹ J.</p>
+<p class="step">Step 3. Total energy = 2.6 × 10²⁴ × 3.2 × 10⁻¹¹ ≈ <strong>8 × 10¹³ J</strong> (about 80 TJ).</p>
+<p>Burning 1 kg of coal releases about 3 × 10⁷ J, so the fission of 1 kg of uranium-235 gives roughly <strong>three million times</strong> more energy. (In practice reactor fuel contains only a few per cent U-235, and not all of it is used.)</p></div>
+<p>A typical <strong>nuclear power station</strong> uses the energy of fission to boil water, and the steam drives a turbine and generator, just as in the thermal power station described in the article on energy. The main parts of a reactor are:</p>
+<ul>
+<li><strong>Fuel rods:</strong> uranium (typically enriched to about 3–5% uranium-235) in sealed metal tubes.</li>
+<li><strong>Moderator:</strong> water, heavy water or graphite, which slows the fast neutrons so that they are more likely to cause fission in U-235.</li>
+<li><strong>Control rods:</strong> made of boron or cadmium, which absorb neutrons. Lowering them into the core slows the reaction or stops it; raising them speeds it up.</li>
+<li><strong>Coolant:</strong> carries heat from the core to the steam generator (water, heavy water or gas).</li>
+<li><strong>Shielding and containment:</strong> thick concrete and steel keep the radiation inside the plant.</li>
+</ul>
+<p>The first nuclear power station to supply electricity to a grid was at Obninsk in the USSR in 1954. In Pakistan, the Karachi Nuclear Power Plant (KANUPP) started operating in 1972, and the Pakistan Atomic Energy Commission now operates several nuclear plants at Karachi and Chashma. Nuclear power stations produce almost no carbon dioxide while operating and generate large amounts of reliable electricity from small amounts of fuel. On the other hand, they produce <strong>radioactive waste</strong>, some of which stays dangerous for thousands of years; they are costly to build; and serious accidents, although rare, can have major consequences (Three Mile Island 1979, Chernobyl 1986 and Fukushima 2011). Spent fuel is stored first in cooling pools and then in sealed dry casks, and many countries plan deep underground repositories for the most hazardous waste. Whether and how to use nuclear power involves weighing these benefits and risks, together with cost, safety and alternatives such as solar, wind and hydropower.</p>
+
+<h2 id="fusion"><span class="num">12.</span>Nuclear Fusion</h2>
+<p><strong>Nuclear fusion</strong> is the joining of two light nuclei to form a heavier one, releasing energy. It is what powers the Sun and other stars. Inside the Sun, hydrogen nuclei fuse step by step into helium, converting about 4 million tonnes of mass into energy every second. On Earth, the most promising reaction joins two hydrogen isotopes:</p>
+<p style="text-align:center"><strong>H-2 + H-3 → He-4 + n + 17.6 MeV</strong></p>
+<p>Fusion fuel is plentiful (deuterium comes from seawater), and fusion produces no long-lived high-level waste of the kind from fission, but it is very hard to achieve. Nuclei repel each other, so they must be heated to over a hundred million degrees Celsius and held together long enough, usually inside a ring of strong magnetic fields (as in the international ITER project under construction in France) or by compressing tiny fuel pellets with lasers. In December 2022 the National Ignition Facility in the United States reported a laser-driven fusion shot that released more energy than the laser energy delivered to the target, a scientific milestone; a power plant that continuously produces more electricity than it uses has not yet been built.</p>
+
+<h2 id="particles"><span class="num">13.</span>Inside the Nucleon</h2>
+<p>Protons and neutrons are not the end of the story. In the 1960s physicists showed that they are made of smaller particles called <strong>quarks</strong>. A proton contains two "up" quarks and one "down" quark (uud); a neutron contains one up and two down (udd). Electrons are not made of anything smaller, as far as we know; they belong to a family called <strong>leptons</strong>. Each particle has an <strong>antiparticle</strong> with the same mass and opposite charge. The positron (antielectron) was discovered by Carl Anderson in 1932. The <strong>Standard Model</strong> of particle physics organises the known particles and three of the four fundamental forces, and it was strongly confirmed by the discovery of the Higgs boson at CERN in 2012. Gravity is not included, and the nature of dark matter is still unknown.</p>
+
+<h2 id="mistakes"><span class="num">14.</span>Common Mistakes to Avoid</h2>
+<div class="mistake-box"><div class="ex-label">Watch out</div><ul>
+<li><strong>Confusing the proton number and nucleon number.</strong> Z is the number of protons; A is protons plus neutrons.</li>
+<li><strong>Forgetting that beta decay changes Z but not A.</strong> Alpha decay changes A by 4 and Z by 2.</li>
+<li><strong>"Half-life is half the time to decay completely."</strong> After two half-lives a quarter remains, not zero.</li>
+<li><strong>Forgetting the background count.</strong> Subtract it before applying half-life, and add it back if asked what the counter will read.</li>
+<li><strong>"Radioactive things glow," or "irradiated things become radioactive."</strong> Irradiated food or equipment does not become radioactive; contamination is different from irradiation.</li>
+<li><strong>"Gamma rays are particles with mass."</strong> They are electromagnetic waves.</li>
+<li><strong>Mixing up fission and fusion.</strong> Fission splits a heavy nucleus; fusion joins light nuclei.</li>
+<li><strong>"Nuclear reactors can explode like nuclear bombs."</strong> Reactor fuel is not enriched enough and the design cannot make an atomic explosion, although serious accidents can still occur (for example, from overheating or steam explosions).</li>
+</ul></div>
+
+<h2 id="check"><span class="num">15.</span>Check Your Understanding</h2>
+<p>Try each question before opening the answer.</p>
+<div class="cyu">
+<details><summary>1. How many protons, neutrons and electrons are in a neutral atom of sodium-23 (Z = 11)?</summary><p>Protons = 11. Neutrons = 23 − 11 = <strong>12</strong>. Electrons = <strong>11</strong>.</p></details>
+<details><summary>2. Why did most alpha particles pass straight through the gold foil in Rutherford's experiment?</summary><p>Most of the atom is empty space; the positive nucleus occupies only a tiny volume, so most alpha particles never came near a nucleus.</p></details>
+<details><summary>3. Which radiation would be stopped by a sheet of paper, and which would pass through it but be stopped by thin aluminium?</summary><p>Alpha is stopped by paper. Beta passes through paper but is stopped by a few millimetres of aluminium.</p></details>
+<details><summary>4. Radium-226 (Z = 88) emits an alpha particle. Write the equation.</summary><p>A = 226 − 4 = 222; Z = 88 − 2 = 86 (radon). <strong>Ra-226 → Rn-222 + He-4</strong>.</p></details>
+<details><summary>5. Carbon-14 (Z = 6) decays by beta-minus emission. What nucleus is formed?</summary><p>A = 14, Z = 7, which is nitrogen: <strong>C-14 → N-14 + e⁻ + antineutrino</strong>.</p></details>
+<details><summary>6. A sample has a half-life of 10 days and an activity of 1600 Bq. What is its activity after 30 days?</summary><p>30 ÷ 10 = 3 half-lives. 1600 → 800 → 400 → <strong>200 Bq</strong>.</p></details>
+<details><summary>7. A bone has 12.5% of the carbon-14 found in living bone. How old is it?</summary><p>12.5% = (½)³, so 3 half-lives: 3 × 5730 = <strong>17 190 years</strong>.</p></details>
+<details><summary>8. What is the job of the control rods and the moderator in a reactor?</summary><p>Control rods absorb neutrons to control (or stop) the chain reaction. The moderator slows neutrons so they are more likely to cause fission in uranium-235.</p></details>
+</div>
+
+<h2>Summary</h2>
+<ul>
+<li>An atom has a tiny, dense, positive nucleus (protons and neutrons) surrounded by electrons. Rutherford's alpha-scattering experiment revealed this.</li>
+<li>Isotopes have the same Z but different A. Unstable nuclei decay randomly and spontaneously, emitting alpha, beta or gamma radiation.</li>
+<li>Alpha: strongly ionising, least penetrating. Beta: moderate. Gamma: weakly ionising, most penetrating.</li>
+<li>Half-life is the time for activity to fall to half. It underlies radiocarbon dating, medical tracers and waste management.</li>
+<li>Binding energy and E = mc² explain why fission and fusion release energy. Reactors control fission; stars (and future power plants) use fusion.</li>
+<li>Use time, distance and shielding to stay safe, and weigh the benefits and risks of nuclear technology carefully.</li>
+</ul>
+
+<div class="teacher-note"><div class="ex-label">For teachers and parents</div>
+<p>Real radioactive sources need trained supervision and are restricted in many schools, but you can model radioactive decay safely with 100 dice or coins: roll all the dice, remove those that show a six (or the heads), count those left, and repeat; the graph of the number remaining against the number of rolls looks just like a decay curve, and it shows that decay is random yet predictable. You can also use a free simulation of the Rutherford experiment, use a cloud chamber demonstration, discuss the uses and risks of radiation with a local hospital or university department, and explore the distribution of background radiation with a Geiger counter if one is available. Numerical values are rounded; please check that they match the data booklet used by your examination board.</p></div>
+
+<h2>Keep Learning on EDUSAMBAM</h2>
+<div class="related-grid">
+<a href="matter-and-its-states.html">Matter and Its States<span>Particles, density and the kinetic model</span></a>
+<a href="energy-types-sources-transformations.html">Energy: Types, Sources and Transformations<span>Power stations and energy resources</span></a>
+<a href="electricity-and-magnetism-the-basics.html">Electricity and Magnetism: The Basics<span>Charge, generators and transformers</span></a>
+<a href="light-reflection-refraction-color.html">Light: Reflection, Refraction and Colour<span>The electromagnetic spectrum includes gamma rays</span></a>
+<a href="gravity-and-space.html">Gravity and Space<span>Fusion in the Sun and the life of stars</span></a>
+<a href="what-is-physics.html">What is Physics?<span>Units, standard form and measurement</span></a>
+<a href="physics-quiz-race.html">Physics Quiz Race<span>Interactive practice game</span></a>
+<a href="physics-word-search.html">Physics Word Search<span>Learn key terms by playing</span></a>
+</div>
+
+<h2>Sources and Further Reading</h2>
+<p>This article is original EDUSAMBAM writing. Definitions, data and historical facts were checked against the sources below. Diagrams are original and were not copied from any source.</p>
+<ul class="sources-list">
+<li><strong>OpenStax, University Physics Volume 3:</strong> atomic structure, nuclear physics, radioactivity and particle physics. <a href="https://openstax.org/details/books/university-physics-volume-3" target="_blank" rel="noopener">OpenStax — University Physics Volume 3</a>.</li>
+<li><strong>OpenStax, College Physics 2e:</strong> radioactivity, nuclear fission and fusion, and medical applications. <a href="https://openstax.org/details/books/college-physics-2e" target="_blank" rel="noopener">OpenStax — College Physics 2e</a>.</li>
+<li><strong>International Atomic Energy Agency (IAEA):</strong> nuclear power, radiation safety and the Power Reactor Information System. <a href="https://www.iaea.org/" target="_blank" rel="noopener">IAEA</a>; <a href="https://pris.iaea.org/" target="_blank" rel="noopener">IAEA PRIS</a>.</li>
+<li><strong>UNSCEAR:</strong> sources and effects of ionising radiation, including average background doses. <a href="https://www.unscear.org/" target="_blank" rel="noopener">UNSCEAR</a>. <strong>ICRP:</strong> dose limits and radiological protection. <a href="https://www.icrp.org/" target="_blank" rel="noopener">ICRP</a>.</li>
+<li><strong>Pakistan Atomic Energy Commission:</strong> nuclear power and nuclear medicine in Pakistan. <a href="https://www.paec.gov.pk/" target="_blank" rel="noopener">PAEC</a>.</li>
+<li><strong>CERN</strong> (Higgs boson, 2012): <a href="https://home.cern/" target="_blank" rel="noopener">home.cern</a>. <strong>NIST:</strong> atomic masses and constants. <a href="https://physics.nist.gov/cuu/Constants/" target="_blank" rel="noopener">NIST — Fundamental Physical Constants</a>.</li>
+<li><strong>Encyclopaedia Britannica:</strong> <a href="https://www.britannica.com/biography/Ernest-Rutherford" target="_blank" rel="noopener">Ernest Rutherford</a>; <a href="https://www.britannica.com/biography/Marie-Curie" target="_blank" rel="noopener">Marie Curie</a>.</li>
+</ul>
+<p><strong>Note on the numbers:</strong> doses, half-lives and masses are rounded standard values. Nuclear statistics and the status of fusion research change over time, so check current data from the IAEA and national agencies. Please check numerical values against your own syllabus or exam board specification before relying on them.</p>
+
+<!-- QUIZ SECTION -->
+<div class="quiz-section">
+<div class="section-eyebrow">Test Your Understanding</div>
+<h2>Practice Quiz</h2>
+<p class="quiz-intro">12 questions. Select an answer for each, then submit to see your score instantly.</p>
+<div class="squiz-progress"><div class="squiz-progress-fill" id="squizProgressFill"></div></div>
+<div class="squiz-progress-label" id="squizProgressLabel">0 of 12 answered</div>
+<div class="squiz-results" id="squizResults"><div class="squiz-score-big" id="squizScoreBig">0/12</div><div class="squiz-score-label" id="squizScoreLabel">You scored 0%</div><div class="squiz-score-tier" id="squizScoreTier">Keep practicing</div><div><button class="squiz-retake-btn" onclick="retakeQuiz()">Retake Quiz</button></div></div>
+<form id="squizForm">
+<div class="squiz-item" data-correct="1"><div class="squiz-q"><span class="qnum">1.</span>Which particles are found in the nucleus of an atom?</div><div class="squiz-option"><input id="sq1a" name="sq1" type="radio" value="0"/><label for="sq1a">A. Protons and electrons</label></div><div class="squiz-option"><input id="sq1b" name="sq1" type="radio" value="1"/><label for="sq1b">B. Protons and neutrons</label></div><div class="squiz-option"><input id="sq1c" name="sq1" type="radio" value="2"/><label for="sq1c">C. Neutrons and electrons</label></div><div class="squiz-option"><input id="sq1d" name="sq1" type="radio" value="3"/><label for="sq1d">D. Only protons</label></div></div>
+<div class="squiz-item" data-correct="1"><div class="squiz-q"><span class="qnum">2.</span>What did most alpha particles do in Rutherford's gold foil experiment?</div><div class="squiz-option"><input id="sq2a" name="sq2" type="radio" value="0"/><label for="sq2a">A. Bounced straight back</label></div><div class="squiz-option"><input id="sq2b" name="sq2" type="radio" value="1"/><label for="sq2b">B. Passed straight through</label></div><div class="squiz-option"><input id="sq2c" name="sq2" type="radio" value="2"/><label for="sq2c">C. Were absorbed by the foil</label></div><div class="squiz-option"><input id="sq2d" name="sq2" type="radio" value="3"/><label for="sq2d">D. Turned into beta particles</label></div></div>
+<div class="squiz-item" data-correct="1"><div class="squiz-q"><span class="qnum">3.</span>An atom has 17 protons and a nucleon number of 35. How many neutrons does it have?</div><div class="squiz-option"><input id="sq3a" name="sq3" type="radio" value="0"/><label for="sq3a">A. 17</label></div><div class="squiz-option"><input id="sq3b" name="sq3" type="radio" value="1"/><label for="sq3b">B. 18</label></div><div class="squiz-option"><input id="sq3c" name="sq3" type="radio" value="2"/><label for="sq3c">C. 35</label></div><div class="squiz-option"><input id="sq3d" name="sq3" type="radio" value="3"/><label for="sq3d">D. 52</label></div></div>
+<div class="squiz-item" data-correct="1"><div class="squiz-q"><span class="qnum">4.</span>Isotopes of an element have…</div><div class="squiz-option"><input id="sq4a" name="sq4" type="radio" value="0"/><label for="sq4a">A. Different numbers of protons</label></div><div class="squiz-option"><input id="sq4b" name="sq4" type="radio" value="1"/><label for="sq4b">B. The same number of protons but different numbers of neutrons</label></div><div class="squiz-option"><input id="sq4c" name="sq4" type="radio" value="2"/><label for="sq4c">C. Different numbers of electrons only</label></div><div class="squiz-option"><input id="sq4d" name="sq4" type="radio" value="3"/><label for="sq4d">D. The same mass number</label></div></div>
+<div class="squiz-item" data-correct="0"><div class="squiz-q"><span class="qnum">5.</span>Which radiation is stopped by a sheet of paper?</div><div class="squiz-option"><input id="sq5a" name="sq5" type="radio" value="0"/><label for="sq5a">A. Alpha</label></div><div class="squiz-option"><input id="sq5b" name="sq5" type="radio" value="1"/><label for="sq5b">B. Beta</label></div><div class="squiz-option"><input id="sq5c" name="sq5" type="radio" value="2"/><label for="sq5c">C. Gamma</label></div><div class="squiz-option"><input id="sq5d" name="sq5" type="radio" value="3"/><label for="sq5d">D. All three</label></div></div>
+<div class="squiz-item" data-correct="2"><div class="squiz-q"><span class="qnum">6.</span>Which radiation is an electromagnetic wave?</div><div class="squiz-option"><input id="sq6a" name="sq6" type="radio" value="0"/><label for="sq6a">A. Alpha</label></div><div class="squiz-option"><input id="sq6b" name="sq6" type="radio" value="1"/><label for="sq6b">B. Beta</label></div><div class="squiz-option"><input id="sq6c" name="sq6" type="radio" value="2"/><label for="sq6c">C. Gamma</label></div><div class="squiz-option"><input id="sq6d" name="sq6" type="radio" value="3"/><label for="sq6d">D. Neutron</label></div></div>
+<div class="squiz-item" data-correct="0"><div class="squiz-q"><span class="qnum">7.</span>What happens to the nucleon number and proton number in alpha decay?</div><div class="squiz-option"><input id="sq7a" name="sq7" type="radio" value="0"/><label for="sq7a">A. A falls by 4 and Z falls by 2</label></div><div class="squiz-option"><input id="sq7b" name="sq7" type="radio" value="1"/><label for="sq7b">B. A falls by 2 and Z falls by 4</label></div><div class="squiz-option"><input id="sq7c" name="sq7" type="radio" value="2"/><label for="sq7c">C. A stays the same and Z rises by 1</label></div><div class="squiz-option"><input id="sq7d" name="sq7" type="radio" value="3"/><label for="sq7d">D. Neither changes</label></div></div>
+<div class="squiz-item" data-correct="1"><div class="squiz-q"><span class="qnum">8.</span>A radioactive nucleus undergoes beta-minus decay. What happens to its proton number?</div><div class="squiz-option"><input id="sq8a" name="sq8" type="radio" value="0"/><label for="sq8a">A. It decreases by 1</label></div><div class="squiz-option"><input id="sq8b" name="sq8" type="radio" value="1"/><label for="sq8b">B. It increases by 1</label></div><div class="squiz-option"><input id="sq8c" name="sq8" type="radio" value="2"/><label for="sq8c">C. It decreases by 2</label></div><div class="squiz-option"><input id="sq8d" name="sq8" type="radio" value="3"/><label for="sq8d">D. It stays the same</label></div></div>
+<div class="squiz-item" data-correct="2"><div class="squiz-q"><span class="qnum">9.</span>A source has a half-life of 4 hours and an activity of 800 Bq. What is its activity after 12 hours?</div><div class="squiz-option"><input id="sq9a" name="sq9" type="radio" value="0"/><label for="sq9a">A. 400 Bq</label></div><div class="squiz-option"><input id="sq9b" name="sq9" type="radio" value="1"/><label for="sq9b">B. 200 Bq</label></div><div class="squiz-option"><input id="sq9c" name="sq9" type="radio" value="2"/><label for="sq9c">C. 100 Bq</label></div><div class="squiz-option"><input id="sq9d" name="sq9" type="radio" value="3"/><label for="sq9d">D. 50 Bq</label></div></div>
+<div class="squiz-item" data-correct="1"><div class="squiz-q"><span class="qnum">10.</span>A sample of an ancient bone has 25% of the carbon-14 of a living bone. The half-life of carbon-14 is 5730 years. How old is the bone?</div><div class="squiz-option"><input id="sq10a" name="sq10" type="radio" value="0"/><label for="sq10a">A. 5730 years</label></div><div class="squiz-option"><input id="sq10b" name="sq10" type="radio" value="1"/><label for="sq10b">B. 11 460 years</label></div><div class="squiz-option"><input id="sq10c" name="sq10" type="radio" value="2"/><label for="sq10c">C. 17 190 years</label></div><div class="squiz-option"><input id="sq10d" name="sq10" type="radio" value="3"/><label for="sq10d">D. 22 920 years</label></div></div>
+<div class="squiz-item" data-correct="1"><div class="squiz-q"><span class="qnum">11.</span>In a nuclear reactor, what do control rods do?</div><div class="squiz-option"><input id="sq11a" name="sq11" type="radio" value="0"/><label for="sq11a">A. Slow neutrons down</label></div><div class="squiz-option"><input id="sq11b" name="sq11" type="radio" value="1"/><label for="sq11b">B. Absorb neutrons to control the chain reaction</label></div><div class="squiz-option"><input id="sq11c" name="sq11" type="radio" value="2"/><label for="sq11c">C. Carry heat to the turbine</label></div><div class="squiz-option"><input id="sq11d" name="sq11" type="radio" value="3"/><label for="sq11d">D. Shield the workers from heat</label></div></div>
+<div class="squiz-item" data-correct="1"><div class="squiz-q"><span class="qnum">12.</span>Which statement about nuclear fusion is correct?</div><div class="squiz-option"><input id="sq12a" name="sq12" type="radio" value="0"/><label for="sq12a">A. Heavy nuclei split into lighter ones</label></div><div class="squiz-option"><input id="sq12b" name="sq12" type="radio" value="1"/><label for="sq12b">B. Light nuclei join to form a heavier nucleus and release energy</label></div><div class="squiz-option"><input id="sq12c" name="sq12" type="radio" value="2"/><label for="sq12c">C. It powers all existing nuclear power stations</label></div><div class="squiz-option"><input id="sq12d" name="sq12" type="radio" value="3"/><label for="sq12d">D. It is the process that makes a Geiger counter click</label></div></div>
+<button class="squiz-submit-btn" disabled="" id="squizSubmitBtn" onclick="submitQuiz()" type="button">Answer all questions to submit</button>
+</form>
+<div class="article-footer-nav">
+<a href="index.html#gateway">← Gateway</a>
+<a href="index.html#subject-physics">More Physics Articles →</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const form = document.getElementById('squizForm');
+    const submitBtn = document.getElementById('squizSubmitBtn');
+    const progressFill = document.getElementById('squizProgressFill');
+    const progressLabel = document.getElementById('squizProgressLabel');
+    const totalQuestions = document.querySelectorAll('.squiz-item').length;
+
+    function countAnswered() {
+      let count = 0;
+      for (let i = 1; i <= totalQuestions; i++) {
+        if (form.querySelector(`input[name="sq${i}"]:checked`)) count++;
+      }
+      return count;
+    }
+
+    function updateProgress() {
+      const answered = countAnswered();
+      progressFill.style.width = (answered / totalQuestions * 100) + '%';
+      progressLabel.textContent = answered + ' of ' + totalQuestions + ' answered';
+      submitBtn.disabled = answered < totalQuestions;
+      submitBtn.textContent = answered < totalQuestions ? 'Answer all questions to submit' : 'Submit Quiz';
+      document.querySelectorAll('.squiz-option').forEach(opt => opt.classList.remove('selected'));
+      form.querySelectorAll('input[type="radio"]:checked').forEach(input => {
+        input.closest('.squiz-option').classList.add('selected');
+      });
+    }
+
+    form.addEventListener('change', updateProgress);
+
+    window.submitQuiz = function() {
+      let score = 0;
+      const questions = document.querySelectorAll('.squiz-item');
+      questions.forEach((q, idx) => {
+        const qnum = idx + 1;
+        const correctIdx = q.getAttribute('data-correct');
+        const selected = form.querySelector(`input[name="sq${qnum}"]:checked`);
+        const options = q.querySelectorAll('.squiz-option');
+        options.forEach((opt, optIdx) => {
+          opt.querySelector('input').disabled = true;
+          if (String(optIdx) === correctIdx) opt.classList.add('correct-answer');
+        });
+        if (selected && selected.value === correctIdx) {
+          score++;
+        } else if (selected) {
+          selected.closest('.squiz-option').classList.add('wrong-answer');
+        }
+      });
+
+      const percent = Math.round((score / totalQuestions) * 100);
+      document.getElementById('squizScoreBig').textContent = score + '/' + totalQuestions;
+      document.getElementById('squizScoreLabel').textContent = 'You scored ' + percent + '%';
+
+      let tier = 'Keep practicing';
+      if (percent === 100) tier = 'Perfect score!';
+      else if (percent >= 80) tier = 'Excellent work';
+      else if (percent >= 60) tier = 'Good effort';
+      else if (percent >= 40) tier = 'Getting there';
+      document.getElementById('squizScoreTier').textContent = tier;
+
+      document.getElementById('squizResults').classList.add('visible');
+      submitBtn.style.display = 'none';
+      document.getElementById('squizResults').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    window.retakeQuiz = function() {
+      form.reset();
+      document.querySelectorAll('.squiz-option').forEach(opt => {
+        opt.classList.remove('selected', 'correct-answer', 'wrong-answer');
+        opt.querySelector('input').disabled = false;
+      });
+      document.getElementById('squizResults').classList.remove('visible');
+      submitBtn.style.display = 'block';
+      updateProgress();
+      document.getElementById('squizForm').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    updateProgress();
+  })();
+</script>
+<footer aria-label="EDUSAMBAM site footer" class="edusambam-unified-footer">
+<div class="footer-top">
+<div class="footer-brand">
+<div class="edusambam-footer-brand-row">
+<a aria-label="EDUSAMBAM home" class="edusambam-footer-logo-link" href="index.html">
+<img alt="EDUSAMBAM" class="edusambam-brand-mark edusambam-footer-logo" src="logo-icon-full-white.png" style="width:auto;height:64px;max-width:240px;object-fit:contain;background:none;border-radius:0;"/>
+</a>
+</div>
+<p class="edusambam-footer-statement">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</p>
+<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a><a aria-label="EDUSAMBAM on YouTube" href="https://youtube.com/@edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></div>
+</div>
+<div class="footer-col"><h4>Learning Areas</h4><ul><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ Tests</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li></ul></div>
+<div class="footer-col"><h4>Practice &amp; Assessment</h4><ul>
+<li><a href="index.html#interactive-activities">Interactive Activities</a></li>
+<li><a href="assessment-arena.html">ASSESSMENT ARENA</a></li>
+<li><a href="index.html#resources">Resources &amp; Downloads</a></li>
+</ul></div>
+<div class="footer-col"><h4>About EDUSAMBAM</h4><ul>
+<li><a href="index.html#about-edusambam">What EDUSAMBAM Is</a></li>
+<li><a href="index.html#mission">Our Mission</a></li>
+<li><a href="index.html#team">The Team</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="mailto:feedback.edusambam@gmail.com?subject=EDUSAMBAM%20Feedback">Give Feedback</a></li>
+<li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+<li><a href="about.html">About EDUSAMBAM</a></li>
+<li><a href="privacy-policy.html">Privacy Policy</a></li>
+</ul></div>
+</div>
+<div class="footer-bottom"><p>© 2026 EDUSAMBAM · Learning resources, practice and assessment.</p><ul class="footer-bottom-links">
+<li><a href="#top">Back to Top</a></li>
+<li><a href="index.html#mission">Mission</a></li>
+<li><a href="index.html#team">Team</a></li>
+<li><a href="index.html#resources">Resources</a></li>
+</ul></div>
+</footer>
+
+<script id="edusambam-reader-script">
+(function(){
+ const box=document.querySelector('.edusambam-reader'); if(!box)return;
+ const root=document.querySelector('.article-wrap, .article-wrapper');
+ if(!root)return;
+ const status=box.querySelector('.reader-status'), progress=box.querySelector('.reader-progress span'), rate=box.querySelector('select');
+ let utterance=null, chunks=[], index=0, total=0, paused=false, stopped=false;
+ function text(){
+   const clone=root.cloneNode(true);
+   clone.querySelectorAll('.quiz-section,.drill-section,.squiz-section,.activity-section,.assessment-section,form,button,input,select,textarea,script,style').forEach(el=>el.remove());
+   return clone.textContent.replace(/\s+/g,' ').trim();
+ }
+ function splitText(t){const out=[];const max=1200;for(let i=0;i<t.length;i+=max)out.push(t.slice(i,i+max));return out;}
+ function updateProgress(){progress.style.width=(total?Math.min(100,Math.round((index/total)*100)):0)+'%';}
+ function speakNext(){
+   if(stopped||index>=total){if(index>=total&&!stopped){status.textContent='Reading finished.';progress.style.width='100%';}return;}
+   utterance=new SpeechSynthesisUtterance(chunks[index]);
+   utterance.rate=Number(rate.value)||1;
+   utterance.onend=function(){if(stopped)return;index++;updateProgress();speakNext();};
+   utterance.onerror=function(){if(!stopped)status.textContent='The reader stopped unexpectedly. Tap Resume to continue.';};
+   status.textContent='Reading article…';
+   speechSynthesis.speak(utterance);
+ }
+ function play(){
+   if(!('speechSynthesis' in window)){status.textContent='Audio reading is not supported by this browser.';return;}
+   speechSynthesis.cancel();
+   chunks=splitText(text());index=0;total=chunks.length;paused=false;stopped=false;updateProgress();speakNext();
+ }
+ function pause(){
+   if(!('speechSynthesis' in window))return;
+   if(speechSynthesis.speaking){speechSynthesis.pause();paused=true;status.textContent='Reader paused.';}
+ }
+ function resume(){
+   if(!('speechSynthesis' in window))return;
+   stopped=false;
+   if(speechSynthesis.paused){speechSynthesis.resume();paused=false;status.textContent='Reader resumed.';return;}
+   if(!speechSynthesis.speaking && chunks.length && index<total){paused=false;status.textContent='Reader resumed.';speakNext();return;}
+   if(!chunks.length){status.textContent='Nothing to resume. Tap Play to start.';return;}
+   status.textContent='Reader is already playing.';
+ }
+ function stop(){
+   speechSynthesis.cancel();chunks=[];index=0;total=0;paused=false;stopped=true;progress.style.width='0';status.textContent='Reader stopped.';
+ }
+ box.querySelector('[data-reader="play"]').addEventListener('click',play);
+ box.querySelector('[data-reader="pause"]').addEventListener('click',pause);
+ box.querySelector('[data-reader="resume"]').addEventListener('click',resume);
+ box.querySelector('[data-reader="stop"]').addEventListener('click',stop);
+ window.addEventListener('beforeunload',()=>{stopped=true;speechSynthesis.cancel();});
+})();
+</script>
+<script id="edusambam-unified-nav-js">
+(function(){
+  let pages=[];fetch('nav-search-index.json').then(r=>r.json()).then(d=>{pages=d;});
+  function closeAll(except){
+    document.querySelectorAll('.edusambam-mobile-menu,.edusambam-search-panel').forEach(el=>{
+      if(el!==except) el.classList.remove('open');
+    });
+    const b=document.querySelector('.edusambam-menu-btn');
+    if(b) b.setAttribute('aria-expanded', String(document.querySelector('.edusambam-mobile-menu')?.classList.contains('open')||false));
+  }
+  function setup(){
+    const menu=document.querySelector('.edusambam-mobile-menu');
+    const mb=document.querySelector('.edusambam-menu-btn');
+    const sb=document.querySelector('.edusambam-search-btn');
+    const panel=document.querySelector('.edusambam-search-panel');
+    const input=document.querySelector('.edusambam-search-input');
+    const results=document.querySelector('.edusambam-search-results');
+    if(mb && menu){
+      mb.addEventListener('click',()=>{
+        const open=menu.classList.toggle('open'); closeAll(open?menu:null);
+        mb.setAttribute('aria-expanded',String(open));
+        if(open) panel?.classList.remove('open');
+      });
+    }
+    if(sb && panel){
+      sb.addEventListener('click',()=>{
+        const open=panel.classList.toggle('open'); closeAll(open?panel:null);
+        if(open) setTimeout(()=>input?.focus(),30);
+      });
+    }
+    if(input && results){
+      const render=()=>{
+        const q=input.value.trim().toLowerCase();
+        const hits=q?pages.filter(x=>(x.title+' '+x.url).toLowerCase().includes(q)).slice(0,20):[];
+        results.innerHTML=hits.map(x=>'<a href="'+x.url.replace(/"/g,'&quot;')+'">'+
+          x.title.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</a>').join('') ||
+          (q?'<div style="padding:10px;color:#64748b">No matching pages found.</div>':'');
+      };
+      input.addEventListener('input',render);
+    }
+    document.addEventListener('keydown',e=>{
+      if(e.key==='Escape') closeAll(null);
+    });
+    document.addEventListener('click',e=>{
+      if(!e.target.closest('.edusambam-nav') && !e.target.closest('.edusambam-mobile-menu') && !e.target.closest('.edusambam-search-panel')) closeAll(null);
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',setup); else setup();
+})();
+</script>
+</body>
+</html>

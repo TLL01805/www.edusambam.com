@@ -12,9 +12,9 @@ gtag('config', 'G-Y35DW0V4HQ');
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>How Computers Work: Hardware, Software and Binary Code — EDUSAMBAM</title>
+<title>How Computers Work: Binary, CPU and Memory — EDUSAMBAM</title>
 <link href="https://edusambam.com/how-computers-work.html" rel="canonical"/>
-<meta content="Every phone, laptop and game console runs on the same handful of ideas. Learn how computers work with hardware, software and binary code." name="description"/>
+<meta content="Learn how computers work from the ground up: logic gates, binary, the CPU cycle, memory and software, with diagrams, worked examples and a quiz." name="description"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
@@ -875,6 +875,51 @@ footer.footer {
 }
 </style><style id="edusambam-footer-social-css">.edusambam-footer-social{margin-top:14px}.edusambam-footer-social a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);color:rgba(255,255,255,.85);transition:background .15s,color .15s}.edusambam-footer-social a:hover{background:rgba(255,255,255,.22);color:#fff}</style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2230995786427221"
      crossorigin="anonymous"></script>
+<style id="hw-extra">
+  .diagram-box {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin: 1.5rem 0 2rem;
+    text-align: center;
+  }
+  .diagram-box svg { max-width: 100%; height: auto; }
+  .diagram-caption {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 0.8rem;
+    font-style: italic;
+  }
+@media (max-width: 600px) { .diagram-box { padding: 0.8rem; } }
+
+  .article-wrap ol { margin: 0 0 1.2rem 1.4rem; color: var(--slate); }
+  .article-wrap a { color: var(--red); }
+  .article-wrap code { background: #f5edd6; padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.92em; word-break: break-word; }
+  .qa-list details { background: var(--cream); border: 1px solid var(--border); border-left: 4px solid var(--gold); border-radius: var(--radius); padding: 0.8rem 1.1rem; margin: 0 0 0.7rem; }
+  .qa-list summary { cursor: pointer; font-weight: 600; color: var(--navy); }
+  .qa-list details p { margin: 0.7rem 0 0; }
+  @media (prefers-reduced-motion: no-preference) {
+    .cc-anim .flow3, .cc-anim .wire { animation: hwDash 1.6s linear infinite; }
+    .cc-anim .node { transform-box: fill-box; transform-origin: center; animation: hwNode 3.6s ease-in-out infinite; }
+    .cc-anim .node.n2 { animation-delay: 1.2s; } .cc-anim .node.n3 { animation-delay: 2.4s; }
+  }
+  @keyframes hwDash { to { stroke-dashoffset: -24; } }
+  @keyframes hwNode { 0%,100% { transform: scale(1); opacity: .75; } 15%,30% { transform: scale(1.1); opacity: 1; } 45% { transform: scale(1); opacity: .75; } }
+</style>
+<meta name="robots" content="index,follow,max-image-preview:large"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="EDUSAMBAM"/>
+<meta property="og:title" content="How Computers Work: Binary, CPU and Memory"/>
+<meta property="og:description" content="Learn how computers work from the ground up: logic gates, binary, the CPU cycle, memory and software, with diagrams, worked examples and a quiz."/>
+<meta property="og:url" content="https://edusambam.com/how-computers-work.html"/>
+<meta property="og:image" content="https://edusambam.com/logo-icon-full.png"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How Computers Work: Binary, CPU and Memory"/>
+<meta name="twitter:description" content="Learn how computers work from the ground up: logic gates, binary, the CPU cycle, memory and software, with diagrams, worked examples and a quiz."/>
+<meta property="article:modified_time" content="2026-10"/>
+<meta property="article:section" content="Computer &amp; AI"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "How Computers Work: Hardware, Software and the Language of Binary", "description": "Learn how computers work from the ground up: logic gates, binary, the CPU cycle, memory and software, with diagrams, worked examples and a quiz.", "inLanguage": "en", "mainEntityOfPage": "https://edusambam.com/how-computers-work.html", "url": "https://edusambam.com/how-computers-work.html", "dateModified": "2026-10", "articleSection": "Computer & AI", "author": {"@type": "Organization", "name": "EDUSAMBAM Editorial Team", "url": "https://edusambam.com/"}, "publisher": {"@type": "Organization", "name": "EDUSAMBAM", "url": "https://edusambam.com/", "logo": {"@type": "ImageObject", "url": "https://edusambam.com/logo-icon-full.png"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Gateway", "item": "https://edusambam.com/index.html#gateway"}, {"@type": "ListItem", "position": 2, "name": "Computer & AI", "item": "https://edusambam.com/index.html#subject-computer"}, {"@type": "ListItem", "position": 3, "name": "How Computers Work: Hardware, Software and the Language of Binary", "item": "https://edusambam.com/how-computers-work.html"}]}]}</script>
 </head>
 <body id="top">
 <!-- TOP BAR -->
@@ -893,13 +938,12 @@ footer.footer {
 <span class="edusambam-brand-subtitle">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</span>
 </span>
 </a>
-<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li></ul>
+<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ Tests</a></li><li><a href="index.html#resources">Resources</a></li></ul>
 <button aria-label="Search" class="edusambam-search-btn" title="Search" type="button">⌕</button>
 <button aria-expanded="false" aria-label="Open menu" class="edusambam-menu-btn" title="Menu" type="button">☰</button>
 </div>
-</nav>
-<div aria-label="Mobile navigation" class="edusambam-mobile-menu">
-<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="assessment-arena.html">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="index.html#about-edusambam">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
+</nav><div aria-label="Mobile navigation" class="edusambam-mobile-menu">
+<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ Tests</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="index.html#subject-assessment">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="index.html#about-edusambam">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
 </div>
 <div aria-label="Site search" class="edusambam-search-panel">
 <div class="edusambam-search-wrap">
@@ -912,89 +956,315 @@ footer.footer {
 <div class="breadcrumb"><a href="index.html#gateway">Gateway</a>  /  <a href="index.html#subject-computer">Computer &amp; AI</a>  /  How Computers Work</div>
 <div class="article-hero-tag">Computer &amp; AI · Technology</div>
 <h1>How Computers Work: Hardware, Software and the Language of Binary</h1>
-<p class="sub">Every device you touch — phone, laptop, smartwatch, game console — runs on the exact same handful of ideas. Once you see them, computers stop feeling like magic.</p>
+<p class="sub">A computer follows very simple instructions, extremely fast. This guide builds the picture from tiny switches and logic gates to binary, the CPU's three-step loop, memory and software, with diagrams and worked examples you can do by hand.</p>
 <div class="article-hero-meta">
 <span>EDUSAMBAM Editorial Team</span>
 <span>|</span>
-<span>11 min read</span>
+<span>15 min read</span>
 <span>|</span>
 <span>Technology</span>
-</div>
+<span>|</span><span>Last updated: October 2026</span></div>
 </div><div aria-label="EDUSAMBAM article reader" class="edusambam-reader"><strong>🔊 LISTEN TO THIS ARTICLE</strong><div class="reader-slogan">SAVE YOUR EYES • IMPROVE YOUR LISTENING</div><div class="reader-help">Listen to the article instead of relying only on continuous screen reading.</div><div class="reader-controls"><button data-reader="play" type="button">▶ Play</button><button data-reader="pause" type="button">⏸ Pause</button><button data-reader="resume" type="button">▶ Resume</button><button data-reader="stop" type="button">■ Stop</button><select aria-label="Reading speed"><option value="1">1×</option><option value="0.8">0.8×</option><option value="1.2">1.2×</option></select></div><div aria-hidden="true" class="reader-progress"><span></span></div><small class="reader-status">Ready to read the article.</small></div>
 <!-- ARTICLE BODY -->
 <div class="article-wrap">
-<p class="lead">A computer is not actually "thinking" when it does something impressive — it is following an enormous number of extremely simple instructions, extremely fast. Underneath every app, game and website sits the same small set of ideas: switches that are either on or off, a chip that follows instructions one step at a time, and memory that holds what it's working on. This guide builds that picture from the ground up.</p>
-<h2><span class="num">1.</span>What Is a Computer, Really?</h2>
-<p>At its core, a computer is a machine that takes in information, follows a set of instructions to process it, and produces a result. That's the whole definition — a calculator, a washing machine's control panel, and a supercomputer all fit it. What separates a modern computer from a simple calculator is that it is <strong>programmable</strong>: the same physical machine can run a spreadsheet, play a video, or control a robot, simply by loading different instructions.</p>
-<p>Early computers filled entire rooms and were built from mechanical switches and vacuum tubes. The invention of the <strong>transistor</strong> — a tiny electronic switch — and later the ability to pack millions of transistors onto a single sliver of silicon called a <strong>microchip</strong>, is what shrank computers from room-sized machines into the device now in your pocket.</p>
+<p class="lead">A computer does not think or understand. It follows a huge number of very simple instructions, extremely fast and without ever getting tired or bored. Underneath every app, game and website sits the same short list of ideas: tiny electronic switches that are either on or off, simple logic built from those switches, numbers written with just two digits, a processor that repeats one three-step cycle billions of times a second, and memory that holds what it is working on. This guide builds the whole picture from the ground up, with worked examples you can do by hand, so that a computer stops feeling like magic.</p>
+
+<h2><span class="num">1.</span>What Is a Computer?</h2>
+<p>A <strong>computer</strong> is a machine that takes in information (<strong>input</strong>), follows instructions to process it, <strong>stores</strong> information, and produces a result (<strong>output</strong>). Under that broad definition, a calculator, a washing machine's control panel and a supercomputer all count. What makes a modern computer special is that it is <strong>programmable</strong> and <strong>general-purpose</strong>: the same physical machine can run a spreadsheet, play a video or control a robot, just by loading different instructions. That idea goes back to Charles Babbage's designs and Alan Turing's theory (see <a href="history-of-computing.html">The History of Computing</a>).</p>
+
+<div class="diagram-box cc-anim">
+<svg viewBox="0 0 520 300" role="img" aria-labelledby="hwIpoTitle hwIpoDesc">
+<title id="hwIpoTitle">Input, processing, output and storage</title>
+<desc id="hwIpoDesc">Input devices such as a keyboard, touchscreen, camera and microphone feed data to the processing part: the CPU and memory. The processing part sends results to output devices such as a screen and speakers. Storage connects both ways to processing, and software supplies the instructions.</desc>
+<rect x="0" y="0" width="520" height="300" rx="14" fill="#faf8f4"/>
+<defs><marker id="hwArr" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 Z" fill="#06244a"/></marker></defs>
+<g font-family="Arial, sans-serif" text-anchor="middle">
+<text x="260" y="26" fill="#06244a" font-size="17" font-weight="700">The basic shape of every computer</text>
+<rect x="14" y="76" width="130" height="110" rx="10" fill="#f5edd6" stroke="#b8963e" stroke-width="2"/>
+<text x="79" y="102" fill="#06244a" font-size="15" font-weight="700">Input</text>
+<text x="79" y="126" fill="#4a4a4a" font-size="12">keyboard, touch</text><text x="79" y="142" fill="#4a4a4a" font-size="12">camera, microphone</text><text x="79" y="158" fill="#4a4a4a" font-size="12">sensors, network</text>
+<rect x="195" y="62" width="130" height="138" rx="10" fill="#06244a"/>
+<text x="260" y="90" fill="#d4a017" font-size="15" font-weight="700">Processing</text>
+<rect x="209" y="102" width="102" height="34" rx="6" fill="#1c3151"/><text x="260" y="124" fill="#fff" font-size="13" font-weight="700">CPU</text>
+<rect x="209" y="146" width="102" height="34" rx="6" fill="#1c3151"/><text x="260" y="168" fill="#fff" font-size="13" font-weight="700">Memory (RAM)</text>
+<rect x="376" y="76" width="130" height="110" rx="10" fill="#f5edd6" stroke="#b8963e" stroke-width="2"/>
+<text x="441" y="102" fill="#06244a" font-size="15" font-weight="700">Output</text>
+<text x="441" y="126" fill="#4a4a4a" font-size="12">screen, speakers</text><text x="441" y="142" fill="#4a4a4a" font-size="12">printer, vibration</text><text x="441" y="158" fill="#4a4a4a" font-size="12">network</text>
+<rect x="195" y="232" width="130" height="50" rx="10" fill="#0b4ea2"/>
+<text x="260" y="254" fill="#fff" font-size="14" font-weight="700">Storage</text><text x="260" y="271" fill="#fff" font-size="11">SSD or hard drive</text>
+<g class="flow3" stroke="#06244a" stroke-width="3" fill="none" marker-end="url(#hwArr)" stroke-dasharray="7 5">
+<line x1="146" y1="131" x2="191" y2="131"/>
+<line x1="327" y1="131" x2="372" y2="131"/>
+</g>
+<g stroke="#06244a" stroke-width="3" fill="none" marker-end="url(#hwArr)" marker-start="url(#hwArr)"><line x1="260" y1="204" x2="260" y2="228"/></g>
+<rect x="196" y="38" width="128" height="18" rx="9" fill="#d4a017"/><text x="260" y="51" fill="#06244a" font-size="11" font-weight="700">Software = the instructions</text>
+</g>
+</svg>
+<div class="diagram-caption">Figure 1. Data flows from input, through processing, to output, with storage for what must be kept. Software gives the instructions. The dashed arrows move unless your device is set to reduce motion.</div>
+</div>
+
+<h2><span class="num">2.</span>Switches and Logic: How Simple Parts Make Decisions</h2>
+<p>The basic building block of a modern computer is the <strong>transistor</strong>, a tiny electronic switch with no moving parts. It lets current flow or blocks it, depending on a control signal. A switch has two reliable states, <strong>on</strong> and <strong>off</strong>, which we write as <strong>1</strong> and <strong>0</strong>. A modern processor contains billions of transistors.</p>
+<p>Combining a few transistors makes a <strong>logic gate</strong>, a circuit that takes one or more 1/0 inputs and gives a single 1/0 output according to a rule:</p>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Gate</th><th>Rule</th><th>Output is 1 when...</th></tr>
+<tr><td><strong>NOT</strong></td><td>Flips the input</td><td>the input is 0</td></tr>
+<tr><td><strong>AND</strong></td><td>Both inputs must be 1</td><td>A is 1 <em>and</em> B is 1</td></tr>
+<tr><td><strong>OR</strong></td><td>At least one input is 1</td><td>A is 1 <em>or</em> B is 1 (or both)</td></tr>
+<tr><td><strong>XOR</strong></td><td>Exactly one input is 1</td><td>A and B are <em>different</em></td></tr>
+</table>
+</div>
+<p>It may seem impossible that such simple rules could add numbers, show video or run a game. But gates can be wired together, and wired-together gates can do arithmetic, compare values and remember information. Everything a computer does is built in layers on top of these simple rules.</p>
+
+<div class="diagram-box cc-anim">
+<svg viewBox="0 0 520 280" role="img" aria-labelledby="hwAddTitle hwAddDesc">
+<title id="hwAddTitle">A half adder made from an XOR gate and an AND gate</title>
+<desc id="hwAddDesc">Two inputs, A and B, each connect to both an XOR gate and an AND gate. The XOR gate gives the sum bit. The AND gate gives the carry bit. With A and B both 1, the sum is 0 and the carry is 1, which together make binary 10, the number two.</desc>
+<rect x="0" y="0" width="520" height="280" rx="14" fill="#faf8f4"/>
+<g font-family="Arial, sans-serif" text-anchor="middle">
+<text x="260" y="26" fill="#06244a" font-size="17" font-weight="700">Adding two bits with two gates</text>
+<g class="wire" stroke="#b8963e" stroke-width="3" fill="none" stroke-dasharray="7 5">
+<path d="M64 98 H206"/><path d="M150 98 V172 H206"/>
+<path d="M64 190 H100 V122 H206"/><path d="M100 190 H206"/>
+<path d="M296 110 H392"/><path d="M296 181 H392"/>
+</g>
+<circle cx="150" cy="98" r="4" fill="#06244a"/><circle cx="100" cy="190" r="4" fill="#06244a"/>
+<rect x="206" y="82" width="90" height="56" rx="10" fill="#0b4ea2"/><text x="251" y="116" fill="#fff" font-size="17" font-weight="700">XOR</text>
+<rect x="206" y="158" width="90" height="46" rx="10" fill="#06244a"/><text x="251" y="188" fill="#fff" font-size="17" font-weight="700">AND</text>
+<circle cx="40" cy="98" r="22" fill="#d4a017"/><text x="40" y="104" fill="#06244a" font-size="17" font-weight="700">A=1</text>
+<circle cx="40" cy="190" r="22" fill="#d4a017"/><text x="40" y="196" fill="#06244a" font-size="17" font-weight="700">B=1</text>
+<rect x="392" y="90" width="112" height="40" rx="8" fill="#f5edd6" stroke="#b8963e" stroke-width="2"/><text x="448" y="108" fill="#06244a" font-size="13" font-weight="700">Sum = 0</text><text x="448" y="123" fill="#4a4a4a" font-size="11">(different? no)</text>
+<rect x="392" y="162" width="112" height="40" rx="8" fill="#f5edd6" stroke="#b8963e" stroke-width="2"/><text x="448" y="180" fill="#06244a" font-size="13" font-weight="700">Carry = 1</text><text x="448" y="195" fill="#4a4a4a" font-size="11">(both are 1? yes)</text>
+<text x="260" y="248" fill="#06244a" font-size="15" font-weight="700">1 + 1 = binary 10 (carry 1, sum 0)</text>
+<text x="260" y="268" fill="#4a4a4a" font-size="12">Signals flow left to right unless your device is set to reduce motion.</text>
+</g>
+</svg>
+<div class="diagram-caption">Figure 2. A half adder. It adds two single bits using one XOR gate (for the sum) and one AND gate (for the carry). Chains of these circuits add whole numbers.</div>
+</div>
+
 <div class="example-box">
-<div class="ex-label">Key Idea</div>
-<p>Computer scientist Alan Turing showed that a single, sufficiently capable machine can — given enough time and memory — carry out any calculation that any other computer can carry out. This is why the same laptop can be a word processor one moment and a music studio the next: it isn't several machines, it's one machine running different sets of instructions.</p>
-</div>
-<h2><span class="num">2.</span>The Language Computers Speak: Binary Code</h2>
-<p>Computer chips are built from billions of tiny electronic switches. A switch has only two reliable states: <strong>on</strong> or <strong>off</strong>. Because of this, computers represent all information — numbers, letters, colours, sound — using just two digits: 0 and 1. This is called <strong>binary code</strong>, and each single 0 or 1 is called a <strong>bit</strong> (short for "binary digit"). Eight bits grouped together form a <strong>byte</strong>, the basic unit computers use to store a single character of text.</p>
-<p>Binary can represent any number the same way our everyday decimal system does — just using powers of two instead of powers of ten.</p>
+<div class="ex-label">Worked Example 1: Adding two bits with gates</div>
+<p>A <strong>half adder</strong> adds two single bits, A and B. It has two outputs: <strong>Sum</strong> = A XOR B, and <strong>Carry</strong> = A AND B.</p>
 <div class="table-wrap">
 <table class="pos-table">
-<tr><th>Decimal Number</th><th>Binary Code</th><th>How It's Built</th></tr>
-<tr><td>1</td><td>00000001</td><td>1</td></tr>
-<tr><td>2</td><td>00000010</td><td>2</td></tr>
-<tr><td>5</td><td>00000101</td><td>4 + 1</td></tr>
-<tr><td>10</td><td>00001010</td><td>8 + 2</td></tr>
-<tr><td>255</td><td>11111111</td><td>128+64+32+16+8+4+2+1</td></tr>
+<tr><th>A</th><th>B</th><th>Sum (XOR)</th><th>Carry (AND)</th><th>Result</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>0</td><td>00 = 0</td></tr>
+<tr><td>0</td><td>1</td><td>1</td><td>0</td><td>01 = 1</td></tr>
+<tr><td>1</td><td>0</td><td>1</td><td>0</td><td>01 = 1</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td><td>10 = 2</td></tr>
 </table>
 </div>
-<p>A photo is binary too — it's stored as long strings of bits describing the colour of every tiny dot, or pixel, in the image. Sound is binary — thousands of numbers per second describing the shape of a sound wave. Every file on every device, no matter what it looks like on screen, is really just a very long sequence of 0s and 1s.</p>
-<h2><span class="num">3.</span>Inside the Machine: The Core Hardware</h2>
-<p>The physical parts of a computer are called <strong>hardware</strong>. A handful of components do almost all of the work, and understanding their separate jobs makes the rest of computing much easier to follow.</p>
-<div style="margin: 1.5rem 0 1.75rem;">
-<div style="display:flex; align-items:stretch; gap:0.5rem; flex-wrap:wrap;">
-<div style="flex:1; min-width:140px; background:var(--cream); border-top:3px solid var(--red); padding:1rem; text-align:center;">
-<div style="font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--red); font-weight:600; margin-bottom:0.4rem;">CPU</div>
-<div style="font-family:'EB Garamond',Georgia,serif; font-weight:600; color:var(--navy);">The "Brain"</div>
-<div style="font-size:0.82rem; color:var(--slate); margin-top:0.4rem;">Carries out instructions, one step at a time, billions of times per second</div>
+<p><strong>Check the last row:</strong> 1 + 1 = 2. In binary, two is written <strong>10</strong> (one two, no ones). The sum bit is 0 and the carry bit is 1, exactly as in decimal when 5 + 5 gives 0 and carries 1.</p>
+<p><strong>Going further:</strong> to add longer numbers, a <em>full adder</em> also accepts a carry from the previous column. A row of full adders adds numbers of any size. So arithmetic, the heart of a computer, is nothing more than gates arranged cleverly.</p>
 </div>
-<div style="display:flex; align-items:center; justify-content:center; color:var(--gold); font-size:1.4rem; font-weight:600;">→</div>
-<div style="flex:1; min-width:140px; background:var(--cream); border-top:3px solid var(--gold); padding:1rem; text-align:center;">
-<div style="font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--gold); font-weight:600; margin-bottom:0.4rem;">RAM</div>
-<div style="font-family:'EB Garamond',Georgia,serif; font-weight:600; color:var(--navy);">The "Workbench"</div>
-<div style="font-size:0.82rem; color:var(--slate); margin-top:0.4rem;">Holds what the CPU is actively using right now</div>
-</div>
-<div style="display:flex; align-items:center; justify-content:center; color:var(--gold); font-size:1.4rem; font-weight:600;">→</div>
-<div style="flex:1; min-width:140px; background:var(--cream); border-top:3px solid var(--navy-mid); padding:1rem; text-align:center;">
-<div style="font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--navy-mid); font-weight:600; margin-bottom:0.4rem;">Storage</div>
-<div style="font-family:'EB Garamond',Georgia,serif; font-weight:600; color:var(--navy);">The "Filing Cabinet"</div>
-<div style="font-size:0.82rem; color:var(--slate); margin-top:0.4rem;">Keeps files and programs permanently, even when powered off</div>
-</div>
-</div>
-</div>
-<p>The <strong>CPU (Central Processing Unit)</strong> is the component that actually executes instructions — adding numbers, comparing values, moving data — and it does this at a speed measured in billions of operations per second. Working alongside it is <strong>RAM (Random Access Memory)</strong>, fast temporary memory that holds the programs and data the CPU is using at that exact moment. RAM is quick but forgetful: everything in it disappears the instant the power is cut, which is why unsaved work is lost in a sudden shutdown.</p>
-<p><strong>Storage</strong> — a hard drive or solid-state drive (SSD) — is the opposite: slower to access than RAM, but permanent. It's where your files, photos and installed programs stay when the computer is switched off. The table below makes the difference concrete.</p>
-<div class="table-wrap">
-<table class="pos-table">
-<tr><th>Feature</th><th>RAM (Memory)</th><th>Storage (Disk/SSD)</th></tr>
-<tr><td>Speed</td><td>Extremely fast</td><td>Slower than RAM</td></tr>
-<tr><td>When power is lost</td><td>Contents are erased</td><td>Contents remain safe</td></tr>
-<tr><td>Typical use</td><td>Programs currently running</td><td>Files, photos, installed apps</td></tr>
-<tr><td>Typical size</td><td>A few gigabytes to tens of gigabytes</td><td>Hundreds of gigabytes to terabytes</td></tr>
-</table>
-</div>
-<h2><span class="num">4.</span>Software: Turning Instructions Into Action</h2>
-<p>Hardware on its own can't do anything — it needs <strong>software</strong>, sets of instructions written by programmers, to tell it what to do. Software falls into two broad categories.</p>
+
+<h2><span class="num">3.</span>Binary: Writing Everything With Two Digits</h2>
+<p>Because the hardware has two states, computers store everything with <strong>binary</strong> (base 2). Each 0 or 1 is a <strong>bit</strong> (binary digit). Eight bits make a <strong>byte</strong>. Place values double as you move left, in the same way decimal place values multiply by ten: 1, 2, 4, 8, 16, 32, 64, 128 and so on. An <em>n</em>-bit number can take 2<sup>n</sup> different values, so 8 bits give 2<sup>8</sup> = <strong>256</strong> values (0 to 255).</p>
+
+<div class="example-box">
+<div class="ex-label">Worked Example 2: Converting between decimal and binary</div>
+<p><strong>Decimal 45 to binary.</strong> Write the 8 place values: 128, 64, 32, 16, 8, 4, 2, 1.</p>
 <ul>
-<li><strong>The operating system (OS)</strong> — such as Windows, macOS, Android or iOS — manages the hardware itself: it decides which program gets to use the CPU at a given moment, organises files in storage, and provides the screens, buttons and menus every app relies on.</li>
-<li><strong>Applications</strong> — everything from a web browser to a game to a calculator app — run on top of the operating system and handle one specific job for the person using the device.</li>
+<li>128 is more than 45, so write 0. 64 is more than 45, so write 0.</li>
+<li>32 fits: write 1. Remainder 45 − 32 = 13.</li>
+<li>16 is more than 13: write 0.</li>
+<li>8 fits: write 1. Remainder 13 − 8 = 5.</li>
+<li>4 fits: write 1. Remainder 5 − 4 = 1.</li>
+<li>2 is more than 1: write 0.</li>
+<li>1 fits: write 1. Remainder 0.</li>
 </ul>
-<p>Programmers rarely write in binary directly. Instead, they write in <strong>programming languages</strong> — such as Python, JavaScript or C++ — using words and structures closer to human language. A separate program then translates, or <strong>compiles</strong>, that code into the binary instructions the CPU can actually execute.</p>
-<h2><span class="num">5.</span>How the Internet Connects It All</h2>
-<p>A single computer is powerful; billions of computers able to talk to one another is what makes the modern internet possible. Every device connected to the internet has an <strong>IP address</strong>, a unique number that works like a postal address for data. When you open a website, your device doesn't send the whole page at once — it breaks the request into small chunks called <strong>packets</strong>, sends them across a chain of connected networks, and the receiving computer reassembles them in the correct order.</p>
-<p>Since remembering strings of numbers is impractical, the internet uses the <strong>Domain Name System (DNS)</strong> to translate familiar website names into the correct IP address automatically, behind the scenes, every time a link is clicked.</p>
-<div class="real-world-box">
-<div class="rw-label">Real-World Example</div>
-<p>When you tap a link on your phone, your device first asks a DNS server to translate the website's name into an IP address. It then sends a request, broken into packets, across your Wi-Fi or mobile network to a distant server. That server reads the request, gathers the page's text and images, and sends its own packets back — all of which your phone reassembles into the page you see, typically in well under a second.</p>
+<p>Reading the digits from left to right: <strong>00101101</strong>. Check: 32 + 8 + 4 + 1 = 45. ✓</p>
+<p><strong>Binary 01100100 to decimal.</strong> Add the place values wherever there is a 1: 64 + 32 + 4 = <strong>100</strong>.</p>
+<p><strong>A limit to know:</strong> the biggest 8-bit number is 11111111 = 255. Adding 1 needs a ninth bit. If only 8 bits are kept, the result wraps round to 00000000. This is called <strong>overflow</strong>, and it is the reason programs choose number sizes carefully.</p>
 </div>
-<h2>A Closing Thought</h2>
-<p>None of this makes a computer "smart" in the way people are — it makes it fast and exact. Every impressive thing a computer does, from rendering a video game to running an AI model, is still built from the same layers covered here: binary switches, a CPU following instructions, memory holding data, software directing the process, and networks carrying it all between machines. Understanding these layers is the foundation for understanding everything else in technology, including artificial intelligence.</p>
+
+<h2><span class="num">4.</span>How Bits Become Text, Pictures and Sound</h2>
+<p>Bits have no meaning on their own. Meaning comes from an agreed way of reading them:</p>
+<ul>
+<li><strong>Text:</strong> each character is given a number. In the long-standing ASCII code, the capital letter "A" is 65, which is 01000001 in binary (64 + 1). <strong>Unicode</strong> extends this to the characters of most of the world's writing systems and to emoji. In the common UTF-8 form, some characters need more than one byte.</li>
+<li><strong>Images:</strong> a picture is a grid of tiny dots called <strong>pixels</strong>. Each pixel's colour is stored as numbers. A common scheme uses 3 bytes per pixel, one each for the amounts of red, green and blue.</li>
+<li><strong>Sound:</strong> a microphone's signal is measured thousands of times a second, and each measurement (a <em>sample</em>) is stored as a number.</li>
+<li><strong>Instructions:</strong> a program is also numbers. The processor reads a number and treats it as a command, such as "add".</li>
+</ul>
+
+<div class="diagram-box">
+<svg viewBox="0 0 520 300" role="img" aria-labelledby="hwPixTitle hwPixDesc">
+<title id="hwPixTitle">A tiny picture stored as bits</title>
+<desc id="hwPixDesc">A five by five grid of pixels forming a heart. Dark cells are 1 and light cells are 0. The five rows read 01010, 11111, 11111, 01110 and 00100, which are the decimal numbers 10, 31, 31, 14 and 4.</desc>
+<rect x="0" y="0" width="520" height="300" rx="14" fill="#faf8f4"/>
+<g font-family="Arial, sans-serif" text-anchor="middle">
+<text x="260" y="26" fill="#06244a" font-size="17" font-weight="700">A picture is a grid of numbers</text>
+<g stroke="#faf8f4" stroke-width="3"><rect x="30" y="50" width="44" height="44" fill="#e9eef7"/><rect x="74" y="50" width="44" height="44" fill="#06244a"/><rect x="118" y="50" width="44" height="44" fill="#e9eef7"/><rect x="162" y="50" width="44" height="44" fill="#06244a"/><rect x="206" y="50" width="44" height="44" fill="#e9eef7"/><rect x="30" y="94" width="44" height="44" fill="#06244a"/><rect x="74" y="94" width="44" height="44" fill="#06244a"/><rect x="118" y="94" width="44" height="44" fill="#06244a"/><rect x="162" y="94" width="44" height="44" fill="#06244a"/><rect x="206" y="94" width="44" height="44" fill="#06244a"/><rect x="30" y="138" width="44" height="44" fill="#06244a"/><rect x="74" y="138" width="44" height="44" fill="#06244a"/><rect x="118" y="138" width="44" height="44" fill="#06244a"/><rect x="162" y="138" width="44" height="44" fill="#06244a"/><rect x="206" y="138" width="44" height="44" fill="#06244a"/><rect x="30" y="182" width="44" height="44" fill="#e9eef7"/><rect x="74" y="182" width="44" height="44" fill="#06244a"/><rect x="118" y="182" width="44" height="44" fill="#06244a"/><rect x="162" y="182" width="44" height="44" fill="#06244a"/><rect x="206" y="182" width="44" height="44" fill="#e9eef7"/><rect x="30" y="226" width="44" height="44" fill="#e9eef7"/><rect x="74" y="226" width="44" height="44" fill="#e9eef7"/><rect x="118" y="226" width="44" height="44" fill="#06244a"/><rect x="162" y="226" width="44" height="44" fill="#e9eef7"/><rect x="206" y="226" width="44" height="44" fill="#e9eef7"/></g>
+<g font-size="18" font-weight="700"><text x="52" y="79" fill="#06244a">0</text><text x="96" y="79" fill="#fff">1</text><text x="140" y="79" fill="#06244a">0</text><text x="184" y="79" fill="#fff">1</text><text x="228" y="79" fill="#06244a">0</text><text x="52" y="123" fill="#fff">1</text><text x="96" y="123" fill="#fff">1</text><text x="140" y="123" fill="#fff">1</text><text x="184" y="123" fill="#fff">1</text><text x="228" y="123" fill="#fff">1</text><text x="52" y="167" fill="#fff">1</text><text x="96" y="167" fill="#fff">1</text><text x="140" y="167" fill="#fff">1</text><text x="184" y="167" fill="#fff">1</text><text x="228" y="167" fill="#fff">1</text><text x="52" y="211" fill="#06244a">0</text><text x="96" y="211" fill="#fff">1</text><text x="140" y="211" fill="#fff">1</text><text x="184" y="211" fill="#fff">1</text><text x="228" y="211" fill="#06244a">0</text><text x="52" y="255" fill="#06244a">0</text><text x="96" y="255" fill="#06244a">0</text><text x="140" y="255" fill="#fff">1</text><text x="184" y="255" fill="#06244a">0</text><text x="228" y="255" fill="#06244a">0</text></g>
+<g font-size="15" fill="#06244a" text-anchor="start"><text x="282" y="78" font-weight="700">01010 = 10</text><text x="282" y="122" font-weight="700">11111 = 31</text><text x="282" y="166" font-weight="700">11111 = 31</text><text x="282" y="210" font-weight="700">01110 = 14</text><text x="282" y="254" font-weight="700">00100 = 4</text></g>
+<text x="384" y="150" fill="#4a4a4a" font-size="12" text-anchor="start">Dark pixel = 1</text>
+<text x="384" y="168" fill="#4a4a4a" font-size="12" text-anchor="start">Light pixel = 0</text>
+<text x="384" y="194" fill="#8b0000" font-size="12" font-weight="700" text-anchor="start">Stored as: 10, 31,</text>
+<text x="384" y="210" fill="#8b0000" font-size="12" font-weight="700" text-anchor="start">31, 14, 4</text>
+</g>
+</svg>
+<div class="diagram-caption">Figure 3. A tiny black-and-white picture. Each row of five pixels is a 5-bit number. The whole picture is just five numbers.</div>
+</div>
+
+<div class="example-box">
+<div class="ex-label">Worked Example 3: How big are pictures and sound?</div>
+<p><strong>Colours:</strong> with 3 bytes (24 bits) per pixel, the number of possible colours is 2<sup>24</sup> = <strong>16,777,216</strong>.</p>
+<p><strong>A photo:</strong> a full-HD image is 1,920 × 1,080 pixels = 2,073,600 pixels. At 3 bytes each: 2,073,600 × 3 = <strong>6,220,800 bytes</strong>, which is about 6.2 MB if stored with no compression.</p>
+<p><strong>A song:</strong> CD-quality sound takes 44,100 samples per second, each of 2 bytes (16 bits), on 2 channels (stereo). Bytes per second: 44,100 × 2 × 2 = <strong>176,400</strong>. For a 3-minute song (180 seconds): 176,400 × 180 = <strong>31,752,000 bytes</strong>, about 31.8 MB.</p>
+<p><strong>Why files are usually smaller:</strong> compression, as used by JPEG images and MP3 or AAC audio, removes repeated or less noticeable detail, so real files are often many times smaller than these raw figures.</p>
+<p><strong>A note on units:</strong> in storage, 1 kilobyte is usually 1,000 bytes and 1 megabyte is 1,000,000 bytes. Some software instead counts in units of 1,024, which is why the same drive can show slightly different sizes.</p>
+</div>
+
+<h2><span class="num">5.</span>The Core Hardware</h2>
+<p>The physical parts are called <strong>hardware</strong>. Four do most of the work, and the rest connect them:</p>
+<ul>
+<li>The <strong>CPU</strong> (central processing unit) carries out instructions. Modern CPUs have several <strong>cores</strong>, each able to run its own stream of instructions, and a small, very fast memory called <strong>cache</strong> on the chip. Its <strong>clock speed</strong>, measured in gigahertz (GHz), is the number of cycles it ticks through each second.</li>
+<li><strong>RAM</strong> (random access memory) is fast working memory that holds the programs and data in use right now. It is <em>volatile</em>, which means it is cleared when the power goes off.</li>
+<li><strong>Storage</strong> keeps files and programs permanently. A <strong>hard disk drive</strong> stores data magnetically on spinning platters. A <strong>solid-state drive (SSD)</strong> uses flash memory with no moving parts, which is faster and uses less power.</li>
+<li>The <strong>GPU</strong> (graphics processing unit) has many small cores that do the same simple operation on lots of data at once. It was designed for graphics and is also widely used for AI.</li>
+<li>The <strong>motherboard</strong>, buses and ports connect everything, and a <strong>power supply</strong> or battery feeds it. Input and output devices connect through these.</li>
+</ul>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>Memory type</th><th>Speed</th><th>Size (typical)</th><th>Keeps data when off?</th></tr>
+<tr><td>CPU registers and cache</td><td>Fastest</td><td>Tiny (bytes to megabytes)</td><td>No</td></tr>
+<tr><td>RAM</td><td>Very fast</td><td>Gigabytes</td><td>No</td></tr>
+<tr><td>SSD</td><td>Fast</td><td>Hundreds of gigabytes to terabytes</td><td>Yes</td></tr>
+<tr><td>Hard disk</td><td>Slower</td><td>Terabytes</td><td>Yes</td></tr>
+</table>
+</div>
+<p>This pattern is called a <strong>memory hierarchy</strong>: the faster the memory, the smaller and more expensive it is. Computers keep what they need most right now in the fast, small levels and the rest in the slow, large levels.</p>
+
+<h2><span class="num">6.</span>The CPU's Three-Step Loop</h2>
+<p>Whatever a program does, the CPU repeats the same loop, called the <strong>fetch-decode-execute cycle</strong>:</p>
+<ol>
+<li><strong>Fetch:</strong> get the next instruction from memory. A small register called the <strong>program counter</strong> holds the address of the next instruction.</li>
+<li><strong>Decode:</strong> work out what the instruction means, for example "add" or "store".</li>
+<li><strong>Execute:</strong> carry it out, then move the program counter on to the next instruction.</li>
+</ol>
+
+<div class="diagram-box cc-anim">
+<svg viewBox="0 0 520 300" role="img" aria-labelledby="hwCycTitle hwCycDesc">
+<title id="hwCycTitle">The fetch, decode, execute cycle</title>
+<desc id="hwCycDesc">Three steps in a loop: fetch the next instruction from memory, decode it to see what it means, and execute it. Then the loop starts again with the next instruction.</desc>
+<rect x="0" y="0" width="520" height="300" rx="14" fill="#faf8f4"/>
+<defs><marker id="hwCArr" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 Z" fill="#06244a"/></marker></defs>
+<g font-family="Arial, sans-serif" text-anchor="middle">
+<text x="260" y="22" fill="#06244a" font-size="16" font-weight="700">The loop at the heart of every CPU</text>
+<g stroke="#06244a" stroke-width="3" fill="none" marker-end="url(#hwCArr)">
+<path d="M322 90 Q400 114 408 162"/>
+<path d="M372 220 Q260 270 148 220"/>
+<path d="M112 162 Q120 114 198 90"/>
+</g>
+<circle class="node n1" cx="260" cy="82" r="44" fill="#0b4ea2"/>
+<text x="260" y="78" fill="#fff" font-size="15" font-weight="700">1. Fetch</text><text x="260" y="96" fill="#fff" font-size="10.5">next instruction</text>
+<circle class="node n2" cx="408" cy="204" r="44" fill="#06244a"/>
+<text x="408" y="200" fill="#fff" font-size="15" font-weight="700">2. Decode</text><text x="408" y="218" fill="#fff" font-size="10.5">what it means</text>
+<circle class="node n3" cx="112" cy="204" r="44" fill="#8b0000"/>
+<text x="112" y="200" fill="#fff" font-size="15" font-weight="700">3. Execute</text><text x="112" y="218" fill="#fff" font-size="10.5">do it, repeat</text>
+<text x="260" y="172" fill="#06244a" font-size="15" font-weight="700">Billions of</text><text x="260" y="192" fill="#06244a" font-size="15" font-weight="700">loops a second</text>
+<text x="260" y="284" fill="#4a4a4a" font-size="12">The highlight moves around the loop unless your device is set to reduce motion.</text>
+</g>
+</svg>
+<div class="diagram-caption">Figure 4. Fetch, decode, execute, repeat. Real processors overlap these steps for many instructions at once, but the idea is the same.</div>
+</div>
+
+<div class="example-box">
+<div class="ex-label">Worked Example 4: Tracing a tiny program</div>
+<p>Imagine a very simple processor with one working register called A, and this four-instruction program stored in memory:</p>
+<ol>
+<li><code>LOAD 5</code> puts the number 5 into A.</li>
+<li><code>ADD 3</code> adds 3 to A.</li>
+<li><code>STORE 7</code> copies A into memory location 7.</li>
+<li><code>HALT</code> stops.</li>
+</ol>
+<div class="table-wrap">
+<table class="pos-table">
+<tr><th>After instruction</th><th>Register A</th><th>Memory location 7</th></tr>
+<tr><td>(start)</td><td>0</td><td>0</td></tr>
+<tr><td>LOAD 5</td><td>5</td><td>0</td></tr>
+<tr><td>ADD 3</td><td>8</td><td>0</td></tr>
+<tr><td>STORE 7</td><td>8</td><td>8</td></tr>
+</table>
+</div>
+<p><strong>Result:</strong> location 7 now holds <strong>8</strong>, which is 5 + 3.</p>
+<p><strong>How long would it take?</strong> Three instructions with 3 steps each (fetch, decode, execute) is 9 steps. If each step took one tick of a 3 GHz clock (3,000,000,000 ticks per second), each tick lasts 1 ÷ 3,000,000,000 ≈ 0.33 nanoseconds, so 9 ticks ≈ <strong>3 nanoseconds</strong>. That is an idealised figure, since real instructions often take more ticks, but it shows how enormous the speed is.</p>
+<p><strong>A neat consequence:</strong> light travels about 30 cm in a nanosecond, so in one tick of a 3 GHz clock it moves only about 10 cm. Signals cannot cross a large chip instantly, which is one reason processors are built small.</p>
+</div>
+
+<h2><span class="num">7.</span>Software: The Instructions</h2>
+<p><strong>Software</strong> is the set of instructions that tells hardware what to do. There are layers of it:</p>
+<ul>
+<li><strong>Firmware</strong> is small, built-in software that starts the hardware when you switch on.</li>
+<li>The <strong>operating system</strong> manages the hardware and shares it between programs (see <a href="operating-systems.html">Operating Systems</a>).</li>
+<li><strong>Applications</strong> are the programs you use, such as a browser, a game or a calculator.</li>
+</ul>
+<p>The processor can only run its own <strong>machine code</strong>, which is a list of binary instructions specific to that type of CPU. People rarely write that directly. They write in a <strong>programming language</strong> such as Python or JavaScript, which is much closer to human language. A <strong>compiler</strong> translates the whole program into machine code in advance, while an <strong>interpreter</strong> translates and runs it step by step. See <a href="what-is-coding.html">What Is Coding?</a> for more.</p>
+
+<h2><span class="num">8.</span>Putting It Together: From a Key Press to the Screen</h2>
+<p>Watch what happens when you press the letter "A" while typing a message:</p>
+<ol>
+<li>The keyboard detects the key and sends a signal that is a number identifying it.</li>
+<li>The signal reaches the computer, which interrupts what the CPU is doing so the operating system can read it.</li>
+<li>The operating system passes the key to the program that is in focus, such as your message app.</li>
+<li>The app runs instructions that store the character in RAM and update the text.</li>
+<li>The graphics hardware draws the new text as pixels, and the screen lights up the right dots.</li>
+</ol>
+<p>All of that takes a few thousandths of a second, so it feels instant. At no point does anything in the machine "know" what the letter means. Each step simply moves numbers and applies rules.</p>
+
+<h2><span class="num">9.</span>Computers Everywhere</h2>
+<p>Most computers do not look like computers. Chips called <strong>microcontrollers</strong> sit inside washing machines, cars, thermostats and toys, running one fixed program. Phones and laptops are general-purpose computers. <strong>Servers</strong> in data centres answer requests from many users (see <a href="cloud-computing.html">Cloud Computing</a>), and <strong>supercomputers</strong> link enormous numbers of processors to tackle scientific problems such as weather forecasting. They differ in size, power and purpose, but the same ideas run through them all: bits, gates, a processor looping through instructions, and memory.</p>
+
+<h2><span class="num">10.</span>Common Mistakes and Misconceptions</h2>
+<ul>
+<li><strong>"Computers understand language or think."</strong> They apply rules to numbers. Programs can imitate understanding, but the underlying machine only follows instructions.</li>
+<li><strong>"RAM and storage are the same."</strong> RAM is fast, temporary working memory. Storage is slower and permanent.</li>
+<li><strong>"A higher GHz always means a faster computer."</strong> Speed also depends on the number of cores, the design of the processor, memory and what the software is doing.</li>
+<li><strong>"A byte is always one letter."</strong> In ASCII it is, but Unicode characters, such as many non-English letters and emoji, can take more than one byte.</li>
+<li><strong>"Binary is just a different way of writing, not how the machine works."</strong> Two voltage states really are what the hardware uses, because they are reliable and easy to build.</li>
+<li><strong>"Deleting a file wipes it at once."</strong> Usually only the record of it is removed, and the data can remain until it is overwritten (see <a href="operating-systems.html">Operating Systems</a>).</li>
+</ul>
+
+<h2><span class="num">11.</span>Check Your Understanding</h2>
+<p>Try each question first, then tap it to reveal the answer. A scored multiple-choice quiz follows below.</p>
+<div class="qa-list">
+<details><summary>1. What is the difference between a bit and a byte?</summary><p>A bit is a single 0 or 1. A byte is a group of 8 bits.</p></details>
+<details><summary>2. What does an AND gate output when its inputs are 1 and 0?</summary><p>0, because AND gives 1 only when both inputs are 1.</p></details>
+<details><summary>3. Convert decimal 20 to 8-bit binary.</summary><p>16 + 4 = 20, so the bits are 00010100.</p></details>
+<details><summary>4. A 1,000 × 1,000 pixel image uses 3 bytes per pixel with no compression. How big is it?</summary><p>1,000 × 1,000 = 1,000,000 pixels. 1,000,000 × 3 = 3,000,000 bytes, about 3 MB.</p></details>
+<details><summary>5. Why is data in RAM lost when the power goes off, while data on an SSD is kept?</summary><p>RAM needs a constant electrical supply to hold its contents (it is volatile). An SSD uses flash memory that keeps its stored state without power.</p></details>
+<details><summary>6. List the three steps of the CPU cycle in order.</summary><p>Fetch the instruction, decode it, execute it. Then the cycle repeats.</p></details>
+</div>
+
+<h2><span class="num">12.</span>Summary</h2>
+<ul>
+<li>A computer takes input, processes it by following stored instructions, stores data and produces output.</li>
+<li>Transistors are tiny switches. Combined into logic gates, they make decisions and do arithmetic.</li>
+<li>Binary uses two digits, and bits grouped into bytes can represent numbers, text, images, sound and instructions.</li>
+<li>The CPU executes instructions, RAM holds what is in use, and storage keeps data permanently. A memory hierarchy balances speed and size.</li>
+<li>The CPU repeats a fetch-decode-execute loop billions of times a second.</li>
+<li>Software, from firmware to the operating system to apps, supplies the instructions, and compilers translate human-readable code into machine code.</li>
+<li>Everything a computer does is built from these layers, which is why a simple set of ideas can produce such complex results.</li>
+</ul>
+
+<div class="example-box">
+<div class="ex-label">For Teachers and Parents</div>
+<p><strong>Human logic gates:</strong> let two students hold up cards showing 0 or 1 as inputs, and a third student acts as an AND, OR or XOR gate, announcing the output. Chain two gates to make a half adder, as in Worked Example 1.</p>
+<p><strong>Binary bracelet:</strong> students write their initials in ASCII binary (A = 01000001) and make a bracelet using two bead colours for 0 and 1.</p>
+<p><strong>Pixel art:</strong> on squared paper, students draw a small picture, write each row as a binary number, and swap the numbers with a partner to rebuild each other's picture, as in Figure 3.</p>
+<p><strong>Be the CPU:</strong> give a student a card-based program like Worked Example 4 and a "register" whiteboard, and let them carry out fetch, decode and execute out loud.</p>
+<p><strong>Safety note:</strong> take care when opening computers. Unplug and ask an adult before opening one, and do not touch the power supply. Old devices should be recycled responsibly.</p>
+</div>
+
+<h2><span class="num">13.</span>Sources and Further Reading</h2>
+<p>This article is original EDUSAMBAM writing. It follows the standard layered view of computer systems taught in university courses, and the numbers in the worked examples are plain arithmetic. All diagrams are original EDUSAMBAM schematics, and the tiny processor in Worked Example 4 is an invented teaching model, not a real instruction set.</p>
+<ul>
+<li><strong>Noam Nisan and Shimon Schocken, "The Elements of Computing Systems" (MIT Press) and the free "Nand to Tetris" course:</strong> a hands-on path from logic gates to a working computer. <a href="https://www.nand2tetris.org/" target="_blank" rel="noopener">nand2tetris.org</a></li>
+<li><strong>Charles Petzold, "Code: The Hidden Language of Computer Hardware and Software":</strong> a gentle book-length introduction to the same ideas.</li>
+</ul>
+<p>Hardware changes quickly, so check current specifications for any device you are considering. This article does not recommend any particular brand or product.</p>
+
 <!-- QUIZ SECTION -->
 <div class="quiz-section">
 <div class="section-eyebrow">Test Your Understanding</div>
@@ -1010,81 +1280,81 @@ footer.footer {
 </div>
 <form id="squizForm">
 <div class="squiz-item" data-correct="1">
-<div class="squiz-q"><span class="qnum">1.</span>What makes a device a "computer" by the definition in this article?</div>
-<div class="squiz-option"><input id="sq1a" name="sq1" type="radio" value="0"><label for="sq1a">A. It must have a screen</label></input></div>
-<div class="squiz-option"><input id="sq1b" name="sq1" type="radio" value="1"/><label for="sq1b">B. It takes in information, processes it by following instructions, and produces a result</label></div>
-<div class="squiz-option"><input id="sq1c" name="sq1" type="radio" value="2"/><label for="sq1c">C. It must connect to the internet</label></div>
-<div class="squiz-option"><input id="sq1d" name="sq1" type="radio" value="3"/><label for="sq1d">D. It must be able to run games</label></div>
+<div class="squiz-q"><span class="qnum">1.</span>What is a byte?</div>
+<div class="squiz-option"><input id="sq1a" name="sq1" type="radio" value="0"/><label for="sq1a">A. A single 0 or 1</label></div>
+<div class="squiz-option"><input id="sq1b" name="sq1" type="radio" value="1"/><label for="sq1b">B. A group of 8 bits</label></div>
+<div class="squiz-option"><input id="sq1c" name="sq1" type="radio" value="2"/><label for="sq1c">C. A type of cable</label></div>
+<div class="squiz-option"><input id="sq1d" name="sq1" type="radio" value="3"/><label for="sq1d">D. A unit of speed</label></div>
 </div>
 <div class="squiz-item" data-correct="2">
-<div class="squiz-q"><span class="qnum">2.</span>What is a "bit"?</div>
-<div class="squiz-option"><input id="sq2a" name="sq2" type="radio" value="0"/><label for="sq2a">A. A group of eight bytes</label></div>
-<div class="squiz-option"><input id="sq2b" name="sq2" type="radio" value="1"/><label for="sq2b">B. A physical computer chip</label></div>
-<div class="squiz-option"><input id="sq2c" name="sq2" type="radio" value="2"/><label for="sq2c">C. A single binary digit, either 0 or 1</label></div>
-<div class="squiz-option"><input id="sq2d" name="sq2" type="radio" value="3"/><label for="sq2d">D. A unit of internet speed</label></div>
+<div class="squiz-q"><span class="qnum">2.</span>What does an AND gate output when its inputs are 1 and 0?</div>
+<div class="squiz-option"><input id="sq2a" name="sq2" type="radio" value="0"/><label for="sq2a">A. 1</label></div>
+<div class="squiz-option"><input id="sq2b" name="sq2" type="radio" value="1"/><label for="sq2b">B. 2</label></div>
+<div class="squiz-option"><input id="sq2c" name="sq2" type="radio" value="2"/><label for="sq2c">C. 0</label></div>
+<div class="squiz-option"><input id="sq2d" name="sq2" type="radio" value="3"/><label for="sq2d">D. 10</label></div>
 </div>
 <div class="squiz-item" data-correct="1">
-<div class="squiz-q"><span class="qnum">3.</span>Why do computers use binary (0s and 1s) instead of the normal decimal system?</div>
-<div class="squiz-option"><input id="sq3a" name="sq3" type="radio" value="0"/><label for="sq3a">A. Binary is easier for humans to read</label></div>
-<div class="squiz-option"><input id="sq3b" name="sq3" type="radio" value="1"/><label for="sq3b">B. Their electronic switches only have two reliable states: on or off</label></div>
-<div class="squiz-option"><input id="sq3c" name="sq3" type="radio" value="2"/><label for="sq3c">C. Binary uses less electricity than decimal</label></div>
-<div class="squiz-option"><input id="sq3d" name="sq3" type="radio" value="3"/><label for="sq3d">D. It was required by early programming languages</label></div>
-</div>
-<div class="squiz-item" data-correct="0">
-<div class="squiz-q"><span class="qnum">4.</span>What is the CPU's main job?</div>
-<div class="squiz-option"><input id="sq4a" name="sq4" type="radio" value="0"/><label for="sq4a">A. Carrying out instructions, one step at a time, extremely fast</label></div>
-<div class="squiz-option"><input id="sq4b" name="sq4" type="radio" value="1"/><label for="sq4b">B. Permanently storing files</label></div>
-<div class="squiz-option"><input id="sq4c" name="sq4" type="radio" value="2"/><label for="sq4c">C. Translating website names into IP addresses</label></div>
-<div class="squiz-option"><input id="sq4d" name="sq4" type="radio" value="3"/><label for="sq4d">D. Displaying images on the screen only</label></div>
-</div>
-<div class="squiz-item" data-correct="2">
-<div class="squiz-q"><span class="qnum">5.</span>What happens to the contents of RAM when a computer loses power?</div>
-<div class="squiz-option"><input id="sq5a" name="sq5" type="radio" value="0"/><label for="sq5a">A. They are automatically saved to the cloud</label></div>
-<div class="squiz-option"><input id="sq5b" name="sq5" type="radio" value="1"/><label for="sq5b">B. They move into storage</label></div>
-<div class="squiz-option"><input id="sq5c" name="sq5" type="radio" value="2"/><label for="sq5c">C. They are erased</label></div>
-<div class="squiz-option"><input id="sq5d" name="sq5" type="radio" value="3"/><label for="sq5d">D. Nothing changes</label></div>
-</div>
-<div class="squiz-item" data-correct="1">
-<div class="squiz-q"><span class="qnum">6.</span>Which best describes storage (a hard drive or SSD) compared to RAM?</div>
-<div class="squiz-option"><input id="sq6a" name="sq6" type="radio" value="0"/><label for="sq6a">A. Faster than RAM but loses data when powered off</label></div>
-<div class="squiz-option"><input id="sq6b" name="sq6" type="radio" value="1"/><label for="sq6b">B. Slower than RAM but keeps data permanently</label></div>
-<div class="squiz-option"><input id="sq6c" name="sq6" type="radio" value="2"/><label for="sq6c">C. Identical to RAM in every way</label></div>
-<div class="squiz-option"><input id="sq6d" name="sq6" type="radio" value="3"/><label for="sq6d">D. Used only for photos, never for programs</label></div>
-</div>
-<div class="squiz-item" data-correct="0">
-<div class="squiz-q"><span class="qnum">7.</span>What does the operating system do?</div>
-<div class="squiz-option"><input id="sq7a" name="sq7" type="radio" value="0"/><label for="sq7a">A. Manages the hardware and provides the screens and menus other apps rely on</label></div>
-<div class="squiz-option"><input id="sq7b" name="sq7" type="radio" value="1"/><label for="sq7b">B. Only translates website addresses</label></div>
-<div class="squiz-option"><input id="sq7c" name="sq7" type="radio" value="2"/><label for="sq7c">C. Only stores photos and videos</label></div>
-<div class="squiz-option"><input id="sq7d" name="sq7" type="radio" value="3"/><label for="sq7d">D. Physically manufactures the CPU</label></div>
+<div class="squiz-q"><span class="qnum">3.</span>In the half adder, what are the Sum and Carry for 1 + 1?</div>
+<div class="squiz-option"><input id="sq3a" name="sq3" type="radio" value="0"/><label for="sq3a">A. Sum 1, Carry 1</label></div>
+<div class="squiz-option"><input id="sq3b" name="sq3" type="radio" value="1"/><label for="sq3b">B. Sum 0, Carry 1</label></div>
+<div class="squiz-option"><input id="sq3c" name="sq3" type="radio" value="2"/><label for="sq3c">C. Sum 1, Carry 0</label></div>
+<div class="squiz-option"><input id="sq3d" name="sq3" type="radio" value="3"/><label for="sq3d">D. Sum 0, Carry 0</label></div>
 </div>
 <div class="squiz-item" data-correct="3">
-<div class="squiz-q"><span class="qnum">8.</span>What does compiling do?</div>
-<div class="squiz-option"><input id="sq8a" name="sq8" type="radio" value="0"/><label for="sq8a">A. Deletes unused files from storage</label></div>
-<div class="squiz-option"><input id="sq8b" name="sq8" type="radio" value="1"/><label for="sq8b">B. Connects a device to the internet</label></div>
-<div class="squiz-option"><input id="sq8c" name="sq8" type="radio" value="2"/><label for="sq8c">C. Converts a photo into binary</label></div>
-<div class="squiz-option"><input id="sq8d" name="sq8" type="radio" value="3"/><label for="sq8d">D. Translates a programming language into binary instructions the CPU can run</label></div>
-</div>
-<div class="squiz-item" data-correct="1">
-<div class="squiz-q"><span class="qnum">9.</span>What is an IP address used for?</div>
-<div class="squiz-option"><input id="sq9a" name="sq9" type="radio" value="0"/><label for="sq9a">A. Measuring a CPU's speed</label></div>
-<div class="squiz-option"><input id="sq9b" name="sq9" type="radio" value="1"/><label for="sq9b">B. Acting as a unique address for a device on a network</label></div>
-<div class="squiz-option"><input id="sq9c" name="sq9" type="radio" value="2"/><label for="sq9c">C. Encrypting files in storage</label></div>
-<div class="squiz-option"><input id="sq9d" name="sq9" type="radio" value="3"/><label for="sq9d">D. Naming a programming language</label></div>
+<div class="squiz-q"><span class="qnum">4.</span>What is decimal 45 in 8-bit binary?</div>
+<div class="squiz-option"><input id="sq4a" name="sq4" type="radio" value="0"/><label for="sq4a">A. 00110101</label></div>
+<div class="squiz-option"><input id="sq4b" name="sq4" type="radio" value="1"/><label for="sq4b">B. 01011001</label></div>
+<div class="squiz-option"><input id="sq4c" name="sq4" type="radio" value="2"/><label for="sq4c">C. 00011011</label></div>
+<div class="squiz-option"><input id="sq4d" name="sq4" type="radio" value="3"/><label for="sq4d">D. 00101101</label></div>
 </div>
 <div class="squiz-item" data-correct="2">
-<div class="squiz-q"><span class="qnum">10.</span>According to the article, what does the Domain Name System (DNS) do?</div>
-<div class="squiz-option"><input id="sq10a" name="sq10" type="radio" value="0"/><label for="sq10a">A. Compiles programming languages into binary</label></div>
-<div class="squiz-option"><input id="sq10b" name="sq10" type="radio" value="1"/><label for="sq10b">B. Stores files permanently on a hard drive</label></div>
-<div class="squiz-option"><input id="sq10c" name="sq10" type="radio" value="2"/><label for="sq10c">C. Translates website names into the correct IP address</label></div>
-<div class="squiz-option"><input id="sq10d" name="sq10" type="radio" value="3"/><label for="sq10d">D. Runs the operating system</label></div>
+<div class="squiz-q"><span class="qnum">5.</span>In ASCII, the capital letter A is 65. What is that in binary?</div>
+<div class="squiz-option"><input id="sq5a" name="sq5" type="radio" value="0"/><label for="sq5a">A. 01000000</label></div>
+<div class="squiz-option"><input id="sq5b" name="sq5" type="radio" value="1"/><label for="sq5b">B. 01000010</label></div>
+<div class="squiz-option"><input id="sq5c" name="sq5" type="radio" value="2"/><label for="sq5c">C. 01000001</label></div>
+<div class="squiz-option"><input id="sq5d" name="sq5" type="radio" value="3"/><label for="sq5d">D. 01000011</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">6.</span>About how big is an uncompressed 1,920 x 1,080 image using 3 bytes per pixel?</div>
+<div class="squiz-option"><input id="sq6a" name="sq6" type="radio" value="0"/><label for="sq6a">A. About 2 MB</label></div>
+<div class="squiz-option"><input id="sq6b" name="sq6" type="radio" value="1"/><label for="sq6b">B. About 6.2 MB</label></div>
+<div class="squiz-option"><input id="sq6c" name="sq6" type="radio" value="2"/><label for="sq6c">C. About 62 MB</label></div>
+<div class="squiz-option"><input id="sq6d" name="sq6" type="radio" value="3"/><label for="sq6d">D. About 620 KB</label></div>
+</div>
+<div class="squiz-item" data-correct="0">
+<div class="squiz-q"><span class="qnum">7.</span>What is the main difference between RAM and storage?</div>
+<div class="squiz-option"><input id="sq7a" name="sq7" type="radio" value="0"/><label for="sq7a">A. RAM is fast and temporary; storage is slower and permanent</label></div>
+<div class="squiz-option"><input id="sq7b" name="sq7" type="radio" value="1"/><label for="sq7b">B. RAM is permanent; storage is temporary</label></div>
+<div class="squiz-option"><input id="sq7c" name="sq7" type="radio" value="2"/><label for="sq7c">C. They are the same thing</label></div>
+<div class="squiz-option"><input id="sq7d" name="sq7" type="radio" value="3"/><label for="sq7d">D. RAM is only for sound</label></div>
+</div>
+<div class="squiz-item" data-correct="3">
+<div class="squiz-q"><span class="qnum">8.</span>What are the three steps of the CPU cycle, in order?</div>
+<div class="squiz-option"><input id="sq8a" name="sq8" type="radio" value="0"/><label for="sq8a">A. Execute, fetch, decode</label></div>
+<div class="squiz-option"><input id="sq8b" name="sq8" type="radio" value="1"/><label for="sq8b">B. Decode, execute, fetch</label></div>
+<div class="squiz-option"><input id="sq8c" name="sq8" type="radio" value="2"/><label for="sq8c">C. Fetch, execute, decode</label></div>
+<div class="squiz-option"><input id="sq8d" name="sq8" type="radio" value="3"/><label for="sq8d">D. Fetch, decode, execute</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">9.</span>Why does a higher GHz not always mean a faster computer?</div>
+<div class="squiz-option"><input id="sq9a" name="sq9" type="radio" value="0"/><label for="sq9a">A. GHz measures screen size</label></div>
+<div class="squiz-option"><input id="sq9b" name="sq9" type="radio" value="1"/><label for="sq9b">B. Speed also depends on cores, design, memory and the software</label></div>
+<div class="squiz-option"><input id="sq9c" name="sq9" type="radio" value="2"/><label for="sq9c">C. GHz only affects sound</label></div>
+<div class="squiz-option"><input id="sq9d" name="sq9" type="radio" value="3"/><label for="sq9d">D. Higher GHz is always slower</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">10.</span>What does a compiler do?</div>
+<div class="squiz-option"><input id="sq10a" name="sq10" type="radio" value="0"/><label for="sq10a">A. Cools the processor</label></div>
+<div class="squiz-option"><input id="sq10b" name="sq10" type="radio" value="1"/><label for="sq10b">B. Stores your photos</label></div>
+<div class="squiz-option"><input id="sq10c" name="sq10" type="radio" value="2"/><label for="sq10c">C. Translates a program into machine code</label></div>
+<div class="squiz-option"><input id="sq10d" name="sq10" type="radio" value="3"/><label for="sq10d">D. Connects you to the internet</label></div>
 </div>
 <button class="squiz-submit-btn" disabled="" id="squizSubmitBtn" onclick="submitQuiz()" type="button">Answer all questions to submit</button>
 </form>
 </div>
 <div class="article-footer-nav">
 <a href="index.html#gateway">← Gateway</a>
-<a href="article-viewer.html#what-is-the-internet.html">Next: What Is the Internet, Really? →</a>
+<a href="what-is-the-internet.html">Next: What Is the Internet, Really? →</a>
 </div>
 </div>
 <script>
@@ -1269,23 +1539,21 @@ footer.footer {
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',setup); else setup();
 })();
 </script>
-<footer class="edusambam-unified-footer" aria-label="EDUSAMBAM site footer">
+<footer aria-label="EDUSAMBAM site footer" class="edusambam-unified-footer">
 <div class="footer-top">
 <div class="footer-brand">
 <div class="edusambam-footer-brand-row">
-<a class="edusambam-footer-logo-link" href="index.html" aria-label="EDUSAMBAM home">
+<a aria-label="EDUSAMBAM home" class="edusambam-footer-logo-link" href="index.html">
 <img alt="EDUSAMBAM" class="edusambam-brand-mark edusambam-footer-logo" src="logo-icon-full-white.png" style="width:auto;height:64px;max-width:240px;object-fit:contain;background:none;border-radius:0;"/>
 </a>
 </div>
 <p class="edusambam-footer-statement">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</p>
-<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a></div>
+<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a><a aria-label="EDUSAMBAM on YouTube" href="https://youtube.com/@edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></div>
 </div>
-<div class="footer-col"><h4>Learning</h4><ul><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li></ul></div>
+<div class="footer-col"><h4>Learning Areas</h4><ul><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ Tests</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li></ul></div>
 <div class="footer-col"><h4>Practice &amp; Assessment</h4><ul>
 <li><a href="index.html#interactive-activities">Interactive Activities</a></li>
 <li><a href="assessment-arena.html">ASSESSMENT ARENA</a></li>
-<li><a href="assessment-arena.html">What Is Assessment?</a></li>
-<li><a href="index.html#about">Learn Your Way</a></li>
 <li><a href="index.html#resources">Resources &amp; Downloads</a></li>
 </ul></div>
 <div class="footer-col"><h4>About EDUSAMBAM</h4><ul>
@@ -1295,6 +1563,7 @@ footer.footer {
 <li><a href="contact.html">Contact Us</a></li>
 <li><a href="mailto:feedback.edusambam@gmail.com?subject=EDUSAMBAM%20Feedback">Give Feedback</a></li>
 <li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+<li><a href="about.html">About EDUSAMBAM</a></li>
 <li><a href="privacy-policy.html">Privacy Policy</a></li>
 </ul></div>
 </div>

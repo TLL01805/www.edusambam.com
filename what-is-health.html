@@ -12,9 +12,9 @@ gtag('config', 'G-Y35DW0V4HQ');
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>What is Health? Physical, Mental &amp; Social Wellbeing — EDUSAMBAM</title>
+<title>What Is Health? Physical, Mental, Social — EDUSAMBAM</title>
 <link href="https://edusambam.com/what-is-health.html" rel="canonical"/>
-<meta content="Real health is bigger than not being sick — it covers your body, mind and relationships. Learn what health actually means." name="description"/>
+<meta content="What health really means: the WHO definition, physical, mental and social health, what shapes health, prevention, a worked example, myths and a quiz." name="description"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
@@ -582,6 +582,44 @@ gtag('config', 'G-Y35DW0V4HQ');
     cursor: pointer;
   }
   .squiz-retake-btn:hover { background: rgba(255,255,255,0.1); }
+
+  /* ── EDUSAMBAM what-is-health upgrade ── */
+  .wh-card{background:var(--cream);border:1px solid var(--border);border-radius:var(--radius);padding:1.3rem 1.1rem;margin:1.5rem 0}
+  .wh-title{font-family:'EB Garamond',serif;font-weight:600;color:var(--navy);font-size:1.1rem;text-align:center;margin-bottom:.6rem}
+  .wh-cap{text-align:center;color:var(--muted);font-size:.85rem;margin-top:.5rem}
+  .wh-venn{max-width:340px;margin:0 auto}
+  .wh-c1,.wh-c2,.wh-c3{animation:whFade 1s ease both}.wh-c2{animation-delay:.4s}.wh-c3{animation-delay:.8s}
+  .wh-spec{position:relative;display:flex;height:3.2rem;border-radius:8px;overflow:hidden;color:#fff;font-size:.72rem;font-weight:700;text-align:center}
+  .wh-spec div{flex:1;display:flex;align-items:center;justify-content:center;padding:0 .2rem}
+  .wh-p1{background:#8B0000}.wh-p2{background:#B8863E}.wh-p3{background:#6B8F4E}.wh-p4{background:#2F6F4E}
+  .wh-spec .wh-mark{position:absolute;top:0;bottom:0;width:4px;background:#fff;box-shadow:0 0 0 2px rgba(0,0,0,.35);left:30%;animation:whSlide 9s ease-in-out infinite}
+  .wh-rings{display:block;text-align:center}.wh-rings svg{max-width:220px;width:100%;height:auto}
+  .wh-r{transform-origin:150px 150px;animation:whPop .6s ease both}
+  .wh-leg{list-style:none;margin:.8rem 0 0;padding:0;text-align:left;font-size:.9rem}
+  .wh-leg li{margin:.4rem 0}
+  .wh-sw{display:inline-block;width:.9rem;height:.9rem;border-radius:50%;margin-right:.5rem;vertical-align:middle}
+  .wh-calc{background:var(--cream);border:1px solid var(--border);border-left:4px solid #2F6F4E;border-radius:var(--radius);padding:1.3rem 1.5rem;margin:1.5rem 0}
+  .wh-calc h3{font-family:'EB Garamond',serif;color:var(--navy);margin:0 0 .6rem}
+  .wh-s{display:flex;gap:.7rem;align-items:flex-start;margin:.45rem 0}
+  .wh-s b{flex:0 0 1.7rem;height:1.7rem;border-radius:50%;background:#2F6F4E;color:#fff;display:grid;place-items:center;font-size:.85rem}
+  .wh-s span{flex:1}
+  .wh-myths{display:grid;gap:.9rem;margin:1.3rem 0}
+  .wh-myth{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;animation:whIn .6s ease both}
+  .wh-myth:nth-child(2){animation-delay:.12s}.wh-myth:nth-child(3){animation-delay:.24s}.wh-myth:nth-child(4){animation-delay:.36s}
+  .wh-myth .m{background:#FBEAEA;color:#8B0000;padding:.6rem 1rem;font-weight:600}
+  .wh-myth .f{background:#EAF4EE;color:#1E4D36;padding:.6rem 1rem}
+  .wh-myth b{text-transform:uppercase;font-size:.72rem;letter-spacing:.08em;margin-right:.4rem}
+  .wh-key{background:var(--navy);border-radius:var(--radius);padding:1.5rem 1.7rem;margin:2rem 0}
+  .wh-key .kp{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
+  .wh-key ul{margin:0;padding-left:1.2rem;color:rgba(255,255,255,.88)}.wh-key li{margin:.35rem 0}
+  .wh-tp{background:var(--gold-lt);border:1px solid rgba(184,150,62,.45);border-radius:var(--radius);padding:1.2rem 1.5rem;margin:1.5rem 0}
+  .wh-tp .tl{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#7a5f1c}
+  .wh-tp p{margin:.4rem 0 0}
+  @keyframes whFade{from{opacity:0}to{opacity:.55}}
+  @keyframes whPop{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:scale(1)}}
+  @keyframes whIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  @keyframes whSlide{0%,100%{left:30%}50%{left:80%}}
+  @media (prefers-reduced-motion:reduce){.wh-c1,.wh-c2,.wh-c3{animation:none}.wh-r,.wh-myth{animation:none}.wh-mark{animation:none}}
 </style>
 <style id="edusambam-reader-style">
 .mark{width:48px;height:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px;border-radius:14px;background:#eef6ff;box-shadow:0 2px 7px rgba(8,47,99,.10);flex:0 0 48px}.mark i{display:block;border-radius:50%;background:#0b4ea2;min-width:0;min-height:0}.mark i:nth-child(5){background:#d4a017}.edusambam-reader{max-width:980px;margin:1.2rem auto 0;padding:1rem 1.1rem;border:1px solid #d7e4ef;border-radius:14px;background:linear-gradient(135deg,#f7fbff,#fff);box-shadow:0 6px 18px rgba(11,45,92,.08)}.edusambam-reader strong{display:block;color:#0b55a5;font-size:.9rem;letter-spacing:.04em}.edusambam-reader .reader-slogan{color:#b27e08;font-weight:900;margin-top:.25rem;font-size:.82rem}.edusambam-reader .reader-help{color:#607086;font-size:.8rem;margin:.3rem 0 .7rem}.edusambam-reader .reader-controls{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}.edusambam-reader button,.edusambam-reader select{border:1px solid #c9d9e8;background:#fff;color:#153b6e;border-radius:8px;padding:.48rem .65rem;font-weight:800;cursor:pointer}.edusambam-reader button:first-child{background:#0b55a5;color:#fff;border-color:#0b55a5}.edusambam-reader .reader-status{display:block;color:#607086;font-size:.75rem;margin-top:.55rem}.edusambam-reader .reader-progress{height:4px;background:#e4edf6;border-radius:99px;margin-top:.6rem;overflow:hidden}.edusambam-reader .reader-progress span{display:block;width:0;height:100%;background:#e1ad1c;transition:width .2s linear}@media(max-width:600px){.edusambam-reader{margin-left:0;margin-right:0}.edusambam-reader .reader-controls button,.edusambam-reader .reader-controls select{flex:1;min-width:75px}}
@@ -971,6 +1009,20 @@ footer.footer {
 }
 </style><style id="edusambam-footer-social-css">.edusambam-footer-social{margin-top:14px}.edusambam-footer-social a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);color:rgba(255,255,255,.85);transition:background .15s,color .15s}.edusambam-footer-social a:hover{background:rgba(255,255,255,.22);color:#fff}</style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2230995786427221"
      crossorigin="anonymous"></script>
+<meta content="2026-10-12" property="article:modified_time"/>
+<meta name="robots" content="index,follow,max-image-preview:large"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="EDUSAMBAM"/>
+<meta property="og:title" content="What Is Health? Physical, Mental, Social"/>
+<meta property="og:description" content="What health really means: the WHO definition, physical, mental and social health, what shapes health, prevention, a worked example, myths and a quiz."/>
+<meta property="og:url" content="https://edusambam.com/what-is-health.html"/>
+<meta property="og:image" content="https://edusambam.com/logo-icon-full.png"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="What Is Health? Physical, Mental, Social"/>
+<meta name="twitter:description" content="What health really means: the WHO definition, physical, mental and social health, what shapes health, prevention, a worked example, myths and a quiz."/>
+<meta property="article:modified_time" content="2026-10"/>
+<meta property="article:section" content="Nutrition"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "What is Health? Physical, Mental & Social Wellbeing", "description": "What health really means: the WHO definition, physical, mental and social health, what shapes health, prevention, a worked example, myths and a quiz.", "inLanguage": "en", "mainEntityOfPage": "https://edusambam.com/what-is-health.html", "url": "https://edusambam.com/what-is-health.html", "dateModified": "2026-10", "articleSection": "Nutrition", "author": {"@type": "Organization", "name": "EDUSAMBAM Editorial Team", "url": "https://edusambam.com/"}, "publisher": {"@type": "Organization", "name": "EDUSAMBAM", "url": "https://edusambam.com/", "logo": {"@type": "ImageObject", "url": "https://edusambam.com/logo-icon-full.png"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Gateway", "item": "https://edusambam.com/index.html#gateway"}, {"@type": "ListItem", "position": 2, "name": "Nutrition", "item": "https://edusambam.com/index.html#subject-nutrition"}, {"@type": "ListItem", "position": 3, "name": "What is Health? Physical, Mental & Social Wellbeing", "item": "https://edusambam.com/what-is-health.html"}]}]}</script>
 </head>
 <body id="top">
 <!-- TOP BAR -->
@@ -989,13 +1041,12 @@ footer.footer {
 <span class="edusambam-brand-subtitle">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</span>
 </span>
 </a>
-<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li></ul>
+<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ Tests</a></li><li><a href="index.html#resources">Resources</a></li></ul>
 <button aria-label="Search" class="edusambam-search-btn" title="Search" type="button">⌕</button>
 <button aria-expanded="false" aria-label="Open menu" class="edusambam-menu-btn" title="Menu" type="button">☰</button>
 </div>
-</nav>
-<div aria-label="Mobile navigation" class="edusambam-mobile-menu">
-<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="index.html#subject-assessment">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="index.html#about-edusambam">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
+</nav><div aria-label="Mobile navigation" class="edusambam-mobile-menu">
+<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ Tests</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="index.html#subject-assessment">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="index.html#about-edusambam">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
 </div>
 <div aria-label="Site search" class="edusambam-search-panel">
 <div class="edusambam-search-wrap">
@@ -1005,72 +1056,98 @@ footer.footer {
 </div>
 <!-- ARTICLE HERO -->
 <div class="article-hero">
-<div class="breadcrumb"><a href="index.html#gateway">Gateway</a>  /  <a href="index.html#subject-optometry">Health</a>  /  What is Health?</div>
+<div class="breadcrumb"><a href="index.html#gateway">Gateway</a>  /  <a href="index.html#subject-nutrition">Nutrition</a>  /  What is Health?</div>
 <div class="article-hero-tag">Health · Foundational Concepts</div>
 <h1>What is Health? Physical, Mental &amp; Social Wellbeing</h1>
 <p class="sub">Most people think "being healthy" just means not being sick. But real health is much bigger than that — it covers your body, your mind, and your relationships with others.</p>
 <div class="article-hero-meta">
 <span>EDUSAMBAM Editorial Team</span>
 <span>|</span>
-<span>9 min read</span>
+<span>15 min read</span> <span>|</span> <span>Last updated: October 2026</span>
 <span>|</span>
 <span>Health</span>
 </div>
 </div><div aria-label="EDUSAMBAM article reader" class="edusambam-reader"><strong>🔊 LISTEN TO THIS ARTICLE</strong><div class="reader-slogan">SAVE YOUR EYES • IMPROVE YOUR LISTENING</div><div class="reader-help">Listen to the article instead of relying only on continuous screen reading.</div><div class="reader-controls"><button data-reader="play" type="button">▶ Play</button><button data-reader="pause" type="button">⏸ Pause</button><button data-reader="resume" type="button">▶ Resume</button><button data-reader="stop" type="button">■ Stop</button><select aria-label="Reading speed"><option value="1">1×</option><option value="0.8">0.8×</option><option value="1.2">1.2×</option></select></div><div aria-hidden="true" class="reader-progress"><span></span></div><small class="reader-status">Ready to read the article.</small></div>
 <!-- ARTICLE BODY -->
 <div class="article-wrap">
-<p class="lead">In 1948, the World Health Organization (WHO) gave the world a definition of health that is still used today, and it changed how doctors, teachers, and governments think about wellbeing. This article explains what health really means, why it has three connected parts, and how understanding this can help you look after yourself better.</p>
+<p class="lead">In 1948, the World Health Organization (WHO) gave the world a definition of health that is still used today, and it changed how doctors, teachers and governments think about wellbeing. This article explains what health really means, why it has three connected parts, what shapes it beyond your own choices, and how understanding all this can help you look after yourself and others.</p>
 <h2><span class="num">1.</span>Defining Health</h2>
-<p>For a long time, people believed health simply meant the <strong>absence of disease</strong> — if you weren't ill, you were healthy. The WHO challenged this idea with a much broader definition:</p>
-<div class="example-box">
-<div class="ex-label">Official Definition</div>
-<p>"Health is a state of complete physical, mental, and social wellbeing, and not merely the absence of disease or infirmity." — World Health Organization, 1948</p>
-</div>
-<p>This means a person could have no illness at all, yet still not be fully healthy — for example, if they are constantly stressed, lonely, or unable to maintain healthy relationships.</p>
-<h2><span class="num">2.</span>The Three Dimensions of Health</h2>
-<p>Health is usually broken down into three connected dimensions. Each one affects the others, so looking after all three is essential for genuine wellbeing.</p>
-<div class="diagram-box">
-<svg viewbox="0 0 360 260" xmlns="http://www.w3.org/2000/svg">
-<circle cx="150" cy="110" fill="#8B0000" opacity="0.55" r="85"></circle>
-<circle cx="210" cy="110" fill="#06244a" opacity="0.55" r="85"></circle>
-<circle cx="180" cy="165" fill="#B8963E" opacity="0.55" r="85"></circle>
-<text fill="#FFFFFF" font-family="Source Sans 3, sans-serif" font-size="13" font-weight="600" x="105" y="90">Physical</text>
-<text fill="#FFFFFF" font-family="Source Sans 3, sans-serif" font-size="13" font-weight="600" x="235" y="90">Mental</text>
-<text fill="#1A1A1A" font-family="Source Sans 3, sans-serif" font-size="13" font-weight="600" x="165" y="220">Social</text>
-<text fill="#FFFFFF" font-family="EB Garamond, serif" font-size="15" font-weight="600" text-anchor="middle" x="150" y="150">Health</text>
-</svg>
-<p class="diagram-caption">The three overlapping dimensions of health — physical, mental, and social wellbeing.</p>
-</div>
-<h2><span class="num">3.</span>Physical Health</h2>
-<p>Physical health refers to the condition of your body — how well your organs, muscles, and systems function, and how effectively your body can fight off illness and recover from injury.</p>
+<p>For a long time, people believed health simply meant the <strong>absence of disease</strong>: if you were not ill, you were healthy. The WHO challenged this idea with a much broader definition.</p>
+<div class="definition-box"><div class="def-label">Official Definition</div><p>"Health is a state of complete physical, mental, and social wellbeing, and not merely the absence of disease or infirmity."</p><span class="def-source">World Health Organization, 1948</span></div>
+<p>This means a person could have no illness at all, yet still not be fully healthy. For example, someone who is constantly stressed, lonely or unable to keep healthy relationships may be struggling even without a diagnosed disease.</p>
+<p>Ideas about health have kept developing. Today, many health experts also describe health as a <em>resource for everyday life</em>: it is not the goal of living, but what lets you learn, work, enjoy relationships and take part in your community. The definition has been debated, because "complete" wellbeing is hard to reach, but the central idea has lasted: health is about the whole person.</p>
+<h2><span class="num">2.</span>How Ideas About Health Have Changed</h2>
+<p>People have always asked what it means to be healthy. In many early traditions, health meant a balance in the body and in the way a person lived. In the 1800s, the discovery that germs cause many diseases, together with better sanitation, such as clean water and sewage systems, transformed public health and helped people live longer. In the 20th century, vaccines and antibiotics saved millions of lives. Then, in 1948, the WHO described health as more than the absence of disease. In 1986, the WHO's Ottawa Charter on health promotion added another idea: that health is created in the places where people live, learn, work and play, and that people should be helped to take more control over their own health.</p>
+<h2><span class="num">3.</span>The Three Dimensions of Health</h2>
+<p>Health is usually broken down into three connected dimensions. Each one affects the others, so looking after all three is essential for genuine wellbeing. Some models add more parts, such as spiritual or environmental health, but these three come directly from the WHO definition.</p>
+<div class="wh-card"><div class="wh-title">The three dimensions of health</div><div class="wh-venn"><svg viewBox="0 0 360 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three overlapping circles: physical, mental and social health, meeting at the centre in health" width="100%"><circle class="wh-c1" cx="150" cy="110" fill="#8B0000" opacity="0.55" r="85"></circle><circle class="wh-c2" cx="210" cy="110" fill="#06244a" opacity="0.55" r="85"></circle><circle class="wh-c3" cx="180" cy="165" fill="#B8963E" opacity="0.55" r="85"></circle><text fill="#FFFFFF" font-family="Source Sans 3, sans-serif" font-size="13" font-weight="600" x="105" y="90">Physical</text><text fill="#FFFFFF" font-family="Source Sans 3, sans-serif" font-size="13" font-weight="600" x="235" y="90">Mental</text><text fill="#1A1A1A" font-family="Source Sans 3, sans-serif" font-size="13" font-weight="600" x="165" y="220">Social</text><text fill="#FFFFFF" font-family="EB Garamond, serif" font-size="15" font-weight="600" text-anchor="middle" x="150" y="150">Health</text></svg></div><div class="wh-cap">Physical, mental and social wellbeing overlap, and health sits where they meet.</div></div>
+<h2><span class="num">4.</span>Physical Health</h2>
+<p>Physical health refers to the condition of your body: how well your organs, muscles and systems function, and how effectively your body can fight off illness and recover from injury. Key habits include:</p>
 <ul>
-<li><strong>Nutrition</strong> — eating a balanced variety of foods to fuel the body</li>
-<li><strong>Exercise</strong> — regular movement to strengthen the heart, muscles, and bones</li>
-<li><strong>Sleep</strong> — allowing the body time to repair and recharge</li>
-<li><strong>Hygiene</strong> — preventing the spread of infection and disease</li>
-<li><strong>Avoiding harmful substances</strong> — such as tobacco, alcohol, and drugs</li>
+<li><strong>Nutrition:</strong> eating a balanced variety of foods to fuel the body. See <a href="what-is-nutrition.html">What Is Nutrition?</a> and <a href="food-groups-healthy-eating.html">Food Groups and Healthy Eating</a>.</li>
+<li><strong>Exercise:</strong> regular movement to strengthen the heart, muscles and bones. See <a href="physical-fitness-exercise-basics.html">Physical Fitness and Exercise Basics</a>.</li>
+<li><strong>Sleep:</strong> allowing the body time to repair and recharge. See <a href="importance-of-sleep-and-rest.html">The Importance of Sleep and Rest</a>.</li>
+<li><strong>Hygiene:</strong> preventing the spread of infection and disease. See <a href="personal-hygiene-disease-prevention.html">Personal Hygiene and Disease Prevention</a>.</li>
+<li><strong>Avoiding harmful substances:</strong> such as tobacco, alcohol and drugs. See <a href="effects-of-substance-abuse.html">Effects of Substance Abuse</a>.</li>
+<li><strong>Safety and first aid:</strong> preventing injuries and knowing how to respond. See <a href="first-aid-basic-safety.html">First Aid and Basic Safety</a>.</li>
 </ul>
-<h2><span class="num">4.</span>Mental Health</h2>
-<p>Mental health is about how you think, feel, and cope with everyday life. It includes your emotional wellbeing, your ability to manage stress, and your capacity to make decisions and solve problems.</p>
-<div class="example-box">
-<div class="ex-label">Example</div>
-<p>A student who feels calm and confident before an exam, and who can manage nervousness without it becoming overwhelming, is displaying good mental health — even if they don't get a perfect score.</p>
-</div>
-<p>Good mental health does not mean being happy all the time. It means having the resilience and tools to handle sadness, stress, or setbacks in a healthy way.</p>
-<h2><span class="num">5.</span>Social Health</h2>
-<p>Social health refers to your ability to form satisfying relationships with others and to interact positively within your community, family, and friendship groups.</p>
-<table class="pos-table">
-<tr><th>Dimension</th><th>Focus</th><th>Example Habit</th></tr>
+<h2><span class="num">5.</span>Mental Health</h2>
+<p>Mental health is about how you think, feel and cope with everyday life. It includes your emotional wellbeing, your ability to manage stress, and your capacity to make decisions and solve problems.</p>
+<div class="example-box"><div class="ex-label">Example</div><p>A student who feels calm and confident before an exam, and who can manage nervousness without it becoming overwhelming, is showing good mental health, even if they do not get a perfect score.</p></div>
+<p>Good mental health does not mean being happy all the time. It means having the resilience and tools to handle sadness, stress or setbacks in a healthy way. You can learn more in <a href="understanding-mental-health-emotions.html">Understanding Mental Health and Emotions</a>.</p>
+<h2><span class="num">6.</span>Social Health</h2>
+<p>Social health refers to your ability to form satisfying relationships with others and to interact positively within your community, family and friendship groups. It includes communicating clearly, listening, showing respect and empathy, solving disagreements fairly, and feeling that you belong. People with supportive relationships tend to cope better with stress and to recover more easily from illness, while long-term loneliness is linked to poorer health.</p>
+<div class="table-wrap"><table class="pos-table"><tr><th>Dimension</th><th>Focus</th><th>Example habit</th></tr>
 <tr><td>Physical</td><td>The body's condition and function</td><td>Eating a balanced diet</td></tr>
-<tr><td>Mental</td><td>Thoughts, emotions, and coping ability</td><td>Talking about problems instead of bottling them up</td></tr>
-<tr><td>Social</td><td>Relationships and community connection</td><td>Spending quality time with family and friends</td></tr>
-</table>
-<div class="real-world-box">
-<div class="rw-label">Real-World Example</div>
-<p>Consider two students who both catch a cold. Student A eats well, sleeps enough, talks to friends about feeling under the weather, and recovers within a week feeling supported. Student B skips meals, stays up late worrying alone, and avoids friends out of embarrassment. Both had the same illness, but Student A's stronger physical, mental, and social habits led to a faster, easier recovery — showing how the three dimensions work together in real life.</p>
+<tr><td>Mental</td><td>Thoughts, emotions and coping ability</td><td>Talking about problems instead of bottling them up</td></tr>
+<tr><td>Social</td><td>Relationships and community connection</td><td>Spending quality time with family and friends</td></tr></table></div>
+<h2><span class="num">7.</span>Health Is a Spectrum, Not a Switch</h2>
+<p>Health is not a single switch that is either "on" or "off". It moves along a spectrum through life. At one end a person is thriving in body, mind and relationships. At the other, serious illness or distress affects daily life. Most of us move along this line many times, and healthy habits and support help us move in a good direction.</p>
+<div class="wh-card"><div class="wh-title">The health spectrum</div><div class="wh-spec"><div class="wh-p1">Poor health</div><div class="wh-p2">Not thriving</div><div class="wh-p3">Good health</div><div class="wh-p4">Thriving</div><div class="wh-mark"></div></div><div class="wh-cap">Your position can change over days, months and years.</div></div>
+<h2><span class="num">8.</span>What Shapes Your Health?</h2>
+<p>Your choices matter, but they are not the whole story. Public health researchers describe several layers of influence, shown below as rings. At the centre is you, with your age and inherited traits. Around you are your lifestyle, your community, your living and working conditions, and the wider world.</p>
+<div class="wh-card"><div class="wh-title">Layers of influence on health</div><div class="wh-rings"><div><svg viewBox="0 0 300 300" role="img" aria-label="Five rings of influences on health, with the individual at the centre"><circle class="wh-r wh-r0" cx="150" cy="150" r="130" fill="#E8DDC7" stroke="#fff" stroke-width="2" style="animation-delay:1.4s"></circle><circle class="wh-r wh-r1" cx="150" cy="150" r="104" fill="#D8C7A0" stroke="#fff" stroke-width="2" style="animation-delay:1.0499999999999998s"></circle><circle class="wh-r wh-r2" cx="150" cy="150" r="78" fill="#B8963E" stroke="#fff" stroke-width="2" style="animation-delay:0.7s"></circle><circle class="wh-r wh-r3" cx="150" cy="150" r="52" fill="#6B8F4E" stroke="#fff" stroke-width="2" style="animation-delay:0.35s"></circle><circle class="wh-r wh-r4" cx="150" cy="150" r="26" fill="#2F6F4E" stroke="#fff" stroke-width="2" style="animation-delay:0.0s"></circle><text x="150" y="154" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">You</text></svg></div><ul class="wh-leg"><li><span class="wh-sw" style="background:#2F6F4E"></span><strong>You:</strong> age, sex and inherited traits</li><li><span class="wh-sw" style="background:#6B8F4E"></span><strong>Your lifestyle:</strong> food, activity, sleep, habits</li><li><span class="wh-sw" style="background:#B8963E"></span><strong>Your community:</strong> family, friends, neighbours, school</li><li><span class="wh-sw" style="background:#D8C7A0"></span><strong>Living and working conditions:</strong> housing, clean water, school, work, health services</li><li><span class="wh-sw" style="background:#E8DDC7"></span><strong>The wider world:</strong> economy, culture, environment, laws</li></ul></div></div>
+<p>This is why two people with similar habits can have different health. Clean water, safe housing, good schools, access to doctors and a peaceful community all make healthy choices easier. It is also why health is a shared responsibility. Individuals, families, schools and governments all play a part.</p>
+<h2><span class="num">9.</span>Preventing Illness: Three Levels</h2>
+<div class="table-wrap"><table class="pos-table"><tr><th>Level</th><th>Aim</th><th>Examples</th></tr>
+<tr><td>Primary prevention</td><td>Stop illness before it starts</td><td>Vaccines, handwashing, healthy food, exercise, avoiding tobacco</td></tr>
+<tr><td>Secondary prevention</td><td>Find problems early</td><td>Regular check-ups, vision and hearing tests, screening</td></tr>
+<tr><td>Tertiary prevention</td><td>Treat illness and help recovery</td><td>Medical treatment, rehabilitation, ongoing support</td></tr></table></div>
+<p>Most of what you can do as a young person is primary prevention. Good habits now protect your health for decades.</p>
+<h2><span class="num">10.</span>Worked Example: A Simple Health Balance Check</h2>
+<div class="wh-calc"><h3>Which dimension needs attention?</h3>
+<p>Imagine a student rates three areas of life from 1 (needs a lot of care) to 5 (going very well). This is a thinking tool, not a medical test.</p>
+<div class="wh-s"><b>1</b><span><strong>Physical:</strong> eats regularly, plays sport twice a week, sleeps well. Score <strong>4</strong>.</span></div>
+<div class="wh-s"><b>2</b><span><strong>Mental:</strong> often worried about exams and finds it hard to relax. Score <strong>2</strong>.</span></div>
+<div class="wh-s"><b>3</b><span><strong>Social:</strong> has some good friends but spends little time with family. Score <strong>3</strong>.</span></div>
+<div class="wh-s"><b>4</b><span>Average: (4 + 2 + 3) ÷ 3 = 9 ÷ 3 = <strong>3</strong>.</span></div>
+<p>An average of 3 hides the most useful fact: the lowest score is <strong>Mental</strong>. Instead of trying to fix everything, the student chooses one small action, such as practising slow breathing before study and talking to a trusted friend about exam worries. Looking at the lowest area, not only the average, shows where care is needed most.</p>
+<p><strong>Try it yourself:</strong> rate your own three dimensions honestly, and choose one small action for the lowest one. If a low score keeps worrying you, talk to a trusted adult.</p></div>
+<h2><span class="num">11.</span>Health Through the Stages of Life</h2>
+<p>What a person needs to stay healthy changes with age. In childhood, the body grows quickly and needs good nutrition, vaccinations, play and loving care. In the teenage years, puberty brings physical and emotional changes, friendships become more important, and habits formed now often continue into adult life, which is why this is such a valuable time to build healthy routines. Adults balance work, family and stress, and need regular activity and check-ups. In older age, staying active, eating well, keeping social connections and having access to health care help people stay independent for longer.</p>
+<h2><span class="num">12.</span>Looking After Your Health Every Day</h2>
+<p>Health is built from ordinary days. A practical approach is to pick one small habit for each dimension and keep it going for a few weeks: for example, a fruit or vegetable with every meal, 30 minutes of active play, a regular bedtime, a few minutes of quiet breathing, and a daily conversation with someone you care about. Small, steady habits work better than dramatic changes that do not last.</p>
+<div class="real-world-box"><div class="rw-label">Real-World Example</div><p>Consider two students who both catch a cold. Student A eats well, sleeps enough, talks to friends about feeling under the weather, and recovers within a week feeling supported. Student B skips meals, stays up late worrying alone, and avoids friends out of embarrassment. Both had the same illness, but Student A's stronger physical, mental and social habits led to a faster, easier recovery. This shows how the three dimensions work together in real life.</p></div>
+<h2><span class="num">13.</span>Common Myths About Health</h2>
+<div class="wh-myths">
+<div class="wh-myth"><div class="m"><b>Myth</b>If you are not ill, you are healthy.</div><div class="f"><b>Fact</b>Health includes your mind and relationships, not only the absence of disease.</div></div>
+<div class="wh-myth"><div class="m"><b>Myth</b>Mental health matters less than physical health.</div><div class="f"><b>Fact</b>They are connected, and each affects the other. Both need care.</div></div>
+<div class="wh-myth"><div class="m"><b>Myth</b>Health is only about personal choices.</div><div class="f"><b>Fact</b>Your surroundings, such as clean water, safety and access to care, also shape health.</div></div>
+<div class="wh-myth"><div class="m"><b>Myth</b>You can tell how healthy someone is by how they look.</div><div class="f"><b>Fact</b>Body size or appearance alone does not show someone's overall health.</div></div>
 </div>
-<h2>A Closing Thought</h2>
-<p>Health is not a single switch that is either "on" or "off." It is a balance of body, mind, and relationships that needs continuous care. Understanding all three dimensions helps you recognise that looking after your mental and social wellbeing is just as important as looking after your physical body.</p>
+<div class="wh-key"><div class="kp">Key points to remember</div><ul>
+<li>The WHO describes health as complete physical, mental and social wellbeing, not just the absence of disease.</li>
+<li>Physical, mental and social health are connected and affect each other.</li>
+<li>Health is a spectrum that changes through life.</li>
+<li>Your choices, community and surroundings all shape your health.</li>
+<li>Small daily habits in all three dimensions protect health for the long term.</li>
+</ul></div>
+<div class="wh-tp"><div class="tl">For teachers and parents</div><p><strong>Activity:</strong> ask students to draw their own three-circle diagram and write one habit in each circle. Then discuss which outside factors, such as clean water, safe play areas or access to doctors, help or limit healthy choices in their community.</p><p><strong>Please note:</strong> this article is general education and not medical advice. For any health concern, please speak to a doctor or qualified health professional.</p></div>
+<div class="further-box"><div class="fr-label">Further Reading</div><ul>
+<li><a href="https://www.who.int/about/governance/constitution" rel="noopener" target="_blank">World Health Organization: Constitution</a><span class="src-note">The source of the 1948 definition of health</span></li>
+<li><a href="https://www.who.int/health-topics/social-determinants-of-health" rel="noopener" target="_blank">World Health Organization: Social Determinants of Health</a><span class="src-note">How living conditions shape health</span></li>
+<li><a href="https://www.who.int/health-topics" rel="noopener" target="_blank">World Health Organization: Health Topics</a><span class="src-note">An A to Z of health subjects</span></li>
+</ul></div>
 <!-- QUIZ SECTION -->
 <div class="quiz-section">
 <div class="section-eyebrow">Test Your Understanding</div>
@@ -1345,23 +1422,21 @@ footer.footer {
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',setup); else setup();
 })();
 </script>
-<footer class="edusambam-unified-footer" aria-label="EDUSAMBAM site footer">
+<footer aria-label="EDUSAMBAM site footer" class="edusambam-unified-footer">
 <div class="footer-top">
 <div class="footer-brand">
 <div class="edusambam-footer-brand-row">
-<a class="edusambam-footer-logo-link" href="index.html" aria-label="EDUSAMBAM home">
+<a aria-label="EDUSAMBAM home" class="edusambam-footer-logo-link" href="index.html">
 <img alt="EDUSAMBAM" class="edusambam-brand-mark edusambam-footer-logo" src="logo-icon-full-white.png" style="width:auto;height:64px;max-width:240px;object-fit:contain;background:none;border-radius:0;"/>
 </a>
 </div>
 <p class="edusambam-footer-statement">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</p>
-<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a></div>
+<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a><a aria-label="EDUSAMBAM on YouTube" href="https://youtube.com/@edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></div>
 </div>
-<div class="footer-col"><h4>Learning</h4><ul><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li></ul></div>
+<div class="footer-col"><h4>Learning Areas</h4><ul><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ Tests</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li></ul></div>
 <div class="footer-col"><h4>Practice &amp; Assessment</h4><ul>
 <li><a href="index.html#interactive-activities">Interactive Activities</a></li>
 <li><a href="assessment-arena.html">ASSESSMENT ARENA</a></li>
-<li><a href="assessment-arena.html">What Is Assessment?</a></li>
-<li><a href="index.html#about">Learn Your Way</a></li>
 <li><a href="index.html#resources">Resources &amp; Downloads</a></li>
 </ul></div>
 <div class="footer-col"><h4>About EDUSAMBAM</h4><ul>
@@ -1371,6 +1446,7 @@ footer.footer {
 <li><a href="contact.html">Contact Us</a></li>
 <li><a href="mailto:feedback.edusambam@gmail.com?subject=EDUSAMBAM%20Feedback">Give Feedback</a></li>
 <li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+<li><a href="about.html">About EDUSAMBAM</a></li>
 <li><a href="privacy-policy.html">Privacy Policy</a></li>
 </ul></div>
 </div>

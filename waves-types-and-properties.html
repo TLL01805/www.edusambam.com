@@ -1,0 +1,1888 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<!-- Google Analytics 4 — EDUSAMBAM -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Y35DW0V4HQ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-Y35DW0V4HQ');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Waves: Types, Properties, Reflection and Diffraction</title>
+<link href="https://edusambam.com/waves-types-and-properties.html" rel="canonical"/>
+<meta content="Learn transverse and longitudinal waves, v = fλ, reflection, refraction, diffraction, interference, standing waves and the EM spectrum with examples." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --red: #0b4ea2;
+    --red-mid: #0b55a5;
+    --red-lt:    #eef5fc;
+    --navy:      #06244a;
+    --navy-mid:  #0b4ea2;
+    --gold:      #d4a017;
+    --gold-lt:   #fff7dc;
+    --cream:     #f7faff;
+    --white:     #FFFFFF;
+    --ink:       #142033;
+    --slate:     #607086;
+    --muted:     #607086;
+    --border:    #dce7f4;
+    --border-lt: #eef5fc;
+    --radius:    4px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--ink);
+    background: var(--white);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── TOP BAR ── */
+  .top-bar {
+    background: var(--navy);
+    padding: 0.45rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .top-bar p {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.03em;
+  }
+  .top-bar-links { display: flex; gap: 1.5rem; list-style: none; }
+  .top-bar-links a {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+  .top-bar-links a:hover { color: white; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 200;
+    background: var(--navy);
+    border-bottom: 3px solid var(--red);
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  }
+  .nav-brand { display: flex; flex-direction: column; line-height: 1; text-decoration: none; }
+  .nav-brand-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 0.01em;
+  }
+  .nav-brand-name span { color: var(--red); }
+  .nav-brand-sub {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.65);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 0.25rem;
+  }
+  .nav-links { display: flex; gap: 0; list-style: none; }
+  .nav-links a {
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.75);
+    padding: 0 1.1rem;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: white; }
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+  }
+
+  /* ── DIAGRAM BOX (for CSS/SVG illustrations) ── */
+  .diagram-box {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin: 1.5rem 0 2rem;
+    text-align: center;
+  }
+  .diagram-box svg { max-width: 100%; height: auto; }
+  .diagram-caption {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 0.8rem;
+    font-style: italic;
+  }
+  .bar-chart { display: flex; align-items: flex-end; gap: 0.9rem; height: 180px; padding: 0 0.5rem; justify-content: center; }
+  .bar-chart .bar-col { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; width: 60px; }
+  .bar-chart .bar { width: 100%; background: var(--gold); border-radius: 3px 3px 0 0; position: relative; }
+  .bar-chart .bar.red { background: var(--red); }
+  .bar-chart .bar-val { font-size: 0.75rem; font-weight: 600; color: var(--ink); margin-bottom: 0.3rem; }
+  .bar-chart .bar-label { font-size: 0.72rem; color: var(--slate); margin-top: 0.5rem; text-align: center; }
+
+  /* ── ARTICLE HERO ── */
+  .article-hero {
+    background: linear-gradient(135deg,#06244a,#0b4ea2);
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+  }
+  .breadcrumb {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 1.1rem;
+    letter-spacing: 0.02em;
+  }
+  .breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--gold); }
+  .article-hero-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(184,150,62,0.4);
+    padding: 0.35rem 0.9rem;
+    border-radius: 30px;
+    margin-bottom: 1.25rem;
+  }
+  .article-hero h1 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 2.4rem;
+    color: white;
+    max-width: 760px;
+    margin: 0 auto 1rem;
+    line-height: 1.25;
+  }
+  .article-hero p.sub {
+    color: rgba(255,255,255,0.6);
+    max-width: 620px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.02rem;
+  }
+  .article-hero-meta {
+    display: flex; justify-content: center; gap: 0.9rem;
+    font-size: 0.8rem; color: rgba(255,255,255,0.45);
+    flex-wrap: wrap;
+  }
+
+  /* ── ARTICLE BODY ── */
+  .article-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+  .article-wrap h2 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 1.65rem;
+    color: var(--navy);
+    margin: 2.6rem 0 1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--border-lt);
+  }
+  .article-wrap h2 span.num {
+    color: var(--red);
+    margin-right: 0.5rem;
+    font-style: italic;
+  }
+  .article-wrap p { color: var(--slate); margin-bottom: 1rem; font-size: 1.02rem; }
+  .article-wrap ul { margin: 0 0 1.2rem 1.4rem; color: var(--slate); }
+  .article-wrap li { margin-bottom: 0.5rem; }
+  .article-wrap strong { color: var(--ink); }
+  .lead {
+    font-size: 1.15rem;
+    color: var(--ink);
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    border-left: 3px solid var(--gold);
+    padding-left: 1.2rem;
+    margin: 1.5rem 0 2rem;
+  }
+  .example-box {
+    background: var(--gold-lt);
+    border: 1px solid rgba(184,150,62,0.35);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 1.3rem 1.5rem;
+    margin: 1.3rem 0 1.8rem;
+  }
+  .example-box .ex-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.5rem;
+  }
+  .example-box p { color: var(--ink); margin-bottom: 0.4rem; font-size: 0.98rem; }
+  .example-box p:last-child { margin-bottom: 0; }
+
+  .real-world-box {
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 1.6rem 1.7rem;
+    margin: 2.4rem 0;
+  }
+  .real-world-box .rw-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.7rem;
+  }
+  .real-world-box p { color: rgba(255,255,255,0.8); margin-bottom: 0; font-size: 1rem; }
+
+  .further-reading-box {
+    background: var(--cream);
+    border: 1px solid rgba(184,150,62,0.35);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.5rem;
+    margin: 2.4rem 0;
+  }
+  .further-reading-box .fr-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.7rem;
+  }
+  .further-reading-box ul {
+    list-style: none;
+    margin: 0;
+  }
+  .further-reading-box li {
+    margin-bottom: 0.5rem;
+    font-size: 0.82rem;
+  }
+  .further-reading-box li:last-child { margin-bottom: 0; }
+  .further-reading-box a {
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 0.82rem;
+    border-bottom: 1px solid rgba(184,150,62,0.3);
+    transition: border-color 0.2s;
+  }
+  .further-reading-box a:hover { border-color: var(--gold); }
+  .further-reading-box .fr-source {
+    color: var(--muted);
+    font-size: 0.78rem;
+  }
+
+
+
+  .table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+  table.pos-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+  table.pos-table th {
+    background: var(--navy);
+    color: white;
+    text-align: left;
+    padding: 0.7rem 0.9rem;
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+  }
+  table.pos-table td {
+    padding: 0.7rem 0.9rem;
+    border-bottom: 1px solid var(--border-lt);
+    color: var(--slate);
+  }
+  table.pos-table tr:nth-child(even) td { background: var(--cream); }
+
+  /* ── QUIZ ── */
+  .quiz-section {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem 1.7rem 1.5rem;
+    margin-top: 3rem;
+  }
+  .quiz-section .section-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.4rem;
+  }
+  .quiz-section h2 {
+    border: none; margin: 0 0 0.4rem; padding: 0;
+  }
+  .quiz-intro { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.6rem; }
+  .quiz-item {
+    background: var(--white);
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .quiz-q {
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.7rem;
+    font-size: 1rem;
+  }
+  .quiz-q .qnum { color: var(--red); margin-right: 0.4rem; }
+  .quiz-options { list-style: none; margin: 0 0 0.9rem; }
+  .quiz-options li {
+    padding: 0.4rem 0;
+    color: var(--slate);
+    font-size: 0.96rem;
+    padding-left: 1.4rem;
+    position: relative;
+  }
+  .quiz-options li::before {
+    content: "";
+    position: absolute; left: 0; top: 0.85rem;
+    width: 6px; height: 6px;
+    background: var(--border);
+    border-radius: 50%;
+  }
+  .show-answer-btn {
+    background: var(--navy);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 0.5rem 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .show-answer-btn:hover { background: var(--navy-mid); }
+  .quiz-answer {
+    display: none;
+    margin-top: 0.9rem;
+    background: var(--gold-lt);
+    border-left: 3px solid var(--gold);
+    padding: 0.7rem 1rem;
+    font-size: 0.92rem;
+    color: var(--ink);
+    border-radius: var(--radius);
+  }
+  .quiz-answer.visible { display: block; }
+  .quiz-answer strong { color: var(--red); }
+
+  .answer-key-toggle {
+    display: block;
+    width: 100%;
+    background: var(--red);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding: 0.9rem 1rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    margin-top: 0.6rem;
+    transition: background 0.2s;
+  }
+  .answer-key-toggle:hover { background: var(--red-mid); }
+
+  .article-footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-lt);
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .article-footer-nav a {
+    text-decoration: none;
+    color: var(--red);
+    font-weight: 600;
+    font-size: 0.92rem;
+  }
+  .article-footer-nav a:hover { text-decoration: underline; }
+
+  @media (max-width: 700px) {
+    .article-hero h1 { font-size: 1.7rem; }
+    .article-wrap { padding: 2rem 1.25rem 3rem; }
+  }
+  @media (max-width: 680px) {
+    .top-bar { display: none; }
+    nav {
+      padding: 0 1rem;
+      height: 68px;
+      border-bottom-width: 2px;
+    }
+    .nav-links { display: none; }
+    .nav-brand-name {
+      font-size: 1.35rem;
+      white-space: nowrap;
+    }
+    .nav-brand-sub {
+      font-size: 0.62rem;
+      letter-spacing: 0.07em;
+    }
+    .footer-top { grid-template-columns: 1fr; gap: 2rem; padding: 2rem 1.25rem; }
+    footer { padding: 2rem 1.25rem 0; }
+  }
+
+  /* ── FOOTER (copied from site) ── */
+  footer { background: var(--navy); padding: 3.5rem 3rem 0; }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 2.5rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .footer-brand-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+  }
+  .footer-brand-name span { color: var(--red); }
+  .footer-desc { color: rgba(255,255,255,0.45); font-size: 0.9rem; margin-top: 0.8rem; max-width: 320px; }
+  .footer-col h4 {
+    font-family: 'EB Garamond', serif;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 0.7rem; }
+  .footer-col a {
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.2s;
+  }
+  .footer-col a:hover { color: var(--gold); }
+  .footer-bottom {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer-bottom p { color: rgba(255,255,255,0.35); font-size: 0.8rem; }
+  .footer-bottom-links { display: flex; gap: 1.3rem; list-style: none; }
+  .footer-bottom-links a { color: rgba(255,255,255,0.35); text-decoration: none; font-size: 0.8rem; }
+  .footer-bottom-links a:hover { color: rgba(255,255,255,0.6); }
+  @media (max-width: 900px) {
+    .footer-top { grid-template-columns: 1fr 1fr; }
+    footer { padding: 2rem 1.25rem 0; }
+  }
+
+  /* SCORED QUIZ (click-to-highlight + real scoring) */
+  .squiz-progress {
+    background: var(--cream);
+    border-radius: 30px;
+    height: 8px;
+    overflow: hidden;
+    margin-bottom: 0.4rem;
+  }
+  .squiz-progress-fill {
+    background: var(--gold);
+    height: 100%;
+    width: 0%;
+    transition: width 0.25s ease;
+  }
+  .squiz-progress-label {
+    font-size: 0.78rem;
+    color: var(--muted);
+    text-align: right;
+    margin-bottom: 1.3rem;
+  }
+  .squiz-item {
+    background: var(--white);
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .squiz-q {
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+  }
+  .squiz-q .qnum { color: var(--red); margin-right: 0.4rem; }
+  .squiz-option {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .squiz-option:hover { border-color: var(--gold); }
+  .squiz-option input[type="radio"] { accent-color: var(--red); width: 16px; height: 16px; flex-shrink: 0; }
+  .squiz-option label { cursor: pointer; font-size: 0.94rem; color: var(--slate); flex: 1; }
+  .squiz-option.selected { border-color: var(--red); background: rgba(139,0,0,0.04); }
+  .squiz-option.correct-answer { border-color: #2e7d32; background: rgba(46,125,50,0.08); }
+  .squiz-option.wrong-answer { border-color: var(--red); background: rgba(139,0,0,0.08); }
+  .squiz-submit-btn {
+    display: block;
+    width: 100%;
+    background: var(--red);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.98rem;
+    font-weight: 600;
+    padding: 0.9rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    margin-top: 0.6rem;
+    transition: background 0.2s;
+  }
+  .squiz-submit-btn:hover { background: var(--red-mid); }
+  .squiz-submit-btn:disabled { background: var(--border); cursor: not-allowed; }
+  .squiz-results {
+    display: none;
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 2rem 1.6rem;
+    text-align: center;
+    margin-bottom: 1.8rem;
+  }
+  .squiz-results.visible { display: block; }
+  .squiz-results .squiz-score-big {
+    font-family: 'EB Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .squiz-results .squiz-score-label { color: rgba(255,255,255,0.7); font-size: 0.98rem; margin-bottom: 1rem; }
+  .squiz-results .squiz-score-tier {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    border-radius: 30px;
+    background: rgba(184,150,62,0.15);
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+  }
+  .squiz-retake-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 0.65rem 1.4rem;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  .squiz-retake-btn:hover { background: rgba(255,255,255,0.1); }
+</style>
+<style id="edusambam-mark-style">
+.mark{width:48px;height:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px;border-radius:14px;background:#eef6ff;box-shadow:0 2px 7px rgba(8,47,99,.10);flex:0 0 48px}
+.mark i{display:block;border-radius:50%;background:#0b4ea2;min-width:0;min-height:0}
+.mark i:nth-child(5){background:#d4a017}
+</style>
+<style id="edusambam-reader-style">
+.mark{width:48px;height:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px;border-radius:14px;background:#eef6ff;box-shadow:0 2px 7px rgba(8,47,99,.10);flex:0 0 48px}.mark i{display:block;border-radius:50%;background:#0b4ea2;min-width:0;min-height:0}.mark i:nth-child(5){background:#d4a017}.edusambam-reader{max-width:980px;margin:1.2rem auto 0;padding:1rem 1.1rem;border:1px solid #d7e4ef;border-radius:14px;background:linear-gradient(135deg,#f7fbff,#fff);box-shadow:0 6px 18px rgba(11,45,92,.08)}.edusambam-reader strong{display:block;color:#0b55a5;font-size:.9rem;letter-spacing:.04em}.edusambam-reader .reader-slogan{color:#a87900;font-weight:900;margin-top:.25rem;font-size:.82rem}.edusambam-reader .reader-help{color:#607086;font-size:.8rem;margin:.3rem 0 .7rem}.edusambam-reader .reader-controls{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}.edusambam-reader button,.edusambam-reader select{border:1px solid #c9d9e8;background:#fff;color:#153b6e;border-radius:8px;padding:.48rem .65rem;font-weight:800;cursor:pointer}.edusambam-reader button:first-child{background:#0b55a5;color:#fff;border-color:#0b55a5}.edusambam-reader .reader-status{display:block;color:#607086;font-size:.75rem;margin-top:.55rem}.edusambam-reader .reader-progress{height:4px;background:#e4edf6;border-radius:99px;margin-top:.6rem;overflow:hidden}.edusambam-reader .reader-progress span{display:block;width:0;height:100%;background:#d4a017;transition:width .2s linear}@media(max-width:600px){.edusambam-reader{margin-left:0;margin-right:0}.edusambam-reader .reader-controls button,.edusambam-reader .reader-controls select{flex:1;min-width:75px}}
+</style>
+<style id="edusambam-frame-final">html{box-sizing:border-box;max-width:100%;overflow-x:hidden}*,*:before,*:after{box-sizing:inherit}body{max-width:100%;min-width:0;overflow-x:hidden;border:3px solid #d4a017;box-sizing:border-box}img,svg,video,iframe{max-width:100%;height:auto}h1,h2,h3,h4,p,a,span,small,b,strong{overflow-wrap:anywhere}section,header,footer,main,nav{max-width:100%;box-sizing:border-box}@media(max-width:600px){body{border-width:3px}h1,h2,h3{margin-left:0!important;margin-right:0!important}}</style><style id="edusambam-unified-nav-css">
+/* EDUSAMBAM unified navigation */
+.edusambam-nav{
+  position:sticky;top:0;z-index:10000;
+  min-height:72px;box-sizing:border-box;
+  display:flex;align-items:center;
+  padding:10px 20px;
+  background:#fff;border-bottom:1px solid #e5e7eb;
+  font-family:inherit;
+}
+.edusambam-nav-inner{
+  width:100%;max-width:1400px;margin:0 auto;
+  display:flex;align-items:center;gap:18px;min-width:0;
+}
+.edusambam-brand{
+  display:flex;align-items:center;gap:10px;min-width:0;
+  text-decoration:none;color:#0b3b66;flex:0 1 auto;
+}
+.edusambam-brand-copy{display:flex;flex-direction:column;line-height:1;min-width:0;overflow:hidden}
+.edusambam-brand-name{
+  font-family:"EB Garamond",Georgia,serif;
+  font-size:1.6rem;font-weight:600;letter-spacing:.01em;
+  color:#0b3b66;white-space:nowrap;
+}
+.edusambam-brand-subtitle{
+  margin-top:4px;
+  font-size:.62rem;font-weight:600;letter-spacing:.08em;
+  color:#64748b;white-space:nowrap;
+}
+.edusambam-nav-links{
+  display:flex;align-items:center;gap:14px;margin-left:auto;
+  list-style:none;padding:0;margin-top:0;margin-bottom:0;
+}
+.edusambam-nav-links a{
+  color:#334155;text-decoration:none;font-size:.9rem;
+  padding:8px 5px;border-radius:7px;white-space:nowrap;
+}
+.edusambam-nav-links a:hover,.edusambam-nav-links a:focus-visible{
+  color:#0b3b66;background:#f3f6f9;outline:none;
+}
+.edusambam-search-btn,.edusambam-menu-btn{
+  appearance:none;border:1px solid #d8dee6;background:#fff;
+  color:#0b3b66;border-radius:9px;min-width:40px;height:40px;
+  display:inline-flex;align-items:center;justify-content:center;
+  cursor:pointer;font-size:1.15rem;flex:0 0 auto;
+}
+.edusambam-search-btn:hover,.edusambam-menu-btn:hover,
+.edusambam-search-btn:focus-visible,.edusambam-menu-btn:focus-visible{
+  background:#f3f6f9;border-color:#b9c6d4;outline:2px solid rgba(214,162,58,.35);
+  outline-offset:2px;
+}
+.edusambam-menu-btn{display:none;font-size:1.2rem}
+.edusambam-mobile-menu{
+  display:none;position:fixed;top:72px;left:0;right:0;
+  z-index:9999;background:#fff;border-bottom:1px solid #e5e7eb;
+  box-shadow:0 8px 24px rgba(15,23,42,.12);
+  max-height:calc(100vh - 72px);overflow:auto;
+}
+.edusambam-mobile-menu.open{display:block}
+.edusambam-mobile-menu ul{list-style:none;margin:0;padding:10px 16px 16px}
+.edusambam-mobile-menu a{
+  display:block;padding:12px 10px;color:#0b3b66;text-decoration:none;
+  border-radius:8px;font-size:.98rem;
+}
+.edusambam-mobile-menu a:hover,.edusambam-mobile-menu a:focus-visible{
+  background:#f3f6f9;outline:none;
+}
+.edusambam-search-panel{
+  display:none;position:fixed;top:72px;left:0;right:0;z-index:9998;
+  background:#fff;border-bottom:1px solid #e5e7eb;
+  box-shadow:0 8px 24px rgba(15,23,42,.10);padding:12px 16px;
+}
+.edusambam-search-panel.open{display:block}
+.edusambam-search-wrap{max-width:900px;margin:0 auto;position:relative}
+.edusambam-search-input{
+  width:100%;box-sizing:border-box;padding:12px 14px;
+  border:1px solid #cbd5e1;border-radius:9px;font-size:1rem;
+}
+.edusambam-search-results{margin-top:8px;max-height:50vh;overflow:auto}
+.edusambam-search-results a{
+  display:block;padding:9px 10px;border-radius:7px;color:#0b3b66;text-decoration:none;
+}
+.edusambam-search-results a:hover{background:#f3f6f9}
+@media (max-width:1100px){
+  .edusambam-nav-links{gap:8px}
+  .edusambam-nav-links a{font-size:.84rem;padding-inline:3px}
+}
+@media (max-width:1100px){
+  .edusambam-nav{min-height:68px;padding:8px 14px}
+  .edusambam-brand-mark{width:44px;height:44px;flex-basis:44px}
+  .edusambam-brand-mark span{width:12px;height:12px}
+  .edusambam-brand-mark .c3,.edusambam-brand-mark .c6{left:16px}
+  .edusambam-brand-name{font-size:1.42rem}
+  .edusambam-brand-subtitle{font-size:.52rem;letter-spacing:.06em}
+  .edusambam-nav-links{display:none}
+  .edusambam-menu-btn{display:inline-flex}
+  .edusambam-search-btn{margin-left:auto}
+  .edusambam-mobile-menu{top:68px;max-height:calc(100vh - 68px)}
+  .edusambam-search-panel{top:68px}
+}
+@media (max-width:480px){
+  .edusambam-nav-inner{gap:8px}
+  .edusambam-brand{gap:7px}
+  .edusambam-brand-mark{width:40px;height:40px;flex-basis:40px}
+  .edusambam-brand-mark span{width:11px;height:11px}
+  .edusambam-brand-mark .c3,.edusambam-brand-mark .c6{left:14.5px}
+  .edusambam-brand-name{font-size:1.28rem}
+  .edusambam-brand-subtitle{font-size:.46rem;letter-spacing:.045em}
+  .edusambam-search-btn,.edusambam-menu-btn{min-width:38px;height:38px}
+}
+</style><style id="edusambam-logo-visibility-fix">
+/* EDUSAMBAM logo visibility fix */
+.edusambam-brand-mark{
+  position:relative !important;
+  display:inline-block !important;
+  width:48px !important;
+  height:48px !important;
+  min-width:48px !important;
+  flex:0 0 48px !important;
+  overflow:visible !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+.edusambam-brand-mark > span{
+  position:absolute !important;
+  display:block !important;
+  width:13px !important;
+  height:13px !important;
+  min-width:13px !important;
+  min-height:13px !important;
+  padding:0 !important;
+  margin:0 !important;
+  border:0 !important;
+  border-radius:50% !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  box-sizing:border-box !important;
+}
+.edusambam-brand-mark > .c1{left:0 !important;top:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c2{right:0 !important;top:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c3{left:17.5px !important;top:8px !important;background:#d6a23a !important;}
+.edusambam-brand-mark > .c4{left:0 !important;bottom:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c5{right:0 !important;bottom:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c6{left:17.5px !important;bottom:8px !important;background:#d6a23a !important;}
+
+@media (max-width:1100px){
+  .edusambam-brand-mark{
+    width:44px !important;height:44px !important;min-width:44px !important;flex-basis:44px !important;
+  }
+  .edusambam-brand-mark > span{
+    width:12px !important;height:12px !important;min-width:12px !important;min-height:12px !important;
+  }
+  .edusambam-brand-mark > .c3,.edusambam-brand-mark > .c6{left:16px !important;}
+}
+@media (max-width:480px){
+  .edusambam-brand-mark{
+    width:40px !important;height:40px !important;min-width:40px !important;flex-basis:40px !important;
+  }
+  .edusambam-brand-mark > span{
+    width:11px !important;height:11px !important;min-width:11px !important;min-height:11px !important;
+  }
+  .edusambam-brand-mark > .c3,.edusambam-brand-mark > .c6{left:14.5px !important;}
+}
+</style>
+<link href="favicon.webp" rel="icon" type="image/webp"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<style id="edusambam-menu-extra-css">
+.edusambam-mobile-menu .edusambam-menu-extra:first-of-type{
+  margin-top:8px;padding-top:8px;border-top:1px solid #e5e7eb;
+}
+.edusambam-mobile-menu .edusambam-menu-extra a{
+  font-weight:600;
+}
+</style>
+<style id="edusambam-article-footer-theme">
+.edusambam-article-footer{
+  background:linear-gradient(135deg,#06244a,#0b4ea2)!important;
+}
+</style>
+<style id="edusambam-unified-footer-fix">
+/* EDUSAMBAM unified footer: same visual language and neutral brand statement across all pages. */
+.edusambam-unified-footer,
+.edusambam-article-footer,
+footer.footer {
+  background: linear-gradient(135deg, #06244a, #0b4ea2) !important;
+  color: #fff !important;
+  border-top: 3px solid #d4a017 !important;
+  box-sizing: border-box;
+}
+.edusambam-footer-statement{margin:.25rem 0 0 !important;color:rgba(255,255,255,.88) !important;font-size:.78rem !important;letter-spacing:.08em !important;text-transform:uppercase !important}
+.edusambam-unified-footer .footer-brand-name,.edusambam-article-footer .footer-brand-name{color:#fff !important}
+</style>
+<style id="edusambam-final-unified-footer">
+/* Final unified footer — same structure, visual language, and approved nav logo on every page. */
+.edusambam-unified-footer{
+  width:100% !important;
+  margin:0 !important;
+  padding:44px 0 0 !important;
+  background:linear-gradient(135deg,#06244a,#0b4ea2) !important;
+  color:#d6e4f2 !important;
+  border-top:4px solid #d4a017 !important;
+  box-sizing:border-box !important;
+  overflow:hidden !important;
+}
+.edusambam-unified-footer .footer-top{
+  width:min(1180px,92%) !important;
+  max-width:1180px !important;
+  margin:0 auto !important;
+  padding:0 0 34px !important;
+  display:grid !important;
+  grid-template-columns:1.5fr repeat(3,1fr) !important;
+  gap:34px !important;
+  box-sizing:border-box !important;
+}
+.edusambam-unified-footer .footer-brand{min-width:0 !important;}
+.edusambam-footer-brand-row{margin:0 0 10px !important;}
+.edusambam-footer-logo-link{
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:12px !important;
+  min-width:0 !important;
+  color:#fff !important;
+  text-decoration:none !important;
+}
+.edusambam-footer-logo{
+  width:48px !important;
+  height:48px !important;
+  min-width:48px !important;
+  flex:0 0 48px !important;
+}
+.edusambam-footer-logo > span{width:13px !important;height:13px !important;min-width:13px !important;min-height:13px !important;}
+.edusambam-footer-logo > .c3,.edusambam-footer-logo > .c6{left:17.5px !important;}
+.edusambam-footer-brand-name{
+  color:#fff !important;
+  font-family:"EB Garamond",Georgia,serif !important;
+  font-size:1.65rem !important;
+  font-weight:600 !important;
+  letter-spacing:.01em !important;
+  line-height:1 !important;
+  white-space:nowrap !important;
+}
+.edusambam-unified-footer .edusambam-footer-statement{
+  margin:0 !important;
+  max-width:360px !important;
+  color:rgba(255,255,255,.88) !important;
+  font-size:.78rem !important;
+  line-height:1.7 !important;
+  letter-spacing:.08em !important;
+  text-transform:uppercase !important;
+}
+.edusambam-unified-footer .footer-col{min-width:0 !important;}
+.edusambam-unified-footer .footer-col h4{
+  margin:0 0 12px !important;
+  color:#fff !important;
+  font-family:"EB Garamond",Georgia,serif !important;
+  font-size:1rem !important;
+  font-weight:600 !important;
+  line-height:1.25 !important;
+}
+.edusambam-unified-footer .footer-col ul{
+  list-style:none !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+.edusambam-unified-footer .footer-col li{margin:0 0 8px !important;padding:0 !important;}
+.edusambam-unified-footer .footer-col a{
+  color:rgba(255,255,255,.68) !important;
+  text-decoration:none !important;
+  font-size:.84rem !important;
+  line-height:1.5 !important;
+  overflow-wrap:anywhere !important;
+}
+.edusambam-unified-footer .footer-col a:hover,
+.edusambam-unified-footer .footer-col a:focus-visible{color:#fff !important;}
+.edusambam-unified-footer .footer-bottom{
+  width:min(1180px,92%) !important;
+  max-width:1180px !important;
+  margin:0 auto !important;
+  padding:18px 0 22px !important;
+  border-top:1px solid rgba(255,255,255,.12) !important;
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:center !important;
+  gap:20px !important;
+  box-sizing:border-box !important;
+}
+.edusambam-unified-footer .footer-bottom p{
+  margin:0 !important;
+  color:rgba(255,255,255,.55) !important;
+  font-size:.8rem !important;
+  line-height:1.5 !important;
+}
+.edusambam-unified-footer .footer-bottom-links{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:18px !important;
+  list-style:none !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+.edusambam-unified-footer .footer-bottom-links a{
+  color:rgba(255,255,255,.55) !important;
+  font-size:.78rem !important;
+  line-height:1.5 !important;
+  text-decoration:none !important;
+}
+.edusambam-unified-footer .footer-bottom-links a:hover,
+.edusambam-unified-footer .footer-bottom-links a:focus-visible{color:#fff !important;}
+@media(max-width:900px){
+  .edusambam-unified-footer{padding-top:32px !important;}
+  .edusambam-unified-footer .footer-top{grid-template-columns:1fr 1fr !important;gap:28px 22px !important;}
+  .edusambam-unified-footer .footer-brand{grid-column:1/-1 !important;}
+}
+@media(max-width:600px){
+  .edusambam-unified-footer{padding-top:30px !important;}
+  .edusambam-unified-footer .footer-top{width:calc(100% - 28px) !important;grid-template-columns:1fr 1fr !important;gap:26px 20px !important;padding-bottom:28px !important;}
+  .edusambam-unified-footer .footer-bottom{width:calc(100% - 28px) !important;display:block !important;padding:16px 0 20px !important;}
+  .edusambam-unified-footer .footer-bottom-links{margin-top:10px !important;gap:16px !important;}
+  .edusambam-footer-logo{width:44px !important;height:44px !important;min-width:44px !important;flex-basis:44px !important;}
+  .edusambam-footer-logo > span{width:12px !important;height:12px !important;min-width:12px !important;min-height:12px !important;}
+  .edusambam-footer-logo > .c3,.edusambam-footer-logo > .c6{left:16px !important;}
+  .edusambam-footer-brand-name{font-size:1.48rem !important;}
+}
+@media(max-width:430px){
+  .edusambam-unified-footer .footer-top{grid-template-columns:1fr !important;gap:22px !important;}
+  .edusambam-unified-footer .footer-brand{grid-column:auto !important;}
+}
+</style>
+<style id="edusambam-footer-final-alignment">
+/* Final EDUSAMBAM footer consistency pass: identical royal-blue footer and left alignment on every page. */
+.edusambam-unified-footer {
+  background: linear-gradient(135deg,#06244a,#0b4ea2) !important;
+  color:#d6e4f2 !important;
+  text-align:left !important;
+  width:100% !important;
+  box-sizing:border-box !important;
+}
+.edusambam-unified-footer,
+.edusambam-unified-footer *,
+.edusambam-unified-footer h1,
+.edusambam-unified-footer h2,
+.edusambam-unified-footer h3,
+.edusambam-unified-footer h4,
+.edusambam-unified-footer p,
+.edusambam-unified-footer ul,
+.edusambam-unified-footer li,
+.edusambam-unified-footer a,
+.edusambam-unified-footer span {
+  text-align:left !important;
+}
+.edusambam-unified-footer .footer-top,
+.edusambam-unified-footer .footer-brand,
+.edusambam-unified-footer .footer-col,
+.edusambam-unified-footer .footer-bottom {
+  margin-left:0 !important;
+}
+.edusambam-unified-footer .footer-top {
+  margin-right:auto !important;
+}
+.edusambam-unified-footer .edusambam-footer-brand-row {
+  text-align:left !important;
+}
+.edusambam-unified-footer .edusambam-footer-logo-link {
+  justify-content:flex-start !important;
+  text-align:left !important;
+}
+.edusambam-unified-footer .footer-bottom {
+  justify-content:flex-start !important;
+  align-items:flex-start !important;
+  flex-direction:column !important;
+}
+.edusambam-unified-footer .footer-bottom-links {
+  justify-content:flex-start !important;
+  align-items:flex-start !important;
+}
+@media (max-width:600px) {
+  .edusambam-unified-footer .footer-top,
+  .edusambam-unified-footer .footer-bottom {
+    margin-left:0 !important;
+    margin-right:auto !important;
+  }
+}
+</style><style id="edusambam-footer-social-css">.edusambam-footer-social{margin-top:14px}.edusambam-footer-social a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);color:rgba(255,255,255,.85);transition:background .15s,color .15s}.edusambam-footer-social a:hover{background:rgba(255,255,255,.22);color:#fff}</style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2230995786427221"
+     crossorigin="anonymous"></script>
+<meta name="robots" content="index,follow,max-image-preview:large"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="EDUSAMBAM"/>
+<meta property="og:title" content="Waves: Types, Properties, Reflection and Diffraction"/>
+<meta property="og:description" content="Learn transverse and longitudinal waves, v = fλ, reflection, refraction, diffraction, interference, standing waves and the EM spectrum with examples."/>
+<meta property="og:url" content="https://edusambam.com/waves-types-and-properties.html"/>
+<meta property="og:image" content="https://edusambam.com/logo-icon-full.png"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Waves: Types, Properties, Reflection and Diffraction"/>
+<meta name="twitter:description" content="Learn transverse and longitudinal waves, v = fλ, reflection, refraction, diffraction, interference, standing waves and the EM spectrum with examples."/>
+<meta property="article:modified_time" content="2026-10"/>
+<meta property="article:section" content="Physics"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Waves: Types, Properties and Behaviour", "description": "Learn transverse and longitudinal waves, v = fλ, reflection, refraction, diffraction, interference, standing waves and the EM spectrum with examples.", "inLanguage": "en", "mainEntityOfPage": "https://edusambam.com/waves-types-and-properties.html", "url": "https://edusambam.com/waves-types-and-properties.html", "datePublished": "2026-01-01", "dateModified": "2026-10", "articleSection": "Physics", "about": ["Waves", "Wave speed", "Diffraction", "Interference", "Standing waves"], "educationalLevel": "Secondary school (O-Level, grades 8-10)", "learningResourceType": "Article", "wordCount": 4133, "keywords": "waves, transverse and longitudinal waves, wavelength, frequency, wave equation, reflection, refraction, diffraction, interference, standing waves, polarisation, electromagnetic spectrum, tsunami, seismic waves, O-Level physics", "author": {"@type": "Organization", "name": "EDUSAMBAM Editorial Team", "url": "https://edusambam.com/"}, "publisher": {"@type": "Organization", "name": "EDUSAMBAM", "url": "https://edusambam.com/", "logo": {"@type": "ImageObject", "url": "https://edusambam.com/logo-icon-full.png"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Gateway", "item": "https://edusambam.com/index.html#gateway"}, {"@type": "ListItem", "position": 2, "name": "Physics", "item": "https://edusambam.com/index.html#subject-physics"}, {"@type": "ListItem", "position": 3, "name": "Waves: Types, Properties and Behaviour", "item": "https://edusambam.com/waves-types-and-properties.html"}]}]}</script>
+<style id="edusambam-edge-fix">.article-wrap,.article-hero,.nav-brand{min-width:0;overflow:visible}.article-wrap h1,.article-wrap h2,.article-wrap h3,.article-hero h1,.article-hero .sub{overflow-wrap:anywhere;word-break:normal}.article-wrap{padding-left:max(1.25rem,3vw);padding-right:max(1.25rem,3vw)}@media(max-width:600px){.article-wrap{padding-left:1rem;padding-right:1rem}.article-hero{padding-left:1rem;padding-right:1rem}.nav-brand{overflow:visible!important}.nav-brand-name,.nav-brand-sub{overflow-wrap:anywhere}}</style>
+<style id="edusambam-new-article-mobile-fixed-nav">
+/* New EDUSAMBAM article: keep the approved mobile header continuously available while scrolling. */
+@media (max-width:1100px){
+  body{padding-top:68px !important;}
+  .edusambam-nav{position:fixed !important;top:0 !important;left:0 !important;right:0 !important;width:100% !important;}
+  .top-bar{display:none !important;}
+}
+</style>
+<style id="edusambam-physics-upgrade">
+.article-wrap h3{font-family:'EB Garamond',serif;font-weight:600;font-size:1.25rem;color:var(--navy);margin:1.6rem 0 .6rem}
+.article-wrap ol{margin:0 0 1.2rem 1.4rem;color:var(--slate)}.article-wrap ol li{margin-bottom:.5rem}
+.toc-box{background:var(--cream);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.3rem;margin:0 0 2rem}
+.toc-box .toc-label{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--red);margin-bottom:.4rem}
+.toc-box ol{columns:2;column-gap:2rem;margin:0 0 0 1.2rem;font-size:.93rem}.toc-box a{color:var(--navy);text-decoration:none}.toc-box a:hover{text-decoration:underline}
+@media(max-width:600px){.toc-box ol{columns:1}}
+.key-box{background:var(--navy);border-radius:var(--radius);padding:1.2rem 1.5rem;margin:1.5rem 0}
+.key-box .rw-label{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
+.key-box ul{margin:0 0 0 1.2rem}.key-box li{color:rgba(255,255,255,.85);margin-bottom:.35rem}.key-box strong{color:#fff}
+.mistake-box{background:#fff4f2;border:1px solid #f0c9c2;border-left:4px solid #b3261e;border-radius:var(--radius);padding:1.1rem 1.4rem;margin:1.3rem 0 1.8rem}
+.mistake-box .ex-label{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#b3261e;margin-bottom:.4rem}
+.mistake-box ul{margin:0 0 0 1.2rem}.mistake-box li{color:var(--ink);margin-bottom:.4rem}
+.worked{background:#fff;border:1px solid var(--border);border-left:4px solid var(--navy-mid);border-radius:var(--radius);padding:1.1rem 1.4rem;margin:1.3rem 0 1.8rem}
+.worked .ex-label{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--navy-mid);margin-bottom:.5rem}
+.worked p{color:var(--ink);margin-bottom:.45rem;font-size:.98rem}.worked p:last-child{margin-bottom:0}
+.worked .step{padding-left:.2rem}
+.cyu details{background:#fff;border:1px solid var(--border-lt);border-radius:var(--radius);padding:.8rem 1.1rem;margin-bottom:.7rem}
+.cyu summary{cursor:pointer;font-weight:600;color:var(--ink)}.cyu details p{margin:.7rem 0 0;color:var(--ink)}
+.cyu details[open]{border-color:var(--gold)}
+.teacher-note{background:var(--gold-lt);border:1px solid rgba(184,150,62,.35);border-radius:var(--radius);padding:1.2rem 1.5rem;margin:1.5rem 0}
+.teacher-note .ex-label{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--red);margin-bottom:.4rem}
+.teacher-note p{color:var(--ink)}.teacher-note p:last-child{margin-bottom:0}
+.related-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem;margin:1rem 0 1.5rem}
+.related-grid a{display:block;background:var(--cream);border:1px solid var(--border);border-radius:var(--radius);padding:.8rem 1rem;color:var(--navy);text-decoration:none;font-weight:600;font-size:.92rem}
+.related-grid a span{display:block;font-weight:400;color:var(--slate);font-size:.8rem;margin-top:.2rem}
+.related-grid a:hover{border-color:var(--gold)}
+@media(max-width:600px){.related-grid{grid-template-columns:minmax(0,1fr)}}
+.diagram-box svg{width:100%;height:auto;max-width:640px}
+.diagram-box svg text{font-family:'Source Sans 3',Arial,sans-serif}
+.sources-list li{font-size:.95rem}
+.flow-dash{stroke-dasharray:2 14;stroke-linecap:round;animation:flowmove 1.6s linear infinite}
+@keyframes flowmove{to{stroke-dashoffset:-32}}
+.coil-spin{transform-box:fill-box;transform-origin:center;animation:coilspin 4s linear infinite}
+@keyframes coilspin{to{transform:rotate(360deg)}}
+.draw-wave{stroke-dasharray:1;stroke-dashoffset:1;animation:drawwave 4s linear infinite}
+@keyframes drawwave{0%{stroke-dashoffset:1}90%{stroke-dashoffset:0}100%{stroke-dashoffset:0}}
+.pulse-ring{transform-box:fill-box;transform-origin:center;animation:pulsering 2.4s ease-out infinite}
+@keyframes pulsering{0%{transform:scale(.3);opacity:.9}100%{transform:scale(1);opacity:0}}
+.bob{animation:bob 2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.slide-x{animation:slidex 3s ease-in-out infinite alternate}
+@keyframes slidex{from{transform:translateX(0)}to{transform:translateX(var(--dx,30px))}}
+.wob{animation:wob 2s ease-in-out infinite}
+@keyframes wob{0%,100%{transform:translateX(-9px)}50%{transform:translateX(9px)}}
+.jig{animation:jig .35s ease-in-out infinite alternate}
+@keyframes jig{from{transform:translate(-1.6px,-1.2px)}to{transform:translate(1.6px,1.2px)}}
+.wan{animation:wan 2.4s ease-in-out infinite alternate}
+@keyframes wan{from{transform:translate(-7px,3px)}to{transform:translate(8px,-5px)}}
+.zoom{animation:zoom 2.8s ease-in-out infinite alternate}
+@keyframes zoom{from{transform:translate(-26px,16px)}to{transform:translate(28px,-22px)}}
+.swing{transform-box:view-box;animation:swing 1.5s ease-in-out infinite alternate}
+@keyframes swing{from{transform:rotate(-35deg)}to{transform:rotate(35deg)}}
+.rock{transform-box:view-box;animation:rock 2.4s ease-in-out infinite alternate}
+@keyframes rock{from{transform:rotate(-5deg)}to{transform:rotate(5deg)}}
+.slide-xy{animation:slidexy 3.2s ease-in-out infinite alternate}
+@keyframes slidexy{from{transform:translate(0,0)}to{transform:translate(var(--dx,100px),var(--dy,-30px))}}
+.orbit{transform-box:view-box;animation:coilspin 6s linear infinite}
+.car-quad{animation:carquad 5s cubic-bezier(.55,.085,.68,.53) infinite}
+@keyframes carquad{0%{transform:translateX(0)}90%,100%{transform:translateX(var(--dx,400px))}}
+.throw{animation:throwup 4s infinite}
+@keyframes throwup{0%{transform:translateY(0);animation-timing-function:cubic-bezier(.25,.46,.45,.94)}50%{transform:translateY(var(--dy,-157px));animation-timing-function:cubic-bezier(.55,.085,.68,.53)}100%{transform:translateY(0)}}
+.wobv{animation:wobv 2s ease-in-out infinite}
+@keyframes wobv{0%,100%{transform:translateY(-14px)}50%{transform:translateY(14px)}}
+.stand{transform-box:view-box;animation:standy 1.6s ease-in-out infinite alternate}
+@keyframes standy{from{transform:scaleY(-1)}to{transform:scaleY(1)}}
+.fade-cycle{animation:fadecycle 4s ease-in-out infinite}
+@keyframes fadecycle{0%,100%{opacity:.15}50%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.flow-dash,.coil-spin,.draw-wave,.pulse-ring,.bob,.slide-x,.fade-cycle,.wob,.jig,.wan,.zoom,.swing,.rock,.slide-xy,.orbit,.car-quad,.throw,.wobv,.stand{animation:none!important}.draw-wave{stroke-dashoffset:0}.pulse-ring{opacity:.5;transform:scale(.7)}}
+</style>
+</head>
+<body id="top">
+<!-- TOP BAR -->
+<div class="top-bar">
+<p>Established 2026  ·  Free Educational Resources for All</p>
+<ul class="top-bar-links">
+<li><a href="contact.html">Contact</a></li><li><a href="index.html#about-edusambam">About</a></li><li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+</ul>
+</div>
+<!-- NAV -->
+<nav aria-label="Primary navigation" class="edusambam-nav">
+<div class="edusambam-nav-inner">
+<a aria-label="EDUSAMBAM home" class="edusambam-brand" href="index.html">
+<img alt="EDUSAMBAM" class="edusambam-brand-mark" src="logo-icon-full.png" style="width:auto;height:56px;max-width:220px;object-fit:contain;background:none;border-radius:0;flex-basis:auto;"/>
+<span class="edusambam-brand-copy">
+<span class="edusambam-brand-subtitle">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</span>
+</span>
+</a>
+<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ Tests</a></li><li><a href="index.html#resources">Resources</a></li></ul>
+<button aria-label="Search" class="edusambam-search-btn" title="Search" type="button">⌕</button>
+<button aria-expanded="false" aria-label="Open menu" class="edusambam-menu-btn" title="Menu" type="button">☰</button>
+</div>
+</nav><div aria-label="Mobile navigation" class="edusambam-mobile-menu">
+<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ Tests</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="index.html#subject-assessment">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="index.html#about-edusambam">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
+</div>
+<div aria-label="Site search" class="edusambam-search-panel">
+<div class="edusambam-search-wrap">
+<input aria-label="Search EDUSAMBAM" class="edusambam-search-input" placeholder="Search EDUSAMBAM…" type="search"/>
+<div class="edusambam-search-results"></div>
+</div>
+</div>
+<!-- ARTICLE HERO -->
+<div class="article-hero">
+<div class="breadcrumb"><a href="index.html#gateway">Gateway</a>  /  <a href="index.html#subject-physics">Science</a>  /  Motion: Speed, Velocity, and Distance</div>
+<div class="article-hero-tag">Science · Physics</div>
+<h1>Waves: Types, Properties and Behaviour</h1>
+<p class="sub">From ripples on a pond to radio and earthquakes: types of waves, wave speed, reflection, refraction, diffraction, interference and standing waves, with diagrams, animations and worked examples.</p>
+<div class="article-hero-meta">
+<span>EDUSAMBAM Editorial Team</span>
+<span>|</span>
+<span>21 min read</span>
+<span>|</span>
+<span>Science</span>
+<span>|</span>
+<span>Last updated: October 2026</span>
+</div>
+</div>
+<!-- ARTICLE BODY -->
+<div aria-label="EDUSAMBAM article reader" class="edusambam-reader"><strong>🔊 LISTEN TO THIS ARTICLE</strong><div class="reader-slogan">SAVE YOUR EYES • IMPROVE YOUR LISTENING</div><div class="reader-help">Listen to the article instead of relying only on continuous screen reading.</div><div class="reader-controls"><button data-reader="play" type="button">▶ Play</button><button data-reader="pause" type="button">⏸ Pause</button><button data-reader="resume" type="button">▶ Resume</button><button data-reader="stop" type="button">■ Stop</button><select aria-label="Reading speed"><option value="1">1×</option><option value="0.8">0.8×</option><option value="1.2">1.2×</option></select></div><div aria-hidden="true" class="reader-progress"><span></span></div><small class="reader-status">Ready to read the article.</small></div>
+<div class="article-wrap">
+<p class="lead">Drop a pebble into a still pond and a ring of ripples spreads outwards. A floating leaf bobs up and down as the ripples pass, but it does not travel with them. That simple picture holds the key idea of this whole article: <strong>a wave carries energy from place to place without carrying the material along with it</strong>. Waves bring us sound, light, radio and mobile signals, X-rays, earthquakes and tsunamis. The same few rules describe all of them, from ripples on a pond to the light of distant stars. This article explains the types of wave, how to describe and calculate with them, and how waves reflect, refract, diffract, interfere and form standing waves.</p>
+
+<div class="toc-box"><div class="toc-label">In this article</div>
+<ol>
+<li><a href="#what">What a wave is</a></li>
+<li><a href="#types">Transverse and longitudinal waves</a></li>
+<li><a href="#describe">Describing a wave</a></li>
+<li><a href="#speed">Wave speed and the wave equation</a></li>
+<li><a href="#reflect">Reflection</a></li>
+<li><a href="#refract">Refraction</a></li>
+<li><a href="#diffract">Diffraction</a></li>
+<li><a href="#interfere">Superposition and interference</a></li>
+<li><a href="#stand">Standing waves</a></li>
+<li><a href="#polar">Polarisation</a></li>
+<li><a href="#em">The electromagnetic spectrum</a></li>
+<li><a href="#nature">Waves in nature: earthquakes and tsunamis</a></li>
+<li><a href="#mistakes">Common mistakes</a></li>
+<li><a href="#check">Check your understanding</a></li>
+</ol></div>
+
+<div class="key-box"><div class="rw-label">What you will be able to do</div>
+<ul>
+<li>Distinguish transverse from longitudinal waves, and mechanical from electromagnetic waves.</li>
+<li>Use v = fλ and T = 1 ÷ f, and read wavelength, amplitude and period from graphs.</li>
+<li>Explain reflection, refraction, diffraction and interference with wavefront diagrams and calculations.</li>
+<li>Describe standing waves and apply them to strings, and explain how waves behave in the Earth and the oceans.</li>
+</ul></div>
+
+<h2 id="what"><span class="num">1.</span>What a Wave Is</h2>
+<p>A <strong>wave</strong> is a disturbance that transfers <strong>energy</strong> from one place to another without transferring matter. A source (a vibrating object, an oscillating charge, a sudden movement of the ground) sets the first particles or fields into motion, and the disturbance is passed on from point to point.</p>
+<p>There are two broad families:</p>
+<ul>
+<li><strong>Mechanical waves</strong> need a <strong>medium</strong> (solid, liquid or gas) to travel through. Examples: sound, ripples on water, waves on a rope or spring, and earthquake waves.</li>
+<li><strong>Electromagnetic (EM) waves</strong> are oscillating electric and magnetic fields. They need <strong>no medium</strong> and can cross a vacuum, always at the same speed, <strong>c = 3.00 × 10⁸ m/s</strong> (precisely 299 792 458 m/s). Examples: light, radio waves, microwaves, X-rays.</li>
+</ul>
+<p>The particles of a medium do not travel with a mechanical wave. They only vibrate about their equilibrium (rest) positions, passing the energy to their neighbours, as the bobbing leaf shows. A stadium "Mexican wave" is a good picture: each person only stands up and sits down, but the wave runs round the stadium.</p>
+
+<h2 id="types"><span class="num">2.</span>Transverse and Longitudinal Waves</h2>
+<p>Waves are classified by the direction in which the particles (or fields) vibrate compared with the direction in which the wave travels.</p>
+<ul>
+<li>In a <strong>transverse wave</strong> the vibrations are at <strong>right angles</strong> to the direction of travel. It has <strong>crests</strong> (high points) and <strong>troughs</strong> (low points). Examples: waves on a rope, all EM waves (the electric and magnetic fields oscillate at right angles to the direction of travel), and secondary (S) earthquake waves. Surface water ripples are often treated as transverse in school physics, although the water particles actually move in small circles.</li>
+<li>In a <strong>longitudinal wave</strong> the vibrations are <strong>parallel</strong> to the direction of travel. It has <strong>compressions</strong> (particles squeezed together) and <strong>rarefactions</strong> (particles spread apart). Examples: sound, a pushed-and-pulled slinky spring, and primary (P) earthquake waves.</li>
+</ul>
+<div class="diagram-box">
+<svg viewBox="0 0 560 300" role="img" aria-labelledby="w1t w1d">
+<title id="w1t">Transverse and longitudinal waves</title>
+<desc id="w1d">Top: a row of dots moving up and down while the wave pattern travels to the right, which is a transverse wave. Bottom: two rows of dots moving left and right, bunching up and spreading out as the pattern travels to the right, which is a longitudinal wave. The gold dot in each row stays at the same place.</desc>
+<rect width="560" height="300" rx="14" fill="#faf8f4"/>
+<text x="20" y="26" font-size="15" font-weight="700" fill="#06244a">TRANSVERSE: particles move up and down; wave travels →</text>
+<line x1="20" y1="85" x2="540" y2="85" stroke="#c9ced6" stroke-width="1.5" stroke-dasharray="4 4"/>
+<circle class="wobv" cx="30" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-1.40s"/>
+<circle class="wobv" cx="40" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-1.20s"/>
+<circle class="wobv" cx="50" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-1.00s"/>
+<circle class="wobv" cx="60" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-0.80s"/>
+<circle class="wobv" cx="70" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-0.60s"/>
+<circle class="wobv" cx="80" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-0.40s"/>
+<circle class="wobv" cx="90" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-0.20s"/>
+<circle class="wobv" cx="100" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-0.00s"/>
+<circle class="wobv" cx="110" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-1.80s"/>
+<circle class="wobv" cx="120" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-1.60s"/>
+<circle class="wobv" cx="130" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-1.40s"/>
+<circle class="wobv" cx="140" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-1.20s"/>
+<circle class="wobv" cx="150" cy="85" r="4.8" fill="#d4a017" style="animation-delay:-1.00s"/>
+<circle class="wobv" cx="160" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-0.80s"/>
+<circle class="wobv" cx="170" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-0.60s"/>
+<circle class="wobv" cx="180" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-0.40s"/>
+<circle class="wobv" cx="190" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-0.20s"/>
+<circle class="wobv" cx="200" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-0.00s"/>
+<circle class="wobv" cx="210" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-1.80s"/>
+<circle class="wobv" cx="220" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-1.60s"/>
+<circle class="wobv" cx="230" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-1.40s"/>
+<circle class="wobv" cx="240" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-1.20s"/>
+<circle class="wobv" cx="250" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-1.00s"/>
+<circle class="wobv" cx="260" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-0.80s"/>
+<circle class="wobv" cx="270" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-0.60s"/>
+<circle class="wobv" cx="280" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-0.40s"/>
+<circle class="wobv" cx="290" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-0.20s"/>
+<circle class="wobv" cx="300" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-0.00s"/>
+<circle class="wobv" cx="310" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-1.80s"/>
+<circle class="wobv" cx="320" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-1.60s"/>
+<circle class="wobv" cx="330" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-1.40s"/>
+<circle class="wobv" cx="340" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-1.20s"/>
+<circle class="wobv" cx="350" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-1.00s"/>
+<circle class="wobv" cx="360" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-0.80s"/>
+<circle class="wobv" cx="370" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-0.60s"/>
+<circle class="wobv" cx="380" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-0.40s"/>
+<circle class="wobv" cx="390" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-0.20s"/>
+<circle class="wobv" cx="400" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-0.00s"/>
+<circle class="wobv" cx="410" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-1.80s"/>
+<circle class="wobv" cx="420" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-1.60s"/>
+<circle class="wobv" cx="430" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-1.40s"/>
+<circle class="wobv" cx="440" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-1.20s"/>
+<circle class="wobv" cx="450" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-1.00s"/>
+<circle class="wobv" cx="460" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-0.80s"/>
+<circle class="wobv" cx="470" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-0.60s"/>
+<circle class="wobv" cx="480" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-0.40s"/>
+<circle class="wobv" cx="490" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-0.20s"/>
+<circle class="wobv" cx="500" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-0.00s"/>
+<circle class="wobv" cx="510" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-1.80s"/>
+<circle class="wobv" cx="520" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-1.60s"/>
+<circle class="wobv" cx="530" cy="85" r="3.8" fill="#0b4ea2" style="animation-delay:-1.40s"/>
+<text x="20" y="130" font-size="13" fill="#4a4a4a">The gold dot moves up and down but stays in the same place.</text>
+<text x="20" y="168" font-size="15" font-weight="700" fill="#06244a">LONGITUDINAL: particles move left and right; wave travels →</text>
+<circle class="wob" cx="30" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-1.40s"/>
+<circle class="wob" cx="42.5" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-1.15s"/>
+<circle class="wob" cx="55" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-0.90s"/>
+<circle class="wob" cx="67.5" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-0.65s"/>
+<circle class="wob" cx="80" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-0.40s"/>
+<circle class="wob" cx="92.5" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-0.15s"/>
+<circle class="wob" cx="105" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-1.90s"/>
+<circle class="wob" cx="117.5" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-1.65s"/>
+<circle class="wob" cx="130" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-1.40s"/>
+<circle class="wob" cx="142.5" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-1.15s"/>
+<circle class="wob" cx="155" cy="195" r="4.8" fill="#d4a017" style="animation-delay:-0.90s"/>
+<circle class="wob" cx="167.5" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-0.65s"/>
+<circle class="wob" cx="180" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-0.40s"/>
+<circle class="wob" cx="192.5" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-0.15s"/>
+<circle class="wob" cx="205" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-1.90s"/>
+<circle class="wob" cx="217.5" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-1.65s"/>
+<circle class="wob" cx="230" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-1.40s"/>
+<circle class="wob" cx="242.5" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-1.15s"/>
+<circle class="wob" cx="255" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-0.90s"/>
+<circle class="wob" cx="267.5" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-0.65s"/>
+<circle class="wob" cx="280" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-0.40s"/>
+<circle class="wob" cx="292.5" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-0.15s"/>
+<circle class="wob" cx="305" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-1.90s"/>
+<circle class="wob" cx="317.5" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-1.65s"/>
+<circle class="wob" cx="330" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-1.40s"/>
+<circle class="wob" cx="342.5" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-1.15s"/>
+<circle class="wob" cx="355" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-0.90s"/>
+<circle class="wob" cx="367.5" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-0.65s"/>
+<circle class="wob" cx="380" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-0.40s"/>
+<circle class="wob" cx="392.5" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-0.15s"/>
+<circle class="wob" cx="405" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-1.90s"/>
+<circle class="wob" cx="417.5" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-1.65s"/>
+<circle class="wob" cx="430" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-1.40s"/>
+<circle class="wob" cx="442.5" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-1.15s"/>
+<circle class="wob" cx="455" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-0.90s"/>
+<circle class="wob" cx="467.5" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-0.65s"/>
+<circle class="wob" cx="480" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-0.40s"/>
+<circle class="wob" cx="492.5" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-0.15s"/>
+<circle class="wob" cx="505" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-1.90s"/>
+<circle class="wob" cx="517.5" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-1.65s"/>
+<circle class="wob" cx="530" cy="195" r="3.8" fill="#0b4ea2" style="animation-delay:-1.40s"/>
+<circle class="wob" cx="30" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-1.40s"/>
+<circle class="wob" cx="42.5" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-1.15s"/>
+<circle class="wob" cx="55" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-0.90s"/>
+<circle class="wob" cx="67.5" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-0.65s"/>
+<circle class="wob" cx="80" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-0.40s"/>
+<circle class="wob" cx="92.5" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-0.15s"/>
+<circle class="wob" cx="105" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-1.90s"/>
+<circle class="wob" cx="117.5" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-1.65s"/>
+<circle class="wob" cx="130" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-1.40s"/>
+<circle class="wob" cx="142.5" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-1.15s"/>
+<circle class="wob" cx="155" cy="225" r="4.8" fill="#d4a017" style="animation-delay:-0.90s"/>
+<circle class="wob" cx="167.5" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-0.65s"/>
+<circle class="wob" cx="180" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-0.40s"/>
+<circle class="wob" cx="192.5" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-0.15s"/>
+<circle class="wob" cx="205" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-1.90s"/>
+<circle class="wob" cx="217.5" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-1.65s"/>
+<circle class="wob" cx="230" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-1.40s"/>
+<circle class="wob" cx="242.5" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-1.15s"/>
+<circle class="wob" cx="255" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-0.90s"/>
+<circle class="wob" cx="267.5" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-0.65s"/>
+<circle class="wob" cx="280" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-0.40s"/>
+<circle class="wob" cx="292.5" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-0.15s"/>
+<circle class="wob" cx="305" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-1.90s"/>
+<circle class="wob" cx="317.5" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-1.65s"/>
+<circle class="wob" cx="330" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-1.40s"/>
+<circle class="wob" cx="342.5" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-1.15s"/>
+<circle class="wob" cx="355" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-0.90s"/>
+<circle class="wob" cx="367.5" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-0.65s"/>
+<circle class="wob" cx="380" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-0.40s"/>
+<circle class="wob" cx="392.5" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-0.15s"/>
+<circle class="wob" cx="405" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-1.90s"/>
+<circle class="wob" cx="417.5" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-1.65s"/>
+<circle class="wob" cx="430" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-1.40s"/>
+<circle class="wob" cx="442.5" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-1.15s"/>
+<circle class="wob" cx="455" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-0.90s"/>
+<circle class="wob" cx="467.5" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-0.65s"/>
+<circle class="wob" cx="480" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-0.40s"/>
+<circle class="wob" cx="492.5" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-0.15s"/>
+<circle class="wob" cx="505" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-1.90s"/>
+<circle class="wob" cx="517.5" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-1.65s"/>
+<circle class="wob" cx="530" cy="225" r="3.8" fill="#0b4ea2" style="animation-delay:-1.40s"/>
+<text x="20" y="262" font-size="13" fill="#4a4a4a">Crowded dots are compressions; spread-out dots are rarefactions.</text>
+<text x="20" y="282" font-size="13" fill="#4a4a4a">In both waves the energy travels to the right; the particles do not.</text>
+</svg>
+<div class="diagram-caption">Figure 1. A transverse wave (top) and a longitudinal wave (bottom). Follow the gold dot: it only vibrates about one place while the wave pattern moves along. (Original EDUSAMBAM diagram.)</div>
+</div>
+
+<h2 id="describe"><span class="num">3.</span>Describing a Wave</h2>
+<table class="pos-table"><tr><th>Term</th><th>Meaning</th><th>Unit</th></tr>
+<tr><td><strong>Amplitude (A)</strong></td><td>Maximum displacement from the rest position. It is related to the energy carried: bigger amplitude, more energy (loudness for sound, brightness for light).</td><td>m (for a rope or water wave)</td></tr>
+<tr><td><strong>Wavelength (λ)</strong></td><td>Distance between two consecutive identical points (crest to crest, or compression to compression).</td><td>metre (m)</td></tr>
+<tr><td><strong>Frequency (f)</strong></td><td>Number of complete waves passing a point each second (or the number of vibrations per second at the source).</td><td>hertz (Hz)</td></tr>
+<tr><td><strong>Period (T)</strong></td><td>Time for one complete vibration: T = 1 ÷ f.</td><td>second (s)</td></tr>
+<tr><td><strong>Wave speed (v)</strong></td><td>Distance travelled by a wave pattern each second.</td><td>m/s</td></tr>
+<tr><td><strong>Wavefront</strong></td><td>A line joining points of the wave that are in the same state (for example all on one crest). The wave travels at right angles to its wavefronts.</td><td>—</td></tr></table>
+<p>Two different graphs are used and they should not be confused. A graph of <strong>displacement against distance</strong> is a "snapshot" of the whole wave at one instant, from which you can read the wavelength. A graph of <strong>displacement against time</strong> shows one point on the wave as it vibrates, from which you read the period.</p>
+<div class="diagram-box">
+<svg viewBox="0 0 560 320" role="img" aria-labelledby="w2t w2d">
+<title id="w2t">Displacement-distance and displacement-time graphs of a wave</title>
+<desc id="w2d">Top: a snapshot of a wave with its wavelength and amplitude marked. Bottom: the motion of one point over time with the period marked. Both waves draw themselves repeatedly.</desc>
+<rect width="560" height="320" rx="14" fill="#faf8f4"/>
+<text x="20" y="22" font-size="14" font-weight="700" fill="#06244a">Displacement against DISTANCE (a snapshot)</text>
+<line x1="40" y1="80" x2="520" y2="80" stroke="#06244a" stroke-width="2"/><line x1="40" y1="30" x2="40" y2="130" stroke="#06244a" stroke-width="2"/>
+<path class="draw-wave" pathLength="1" d="M40 80 C 70 20,110 20,140 80 C 170 140,210 140,240 80 C 270 20,310 20,340 80 C 370 140,410 140,440 80 C 470 20,500 20,520 60" fill="none" stroke="#b3261e" stroke-width="4"/>
+<g stroke="#06244a" stroke-width="2"><line x1="190" y1="142" x2="390" y2="142"/><line x1="190" y1="136" x2="190" y2="148"/><line x1="390" y1="136" x2="390" y2="148"/></g>
+<g font-size="13" font-weight="700" fill="#06244a"><text x="290" y="160" text-anchor="middle">wavelength λ (trough to trough)</text><text x="98" y="58" fill="#b3261e">amplitude</text><text x="520" y="72" text-anchor="end" fill="#4a4a4a" font-weight="400">distance →</text></g>
+<line x1="90" y1="80" x2="90" y2="36" stroke="#b3261e" stroke-width="2.5"/>
+<text x="20" y="182" font-size="14" font-weight="700" fill="#06244a">Displacement against TIME (one point on the wave)</text>
+<line x1="40" y1="245" x2="520" y2="245" stroke="#06244a" stroke-width="2"/><line x1="40" y1="195" x2="40" y2="295" stroke="#06244a" stroke-width="2"/>
+<path class="draw-wave" pathLength="1" d="M40 245 C 70 185,110 185,140 245 C 170 305,210 305,240 245 C 270 185,310 185,340 245 C 370 305,410 305,440 245 C 470 185,500 185,520 225" fill="none" stroke="#0b4ea2" stroke-width="4"/>
+<g stroke="#06244a" stroke-width="2"><line x1="40" y1="278" x2="240" y2="278"/><line x1="40" y1="272" x2="40" y2="284"/><line x1="240" y1="272" x2="240" y2="284"/></g>
+<g font-size="13" font-weight="700" fill="#06244a"><text x="140" y="298" text-anchor="middle">period T</text><text x="520" y="265" text-anchor="end" fill="#4a4a4a" font-weight="400">time →</text></g>
+</svg>
+<div class="diagram-caption">Figure 2. Reading a wave from its graphs: wavelength and amplitude from the displacement–distance graph, period (and so frequency, f = 1 ÷ T) from the displacement–time graph. (Original EDUSAMBAM diagram.)</div>
+</div>
+<div class="worked"><div class="ex-label">Worked example 1: frequency and period</div>
+<p>A signal generator produces a wave of frequency 50 Hz. Find its period. A trace on an oscilloscope shows one complete cycle across 4.0 divisions with the time base set to 2.0 ms per division. Find the period and the frequency of this wave.</p>
+<p class="step">(a) T = 1 ÷ f = 1 ÷ 50 = <strong>0.020 s</strong> (20 ms).</p>
+<p class="step">(b) Period = 4.0 × 2.0 ms = 8.0 ms = 0.0080 s. Frequency f = 1 ÷ 0.0080 = <strong>125 Hz</strong>.</p></div>
+
+<h2 id="speed"><span class="num">4.</span>Wave Speed and the Wave Equation</h2>
+<p>In one period T the wave moves forward by one wavelength λ. The speed is distance ÷ time, so v = λ ÷ T. Since 1 ÷ T = f:</p>
+<div class="example-box"><div class="ex-label">The wave equation</div><p><strong>v = f × λ</strong> &nbsp;(speed = frequency × wavelength)</p><p>Two facts help in every problem: (1) the <strong>frequency</strong> is set by the <strong>source</strong> and does not change when the wave moves from one medium to another; (2) the <strong>speed</strong> is set by the <strong>medium</strong>, so a change of medium changes the speed and therefore the wavelength.</p></div>
+<div class="worked"><div class="ex-label">Worked example 2: water ripples</div>
+<p>A ripple tank vibrator makes 5.0 waves per second, and the distance between successive crests is 2.0 cm. Find the speed of the ripples.</p>
+<p class="step">v = fλ = 5.0 × 2.0 cm = <strong>10 cm/s</strong> = 0.10 m/s.</p></div>
+<div class="worked"><div class="ex-label">Worked example 3: a radio wave</div>
+<p>An FM radio station broadcasts at 100 MHz. Find the wavelength of the waves (c = 3.00 × 10⁸ m/s).</p>
+<p class="step">λ = v ÷ f = 3.00 × 10⁸ ÷ 1.00 × 10⁸ = <strong>3.0 m</strong>.</p></div>
+<p>What decides the speed in different media?</p>
+<ul>
+<li><strong>Waves on a string:</strong> faster if the string is under more tension and slower if it is heavier (more mass per unit length): v = √(T ÷ μ).</li>
+<li><strong>Sound:</strong> faster in solids and liquids than in gases, and faster in warm air than in cold air (343 m/s at 20 °C).</li>
+<li><strong>Water waves:</strong> in shallow water, the speed decreases as the water gets shallower (v ≈ √(gd), with d the depth).</li>
+<li><strong>Light:</strong> slower in glass, water and other materials than in a vacuum.</li>
+</ul>
+
+<h2 id="reflect"><span class="num">5.</span>Reflection</h2>
+<p>When a wave meets a barrier it can be <strong>reflected</strong>, bouncing back into the medium it came from. Reflection obeys the same <strong>law of reflection</strong> for every kind of wave: <strong>the angle of incidence equals the angle of reflection</strong>, both measured from the normal (the line at right angles to the surface). The speed, wavelength and frequency of the wave are unchanged by reflection. Examples are echoes of sound (see the article on sound), mirrors for light, and the reflection of radio waves from the ionosphere. A <strong>curved reflector</strong>, such as a satellite dish, focuses plane waves to a point, which is how dishes and telescopes collect weak signals. In a ripple tank, plane waves hitting a straight barrier bounce back as plane waves, and those hitting a curved barrier are focused or spread.</p>
+
+<h2 id="refract"><span class="num">6.</span>Refraction</h2>
+<p><strong>Refraction</strong> is the change of direction of a wave when its speed changes as it enters a different medium (or a region of different depth). Because the frequency stays constant while the speed changes, the <strong>wavelength changes too</strong>: a wave that slows down has a shorter wavelength. If the wave hits the boundary at an angle, the wavefronts pivot and the wave changes direction.</p>
+<div class="diagram-box">
+<svg viewBox="0 0 560 290" role="img" aria-labelledby="w3t w3d">
+<title id="w3t">Refraction of water waves moving from deep to shallow water</title>
+<desc id="w3d">Parallel wavefronts approach a boundary at 40 degrees. In the shallow region the wavefronts are closer together and the direction of travel bends towards the normal, to about 23 degrees. A red ray with moving dashes shows the path.</desc>
+<rect width="560" height="290" rx="14" fill="#faf8f4"/>
+<defs><clipPath id="wclip"><rect x="10" y="10" width="540" height="270"/></clipPath></defs>
+<rect x="10" y="10" width="540" height="140" fill="#cfe6f8"/><rect x="10" y="150" width="540" height="130" fill="#9fcbee"/>
+<g clip-path="url(#wclip)" stroke="#06244a" stroke-width="2.5">
+<line x1="-173.4" y1="150" x2="-20.1" y2="21.4"/>
+<line x1="-173.4" y1="150" x2="-413.2" y2="250.3"/>
+<line x1="-95.6" y1="150" x2="57.6" y2="21.4"/>
+<line x1="-95.6" y1="150" x2="-335.5" y2="250.3"/>
+<line x1="-17.8" y1="150" x2="135.4" y2="21.4"/>
+<line x1="-17.8" y1="150" x2="-257.7" y2="250.3"/>
+<line x1="60.0" y1="150" x2="213.2" y2="21.4"/>
+<line x1="60.0" y1="150" x2="-179.9" y2="250.3"/>
+<line x1="137.8" y1="150" x2="291.0" y2="21.4"/>
+<line x1="137.8" y1="150" x2="-102.1" y2="250.3"/>
+<line x1="215.6" y1="150" x2="368.8" y2="21.4"/>
+<line x1="215.6" y1="150" x2="-24.3" y2="250.3"/>
+<line x1="293.4" y1="150" x2="446.6" y2="21.4"/>
+<line x1="293.4" y1="150" x2="53.5" y2="250.3"/>
+<line x1="371.1" y1="150" x2="524.4" y2="21.4"/>
+<line x1="371.1" y1="150" x2="131.3" y2="250.3"/>
+<line x1="448.9" y1="150" x2="602.1" y2="21.4"/>
+<line x1="448.9" y1="150" x2="209.0" y2="250.3"/>
+<line x1="526.7" y1="150" x2="679.9" y2="21.4"/>
+<line x1="526.7" y1="150" x2="286.8" y2="250.3"/>
+<line x1="604.5" y1="150" x2="757.7" y2="21.4"/>
+<line x1="604.5" y1="150" x2="364.6" y2="250.3"/>
+<line x1="682.3" y1="150" x2="835.5" y2="21.4"/>
+<line x1="682.3" y1="150" x2="442.4" y2="250.3"/>
+</g>
+<line x1="10" y1="150" x2="550" y2="150" stroke="#06244a" stroke-width="3"/>
+<line x1="300" y1="30" x2="300" y2="270" stroke="#4a4a4a" stroke-width="1.5" stroke-dasharray="6 5"/>
+<path d="M216.4 50.4 L300 150 L342.4 251.5" fill="none" stroke="#b3261e" stroke-width="3"/>
+<path d="M216.4 50.4 L300 150 L342.4 251.5" fill="none" stroke="#d4a017" stroke-width="5" class="flow-dash"/>
+<rect x="18" y="19" width="236" height="22" rx="4" fill="#fff" opacity=".85"/><rect x="18" y="257" width="262" height="22" rx="4" fill="#fff" opacity=".85"/>
+<g font-size="13" font-weight="700" fill="#06244a"><text x="24" y="34">DEEP WATER: faster, longer λ</text><text x="24" y="272">SHALLOW WATER: slower, shorter λ</text></g>
+<g font-size="12" fill="#06244a" font-weight="700"><text x="222" y="62" text-anchor="end">i = 40°</text><text x="352" y="238">r ≈ 23°</text><text x="308" y="44">normal</text></g>
+</svg>
+<div class="diagram-caption">Figure 3. Refraction at a boundary where the speed falls. The wavefronts (dark lines) are closer together in the shallow water, and the direction of travel bends towards the normal. The frequency is the same on both sides. (Original EDUSAMBAM diagram, drawn to scale: λ₁ = 50, λ₂ = 30.)</div>
+</div>
+<div class="example-box"><div class="ex-label">Law of refraction</div><p><strong>sin i ÷ sin r = v₁ ÷ v₂ = λ₁ ÷ λ₂</strong></p><p>For light this gives the refractive index n = c ÷ v and Snell's law, described in the article on light.</p></div>
+<div class="worked"><div class="ex-label">Worked example 4: water waves entering shallow water</div>
+<p>Water waves of frequency 10 Hz travel from deep water, where the wavelength is 2.0 cm, into shallow water, where it is 1.2 cm. They strike the boundary at an angle of incidence of 40°. Find both speeds and the angle of refraction.</p>
+<p class="step">Speeds: v₁ = fλ₁ = 10 × 2.0 = <strong>20 cm/s</strong>; v₂ = 10 × 1.2 = <strong>12 cm/s</strong>.</p>
+<p class="step">sin r = sin i × (v₂ ÷ v₁) = sin 40° × (12 ÷ 20) = 0.6428 × 0.60 = 0.3857.</p>
+<p class="step">r = sin⁻¹(0.3857) ≈ <strong>23°</strong>. The wave bends towards the normal as it slows down.</p></div>
+<p>Refraction explains why a straw looks bent in water, why sound carries farther over a calm lake at dusk (the cooler air near the water slows the sound, bending it back down), and why ocean waves arrive almost parallel to a beach, however they were travelling out at sea.</p>
+
+<h2 id="diffract"><span class="num">7.</span>Diffraction</h2>
+<p><strong>Diffraction</strong> is the spreading of waves when they pass through a gap or round the edge of an obstacle. The Dutch scientist Christiaan Huygens explained it in 1678 by imagining that every point on a wavefront acts as a source of tiny circular wavelets; the new wavefront is the envelope of all of them. The amount of diffraction depends on the size of the gap compared with the wavelength:</p>
+<ul>
+<li>If the gap is <strong>much wider</strong> than the wavelength, the waves pass through almost straight, with only a little bending at the edges.</li>
+<li>If the gap is <strong>about the same size as the wavelength</strong> (or smaller), the waves spread out strongly in all directions, as semicircles.</li>
+</ul>
+<div class="diagram-box">
+<svg viewBox="0 0 560 270" role="img" aria-labelledby="w4t w4d">
+<title id="w4t">Diffraction through a wide gap and a narrow gap</title>
+<desc id="w4d">Left: plane waves pass through a wide gap and continue mostly straight. Right: plane waves pass through a gap about one wavelength wide and spread out as circular waves. The circular waves ripple outward in the animation.</desc>
+<rect width="560" height="270" rx="14" fill="#faf8f4"/>
+<g fill="#06244a"><rect x="146" y="20" width="8" height="62"/><rect x="146" y="188" width="8" height="62"/><rect x="416" y="20" width="8" height="107"/><rect x="416" y="143" width="8" height="107"/></g>
+<g stroke="#0b4ea2" stroke-width="3" fill="none"><line x1="40" y1="24" x2="40" y2="246"/><line x1="62" y1="24" x2="62" y2="246"/><line x1="84" y1="24" x2="84" y2="246"/><line x1="106" y1="24" x2="106" y2="246"/><line x1="128" y1="24" x2="128" y2="246"/>
+<line x1="172" y1="90" x2="172" y2="180"/><line x1="194" y1="90" x2="194" y2="180"/><line x1="216" y1="92" x2="216" y2="178"/><line x1="238" y1="95" x2="238" y2="175"/></g>
+<g stroke="#0b4ea2" stroke-width="3" fill="none"><line x1="310" y1="24" x2="310" y2="246"/><line x1="332" y1="24" x2="332" y2="246"/><line x1="354" y1="24" x2="354" y2="246"/><line x1="376" y1="24" x2="376" y2="246"/><line x1="398" y1="24" x2="398" y2="246"/></g>
+<g stroke="#b3261e" stroke-width="3" fill="none">
+<path class="fade-cycle" style="animation-delay:-0.0s" d="M424 113 A22 22 0 0 1 424 157"/><path class="fade-cycle" style="animation-delay:-0.8s" d="M424 91 A44 44 0 0 1 424 179"/><path class="fade-cycle" style="animation-delay:-1.6s" d="M424 69 A66 66 0 0 1 424 201"/><path class="fade-cycle" style="animation-delay:-2.4s" d="M424 47 A88 88 0 0 1 424 223"/><path class="fade-cycle" style="animation-delay:-3.2s" d="M424 25 A110 110 0 0 1 424 245"/></g>
+<g font-size="13" font-weight="700" fill="#06244a" text-anchor="middle"><text x="140" y="262">WIDE GAP (many wavelengths)</text><text x="420" y="262">NARROW GAP (about one wavelength)</text></g>
+<g font-size="12" fill="#4a4a4a"><text x="168" y="15">little spreading</text><text x="440" y="15">strong spreading</text></g>
+</svg>
+<div class="diagram-caption">Figure 4. Diffraction depends on the gap size compared with the wavelength. (Original EDUSAMBAM diagram.)</div>
+</div>
+<p>Diffraction explains many everyday observations:</p>
+<ul>
+<li>You can <strong>hear</strong> someone round a corner, but you cannot <strong>see</strong> them. Sound has a wavelength of centimetres to metres, comparable with doorways, so it diffracts a lot. Visible light has a wavelength of about 0.0005 mm, far smaller than any doorway, so it casts sharp shadows.</li>
+<li><strong>Long-wave AM radio</strong> (wavelengths of hundreds of metres) bends round hills and buildings, but <strong>FM and TV</strong> signals (metres or less) and <strong>mobile phone</strong> signals (decimetres) are blocked more easily, so they need relay masts and a clear path.</li>
+<li>Light does diffract through very narrow slits and round tiny objects, which is why very small apertures give blurry images and why microscopes and telescopes have limits on how fine a detail they can resolve.</li>
+</ul>
+
+<h2 id="interfere"><span class="num">8.</span>Superposition and Interference</h2>
+<p>When two waves meet in the same place, the resulting displacement is the <strong>sum</strong> of the individual displacements. This is the <strong>principle of superposition</strong>. Afterwards each wave carries on as if the other had never been there.</p>
+<ul>
+<li><strong>Constructive interference:</strong> crest meets crest (or trough meets trough). The waves are <strong>in phase</strong> and the combined wave is bigger.</li>
+<li><strong>Destructive interference:</strong> crest meets trough. The waves are <strong>in antiphase</strong> (half a cycle apart); if their amplitudes are equal they cancel completely.</li>
+</ul>
+<div class="diagram-box">
+<svg viewBox="0 0 560 290" role="img" aria-labelledby="w5t w5d">
+<title id="w5t">Constructive and destructive interference</title>
+<desc id="w5d">Left: two waves in phase add to give a wave of double amplitude. Right: two waves in antiphase add to give no displacement at all. Each wave draws itself repeatedly.</desc>
+<rect width="560" height="290" rx="14" fill="#faf8f4"/>
+<g font-size="14" font-weight="700" fill="#06244a" text-anchor="middle"><text x="145" y="24">CONSTRUCTIVE (in phase)</text><text x="425" y="24">DESTRUCTIVE (antiphase)</text></g>
+<path class="draw-wave" pathLength="1" d="M20.0 70.0 L22.0 66.4 L24.0 63.0 L26.0 59.8 L28.0 57.0 L30.0 54.8 L32.0 53.2 L34.0 52.2 L36.0 52.0 L38.0 52.5 L40.0 53.7 L42.0 55.6 L44.0 58.0 L46.0 60.9 L48.0 64.2 L50.0 67.7 L52.0 71.4 L54.0 74.9 L56.0 78.3 L58.0 81.3 L60.0 83.9 L62.0 85.9 L64.0 87.3 L66.0 87.9 L68.0 87.9 L70.0 87.1 L72.0 85.7 L74.0 83.6 L76.0 80.9 L78.0 77.9 L80.0 74.5 L82.0 70.9 L84.0 67.3 L86.0 63.8 L88.0 60.5 L90.0 57.7 L92.0 55.3 L94.0 53.5 L96.0 52.4 L98.0 52.0 L100.0 52.3 L102.0 53.3 L104.0 55.0 L106.0 57.4 L108.0 60.2 L110.0 63.4 L112.0 66.8 L114.0 70.5 L116.0 74.0 L118.0 77.5 L120.0 80.6 L122.0 83.3 L124.0 85.4 L126.0 87.0 L128.0 87.8 L130.0 88.0 L132.0 87.4 L134.0 86.1 L136.0 84.2 L138.0 81.6 L140.0 78.7 L142.0 75.3 L144.0 71.8 L146.0 68.2 L148.0 64.7 L150.0 61.3 L152.0 58.4 L154.0 55.8 L156.0 53.9 L158.0 52.6 L160.0 52.0 L162.0 52.2 L164.0 53.0 L166.0 54.6 L168.0 56.7 L170.0 59.4 L172.0 62.5 L174.0 66.0 L176.0 69.5 L178.0 73.2 L180.0 76.6 L182.0 79.8 L184.0 82.6 L186.0 85.0 L188.0 86.7 L190.0 87.7 L192.0 88.0 L194.0 87.6 L196.0 86.5 L198.0 84.7 L200.0 82.3 L202.0 79.5 L204.0 76.2 L206.0 72.7 L208.0 69.1 L210.0 65.5 L212.0 62.1 L214.0 59.1 L216.0 56.4 L218.0 54.3 L220.0 52.9 L222.0 52.1 L224.0 52.1 L226.0 52.7 L228.0 54.1 L230.0 56.1 L232.0 58.7 L234.0 61.7 L236.0 65.1 L238.0 68.6 L240.0 72.3 L242.0 75.8 L244.0 79.1 L246.0 82.0 L248.0 84.4 L250.0 86.3 L252.0 87.5 L254.0 88.0 L256.0 87.8 L258.0 86.8 L260.0 85.2 L262.0 83.0 L264.0 80.2 L266.0 77.0 L268.0 73.6 L270.0 70.0" fill="none" stroke="#0b4ea2" stroke-width="3"/>
+<path class="draw-wave" pathLength="1" d="M20.0 125.0 L22.0 121.4 L24.0 118.0 L26.0 114.8 L28.0 112.0 L30.0 109.8 L32.0 108.2 L34.0 107.2 L36.0 107.0 L38.0 107.5 L40.0 108.7 L42.0 110.6 L44.0 113.0 L46.0 115.9 L48.0 119.2 L50.0 122.7 L52.0 126.4 L54.0 129.9 L56.0 133.3 L58.0 136.3 L60.0 138.9 L62.0 140.9 L64.0 142.3 L66.0 142.9 L68.0 142.9 L70.0 142.1 L72.0 140.7 L74.0 138.6 L76.0 135.9 L78.0 132.9 L80.0 129.5 L82.0 125.9 L84.0 122.3 L86.0 118.8 L88.0 115.5 L90.0 112.7 L92.0 110.3 L94.0 108.5 L96.0 107.4 L98.0 107.0 L100.0 107.3 L102.0 108.3 L104.0 110.0 L106.0 112.4 L108.0 115.2 L110.0 118.4 L112.0 121.8 L114.0 125.5 L116.0 129.0 L118.0 132.5 L120.0 135.6 L122.0 138.3 L124.0 140.4 L126.0 142.0 L128.0 142.8 L130.0 143.0 L132.0 142.4 L134.0 141.1 L136.0 139.2 L138.0 136.6 L140.0 133.7 L142.0 130.3 L144.0 126.8 L146.0 123.2 L148.0 119.7 L150.0 116.3 L152.0 113.4 L154.0 110.8 L156.0 108.9 L158.0 107.6 L160.0 107.0 L162.0 107.2 L164.0 108.0 L166.0 109.6 L168.0 111.7 L170.0 114.4 L172.0 117.5 L174.0 121.0 L176.0 124.5 L178.0 128.2 L180.0 131.6 L182.0 134.8 L184.0 137.6 L186.0 140.0 L188.0 141.7 L190.0 142.7 L192.0 143.0 L194.0 142.6 L196.0 141.5 L198.0 139.7 L200.0 137.3 L202.0 134.5 L204.0 131.2 L206.0 127.7 L208.0 124.1 L210.0 120.5 L212.0 117.1 L214.0 114.1 L216.0 111.4 L218.0 109.3 L220.0 107.9 L222.0 107.1 L224.0 107.1 L226.0 107.7 L228.0 109.1 L230.0 111.1 L232.0 113.7 L234.0 116.7 L236.0 120.1 L238.0 123.6 L240.0 127.3 L242.0 130.8 L244.0 134.1 L246.0 137.0 L248.0 139.4 L250.0 141.3 L252.0 142.5 L254.0 143.0 L256.0 142.8 L258.0 141.8 L260.0 140.2 L262.0 138.0 L264.0 135.2 L266.0 132.0 L268.0 128.6 L270.0 125.0" fill="none" stroke="#27ae60" stroke-width="3"/>
+<path class="draw-wave" pathLength="1" d="M20.0 210.0 L22.0 202.8 L24.0 195.9 L26.0 189.6 L28.0 184.1 L30.0 179.6 L32.0 176.4 L34.0 174.5 L36.0 174.0 L38.0 175.0 L40.0 177.4 L42.0 181.1 L44.0 186.0 L46.0 191.9 L48.0 198.4 L50.0 205.5 L52.0 212.7 L54.0 219.8 L56.0 226.5 L58.0 232.6 L60.0 237.7 L62.0 241.8 L64.0 244.5 L66.0 245.9 L68.0 245.8 L70.0 244.2 L72.0 241.3 L74.0 237.2 L76.0 231.9 L78.0 225.7 L80.0 219.0 L82.0 211.8 L84.0 204.6 L86.0 197.6 L88.0 191.1 L90.0 185.4 L92.0 180.6 L94.0 177.1 L96.0 174.8 L98.0 174.0 L100.0 174.6 L102.0 176.7 L104.0 180.1 L106.0 184.7 L108.0 190.3 L110.0 196.7 L112.0 203.7 L114.0 210.9 L116.0 218.1 L118.0 224.9 L120.0 231.2 L122.0 236.6 L124.0 240.9 L126.0 243.9 L128.0 245.7 L130.0 245.9 L132.0 244.8 L134.0 242.2 L136.0 238.3 L138.0 233.3 L140.0 227.3 L142.0 220.7 L144.0 213.6 L146.0 206.4 L148.0 199.3 L150.0 192.7 L152.0 186.7 L154.0 181.7 L156.0 177.8 L158.0 175.2 L160.0 174.1 L162.0 174.3 L164.0 176.1 L166.0 179.1 L168.0 183.4 L170.0 188.8 L172.0 195.1 L174.0 201.9 L176.0 209.1 L178.0 216.3 L180.0 223.3 L182.0 229.7 L184.0 235.3 L186.0 239.9 L188.0 243.3 L190.0 245.4 L192.0 246.0 L194.0 245.2 L196.0 242.9 L198.0 239.4 L200.0 234.6 L202.0 228.9 L204.0 222.4 L206.0 215.4 L208.0 208.2 L210.0 201.0 L212.0 194.3 L214.0 188.1 L216.0 182.8 L218.0 178.7 L220.0 175.8 L222.0 174.2 L224.0 174.1 L226.0 175.5 L228.0 178.2 L230.0 182.3 L232.0 187.4 L234.0 193.5 L236.0 200.2 L238.0 207.3 L240.0 214.5 L242.0 221.6 L244.0 228.1 L246.0 234.0 L248.0 238.9 L250.0 242.6 L252.0 245.0 L254.0 246.0 L256.0 245.5 L258.0 243.6 L260.0 240.4 L262.0 235.9 L264.0 230.4 L266.0 224.1 L268.0 217.2 L270.0 210.0" fill="none" stroke="#b3261e" stroke-width="4.5"/>
+<line x1="20" y1="70" x2="270" y2="70" stroke="#c9ced6" stroke-width="1"/><line x1="20" y1="125" x2="270" y2="125" stroke="#c9ced6" stroke-width="1"/><line x1="20" y1="210" x2="270" y2="210" stroke="#c9ced6" stroke-width="1"/>
+<path class="draw-wave" pathLength="1" d="M300.0 70.0 L302.0 66.4 L304.0 63.0 L306.0 59.8 L308.0 57.0 L310.0 54.8 L312.0 53.2 L314.0 52.2 L316.0 52.0 L318.0 52.5 L320.0 53.7 L322.0 55.6 L324.0 58.0 L326.0 60.9 L328.0 64.2 L330.0 67.7 L332.0 71.4 L334.0 74.9 L336.0 78.3 L338.0 81.3 L340.0 83.9 L342.0 85.9 L344.0 87.3 L346.0 87.9 L348.0 87.9 L350.0 87.1 L352.0 85.7 L354.0 83.6 L356.0 80.9 L358.0 77.9 L360.0 74.5 L362.0 70.9 L364.0 67.3 L366.0 63.8 L368.0 60.5 L370.0 57.7 L372.0 55.3 L374.0 53.5 L376.0 52.4 L378.0 52.0 L380.0 52.3 L382.0 53.3 L384.0 55.0 L386.0 57.4 L388.0 60.2 L390.0 63.4 L392.0 66.8 L394.0 70.5 L396.0 74.0 L398.0 77.5 L400.0 80.6 L402.0 83.3 L404.0 85.4 L406.0 87.0 L408.0 87.8 L410.0 88.0 L412.0 87.4 L414.0 86.1 L416.0 84.2 L418.0 81.6 L420.0 78.7 L422.0 75.3 L424.0 71.8 L426.0 68.2 L428.0 64.7 L430.0 61.3 L432.0 58.4 L434.0 55.8 L436.0 53.9 L438.0 52.6 L440.0 52.0 L442.0 52.2 L444.0 53.0 L446.0 54.6 L448.0 56.7 L450.0 59.4 L452.0 62.5 L454.0 66.0 L456.0 69.5 L458.0 73.2 L460.0 76.6 L462.0 79.8 L464.0 82.6 L466.0 85.0 L468.0 86.7 L470.0 87.7 L472.0 88.0 L474.0 87.6 L476.0 86.5 L478.0 84.7 L480.0 82.3 L482.0 79.5 L484.0 76.2 L486.0 72.7 L488.0 69.1 L490.0 65.5 L492.0 62.1 L494.0 59.1 L496.0 56.4 L498.0 54.3 L500.0 52.9 L502.0 52.1 L504.0 52.1 L506.0 52.7 L508.0 54.1 L510.0 56.1 L512.0 58.7 L514.0 61.7 L516.0 65.1 L518.0 68.6 L520.0 72.3 L522.0 75.8 L524.0 79.1 L526.0 82.0 L528.0 84.4 L530.0 86.3 L532.0 87.5 L534.0 88.0 L536.0 87.8 L538.0 86.8 L540.0 85.2 L542.0 83.0 L544.0 80.2 L546.0 77.0 L548.0 73.6 L550.0 70.0" fill="none" stroke="#0b4ea2" stroke-width="3"/>
+<path class="draw-wave" pathLength="1" d="M300.0 125.0 L302.0 128.6 L304.0 132.0 L306.0 135.2 L308.0 138.0 L310.0 140.2 L312.0 141.8 L314.0 142.8 L316.0 143.0 L318.0 142.5 L320.0 141.3 L322.0 139.4 L324.0 137.0 L326.0 134.1 L328.0 130.8 L330.0 127.3 L332.0 123.6 L334.0 120.1 L336.0 116.7 L338.0 113.7 L340.0 111.1 L342.0 109.1 L344.0 107.7 L346.0 107.1 L348.0 107.1 L350.0 107.9 L352.0 109.3 L354.0 111.4 L356.0 114.1 L358.0 117.1 L360.0 120.5 L362.0 124.1 L364.0 127.7 L366.0 131.2 L368.0 134.5 L370.0 137.3 L372.0 139.7 L374.0 141.5 L376.0 142.6 L378.0 143.0 L380.0 142.7 L382.0 141.7 L384.0 140.0 L386.0 137.6 L388.0 134.8 L390.0 131.6 L392.0 128.2 L394.0 124.5 L396.0 121.0 L398.0 117.5 L400.0 114.4 L402.0 111.7 L404.0 109.6 L406.0 108.0 L408.0 107.2 L410.0 107.0 L412.0 107.6 L414.0 108.9 L416.0 110.8 L418.0 113.4 L420.0 116.3 L422.0 119.7 L424.0 123.2 L426.0 126.8 L428.0 130.3 L430.0 133.7 L432.0 136.6 L434.0 139.2 L436.0 141.1 L438.0 142.4 L440.0 143.0 L442.0 142.8 L444.0 142.0 L446.0 140.4 L448.0 138.3 L450.0 135.6 L452.0 132.5 L454.0 129.0 L456.0 125.5 L458.0 121.8 L460.0 118.4 L462.0 115.2 L464.0 112.4 L466.0 110.0 L468.0 108.3 L470.0 107.3 L472.0 107.0 L474.0 107.4 L476.0 108.5 L478.0 110.3 L480.0 112.7 L482.0 115.5 L484.0 118.8 L486.0 122.3 L488.0 125.9 L490.0 129.5 L492.0 132.9 L494.0 135.9 L496.0 138.6 L498.0 140.7 L500.0 142.1 L502.0 142.9 L504.0 142.9 L506.0 142.3 L508.0 140.9 L510.0 138.9 L512.0 136.3 L514.0 133.3 L516.0 129.9 L518.0 126.4 L520.0 122.7 L522.0 119.2 L524.0 115.9 L526.0 113.0 L528.0 110.6 L530.0 108.7 L532.0 107.5 L534.0 107.0 L536.0 107.2 L538.0 108.2 L540.0 109.8 L542.0 112.0 L544.0 114.8 L546.0 118.0 L548.0 121.4 L550.0 125.0" fill="none" stroke="#27ae60" stroke-width="3"/>
+<path class="draw-wave" pathLength="1" d="M300.0 210.0 L302.0 210.0 L304.0 210.0 L306.0 210.0 L308.0 210.0 L310.0 210.0 L312.0 210.0 L314.0 210.0 L316.0 210.0 L318.0 210.0 L320.0 210.0 L322.0 210.0 L324.0 210.0 L326.0 210.0 L328.0 210.0 L330.0 210.0 L332.0 210.0 L334.0 210.0 L336.0 210.0 L338.0 210.0 L340.0 210.0 L342.0 210.0 L344.0 210.0 L346.0 210.0 L348.0 210.0 L350.0 210.0 L352.0 210.0 L354.0 210.0 L356.0 210.0 L358.0 210.0 L360.0 210.0 L362.0 210.0 L364.0 210.0 L366.0 210.0 L368.0 210.0 L370.0 210.0 L372.0 210.0 L374.0 210.0 L376.0 210.0 L378.0 210.0 L380.0 210.0 L382.0 210.0 L384.0 210.0 L386.0 210.0 L388.0 210.0 L390.0 210.0 L392.0 210.0 L394.0 210.0 L396.0 210.0 L398.0 210.0 L400.0 210.0 L402.0 210.0 L404.0 210.0 L406.0 210.0 L408.0 210.0 L410.0 210.0 L412.0 210.0 L414.0 210.0 L416.0 210.0 L418.0 210.0 L420.0 210.0 L422.0 210.0 L424.0 210.0 L426.0 210.0 L428.0 210.0 L430.0 210.0 L432.0 210.0 L434.0 210.0 L436.0 210.0 L438.0 210.0 L440.0 210.0 L442.0 210.0 L444.0 210.0 L446.0 210.0 L448.0 210.0 L450.0 210.0 L452.0 210.0 L454.0 210.0 L456.0 210.0 L458.0 210.0 L460.0 210.0 L462.0 210.0 L464.0 210.0 L466.0 210.0 L468.0 210.0 L470.0 210.0 L472.0 210.0 L474.0 210.0 L476.0 210.0 L478.0 210.0 L480.0 210.0 L482.0 210.0 L484.0 210.0 L486.0 210.0 L488.0 210.0 L490.0 210.0 L492.0 210.0 L494.0 210.0 L496.0 210.0 L498.0 210.0 L500.0 210.0 L502.0 210.0 L504.0 210.0 L506.0 210.0 L508.0 210.0 L510.0 210.0 L512.0 210.0 L514.0 210.0 L516.0 210.0 L518.0 210.0 L520.0 210.0 L522.0 210.0 L524.0 210.0 L526.0 210.0 L528.0 210.0 L530.0 210.0 L532.0 210.0 L534.0 210.0 L536.0 210.0 L538.0 210.0 L540.0 210.0 L542.0 210.0 L544.0 210.0 L546.0 210.0 L548.0 210.0 L550.0 210.0" fill="none" stroke="#b3261e" stroke-width="4.5"/>
+<line x1="300" y1="70" x2="550" y2="70" stroke="#c9ced6" stroke-width="1"/><line x1="300" y1="125" x2="550" y2="125" stroke="#c9ced6" stroke-width="1"/><line x1="300" y1="210" x2="550" y2="210" stroke="#c9ced6" stroke-width="1"/>
+<g font-size="12" font-weight="700" text-anchor="start"><text x="22" y="46" fill="#0b4ea2">wave A</text><text x="22" y="101" fill="#27ae60">wave B</text><text x="22" y="170" fill="#b3261e">A + B</text><text x="302" y="46" fill="#0b4ea2">wave A</text><text x="302" y="101" fill="#27ae60">wave B</text><text x="302" y="170" fill="#b3261e">A + B</text></g>
+<g font-size="12" fill="#4a4a4a" text-anchor="middle"><text x="145" y="272">combined amplitude = 2A</text><text x="425" y="272">combined amplitude = 0</text></g>
+</svg>
+<div class="diagram-caption">Figure 5. Superposition of two waves of equal amplitude and frequency. (Original EDUSAMBAM diagram.)</div>
+</div>
+<p>For two <strong>coherent sources</strong> (sources with the same frequency and a constant phase difference), the result at any point depends on the <strong>path difference</strong>, the extra distance one wave has travelled compared with the other:</p>
+<ul>
+<li>Constructive interference when the path difference = <strong>nλ</strong> (0, λ, 2λ, …).</li>
+<li>Destructive interference when the path difference = <strong>(n + ½)λ</strong> (½λ, 1½λ, …).</li>
+</ul>
+<p>In 1801 the English scientist Thomas Young shone light through two narrow slits and saw a pattern of bright and dark <strong>fringes</strong> on a screen. This was strong evidence that light behaves as a wave. For slits a distance <em>a</em> apart, a screen at distance <em>D</em>, and light of wavelength λ, the fringe spacing is <strong>x = λD ÷ a</strong> (when a is much smaller than D).</p>
+<div class="worked"><div class="ex-label">Worked example 5: Young's double-slit experiment</div>
+<p>Light of wavelength 600 nm passes through two slits 0.50 mm apart. The screen is 2.0 m away. Find the fringe spacing.</p>
+<p class="step">x = λD ÷ a = (600 × 10⁻⁹ × 2.0) ÷ (0.50 × 10⁻³) = 1.2 × 10⁻⁶ ÷ 5.0 × 10⁻⁴ = 2.4 × 10⁻³ m = <strong>2.4 mm</strong>.</p></div>
+<p>Interference is used in <strong>noise-cancelling headphones</strong>, which produce a sound wave in antiphase with the outside noise, and in anti-reflection coatings on lenses. It also explains the colours in soap films and oil slicks on water.</p>
+
+<h2 id="stand"><span class="num">9.</span>Standing Waves</h2>
+<p>When a wave reflects from a fixed end and meets the next incoming wave, the two superpose and can form a <strong>standing (stationary) wave</strong>. A standing wave does not travel. It has points of zero amplitude called <strong>nodes</strong> and points of maximum amplitude called <strong>antinodes</strong>. Every point between two nodes vibrates in phase, and the distance between neighbouring nodes is <strong>λ ÷ 2</strong>.</p>
+<p>A string of length L fixed at both ends can only vibrate in patterns that fit a whole number of half-wavelengths: L = n × λ ÷ 2. These patterns are the <strong>harmonics</strong>:</p>
+<div class="example-box"><div class="ex-label">Harmonics on a string fixed at both ends</div><p><strong>λₙ = 2L ÷ n</strong> &nbsp; and &nbsp; <strong>fₙ = n × v ÷ 2L = n × f₁</strong> &nbsp;(n = 1, 2, 3, …)</p><p>The lowest frequency f₁ is the <strong>fundamental</strong>. Shorter, tighter or lighter strings give higher notes.</p></div>
+<div class="diagram-box">
+<svg viewBox="0 0 560 300" role="img" aria-labelledby="w6t w6d">
+<title id="w6t">Standing waves on a string</title>
+<desc id="w6d">Three strings fixed at both ends vibrate as the first harmonic with one loop, the second harmonic with two loops and the third harmonic with three loops. Black dots mark the nodes, which do not move. The red strings flip up and down in the animation, and grey dashed lines show the envelope.</desc>
+<rect width="560" height="300" rx="14" fill="#faf8f4"/>
+<path d="M70.0 70.0 L72.1 69.5 L74.2 68.9 L76.3 68.4 L78.4 67.9 L80.5 67.3 L82.6 66.8 L84.7 66.3 L86.8 65.7 L88.9 65.2 L91.0 64.7 L93.1 64.2 L95.2 63.6 L97.3 63.1 L99.4 62.6 L101.5 62.1 L103.6 61.5 L105.7 61.0 L107.8 60.5 L109.9 60.0 L112.0 59.5 L114.1 59.0 L116.2 58.5 L118.3 58.0 L120.4 57.5 L122.5 57.0 L124.6 56.5 L126.7 56.0 L128.8 55.5 L130.9 55.0 L133.0 54.6 L135.1 54.1 L137.2 53.6 L139.3 53.2 L141.4 52.7 L143.5 52.2 L145.6 51.8 L147.7 51.3 L149.8 50.9 L151.9 50.4 L154.0 50.0 L156.1 49.6 L158.2 49.2 L160.3 48.7 L162.4 48.3 L164.5 47.9 L166.6 47.5 L168.7 47.1 L170.8 46.7 L172.9 46.3 L175.0 46.0 L177.1 45.6 L179.2 45.2 L181.3 44.9 L183.4 44.5 L185.5 44.1 L187.6 43.8 L189.7 43.5 L191.8 43.1 L193.9 42.8 L196.0 42.5 L198.1 42.2 L200.2 41.9 L202.3 41.6 L204.4 41.3 L206.5 41.0 L208.6 40.7 L210.7 40.5 L212.8 40.2 L214.9 40.0 L217.0 39.7 L219.1 39.5 L221.2 39.2 L223.3 39.0 L225.4 38.8 L227.5 38.6 L229.6 38.4 L231.7 38.2 L233.8 38.0 L235.9 37.8 L238.0 37.7 L240.1 37.5 L242.2 37.4 L244.3 37.2 L246.4 37.1 L248.5 36.9 L250.6 36.8 L252.7 36.7 L254.8 36.6 L256.9 36.5 L259.0 36.4 L261.1 36.3 L263.2 36.3 L265.3 36.2 L267.4 36.2 L269.5 36.1 L271.6 36.1 L273.7 36.0 L275.8 36.0 L277.9 36.0 L280.0 36.0 L282.1 36.0 L284.2 36.0 L286.3 36.0 L288.4 36.1 L290.5 36.1 L292.6 36.2 L294.7 36.2 L296.8 36.3 L298.9 36.3 L301.0 36.4 L303.1 36.5 L305.2 36.6 L307.3 36.7 L309.4 36.8 L311.5 36.9 L313.6 37.1 L315.7 37.2 L317.8 37.4 L319.9 37.5 L322.0 37.7 L324.1 37.8 L326.2 38.0 L328.3 38.2 L330.4 38.4 L332.5 38.6 L334.6 38.8 L336.7 39.0 L338.8 39.2 L340.9 39.5 L343.0 39.7 L345.1 40.0 L347.2 40.2 L349.3 40.5 L351.4 40.7 L353.5 41.0 L355.6 41.3 L357.7 41.6 L359.8 41.9 L361.9 42.2 L364.0 42.5 L366.1 42.8 L368.2 43.1 L370.3 43.5 L372.4 43.8 L374.5 44.1 L376.6 44.5 L378.7 44.9 L380.8 45.2 L382.9 45.6 L385.0 46.0 L387.1 46.3 L389.2 46.7 L391.3 47.1 L393.4 47.5 L395.5 47.9 L397.6 48.3 L399.7 48.7 L401.8 49.2 L403.9 49.6 L406.0 50.0 L408.1 50.4 L410.2 50.9 L412.3 51.3 L414.4 51.8 L416.5 52.2 L418.6 52.7 L420.7 53.2 L422.8 53.6 L424.9 54.1 L427.0 54.6 L429.1 55.0 L431.2 55.5 L433.3 56.0 L435.4 56.5 L437.5 57.0 L439.6 57.5 L441.7 58.0 L443.8 58.5 L445.9 59.0 L448.0 59.5 L450.1 60.0 L452.2 60.5 L454.3 61.0 L456.4 61.5 L458.5 62.1 L460.6 62.6 L462.7 63.1 L464.8 63.6 L466.9 64.2 L469.0 64.7 L471.1 65.2 L473.2 65.7 L475.3 66.3 L477.4 66.8 L479.5 67.3 L481.6 67.9 L483.7 68.4 L485.8 68.9 L487.9 69.5 L490.0 70.0" fill="none" stroke="#c9ced6" stroke-width="2" stroke-dasharray="5 4"/><path d="M70.0 70.0 L72.1 70.5 L74.2 71.1 L76.3 71.6 L78.4 72.1 L80.5 72.7 L82.6 73.2 L84.7 73.7 L86.8 74.3 L88.9 74.8 L91.0 75.3 L93.1 75.8 L95.2 76.4 L97.3 76.9 L99.4 77.4 L101.5 77.9 L103.6 78.5 L105.7 79.0 L107.8 79.5 L109.9 80.0 L112.0 80.5 L114.1 81.0 L116.2 81.5 L118.3 82.0 L120.4 82.5 L122.5 83.0 L124.6 83.5 L126.7 84.0 L128.8 84.5 L130.9 85.0 L133.0 85.4 L135.1 85.9 L137.2 86.4 L139.3 86.8 L141.4 87.3 L143.5 87.8 L145.6 88.2 L147.7 88.7 L149.8 89.1 L151.9 89.6 L154.0 90.0 L156.1 90.4 L158.2 90.8 L160.3 91.3 L162.4 91.7 L164.5 92.1 L166.6 92.5 L168.7 92.9 L170.8 93.3 L172.9 93.7 L175.0 94.0 L177.1 94.4 L179.2 94.8 L181.3 95.1 L183.4 95.5 L185.5 95.9 L187.6 96.2 L189.7 96.5 L191.8 96.9 L193.9 97.2 L196.0 97.5 L198.1 97.8 L200.2 98.1 L202.3 98.4 L204.4 98.7 L206.5 99.0 L208.6 99.3 L210.7 99.5 L212.8 99.8 L214.9 100.0 L217.0 100.3 L219.1 100.5 L221.2 100.8 L223.3 101.0 L225.4 101.2 L227.5 101.4 L229.6 101.6 L231.7 101.8 L233.8 102.0 L235.9 102.2 L238.0 102.3 L240.1 102.5 L242.2 102.6 L244.3 102.8 L246.4 102.9 L248.5 103.1 L250.6 103.2 L252.7 103.3 L254.8 103.4 L256.9 103.5 L259.0 103.6 L261.1 103.7 L263.2 103.7 L265.3 103.8 L267.4 103.8 L269.5 103.9 L271.6 103.9 L273.7 104.0 L275.8 104.0 L277.9 104.0 L280.0 104.0 L282.1 104.0 L284.2 104.0 L286.3 104.0 L288.4 103.9 L290.5 103.9 L292.6 103.8 L294.7 103.8 L296.8 103.7 L298.9 103.7 L301.0 103.6 L303.1 103.5 L305.2 103.4 L307.3 103.3 L309.4 103.2 L311.5 103.1 L313.6 102.9 L315.7 102.8 L317.8 102.6 L319.9 102.5 L322.0 102.3 L324.1 102.2 L326.2 102.0 L328.3 101.8 L330.4 101.6 L332.5 101.4 L334.6 101.2 L336.7 101.0 L338.8 100.8 L340.9 100.5 L343.0 100.3 L345.1 100.0 L347.2 99.8 L349.3 99.5 L351.4 99.3 L353.5 99.0 L355.6 98.7 L357.7 98.4 L359.8 98.1 L361.9 97.8 L364.0 97.5 L366.1 97.2 L368.2 96.9 L370.3 96.5 L372.4 96.2 L374.5 95.9 L376.6 95.5 L378.7 95.1 L380.8 94.8 L382.9 94.4 L385.0 94.0 L387.1 93.7 L389.2 93.3 L391.3 92.9 L393.4 92.5 L395.5 92.1 L397.6 91.7 L399.7 91.3 L401.8 90.8 L403.9 90.4 L406.0 90.0 L408.1 89.6 L410.2 89.1 L412.3 88.7 L414.4 88.2 L416.5 87.8 L418.6 87.3 L420.7 86.8 L422.8 86.4 L424.9 85.9 L427.0 85.4 L429.1 85.0 L431.2 84.5 L433.3 84.0 L435.4 83.5 L437.5 83.0 L439.6 82.5 L441.7 82.0 L443.8 81.5 L445.9 81.0 L448.0 80.5 L450.1 80.0 L452.2 79.5 L454.3 79.0 L456.4 78.5 L458.5 77.9 L460.6 77.4 L462.7 76.9 L464.8 76.4 L466.9 75.8 L469.0 75.3 L471.1 74.8 L473.2 74.3 L475.3 73.7 L477.4 73.2 L479.5 72.7 L481.6 72.1 L483.7 71.6 L485.8 71.1 L487.9 70.5 L490.0 70.0" fill="none" stroke="#c9ced6" stroke-width="2" stroke-dasharray="5 4"/>
+<g class="stand" style="transform-origin:280px 70px"><path d="M70.0 70.0 L72.1 69.5 L74.2 68.9 L76.3 68.4 L78.4 67.9 L80.5 67.3 L82.6 66.8 L84.7 66.3 L86.8 65.7 L88.9 65.2 L91.0 64.7 L93.1 64.2 L95.2 63.6 L97.3 63.1 L99.4 62.6 L101.5 62.1 L103.6 61.5 L105.7 61.0 L107.8 60.5 L109.9 60.0 L112.0 59.5 L114.1 59.0 L116.2 58.5 L118.3 58.0 L120.4 57.5 L122.5 57.0 L124.6 56.5 L126.7 56.0 L128.8 55.5 L130.9 55.0 L133.0 54.6 L135.1 54.1 L137.2 53.6 L139.3 53.2 L141.4 52.7 L143.5 52.2 L145.6 51.8 L147.7 51.3 L149.8 50.9 L151.9 50.4 L154.0 50.0 L156.1 49.6 L158.2 49.2 L160.3 48.7 L162.4 48.3 L164.5 47.9 L166.6 47.5 L168.7 47.1 L170.8 46.7 L172.9 46.3 L175.0 46.0 L177.1 45.6 L179.2 45.2 L181.3 44.9 L183.4 44.5 L185.5 44.1 L187.6 43.8 L189.7 43.5 L191.8 43.1 L193.9 42.8 L196.0 42.5 L198.1 42.2 L200.2 41.9 L202.3 41.6 L204.4 41.3 L206.5 41.0 L208.6 40.7 L210.7 40.5 L212.8 40.2 L214.9 40.0 L217.0 39.7 L219.1 39.5 L221.2 39.2 L223.3 39.0 L225.4 38.8 L227.5 38.6 L229.6 38.4 L231.7 38.2 L233.8 38.0 L235.9 37.8 L238.0 37.7 L240.1 37.5 L242.2 37.4 L244.3 37.2 L246.4 37.1 L248.5 36.9 L250.6 36.8 L252.7 36.7 L254.8 36.6 L256.9 36.5 L259.0 36.4 L261.1 36.3 L263.2 36.3 L265.3 36.2 L267.4 36.2 L269.5 36.1 L271.6 36.1 L273.7 36.0 L275.8 36.0 L277.9 36.0 L280.0 36.0 L282.1 36.0 L284.2 36.0 L286.3 36.0 L288.4 36.1 L290.5 36.1 L292.6 36.2 L294.7 36.2 L296.8 36.3 L298.9 36.3 L301.0 36.4 L303.1 36.5 L305.2 36.6 L307.3 36.7 L309.4 36.8 L311.5 36.9 L313.6 37.1 L315.7 37.2 L317.8 37.4 L319.9 37.5 L322.0 37.7 L324.1 37.8 L326.2 38.0 L328.3 38.2 L330.4 38.4 L332.5 38.6 L334.6 38.8 L336.7 39.0 L338.8 39.2 L340.9 39.5 L343.0 39.7 L345.1 40.0 L347.2 40.2 L349.3 40.5 L351.4 40.7 L353.5 41.0 L355.6 41.3 L357.7 41.6 L359.8 41.9 L361.9 42.2 L364.0 42.5 L366.1 42.8 L368.2 43.1 L370.3 43.5 L372.4 43.8 L374.5 44.1 L376.6 44.5 L378.7 44.9 L380.8 45.2 L382.9 45.6 L385.0 46.0 L387.1 46.3 L389.2 46.7 L391.3 47.1 L393.4 47.5 L395.5 47.9 L397.6 48.3 L399.7 48.7 L401.8 49.2 L403.9 49.6 L406.0 50.0 L408.1 50.4 L410.2 50.9 L412.3 51.3 L414.4 51.8 L416.5 52.2 L418.6 52.7 L420.7 53.2 L422.8 53.6 L424.9 54.1 L427.0 54.6 L429.1 55.0 L431.2 55.5 L433.3 56.0 L435.4 56.5 L437.5 57.0 L439.6 57.5 L441.7 58.0 L443.8 58.5 L445.9 59.0 L448.0 59.5 L450.1 60.0 L452.2 60.5 L454.3 61.0 L456.4 61.5 L458.5 62.1 L460.6 62.6 L462.7 63.1 L464.8 63.6 L466.9 64.2 L469.0 64.7 L471.1 65.2 L473.2 65.7 L475.3 66.3 L477.4 66.8 L479.5 67.3 L481.6 67.9 L483.7 68.4 L485.8 68.9 L487.9 69.5 L490.0 70.0" fill="none" stroke="#b3261e" stroke-width="4"/></g>
+<circle cx="70.0" cy="70" r="5" fill="#06244a"/>
+<circle cx="490.0" cy="70" r="5" fill="#06244a"/>
+<path d="M70.0 160.0 L72.1 158.9 L74.2 157.9 L76.3 156.8 L78.4 155.7 L80.5 154.7 L82.6 153.6 L84.7 152.6 L86.8 151.5 L88.9 150.5 L91.0 149.5 L93.1 148.5 L95.2 147.5 L97.3 146.5 L99.4 145.5 L101.5 144.6 L103.6 143.6 L105.7 142.7 L107.8 141.8 L109.9 140.9 L112.0 140.0 L114.1 139.2 L116.2 138.3 L118.3 137.5 L120.4 136.7 L122.5 136.0 L124.6 135.2 L126.7 134.5 L128.8 133.8 L130.9 133.1 L133.0 132.5 L135.1 131.9 L137.2 131.3 L139.3 130.7 L141.4 130.2 L143.5 129.7 L145.6 129.2 L147.7 128.8 L149.8 128.4 L151.9 128.0 L154.0 127.7 L156.1 127.4 L158.2 127.1 L160.3 126.8 L162.4 126.6 L164.5 126.4 L166.6 126.3 L168.7 126.2 L170.8 126.1 L172.9 126.0 L175.0 126.0 L177.1 126.0 L179.2 126.1 L181.3 126.2 L183.4 126.3 L185.5 126.4 L187.6 126.6 L189.7 126.8 L191.8 127.1 L193.9 127.4 L196.0 127.7 L198.1 128.0 L200.2 128.4 L202.3 128.8 L204.4 129.2 L206.5 129.7 L208.6 130.2 L210.7 130.7 L212.8 131.3 L214.9 131.9 L217.0 132.5 L219.1 133.1 L221.2 133.8 L223.3 134.5 L225.4 135.2 L227.5 136.0 L229.6 136.7 L231.7 137.5 L233.8 138.3 L235.9 139.2 L238.0 140.0 L240.1 140.9 L242.2 141.8 L244.3 142.7 L246.4 143.6 L248.5 144.6 L250.6 145.5 L252.7 146.5 L254.8 147.5 L256.9 148.5 L259.0 149.5 L261.1 150.5 L263.2 151.5 L265.3 152.6 L267.4 153.6 L269.5 154.7 L271.6 155.7 L273.7 156.8 L275.8 157.9 L277.9 158.9 L280.0 160.0 L282.1 161.1 L284.2 162.1 L286.3 163.2 L288.4 164.3 L290.5 165.3 L292.6 166.4 L294.7 167.4 L296.8 168.5 L298.9 169.5 L301.0 170.5 L303.1 171.5 L305.2 172.5 L307.3 173.5 L309.4 174.5 L311.5 175.4 L313.6 176.4 L315.7 177.3 L317.8 178.2 L319.9 179.1 L322.0 180.0 L324.1 180.8 L326.2 181.7 L328.3 182.5 L330.4 183.3 L332.5 184.0 L334.6 184.8 L336.7 185.5 L338.8 186.2 L340.9 186.9 L343.0 187.5 L345.1 188.1 L347.2 188.7 L349.3 189.3 L351.4 189.8 L353.5 190.3 L355.6 190.8 L357.7 191.2 L359.8 191.6 L361.9 192.0 L364.0 192.3 L366.1 192.6 L368.2 192.9 L370.3 193.2 L372.4 193.4 L374.5 193.6 L376.6 193.7 L378.7 193.8 L380.8 193.9 L382.9 194.0 L385.0 194.0 L387.1 194.0 L389.2 193.9 L391.3 193.8 L393.4 193.7 L395.5 193.6 L397.6 193.4 L399.7 193.2 L401.8 192.9 L403.9 192.6 L406.0 192.3 L408.1 192.0 L410.2 191.6 L412.3 191.2 L414.4 190.8 L416.5 190.3 L418.6 189.8 L420.7 189.3 L422.8 188.7 L424.9 188.1 L427.0 187.5 L429.1 186.9 L431.2 186.2 L433.3 185.5 L435.4 184.8 L437.5 184.0 L439.6 183.3 L441.7 182.5 L443.8 181.7 L445.9 180.8 L448.0 180.0 L450.1 179.1 L452.2 178.2 L454.3 177.3 L456.4 176.4 L458.5 175.4 L460.6 174.5 L462.7 173.5 L464.8 172.5 L466.9 171.5 L469.0 170.5 L471.1 169.5 L473.2 168.5 L475.3 167.4 L477.4 166.4 L479.5 165.3 L481.6 164.3 L483.7 163.2 L485.8 162.1 L487.9 161.1 L490.0 160.0" fill="none" stroke="#c9ced6" stroke-width="2" stroke-dasharray="5 4"/><path d="M70.0 160.0 L72.1 161.1 L74.2 162.1 L76.3 163.2 L78.4 164.3 L80.5 165.3 L82.6 166.4 L84.7 167.4 L86.8 168.5 L88.9 169.5 L91.0 170.5 L93.1 171.5 L95.2 172.5 L97.3 173.5 L99.4 174.5 L101.5 175.4 L103.6 176.4 L105.7 177.3 L107.8 178.2 L109.9 179.1 L112.0 180.0 L114.1 180.8 L116.2 181.7 L118.3 182.5 L120.4 183.3 L122.5 184.0 L124.6 184.8 L126.7 185.5 L128.8 186.2 L130.9 186.9 L133.0 187.5 L135.1 188.1 L137.2 188.7 L139.3 189.3 L141.4 189.8 L143.5 190.3 L145.6 190.8 L147.7 191.2 L149.8 191.6 L151.9 192.0 L154.0 192.3 L156.1 192.6 L158.2 192.9 L160.3 193.2 L162.4 193.4 L164.5 193.6 L166.6 193.7 L168.7 193.8 L170.8 193.9 L172.9 194.0 L175.0 194.0 L177.1 194.0 L179.2 193.9 L181.3 193.8 L183.4 193.7 L185.5 193.6 L187.6 193.4 L189.7 193.2 L191.8 192.9 L193.9 192.6 L196.0 192.3 L198.1 192.0 L200.2 191.6 L202.3 191.2 L204.4 190.8 L206.5 190.3 L208.6 189.8 L210.7 189.3 L212.8 188.7 L214.9 188.1 L217.0 187.5 L219.1 186.9 L221.2 186.2 L223.3 185.5 L225.4 184.8 L227.5 184.0 L229.6 183.3 L231.7 182.5 L233.8 181.7 L235.9 180.8 L238.0 180.0 L240.1 179.1 L242.2 178.2 L244.3 177.3 L246.4 176.4 L248.5 175.4 L250.6 174.5 L252.7 173.5 L254.8 172.5 L256.9 171.5 L259.0 170.5 L261.1 169.5 L263.2 168.5 L265.3 167.4 L267.4 166.4 L269.5 165.3 L271.6 164.3 L273.7 163.2 L275.8 162.1 L277.9 161.1 L280.0 160.0 L282.1 158.9 L284.2 157.9 L286.3 156.8 L288.4 155.7 L290.5 154.7 L292.6 153.6 L294.7 152.6 L296.8 151.5 L298.9 150.5 L301.0 149.5 L303.1 148.5 L305.2 147.5 L307.3 146.5 L309.4 145.5 L311.5 144.6 L313.6 143.6 L315.7 142.7 L317.8 141.8 L319.9 140.9 L322.0 140.0 L324.1 139.2 L326.2 138.3 L328.3 137.5 L330.4 136.7 L332.5 136.0 L334.6 135.2 L336.7 134.5 L338.8 133.8 L340.9 133.1 L343.0 132.5 L345.1 131.9 L347.2 131.3 L349.3 130.7 L351.4 130.2 L353.5 129.7 L355.6 129.2 L357.7 128.8 L359.8 128.4 L361.9 128.0 L364.0 127.7 L366.1 127.4 L368.2 127.1 L370.3 126.8 L372.4 126.6 L374.5 126.4 L376.6 126.3 L378.7 126.2 L380.8 126.1 L382.9 126.0 L385.0 126.0 L387.1 126.0 L389.2 126.1 L391.3 126.2 L393.4 126.3 L395.5 126.4 L397.6 126.6 L399.7 126.8 L401.8 127.1 L403.9 127.4 L406.0 127.7 L408.1 128.0 L410.2 128.4 L412.3 128.8 L414.4 129.2 L416.5 129.7 L418.6 130.2 L420.7 130.7 L422.8 131.3 L424.9 131.9 L427.0 132.5 L429.1 133.1 L431.2 133.8 L433.3 134.5 L435.4 135.2 L437.5 136.0 L439.6 136.7 L441.7 137.5 L443.8 138.3 L445.9 139.2 L448.0 140.0 L450.1 140.9 L452.2 141.8 L454.3 142.7 L456.4 143.6 L458.5 144.6 L460.6 145.5 L462.7 146.5 L464.8 147.5 L466.9 148.5 L469.0 149.5 L471.1 150.5 L473.2 151.5 L475.3 152.6 L477.4 153.6 L479.5 154.7 L481.6 155.7 L483.7 156.8 L485.8 157.9 L487.9 158.9 L490.0 160.0" fill="none" stroke="#c9ced6" stroke-width="2" stroke-dasharray="5 4"/>
+<g class="stand" style="transform-origin:280px 160px"><path d="M70.0 160.0 L72.1 158.9 L74.2 157.9 L76.3 156.8 L78.4 155.7 L80.5 154.7 L82.6 153.6 L84.7 152.6 L86.8 151.5 L88.9 150.5 L91.0 149.5 L93.1 148.5 L95.2 147.5 L97.3 146.5 L99.4 145.5 L101.5 144.6 L103.6 143.6 L105.7 142.7 L107.8 141.8 L109.9 140.9 L112.0 140.0 L114.1 139.2 L116.2 138.3 L118.3 137.5 L120.4 136.7 L122.5 136.0 L124.6 135.2 L126.7 134.5 L128.8 133.8 L130.9 133.1 L133.0 132.5 L135.1 131.9 L137.2 131.3 L139.3 130.7 L141.4 130.2 L143.5 129.7 L145.6 129.2 L147.7 128.8 L149.8 128.4 L151.9 128.0 L154.0 127.7 L156.1 127.4 L158.2 127.1 L160.3 126.8 L162.4 126.6 L164.5 126.4 L166.6 126.3 L168.7 126.2 L170.8 126.1 L172.9 126.0 L175.0 126.0 L177.1 126.0 L179.2 126.1 L181.3 126.2 L183.4 126.3 L185.5 126.4 L187.6 126.6 L189.7 126.8 L191.8 127.1 L193.9 127.4 L196.0 127.7 L198.1 128.0 L200.2 128.4 L202.3 128.8 L204.4 129.2 L206.5 129.7 L208.6 130.2 L210.7 130.7 L212.8 131.3 L214.9 131.9 L217.0 132.5 L219.1 133.1 L221.2 133.8 L223.3 134.5 L225.4 135.2 L227.5 136.0 L229.6 136.7 L231.7 137.5 L233.8 138.3 L235.9 139.2 L238.0 140.0 L240.1 140.9 L242.2 141.8 L244.3 142.7 L246.4 143.6 L248.5 144.6 L250.6 145.5 L252.7 146.5 L254.8 147.5 L256.9 148.5 L259.0 149.5 L261.1 150.5 L263.2 151.5 L265.3 152.6 L267.4 153.6 L269.5 154.7 L271.6 155.7 L273.7 156.8 L275.8 157.9 L277.9 158.9 L280.0 160.0 L282.1 161.1 L284.2 162.1 L286.3 163.2 L288.4 164.3 L290.5 165.3 L292.6 166.4 L294.7 167.4 L296.8 168.5 L298.9 169.5 L301.0 170.5 L303.1 171.5 L305.2 172.5 L307.3 173.5 L309.4 174.5 L311.5 175.4 L313.6 176.4 L315.7 177.3 L317.8 178.2 L319.9 179.1 L322.0 180.0 L324.1 180.8 L326.2 181.7 L328.3 182.5 L330.4 183.3 L332.5 184.0 L334.6 184.8 L336.7 185.5 L338.8 186.2 L340.9 186.9 L343.0 187.5 L345.1 188.1 L347.2 188.7 L349.3 189.3 L351.4 189.8 L353.5 190.3 L355.6 190.8 L357.7 191.2 L359.8 191.6 L361.9 192.0 L364.0 192.3 L366.1 192.6 L368.2 192.9 L370.3 193.2 L372.4 193.4 L374.5 193.6 L376.6 193.7 L378.7 193.8 L380.8 193.9 L382.9 194.0 L385.0 194.0 L387.1 194.0 L389.2 193.9 L391.3 193.8 L393.4 193.7 L395.5 193.6 L397.6 193.4 L399.7 193.2 L401.8 192.9 L403.9 192.6 L406.0 192.3 L408.1 192.0 L410.2 191.6 L412.3 191.2 L414.4 190.8 L416.5 190.3 L418.6 189.8 L420.7 189.3 L422.8 188.7 L424.9 188.1 L427.0 187.5 L429.1 186.9 L431.2 186.2 L433.3 185.5 L435.4 184.8 L437.5 184.0 L439.6 183.3 L441.7 182.5 L443.8 181.7 L445.9 180.8 L448.0 180.0 L450.1 179.1 L452.2 178.2 L454.3 177.3 L456.4 176.4 L458.5 175.4 L460.6 174.5 L462.7 173.5 L464.8 172.5 L466.9 171.5 L469.0 170.5 L471.1 169.5 L473.2 168.5 L475.3 167.4 L477.4 166.4 L479.5 165.3 L481.6 164.3 L483.7 163.2 L485.8 162.1 L487.9 161.1 L490.0 160.0" fill="none" stroke="#b3261e" stroke-width="4"/></g>
+<circle cx="70.0" cy="160" r="5" fill="#06244a"/>
+<circle cx="280.0" cy="160" r="5" fill="#06244a"/>
+<circle cx="490.0" cy="160" r="5" fill="#06244a"/>
+<path d="M70.0 250.0 L72.1 248.4 L74.2 246.8 L76.3 245.2 L78.4 243.6 L80.5 242.1 L82.6 240.5 L84.7 239.0 L86.8 237.5 L88.9 236.0 L91.0 234.6 L93.1 233.2 L95.2 231.8 L97.3 230.4 L99.4 229.2 L101.5 227.9 L103.6 226.7 L105.7 225.6 L107.8 224.5 L109.9 223.5 L112.0 222.5 L114.1 221.6 L116.2 220.7 L118.3 220.0 L120.4 219.2 L122.5 218.6 L124.6 218.0 L126.7 217.5 L128.8 217.1 L130.9 216.7 L133.0 216.4 L135.1 216.2 L137.2 216.1 L139.3 216.0 L141.4 216.0 L143.5 216.1 L145.6 216.3 L147.7 216.5 L149.8 216.8 L151.9 217.2 L154.0 217.7 L156.1 218.2 L158.2 218.8 L160.3 219.5 L162.4 220.2 L164.5 221.0 L166.6 221.9 L168.7 222.8 L170.8 223.8 L172.9 224.9 L175.0 226.0 L177.1 227.1 L179.2 228.3 L181.3 229.6 L183.4 230.9 L185.5 232.2 L187.6 233.6 L189.7 235.0 L191.8 236.5 L193.9 238.0 L196.0 239.5 L198.1 241.0 L200.2 242.6 L202.3 244.2 L204.4 245.7 L206.5 247.3 L208.6 248.9 L210.7 250.5 L212.8 252.1 L214.9 253.7 L217.0 255.3 L219.1 256.9 L221.2 258.5 L223.3 260.0 L225.4 261.5 L227.5 263.0 L229.6 264.5 L231.7 265.9 L233.8 267.3 L235.9 268.7 L238.0 270.0 L240.1 271.3 L242.2 272.5 L244.3 273.7 L246.4 274.8 L248.5 275.9 L250.6 276.9 L252.7 277.8 L254.8 278.7 L256.9 279.5 L259.0 280.3 L261.1 281.0 L263.2 281.6 L265.3 282.2 L267.4 282.6 L269.5 283.1 L271.6 283.4 L273.7 283.7 L275.8 283.8 L277.9 284.0 L280.0 284.0 L282.1 284.0 L284.2 283.8 L286.3 283.7 L288.4 283.4 L290.5 283.1 L292.6 282.6 L294.7 282.2 L296.8 281.6 L298.9 281.0 L301.0 280.3 L303.1 279.5 L305.2 278.7 L307.3 277.8 L309.4 276.9 L311.5 275.9 L313.6 274.8 L315.7 273.7 L317.8 272.5 L319.9 271.3 L322.0 270.0 L324.1 268.7 L326.2 267.3 L328.3 265.9 L330.4 264.5 L332.5 263.0 L334.6 261.5 L336.7 260.0 L338.8 258.5 L340.9 256.9 L343.0 255.3 L345.1 253.7 L347.2 252.1 L349.3 250.5 L351.4 248.9 L353.5 247.3 L355.6 245.7 L357.7 244.2 L359.8 242.6 L361.9 241.0 L364.0 239.5 L366.1 238.0 L368.2 236.5 L370.3 235.0 L372.4 233.6 L374.5 232.2 L376.6 230.9 L378.7 229.6 L380.8 228.3 L382.9 227.1 L385.0 226.0 L387.1 224.9 L389.2 223.8 L391.3 222.8 L393.4 221.9 L395.5 221.0 L397.6 220.2 L399.7 219.5 L401.8 218.8 L403.9 218.2 L406.0 217.7 L408.1 217.2 L410.2 216.8 L412.3 216.5 L414.4 216.3 L416.5 216.1 L418.6 216.0 L420.7 216.0 L422.8 216.1 L424.9 216.2 L427.0 216.4 L429.1 216.7 L431.2 217.1 L433.3 217.5 L435.4 218.0 L437.5 218.6 L439.6 219.2 L441.7 220.0 L443.8 220.7 L445.9 221.6 L448.0 222.5 L450.1 223.5 L452.2 224.5 L454.3 225.6 L456.4 226.7 L458.5 227.9 L460.6 229.2 L462.7 230.4 L464.8 231.8 L466.9 233.2 L469.0 234.6 L471.1 236.0 L473.2 237.5 L475.3 239.0 L477.4 240.5 L479.5 242.1 L481.6 243.6 L483.7 245.2 L485.8 246.8 L487.9 248.4 L490.0 250.0" fill="none" stroke="#c9ced6" stroke-width="2" stroke-dasharray="5 4"/><path d="M70.0 250.0 L72.1 251.6 L74.2 253.2 L76.3 254.8 L78.4 256.4 L80.5 257.9 L82.6 259.5 L84.7 261.0 L86.8 262.5 L88.9 264.0 L91.0 265.4 L93.1 266.8 L95.2 268.2 L97.3 269.6 L99.4 270.8 L101.5 272.1 L103.6 273.3 L105.7 274.4 L107.8 275.5 L109.9 276.5 L112.0 277.5 L114.1 278.4 L116.2 279.3 L118.3 280.0 L120.4 280.8 L122.5 281.4 L124.6 282.0 L126.7 282.5 L128.8 282.9 L130.9 283.3 L133.0 283.6 L135.1 283.8 L137.2 283.9 L139.3 284.0 L141.4 284.0 L143.5 283.9 L145.6 283.7 L147.7 283.5 L149.8 283.2 L151.9 282.8 L154.0 282.3 L156.1 281.8 L158.2 281.2 L160.3 280.5 L162.4 279.8 L164.5 279.0 L166.6 278.1 L168.7 277.2 L170.8 276.2 L172.9 275.1 L175.0 274.0 L177.1 272.9 L179.2 271.7 L181.3 270.4 L183.4 269.1 L185.5 267.8 L187.6 266.4 L189.7 265.0 L191.8 263.5 L193.9 262.0 L196.0 260.5 L198.1 259.0 L200.2 257.4 L202.3 255.8 L204.4 254.3 L206.5 252.7 L208.6 251.1 L210.7 249.5 L212.8 247.9 L214.9 246.3 L217.0 244.7 L219.1 243.1 L221.2 241.5 L223.3 240.0 L225.4 238.5 L227.5 237.0 L229.6 235.5 L231.7 234.1 L233.8 232.7 L235.9 231.3 L238.0 230.0 L240.1 228.7 L242.2 227.5 L244.3 226.3 L246.4 225.2 L248.5 224.1 L250.6 223.1 L252.7 222.2 L254.8 221.3 L256.9 220.5 L259.0 219.7 L261.1 219.0 L263.2 218.4 L265.3 217.8 L267.4 217.4 L269.5 216.9 L271.6 216.6 L273.7 216.3 L275.8 216.2 L277.9 216.0 L280.0 216.0 L282.1 216.0 L284.2 216.2 L286.3 216.3 L288.4 216.6 L290.5 216.9 L292.6 217.4 L294.7 217.8 L296.8 218.4 L298.9 219.0 L301.0 219.7 L303.1 220.5 L305.2 221.3 L307.3 222.2 L309.4 223.1 L311.5 224.1 L313.6 225.2 L315.7 226.3 L317.8 227.5 L319.9 228.7 L322.0 230.0 L324.1 231.3 L326.2 232.7 L328.3 234.1 L330.4 235.5 L332.5 237.0 L334.6 238.5 L336.7 240.0 L338.8 241.5 L340.9 243.1 L343.0 244.7 L345.1 246.3 L347.2 247.9 L349.3 249.5 L351.4 251.1 L353.5 252.7 L355.6 254.3 L357.7 255.8 L359.8 257.4 L361.9 259.0 L364.0 260.5 L366.1 262.0 L368.2 263.5 L370.3 265.0 L372.4 266.4 L374.5 267.8 L376.6 269.1 L378.7 270.4 L380.8 271.7 L382.9 272.9 L385.0 274.0 L387.1 275.1 L389.2 276.2 L391.3 277.2 L393.4 278.1 L395.5 279.0 L397.6 279.8 L399.7 280.5 L401.8 281.2 L403.9 281.8 L406.0 282.3 L408.1 282.8 L410.2 283.2 L412.3 283.5 L414.4 283.7 L416.5 283.9 L418.6 284.0 L420.7 284.0 L422.8 283.9 L424.9 283.8 L427.0 283.6 L429.1 283.3 L431.2 282.9 L433.3 282.5 L435.4 282.0 L437.5 281.4 L439.6 280.8 L441.7 280.0 L443.8 279.3 L445.9 278.4 L448.0 277.5 L450.1 276.5 L452.2 275.5 L454.3 274.4 L456.4 273.3 L458.5 272.1 L460.6 270.8 L462.7 269.6 L464.8 268.2 L466.9 266.8 L469.0 265.4 L471.1 264.0 L473.2 262.5 L475.3 261.0 L477.4 259.5 L479.5 257.9 L481.6 256.4 L483.7 254.8 L485.8 253.2 L487.9 251.6 L490.0 250.0" fill="none" stroke="#c9ced6" stroke-width="2" stroke-dasharray="5 4"/>
+<g class="stand" style="transform-origin:280px 250px"><path d="M70.0 250.0 L72.1 248.4 L74.2 246.8 L76.3 245.2 L78.4 243.6 L80.5 242.1 L82.6 240.5 L84.7 239.0 L86.8 237.5 L88.9 236.0 L91.0 234.6 L93.1 233.2 L95.2 231.8 L97.3 230.4 L99.4 229.2 L101.5 227.9 L103.6 226.7 L105.7 225.6 L107.8 224.5 L109.9 223.5 L112.0 222.5 L114.1 221.6 L116.2 220.7 L118.3 220.0 L120.4 219.2 L122.5 218.6 L124.6 218.0 L126.7 217.5 L128.8 217.1 L130.9 216.7 L133.0 216.4 L135.1 216.2 L137.2 216.1 L139.3 216.0 L141.4 216.0 L143.5 216.1 L145.6 216.3 L147.7 216.5 L149.8 216.8 L151.9 217.2 L154.0 217.7 L156.1 218.2 L158.2 218.8 L160.3 219.5 L162.4 220.2 L164.5 221.0 L166.6 221.9 L168.7 222.8 L170.8 223.8 L172.9 224.9 L175.0 226.0 L177.1 227.1 L179.2 228.3 L181.3 229.6 L183.4 230.9 L185.5 232.2 L187.6 233.6 L189.7 235.0 L191.8 236.5 L193.9 238.0 L196.0 239.5 L198.1 241.0 L200.2 242.6 L202.3 244.2 L204.4 245.7 L206.5 247.3 L208.6 248.9 L210.7 250.5 L212.8 252.1 L214.9 253.7 L217.0 255.3 L219.1 256.9 L221.2 258.5 L223.3 260.0 L225.4 261.5 L227.5 263.0 L229.6 264.5 L231.7 265.9 L233.8 267.3 L235.9 268.7 L238.0 270.0 L240.1 271.3 L242.2 272.5 L244.3 273.7 L246.4 274.8 L248.5 275.9 L250.6 276.9 L252.7 277.8 L254.8 278.7 L256.9 279.5 L259.0 280.3 L261.1 281.0 L263.2 281.6 L265.3 282.2 L267.4 282.6 L269.5 283.1 L271.6 283.4 L273.7 283.7 L275.8 283.8 L277.9 284.0 L280.0 284.0 L282.1 284.0 L284.2 283.8 L286.3 283.7 L288.4 283.4 L290.5 283.1 L292.6 282.6 L294.7 282.2 L296.8 281.6 L298.9 281.0 L301.0 280.3 L303.1 279.5 L305.2 278.7 L307.3 277.8 L309.4 276.9 L311.5 275.9 L313.6 274.8 L315.7 273.7 L317.8 272.5 L319.9 271.3 L322.0 270.0 L324.1 268.7 L326.2 267.3 L328.3 265.9 L330.4 264.5 L332.5 263.0 L334.6 261.5 L336.7 260.0 L338.8 258.5 L340.9 256.9 L343.0 255.3 L345.1 253.7 L347.2 252.1 L349.3 250.5 L351.4 248.9 L353.5 247.3 L355.6 245.7 L357.7 244.2 L359.8 242.6 L361.9 241.0 L364.0 239.5 L366.1 238.0 L368.2 236.5 L370.3 235.0 L372.4 233.6 L374.5 232.2 L376.6 230.9 L378.7 229.6 L380.8 228.3 L382.9 227.1 L385.0 226.0 L387.1 224.9 L389.2 223.8 L391.3 222.8 L393.4 221.9 L395.5 221.0 L397.6 220.2 L399.7 219.5 L401.8 218.8 L403.9 218.2 L406.0 217.7 L408.1 217.2 L410.2 216.8 L412.3 216.5 L414.4 216.3 L416.5 216.1 L418.6 216.0 L420.7 216.0 L422.8 216.1 L424.9 216.2 L427.0 216.4 L429.1 216.7 L431.2 217.1 L433.3 217.5 L435.4 218.0 L437.5 218.6 L439.6 219.2 L441.7 220.0 L443.8 220.7 L445.9 221.6 L448.0 222.5 L450.1 223.5 L452.2 224.5 L454.3 225.6 L456.4 226.7 L458.5 227.9 L460.6 229.2 L462.7 230.4 L464.8 231.8 L466.9 233.2 L469.0 234.6 L471.1 236.0 L473.2 237.5 L475.3 239.0 L477.4 240.5 L479.5 242.1 L481.6 243.6 L483.7 245.2 L485.8 246.8 L487.9 248.4 L490.0 250.0" fill="none" stroke="#b3261e" stroke-width="4"/></g>
+<circle cx="70.0" cy="250" r="5" fill="#06244a"/>
+<circle cx="210.0" cy="250" r="5" fill="#06244a"/>
+<circle cx="350.0" cy="250" r="5" fill="#06244a"/>
+<circle cx="490.0" cy="250" r="5" fill="#06244a"/>
+<g font-size="13" font-weight="700" fill="#06244a"><text x="20" y="30">1st harmonic (fundamental): L = ½λ</text><text x="20" y="120">2nd harmonic: L = λ</text><text x="20" y="210">3rd harmonic: L = 1½λ</text></g>
+</svg>
+<div class="diagram-caption">Figure 6. Standing waves on a string fixed at both ends. The black dots are nodes. (Original EDUSAMBAM diagram.)</div>
+</div>
+<div class="worked"><div class="ex-label">Worked example 6: a guitar string</div>
+<p>A guitar string 0.65 m long carries waves at 260 m/s. Find the frequency of the fundamental and of the second harmonic.</p>
+<p class="step">Fundamental: λ₁ = 2L = 1.30 m, so f₁ = v ÷ λ₁ = 260 ÷ 1.30 = <strong>200 Hz</strong>.</p>
+<p class="step">Second harmonic: f₂ = 2f₁ = <strong>400 Hz</strong> (λ₂ = 0.65 m).</p></div>
+<p>Standing waves explain how <strong>musical instruments</strong> work: guitar and violin strings, air columns in flutes and organ pipes, and the vibrating skin of drums. They are also the reason for "hot spots" and "cold spots" in a microwave oven (which is why it has a turntable) and for the sound resonating in a bathroom or a bottle when you blow across the top.</p>
+
+<h2 id="polar"><span class="num">10.</span>Polarisation</h2>
+<p>A transverse wave can vibrate in many directions at right angles to its direction of travel. If the vibrations are limited to one plane, the wave is <strong>plane-polarised</strong>. Longitudinal waves cannot be polarised because they vibrate along the direction of travel, so the fact that <strong>light can be polarised</strong> proved that light is a transverse wave. A polarising filter, such as the material in <strong>polarised sunglasses</strong>, lets through only light vibrating in one direction. Because light reflected from a road or water surface is partly polarised horizontally, polarised lenses cut glare. Radio and TV aerials must be lined up with the polarisation of the transmitted signal.</p>
+
+<h2 id="em"><span class="num">11.</span>The Electromagnetic Spectrum</h2>
+<p>EM waves are transverse waves that travel at c in a vacuum. They differ in frequency and wavelength, which determines how they interact with matter. All obey v = fλ with v = c.</p>
+<table class="pos-table"><tr><th>Region</th><th>Wavelength (approx.)</th><th>Frequency (approx.)</th><th>Examples of use</th><th>Hazard</th></tr>
+<tr><td>Radio</td><td>&gt; 1 m</td><td>&lt; 3 × 10⁸ Hz</td><td>Broadcasting, communications</td><td>Very low at normal levels</td></tr>
+<tr><td>Microwave</td><td>1 mm–1 m</td><td>3 × 10⁸–3 × 10¹¹ Hz</td><td>Cooking, mobile phones, radar, satellite</td><td>Internal heating at high intensity</td></tr>
+<tr><td>Infrared</td><td>0.7 µm–1 mm</td><td>3 × 10¹¹–4 × 10¹⁴ Hz</td><td>Heating, remote controls, night vision</td><td>Skin burns</td></tr>
+<tr><td>Visible light</td><td>400–700 nm</td><td>4.3 × 10¹⁴–7.5 × 10¹⁴ Hz</td><td>Seeing, photography, fibre optics</td><td>Eye damage from very bright sources</td></tr>
+<tr><td>Ultraviolet</td><td>10–400 nm</td><td>7.5 × 10¹⁴–3 × 10¹⁶ Hz</td><td>Sterilising, security marks, vitamin D</td><td>Sunburn, skin cancer, eye damage</td></tr>
+<tr><td>X-rays</td><td>0.01–10 nm</td><td>3 × 10¹⁶–3 × 10¹⁹ Hz</td><td>Medical imaging, security scanners</td><td>Ionising: can damage cells</td></tr>
+<tr><td>Gamma rays</td><td>&lt; 0.01 nm</td><td>&gt; 3 × 10¹⁹ Hz</td><td>Radiotherapy, sterilising, tracers</td><td>Ionising: can damage cells</td></tr></table>
+<p>Higher-frequency EM waves carry more energy per photon, which is why UV, X-rays and gamma rays can ionise atoms and harm living tissue, while radio waves cannot. The spectrum and its uses are described further in the articles on light and on atomic and nuclear physics.</p>
+<p><strong>The Doppler effect</strong> applies to all waves: if a source and observer move towards each other, the observed frequency is higher; if they move apart, it is lower. Radar speed guns, medical blood-flow scanners and the "red shift" of light from distant galaxies all use it (see the articles on sound and on gravity and space).</p>
+
+<h2 id="nature"><span class="num">12.</span>Waves in Nature: Earthquakes and Tsunamis</h2>
+<p>An earthquake sends out several types of wave through and over the Earth. <strong>P waves</strong> (primary) are longitudinal and travel fastest (about 6 km/s in the crust), so they arrive first. <strong>S waves</strong> (secondary) are transverse and slower, and they <strong>cannot travel through liquids</strong>. Because S waves from an earthquake do not reach the opposite side of the Earth, seismologists concluded that the Earth has a <strong>liquid outer core</strong>. <strong>Surface waves</strong> travel along the ground and cause most of the damage. Seismometers record all of these, and comparing the arrival times at several stations locates the earthquake.</p>
+<p>A <strong>tsunami</strong> is a series of very long water waves, usually caused by an undersea earthquake, landslide or volcanic eruption. In the deep ocean its wavelength may be hundreds of kilometres, so it is only a small bump in the open sea, but it travels extremely fast because the speed of such long waves depends on the depth: v = √(g × d).</p>
+<div class="worked"><div class="ex-label">Worked example 7: speed of a tsunami</div>
+<p>Find the speed of a tsunami (a) in ocean 4000 m deep and (b) in water 10 m deep near the coast. (g = 9.8 m/s²)</p>
+<p class="step">(a) v = √(9.8 × 4000) = √39 200 ≈ <strong>198 m/s</strong>, about 710 km/h, similar to a jet airliner.</p>
+<p class="step">(b) v = √(9.8 × 10) = √98 ≈ <strong>9.9 m/s</strong>, about 36 km/h.</p>
+<p>As the wave slows near the coast, the energy it carries is squeezed into a shorter wavelength and the wave grows much taller, a process called shoaling. Many countries operate tsunami warning systems, and people near the coast should move inland or to high ground immediately after a strong earthquake or an official warning.</p></div>
+
+<h2 id="mistakes"><span class="num">13.</span>Common Mistakes to Avoid</h2>
+<div class="mistake-box"><div class="ex-label">Watch out</div><ul>
+<li><strong>"A wave carries matter along."</strong> It carries energy; the particles only vibrate about a fixed position.</li>
+<li><strong>Mixing up transverse and longitudinal.</strong> Look at the direction of vibration compared with the direction of travel.</li>
+<li><strong>Confusing the two graphs.</strong> Wavelength comes from displacement–distance graphs; period comes from displacement–time graphs.</li>
+<li><strong>Thinking frequency changes when a wave enters a new medium.</strong> The frequency stays the same; speed and wavelength change.</li>
+<li><strong>Bending the wrong way.</strong> A wave that slows down bends towards the normal; one that speeds up bends away.</li>
+<li><strong>"Diffraction only happens with small gaps."</strong> It happens with all gaps, but is noticeable when the gap is about one wavelength or less.</li>
+<li><strong>Forgetting unit conversions</strong> (MHz to Hz, nm to m, cm to m) in v = fλ.</li>
+<li><strong>Believing destructive interference destroys energy.</strong> The energy is redistributed to other places, such as the bright fringes in Young's experiment.</li>
+</ul></div>
+
+<h2 id="check"><span class="num">14.</span>Check Your Understanding</h2>
+<p>Try each question before opening the answer.</p>
+<div class="cyu">
+<details><summary>1. A wave has a frequency of 4.0 Hz and a wavelength of 3.0 m. Find its speed and period.</summary><p>v = fλ = 4.0 × 3.0 = <strong>12 m/s</strong>. T = 1 ÷ f = 1 ÷ 4.0 = <strong>0.25 s</strong>.</p></details>
+<details><summary>2. Radio waves of frequency 90 MHz travel at 3.0 × 10⁸ m/s. What is the wavelength?</summary><p>λ = v ÷ f = 3.0 × 10⁸ ÷ 9.0 × 10⁷ ≈ <strong>3.3 m</strong>.</p></details>
+<details><summary>3. State one example of a transverse wave and one of a longitudinal wave.</summary><p>Transverse: light (or a wave on a rope). Longitudinal: sound (or a compression wave in a spring).</p></details>
+<details><summary>4. A wave of wavelength 8.0 cm and speed 24 cm/s moves into a region where its speed is 16 cm/s. What is the new wavelength?</summary><p>f = v ÷ λ = 24 ÷ 8.0 = 3.0 Hz (unchanged). λ = 16 ÷ 3.0 ≈ <strong>5.3 cm</strong>.</p></details>
+<details><summary>5. Why can you hear a person around a corner but not see them?</summary><p>Sound waves have wavelengths similar to the size of a doorway, so they diffract strongly. Light has a wavelength thousands of times smaller than a doorway, so it hardly diffracts.</p></details>
+<details><summary>6. Two sources emit waves of wavelength 0.20 m in phase. At a point, the paths from the two sources differ by 0.50 m. Is the interference constructive or destructive?</summary><p>Path difference ÷ λ = 0.50 ÷ 0.20 = 2.5 = (2 + ½), so it is <strong>destructive</strong>.</p></details>
+<details><summary>7. A string 0.50 m long, fixed at both ends, supports waves of speed 200 m/s. Find the frequency of its third harmonic.</summary><p>f₁ = v ÷ 2L = 200 ÷ 1.0 = 200 Hz. f₃ = 3 × 200 = <strong>600 Hz</strong>.</p></details>
+<details><summary>8. Why do S waves from an earthquake not pass through the Earth's outer core?</summary><p>S waves are transverse and cannot travel through a liquid. The fact that they do not pass through shows that the outer core is liquid.</p></details>
+</div>
+
+<h2>Summary</h2>
+<ul>
+<li>A wave transfers energy without transferring matter. Waves are mechanical (need a medium) or electromagnetic (do not).</li>
+<li>Transverse waves vibrate at right angles to the direction of travel; longitudinal waves vibrate along it.</li>
+<li>v = fλ and T = 1 ÷ f. Frequency is set by the source; speed is set by the medium.</li>
+<li>Waves reflect (i = r), refract (change direction when speed changes), diffract (spread at gaps and edges) and interfere (superpose).</li>
+<li>Standing waves form when waves reflect and superpose; on a string fixed at both ends, fₙ = n × v ÷ 2L.</li>
+<li>Polarisation shows that light is transverse. The electromagnetic spectrum runs from radio to gamma rays, all travelling at c in a vacuum.</li>
+</ul>
+
+<div class="teacher-note"><div class="ex-label">For teachers and parents</div>
+<p>Easy demonstrations: a long slinky (or a long spring) to show transverse and longitudinal pulses and reflection; a rope held by two students to find how the wavelength changes with frequency; a ripple tank (or a shallow tray of water with an overhead lamp and white paper underneath) to show reflection, refraction over a submerged glass plate, and diffraction through gaps made from wooden blocks; a free oscilloscope or tone-generator app on a phone to measure frequency and period; a laser pointer (never directed at eyes) through a hair or fine slit to see diffraction. Standing waves can be shown with a vibrating string, a Kundt's tube or a simple water-filled tube. Numerical values are rounded; please check that they match the data booklet used by your examination board.</p></div>
+
+<h2>Keep Learning on EDUSAMBAM</h2>
+<div class="related-grid">
+<a href="sound-how-we-hear-the-world.html">Sound: How We Hear the World<span>Longitudinal waves, echoes and the ear</span></a>
+<a href="light-reflection-refraction-color.html">Light: Reflection, Refraction and Colour<span>Mirrors, lenses and colour</span></a>
+<a href="atomic-and-nuclear-physics.html">Atomic and Nuclear Physics<span>Gamma rays and ionising radiation</span></a>
+<a href="electricity-and-magnetism-the-basics.html">Electricity and Magnetism: The Basics<span>Where electromagnetic waves come from</span></a>
+<a href="gravity-and-space.html">Gravity and Space<span>Starlight, redshift and the universe</span></a>
+<a href="energy-types-sources-transformations.html">Energy: Types, Sources and Transformations<span>Waves transfer energy</span></a>
+<a href="physics-quiz-race.html">Physics Quiz Race<span>Interactive practice game</span></a>
+<a href="physics-word-search.html">Physics Word Search<span>Learn key terms by playing</span></a>
+</div>
+
+<h2>Sources and Further Reading</h2>
+<p>This article is original EDUSAMBAM writing. Definitions, constants and facts were checked against the sources below. Diagrams are original and were not copied from any source.</p>
+<ul class="sources-list">
+<li><strong>OpenStax, University Physics Volume 1:</strong> waves, superposition and standing waves. <a href="https://openstax.org/details/books/university-physics-volume-1" target="_blank" rel="noopener">OpenStax — University Physics Volume 1</a>.</li>
+<li><strong>OpenStax, University Physics Volume 3:</strong> interference, diffraction and polarisation. <a href="https://openstax.org/details/books/university-physics-volume-3" target="_blank" rel="noopener">OpenStax — University Physics Volume 3</a>.</li>
+<li><strong>OpenStax, College Physics 2e:</strong> wave motion and the superposition of waves. <a href="https://openstax.org/details/books/college-physics-2e" target="_blank" rel="noopener">OpenStax — College Physics 2e</a>.</li>
+<li><strong>NASA:</strong> the electromagnetic spectrum. <a href="https://science.nasa.gov/ems/" target="_blank" rel="noopener">NASA — The Electromagnetic Spectrum</a>.</li>
+<li><strong>US Geological Survey:</strong> earthquake waves. <a href="https://www.usgs.gov/programs/earthquake-hazards" target="_blank" rel="noopener">USGS — Earthquake Hazards</a>. <strong>NOAA National Tsunami Warning Center:</strong> <a href="https://tsunami.gov/" target="_blank" rel="noopener">tsunami.gov</a>.</li>
+<li><strong>NIST:</strong> the speed of light in a vacuum. <a href="https://physics.nist.gov/cuu/Constants/" target="_blank" rel="noopener">NIST — Fundamental Physical Constants</a>.</li>
+<li><strong>Encyclopaedia Britannica:</strong> <a href="https://www.britannica.com/biography/Thomas-Young" target="_blank" rel="noopener">Thomas Young</a>; <a href="https://www.britannica.com/biography/Christiaan-Huygens" target="_blank" rel="noopener">Christiaan Huygens</a>.</li>
+</ul>
+<p><strong>Note on the numbers:</strong> typical speeds and wavelength ranges are rounded values; boundaries between EM regions overlap. Please check numerical values against your own syllabus or exam board specification before relying on them.</p>
+
+<!-- QUIZ SECTION -->
+<div class="quiz-section">
+<div class="section-eyebrow">Test Your Understanding</div>
+<h2>Practice Quiz</h2>
+<p class="quiz-intro">12 questions. Select an answer for each, then submit to see your score instantly.</p>
+<div class="squiz-progress"><div class="squiz-progress-fill" id="squizProgressFill"></div></div>
+<div class="squiz-progress-label" id="squizProgressLabel">0 of 12 answered</div>
+<div class="squiz-results" id="squizResults"><div class="squiz-score-big" id="squizScoreBig">0/12</div><div class="squiz-score-label" id="squizScoreLabel">You scored 0%</div><div class="squiz-score-tier" id="squizScoreTier">Keep practicing</div><div><button class="squiz-retake-btn" onclick="retakeQuiz()">Retake Quiz</button></div></div>
+<form id="squizForm">
+<div class="squiz-item" data-correct="1"><div class="squiz-q"><span class="qnum">1.</span>What does a wave transfer from one place to another?</div><div class="squiz-option"><input id="sq1a" name="sq1" type="radio" value="0"/><label for="sq1a">A. Matter</label></div><div class="squiz-option"><input id="sq1b" name="sq1" type="radio" value="1"/><label for="sq1b">B. Energy</label></div><div class="squiz-option"><input id="sq1c" name="sq1" type="radio" value="2"/><label for="sq1c">C. Mass</label></div><div class="squiz-option"><input id="sq1d" name="sq1" type="radio" value="3"/><label for="sq1d">D. Charge only</label></div></div>
+<div class="squiz-item" data-correct="1"><div class="squiz-q"><span class="qnum">2.</span>In a longitudinal wave, the vibrations are…</div><div class="squiz-option"><input id="sq2a" name="sq2" type="radio" value="0"/><label for="sq2a">A. At right angles to the direction of travel</label></div><div class="squiz-option"><input id="sq2b" name="sq2" type="radio" value="1"/><label for="sq2b">B. Parallel to the direction of travel</label></div><div class="squiz-option"><input id="sq2c" name="sq2" type="radio" value="2"/><label for="sq2c">C. Circular only</label></div><div class="squiz-option"><input id="sq2d" name="sq2" type="radio" value="3"/><label for="sq2d">D. Absent</label></div></div>
+<div class="squiz-item" data-correct="2"><div class="squiz-q"><span class="qnum">3.</span>Which of these is a transverse wave?</div><div class="squiz-option"><input id="sq3a" name="sq3" type="radio" value="0"/><label for="sq3a">A. Sound</label></div><div class="squiz-option"><input id="sq3b" name="sq3" type="radio" value="1"/><label for="sq3b">B. A compression wave in a spring</label></div><div class="squiz-option"><input id="sq3c" name="sq3" type="radio" value="2"/><label for="sq3c">C. Light</label></div><div class="squiz-option"><input id="sq3d" name="sq3" type="radio" value="3"/><label for="sq3d">D. P earthquake waves</label></div></div>
+<div class="squiz-item" data-correct="1"><div class="squiz-q"><span class="qnum">4.</span>A wave has frequency 10 Hz and wavelength 0.50 m. What is its speed?</div><div class="squiz-option"><input id="sq4a" name="sq4" type="radio" value="0"/><label for="sq4a">A. 0.05 m/s</label></div><div class="squiz-option"><input id="sq4b" name="sq4" type="radio" value="1"/><label for="sq4b">B. 5 m/s</label></div><div class="squiz-option"><input id="sq4c" name="sq4" type="radio" value="2"/><label for="sq4c">C. 20 m/s</label></div><div class="squiz-option"><input id="sq4d" name="sq4" type="radio" value="3"/><label for="sq4d">D. 10.5 m/s</label></div></div>
+<div class="squiz-item" data-correct="0"><div class="squiz-q"><span class="qnum">5.</span>What is the period of a wave of frequency 25 Hz?</div><div class="squiz-option"><input id="sq5a" name="sq5" type="radio" value="0"/><label for="sq5a">A. 0.04 s</label></div><div class="squiz-option"><input id="sq5b" name="sq5" type="radio" value="1"/><label for="sq5b">B. 0.25 s</label></div><div class="squiz-option"><input id="sq5c" name="sq5" type="radio" value="2"/><label for="sq5c">C. 25 s</label></div><div class="squiz-option"><input id="sq5d" name="sq5" type="radio" value="3"/><label for="sq5d">D. 2.5 s</label></div></div>
+<div class="squiz-item" data-correct="2"><div class="squiz-q"><span class="qnum">6.</span>When a wave passes from one medium into another, which quantity stays the same?</div><div class="squiz-option"><input id="sq6a" name="sq6" type="radio" value="0"/><label for="sq6a">A. Speed</label></div><div class="squiz-option"><input id="sq6b" name="sq6" type="radio" value="1"/><label for="sq6b">B. Wavelength</label></div><div class="squiz-option"><input id="sq6c" name="sq6" type="radio" value="2"/><label for="sq6c">C. Frequency</label></div><div class="squiz-option"><input id="sq6d" name="sq6" type="radio" value="3"/><label for="sq6d">D. Direction</label></div></div>
+<div class="squiz-item" data-correct="1"><div class="squiz-q"><span class="qnum">7.</span>A wave slows down as it enters a new medium. What happens to its wavelength?</div><div class="squiz-option"><input id="sq7a" name="sq7" type="radio" value="0"/><label for="sq7a">A. It increases</label></div><div class="squiz-option"><input id="sq7b" name="sq7" type="radio" value="1"/><label for="sq7b">B. It decreases</label></div><div class="squiz-option"><input id="sq7c" name="sq7" type="radio" value="2"/><label for="sq7c">C. It stays the same</label></div><div class="squiz-option"><input id="sq7d" name="sq7" type="radio" value="3"/><label for="sq7d">D. It becomes zero</label></div></div>
+<div class="squiz-item" data-correct="1"><div class="squiz-q"><span class="qnum">8.</span>Diffraction is most noticeable when the gap is…</div><div class="squiz-option"><input id="sq8a" name="sq8" type="radio" value="0"/><label for="sq8a">A. Much wider than the wavelength</label></div><div class="squiz-option"><input id="sq8b" name="sq8" type="radio" value="1"/><label for="sq8b">B. About the same size as the wavelength or smaller</label></div><div class="squiz-option"><input id="sq8c" name="sq8" type="radio" value="2"/><label for="sq8c">C. A thousand times wider than the wavelength</label></div><div class="squiz-option"><input id="sq8d" name="sq8" type="radio" value="3"/><label for="sq8d">D. Closed</label></div></div>
+<div class="squiz-item" data-correct="1"><div class="squiz-q"><span class="qnum">9.</span>Two identical waves meet crest to crest. What is this called?</div><div class="squiz-option"><input id="sq9a" name="sq9" type="radio" value="0"/><label for="sq9a">A. Destructive interference</label></div><div class="squiz-option"><input id="sq9b" name="sq9" type="radio" value="1"/><label for="sq9b">B. Constructive interference</label></div><div class="squiz-option"><input id="sq9c" name="sq9" type="radio" value="2"/><label for="sq9c">C. Polarisation</label></div><div class="squiz-option"><input id="sq9d" name="sq9" type="radio" value="3"/><label for="sq9d">D. Refraction</label></div></div>
+<div class="squiz-item" data-correct="1"><div class="squiz-q"><span class="qnum">10.</span>The path difference between two coherent in-phase sources at a point is 1.5 wavelengths. What happens there?</div><div class="squiz-option"><input id="sq10a" name="sq10" type="radio" value="0"/><label for="sq10a">A. Constructive interference</label></div><div class="squiz-option"><input id="sq10b" name="sq10" type="radio" value="1"/><label for="sq10b">B. Destructive interference</label></div><div class="squiz-option"><input id="sq10c" name="sq10" type="radio" value="2"/><label for="sq10c">C. No wave</label></div><div class="squiz-option"><input id="sq10d" name="sq10" type="radio" value="3"/><label for="sq10d">D. Total reflection</label></div></div>
+<div class="squiz-item" data-correct="2"><div class="squiz-q"><span class="qnum">11.</span>A string fixed at both ends has length 0.60 m. What is the wavelength of its fundamental standing wave?</div><div class="squiz-option"><input id="sq11a" name="sq11" type="radio" value="0"/><label for="sq11a">A. 0.30 m</label></div><div class="squiz-option"><input id="sq11b" name="sq11" type="radio" value="1"/><label for="sq11b">B. 0.60 m</label></div><div class="squiz-option"><input id="sq11c" name="sq11" type="radio" value="2"/><label for="sq11c">C. 1.2 m</label></div><div class="squiz-option"><input id="sq11d" name="sq11" type="radio" value="3"/><label for="sq11d">D. 2.4 m</label></div></div>
+<div class="squiz-item" data-correct="1"><div class="squiz-q"><span class="qnum">12.</span>Why can S earthquake waves not pass through the Earth's outer core?</div><div class="squiz-option"><input id="sq12a" name="sq12" type="radio" value="0"/><label for="sq12a">A. It is too hot</label></div><div class="squiz-option"><input id="sq12b" name="sq12" type="radio" value="1"/><label for="sq12b">B. It is liquid and S waves are transverse</label></div><div class="squiz-option"><input id="sq12c" name="sq12" type="radio" value="2"/><label for="sq12c">C. It is too thick</label></div><div class="squiz-option"><input id="sq12d" name="sq12" type="radio" value="3"/><label for="sq12d">D. S waves are too slow</label></div></div>
+<button class="squiz-submit-btn" disabled="" id="squizSubmitBtn" onclick="submitQuiz()" type="button">Answer all questions to submit</button>
+</form>
+<div class="article-footer-nav">
+<a href="index.html#gateway">← Gateway</a>
+<a href="index.html#subject-physics">More Physics Articles →</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const form = document.getElementById('squizForm');
+    const submitBtn = document.getElementById('squizSubmitBtn');
+    const progressFill = document.getElementById('squizProgressFill');
+    const progressLabel = document.getElementById('squizProgressLabel');
+    const totalQuestions = document.querySelectorAll('.squiz-item').length;
+
+    function countAnswered() {
+      let count = 0;
+      for (let i = 1; i <= totalQuestions; i++) {
+        if (form.querySelector(`input[name="sq${i}"]:checked`)) count++;
+      }
+      return count;
+    }
+
+    function updateProgress() {
+      const answered = countAnswered();
+      progressFill.style.width = (answered / totalQuestions * 100) + '%';
+      progressLabel.textContent = answered + ' of ' + totalQuestions + ' answered';
+      submitBtn.disabled = answered < totalQuestions;
+      submitBtn.textContent = answered < totalQuestions ? 'Answer all questions to submit' : 'Submit Quiz';
+      document.querySelectorAll('.squiz-option').forEach(opt => opt.classList.remove('selected'));
+      form.querySelectorAll('input[type="radio"]:checked').forEach(input => {
+        input.closest('.squiz-option').classList.add('selected');
+      });
+    }
+
+    form.addEventListener('change', updateProgress);
+
+    window.submitQuiz = function() {
+      let score = 0;
+      const questions = document.querySelectorAll('.squiz-item');
+      questions.forEach((q, idx) => {
+        const qnum = idx + 1;
+        const correctIdx = q.getAttribute('data-correct');
+        const selected = form.querySelector(`input[name="sq${qnum}"]:checked`);
+        const options = q.querySelectorAll('.squiz-option');
+        options.forEach((opt, optIdx) => {
+          opt.querySelector('input').disabled = true;
+          if (String(optIdx) === correctIdx) opt.classList.add('correct-answer');
+        });
+        if (selected && selected.value === correctIdx) {
+          score++;
+        } else if (selected) {
+          selected.closest('.squiz-option').classList.add('wrong-answer');
+        }
+      });
+
+      const percent = Math.round((score / totalQuestions) * 100);
+      document.getElementById('squizScoreBig').textContent = score + '/' + totalQuestions;
+      document.getElementById('squizScoreLabel').textContent = 'You scored ' + percent + '%';
+
+      let tier = 'Keep practicing';
+      if (percent === 100) tier = 'Perfect score!';
+      else if (percent >= 80) tier = 'Excellent work';
+      else if (percent >= 60) tier = 'Good effort';
+      else if (percent >= 40) tier = 'Getting there';
+      document.getElementById('squizScoreTier').textContent = tier;
+
+      document.getElementById('squizResults').classList.add('visible');
+      submitBtn.style.display = 'none';
+      document.getElementById('squizResults').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    window.retakeQuiz = function() {
+      form.reset();
+      document.querySelectorAll('.squiz-option').forEach(opt => {
+        opt.classList.remove('selected', 'correct-answer', 'wrong-answer');
+        opt.querySelector('input').disabled = false;
+      });
+      document.getElementById('squizResults').classList.remove('visible');
+      submitBtn.style.display = 'block';
+      updateProgress();
+      document.getElementById('squizForm').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    updateProgress();
+  })();
+</script>
+<footer aria-label="EDUSAMBAM site footer" class="edusambam-unified-footer">
+<div class="footer-top">
+<div class="footer-brand">
+<div class="edusambam-footer-brand-row">
+<a aria-label="EDUSAMBAM home" class="edusambam-footer-logo-link" href="index.html">
+<img alt="EDUSAMBAM" class="edusambam-brand-mark edusambam-footer-logo" src="logo-icon-full-white.png" style="width:auto;height:64px;max-width:240px;object-fit:contain;background:none;border-radius:0;"/>
+</a>
+</div>
+<p class="edusambam-footer-statement">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</p>
+<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a><a aria-label="EDUSAMBAM on YouTube" href="https://youtube.com/@edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></div>
+</div>
+<div class="footer-col"><h4>Learning Areas</h4><ul><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ Tests</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li></ul></div>
+<div class="footer-col"><h4>Practice &amp; Assessment</h4><ul>
+<li><a href="index.html#interactive-activities">Interactive Activities</a></li>
+<li><a href="assessment-arena.html">ASSESSMENT ARENA</a></li>
+<li><a href="index.html#resources">Resources &amp; Downloads</a></li>
+</ul></div>
+<div class="footer-col"><h4>About EDUSAMBAM</h4><ul>
+<li><a href="index.html#about-edusambam">What EDUSAMBAM Is</a></li>
+<li><a href="index.html#mission">Our Mission</a></li>
+<li><a href="index.html#team">The Team</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="mailto:feedback.edusambam@gmail.com?subject=EDUSAMBAM%20Feedback">Give Feedback</a></li>
+<li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+<li><a href="about.html">About EDUSAMBAM</a></li>
+<li><a href="privacy-policy.html">Privacy Policy</a></li>
+</ul></div>
+</div>
+<div class="footer-bottom"><p>© 2026 EDUSAMBAM · Learning resources, practice and assessment.</p><ul class="footer-bottom-links">
+<li><a href="#top">Back to Top</a></li>
+<li><a href="index.html#mission">Mission</a></li>
+<li><a href="index.html#team">Team</a></li>
+<li><a href="index.html#resources">Resources</a></li>
+</ul></div>
+</footer>
+
+<script id="edusambam-reader-script">
+(function(){
+ const box=document.querySelector('.edusambam-reader'); if(!box)return;
+ const root=document.querySelector('.article-wrap, .article-wrapper');
+ if(!root)return;
+ const status=box.querySelector('.reader-status'), progress=box.querySelector('.reader-progress span'), rate=box.querySelector('select');
+ let utterance=null, chunks=[], index=0, total=0, paused=false, stopped=false;
+ function text(){
+   const clone=root.cloneNode(true);
+   clone.querySelectorAll('.quiz-section,.drill-section,.squiz-section,.activity-section,.assessment-section,form,button,input,select,textarea,script,style').forEach(el=>el.remove());
+   return clone.textContent.replace(/\s+/g,' ').trim();
+ }
+ function splitText(t){const out=[];const max=1200;for(let i=0;i<t.length;i+=max)out.push(t.slice(i,i+max));return out;}
+ function updateProgress(){progress.style.width=(total?Math.min(100,Math.round((index/total)*100)):0)+'%';}
+ function speakNext(){
+   if(stopped||index>=total){if(index>=total&&!stopped){status.textContent='Reading finished.';progress.style.width='100%';}return;}
+   utterance=new SpeechSynthesisUtterance(chunks[index]);
+   utterance.rate=Number(rate.value)||1;
+   utterance.onend=function(){if(stopped)return;index++;updateProgress();speakNext();};
+   utterance.onerror=function(){if(!stopped)status.textContent='The reader stopped unexpectedly. Tap Resume to continue.';};
+   status.textContent='Reading article…';
+   speechSynthesis.speak(utterance);
+ }
+ function play(){
+   if(!('speechSynthesis' in window)){status.textContent='Audio reading is not supported by this browser.';return;}
+   speechSynthesis.cancel();
+   chunks=splitText(text());index=0;total=chunks.length;paused=false;stopped=false;updateProgress();speakNext();
+ }
+ function pause(){
+   if(!('speechSynthesis' in window))return;
+   if(speechSynthesis.speaking){speechSynthesis.pause();paused=true;status.textContent='Reader paused.';}
+ }
+ function resume(){
+   if(!('speechSynthesis' in window))return;
+   stopped=false;
+   if(speechSynthesis.paused){speechSynthesis.resume();paused=false;status.textContent='Reader resumed.';return;}
+   if(!speechSynthesis.speaking && chunks.length && index<total){paused=false;status.textContent='Reader resumed.';speakNext();return;}
+   if(!chunks.length){status.textContent='Nothing to resume. Tap Play to start.';return;}
+   status.textContent='Reader is already playing.';
+ }
+ function stop(){
+   speechSynthesis.cancel();chunks=[];index=0;total=0;paused=false;stopped=true;progress.style.width='0';status.textContent='Reader stopped.';
+ }
+ box.querySelector('[data-reader="play"]').addEventListener('click',play);
+ box.querySelector('[data-reader="pause"]').addEventListener('click',pause);
+ box.querySelector('[data-reader="resume"]').addEventListener('click',resume);
+ box.querySelector('[data-reader="stop"]').addEventListener('click',stop);
+ window.addEventListener('beforeunload',()=>{stopped=true;speechSynthesis.cancel();});
+})();
+</script>
+<script id="edusambam-unified-nav-js">
+(function(){
+  let pages=[];fetch('nav-search-index.json').then(r=>r.json()).then(d=>{pages=d;});
+  function closeAll(except){
+    document.querySelectorAll('.edusambam-mobile-menu,.edusambam-search-panel').forEach(el=>{
+      if(el!==except) el.classList.remove('open');
+    });
+    const b=document.querySelector('.edusambam-menu-btn');
+    if(b) b.setAttribute('aria-expanded', String(document.querySelector('.edusambam-mobile-menu')?.classList.contains('open')||false));
+  }
+  function setup(){
+    const menu=document.querySelector('.edusambam-mobile-menu');
+    const mb=document.querySelector('.edusambam-menu-btn');
+    const sb=document.querySelector('.edusambam-search-btn');
+    const panel=document.querySelector('.edusambam-search-panel');
+    const input=document.querySelector('.edusambam-search-input');
+    const results=document.querySelector('.edusambam-search-results');
+    if(mb && menu){
+      mb.addEventListener('click',()=>{
+        const open=menu.classList.toggle('open'); closeAll(open?menu:null);
+        mb.setAttribute('aria-expanded',String(open));
+        if(open) panel?.classList.remove('open');
+      });
+    }
+    if(sb && panel){
+      sb.addEventListener('click',()=>{
+        const open=panel.classList.toggle('open'); closeAll(open?panel:null);
+        if(open) setTimeout(()=>input?.focus(),30);
+      });
+    }
+    if(input && results){
+      const render=()=>{
+        const q=input.value.trim().toLowerCase();
+        const hits=q?pages.filter(x=>(x.title+' '+x.url).toLowerCase().includes(q)).slice(0,20):[];
+        results.innerHTML=hits.map(x=>'<a href="'+x.url.replace(/"/g,'&quot;')+'">'+
+          x.title.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</a>').join('') ||
+          (q?'<div style="padding:10px;color:#64748b">No matching pages found.</div>':'');
+      };
+      input.addEventListener('input',render);
+    }
+    document.addEventListener('keydown',e=>{
+      if(e.key==='Escape') closeAll(null);
+    });
+    document.addEventListener('click',e=>{
+      if(!e.target.closest('.edusambam-nav') && !e.target.closest('.edusambam-mobile-menu') && !e.target.closest('.edusambam-search-panel')) closeAll(null);
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',setup); else setup();
+})();
+</script>
+</body>
+</html>

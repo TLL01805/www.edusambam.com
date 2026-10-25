@@ -10,7 +10,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>What Is Nutrition? The Science of Food and the Body — EDUSAMBAM</title>
 <link href="https://edusambam.com/what-is-nutrition.html" rel="canonical"/>
-<meta content="Every bite of food is broken down and rebuilt into the energy and tissue that keep you alive. Learn what nutrition actually is." name="description"/>
+<meta content="What is nutrition? Learn the six nutrient classes, how to calculate energy from food, common myths and key facts, with charts, a worked example and a quiz." name="description"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
@@ -251,6 +251,28 @@
   .back-home-wrap { text-align: center; padding: 1.2rem 0 1.6rem; }
   .back-home { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.85rem; }
   .back-home:hover { color: white; }
+
+  /* ── EDUSAMBAM upgrade: worked example, myths, key points ── */
+  .calc-card{background:var(--cream);border:1px solid var(--border);border-left:4px solid var(--leaf);border-radius:var(--radius);padding:1.3rem 1.5rem;margin:1.5rem 0}
+  .calc-card h3{font-family:'EB Garamond',serif;color:var(--navy);margin:0 0 .6rem;font-size:1.15rem}
+  .calc-step{display:flex;gap:.7rem;align-items:flex-start;margin:.45rem 0}
+  .calc-step b{flex:0 0 1.7rem;height:1.7rem;border-radius:50%;background:var(--leaf);color:#fff;display:grid;place-items:center;font-size:.85rem}
+  .calc-step span{flex:1}
+  .myth-grid{display:grid;gap:.9rem;margin:1.3rem 0}
+  .myth-card{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;animation:mythIn .6s ease both}
+  .myth-card:nth-child(2){animation-delay:.12s}.myth-card:nth-child(3){animation-delay:.24s}.myth-card:nth-child(4){animation-delay:.36s}.myth-card:nth-child(5){animation-delay:.48s}
+  .myth-card .m{background:#FBEAEA;color:#8B0000;padding:.6rem 1rem;font-weight:600}
+  .myth-card .f{background:#EAF4EE;color:#1E4D36;padding:.6rem 1rem}
+  .myth-card .m b,.myth-card .f b{text-transform:uppercase;font-size:.72rem;letter-spacing:.08em;margin-right:.4rem}
+  @keyframes mythIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  .key-points{background:var(--navy);border-radius:var(--radius);padding:1.5rem 1.7rem;margin:2rem 0}
+  .key-points .kp-label{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
+  .key-points ul{margin:0;padding-left:1.2rem;color:rgba(255,255,255,.88)}
+  .key-points li{margin:.35rem 0}
+  .tp-note{background:var(--gold-lt);border:1px solid rgba(184,150,62,.45);border-radius:var(--radius);padding:1.2rem 1.5rem;margin:1.5rem 0}
+  .tp-note .tp-label{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#7a5f1c;margin-bottom:.4rem}
+  .tp-note p{margin:.4rem 0 0}
+  @media (prefers-reduced-motion:reduce){.myth-card{animation:none}}
 </style>
 <style id="edusambam-reader-style">
 .mark{width:48px;height:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px;border-radius:14px;background:#eef6ff;box-shadow:0 2px 7px rgba(8,47,99,.10);flex:0 0 48px}.mark i{display:block;border-radius:50%;background:#0b4ea2;min-width:0;min-height:0}.mark i:nth-child(5){background:#d4a017}.edusambam-reader{max-width:980px;margin:1.2rem auto 0;padding:1rem 1.1rem;border:1px solid #d7e4ef;border-radius:14px;background:linear-gradient(135deg,#f7fbff,#fff);box-shadow:0 6px 18px rgba(11,45,92,.08)}.edusambam-reader strong{display:block;color:#0b55a5;font-size:.9rem;letter-spacing:.04em}.edusambam-reader .reader-slogan{color:#b27e08;font-weight:900;margin-top:.25rem;font-size:.82rem}.edusambam-reader .reader-help{color:#607086;font-size:.8rem;margin:.3rem 0 .7rem}.edusambam-reader .reader-controls{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}.edusambam-reader button,.edusambam-reader select{border:1px solid #c9d9e8;background:#fff;color:#153b6e;border-radius:8px;padding:.48rem .65rem;font-weight:800;cursor:pointer}.edusambam-reader button:first-child{background:#0b55a5;color:#fff;border-color:#0b55a5}.edusambam-reader .reader-status{display:block;color:#607086;font-size:.75rem;margin-top:.55rem}.edusambam-reader .reader-progress{height:4px;background:#e4edf6;border-radius:99px;margin-top:.6rem;overflow:hidden}.edusambam-reader .reader-progress span{display:block;width:0;height:100%;background:#e1ad1c;transition:width .2s linear}@media(max-width:600px){.edusambam-reader{margin-left:0;margin-right:0}.edusambam-reader .reader-controls button,.edusambam-reader .reader-controls select{flex:1;min-width:75px}}
@@ -661,6 +683,20 @@ body { padding-top: 72px !important; }
 </script>
 <style id="edusambam-footer-social-css">.edusambam-footer-social{margin-top:14px}.edusambam-footer-social a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);color:rgba(255,255,255,.85);transition:background .15s,color .15s}.edusambam-footer-social a:hover{background:rgba(255,255,255,.22);color:#fff}</style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2230995786427221"
      crossorigin="anonymous"></script>
+<meta content="2026-10-12" property="article:modified_time"/>
+<meta name="robots" content="index,follow,max-image-preview:large"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="EDUSAMBAM"/>
+<meta property="og:title" content="What Is Nutrition? The Science of Food and the Body"/>
+<meta property="og:description" content="What is nutrition? Learn the six nutrient classes, how to calculate energy from food, common myths and key facts, with charts, a worked example and a quiz."/>
+<meta property="og:url" content="https://edusambam.com/what-is-nutrition.html"/>
+<meta property="og:image" content="https://edusambam.com/logo-icon-full.png"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="What Is Nutrition? The Science of Food and the Body"/>
+<meta name="twitter:description" content="What is nutrition? Learn the six nutrient classes, how to calculate energy from food, common myths and key facts, with charts, a worked example and a quiz."/>
+<meta property="article:modified_time" content="2026-10"/>
+<meta property="article:section" content="Nutrition"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "What Is Nutrition? The Science of Food and the Body", "description": "What is nutrition? Learn the six nutrient classes, how to calculate energy from food, common myths and key facts, with charts, a worked example and a quiz.", "inLanguage": "en", "mainEntityOfPage": "https://edusambam.com/what-is-nutrition.html", "url": "https://edusambam.com/what-is-nutrition.html", "dateModified": "2026-10", "articleSection": "Nutrition", "author": {"@type": "Organization", "name": "EDUSAMBAM Editorial Team", "url": "https://edusambam.com/"}, "publisher": {"@type": "Organization", "name": "EDUSAMBAM", "url": "https://edusambam.com/", "logo": {"@type": "ImageObject", "url": "https://edusambam.com/logo-icon-full.png"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Gateway", "item": "https://edusambam.com/index.html#gateway"}, {"@type": "ListItem", "position": 2, "name": "Nutrition", "item": "https://edusambam.com/index.html#subject-nutrition"}, {"@type": "ListItem", "position": 3, "name": "What Is Nutrition? The Science of Food and the Body", "item": "https://edusambam.com/what-is-nutrition.html"}]}]}</script>
 </head>
 <body id="top"><nav aria-label="Primary navigation" class="edusambam-nav">
 <div class="edusambam-nav-inner">
@@ -670,12 +706,12 @@ body { padding-top: 72px !important; }
 <span class="edusambam-brand-subtitle">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</span>
 </span>
 </a>
-<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li></ul>
+<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ Tests</a></li><li><a href="index.html#resources">Resources</a></li></ul>
 <button aria-label="Search" class="edusambam-search-btn" title="Search" type="button">⌕</button>
 <button aria-expanded="false" aria-label="Open menu" class="edusambam-menu-btn" title="Menu" type="button">☰</button>
 </div>
 </nav><div aria-label="Mobile navigation" class="edusambam-mobile-menu">
-<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="index.html#subject-assessment">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="index.html#about-edusambam">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
+<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ Tests</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="index.html#subject-assessment">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="index.html#about-edusambam">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
 </div><div aria-label="Site search" class="edusambam-search-panel">
 <div class="edusambam-search-wrap">
 <input aria-label="Search EDUSAMBAM" class="edusambam-search-input" placeholder="Search EDUSAMBAM…" type="search"/>
@@ -695,7 +731,7 @@ body { padding-top: 72px !important; }
 <div class="article-hero-meta">
 <span>EDUSAMBAM Editorial Team</span>
 <span>|</span>
-<span>13 min read</span>
+<span>16 min read</span> <span>|</span> <span>Last updated: October 2026</span>
 <span>|</span>
 <span>Nutrition &amp; Dietetics</span>
 </div>
@@ -767,6 +803,17 @@ body { padding-top: 72px !important; }
 </div>
 </div>
 <p>These are general ranges, not fixed rules — actual proportions shift with age, activity level, and health goals, which later articles in this strand explore in depth.</p>
+<div class="calc-card">
+<h3>Worked example: how many kcal are in a snack?</h3>
+<p>You can estimate the energy in a food from its macronutrients, using 4 kcal per gram of carbohydrate, 4 kcal per gram of protein and 9 kcal per gram of fat. Suppose a snack bar contains 20 g carbohydrate, 5 g protein and 10 g fat.</p>
+<div class="calc-step"><b>1</b><span>Carbohydrate: 20 g × 4 kcal/g = <strong>80 kcal</strong></span></div>
+<div class="calc-step"><b>2</b><span>Protein: 5 g × 4 kcal/g = <strong>20 kcal</strong></span></div>
+<div class="calc-step"><b>3</b><span>Fat: 10 g × 9 kcal/g = <strong>90 kcal</strong></span></div>
+<div class="calc-step"><b>4</b><span>Total: 80 + 20 + 90 = <strong>190 kcal</strong></span></div>
+<p>Notice something interesting. Fat is only 10 g of the 35 g of nutrients (about 29% by weight), yet it supplies 90 of the 190 kcal (about 47% of the energy). This is why small amounts of fatty food add up quickly.</p>
+<p><strong>Try it yourself:</strong> a food has 30 g carbohydrate, 10 g protein and 5 g fat. How many kcal does it contain? <em>Answer: 120 + 40 + 45 = 205 kcal.</em></p>
+<p style="font-size:.88rem;color:var(--muted)">Real food labels can differ slightly from this estimate because of fibre, rounding and other ingredients, but the method is a good way to understand where energy comes from.</p>
+</div>
 <h2><span class="num">4.</span>Micronutrients: Small Amounts, Big Impact</h2>
 <p>Vitamins and minerals are needed only in milligram or microgram amounts, yet a shortage of even one can cause serious health problems. Vitamin C deficiency causes scurvy; iodine deficiency can impair thyroid function and brain development; iron deficiency causes anaemia. Micronutrients don't provide energy themselves — instead, they act as helpers, allowing the chemical reactions that release energy from macronutrients to actually happen.</p>
 <div class="real-world-box">
@@ -812,8 +859,32 @@ body { padding-top: 72px !important; }
 <p>Foods offering very little besides calories are often described as providing <strong>empty calories</strong>. A diet built mainly around nutrient-dense foods delivers far more of what the body needs without requiring extra calories to get there.</p>
 <h2><span class="num">9.</span>How Nutrient Needs Change Across Life</h2>
 <p>A newborn, a teenager, a pregnant woman, and an older adult all need noticeably different amounts and types of nutrients. A growing child needs more protein and calcium relative to their size; an older adult often needs fewer calories but just as much — or more — protein and vitamin D. This is one of the central ideas in dietetics, and a later article in this strand explores nutrition across every life stage in detail.</p>
+<h2><span class="num">10.</span>Common Myths About Nutrition</h2>
+<p>Many ideas about food are repeated so often that they sound true. Here are five worth correcting.</p>
+<div class="myth-grid">
+<div class="myth-card"><div class="m"><b>Myth</b>Nutrition is only about losing or gaining weight.</div><div class="f"><b>Fact</b>Nutrition supports growth, energy, healing, learning, immunity and mood. Body weight is only one small part of the picture.</div></div>
+<div class="myth-card"><div class="m"><b>Myth</b>Vitamins and minerals give you energy.</div><div class="f"><b>Fact</b>Vitamins and minerals do not supply calories. Some of them help the body release energy from carbohydrates, fats and proteins.</div></div>
+<div class="myth-card"><div class="m"><b>Myth</b>Natural food contains no chemicals.</div><div class="f"><b>Fact</b>All food is made of chemicals, such as water, sugars, proteins and vitamins. "Natural" and "chemical" are not opposites.</div></div>
+<div class="myth-card"><div class="m"><b>Myth</b>All fat is bad for you.</div><div class="f"><b>Fact</b>The body needs fat for energy, for hormones and for absorbing vitamins A, D, E and K. The amount and type of fat matter.</div></div>
+<div class="myth-card"><div class="m"><b>Myth</b>One "superfood" can supply everything you need.</div><div class="f"><b>Fact</b>After early infancy, no single food provides all nutrients. A varied diet is what covers the body's needs.</div></div>
+</div>
 <h2>A Closing Thought</h2>
 <p>Nutrition turns the everyday act of eating into a precise, ongoing exchange between the outside world and the inner chemistry of the body. Understanding the six nutrient classes, the difference between macro- and micronutrients, and what "essential" really means gives you the foundation for every topic ahead in this strand — from digestion and hydration to sports nutrition and food safety.</p>
+<div class="key-points">
+<div class="kp-label">Key points to remember</div>
+<ul>
+<li>Nutrition is the science of how the body uses food to grow, make energy, repair itself and stay healthy.</li>
+<li>Food, diet and nutrient are three different things.</li>
+<li>There are six nutrient classes: carbohydrates, proteins, fats, vitamins, minerals and water.</li>
+<li>Carbohydrates and proteins give about 4 kcal per gram, and fat gives about 9 kcal per gram.</li>
+<li>Nutrient needs change through life, and no single food gives everything.</li>
+</ul>
+</div>
+<div class="tp-note">
+<div class="tp-label">For teachers and parents</div>
+<p><strong>Class or home activity:</strong> ask students to write down everything they ate yesterday, sort the foods by nutrient class, and calculate the energy of one snack using the method above. Then discuss which classes were easy to find and which were missing.</p>
+<p><strong>Please note:</strong> this article is general education. It is not medical advice and does not replace a doctor or a registered dietitian. Anyone with a health condition or special dietary needs should speak to a qualified professional.</p>
+</div>
 <div class="further-box">
 <div class="fr-label">Further Reading</div>
 <ul>
@@ -1072,23 +1143,21 @@ body { padding-top: 72px !important; }
  box.querySelector('[data-reader="stop"]').addEventListener('click',stop);
  window.addEventListener('beforeunload',()=>{stopped=true;speechSynthesis.cancel();});
 })();
-</script><footer class="edusambam-unified-footer" aria-label="EDUSAMBAM site footer">
+</script><footer aria-label="EDUSAMBAM site footer" class="edusambam-unified-footer">
 <div class="footer-top">
 <div class="footer-brand">
 <div class="edusambam-footer-brand-row">
-<a class="edusambam-footer-logo-link" href="index.html" aria-label="EDUSAMBAM home">
+<a aria-label="EDUSAMBAM home" class="edusambam-footer-logo-link" href="index.html">
 <img alt="EDUSAMBAM" class="edusambam-brand-mark edusambam-footer-logo" src="logo-icon-full-white.png" style="width:auto;height:64px;max-width:240px;object-fit:contain;background:none;border-radius:0;"/>
 </a>
 </div>
 <p class="edusambam-footer-statement">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</p>
-<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a></div>
+<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a><a aria-label="EDUSAMBAM on YouTube" href="https://youtube.com/@edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></div>
 </div>
-<div class="footer-col"><h4>Learning</h4><ul><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li></ul></div>
+<div class="footer-col"><h4>Learning Areas</h4><ul><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ Tests</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li></ul></div>
 <div class="footer-col"><h4>Practice &amp; Assessment</h4><ul>
 <li><a href="index.html#interactive-activities">Interactive Activities</a></li>
 <li><a href="assessment-arena.html">ASSESSMENT ARENA</a></li>
-<li><a href="assessment-arena.html">What Is Assessment?</a></li>
-<li><a href="index.html#about">Learn Your Way</a></li>
 <li><a href="index.html#resources">Resources &amp; Downloads</a></li>
 </ul></div>
 <div class="footer-col"><h4>About EDUSAMBAM</h4><ul>
@@ -1098,6 +1167,7 @@ body { padding-top: 72px !important; }
 <li><a href="contact.html">Contact Us</a></li>
 <li><a href="mailto:feedback.edusambam@gmail.com?subject=EDUSAMBAM%20Feedback">Give Feedback</a></li>
 <li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+<li><a href="about.html">About EDUSAMBAM</a></li>
 <li><a href="privacy-policy.html">Privacy Policy</a></li>
 </ul></div>
 </div>
