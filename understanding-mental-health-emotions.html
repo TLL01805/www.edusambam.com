@@ -14,7 +14,7 @@ gtag('config', 'G-Y35DW0V4HQ');
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Understanding Mental Health and Emotions — EDUSAMBAM</title>
 <link href="https://edusambam.com/understanding-mental-health-emotions.html" rel="canonical"/>
-<meta content="Just like the body, the mind needs care and attention. Learn to understand emotions as one of the most valuable skills you can develop." name="description"/>
+<meta content="What mental health is, why emotions matter, the mind-body link, stress and anxiety, healthy coping skills, a breathing exercise, myths and where to find help." name="description"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
@@ -582,6 +582,46 @@ gtag('config', 'G-Y35DW0V4HQ');
     cursor: pointer;
   }
   .squiz-retake-btn:hover { background: rgba(255,255,255,0.1); }
+
+  /* ── EDUSAMBAM mental health upgrade ── */
+  .mh-card{background:var(--cream);border:1px solid var(--border);border-radius:var(--radius);padding:1.3rem 1.1rem;margin:1.5rem 0}
+  .mh-title{font-family:'EB Garamond',serif;font-weight:600;color:var(--navy);font-size:1.1rem;text-align:center}
+  .mh-sub{text-align:center;color:var(--muted);font-size:.85rem;margin-bottom:.8rem}
+  .mh-note{font-size:.9rem;color:var(--slate);margin:.8rem 0 0}
+  .mh-spec{position:relative;display:flex;height:3.2rem;border-radius:8px;overflow:hidden;color:#fff;font-size:.74rem;font-weight:700;text-align:center}
+  .mh-spec div{flex:1;display:flex;align-items:center;justify-content:center;padding:0 .2rem}
+  .mh-s1{background:#2F6F4E}.mh-s2{background:#6B8F4E}.mh-s3{background:#B8863E}.mh-s4{background:#8B0000}
+  .mh-spec .mh-mark{position:absolute;top:0;bottom:0;width:4px;background:#fff;box-shadow:0 0 0 2px rgba(0,0,0,.35);left:10%;animation:mhSlide 9s ease-in-out infinite}
+  .mh-flow{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:center;margin-top:.8rem}
+  .mh-b{flex:1;min-width:8rem;background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:.7rem .8rem;display:flex;flex-direction:column;font-size:.88rem;animation:mhIn .6s ease both}
+  .mh-b2{animation-delay:.4s}.mh-b3{animation-delay:.8s}
+  .mh-b strong{color:var(--navy)}
+  .mh-a{font-size:1.4rem;color:var(--muted)}
+  .mh-calc{background:var(--cream);border:1px solid var(--border);border-left:4px solid #2F6F4E;border-radius:var(--radius);padding:1.3rem 1.5rem;margin:1.5rem 0}
+  .mh-calc h3{font-family:'EB Garamond',serif;color:var(--navy);margin:0 0 .6rem}
+  .mh-s{display:flex;gap:.7rem;align-items:flex-start;margin:.45rem 0}
+  .mh-s b{flex:0 0 1.7rem;height:1.7rem;border-radius:50%;background:#2F6F4E;color:#fff;display:grid;place-items:center;font-size:.85rem}
+  .mh-s span{flex:1}
+  .mh-breath{display:flex;justify-content:center;align-items:center;height:130px}
+  .mh-circle{width:60px;height:60px;border-radius:50%;background:#2F6F4E;opacity:.85;animation:mhBreath 10s ease-in-out infinite}
+  .mh-help{background:#FBEAEA;border:1px solid #E6B8B8;border-left:4px solid #8B0000;border-radius:var(--radius);padding:1rem 1.2rem;margin:1.2rem 0;font-size:.95rem;color:#5a1a1a}
+  .mh-myths{display:grid;gap:.9rem;margin:1.3rem 0}
+  .mh-myth{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;animation:mhIn .6s ease both}
+  .mh-myth:nth-child(2){animation-delay:.12s}.mh-myth:nth-child(3){animation-delay:.24s}.mh-myth:nth-child(4){animation-delay:.36s}
+  .mh-myth .m{background:#FBEAEA;color:#8B0000;padding:.6rem 1rem;font-weight:600}
+  .mh-myth .f{background:#EAF4EE;color:#1E4D36;padding:.6rem 1rem}
+  .mh-myth b{text-transform:uppercase;font-size:.72rem;letter-spacing:.08em;margin-right:.4rem}
+  .mh-key{background:var(--navy);border-radius:var(--radius);padding:1.5rem 1.7rem;margin:2rem 0}
+  .mh-key .kp{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
+  .mh-key ul{margin:0;padding-left:1.2rem;color:rgba(255,255,255,.88)}.mh-key li{margin:.35rem 0}
+  .mh-tp{background:var(--gold-lt);border:1px solid rgba(184,150,62,.45);border-radius:var(--radius);padding:1.2rem 1.5rem;margin:1.5rem 0}
+  .mh-tp .tl{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#7a5f1c}
+  .mh-tp p{margin:.4rem 0 0}
+  @media (max-width:560px){.mh-flow{flex-direction:column}.mh-b{width:100%;min-width:0}.mh-a{transform:rotate(90deg)}}
+  @keyframes mhSlide{0%,100%{left:10%}50%{left:60%}}
+  @keyframes mhIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  @keyframes mhBreath{0%{transform:scale(1)}40%{transform:scale(2)}100%{transform:scale(1)}}
+  @media (prefers-reduced-motion:reduce){.mh-mark{animation:none}.mh-b,.mh-myth{animation:none}.mh-circle{animation:none;transform:scale(1.4)}}
 </style>
 <style id="edusambam-reader-style">
 .mark{width:48px;height:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px;border-radius:14px;background:#eef6ff;box-shadow:0 2px 7px rgba(8,47,99,.10);flex:0 0 48px}.mark i{display:block;border-radius:50%;background:#0b4ea2;min-width:0;min-height:0}.mark i:nth-child(5){background:#d4a017}.edusambam-reader{max-width:980px;margin:1.2rem auto 0;padding:1rem 1.1rem;border:1px solid #d7e4ef;border-radius:14px;background:linear-gradient(135deg,#f7fbff,#fff);box-shadow:0 6px 18px rgba(11,45,92,.08)}.edusambam-reader strong{display:block;color:#0b55a5;font-size:.9rem;letter-spacing:.04em}.edusambam-reader .reader-slogan{color:#b27e08;font-weight:900;margin-top:.25rem;font-size:.82rem}.edusambam-reader .reader-help{color:#607086;font-size:.8rem;margin:.3rem 0 .7rem}.edusambam-reader .reader-controls{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}.edusambam-reader button,.edusambam-reader select{border:1px solid #c9d9e8;background:#fff;color:#153b6e;border-radius:8px;padding:.48rem .65rem;font-weight:800;cursor:pointer}.edusambam-reader button:first-child{background:#0b55a5;color:#fff;border-color:#0b55a5}.edusambam-reader .reader-status{display:block;color:#607086;font-size:.75rem;margin-top:.55rem}.edusambam-reader .reader-progress{height:4px;background:#e4edf6;border-radius:99px;margin-top:.6rem;overflow:hidden}.edusambam-reader .reader-progress span{display:block;width:0;height:100%;background:#e1ad1c;transition:width .2s linear}@media(max-width:600px){.edusambam-reader{margin-left:0;margin-right:0}.edusambam-reader .reader-controls button,.edusambam-reader .reader-controls select{flex:1;min-width:75px}}
@@ -971,13 +1011,27 @@ footer.footer {
 }
 </style><style id="edusambam-footer-social-css">.edusambam-footer-social{margin-top:14px}.edusambam-footer-social a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);color:rgba(255,255,255,.85);transition:background .15s,color .15s}.edusambam-footer-social a:hover{background:rgba(255,255,255,.22);color:#fff}</style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2230995786427221"
      crossorigin="anonymous"></script>
+<meta content="2026-10-12" property="article:modified_time"/>
+<meta name="robots" content="index,follow,max-image-preview:large"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="EDUSAMBAM"/>
+<meta property="og:title" content="Understanding Mental Health and Emotions: A Guide"/>
+<meta property="og:description" content="What mental health is, why emotions matter, the mind-body link, stress and anxiety, healthy coping skills, a breathing exercise, myths and where to find help."/>
+<meta property="og:url" content="https://edusambam.com/understanding-mental-health-emotions.html"/>
+<meta property="og:image" content="https://edusambam.com/logo-icon-full.png"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Understanding Mental Health and Emotions: A Guide"/>
+<meta name="twitter:description" content="What mental health is, why emotions matter, the mind-body link, stress and anxiety, healthy coping skills, a breathing exercise, myths and where to find help."/>
+<meta property="article:modified_time" content="2026-10"/>
+<meta property="article:section" content="Nutrition"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Understanding Mental Health and Emotions", "description": "What mental health is, why emotions matter, the mind-body link, stress and anxiety, healthy coping skills, a breathing exercise, myths and where to find help.", "inLanguage": "en", "mainEntityOfPage": "https://edusambam.com/understanding-mental-health-emotions.html", "url": "https://edusambam.com/understanding-mental-health-emotions.html", "dateModified": "2026-10", "articleSection": "Nutrition", "author": {"@type": "Organization", "name": "EDUSAMBAM Editorial Team", "url": "https://edusambam.com/"}, "publisher": {"@type": "Organization", "name": "EDUSAMBAM", "url": "https://edusambam.com/", "logo": {"@type": "ImageObject", "url": "https://edusambam.com/logo-icon-full.png"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Gateway", "item": "https://edusambam.com/index.html#gateway"}, {"@type": "ListItem", "position": 2, "name": "Nutrition", "item": "https://edusambam.com/index.html#subject-nutrition"}, {"@type": "ListItem", "position": 3, "name": "Understanding Mental Health and Emotions", "item": "https://edusambam.com/understanding-mental-health-emotions.html"}]}]}</script>
 </head>
 <body id="top">
 <!-- TOP BAR -->
 <div class="top-bar">
 <p>Established 2026  ·  Free Educational Resources for All</p>
 <ul class="top-bar-links">
-<li><a href="contact.html">Contact</a></li><li><a href="index.html#about-edusambam">About</a></li><li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+<li><a href="contact.html">Contact</a></li><li><a href="about.html">About</a></li><li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
 </ul>
 </div>
 <!-- NAV -->
@@ -989,13 +1043,12 @@ footer.footer {
 <span class="edusambam-brand-subtitle">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</span>
 </span>
 </a>
-<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li></ul>
+<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Language</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ</a></li><li><a href="index.html#resources">Resources</a></li></ul>
 <button aria-label="Search" class="edusambam-search-btn" title="Search" type="button">⌕</button>
 <button aria-expanded="false" aria-label="Open menu" class="edusambam-menu-btn" title="Menu" type="button">☰</button>
 </div>
-</nav>
-<div aria-label="Mobile navigation" class="edusambam-mobile-menu">
-<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="index.html#subject-assessment">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="index.html#about-edusambam">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
+</nav><div aria-label="Mobile navigation" class="edusambam-mobile-menu">
+<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Language</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="index.html#subject-assessment">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="about.html">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
 </div>
 <div aria-label="Site search" class="edusambam-search-panel">
 <div class="edusambam-search-wrap">
@@ -1005,70 +1058,109 @@ footer.footer {
 </div>
 <!-- ARTICLE HERO -->
 <div class="article-hero">
-<div class="breadcrumb"><a href="index.html#gateway">Gateway</a>  /  <a href="index.html#subject-optometry">Health</a>  /  Mental Health &amp; Emotions</div>
+<div class="breadcrumb"><a href="index.html#gateway">Gateway</a>  /  <a href="index.html#subject-nutrition">Nutrition</a>  /  Mental Health &amp; Emotions</div>
 <div class="article-hero-tag">Health · Mental Wellbeing</div>
 <h1>Understanding Mental Health and Emotions</h1>
 <p class="sub">Just like the body, the mind needs care and attention. Learning to understand your emotions is one of the most valuable skills you can develop.</p>
 <div class="article-hero-meta">
 <span>EDUSAMBAM Editorial Team</span>
 <span>|</span>
-<span>9 min read</span>
+<span>14 min read</span> <span>|</span> <span>Last updated: October 2026</span>
 <span>|</span>
 <span>Health</span>
 </div>
 </div><div aria-label="EDUSAMBAM article reader" class="edusambam-reader"><strong>🔊 LISTEN TO THIS ARTICLE</strong><div class="reader-slogan">SAVE YOUR EYES • IMPROVE YOUR LISTENING</div><div class="reader-help">Listen to the article instead of relying only on continuous screen reading.</div><div class="reader-controls"><button data-reader="play" type="button">▶ Play</button><button data-reader="pause" type="button">⏸ Pause</button><button data-reader="resume" type="button">▶ Resume</button><button data-reader="stop" type="button">■ Stop</button><select aria-label="Reading speed"><option value="1">1×</option><option value="0.8">0.8×</option><option value="1.2">1.2×</option></select></div><div aria-hidden="true" class="reader-progress"><span></span></div><small class="reader-status">Ready to read the article.</small></div>
 <!-- ARTICLE BODY -->
 <div class="article-wrap">
-<p class="lead">Everyone experiences a wide range of emotions every day — excitement, frustration, sadness, joy, worry. These feelings are a completely normal part of being human. Understanding what emotions are, why they happen, and how to manage them is an essential part of mental health.</p>
-<h2><span class="num">1.</span>What is Mental Health?</h2>
-<p>Mental health refers to a person's emotional, psychological, and social wellbeing. It affects how we think, feel, handle stress, relate to others, and make decisions. Mental health exists on a spectrum — everyone has mental health, just as everyone has physical health, and it can change over time.</p>
+<p class="lead">Everyone experiences a wide range of emotions every day: excitement, frustration, sadness, joy and worry. These feelings are a completely normal part of being human. Just like the body, the mind needs care and attention. This guide explains what mental health is, what emotions are for, how they affect the body, healthy ways to manage them, and how to find help when things feel too heavy to carry alone.</p>
+<h2><span class="num">1.</span>What Is Mental Health?</h2>
+<p>Mental health refers to a person's emotional, psychological and social wellbeing. It affects how we think, feel, handle stress, relate to others and make decisions. Everyone has mental health, just as everyone has physical health, and it changes over time. Good mental health does not mean feeling happy all the time. It means being able to cope with normal stresses, learn, build relationships and enjoy life, even when you have hard days.</p>
+<div class="mh-card"><div class="mh-title">The mental health spectrum</div><div class="mh-sub">A simple idea: where you are can change, and you can move in both directions.</div>
+<div class="mh-spec"><div class="mh-s1">Doing well</div><div class="mh-s2">Coping</div><div class="mh-s3">Struggling</div><div class="mh-s4">Needs urgent help</div><div class="mh-mark"></div></div>
+<p class="mh-note">Moving towards "struggling" does not mean something is wrong with you. It happens to many people at some time, and support helps you move back.</p></div>
+<p>Mental health problems are common. The World Health Organization estimates that about 1 in 7 young people aged 10 to 19 experience a mental health condition, such as anxiety or depression. Many do not get help, often because of silence or stigma, which is why talking openly matters.</p>
 <h2><span class="num">2.</span>Understanding Emotions</h2>
-<p>Emotions are the brain and body's natural response to events, thoughts, or experiences. They are not "good" or "bad" in themselves — even difficult emotions like fear or anger serve important purposes.</p>
-<table class="pos-table">
-<tr><th>Emotion</th><th>Common Purpose</th></tr>
+<p>Emotions are the brain and body's natural response to events, thoughts or experiences. They are not "good" or "bad" in themselves. Even difficult emotions like fear or anger serve important purposes. What matters is how we understand them and what we do next.</p>
+<div class="table-wrap"><table class="pos-table"><tr><th>Emotion</th><th>Common purpose</th></tr>
 <tr><td>Fear</td><td>Alerts you to potential danger</td></tr>
 <tr><td>Anger</td><td>Signals that a boundary or value has been challenged</td></tr>
 <tr><td>Sadness</td><td>Helps process loss and encourages support from others</td></tr>
 <tr><td>Joy</td><td>Reinforces positive experiences and connections</td></tr>
-<tr><td>Anxiety</td><td>Prepares the body to respond to perceived threats</td></tr>
-</table>
+<tr><td>Anxiety</td><td>Prepares the body to respond to perceived threats</td></tr></table></div>
+<p>An <strong>emotion</strong> is a short, strong reaction, such as a sudden fright. A <strong>mood</strong> lasts longer and is less tied to one event, such as feeling low for an afternoon. Both are normal. Feeling a lot of different emotions in one day, including mixed ones, is also normal, especially in the teenage years, when the brain and body are changing quickly.</p>
 <h2><span class="num">3.</span>The Mind-Body Connection</h2>
-<p>Emotions aren't just "in your head" — they cause real physical changes in the body. This is why stress can cause a stomach ache, or excitement can cause a racing heart.</p>
-<div class="diagram-box">
-<svg viewbox="0 0 360 150" xmlns="http://www.w3.org/2000/svg">
-<rect fill="#06244a" height="45" rx="8" width="130" x="20" y="55"></rect>
-<text fill="#FFFFFF" font-family="Source Sans 3, sans-serif" font-size="13" text-anchor="middle" x="85" y="82">Thought or Event</text>
-<path d="M155 77 L205 77" marker-end="url(#arrow)" stroke="#767676" stroke-width="2"></path>
-<rect fill="#8B0000" height="45" rx="8" width="130" x="210" y="55"></rect>
-<text fill="#FFFFFF" font-family="Source Sans 3, sans-serif" font-size="13" text-anchor="middle" x="275" y="82">Emotional Response</text>
-<defs>
-<marker id="arrow" markerheight="8" markerwidth="8" orient="auto" refx="6" refy="3">
-<path d="M0,0 L6,3 L0,6 Z" fill="#767676"></path>
-</marker>
-</defs>
-</svg>
-<p class="diagram-caption">A thought or event triggers an emotional response, which in turn causes physical changes in the body.</p>
-</div>
-<h2><span class="num">4.</span>Healthy Ways to Manage Emotions</h2>
+<p>Emotions are not just "in your head". They cause real physical changes in the body. This is why stress can cause a stomach ache and excitement can cause a racing heart. When the brain senses a threat or a big challenge, the body releases stress hormones such as adrenaline. The heart beats faster, breathing quickens and muscles tighten, ready to act. This is often called the <strong>fight-or-flight response</strong>.</p>
+<div class="mh-card"><div class="mh-title">How a thought turns into a body reaction</div>
+<div class="mh-flow"><div class="mh-b mh-b1"><strong>Thought or event</strong><span>"The exam starts in five minutes."</span></div><div class="mh-a">&#8594;</div><div class="mh-b mh-b2"><strong>Emotional response</strong><span>Nervous, worried</span></div><div class="mh-a">&#8594;</div><div class="mh-b mh-b3"><strong>Physical changes</strong><span>Racing heart, tight stomach, sweaty hands</span></div></div></div>
+<p>This reaction is helpful in real danger, but it can feel uncomfortable when it happens before an exam or a presentation. Knowing that these feelings are a normal body response, and not a sign that something is wrong with you, often makes them easier to handle.</p>
+<h2><span class="num">4.</span>Stress and Anxiety</h2>
+<p><strong>Stress</strong> is the body's response to a demand or pressure, such as homework deadlines, exams or arguments. A little stress can help you focus. <strong>Anxiety</strong> is a feeling of worry or fear, often about something that might happen. Short periods of both are normal and usually pass.</p>
+<p>It becomes a concern when the worry is very strong or constant, lasts for weeks, and gets in the way of school, sleep, friendships or enjoying things. Then it is important to seek support, because anxiety and low mood are treatable.</p>
+<h2><span class="num">5.</span>Healthy Ways to Manage Emotions</h2>
 <ul>
-<li><strong>Name the feeling</strong> — simply identifying "I feel anxious" or "I feel frustrated" reduces its intensity</li>
-<li><strong>Talk to someone you trust</strong> — sharing feelings with a friend, family member, or teacher provides support and perspective</li>
-<li><strong>Practice deep breathing</strong> — slow, deep breaths calm the body's stress response</li>
-<li><strong>Get physical activity</strong> — exercise helps release built-up tension</li>
-<li><strong>Write it down</strong> — journaling can help organise confusing or overwhelming thoughts</li>
+<li><strong>Name the feeling.</strong> Simply identifying "I feel anxious" or "I feel frustrated" can reduce its intensity, because naming it helps the brain process it.</li>
+<li><strong>Talk to someone you trust.</strong> Sharing feelings with a friend, family member or teacher gives support and a new point of view.</li>
+<li><strong>Practise slow breathing.</strong> Slow, deep breaths calm the body's stress response.</li>
+<li><strong>Get physical activity.</strong> Exercise helps release built-up tension. See our guide to <a href="physical-fitness-exercise-basics.html">physical fitness</a>.</li>
+<li><strong>Write it down.</strong> Journaling can help organise confusing or overwhelming thoughts.</li>
+<li><strong>Protect your sleep.</strong> Tiredness makes emotions harder to manage. See <a href="importance-of-sleep-and-rest.html">sleep and rest</a>.</li>
+<li><strong>Do something creative or calming</strong>, such as drawing, music, prayer or quiet time outdoors, if these help you.</li>
 </ul>
-<div class="example-box">
-<div class="ex-label">Example</div>
-<p>Before a big presentation, a student notices their heart racing and hands shaking. Instead of ignoring it, they recognise "I'm feeling nervous," take a few slow breaths, and remind themselves they've prepared well — turning an overwhelming feeling into a manageable one.</p>
+<div class="example-box"><div class="ex-label">Example</div><p>Before a big presentation, a student notices their heart racing and hands shaking. Instead of ignoring it, they recognise "I'm feeling nervous", take a few slow breaths, and remind themselves they have prepared well. This turns an overwhelming feeling into a manageable one.</p></div>
+<div class="mh-calc"><h3>Worked example: a one-minute calming breath</h3>
+<div class="mh-s"><b>1</b><span>Sit comfortably and relax your shoulders.</span></div>
+<div class="mh-s"><b>2</b><span>Breathe in slowly through your nose for a count of <strong>4</strong>.</span></div>
+<div class="mh-s"><b>3</b><span>Breathe out slowly through your mouth for a count of <strong>6</strong>. A longer breath out helps the body relax.</span></div>
+<div class="mh-s"><b>4</b><span>Repeat 5 times. Each round takes 4 + 6 = 10 seconds, so 5 rounds take 5 × 10 = <strong>50 seconds</strong>.</span></div>
+<p>The animated circle below grows as you breathe in and shrinks as you breathe out. Try to follow it.</p>
+<div class="mh-breath"><div class="mh-circle"></div></div>
+<p>If you feel dizzy, stop and breathe normally.</p></div>
+<h2><span class="num">6.</span>Changing Unhelpful Thought Patterns</h2>
+<p>How we think about a situation affects how we feel. Sometimes our first thought is harsher than the facts. A useful skill is to notice the thought, ask whether it is completely true, and look for a more balanced one.</p>
+<div class="table-wrap"><table class="pos-table"><tr><th>Situation</th><th>First thought</th><th>Balanced thought</th></tr>
+<tr><td>A friend does not reply to a message</td><td>"They are angry with me."</td><td>"They may be busy. I can ask them later."</td></tr>
+<tr><td>A low mark on a test</td><td>"I am hopeless at this."</td><td>"I did not do well this time. I can find out what to improve."</td></tr>
+<tr><td>Nervous before speaking</td><td>"Everyone will laugh."</td><td>"I have prepared. Most people are focused on their own work."</td></tr></table></div>
+<p>This is a general skill used in many wellbeing programmes. It does not mean pretending everything is fine. It means checking whether the story you tell yourself matches the facts.</p>
+<h2><span class="num">7.</span>Looking After Your Mind Every Day</h2>
+<p>Mental wellbeing is built through small, regular habits, not only through dealing with problems when they appear. Keep a steady sleep routine, eat regular meals, move your body, and spend time with people you care about. Make time for something you enjoy, such as a hobby, sport, reading or helping others. Take breaks from screens and from constant news, and try to spend some time outdoors in daylight. These habits do not remove all stress, but they give you more energy and resilience to handle it. You can read more about the building blocks of health in <a href="what-is-nutrition.html">What Is Nutrition?</a> and <a href="food-groups-healthy-eating.html">Food Groups and Healthy Eating</a>.</p>
+<h2><span class="num">8.</span>Coping With Big Changes and Loss</h2>
+<p>Life brings changes that can be hard, such as changing school, moving home, family problems, exam pressure or losing someone you love. It is normal to feel sad, angry, confused or numb at such times, and there is no single right way to feel. Grief takes time, and it often comes in waves. Be patient with yourself, keep some routine in your day, lean on family and friends, and ask for help if the feelings stay very heavy. Cultural and religious traditions, such as prayer, remembering the person and spending time with family, can also bring comfort for many people.</p>
+<h2><span class="num">9.</span>Friends, Family and Social Media</h2>
+<p>Good relationships protect mental health. Spending time with people who care about you, being kind, and being able to say how you feel all help. Online life can be positive, but it can also bring pressure to compare yourself with others, and cyberbullying. Remember that people usually post only the best moments. If someone is bullying you or others, online or offline, do not suffer in silence: save the evidence if you can, and tell a trusted adult.</p>
+<h2><span class="num">10.</span>How to Support a Friend</h2>
+<ul>
+<li>Choose a quiet time and ask kindly how they are.</li>
+<li>Listen without judging or rushing to fix things.</li>
+<li>Tell them their feelings matter and that they are not alone.</li>
+<li>Encourage them to talk to a trusted adult, counsellor or doctor, and offer to go with them.</li>
+<li>If a friend talks about hurting themselves or not wanting to live, take it seriously, and tell a trusted adult straight away, even if they asked you to keep it a secret. Their safety is more important than a secret.</li>
+</ul>
+<h2><span class="num">11.</span>When to Seek Extra Support</h2>
+<p>It is normal to feel low or anxious sometimes. But if difficult feelings last for weeks, feel overwhelming, or start affecting daily life, such as school, friendships, sleep or appetite, it is important to talk to a trusted adult, a school counsellor or a doctor. Asking for help is a sign of strength, not weakness.</p>
+<div class="mh-help"><strong>If you are in danger, or thinking about harming yourself:</strong> tell a trusted adult now, call your local emergency number, or contact a crisis helpline in your country. You do not have to deal with this alone, and help works. The website <a href="https://www.befrienders.org/" rel="noopener" target="_blank">Befrienders Worldwide</a> lists helplines in many countries.</div>
+<p>Professionals such as counsellors, psychologists and doctors are trained to listen and to help. Talking therapies and other treatments are effective for many young people, and most people who get support improve.</p>
+<div class="real-world-box"><div class="rw-label">Real-World Example</div><p>Many schools now run wellbeing programmes that teach students to recognise early signs of stress and practise coping strategies before problems build up. This reflects a wider shift in how mental health is treated, moving from silence and stigma towards open conversation and early support.</p></div>
+<h2><span class="num">12.</span>Common Myths About Mental Health</h2>
+<div class="mh-myths">
+<div class="mh-myth"><div class="m"><b>Myth</b>Mental health problems are a sign of weakness.</div><div class="f"><b>Fact</b>They are health conditions that can affect anyone, and they are not a character flaw.</div></div>
+<div class="mh-myth"><div class="m"><b>Myth</b>Young people do not get serious mental health problems.</div><div class="f"><b>Fact</b>They do. Many start in the teenage years, which is why early support matters.</div></div>
+<div class="mh-myth"><div class="m"><b>Myth</b>Talking about feelings makes things worse.</div><div class="f"><b>Fact</b>Talking to someone supportive usually helps, and it can make feelings easier to handle.</div></div>
+<div class="mh-myth"><div class="m"><b>Myth</b>If someone looks fine, they are fine.</div><div class="f"><b>Fact</b>Many people hide their struggles. Checking in kindly can make a real difference.</div></div>
 </div>
-<h2><span class="num">5.</span>When to Seek Extra Support</h2>
-<p>It's normal to feel low or anxious sometimes, but if difficult feelings last for weeks, feel overwhelming, or start affecting daily life — school, friendships, sleep, or appetite — it's important to talk to a trusted adult, school counsellor, or doctor. Asking for help is a sign of strength, not weakness.</p>
-<div class="real-world-box">
-<div class="rw-label">Real-World Example</div>
-<p>Many schools now run wellbeing programmes that teach students to recognise early signs of stress and practise coping strategies before problems build up — reflecting a wider shift in how mental health is treated, moving from silence and stigma toward open conversation and early support.</p>
-</div>
-<h2>A Closing Thought</h2>
-<p>Emotions are not obstacles to push away — they are useful signals that deserve attention. Learning to recognise, understand, and healthily manage your feelings is a skill that grows stronger with practice, and it forms one of the most important foundations of lifelong wellbeing.</p>
+<div class="mh-key"><div class="kp">Key points to remember</div><ul>
+<li>Mental health means emotional, psychological and social wellbeing, and everyone has it.</li>
+<li>Emotions are not good or bad. They are useful signals.</li>
+<li>Emotions cause real physical changes through the mind-body connection.</li>
+<li>Naming feelings, slow breathing, activity, sleep and talking to someone help.</li>
+<li>If feelings last for weeks or overwhelm you, tell a trusted adult or a professional.</li>
+</ul></div>
+<div class="mh-tp"><div class="tl">For teachers and parents</div><p><strong>Activity:</strong> use a "feelings check-in" at the start of a lesson, and practise the one-minute breathing exercise together. Show students which adults and services at school they can go to.</p><p><strong>Please note:</strong> this article is general education and not medical advice or therapy. If a young person seems distressed, or talks about harming themselves, seek help from a qualified professional or a crisis service straight away.</p></div>
+<div class="further-box"><div class="fr-label">Further Reading</div><ul>
+<li><a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" rel="noopener" target="_blank">World Health Organization: Adolescent Mental Health</a><span class="src-note">Facts and guidance on young people's mental health</span></li>
+<li><a href="https://www.nhs.uk/every-mind-matters/" rel="noopener" target="_blank">NHS: Every Mind Matters</a><span class="src-note">Practical tips for looking after your mental wellbeing</span></li>
+<li><a href="https://www.befrienders.org/" rel="noopener" target="_blank">Befrienders Worldwide</a><span class="src-note">Emotional support and helplines around the world</span></li>
+</ul></div>
 <!-- QUIZ SECTION -->
 <div class="quiz-section">
 <div class="section-eyebrow">Test Your Understanding</div>
@@ -1324,9 +1416,32 @@ footer.footer {
       });
     }
     if(input && results){
+      const norm=s=>(' '+String(s||'').toLowerCase().replace(/&/g,' and ').replace(/[^a-z0-9]+/g,' ')+' ');
+      const stop={and:1,the:1,of:1,a:1,an:1,to:1,in:1,is:1,for:1};
       const render=()=>{
         const q=input.value.trim().toLowerCase();
-        const hits=q?pages.filter(x=>(x.title+' '+x.url).toLowerCase().includes(q)).slice(0,20):[];
+        let words=norm(q).trim().split(' ').filter(Boolean);
+        const sig=words.filter(w=>!stop[w]); if(sig.length) words=sig;
+        let hits=[];
+        if(q&&words.length){
+          const forms=w=>{const f=[w]; if(w.length>3&&w.endsWith('s')) f.push(w.slice(0,-1)); if(w.length>4&&w.endsWith('es')) f.push(w.slice(0,-2)); if(w.length>5&&w.endsWith('ing')) f.push(w.slice(0,-3)); if(w.length>4&&w.endsWith('ed')) f.push(w.slice(0,-2)); return f;};
+          const scored=[];
+          pages.forEach(x=>{
+            const t=norm(x.title), m=norm(String(x.url||'').replace(/[-_.]/g,' ')+' '+(x.s||'')+' '+(x.k||''));
+            let sc=0, ok=true;
+            for(const w of words){
+              const f=forms(w);
+              if(f.some(v=>t.includes(' '+v))) sc+=3;
+              else if(f.some(v=>m.includes(' '+v))) sc+=1;
+              else { ok=false; break; }
+            }
+            if(ok) scored.push([sc,x]);
+          });
+          scored.sort((a,b)=>b[0]-a[0]);
+          hits=scored.map(z=>z[1]);
+          if(!hits.length) hits=pages.filter(x=>(x.title+' '+x.url).toLowerCase().includes(q));
+          hits=hits.slice(0,30);
+        }
         results.innerHTML=hits.map(x=>'<a href="'+x.url.replace(/"/g,'&quot;')+'">'+
           x.title.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</a>').join('') ||
           (q?'<div style="padding:10px;color:#64748b">No matching pages found.</div>':'');
@@ -1343,32 +1458,30 @@ footer.footer {
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',setup); else setup();
 })();
 </script>
-<footer class="edusambam-unified-footer" aria-label="EDUSAMBAM site footer">
+<footer aria-label="EDUSAMBAM site footer" class="edusambam-unified-footer">
 <div class="footer-top">
 <div class="footer-brand">
 <div class="edusambam-footer-brand-row">
-<a class="edusambam-footer-logo-link" href="index.html" aria-label="EDUSAMBAM home">
+<a aria-label="EDUSAMBAM home" class="edusambam-footer-logo-link" href="index.html">
 <img alt="EDUSAMBAM" class="edusambam-brand-mark edusambam-footer-logo" src="logo-icon-full-white.png" style="width:auto;height:64px;max-width:240px;object-fit:contain;background:none;border-radius:0;"/>
 </a>
 </div>
 <p class="edusambam-footer-statement">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</p>
-<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a></div>
+<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a><a aria-label="EDUSAMBAM on YouTube" href="https://youtube.com/@edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></div>
 </div>
-<div class="footer-col"><h4>Learning</h4><ul><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li></ul></div>
+<div class="footer-col"><h4>Learning Areas</h4><ul><li><a href="index.html#subject-english">English Language</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li></ul></div>
 <div class="footer-col"><h4>Practice &amp; Assessment</h4><ul>
 <li><a href="index.html#interactive-activities">Interactive Activities</a></li>
 <li><a href="assessment-arena.html">ASSESSMENT ARENA</a></li>
-<li><a href="assessment-arena.html">What Is Assessment?</a></li>
-<li><a href="index.html#about">Learn Your Way</a></li>
 <li><a href="index.html#resources">Resources &amp; Downloads</a></li>
 </ul></div>
 <div class="footer-col"><h4>About EDUSAMBAM</h4><ul>
-<li><a href="index.html#about-edusambam">What EDUSAMBAM Is</a></li>
 <li><a href="index.html#mission">Our Mission</a></li>
 <li><a href="index.html#team">The Team</a></li>
 <li><a href="contact.html">Contact Us</a></li>
 <li><a href="mailto:feedback.edusambam@gmail.com?subject=EDUSAMBAM%20Feedback">Give Feedback</a></li>
 <li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+<li><a href="about.html">About EDUSAMBAM</a></li>
 <li><a href="privacy-policy.html">Privacy Policy</a></li>
 </ul></div>
 </div>

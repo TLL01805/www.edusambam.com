@@ -14,7 +14,21 @@ gtag('config', 'G-Y35DW0V4HQ');
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Colour Vision and Colour Blindness Explained — EDUSAMBAM</title>
 <link href="https://edusambam.com/colour-vision-and-colour-blindness-explained.html" rel="canonical"/>
-<meta content="Colour doesn't exist outside the eye and brain the way it feels like it does. Learn how colour vision works, and why colour blindness happens." name="description"/>
+<meta content="Learn how cone cells build colour, how opponent channels and colour constancy work, and why colour vision deficiency happens, with examples." name="description"/>
+<meta content="colour vision, colour blindness, cone cells, trichromatic theory, opponent process, Ishihara test, optometry" name="keywords"/>
+<meta content="EDUSAMBAM Editorial Team" name="author"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<meta content="article" property="og:type"/>
+<meta content="EDUSAMBAM" property="og:site_name"/>
+<meta content="Colour Vision and Colour Blindness Explained — EDUSAMBAM" property="og:title"/>
+<meta content="Learn how cone cells build colour, how opponent channels and colour constancy work, and why colour vision deficiency happens, with examples." property="og:description"/>
+<meta content="https://edusambam.com/colour-vision-and-colour-blindness-explained.html" property="og:url"/>
+<meta content="en_GB" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Colour Vision and Colour Blindness Explained — EDUSAMBAM" name="twitter:title"/>
+<meta content="Learn how cone cells build colour, how opponent channels and colour constancy work, and why colour vision deficiency happens, with examples." name="twitter:description"/>
+<meta property="article:section" content="Health"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Colour Vision and Colour Blindness Explained", "description": "Learn how cone cells build colour, how opponent channels and colour constancy work, and why colour vision deficiency happens, with examples.", "inLanguage": "en", "author": {"@type": "Organization", "name": "EDUSAMBAM Editorial Team"}, "publisher": {"@type": "Organization", "name": "EDUSAMBAM", "url": "https://edusambam.com/"}, "mainEntityOfPage": "https://edusambam.com/colour-vision-and-colour-blindness-explained.html", "dateModified": "2026-10-20", "educationalLevel": "Secondary school (ages 13 to 18)", "audience": {"@type": "EducationalAudience", "educationalRole": "student"}, "isAccessibleForFree": true, "articleSection": "Optometry"}</script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
@@ -940,6 +954,21 @@ gtag('config', 'G-Y35DW0V4HQ');
     cursor: pointer;
   }
   .squiz-retake-btn:hover { background: rgba(255,255,255,0.1); }
+
+  /* Optometry upgrade: light SVG animation (all off for reduced motion) */
+  .flow-line { stroke-dasharray: 5 4; animation: flowDash 1.6s linear infinite; }
+  .pulse-dot { animation: pulseDot 2.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+  .light-dot { animation: lightMove 3.2s ease-in-out infinite; }
+  .pupil-pulse { animation: pupilPulse 5s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+  .after-img { animation: afterFade 5s ease-in-out infinite; }
+  @keyframes flowDash { to { stroke-dashoffset: -18; } }
+  @keyframes pulseDot { 0%,100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.35); opacity: .65; } }
+  @keyframes lightMove { 0% { transform: translateX(0); } 70%,100% { transform: translateX(150px); } }
+  @keyframes pupilPulse { 0%,100% { transform: scale(1); } 50% { transform: scale(.5); } }
+  @keyframes afterFade { 0%,20% { opacity: 0; } 50%,70% { opacity: .55; } 100% { opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { .flow-line, .pulse-dot, .light-dot, .pupil-pulse { animation: none; } .after-img { animation: none; opacity: .4; } }
+  .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .updated-note { font-size: .85rem; color: var(--slate); margin: -.5rem 0 1.2rem; }
 </style>
 <style id="edusambam-reader-style">
 .mark{width:48px;height:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px;border-radius:14px;background:#eef6ff;box-shadow:0 2px 7px rgba(8,47,99,.10);flex:0 0 48px}.mark i{display:block;border-radius:50%;background:#0b4ea2;min-width:0;min-height:0}.mark i:nth-child(5){background:#d4a017}.edusambam-reader{max-width:980px;margin:1.2rem auto 0;padding:1rem 1.1rem;border:1px solid #d7e4ef;border-radius:14px;background:linear-gradient(135deg,#f7fbff,#fff);box-shadow:0 6px 18px rgba(11,45,92,.08)}.edusambam-reader strong{display:block;color:#0b55a5;font-size:.9rem;letter-spacing:.04em}.edusambam-reader .reader-slogan{color:#b27e08;font-weight:900;margin-top:.25rem;font-size:.82rem}.edusambam-reader .reader-help{color:#607086;font-size:.8rem;margin:.3rem 0 .7rem}.edusambam-reader .reader-controls{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}.edusambam-reader button,.edusambam-reader select{border:1px solid #c9d9e8;background:#fff;color:#153b6e;border-radius:8px;padding:.48rem .65rem;font-weight:800;cursor:pointer}.edusambam-reader button:first-child{background:#0b55a5;color:#fff;border-color:#0b55a5}.edusambam-reader .reader-status{display:block;color:#607086;font-size:.75rem;margin-top:.55rem}.edusambam-reader .reader-progress{height:4px;background:#e4edf6;border-radius:99px;margin-top:.6rem;overflow:hidden}.edusambam-reader .reader-progress span{display:block;width:0;height:100%;background:#e1ad1c;transition:width .2s linear}@media(max-width:600px){.edusambam-reader{margin-left:0;margin-right:0}.edusambam-reader .reader-controls button,.edusambam-reader .reader-controls select{flex:1;min-width:75px}}
@@ -1329,13 +1358,14 @@ footer.footer {
 }
 </style><style id="edusambam-footer-social-css">.edusambam-footer-social{margin-top:14px}.edusambam-footer-social a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);color:rgba(255,255,255,.85);transition:background .15s,color .15s}.edusambam-footer-social a:hover{background:rgba(255,255,255,.22);color:#fff}</style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2230995786427221"
      crossorigin="anonymous"></script>
+<meta property="og:image" content="https://edusambam.com/logo-icon-full.png"/>
 </head>
 <body id="top">
 <!-- TOP BAR -->
 <div class="top-bar">
 <p>Established 2026  ·  Free Educational Resources for All</p>
 <ul class="top-bar-links">
-<li><a href="contact.html">Contact</a></li><li><a href="index.html#about-edusambam">About</a></li><li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+<li><a href="contact.html">Contact</a></li><li><a href="about.html">About</a></li><li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
 </ul>
 </div>
 <!-- NAV -->
@@ -1347,13 +1377,12 @@ footer.footer {
 <span class="edusambam-brand-subtitle">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</span>
 </span>
 </a>
-<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li></ul>
+<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Language</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ</a></li><li><a href="index.html#resources">Resources</a></li></ul>
 <button aria-label="Search" class="edusambam-search-btn" title="Search" type="button">⌕</button>
 <button aria-expanded="false" aria-label="Open menu" class="edusambam-menu-btn" title="Menu" type="button">☰</button>
 </div>
-</nav>
-<div aria-label="Mobile navigation" class="edusambam-mobile-menu">
-<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="assessment-arena.html">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="index.html#about-edusambam">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
+</nav><div aria-label="Mobile navigation" class="edusambam-mobile-menu">
+<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Language</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="index.html#subject-assessment">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="about.html">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
 </div>
 <div aria-label="Site search" class="edusambam-search-panel">
 <div class="edusambam-search-wrap">
@@ -1377,6 +1406,7 @@ footer.footer {
 <div aria-label="EDUSAMBAM article reader" class="edusambam-reader"><strong>🔊 LISTEN TO THIS ARTICLE</strong><div class="reader-slogan">SAVE YOUR EYES • IMPROVE YOUR LISTENING</div><div class="reader-help">Listen to the article instead of relying only on continuous screen reading.</div><div class="reader-controls"><button data-reader="play" type="button">▶ Play</button><button data-reader="pause" type="button">⏸ Pause</button><button data-reader="resume" type="button">▶ Resume</button><button data-reader="stop" type="button">■ Stop</button><select aria-label="Reading speed"><option value="1">1×</option><option value="0.8">0.8×</option><option value="1.2">1.2×</option></select></div><div aria-hidden="true" class="reader-progress"><span></span></div><small class="reader-status">Ready to read the article.</small></div>
 <div class="article-wrap">
 <p class="lead">A ripe tomato is not "red." It reflects a particular mix of wavelengths, and nothing more. Redness itself — the felt quality of it — is something your eye's cone cells and your brain build afterwards, and not everyone's visual system builds it quite the same way.</p>
+<p class="updated-note">Last updated: 20 October 2026 · General education, not medical advice.</p>
 <h2><span class="num">1.</span>What Colour Actually Is</h2>
 <p>Objects themselves have no built-in colour. What they have is a surface that absorbs some wavelengths of light and reflects others. A tomato looks red because its skin absorbs most wavelengths of visible light and reflects mainly the longer wavelengths, which the eye and brain interpret as "red." Colour, in other words, is not a property sitting out in the world waiting to be observed — it is a perceptual experience, constructed entirely inside the visual system from raw wavelength information.</p>
 <h2><span class="num">2.</span>Trichromatic Theory: Three Cone Types</h2>
@@ -1398,11 +1428,55 @@ footer.footer {
 </svg>
 <p class="diagram-caption">Each cone type responds across a broad, overlapping range of wavelengths, with a distinct peak sensitivity. Colour perception comes from comparing the signal strength across all three curves at once.</p>
 </div>
+<div class="example-box">
+<div class="ex-label">Worked Example: Which Cones Respond?</div>
+<p>The three cone types are most sensitive to roughly these wavelengths (values are approximate and differ a little between sources): S-cones about 420–440 nm, M-cones about 530–540 nm, and L-cones about 560–565 nm. Light of one wavelength can stir more than one cone type, so the brain compares them.</p>
+<div class="table-scroll"><table class="pos-table">
+<tr><th>Light</th><th>Step 1: Closest peak</th><th>Step 2: Which cones respond most?</th></tr>
+<tr><td>About 440 nm (violet-blue)</td><td>S-cone peak</td><td>Mainly S-cones</td></tr>
+<tr><td>About 535 nm (green)</td><td>M-cone peak</td><td>Mainly M-cones, with some L-cone response</td></tr>
+<tr><td>About 600 nm (orange-red)</td><td>Beyond the L-cone peak</td><td>L-cones more than M-cones</td></tr>
+</table></div>
+<p><strong>Step 3 — Compare the signals.</strong> Yellow light of about 580 nm stirs the L- and M-cones in a similar way. A screen can make yellow by mixing red and green light, because that mix also stirs L- and M-cones similarly. The brain reads the pattern of signals, not the wavelength itself.</p>
+</div>
 <h2><span class="num">3.</span>Opponent-Process Theory: Refining the Signal</h2>
 <p>Trichromatic theory explains what happens at the retina, but it does not fully explain how colour is experienced further along the visual pathway. <strong>Opponent-process theory</strong> describes how, once cone signals leave the retina, the visual system recombines them into three opposing channels: red versus green, blue versus yellow, and black versus white (light versus dark). This is why people never report seeing a colour that looks simultaneously reddish-green or bluish-yellow — the channels are built to work in opposing pairs, cancelling each other out at the extremes rather than blending, whereas a colour like "yellowish-green" or "reddish-blue" (purple) is entirely normal, since those come from different channel pairs.</p>
 <div class="example-box">
 <div class="ex-label">Everyday Evidence</div>
 <p>Stare at a solid patch of bright red for around 30 seconds, then look at a plain white surface, and a faint green afterimage typically appears. This happens because the red-detecting side of the red-green opponent channel becomes temporarily fatigued, briefly letting the green side dominate once the red stimulus is removed — direct evidence of opponent-process channels actually working.</p>
+</div>
+<div class="diagram-box">
+<svg viewBox="0 0 400 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="afT">
+<title id="afT">Afterimage illustration: staring at a red circle, then looking at a white panel, can show a faint blue-green circle.</title>
+<rect fill="#F5EDD6" height="100" rx="4" stroke="#06244a" stroke-width="1.2" width="150" x="20" y="14"></rect>
+<circle class="pulse-dot" cx="95" cy="64" fill="#C0272D" r="28"></circle>
+<text fill="#06244a" font-size="9" text-anchor="middle" x="95" y="130">1. Stare at the red circle</text>
+<path class="flow-line" d="M176 64 L222 64" fill="none" stroke="#B8963E" stroke-width="1.5"></path>
+<rect fill="#FFFFFF" height="100" rx="4" stroke="#06244a" stroke-width="1.2" width="150" x="230" y="14"></rect>
+<circle class="after-img" cx="305" cy="64" fill="#1FA8A0" r="28"></circle>
+<text fill="#06244a" font-size="9" text-anchor="middle" x="305" y="130">2. Look at white: a faint blue-green circle</text>
+</svg>
+<p class="diagram-caption">An illustration of the afterimage effect. The animation only imitates it. To feel the real effect, stare at a real red patch for about 30 seconds and then look at a plain white surface.</p>
+</div>
+<div class="diagram-box">
+<svg viewBox="0 0 400 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="opT">
+<title id="opT">The three opponent channels: red versus green, blue versus yellow, and dark versus light.</title>
+<defs>
+<linearGradient id="gRG" x1="0" x2="1"><stop offset="0" stop-color="#C0272D"></stop><stop offset=".5" stop-color="#9A9A9A"></stop><stop offset="1" stop-color="#2E8B57"></stop></linearGradient>
+<linearGradient id="gBY" x1="0" x2="1"><stop offset="0" stop-color="#2F5DA8"></stop><stop offset=".5" stop-color="#9A9A9A"></stop><stop offset="1" stop-color="#E2B72A"></stop></linearGradient>
+<linearGradient id="gDL" x1="0" x2="1"><stop offset="0" stop-color="#111111"></stop><stop offset="1" stop-color="#F5F5F5"></stop></linearGradient>
+</defs>
+<text fill="#06244a" font-size="10" font-weight="600" x="20" y="24">Channel 1: red versus green</text>
+<rect fill="url(#gRG)" height="18" rx="3" stroke="#06244a" width="360" x="20" y="30"></rect>
+<text fill="#06244a" font-size="9" x="20" y="62">Red</text><text fill="#06244a" font-size="9" text-anchor="end" x="380" y="62">Green</text>
+<text fill="#06244a" font-size="10" font-weight="600" x="20" y="88">Channel 2: blue versus yellow</text>
+<rect fill="url(#gBY)" height="18" rx="3" stroke="#06244a" width="360" x="20" y="94"></rect>
+<text fill="#06244a" font-size="9" x="20" y="126">Blue</text><text fill="#06244a" font-size="9" text-anchor="end" x="380" y="126">Yellow</text>
+<text fill="#06244a" font-size="10" font-weight="600" x="20" y="152">Channel 3: dark versus light</text>
+<rect fill="url(#gDL)" height="18" rx="3" stroke="#06244a" width="360" x="20" y="158"></rect>
+<text fill="#06244a" font-size="9" x="20" y="186">Dark</text><text fill="#06244a" font-size="9" text-anchor="end" x="380" y="186">Light</text>
+</svg>
+<p class="diagram-caption">Each channel works as a pair. A signal leaning one way means one colour of the pair, and leaning the other way means the other. This is why we do not see "reddish-green".</p>
 </div>
 <h2><span class="num">4.</span>Colour Constancy: Why a White Shirt Looks White Everywhere</h2>
 <p>The brain does something remarkable with colour information beyond simply reporting wavelengths: it adjusts for the colour of the surrounding light source, a phenomenon called <strong>colour constancy</strong>. A white shirt reflects noticeably different wavelength mixes under warm indoor lighting versus cool daylight, yet it is still perceived as "white" in both settings, because the brain factors out the light source and estimates the object's underlying reflectance instead. This system is not infallible — it is precisely why certain ambiguous photographs (famously, a particular dress photographed in unusual lighting) can cause different viewers' brains to make different assumptions about the light source, and therefore perceive strikingly different colours from the exact same image.</p>
@@ -1417,6 +1491,20 @@ footer.footer {
 <tr><td>Total colour blindness (achromatopsia)</td><td>All cone function absent or severely impaired</td><td>Extremely rare, roughly 1 in 30,000 people</td></tr>
 </table>
 </div>
+<div class="example-box">
+<div class="ex-label">Worked Example: How Red-Green Deficiency Is Inherited</div>
+<p>The common red-green types are carried on the X chromosome and are <strong>recessive</strong>. Write the normal gene as X<sup>C</sup> and the gene for deficiency as X<sup>c</sup>. A woman has two X chromosomes. A man has one X and one Y.</p>
+<p><strong>Case 1: carrier mother (X<sup>C</sup>X<sup>c</sup>) and father with typical colour vision (X<sup>C</sup>Y).</strong></p>
+<div class="table-scroll"><table class="pos-table">
+<tr><th>Child</th><th>Genes</th><th>Result</th></tr>
+<tr><td>Daughter</td><td>X<sup>C</sup>X<sup>C</sup></td><td>Typical colour vision</td></tr>
+<tr><td>Daughter</td><td>X<sup>C</sup>X<sup>c</sup></td><td>Carrier, usually typical colour vision</td></tr>
+<tr><td>Son</td><td>X<sup>C</sup>Y</td><td>Typical colour vision</td></tr>
+<tr><td>Son</td><td>X<sup>c</sup>Y</td><td>Colour vision deficiency</td></tr>
+</table></div>
+<p>Each son has a 1 in 2 chance of being affected. No daughter is affected, but each has a 1 in 2 chance of being a carrier.</p>
+<p><strong>Case 2: father with red-green deficiency (X<sup>c</sup>Y) and mother with two normal genes (X<sup>C</sup>X<sup>C</sup>).</strong> All daughters are carriers and all sons have typical colour vision, because sons receive the father's Y chromosome, not his X. These are chances, not certainties, and rarer cases exist, so a family doctor or genetic counsellor can advise on a real family.</p>
+</div>
 <h2><span class="num">6.</span>How Colour Vision Deficiency Is Diagnosed</h2>
 <p>Optometrists most commonly screen for colour vision deficiency using <strong>Ishihara plates</strong> — circular patterns made of coloured dots that hide a number or shape, visible only to those with typical colour vision, or that reveal a different, misleading number to people with a specific type of deficiency. For a more detailed diagnosis, the <strong>Farnsworth-Munsell 100 Hue Test</strong> asks a patient to arrange coloured caps in a smooth gradient, which reveals exactly which part of the colour spectrum a person struggles to distinguish, rather than simply confirming a deficiency exists.</p>
 <div class="real-world-box">
@@ -1425,6 +1513,36 @@ footer.footer {
 </div>
 <h2><span class="num">7.</span>Living with Colour Vision Deficiency</h2>
 <p>For most people with mild to moderate colour vision deficiency, daily life is only occasionally affected — traffic lights, for instance, are recognised by position as much as colour, and most people learn reliable workarounds over childhood without ever being formally diagnosed. It matters more directly in specific contexts: certain careers with strict colour-recognition requirements (some branches of the armed forces, aviation, and electrical work, for example) may be restricted or require additional testing, and children with undiagnosed colour vision deficiency can sometimes struggle with colour-coded classroom materials in ways that are mistaken for other learning difficulties, which is one reason early screening is genuinely useful.</p>
+<h2><span class="num">8.</span>Common Mistakes and Myths</h2>
+<ul>
+<li><strong>"Colour blind people see only black and white."</strong> Almost always false. Most people with colour vision deficiency see colour, but find it hard to tell some colours apart, such as certain reds and greens.</li>
+<li><strong>"Only boys can be colour blind."</strong> Women can be affected too, but much less often for the common red-green types, because of how the X chromosome works.</li>
+<li><strong>"Glasses fix colour blindness."</strong> Ordinary glasses correct focus, and colour vision deficiency is not a focus problem. Some tinted lenses may help certain people tell some colours apart, but they do not give typical colour vision.</li>
+<li><strong>"Everyone sees colours the same way."</strong> People with typical colour vision usually agree on common colour names, but the inner experience cannot be compared directly, and the dress photograph shows that brains can disagree.</li>
+<li><strong>"Colour is a property of the object alone."</strong> It also depends on the light and on the viewer's visual system.</li>
+</ul>
+<h2><span class="num">9.</span>Designing Materials That Everyone Can Read</h2>
+<p>In a class of about thirty students, there may well be one with colour vision deficiency, especially among boys. A few simple habits help everybody:</p>
+<ul>
+<li>Do not rely on colour alone. Add labels, patterns, shapes or underlining as well.</li>
+<li>Use strong contrast between text and background, such as dark text on a light page.</li>
+<li>In graphs, use different line styles or direct labels next to lines, not only different colours.</li>
+<li>Avoid colour-only instructions such as "circle the red ones". Say "circle the squares".</li>
+</ul>
+<h2><span class="num">10.</span>When to See an Eye Professional</h2>
+<p>Book an eye test if a child seems to mix up colours often, if colour tasks cause unexplained difficulty at school, or if you notice that colours suddenly look faded or different in one or both eyes. A sudden change needs prompt attention, because it can have causes other than inherited colour vision deficiency. Never try to treat an eye problem yourself. <em>This is general education, not medical advice.</em></p>
+<div class="example-box">
+<div class="ex-label">Key Points</div>
+<p>Colour is built by the eye and brain. Three cone types (S, M and L) respond to overlapping ranges of wavelengths, and the brain compares their signals. Later, opponent channels (red versus green, blue versus yellow, dark versus light) and colour constancy refine the result. Colour vision deficiency is usually inherited, much more common in men, and is found with tests such as Ishihara plates. Good design does not rely on colour alone.</p>
+</div>
+<div class="real-world-box">
+<div class="rw-label">For Teachers and Parents</div>
+<p>Try the afterimage activity with the class and ask students to explain it using opponent channels. Check that worksheets and graphs work without colour. A parent who notices a child mixing up colours can ask for a colour vision check at an eye test.</p>
+</div>
+<div class="real-world-box">
+<div class="rw-label">Read Next in This Series</div>
+<ul><li><a href="vision-science-and-optometry-an-introduction.html">Vision Science and Optometry: An Introduction</a></li><li><a href="role-of-an-optometrist-in-vision-health-and-treatment.html">The Role of an Optometrist</a></li><li><a href="anatomy-of-the-eye-in-depth.html">The Anatomy of the Eye in Depth</a></li><li><a href="how-we-see-light-focus-and-the-brain.html">How We See: Light, Focus and the Brain</a></li></ul>
+</div>
 <h2>A Closing Thought</h2>
 <p>Colour feels like the most objective, straightforward part of vision — a red apple is simply red, full stop. But it is, in fact, one of the most elaborately constructed experiences the visual system produces: three overlapping cone responses, recombined into opposing channels, corrected for ambient lighting, and only then handed to conscious awareness as a single, seemingly simple quality. For the roughly 1 in 12 men whose cones are built slightly differently, that same red apple is still very much seen — just built from a marginally different recipe.</p>
 <div class="further-reading-box">
@@ -1703,9 +1821,32 @@ footer.footer {
       });
     }
     if(input && results){
+      const norm=s=>(' '+String(s||'').toLowerCase().replace(/&/g,' and ').replace(/[^a-z0-9]+/g,' ')+' ');
+      const stop={and:1,the:1,of:1,a:1,an:1,to:1,in:1,is:1,for:1};
       const render=()=>{
         const q=input.value.trim().toLowerCase();
-        const hits=q?pages.filter(x=>(x.title+' '+x.url).toLowerCase().includes(q)).slice(0,20):[];
+        let words=norm(q).trim().split(' ').filter(Boolean);
+        const sig=words.filter(w=>!stop[w]); if(sig.length) words=sig;
+        let hits=[];
+        if(q&&words.length){
+          const forms=w=>{const f=[w]; if(w.length>3&&w.endsWith('s')) f.push(w.slice(0,-1)); if(w.length>4&&w.endsWith('es')) f.push(w.slice(0,-2)); if(w.length>5&&w.endsWith('ing')) f.push(w.slice(0,-3)); if(w.length>4&&w.endsWith('ed')) f.push(w.slice(0,-2)); return f;};
+          const scored=[];
+          pages.forEach(x=>{
+            const t=norm(x.title), m=norm(String(x.url||'').replace(/[-_.]/g,' ')+' '+(x.s||'')+' '+(x.k||''));
+            let sc=0, ok=true;
+            for(const w of words){
+              const f=forms(w);
+              if(f.some(v=>t.includes(' '+v))) sc+=3;
+              else if(f.some(v=>m.includes(' '+v))) sc+=1;
+              else { ok=false; break; }
+            }
+            if(ok) scored.push([sc,x]);
+          });
+          scored.sort((a,b)=>b[0]-a[0]);
+          hits=scored.map(z=>z[1]);
+          if(!hits.length) hits=pages.filter(x=>(x.title+' '+x.url).toLowerCase().includes(q));
+          hits=hits.slice(0,30);
+        }
         results.innerHTML=hits.map(x=>'<a href="'+x.url.replace(/"/g,'&quot;')+'">'+
           x.title.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</a>').join('') ||
           (q?'<div style="padding:10px;color:#64748b">No matching pages found.</div>':'');
@@ -1722,32 +1863,30 @@ footer.footer {
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',setup); else setup();
 })();
 </script>
-<footer class="edusambam-unified-footer" aria-label="EDUSAMBAM site footer">
+<footer aria-label="EDUSAMBAM site footer" class="edusambam-unified-footer">
 <div class="footer-top">
 <div class="footer-brand">
 <div class="edusambam-footer-brand-row">
-<a class="edusambam-footer-logo-link" href="index.html" aria-label="EDUSAMBAM home">
+<a aria-label="EDUSAMBAM home" class="edusambam-footer-logo-link" href="index.html">
 <img alt="EDUSAMBAM" class="edusambam-brand-mark edusambam-footer-logo" src="logo-icon-full-white.png" style="width:auto;height:64px;max-width:240px;object-fit:contain;background:none;border-radius:0;"/>
 </a>
 </div>
 <p class="edusambam-footer-statement">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</p>
-<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a></div>
+<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a><a aria-label="EDUSAMBAM on YouTube" href="https://youtube.com/@edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></div>
 </div>
-<div class="footer-col"><h4>Learning</h4><ul><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li></ul></div>
+<div class="footer-col"><h4>Learning Areas</h4><ul><li><a href="index.html#subject-english">English Language</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li></ul></div>
 <div class="footer-col"><h4>Practice &amp; Assessment</h4><ul>
 <li><a href="index.html#interactive-activities">Interactive Activities</a></li>
 <li><a href="assessment-arena.html">ASSESSMENT ARENA</a></li>
-<li><a href="assessment-arena.html">What Is Assessment?</a></li>
-<li><a href="index.html#about">Learn Your Way</a></li>
 <li><a href="index.html#resources">Resources &amp; Downloads</a></li>
 </ul></div>
 <div class="footer-col"><h4>About EDUSAMBAM</h4><ul>
-<li><a href="index.html#about-edusambam">What EDUSAMBAM Is</a></li>
 <li><a href="index.html#mission">Our Mission</a></li>
 <li><a href="index.html#team">The Team</a></li>
 <li><a href="contact.html">Contact Us</a></li>
 <li><a href="mailto:feedback.edusambam@gmail.com?subject=EDUSAMBAM%20Feedback">Give Feedback</a></li>
 <li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+<li><a href="about.html">About EDUSAMBAM</a></li>
 <li><a href="privacy-policy.html">Privacy Policy</a></li>
 </ul></div>
 </div>

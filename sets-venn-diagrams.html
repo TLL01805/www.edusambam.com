@@ -12,9 +12,9 @@ gtag('config', 'G-Y35DW0V4HQ');
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Sets: Notation, Venn Diagrams &amp; Set Operations — EDUSAMBAM</title>
+<title>Sets and Venn Diagrams: Complete Guide — EDUSAMBAM</title>
 <link href="https://edusambam.com/sets-venn-diagrams.html" rel="canonical"/>
-<meta content="Learn set notation, Venn diagrams, union, intersection, complement, subsets, and the n(A ∪ B) counting formula, with worked survey-style examples for O Level maths." name="description"/>
+<meta content="Learn sets and Venn diagrams: notation, subsets, union, intersection, complement, counting formulas and survey problems, with worked examples and a quiz." name="description"/>
 <meta content="sets, Venn diagrams, union intersection complement, subsets, universal set, empty set, n(A union B) formula, O Level maths sets" name="keywords"/>
 <meta content="EDUSAMBAM Editorial Team" name="author"/>
 <meta content="index, follow" name="robots"/>
@@ -23,6 +23,8 @@ gtag('config', 'G-Y35DW0V4HQ');
 <meta property="og:title" content="Sets: Notation, Venn Diagrams &amp; Set Operations"/>
 <meta property="og:description" content="Learn set notation, Venn diagrams, union, intersection, complement, subsets, and the n(A ∪ B) counting formula, with worked survey-style examples for O Level maths."/>
 <meta property="og:url" content="https://edusambam.com/sets-venn-diagrams.html"/>
+<meta property="og:image" content="https://edusambam.com/logo-icon-full.png"/>
+<meta property="article:modified_time" content="2026-10-24"/>
 <meta property="article:section" content="Mathematics"/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Sets: Notation, Venn Diagrams &amp; Set Operations"/>
@@ -1007,13 +1009,141 @@ footer.footer {
 }
 </style><style id="edusambam-footer-social-css">.edusambam-footer-social{margin-top:14px}.edusambam-footer-social a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);color:rgba(255,255,255,.85);transition:background .15s,color .15s}.edusambam-footer-social a:hover{background:rgba(255,255,255,.22);color:#fff}</style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2230995786427221"
      crossorigin="anonymous"></script>
+<style id="edusambam-math-extra">
+details.sn-answer{background:var(--cream);border:1px solid var(--border);border-left:4px solid var(--navy);border-radius:var(--radius);padding:.9rem 1.2rem;margin:0 0 1.8rem}
+details.sn-answer summary{cursor:pointer;font-weight:600;color:var(--navy)}
+details.sn-answer p{margin:.6rem 0 0}
+.edusambam-footer-social a+a{margin-left:10px}
+.fun-fact-box{
+    background: linear-gradient(135deg, rgba(212,175,55,0.12), rgba(212,175,55,0.04));
+    border: 1.5px dashed var(--gold);
+    border-radius: var(--radius);
+    padding: 1.3rem 1.5rem;
+    margin: 1.8rem 0;
+    position: relative;
+  }
+.fun-fact-label{
+    font-weight: 700;
+    color: var(--red);
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+.fun-fact-box p{ margin: 0; }
+.fixit-challenge{
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-left: 5px solid var(--red);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.4rem;
+    margin: 1.2rem 0;
+  }
+.fixit-wrong{
+    font-family: 'EB Garamond', serif;
+    font-size: 1.15rem;
+    color: var(--red);
+    text-decoration: line-through;
+    margin-bottom: 0.4rem;
+  }
+.fixit-toggle-btn{
+    background: none;
+    border: 1.5px solid var(--red);
+    color: var(--red);
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.4rem 0.9rem;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 0.3rem;
+  }
+.fixit-explain{ display: none; margin-top: 0.7rem; padding-top: 0.7rem; border-top: 1px dashed rgba(0,0,0,0.15); }
+.fixit-explain.visible{ display: block; }
+.drill-section{
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 2rem 1.7rem;
+    margin-top: 3rem;
+  }
+.drill-section .section-eyebrow{ color: var(--gold); }
+.drill-section h2{ border: none; margin: 0 0 0.4rem; padding: 0; color: white; }
+.drill-intro{ color: rgba(255,255,255,0.65); font-size: 0.95rem; margin-bottom: 1.5rem; }
+.drill-btn{
+    background: var(--red);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 0.55rem 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+.drill-btn:hover{ background: var(--red-mid); }
+.drill-feedback{ margin-top: 1.2rem; color: white; font-size: 0.95rem; min-height: 1.4rem; }
+.nl-drill-progress{ color: var(--gold); text-align: center; font-size: 0.85rem; margin-bottom: 0.6rem; letter-spacing: 0.03em; }
+.nl-drill-actions{ display: flex; justify-content: center; gap: 0.8rem; margin-top: 1rem; flex-wrap: wrap; }
+.pv-info-panel{
+    background: var(--gold-lt);
+    border: 1px solid rgba(184,150,62,0.35);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.4rem;
+    margin-top: 1rem;
+    min-height: 34px;
+  }
+.pv-info-placeholder{ color: var(--slate); font-style: italic; margin: 0; }
+.pv-info-result{ margin: 0; font-size: 1rem; }
+.pv-info-result strong{ color: var(--red); }
+.pv-drill-question{ color: white; font-size: 1.1rem; font-weight: 600; text-align: center; margin-bottom: 1.3rem; }
+.pv-drill-choices{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.8rem; margin-bottom: 1rem; }
+@media (max-width: 600px){.pv-drill-choices{ grid-template-columns: 1fr; }}
+.pv-choice-btn{
+    background: rgba(255,255,255,0.08);
+    border: 1.5px solid rgba(255,255,255,0.25);
+    color: white;
+    padding: 0.8rem 1rem;
+    border-radius: var(--radius);
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.95rem;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.15s;
+  }
+.pv-choice-btn:hover{ background: rgba(212,175,55,0.18); border-color: var(--gold); }
+.pv-choice-btn.correct{ background: rgba(76,175,80,0.35); border-color: #4CAF50; }
+.pv-choice-btn.incorrect{ background: rgba(229,115,115,0.35); border-color: #E57373; }
+.pv-choice-btn:disabled{ cursor: default; }
+.ns-chip-row{ display: flex; gap: 0.6rem; flex-wrap: wrap; justify-content: center; margin: 1.3rem 0; }
+.ns-chip{
+    background: #fff; border: 2px solid var(--border); border-radius: 30px;
+    padding: 0.5rem 1.1rem; font-size: 1.05rem; font-weight: 700;
+    font-family: 'Source Sans 3', sans-serif; color: var(--navy);
+    cursor: pointer; transition: all 0.15s;
+  }
+.ns-chip:hover{ border-color: var(--gold); background: rgba(212,175,55,0.1); }
+.ns-chip.active{ background: var(--red); color: #fff; border-color: var(--red); }
+.st-venn-wrap{text-align:center;margin:.5rem 0 1rem}.st-venn-wrap svg{max-width:100%;height:auto}
+.st-r{fill:#EFE9DA;transition:fill .25s,fill-opacity .25s}.st-r.on{fill:#B8963E;fill-opacity:.85}
+.st-lab{opacity:.35;animation:st-l 8s linear infinite}.st-a2{animation-delay:2s}.st-a3{animation-delay:4s}.st-a4{animation-delay:6s}
+@keyframes st-l{0%{opacity:1}24%{opacity:1}25%,100%{opacity:.35}}
+.st-shade{animation:st-p 3s ease-in-out infinite}
+@keyframes st-p{0%,100%{opacity:1}50%{opacity:.6}}
+.st-num{opacity:0;animation:st-n 9s ease-out infinite}
+.st-n2{animation-delay:1.2s}.st-n3{animation-delay:2.4s}.st-n4{animation-delay:3.6s}
+@keyframes st-n{0%{opacity:0}8%,92%{opacity:1}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.st-lab,.st-shade{animation:none;opacity:1}.st-num{animation:none;opacity:1}}
+</style>
 </head>
 <body id="top">
 <!-- TOP BAR -->
 <div class="top-bar">
 <p>Established 2026  ·  Free Educational Resources for All</p>
 <ul class="top-bar-links">
-<li><a href="contact.html">Contact</a></li><li><a href="index.html#about-edusambam">About</a></li><li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+<li><a href="contact.html">Contact</a></li><li><a href="about.html">About</a></li><li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
 </ul>
 </div>
 <!-- NAV -->
@@ -1025,13 +1155,13 @@ footer.footer {
 <span class="edusambam-brand-subtitle">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</span>
 </span>
 </a>
-<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li></ul>
+<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Language</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ</a></li><li><a href="index.html#resources">Resources</a></li></ul>
 <button aria-label="Search" class="edusambam-search-btn" title="Search" type="button">⌕</button>
 <button aria-expanded="false" aria-label="Open menu" class="edusambam-menu-btn" title="Menu" type="button">☰</button>
 </div>
 </nav>
 <div aria-label="Mobile navigation" class="edusambam-mobile-menu">
-<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="index.html#subject-assessment">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="index.html#about-edusambam">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
+<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Language</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="index.html#subject-assessment">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="about.html">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
 </div>
 <div aria-label="Site search" class="edusambam-search-panel">
 <div class="edusambam-search-wrap">
@@ -1041,146 +1171,403 @@ footer.footer {
 </div>
 <!-- ARTICLE HERO -->
 <div class="article-hero">
-<div class="breadcrumb"><a href="index.html#gateway">Gateway</a> &nbsp;/&nbsp; <a href="index.html#subject-maths">Maths</a> &nbsp;/&nbsp; Sets: Notation, Venn Diagrams &amp; Set Operations</div>
-<div class="article-hero-tag">Mathematics · Sets &amp; Matrices</div>
-<h1>Sets: Notation, Venn Diagrams &amp; Set Operations</h1>
-<p class="sub">A complete guide to set notation, Venn diagrams, union, intersection, complement, subsets, and solving survey-style counting problems.</p>
+<div class="breadcrumb"><a href="index.html#gateway">Gateway</a> &nbsp;/&nbsp; <a href="index.html#subject-maths">Maths</a> &nbsp;/&nbsp; Sets &amp; Venn Diagrams</div>
+<div class="article-hero-tag">Mathematics · Sets</div>
+<h1>Sets &amp; Venn Diagrams: Complete Guide</h1>
+<p class="sub">A set is a collection of distinct objects, and a Venn diagram is the picture that shows how sets overlap. Learn the notation, the operations and the counting methods, from two sets to three.</p>
 <div class="article-hero-meta">
-<span>EDUSAMBAM Editorial Team</span><span>|</span><span>20 min read</span><span>|</span><span>Mathematics</span>
+<span>EDUSAMBAM Editorial Team</span><span>|</span><span>18 min read</span><span>|</span><span>Last updated: October 2026</span><span>|</span><span>Mathematics</span>
 </div>
 </div><div aria-label="EDUSAMBAM article reader" class="edusambam-reader"><strong>🔊 LISTEN TO THIS ARTICLE</strong><div class="reader-slogan">SAVE YOUR EYES • IMPROVE YOUR LISTENING</div><div class="reader-help">Listen to the article instead of relying only on continuous screen reading.</div><div class="reader-controls"><button data-reader="play" type="button">▶ Play</button><button data-reader="pause" type="button">⏸ Pause</button><button data-reader="resume" type="button">▶ Resume</button><button data-reader="stop" type="button">■ Stop</button><select aria-label="Reading speed"><option value="1">1×</option><option value="0.8">0.8×</option><option value="1.2">1.2×</option></select></div><div aria-hidden="true" class="reader-progress"><span></span></div><small class="reader-status">Ready to read the article.</small></div>
 <!-- ARTICLE BODY -->
 <div class="article-wrap">
-<p class="lead">A <strong>set</strong> is simply a well-defined collection of distinct objects, called its <strong>elements</strong> or <strong>members</strong>. Set theory provides precise notation and a visual tool — the <strong>Venn diagram</strong> — for describing how different groups of objects relate, overlap, and combine. These ideas underpin probability, logic, and data organisation, and appear constantly in real-world contexts such as surveys, classifications, and database queries.</p>
+<p class="lead">A <strong>set</strong> is a well-defined collection of distinct objects, called its <strong>elements</strong> or <strong>members</strong>. Set notation gives you exact symbols for describing groups, and the <strong>Venn diagram</strong> gives you a picture of how those groups overlap. Together they are the language behind surveys, database searches, probability and logic. This guide builds from the first symbol to three-set survey problems, with every example worked out in full and checked.</p>
 
 <div class="diagram-box">
-<svg viewBox="0 0 760 330" role="img" aria-labelledby="setTitle setDesc">
-<title id="setTitle">Sets learning pathway</title>
-<desc id="setDesc">A pathway from set notation through subsets and Venn diagrams to union, intersection and complement.</desc>
-<defs><linearGradient id="setG" x1="0" x2="1"><stop offset="0" stop-color="#06244a"/><stop offset="1" stop-color="#0b4ea2"/></linearGradient></defs>
-<rect x="0" y="0" width="760" height="330" rx="18" fill="#faf8f4"/>
-<path d="M90 165 H670" stroke="#d4a017" stroke-width="5"/>
-<g font-family="Arial, sans-serif" text-anchor="middle">
-<g><circle cx="90" cy="165" r="55" fill="url(#setG)"/><text x="90" y="160" fill="white" font-size="14" font-weight="700">SET</text><text x="90" y="178" fill="white" font-size="14" font-weight="700">NOTATION</text><text x="90" y="197" fill="#d4a017" font-size="12">elements, subsets</text></g>
-<g><circle cx="235" cy="165" r="55" fill="white" stroke="#d4a017" stroke-width="3"/><text x="235" y="160" fill="#06244a" font-size="14" font-weight="700">VENN</text><text x="235" y="178" fill="#06244a" font-size="14" font-weight="700">DIAGRAMS</text><text x="235" y="197" fill="#4a4a4a" font-size="12">visual sets</text></g>
-<g><circle cx="380" cy="165" r="55" fill="white" stroke="#d4a017" stroke-width="3"/><text x="380" y="158" fill="#06244a" font-size="14" font-weight="700">UNION &amp;</text><text x="380" y="176" fill="#06244a" font-size="14" font-weight="700">INTERSECTION</text><text x="380" y="195" fill="#4a4a4a" font-size="12">∪ and ∩</text></g>
-<g><circle cx="525" cy="165" r="55" fill="white" stroke="#d4a017" stroke-width="3"/><text x="525" y="163" fill="#06244a" font-size="14" font-weight="700">COMPLEMENT</text><text x="525" y="184" fill="#4a4a4a" font-size="12">A′</text></g>
-<g><circle cx="670" cy="165" r="55" fill="url(#setG)"/><text x="670" y="158" fill="white" font-size="14" font-weight="700">SOLVING</text><text x="670" y="176" fill="white" font-size="14" font-weight="700">PROBLEMS</text><text x="670" y="195" fill="#d4a017" font-size="12">n(A), surveys</text></g>
-<text x="380" y="45" fill="#06244a" font-size="21" font-weight="700">FROM NOTATION TO PROBLEM-SOLVING</text>
-<text x="380" y="292" fill="#767676" font-size="13">Every set operation can be drawn as a shaded region on a Venn diagram.</text>
+<svg viewBox="0 0 360 245" role="img" aria-labelledby="st1t st1d" xmlns="http://www.w3.org/2000/svg" font-family="Source Sans 3, Arial, sans-serif">
+<title id="st1t">The four regions of a two-set Venn diagram</title>
+<desc id="st1d">A rectangle for the universal set containing two overlapping circles A and B. The regions are A only, the overlap A and B, B only, and the outside region that is in neither set.</desc>
+<rect x="10" y="22" width="340" height="188" rx="10" fill="none" stroke="#06244a" stroke-width="2.5"/>
+<text x="22" y="42" font-size="15" fill="#06244a" font-weight="700">ξ</text>
+<circle cx="140" cy="116" r="66" fill="#06244a" fill-opacity="0.13" stroke="#06244a" stroke-width="2.5"/>
+<circle cx="220" cy="116" r="66" fill="#8B0000" fill-opacity="0.13" stroke="#8B0000" stroke-width="2.5"/>
+<g font-size="16" font-weight="700"><text x="108" y="64" fill="#06244a">A</text><text x="236" y="64" fill="#8B0000">B</text></g>
+<g font-size="12" font-weight="700" text-anchor="middle" fill="#1A1A1A">
+<text x="108" y="112" class="st-lab st-a1">A only</text><text x="108" y="128" class="st-lab st-a1" font-weight="400" font-size="11">A ∩ B′</text>
+<text x="180" y="112" class="st-lab st-a2">A ∩ B</text><text x="180" y="128" class="st-lab st-a2" font-weight="400" font-size="11">both</text>
+<text x="252" y="112" class="st-lab st-a3">B only</text><text x="252" y="128" class="st-lab st-a3" font-weight="400" font-size="11">B ∩ A′</text>
+<text x="52" y="190" class="st-lab st-a4">(A ∪ B)′</text><text x="52" y="203" class="st-lab st-a4" font-weight="400" font-size="10">neither</text>
 </g>
+<text x="180" y="232" text-anchor="middle" font-size="12" fill="#4A4A4A">Every element of ξ belongs to exactly one of these four regions.</text>
 </svg>
-<div class="diagram-caption">Figure 1. Set notation and Venn diagrams work together — every symbol has a matching visual region. Diagram created specifically for EDUSAMBAM.</div>
+<div class="diagram-caption">The four labels glow in turn. Every question about two sets is a question about which of these regions you want.</div>
 </div>
 
 <h2><span class="num">1.</span>What Is a Set?</h2>
-<p>A set is written using curly braces, listing its elements: A = {2, 4, 6, 8}. Sets can also be described by a rule rather than a full list, e.g. A = {even numbers less than 10}.</p>
+<p>A set is written with curly braces, listing its elements: A = {2, 4, 6, 8}. A set can also be described by a rule instead of a full list.</p>
+<ul>
+<li><strong>Roster (list) form:</strong> A = {2, 4, 6, 8}.</li>
+<li><strong>Descriptive form:</strong> A = {even numbers less than 10}.</li>
+<li><strong>Set-builder form:</strong> A = {x : x is an even whole number, 0 &lt; x &lt; 10}. Read the colon as “such that”.</li>
+</ul>
+<p>Two rules about sets are easy to forget:</p>
+<ul>
+<li><strong>Order does not matter.</strong> {1, 2, 3} and {3, 1, 2} are the same set.</li>
+<li><strong>Repeats do not count.</strong> A set lists each element once, so {1, 1, 2, 3} is the same set as {1, 2, 3}, and it has 3 elements, not 4.</li>
+</ul>
+<p>Many sets you already know are sets of numbers: the whole numbers, the integers, the fractions (see <a href="number-systems.html">Number Systems</a>).</p>
 
 <h2><span class="num">2.</span>Set Notation</h2>
 <div class="table-wrap"><table class="pos-table">
-<tr><th>Symbol</th><th>Meaning</th></tr>
-<tr><td>∈</td><td>"is an element of" (e.g. 4 ∈ A)</td></tr>
-<tr><td>∉</td><td>"is not an element of"</td></tr>
-<tr><td>n(A)</td><td>The number of elements in set A</td></tr>
-<tr><td>⊂</td><td>"is a subset of"</td></tr>
-<tr><td>∅ or { }</td><td>The empty set (no elements)</td></tr>
-<tr><td>ξ (or U)</td><td>The universal set (everything under consideration)</td></tr>
+<tr><th>Symbol</th><th>Meaning</th><th>Example</th></tr>
+<tr><td>∈</td><td>“is an element of”</td><td>4 ∈ {2, 4, 6}</td></tr>
+<tr><td>∉</td><td>“is not an element of”</td><td>5 ∉ {2, 4, 6}</td></tr>
+<tr><td>n(A)</td><td>the number of elements in A</td><td>n({2, 4, 6}) = 3</td></tr>
+<tr><td>⊂ or ⊆</td><td>“is a subset of” (see the note below)</td><td>{2, 4} ⊂ {2, 4, 6}</td></tr>
+<tr><td>⊄</td><td>“is not a subset of”</td><td>{2, 5} ⊄ {2, 4, 6}</td></tr>
+<tr><td>∅ or { }</td><td>the empty set (no elements)</td><td>n(∅) = 0</td></tr>
+<tr><td>ξ (or U)</td><td>the universal set (everything being considered)</td><td>ξ = {1, 2, …, 10}</td></tr>
+<tr><td>∪</td><td>union: in A, in B, or in both</td><td>A ∪ B</td></tr>
+<tr><td>∩</td><td>intersection: in both A and B</td><td>A ∩ B</td></tr>
+<tr><td>A′</td><td>complement: in ξ but not in A</td><td>A′</td></tr>
+<tr><td>A \ B</td><td>difference: in A but not in B</td><td>A \ B = A ∩ B′</td></tr>
 </table></div>
+<div class="fun-fact-box">
+<div class="fun-fact-label">Note on the Symbols</div>
+<p>Books differ on the subset symbol. Some use ⊂ for any subset. Others use ⊆ for “subset” and keep ⊂ for a <em>proper</em> subset (one that is not the whole set). The complement is also written A<sup>c</sup> or Ā in some books. Follow the notation used in your own textbook or syllabus.</p>
+</div>
 
-<h2><span class="num">3.</span>Special Sets: The Universal Set and the Empty Set</h2>
-<p>The <strong>universal set</strong>, ξ, contains every element relevant to a given problem — all other sets are considered subsets of it. The <strong>empty set</strong>, written ∅ or { }, contains no elements at all.</p>
+<h2><span class="num">3.</span>The Universal Set and the Empty Set</h2>
+<p>The <strong>universal set</strong>, ξ, holds every element relevant to a problem. All the other sets in the problem are parts of it. The <strong>empty set</strong>, ∅, has no elements at all. Note that ∅ is not the same as {0}, which is a set with one element, the number 0.</p>
 
 <h2><span class="num">4.</span>Subsets</h2>
-<p>Set A is a <strong>subset</strong> of set B (written A ⊂ B) if every element of A is also an element of B. Every set is a subset of the universal set, and the empty set is a subset of every set.</p>
-<div class="example-box"><div class="ex-label">Example 1 · Checking a subset</div>
-<p>A = {1, 3, 5}, B = {1, 2, 3, 4, 5, 6}. Is A ⊂ B?</p>
-<p>Every element of A (1, 3, 5) is also in B, so <strong>yes, A ⊂ B</strong>.</p>
+<p>Set A is a <strong>subset</strong> of set B if every element of A is also an element of B. Every set is a subset of ξ and of itself, and the empty set is a subset of every set (there is nothing in ∅ that could fail to be in B).</p>
+<div class="example-box">
+<div class="ex-label">Example 1: Checking a Subset</div>
+<p>A = {1, 3, 5} and B = {1, 2, 3, 4, 5, 6}. Every element of A (1, 3 and 5) is also in B, so A is a subset of B. But B is not a subset of A, because 2 is in B and not in A.</p>
+</div>
+<div class="example-box">
+<div class="ex-label">Example 2: Listing All Subsets</div>
+<p>List every subset of {a, b, c}: ∅, {a}, {b}, {c}, {a, b}, {a, c}, {b, c}, {a, b, c}. That is <strong>8</strong> subsets. In general, a set with n elements has 2<sup>n</sup> subsets, because each element is either in or out (see <a href="exponents-and-powers.html">Exponents &amp; Powers</a>). So 4 elements give 16 subsets and 5 elements give 32. Leaving out the set itself, the number of <em>proper</em> subsets is 2<sup>n</sup> − 1, which is 7 here.</p>
 </div>
 
-<h2><span class="num">5.</span>Venn Diagrams: Representing Sets Visually</h2>
-<p>A <strong>Venn diagram</strong> represents sets as overlapping circles inside a rectangle (the universal set ξ). Elements are placed in the region corresponding to which sets they belong to.</p>
+<h2><span class="num">5.</span>Venn Diagrams: Seeing Sets</h2>
+<p>A <strong>Venn diagram</strong> draws ξ as a rectangle and each set as a circle inside it. Elements are written in the region that matches which sets they belong to. The diagram at the top shows the four regions of a two-set diagram. The mathematician John Venn popularised this kind of diagram in the 1880s, and similar diagrams had been used earlier by Leonhard Euler.</p>
+<p>The main habit to build: <strong>every region of the diagram belongs to exactly one place</strong>, so nothing is counted twice and nothing is missed.</p>
+
+<h2><span class="num">6.</span>Union, Intersection, Complement and Difference</h2>
 <div class="diagram-box">
-<svg viewBox="0 0 460 300" role="img" aria-labelledby="vennBasicTitle vennBasicDesc">
-<title id="vennBasicTitle">Basic two-set Venn diagram</title>
-<desc id="vennBasicDesc">Two overlapping circles labelled A and B inside a rectangle representing the universal set.</desc>
-<rect x="20" y="20" width="420" height="260" rx="10" fill="none" stroke="#06244a" stroke-width="2"/>
-<text x="35" y="45" fill="#06244a" font-size="14" font-family="Arial, sans-serif">ξ</text>
-<circle cx="190" cy="150" r="90" fill="#06244a" fill-opacity="0.15" stroke="#06244a" stroke-width="2.5"/>
-<circle cx="290" cy="150" r="90" fill="#8B0000" fill-opacity="0.15" stroke="#8B0000" stroke-width="2.5"/>
-<text x="140" y="100" fill="#06244a" font-size="16" font-family="Arial, sans-serif">A</text>
-<text x="330" y="100" fill="#8B0000" font-size="16" font-family="Arial, sans-serif">B</text>
+<svg viewBox="0 0 360 310" role="img" aria-labelledby="st2t st2d" xmlns="http://www.w3.org/2000/svg" font-family="Source Sans 3, Arial, sans-serif">
+<title id="st2t">Four set operations shaded on Venn diagrams</title>
+<desc id="st2d">Four small Venn diagrams. A union B has both circles shaded. A intersection B has only the overlap shaded. The complement of A has everything outside circle A shaded. A minus B has only the part of A outside B shaded.</desc>
+<defs>
+<clipPath id="stClip1"><circle cx="75" cy="85" r="30"/></clipPath>
+<clipPath id="stClip2"><circle cx="255" cy="85" r="30"/></clipPath>
+</defs>
+<g stroke="#06244a" stroke-width="2" fill="#FAF8F4"><rect x="12" y="34" width="156" height="100" rx="6"/><rect x="192" y="34" width="156" height="100" rx="6"/><rect x="12" y="176" width="156" height="100" rx="6"/><rect x="192" y="176" width="156" height="100" rx="6"/></g>
+<g font-size="13" font-weight="700" fill="#06244a" text-anchor="middle"><text x="90" y="26">A ∪ B</text><text x="270" y="26">A ∩ B</text><text x="90" y="168">A′</text><text x="270" y="168">A \ B</text></g>
+<g class="st-shade">
+<circle cx="75" cy="85" r="30" fill="#B8963E"/><circle cx="105" cy="85" r="30" fill="#B8963E"/>
+<circle cx="285" cy="85" r="30" fill="#B8963E" clip-path="url(#stClip2)"/>
+<rect x="12" y="176" width="156" height="100" fill="#B8963E"/>
+</g>
+<circle cx="75" cy="227" r="30" fill="#FAF8F4"/>
+<circle cx="255" cy="227" r="30" fill="#B8963E"/><circle cx="285" cy="227" r="30" fill="#FAF8F4"/>
+<g fill="none" stroke="#06244a" stroke-width="2"><circle cx="75" cy="85" r="30"/><circle cx="105" cy="85" r="30"/><circle cx="255" cy="85" r="30"/><circle cx="285" cy="85" r="30"/><circle cx="75" cy="227" r="30"/><circle cx="105" cy="227" r="30"/><circle cx="255" cy="227" r="30"/><circle cx="285" cy="227" r="30"/></g>
+<g font-size="12" font-weight="700" fill="#1A1A1A" text-anchor="middle"><text x="60" y="89">A</text><text x="120" y="89">B</text><text x="240" y="89">A</text><text x="300" y="89">B</text><text x="60" y="231">A</text><text x="120" y="231">B</text><text x="240" y="231">A</text><text x="300" y="231">B</text></g>
+<g font-size="11" fill="#4A4A4A" text-anchor="middle"><text x="90" y="150">in A, in B, or both</text><text x="270" y="150">in both A and B</text><text x="90" y="292">in ξ but not in A</text><text x="270" y="292">in A but not in B</text></g>
 </svg>
-<div class="diagram-caption">Figure 2. A basic Venn diagram: the rectangle represents ξ, and each circle represents one set.</div>
+<div class="diagram-caption">The gold areas pulse gently. Each symbol matches one shaded region.</div>
 </div>
 
-<h2><span class="num">6.</span>Union of Sets (A ∪ B)</h2>
-<p>The <strong>union</strong> of A and B, written A ∪ B, contains every element that is in <strong>A, B, or both</strong>. On a Venn diagram, this is the entire shaded area covered by both circles combined.</p>
-<div class="example-box"><div class="ex-label">Example 2 · Finding a union</div>
-<p>A = {1, 2, 3, 4}, B = {3, 4, 5, 6}. Find A ∪ B.</p>
-<p>A ∪ B = <strong>{1, 2, 3, 4, 5, 6}</strong> (each element listed once, even though 3 and 4 appear in both).</p>
+<p>Use these two sets for all the examples in this section: ξ = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, A = {1, 2, 3, 4, 5} and B = {4, 5, 6, 7}.</p>
+<div class="example-box">
+<div class="ex-label">Example 3: Union (A ∪ B)</div>
+<p>A ∪ B has every element that is in A, in B, or in both. Write each element once: A ∪ B = <strong>{1, 2, 3, 4, 5, 6, 7}</strong>. The elements 4 and 5 are in both sets but appear once.</p>
+</div>
+<div class="example-box">
+<div class="ex-label">Example 4: Intersection (A ∩ B)</div>
+<p>A ∩ B has only the elements in both: A ∩ B = <strong>{4, 5}</strong>.</p>
+</div>
+<div class="example-box">
+<div class="ex-label">Example 5: Complement (A′)</div>
+<p>A′ is everything in ξ that is not in A: A′ = <strong>{6, 7, 8, 9, 10}</strong>. In the same way B′ = {1, 2, 3, 8, 9, 10}.</p>
+</div>
+<div class="example-box">
+<div class="ex-label">Example 6: Difference (A \ B)</div>
+<p>A \ B has the elements of A that are not in B: A \ B = <strong>{1, 2, 3}</strong>. And B \ A = {6, 7}.</p>
+</div>
+<div class="fixit-challenge">
+<div class="fixit-wrong">A ∪ B = {1, 2, 3, 4, 5, 4, 5, 6, 7} (listing the shared elements twice)</div>
+<p>It feels natural to copy out both lists in full, but a set never lists an element twice.</p>
+<button class="fixit-toggle-btn" onclick="toggleFix('fix1')">Show the Fix</button>
+<div class="fixit-explain" id="fix1">
+<p><strong>The fix:</strong> write each element once. A ∪ B = {1, 2, 3, 4, 5, 6, 7}. A good method: write all of A, then add only the elements of B that are not already there (6 and 7).</p>
+</div>
+</div>
+<div class="fixit-challenge">
+<div class="fixit-wrong">“A ∩ B means everything in A and B together, so it is {1, 2, 3, 4, 5, 6, 7}”</div>
+<p>This mixes up the two symbols. “And” in everyday speech can mean “put together”, but in sets it means “in both”.</p>
+<button class="fixit-toggle-btn" onclick="toggleFix('fix2')">Show the Fix</button>
+<div class="fixit-explain" id="fix2">
+<p><strong>The fix:</strong> ∪ (union) means “or”: in A or B or both. ∩ (intersection) means “and”: in A and in B at the same time. The two symbols even look different: ∪ is a cup that collects everything, and ∩ is an arch with a narrow opening. So A ∩ B = {4, 5}.</p>
+</div>
 </div>
 
-<h2><span class="num">7.</span>Intersection of Sets (A ∩ B)</h2>
-<p>The <strong>intersection</strong> of A and B, written A ∩ B, contains only the elements that are in <strong>both A and B</strong>. On a Venn diagram, this is just the overlapping region.</p>
-<div class="example-box"><div class="ex-label">Example 3 · Finding an intersection</div>
-<p>Using the same sets, A = {1, 2, 3, 4}, B = {3, 4, 5, 6}. Find A ∩ B.</p>
-<p>A ∩ B = <strong>{3, 4}</strong> — the elements common to both sets.</p>
+<h2><span class="num">7.</span>Disjoint Sets and Equal Sets</h2>
+<p>Two sets are <strong>disjoint</strong> when they have nothing in common, so A ∩ B = ∅. For example, the even numbers {2, 4, 6} and the odd numbers {1, 3, 5} are disjoint, and their circles on a Venn diagram do not overlap. Two sets are <strong>equal</strong> when they have exactly the same elements: {1, 2, 3} = {3, 2, 1}.</p>
+
+<h2><span class="num">8.</span>The Counting Formula</h2>
+<p>To find how many elements are in a union, you cannot just add the two counts, because the overlap would be counted twice.</p>
+<div class="example-box">
+<div class="ex-label">The Formula</div>
+<p style="text-align:center;"><strong>n(A ∪ B) = n(A) + n(B) − n(A ∩ B)</strong></p>
+<p>The intersection is subtracted once because it was counted once in n(A) and once in n(B). For disjoint sets, n(A ∩ B) = 0, so n(A ∪ B) = n(A) + n(B).</p>
+</div>
+<div class="example-box">
+<div class="ex-label">Example 7</div>
+<p>In a class, 18 students study French, 15 study Spanish, and 7 study both. Students studying French or Spanish: n(F ∪ S) = 18 + 15 − 7 = <strong>26</strong>.</p>
+</div>
+<div class="fixit-challenge">
+<div class="fixit-wrong">n(F ∪ S) = 18 + 15 = 33 (forgetting to subtract the overlap)</div>
+<p>This counts the 7 students who study both languages twice.</p>
+<button class="fixit-toggle-btn" onclick="toggleFix('fix3')">Show the Fix</button>
+<div class="fixit-explain" id="fix3">
+<p><strong>The fix:</strong> subtract the intersection: 18 + 15 − 7 = 26. Check by regions: French only = 18 − 7 = 11, Spanish only = 15 − 7 = 8, both = 7, and 11 + 8 + 7 = 26. ✓</p>
+</div>
 </div>
 
-<h2><span class="num">8.</span>Complement of a Set (A′)</h2>
-<p>The <strong>complement</strong> of A, written A′, contains every element of the universal set that is <strong>not</strong> in A. On a Venn diagram, this is everything outside circle A but still inside the rectangle.</p>
-<div class="example-box"><div class="ex-label">Example 4 · Finding a complement</div>
-<p>ξ = {1, 2, 3, 4, 5, 6, 7, 8}, A = {2, 4, 6, 8}. Find A′.</p>
-<p>A′ = <strong>{1, 3, 5, 7}</strong> — everything in ξ that is not in A.</p>
+<h2><span class="num">9.</span>Solving Survey Problems With a Venn Diagram</h2>
+<p>For any word problem, follow this order:</p>
+<ol>
+<li><strong>Draw</strong> the rectangle and circles, and label the sets.</li>
+<li><strong>Fill the overlap first</strong> (the “both” region), because it is the most specific information.</li>
+<li><strong>Work outwards:</strong> “only” regions = total of that set − the overlap.</li>
+<li><strong>Find the outside region last:</strong> total in ξ − everything inside the circles.</li>
+<li><strong>Check:</strong> all regions must add up to the total.</li>
+</ol>
+
+<div class="diagram-box">
+<svg viewBox="0 0 360 270" role="img" aria-labelledby="st3t st3d" xmlns="http://www.w3.org/2000/svg" font-family="Source Sans 3, Arial, sans-serif">
+<title id="st3t">Filling in a survey Venn diagram step by step</title>
+<desc id="st3d">A survey of 40 people. 12 like both tea and coffee, 10 like tea only, 13 like coffee only, and 5 like neither.</desc>
+<text x="180" y="16" text-anchor="middle" font-size="13" fill="#06244a" font-weight="700">40 people: 22 like tea, 25 like coffee, 12 like both</text>
+<rect x="10" y="26" width="340" height="188" rx="10" fill="none" stroke="#06244a" stroke-width="2.5"/>
+<circle cx="140" cy="120" r="66" fill="#06244a" fill-opacity="0.12" stroke="#06244a" stroke-width="2.5"/>
+<circle cx="220" cy="120" r="66" fill="#8B0000" fill-opacity="0.12" stroke="#8B0000" stroke-width="2.5"/>
+<g font-size="13" font-weight="700"><text x="96" y="66" fill="#06244a">Tea</text><text x="244" y="66" fill="#8B0000">Coffee</text></g>
+<g font-size="22" font-weight="700" fill="#1A1A1A" text-anchor="middle">
+<text x="180" y="128" class="st-num st-n1">12</text><text x="104" y="128" class="st-num st-n2">10</text><text x="256" y="128" class="st-num st-n3">13</text><text x="44" y="196" class="st-num st-n4">5</text>
+</g>
+<g font-size="11" font-weight="700" fill="#8B0000" text-anchor="middle"><text x="180" y="146">step 1</text><text x="104" y="146">step 2</text><text x="256" y="146">step 3</text><text x="44" y="210" font-size="10">step 4</text></g>
+<g font-size="11" fill="#4A4A4A" text-anchor="middle">
+<text x="180" y="233">1: both = 12     2: tea only = 22 − 12 = 10</text>
+<text x="180" y="248">3: coffee only = 25 − 12 = 13</text>
+<text x="180" y="263">4: neither = 40 − (10 + 12 + 13) = 5</text>
+</g>
+</svg>
+<div class="diagram-caption">The numbers appear in the order you should fill them. Check: 10 + 12 + 13 + 5 = 40.</div>
 </div>
 
-<h2><span class="num">9.</span>The Number of Elements in a Set: n(A)</h2>
-<p>A useful formula connects the sizes of two sets, their union, and their intersection: <strong>n(A ∪ B) = n(A) + n(B) − n(A ∩ B)</strong>. The intersection is subtracted because its elements would otherwise be counted twice.</p>
-<div class="example-box"><div class="ex-label">Example 5 · Using the counting formula</div>
-<p>In a class, 18 students study French, 15 study Spanish, and 7 study both. Find the number studying French or Spanish.</p>
-<p>n(F ∪ S) = 18 + 15 − 7 = <strong>26 students</strong>.</p>
-</div>
-
-<h2><span class="num">10.</span>Using Venn Diagrams to Solve Problems</h2>
-<p>The standard approach for a word problem is to fill in the <strong>intersection region first</strong> (since it is shared information), then work outward to fill in the parts of each set that are not shared, and finally the region outside both circles (but inside ξ).</p>
-<div class="example-box"><div class="ex-label">Example 6 · Filling a Venn diagram</div>
+<div class="example-box">
+<div class="ex-label">Example 8: Neither</div>
 <p>In a survey of 40 people, 22 like tea, 25 like coffee, and 12 like both. How many like neither?</p>
-<p>Number liking only tea = 22 − 12 = 10. Number liking only coffee = 25 − 12 = 13. Total liking at least one = 10 + 12 + 13 = 35. Number liking neither = 40 − 35 = <strong>5 people</strong>.</p>
+<p>Both = 12. Tea only = 22 − 12 = 10. Coffee only = 25 − 12 = 13. Inside the circles: 10 + 12 + 13 = 35. Neither = 40 − 35 = <strong>5 people</strong>.</p>
+</div>
+<div class="example-box">
+<div class="ex-label">Example 9: Finding the Overlap</div>
+<p>In a group of 50 students, 30 play cricket, 25 play football, and 8 play neither. How many play both?</p>
+<p>Students who play at least one sport = 50 − 8 = 42. From n(C ∪ F) = n(C) + n(F) − n(C ∩ F): 42 = 30 + 25 − n(C ∩ F), so n(C ∩ F) = 55 − 42 = <strong>13</strong>. Check: cricket only 17, football only 12, both 13, neither 8, and 17 + 12 + 13 + 8 = 50. ✓</p>
+</div>
+<div class="example-box">
+<div class="ex-label">Example 10: Only One</div>
+<p>Of 100 students, 60 study maths, 45 study science and 20 study both. How many study science only, and how many study neither?</p>
+<p>Science only = 45 − 20 = <strong>25</strong>. Maths only = 60 − 20 = 40. At least one subject = 40 + 20 + 25 = 85. Neither = 100 − 85 = <strong>15</strong>.</p>
+</div>
+<div class="fixit-challenge">
+<div class="fixit-wrong">Filling the diagram from the outside in, writing “22” in the tea circle and “25” in the coffee circle first</div>
+<p>The totals 22 and 25 include the overlap, so putting them in a single region would count the overlap twice.</p>
+<button class="fixit-toggle-btn" onclick="toggleFix('fix4')">Show the Fix</button>
+<div class="fixit-explain" id="fix4">
+<p><strong>The fix:</strong> a circle total is the sum of <em>all</em> its regions, including the overlap. Put the overlap in first, then subtract it: tea only = 22 − 12 = 10, not 22. The numbers in the regions of a circle must add up to that circle’s total.</p>
+</div>
 </div>
 
-<h2><span class="num">11.</span>Two-Set and Three-Set Venn Diagrams</h2>
-<p>Problems can also involve <strong>three</strong> overlapping sets, requiring a diagram with three circles and up to eight distinct regions (including the region outside all three sets). The same principle applies: fill in the most specific (most overlapping) region first, then work outward.</p>
+<h2><span class="num">10.</span>Three Sets</h2>
+<p>A three-circle diagram has <strong>8 regions</strong>: seven inside the circles and one outside. Fill in the middle first, where all three circles overlap, then the three regions where exactly two circles overlap, then the “only” regions, and finally the outside.</p>
+
 <div class="diagram-box">
-<svg viewBox="0 0 460 320" role="img" aria-labelledby="venn3Title venn3Desc">
-<title id="venn3Title">Three-set Venn diagram</title>
-<desc id="venn3Desc">Three overlapping circles labelled A, B and C inside a rectangle representing the universal set.</desc>
-<rect x="20" y="20" width="420" height="280" rx="10" fill="none" stroke="#06244a" stroke-width="2"/>
-<circle cx="180" cy="140" r="85" fill="#06244a" fill-opacity="0.12" stroke="#06244a" stroke-width="2"/>
-<circle cx="280" cy="140" r="85" fill="#8B0000" fill-opacity="0.12" stroke="#8B0000" stroke-width="2"/>
-<circle cx="230" cy="220" r="85" fill="#B8963E" fill-opacity="0.15" stroke="#B8963E" stroke-width="2"/>
-<text x="130" y="90" fill="#06244a" font-size="15" font-family="Arial, sans-serif">A</text>
-<text x="330" y="90" fill="#8B0000" font-size="15" font-family="Arial, sans-serif">B</text>
-<text x="225" y="290" fill="#B8963E" font-size="15" font-family="Arial, sans-serif">C</text>
+<svg viewBox="0 0 360 300" role="img" aria-labelledby="st4t st4d" xmlns="http://www.w3.org/2000/svg" font-family="Source Sans 3, Arial, sans-serif">
+<title id="st4t">A three-set Venn diagram with all eight regions filled</title>
+<desc id="st4d">Three overlapping circles for cricket, football and hockey. All three: 5. Cricket and football only: 8. Cricket and hockey only: 4. Football and hockey only: 6. Cricket only: 12. Football only: 15. Hockey only: 10. None: 10. Total 70.</desc>
+<rect x="10" y="8" width="340" height="284" rx="10" fill="none" stroke="#06244a" stroke-width="2.5"/>
+<circle cx="130" cy="120" r="75" fill="#06244a" fill-opacity="0.12" stroke="#06244a" stroke-width="2.5"/>
+<circle cx="230" cy="120" r="75" fill="#8B0000" fill-opacity="0.12" stroke="#8B0000" stroke-width="2.5"/>
+<circle cx="180" cy="200" r="75" fill="#B8963E" fill-opacity="0.2" stroke="#B8963E" stroke-width="2.5"/>
+<g font-size="12" font-weight="700"><text x="24" y="34" fill="#06244a">A  Cricket</text><text x="262" y="34" fill="#8B0000">B  Football</text><text x="228" y="276" fill="#8B7020">C  Hockey</text></g>
+<g font-size="20" font-weight="700" fill="#1A1A1A" text-anchor="middle">
+<text x="180" y="156" class="st-num st-n1">5</text>
+<text x="180" y="92" class="st-num st-n2">8</text><text x="118" y="184" class="st-num st-n2">4</text><text x="242" y="184" class="st-num st-n2">6</text>
+<text x="86" y="106" class="st-num st-n3">12</text><text x="274" y="106" class="st-num st-n3">15</text><text x="180" y="252" class="st-num st-n3">10</text>
+<text x="34" y="276" class="st-num st-n4">10</text>
+</g>
+<g font-size="10" fill="#4A4A4A" text-anchor="middle"><text x="180" y="170">all 3</text><text x="34" y="288">none</text></g>
 </svg>
-<div class="diagram-caption">Figure 3. A three-set Venn diagram has up to eight distinct regions to consider.</div>
+<div class="diagram-caption">The numbers appear in the fill order: the middle first, then the pairs, then the “only” regions, then the outside.</div>
 </div>
 
-<h2><span class="num">12.</span>Common Mistakes</h2>
-<p>Common errors include: listing shared elements twice when writing a union; forgetting to subtract the intersection when using the n(A ∪ B) formula; confusing union (∪, "or") with intersection (∩, "and"); and filling a Venn diagram from the outside in rather than starting with the most specific overlapping region.</p>
+<div class="example-box">
+<div class="ex-label">Example 11: Reading a Three-Set Diagram</div>
+<p>The diagram shows 70 students and the sports they play. From the diagram:</p>
+<p>n(A) = 12 + 8 + 4 + 5 = <strong>29</strong>. n(B) = 15 + 8 + 6 + 5 = <strong>34</strong>. n(C) = 10 + 4 + 6 + 5 = <strong>25</strong>.</p>
+<p>Students who play at least one sport = 70 − 10 = <strong>60</strong>. Students who play exactly two sports = 8 + 4 + 6 = <strong>18</strong>.</p>
+</div>
+<p>For three sets, the counting formula adds one more term:</p>
+<div class="example-box">
+<div class="ex-label">The Three-Set Formula</div>
+<p style="text-align:center;"><strong>n(A ∪ B ∪ C) = n(A) + n(B) + n(C) − n(A ∩ B) − n(A ∩ C) − n(B ∩ C) + n(A ∩ B ∩ C)</strong></p>
+<p>The pairs are each subtracted once, but that removes the middle region too many times, so the triple overlap is added back once.</p>
+</div>
+<div class="example-box">
+<div class="ex-label">Example 12: Using the Formula</div>
+<p>Using the totals from the diagram: n(A) = 29, n(B) = 34, n(C) = 25, n(A ∩ B) = 13, n(A ∩ C) = 9, n(B ∩ C) = 11 and n(A ∩ B ∩ C) = 5.</p>
+<p>n(A ∪ B ∪ C) = 29 + 34 + 25 − 13 − 9 − 11 + 5 = 88 − 33 + 5 = <strong>60</strong>. This matches the 60 found by adding the regions. ✓</p>
+<p>How many play hockey only? Hockey total 25, minus the parts shared with others: 25 − 4 − 6 − 5 = <strong>10</strong>.</p>
+</div>
 
-<h2><span class="num">13.</span>Putting It Together</h2>
-<div class="table-wrap"><table class="pos-table">
-<tr><th>Notation</th><th>Meaning</th></tr>
-<tr><td>A ∪ B</td><td>Elements in A, B, or both</td></tr>
-<tr><td>A ∩ B</td><td>Elements in both A and B</td></tr>
-<tr><td>A′</td><td>Elements not in A (within ξ)</td></tr>
-<tr><td>n(A ∪ B)</td><td>n(A) + n(B) − n(A ∩ B)</td></tr>
-</table></div>
-<p>Every set problem reduces to correctly identifying which regions of a Venn diagram are involved, then applying the matching notation or counting formula.</p>
+<h2><span class="num">11.</span>Complement Rules (De Morgan’s Laws)</h2>
+<p>Two useful rules link complements, unions and intersections:</p>
+<ul>
+<li><strong>(A ∪ B)′ = A′ ∩ B′</strong>: not in A or B means not in A <em>and</em> not in B.</li>
+<li><strong>(A ∩ B)′ = A′ ∪ B′</strong>: not in both means not in A <em>or</em> not in B.</li>
+</ul>
+<div class="example-box">
+<div class="ex-label">Example 13: Checking the Laws</div>
+<p>With ξ = {1, …, 10}, A = {1, 2, 3, 4, 5} and B = {4, 5, 6, 7}:</p>
+<p>(A ∪ B)′ = {1, …, 7}′ = {8, 9, 10}. And A′ ∩ B′ = {6, 7, 8, 9, 10} ∩ {1, 2, 3, 8, 9, 10} = {8, 9, 10}. They match. ✓</p>
+<p>(A ∩ B)′ = {4, 5}′ = {1, 2, 3, 6, 7, 8, 9, 10}. And A′ ∪ B′ = {6, 7, 8, 9, 10} ∪ {1, 2, 3, 8, 9, 10} = {1, 2, 3, 6, 7, 8, 9, 10}. They match. ✓</p>
+</div>
 
-<h2><span class="num">14.</span>Sources and Further Reading</h2>
-<p>This article is original EDUSAMBAM educational writing. It is designed as a broad sets and Venn diagrams resource covering the notation and problem-solving techniques needed for confident set theory work. Exact examination requirements can vary between examination boards and syllabuses, so students should also compare their work with the specification and past-paper requirements of their own board.</p>
-<p><strong>Recommended study approach:</strong> memorise the set notation table, practise shading union, intersection and complement regions on two-circle Venn diagrams, then work through survey-style word problems by filling the most overlapping region first.</p>
+<!-- SET REGION EXPLORER INTERACTIVE -->
+<div class="drill-section">
+<div class="section-eyebrow">Try It Yourself</div>
+<h2>Set Region Explorer</h2>
+<p class="drill-intro">Here ξ = {1, 2, …, 10}, A = {1, 2, 3, 4, 5} and B = {4, 5, 6, 7}. Tap an operation to shade its region and see its elements.</p>
+<div class="ns-chip-row" id="stChipRow"></div>
+<div class="st-venn-wrap">
+<svg id="stExplorerSvg" viewBox="0 0 360 205" role="img" aria-label="Interactive two-set Venn diagram" xmlns="http://www.w3.org/2000/svg" font-family="Source Sans 3, Arial, sans-serif">
+<defs><clipPath id="stClipA"><circle cx="140" cy="102" r="62"/></clipPath></defs>
+<rect id="stR_out" class="st-r" x="10" y="10" width="340" height="185" rx="10"/>
+<circle id="stR_a" class="st-r" cx="140" cy="102" r="62"/>
+<circle id="stR_b" class="st-r" cx="220" cy="102" r="62"/>
+<circle id="stR_ab" class="st-r" cx="220" cy="102" r="62" clip-path="url(#stClipA)"/>
+<rect x="10" y="10" width="340" height="185" rx="10" fill="none" stroke="#06244a" stroke-width="2.5"/>
+<circle cx="140" cy="102" r="62" fill="none" stroke="#06244a" stroke-width="2.5"/>
+<circle cx="220" cy="102" r="62" fill="none" stroke="#8B0000" stroke-width="2.5"/>
+<g font-size="15" font-weight="700"><text x="22" y="32" fill="#06244a">ξ</text><text x="104" y="56" fill="#06244a">A</text><text x="246" y="56" fill="#8B0000">B</text></g>
+<g font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="middle"><text x="116" y="108">1  2  3</text><text x="180" y="108">4  5</text><text x="244" y="108">6  7</text><text x="52" y="178">8  9  10</text></g>
+</svg>
+</div>
+<div class="pv-info-panel">
+<p class="pv-info-placeholder" id="stInfoPlaceholder">Tap an operation above to see its region and elements.</p>
+<p class="pv-info-result" id="stInfoResult" style="display:none;"></p>
+</div>
+</div>
+
+<h2><span class="num">12.</span>Sets in Real Life</h2>
+<div class="real-world-box">
+<div class="rw-label">Real-World Example: Searching a Database</div>
+<p>Search engines, online shops and library catalogues use set operations every day. A search for “cricket AND football” returns the intersection of the two result sets. “cricket OR football” returns the union. “cricket NOT football” returns the difference, cricket \ football. Understanding these three operations lets you write better searches and filter data accurately.</p>
+</div>
+<div class="example-box">
+<div class="ex-label">Example 14: A Customer List</div>
+<p>A shop has 120 customers on its list. 70 bought rice and 55 bought lentils, and 30 bought both. How many bought rice or lentils? 70 + 55 − 30 = <strong>95</strong>. How many bought neither? 120 − 95 = <strong>25</strong>.</p>
+</div>
+<div class="example-box">
+<div class="ex-label">Example 15: Finding n(A ∩ B) From the Union</div>
+<p>n(A) = 24, n(B) = 18 and n(A ∪ B) = 36. Then n(A ∩ B) = 24 + 18 − 36 = <strong>6</strong>. Check by regions: A only = 24 − 6 = 18 and B only = 18 − 6 = 12, and 18 + 6 + 12 = 36. ✓</p>
+</div>
+<p>Sets also connect to <strong>probability</strong>. For two events, the chance that one or the other happens uses the same shape of formula: P(A ∪ B) = P(A) + P(B) − P(A ∩ B).</p>
+
+<h2><span class="num">13.</span>Common Mistakes</h2>
+<ul>
+<li><strong>Listing shared elements twice</strong> in a union.</li>
+<li><strong>Mixing up ∪ and ∩.</strong> Union is “or”, intersection is “and”.</li>
+<li><strong>Forgetting to subtract the intersection</strong> in n(A ∪ B).</li>
+<li><strong>Counting repeated elements.</strong> {1, 1, 2} has 2 elements.</li>
+<li><strong>Filling the diagram from the outside in</strong>, or writing a circle’s total in one region.</li>
+<li><strong>Taking the complement of the wrong thing.</strong> A′ is always measured inside ξ, so it depends on what ξ is.</li>
+<li><strong>Confusing ∅ with {0}.</strong> The first has no elements; the second has one.</li>
+<li><strong>Not checking that all regions add up</strong> to the total in ξ.</li>
+</ul>
+
+<!-- PRACTICE ARENA -->
+<div class="drill-section">
+<div class="section-eyebrow">Practice Arena</div>
+<h2>Set Check</h2>
+<p class="drill-intro">Tap the correct answer for each question. Your score is tracked as you go, and your best score is saved on this device.</p>
+<div class="nl-drill-progress" id="stProgress">Question 1 of 8  ·  Best score: <span id="stBestScore">0</span> / 8</div>
+<div class="pv-drill-question" id="stDrillQuestion"></div>
+<div class="pv-drill-choices" id="stDrillChoices"></div>
+<div class="drill-feedback" id="stDrillFeedback"></div>
+<div class="nl-drill-actions">
+<button class="drill-btn" id="stNextBtn" onclick="nextStQuestion()" style="display:none;">Next Question</button>
+<button class="drill-btn" id="stNewSetBtn" onclick="newStSet()" style="display:none;">Play Again</button>
+</div>
+</div>
+
+<h2><span class="num">14.</span>Try It Yourself</h2>
+<ol>
+<li>A = {2, 4, 6, 8} and B = {6, 8, 10}. Find A ∪ B and A ∩ B.</li>
+<li>How many subsets does {p, q, r, s} have?</li>
+<li>In a class of 35, 20 like maths, 18 like science, and 5 like neither. How many like both?</li>
+</ol>
+<details class="sn-answer">
+<summary>Show answers</summary>
+<p><strong>1.</strong> A ∪ B = {2, 4, 6, 8, 10}. A ∩ B = {6, 8}.</p>
+<p><strong>2.</strong> 2<sup>4</sup> = <strong>16</strong> subsets.</p>
+<p><strong>3.</strong> At least one subject: 35 − 5 = 30. Both = 20 + 18 − 30 = <strong>8</strong>.</p>
+</details>
+
+<h2><span class="num">15.</span>Exam-Style Questions</h2>
+<ol>
+<li>[2 marks] ξ = {1, 2, 3, 4, 5, 6, 7, 8}, A = {2, 4, 6, 8} and B = {1, 2, 3, 4}. Write down A ∩ B, A ∪ B and A′.</li>
+<li>[3 marks] n(A) = 24, n(B) = 18 and n(A ∪ B) = 36. Find n(A ∩ B).</li>
+<li>[4 marks] In a survey of 40 people, 22 like tea, 25 like coffee and 12 like both. Draw a Venn diagram and find how many like tea only, and how many like neither.</li>
+<li>[3 marks] Use ξ = {1, …, 10}, A = {1, 2, 3, 4, 5} and B = {4, 5, 6, 7} to show that (A ∪ B)′ = A′ ∩ B′.</li>
+</ol>
+<details class="sn-answer">
+<summary>Show answers</summary>
+<p><strong>1.</strong> A ∩ B = {2, 4}. A ∪ B = {1, 2, 3, 4, 6, 8}. A′ = {1, 3, 5, 7}.</p>
+<p><strong>2.</strong> n(A ∩ B) = 24 + 18 − 36 = <strong>6</strong>.</p>
+<p><strong>3.</strong> Both = 12 in the middle. Tea only = 22 − 12 = <strong>10</strong>. Coffee only = 25 − 12 = 13. Inside the circles = 10 + 12 + 13 = 35, so neither = 40 − 35 = <strong>5</strong>.</p>
+<p><strong>4.</strong> A ∪ B = {1, 2, 3, 4, 5, 6, 7}, so (A ∪ B)′ = {8, 9, 10}. A′ = {6, 7, 8, 9, 10} and B′ = {1, 2, 3, 8, 9, 10}, so A′ ∩ B′ = {8, 9, 10}. They are equal.</p>
+</details>
+
+<h2><span class="num">16.</span>Key Points</h2>
+<ul>
+<li>A set lists each element once, and the order does not matter. n(A) counts the elements.</li>
+<li>∪ means “or”, ∩ means “and”, A′ means “not in A”, and A \ B means “in A but not in B”.</li>
+<li>A set with n elements has 2<sup>n</sup> subsets.</li>
+<li>n(A ∪ B) = n(A) + n(B) − n(A ∩ B). For three sets, add back the triple overlap.</li>
+<li>Fill a Venn diagram from the overlap outwards, and check that the regions add to the total.</li>
+<li>(A ∪ B)′ = A′ ∩ B′ and (A ∩ B)′ = A′ ∪ B′.</li>
+</ul>
+
+<h2><span class="num">17.</span>For Teachers and Parents</h2>
+<p>Start with sets the learners can see: the students who are wearing a watch, the students who walked to school, and so on. Let them stand in hoops or chalk circles on the floor to act out the regions. Ask them to say “or” and “and” aloud for ∪ and ∩. Insist on the fill order: overlap first, then “only”, then the outside, then a check that the numbers total the whole group. For more advanced learners, challenge them to explain why the formula for three sets adds back the middle.</p>
+
+<h2><span class="num">18.</span>Why This Topic Matters</h2>
+<p>Sets are the foundation for probability, logic and computer science. Databases, spreadsheets and search engines all work with unions, intersections and complements. In school mathematics, the same ideas organise data in surveys and give you a picture for every counting question. The habit of putting every item in exactly one region is useful far beyond maths.</p>
+
+<h2><span class="num">19.</span>Related Pages and Further Reading</h2>
+<ul>
+<li><a href="number-systems.html">Number Systems: Natural, Whole, Integer, Rational &amp; Real Numbers</a></li>
+<li><a href="exponents-and-powers.html">Exponents &amp; Powers: The Laws of Indices</a></li>
+<li><a href="basic-data-statistics.html">Basic Data &amp; Statistics: Mean, Median and Mode</a></li>
+<li><a href="matrices.html">Matrices: Operations, Determinants &amp; Transformations</a></li>
+<li><a href="practice-test-sets-matrices.html">Practice Test: Sets &amp; Matrices</a></li>
+</ul>
 
 <!-- QUIZ SECTION -->
 <div class="quiz-section">
@@ -1296,6 +1683,88 @@ footer.footer {
   })();
 </script>
 
+<script id="edusambam-st-script">
+(function(){
+  function $(id){return document.getElementById(id);}
+  window.toggleFix=function(id){var e=$(id);if(e)e.classList.toggle('visible');};
+  var REG={out:[8,9,10],a:[1,2,3],ab:[4,5],b:[6,7]};
+  var OPS=[
+   {l:'A ∪ B',r:['a','ab','b'],t:'Everything in A, in B, or in both.'},
+   {l:'A ∩ B',r:['ab'],t:'Only what A and B share.'},
+   {l:'A′',r:['b','out'],t:'Everything in ξ that is not in A.'},
+   {l:'B′',r:['a','out'],t:'Everything in ξ that is not in B.'},
+   {l:'A \\ B',r:['a'],t:'In A but not in B.'},
+   {l:'B \\ A',r:['b'],t:'In B but not in A.'},
+   {l:'(A ∪ B)′',r:['out'],t:'In neither A nor B.'},
+   {l:'A′ ∩ B′',r:['out'],t:'Not in A and not in B. Same region as (A ∪ B)′, which is the first of De Morgan’s laws.'},
+   {l:'(A ∩ B)′',r:['a','b','out'],t:'Not in both A and B.'},
+   {l:'A′ ∪ B′',r:['a','b','out'],t:'Not in A or not in B. Same region as (A ∩ B)′, the second of De Morgan’s laws.'}
+  ];
+  function showOp(i){
+    var row=$('stChipRow').children;
+    for(var j=0;j<row.length;j++)row[j].classList.toggle('active',j===i);
+    var op=OPS[i], names=['out','a','ab','b'], els=[];
+    names.forEach(function(n){var e=$('stR_'+n); if(e){ if(op.r.indexOf(n)>=0)e.classList.add('on'); else e.classList.remove('on'); }});
+    op.r.forEach(function(n){els=els.concat(REG[n]);});
+    els.sort(function(a,b){return a-b;});
+    $('stInfoPlaceholder').style.display='none';
+    var r=$('stInfoResult'); r.innerHTML='<strong>'+op.l+'</strong> = {'+els.join(', ')+'}, so n('+op.l+') = '+els.length+'. '+op.t; r.style.display='';
+  }
+  function initChips(){
+    var row=$('stChipRow'); if(!row)return; row.innerHTML='';
+    OPS.forEach(function(o,i){
+      var b=document.createElement('button'); b.type='button'; b.className='ns-chip'; b.textContent=o.l;
+      b.addEventListener('click',function(){showOp(i);}); row.appendChild(b);
+    });
+  }
+  var BANK=[
+   {q:'What does the symbol ∈ mean?',c:['“is an element of”','“is a subset of”','“is the union of”','“is the empty set”'],e:'4 ∈ {2, 4, 6} says that 4 is an element of that set.'},
+   {q:'A = {2, 4, 6} and B = {4, 6, 8}. What is A ∪ B?',c:['{2, 4, 6, 8}','{4, 6}','{2, 4, 4, 6, 6, 8}','{2, 8}'],e:'Union: every element in A or B, each written once.'},
+   {q:'A = {2, 4, 6} and B = {4, 6, 8}. What is A ∩ B?',c:['{4, 6}','{2, 4, 6, 8}','{2, 8}','{4}'],e:'Intersection: only the elements in both sets.'},
+   {q:'ξ = {1, 2, …, 10} and A = {2, 4, 6, 8, 10}. What is A′?',c:['{1, 3, 5, 7, 9}','{2, 4, 6, 8, 10}','{1, 2, 3, 4, 5}','{ }'],e:'The complement is everything in ξ that is not in A.'},
+   {q:'What is n({1, 1, 2, 3})?',c:['3','4','2','1'],e:'A set lists each element once, so the set is {1, 2, 3}.'},
+   {q:'How many subsets does {a, b, c} have?',c:['8','6','3','9'],e:'2³ = 8 subsets, including ∅ and the set itself.'},
+   {q:'n(A) = 18, n(B) = 15 and n(A ∩ B) = 7. What is n(A ∪ B)?',c:['26','33','40','25'],e:'18 + 15 − 7 = 26. Subtract the overlap once.'},
+   {q:'In a survey of 50 people, 30 like tea, 28 like coffee and 15 like both. How many like neither?',c:['7','35','43','20'],e:'At least one: 30 + 28 − 15 = 43. Neither: 50 − 43 = 7.'},
+   {q:'Which statement is true for every set A?',c:['∅ is a subset of A','A has at least one element','n(A) is even','A ∪ A = ∅'],e:'The empty set has no element that could fail to be in A.'},
+   {q:'Two sets are disjoint. What is true about them?',c:['A ∩ B = ∅','A ∪ B = ∅','A = B','A ⊂ B'],e:'Disjoint sets have nothing in common.'},
+   {q:'(A ∪ B)′ is always equal to:',c:['A′ ∩ B′','A′ ∪ B′','A ∩ B','A \\ B'],e:'De Morgan: not in A or B means not in A and not in B.'},
+   {q:'When filling in a survey Venn diagram, which region do you fill first?',c:['The overlap','The outside','The left circle only','The biggest circle total'],e:'The overlap is the most specific information, and the “only” regions come from subtracting it.'},
+   {q:'A = {1, 2, 3, 4, 5} and B = {4, 5, 6, 7}. What is A \\ B?',c:['{1, 2, 3}','{6, 7}','{4, 5}','{1, 2, 3, 6, 7}'],e:'In A but not in B: remove 4 and 5 from A.'},
+   {q:'In the three-set formula, what is done with n(A ∩ B ∩ C)?',c:['It is added back once','It is subtracted once','It is ignored','It is doubled'],e:'The pair terms remove the middle region too often, so it is added back once.'}
+  ];
+  var N=8,set=[],idx=0,score=0,best=0,answered=false,KEY='edusambam_sets_best';
+  try{var bv=parseInt(window.localStorage.getItem(KEY),10);if(!isNaN(bv))best=bv;}catch(e){}
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  function progress(){$('stProgress').innerHTML='Question '+Math.min(idx+1,N)+' of '+N+' &nbsp;·&nbsp; Best score: <span id="stBestScore">'+best+'</span> / '+N;}
+  function showQ(){
+    answered=false; var it=set[idx]; $('stDrillQuestion').textContent=it.q;
+    var box=$('stDrillChoices'); box.innerHTML='';
+    shuffle(it.c).forEach(function(txt){
+      var b=document.createElement('button'); b.type='button'; b.className='pv-choice-btn'; b.textContent=txt;
+      b.addEventListener('click',function(){choose(b,txt);}); box.appendChild(b);
+    });
+    $('stDrillFeedback').textContent=''; $('stNextBtn').style.display='none'; $('stNewSetBtn').style.display='none'; progress();
+  }
+  function choose(btn,txt){
+    if(answered)return; answered=true; var it=set[idx], ok=txt===it.c[0];
+    var all=$('stDrillChoices').querySelectorAll('.pv-choice-btn');
+    for(var i=0;i<all.length;i++){all[i].disabled=true;if(all[i].textContent===it.c[0])all[i].classList.add('correct');}
+    if(ok)score++;else btn.classList.add('incorrect');
+    $('stDrillFeedback').textContent=(ok?'Correct! ':'Not quite. The answer is '+it.c[0]+'. ')+it.e;
+    if(idx<N-1){$('stNextBtn').style.display='';}
+    else{
+      if(score>best){best=score;try{window.localStorage.setItem(KEY,String(best));}catch(e){}}
+      progress(); $('stDrillFeedback').textContent+=' You scored '+score+' out of '+N+'.'; $('stNewSetBtn').style.display='';
+    }
+  }
+  window.nextStQuestion=function(){if(idx<N-1){idx++;showQ();}};
+  window.newStSet=function(){set=shuffle(BANK).slice(0,N);idx=0;score=0;showQ();};
+  function init(){initChips();if($('stDrillQuestion'))window.newStSet();}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+
+</script>
 <script id="edusambam-reader-script">
 (function(){
  const box=document.querySelector('.edusambam-reader'); if(!box)return;
@@ -1357,10 +1826,10 @@ footer.footer {
     const b=document.querySelector('.edusambam-menu-btn');
     if(b){
       const isOpen=!!document.querySelector('.edusambam-mobile-menu')?.classList.contains('open');
+      b.classList.toggle('is-open',isOpen);
       b.setAttribute('aria-expanded', String(isOpen));
-      b.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-      b.setAttribute('title', isOpen ? 'Close menu' : 'Menu');
-      b.textContent = isOpen ? '×' : '☰';
+      b.setAttribute('aria-label',isOpen?'Close menu':'Open menu');
+      b.setAttribute('title',isOpen?'Close menu':'Menu');
     }
   }
   function setup(){
@@ -1373,12 +1842,19 @@ footer.footer {
     if(mb && menu){
       mb.addEventListener('click',()=>{
         const open=menu.classList.toggle('open'); closeAll(open?menu:null);
+        mb.classList.toggle('is-open',open);
         mb.setAttribute('aria-expanded',String(open));
-        mb.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-        mb.setAttribute('title', open ? 'Close menu' : 'Menu');
-        mb.textContent = open ? '×' : '☰';
+        mb.setAttribute('aria-label',open?'Close menu':'Open menu');
+        mb.setAttribute('title',open?'Close menu':'Menu');
         if(open) panel?.classList.remove('open');
       });
+      menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+        menu.classList.remove('open');
+        mb.classList.remove('is-open');
+        mb.setAttribute('aria-expanded','false');
+        mb.setAttribute('aria-label','Open menu');
+        mb.setAttribute('title','Menu');
+      }));
     }
     if(sb && panel){
       sb.addEventListener('click',()=>{
@@ -1387,9 +1863,32 @@ footer.footer {
       });
     }
     if(input && results){
+      const norm=s=>(' '+String(s||'').toLowerCase().replace(/&/g,' and ').replace(/[^a-z0-9]+/g,' ')+' ');
+      const stop={and:1,the:1,of:1,a:1,an:1,to:1,in:1,is:1,for:1};
       const render=()=>{
         const q=input.value.trim().toLowerCase();
-        const hits=q?pages.filter(x=>(x.title+' '+x.url).toLowerCase().includes(q)).slice(0,20):[];
+        let words=norm(q).trim().split(' ').filter(Boolean);
+        const sig=words.filter(w=>!stop[w]); if(sig.length) words=sig;
+        let hits=[];
+        if(q&&words.length){
+          const forms=w=>{const f=[w]; if(w.length>3&&w.endsWith('s')) f.push(w.slice(0,-1)); if(w.length>4&&w.endsWith('es')) f.push(w.slice(0,-2)); if(w.length>5&&w.endsWith('ing')) f.push(w.slice(0,-3)); if(w.length>4&&w.endsWith('ed')) f.push(w.slice(0,-2)); return f;};
+          const scored=[];
+          pages.forEach(x=>{
+            const t=norm(x.title), m=norm(String(x.url||'').replace(/[-_.]/g,' ')+' '+(x.s||'')+' '+(x.k||''));
+            let sc=0, ok=true;
+            for(const w of words){
+              const f=forms(w);
+              if(f.some(v=>t.includes(' '+v))) sc+=3;
+              else if(f.some(v=>m.includes(' '+v))) sc+=1;
+              else { ok=false; break; }
+            }
+            if(ok) scored.push([sc,x]);
+          });
+          scored.sort((a,b)=>b[0]-a[0]);
+          hits=scored.map(z=>z[1]);
+          if(!hits.length) hits=pages.filter(x=>(x.title+' '+x.url).toLowerCase().includes(q));
+          hits=hits.slice(0,30);
+        }
         results.innerHTML=hits.map(x=>'<a href="'+x.url.replace(/"/g,'&quot;')+'">'+
           x.title.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</a>').join('') ||
           (q?'<div style="padding:10px;color:#64748b">No matching pages found.</div>':'');
@@ -1406,32 +1905,30 @@ footer.footer {
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',setup); else setup();
 })();
 </script>
-<footer class="edusambam-unified-footer" aria-label="EDUSAMBAM site footer">
+<footer aria-label="EDUSAMBAM site footer" class="edusambam-unified-footer">
 <div class="footer-top">
 <div class="footer-brand">
 <div class="edusambam-footer-brand-row">
-<a class="edusambam-footer-logo-link" href="index.html" aria-label="EDUSAMBAM home">
+<a aria-label="EDUSAMBAM home" class="edusambam-footer-logo-link" href="index.html">
 <img alt="EDUSAMBAM" class="edusambam-brand-mark edusambam-footer-logo" src="logo-icon-full-white.png" style="width:auto;height:64px;max-width:240px;object-fit:contain;background:none;border-radius:0;"/>
 </a>
 </div>
 <p class="edusambam-footer-statement">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</p>
-<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a></div>
+<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a><a aria-label="EDUSAMBAM on YouTube" href="https://youtube.com/@edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></div>
 </div>
-<div class="footer-col"><h4>Learning</h4><ul><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li></ul></div>
+<div class="footer-col"><h4>Learning Areas</h4><ul><li><a href="index.html#subject-english">English Language</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li></ul></div>
 <div class="footer-col"><h4>Practice &amp; Assessment</h4><ul>
 <li><a href="index.html#interactive-activities">Interactive Activities</a></li>
 <li><a href="assessment-arena.html">ASSESSMENT ARENA</a></li>
-<li><a href="assessment-arena.html">What Is Assessment?</a></li>
-<li><a href="index.html#about">Learn Your Way</a></li>
 <li><a href="index.html#resources">Resources &amp; Downloads</a></li>
 </ul></div>
 <div class="footer-col"><h4>About EDUSAMBAM</h4><ul>
-<li><a href="index.html#about-edusambam">What EDUSAMBAM Is</a></li>
 <li><a href="index.html#mission">Our Mission</a></li>
 <li><a href="index.html#team">The Team</a></li>
 <li><a href="contact.html">Contact Us</a></li>
 <li><a href="mailto:feedback.edusambam@gmail.com?subject=EDUSAMBAM%20Feedback">Give Feedback</a></li>
 <li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+<li><a href="about.html">About EDUSAMBAM</a></li>
 <li><a href="privacy-policy.html">Privacy Policy</a></li>
 </ul></div>
 </div>
