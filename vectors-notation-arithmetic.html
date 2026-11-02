@@ -14,36 +14,21 @@ gtag('config', 'G-Y35DW0V4HQ');
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Vectors: Notation, Arithmetic &amp; Magnitude — EDUSAMBAM</title>
 <link href="https://edusambam.com/vectors-notation-arithmetic.html" rel="canonical"/>
-<meta content="Learn vector notation, column vectors, addition, subtraction, scalar multiplication, magnitude, position vectors and vector geometry proofs, with worked examples." name="description"/>
+<meta content="Learn vector notation, column vectors, addition, subtraction, scaling, magnitude, position vectors, midpoints, parallel vectors and simple proofs." name="description"/>
 <meta content="vectors, column vectors, vector addition, vector subtraction, magnitude of a vector, position vectors, parallel vectors, O Level maths vectors" name="keywords"/>
 <meta content="EDUSAMBAM Editorial Team" name="author"/>
 <meta content="index, follow" name="robots"/>
 <meta property="og:type" content="article"/>
 <meta property="og:site_name" content="EDUSAMBAM"/>
 <meta property="og:title" content="Vectors: Notation, Arithmetic &amp; Magnitude"/>
-<meta property="og:description" content="Learn vector notation, column vectors, addition, subtraction, scalar multiplication, magnitude, position vectors and vector geometry proofs, with worked examples."/>
+<meta property="og:description" content="Learn vector notation, column vectors, addition, subtraction, scaling, magnitude, position vectors, midpoints, parallel vectors and simple proofs."/>
 <meta property="og:url" content="https://edusambam.com/vectors-notation-arithmetic.html"/>
+<meta property="og:image" content="https://edusambam.com/logo-icon-full.png"/>
 <meta property="article:section" content="Mathematics"/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Vectors: Notation, Arithmetic &amp; Magnitude"/>
-<meta name="twitter:description" content="Learn vector notation, column vectors, addition, subtraction, scalar multiplication, magnitude, position vectors and vector geometry proofs, with worked examples."/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LearningResource",
-  "headline": "Vectors: Notation, Arithmetic & Magnitude",
-  "description": "Learn vector notation, column vectors, addition, subtraction, scalar multiplication, magnitude, position vectors and vector geometry proofs, with worked examples.",
-  "url": "https://edusambam.com/vectors-notation-arithmetic.html",
-  "learningResourceType": "Article",
-  "educationalLevel": "O Level / IGCSE",
-  "about": "Mathematics - Vectors",
-  "publisher": {
-    "@type": "Organization",
-    "name": "EDUSAMBAM",
-    "url": "https://edusambam.com"
-  }
-}
-</script>
+<meta name="twitter:description" content="Learn vector notation, column vectors, addition, subtraction, scaling, magnitude, position vectors, midpoints, parallel vectors and simple proofs."/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "headline": "Vectors: Notation, Arithmetic & Magnitude", "description": "Learn vector notation, column vectors, addition, subtraction, scalar multiplication, magnitude, position vectors and vector geometry proofs, with worked examples.", "url": "https://edusambam.com/vectors-notation-arithmetic.html", "learningResourceType": "Article", "educationalLevel": "O Level / IGCSE", "about": "Mathematics - Vectors", "publisher": {"@type": "Organization", "name": "EDUSAMBAM", "url": "https://edusambam.com"}}</script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
@@ -1007,13 +992,154 @@ footer.footer {
 }
 </style><style id="edusambam-footer-social-css">.edusambam-footer-social{margin-top:14px}.edusambam-footer-social a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);color:rgba(255,255,255,.85);transition:background .15s,color .15s}.edusambam-footer-social a:hover{background:rgba(255,255,255,.22);color:#fff}</style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2230995786427221"
      crossorigin="anonymous"></script>
+<style id="edusambam-math-extra">
+details.sn-answer{background:var(--cream);border:1px solid var(--border);border-left:4px solid var(--navy);border-radius:var(--radius);padding:.9rem 1.2rem;margin:0 0 1.8rem}
+details.sn-answer summary{cursor:pointer;font-weight:600;color:var(--navy)}
+details.sn-answer p{margin:.6rem 0 0}
+.edusambam-footer-social a+a{margin-left:10px}
+.fun-fact-box{
+    background: linear-gradient(135deg, rgba(212,175,55,0.12), rgba(212,175,55,0.04));
+    border: 1.5px dashed var(--gold);
+    border-radius: var(--radius);
+    padding: 1.3rem 1.5rem;
+    margin: 1.8rem 0;
+    position: relative;
+  }
+.fun-fact-label{
+    font-weight: 700;
+    color: var(--red);
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+.fun-fact-box p{ margin: 0; }
+.fixit-challenge{
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-left: 5px solid var(--red);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.4rem;
+    margin: 1.2rem 0;
+  }
+.fixit-wrong{
+    font-family: 'EB Garamond', serif;
+    font-size: 1.15rem;
+    color: var(--red);
+    text-decoration: line-through;
+    margin-bottom: 0.4rem;
+  }
+.fixit-toggle-btn{
+    background: none;
+    border: 1.5px solid var(--red);
+    color: var(--red);
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.4rem 0.9rem;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 0.3rem;
+  }
+.fixit-explain{ display: none; margin-top: 0.7rem; padding-top: 0.7rem; border-top: 1px dashed rgba(0,0,0,0.15); }
+.fixit-explain.visible{ display: block; }
+.drill-section{
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 2rem 1.7rem;
+    margin-top: 3rem;
+  }
+.drill-section .section-eyebrow{ color: var(--gold); }
+.drill-section h2{ border: none; margin: 0 0 0.4rem; padding: 0; color: white; }
+.drill-intro{ color: rgba(255,255,255,0.65); font-size: 0.95rem; margin-bottom: 1.5rem; }
+.drill-btn{
+    background: var(--red);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 0.55rem 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+.drill-btn:hover{ background: var(--red-mid); }
+.drill-feedback{ margin-top: 1.2rem; color: white; font-size: 0.95rem; min-height: 1.4rem; }
+.nl-drill-progress{ color: var(--gold); text-align: center; font-size: 0.85rem; margin-bottom: 0.6rem; letter-spacing: 0.03em; }
+.nl-drill-actions{ display: flex; justify-content: center; gap: 0.8rem; margin-top: 1rem; flex-wrap: wrap; }
+.pv-info-panel{
+    background: var(--gold-lt);
+    border: 1px solid rgba(184,150,62,0.35);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.4rem;
+    margin-top: 1rem;
+    min-height: 34px;
+  }
+.pv-info-placeholder{ color: var(--slate); font-style: italic; margin: 0; }
+.pv-info-result{ margin: 0; font-size: 1rem; }
+.pv-info-result strong{ color: var(--red); }
+.pv-drill-question{ color: white; font-size: 1.1rem; font-weight: 600; text-align: center; margin-bottom: 1.3rem; }
+.pv-drill-choices{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.8rem; margin-bottom: 1rem; }
+@media (max-width: 600px){.pv-drill-choices{ grid-template-columns: 1fr; }}
+.pv-choice-btn{
+    background: rgba(255,255,255,0.08);
+    border: 1.5px solid rgba(255,255,255,0.25);
+    color: white;
+    padding: 0.8rem 1rem;
+    border-radius: var(--radius);
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.95rem;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.15s;
+  }
+.pv-choice-btn:hover{ background: rgba(212,175,55,0.18); border-color: var(--gold); }
+.pv-choice-btn.correct{ background: rgba(76,175,80,0.35); border-color: #4CAF50; }
+.pv-choice-btn.incorrect{ background: rgba(229,115,115,0.35); border-color: #E57373; }
+.pv-choice-btn:disabled{ cursor: default; }
+.ns-chip-row{ display: flex; gap: 0.6rem; flex-wrap: wrap; justify-content: center; margin: 1.3rem 0; }
+.ns-chip{
+    background: #fff; border: 2px solid var(--border); border-radius: 30px;
+    padding: 0.5rem 1.1rem; font-size: 1.05rem; font-weight: 700;
+    font-family: 'Source Sans 3', sans-serif; color: var(--navy);
+    cursor: pointer; transition: all 0.15s;
+  }
+.ns-chip:hover{ border-color: var(--gold); background: rgba(212,175,55,0.1); }
+.ns-chip.active{ background: var(--red); color: #fff; border-color: var(--red); }
+.cv{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;line-height:1.15;border-left:2px solid currentColor;border-right:2px solid currentColor;border-radius:6px;padding:0 .4rem;margin:0 .15rem;font-weight:600}
+.cv span{display:block}
+.vec{position:relative;display:inline-block;padding-top:.55em;line-height:1;font-weight:600}
+.vec::before{content:"\2192";position:absolute;left:50%;top:-.1em;transform:translateX(-50%);font-size:.85em;line-height:1}
+.example-box,.fixit-explain,.pv-info-result{overflow-x:auto}
+.tf-ex-wrap{text-align:center;margin:.5rem 0 1rem}.tf-ex-wrap svg{max-width:100%;height:auto;background:#fff;border:1px solid var(--border);border-radius:var(--radius)}
+.tg-sliders{display:grid;gap:.4rem;margin:.8rem 0}.tg-sliders label{font-weight:600;color:var(--navy)}.tg-sliders input[type=range]{width:100%}
+.tg-form{display:grid;gap:.35rem;margin:.6rem 0 .9rem}.tg-form label{font-weight:600;color:var(--navy)}
+.tg-form input{width:100%;box-sizing:border-box;font-size:1.05rem;padding:.5rem;border:1px solid var(--border);border-radius:8px;background:#fff;color:var(--navy)}
+.vc-d{stroke-dasharray:1;stroke-dashoffset:1}
+.vc-h{opacity:0}
+.vc-d1{animation:vc-a 10s ease-in-out infinite}.vc-h1{animation:vc-ha 10s ease-in-out infinite}
+.vc-d2{animation:vc-b 10s ease-in-out infinite}.vc-h2{animation:vc-hb 10s ease-in-out infinite}
+.vc-d3{animation:vc-c 10s ease-in-out infinite}.vc-h3{animation:vc-hc 10s ease-in-out infinite}
+@keyframes vc-a{0%,4%{stroke-dashoffset:1}24%,92%{stroke-dashoffset:0}100%{stroke-dashoffset:1}}
+@keyframes vc-ha{0%,23%{opacity:0}26%,92%{opacity:1}100%{opacity:0}}
+@keyframes vc-b{0%,28%{stroke-dashoffset:1}48%,92%{stroke-dashoffset:0}100%{stroke-dashoffset:1}}
+@keyframes vc-hb{0%,47%{opacity:0}50%,92%{opacity:1}100%{opacity:0}}
+@keyframes vc-c{0%,52%{stroke-dashoffset:1}72%,92%{stroke-dashoffset:0}100%{stroke-dashoffset:1}}
+@keyframes vc-hc{0%,71%{opacity:0}74%,92%{opacity:1}100%{opacity:0}}
+.vc-mn{animation:vc-p 2.6s ease-in-out infinite}
+@keyframes vc-p{0%,100%{stroke-width:4.4}50%{stroke-width:7}}
+@media (prefers-reduced-motion:reduce){.vc-d{animation:none;stroke-dashoffset:0}.vc-h{animation:none;opacity:1}.vc-mn{animation:none}}
+</style>
 </head>
 <body id="top">
 <!-- TOP BAR -->
 <div class="top-bar">
 <p>Established 2026  ·  Free Educational Resources for All</p>
 <ul class="top-bar-links">
-<li><a href="contact.html">Contact</a></li><li><a href="index.html#about-edusambam">About</a></li><li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+<li><a href="contact.html">Contact</a></li><li><a href="about.html">About</a></li><li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
 </ul>
 </div>
 <!-- NAV -->
@@ -1025,13 +1151,13 @@ footer.footer {
 <span class="edusambam-brand-subtitle">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</span>
 </span>
 </a>
-<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li></ul>
+<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Language</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ</a></li><li><a href="index.html#resources">Resources</a></li></ul>
 <button aria-label="Search" class="edusambam-search-btn" title="Search" type="button">⌕</button>
 <button aria-expanded="false" aria-label="Open menu" class="edusambam-menu-btn" title="Menu" type="button">☰</button>
 </div>
 </nav>
 <div aria-label="Mobile navigation" class="edusambam-mobile-menu">
-<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="index.html#subject-assessment">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="index.html#about-edusambam">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
+<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Language</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ ARENA</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li><li><a href="index.html#spelling-bee-arena">SPELLING BEE ARENA</a></li><li><a href="index.html#english-vocabulary-amp-word-skills">Vocabulary Building</a></li><li><a href="index.html#resources">Downloadable Resources</a></li><li class="edusambam-menu-extra"><a href="index.html#subject-assessment">Assessment Arena</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="about.html">About EDUSAMBAM</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
 </div>
 <div aria-label="Site search" class="edusambam-search-panel">
 <div class="edusambam-search-wrap">
@@ -1044,137 +1170,452 @@ footer.footer {
 <div class="breadcrumb"><a href="index.html#gateway">Gateway</a> &nbsp;/&nbsp; <a href="index.html#subject-maths">Maths</a> &nbsp;/&nbsp; Vectors: Notation, Arithmetic &amp; Magnitude</div>
 <div class="article-hero-tag">Mathematics · Vectors &amp; Transformations</div>
 <h1>Vectors: Notation, Arithmetic &amp; Magnitude</h1>
-<p class="sub">A complete guide to vector notation, column vectors, addition, subtraction, scalar multiplication, magnitude, and vector geometry proofs.</p>
+<p class="sub">From column vectors and nose-to-tail addition to magnitude, midpoints, parallel vectors and short geometric proofs, with worked examples and tools to check your work.</p>
 <div class="article-hero-meta">
-<span>EDUSAMBAM Editorial Team</span><span>|</span><span>22 min read</span><span>|</span><span>Mathematics</span>
+<span>EDUSAMBAM Editorial Team</span><span>|</span><span>21 min read</span><span>|</span><span>Last updated: November 2026</span><span>|</span><span>Mathematics</span>
 </div>
 </div><div aria-label="EDUSAMBAM article reader" class="edusambam-reader"><strong>🔊 LISTEN TO THIS ARTICLE</strong><div class="reader-slogan">SAVE YOUR EYES • IMPROVE YOUR LISTENING</div><div class="reader-help">Listen to the article instead of relying only on continuous screen reading.</div><div class="reader-controls"><button data-reader="play" type="button">▶ Play</button><button data-reader="pause" type="button">⏸ Pause</button><button data-reader="resume" type="button">▶ Resume</button><button data-reader="stop" type="button">■ Stop</button><select aria-label="Reading speed"><option value="1">1×</option><option value="0.8">0.8×</option><option value="1.2">1.2×</option></select></div><div aria-hidden="true" class="reader-progress"><span></span></div><small class="reader-status">Ready to read the article.</small></div>
 <!-- ARTICLE BODY -->
 <div class="article-wrap">
-<p class="lead">A <strong>vector</strong> is a quantity with both <strong>magnitude</strong> (size) and <strong>direction</strong> — unlike a plain number (a scalar), which only has size. Vectors are used to describe movement, forces, and positions, and they follow their own arithmetic rules for addition, subtraction and scaling. This guide builds vector notation and arithmetic from the ground up, then applies vectors to geometric problems such as finding midpoints and proving that lines are parallel.</p>
+<p class="lead">If someone says “walk 5 km”, you still do not know where you will end up. If they say “walk 5 km north-east”, you do. A <strong>vector</strong> is a quantity with both a <strong>size</strong> (magnitude) and a <strong>direction</strong>, unlike a plain number (a <strong>scalar</strong>) which has only size. Vectors describe movements, velocities, forces and the positions of points, and they have their own arithmetic for adding, subtracting and scaling. This guide builds vector notation and arithmetic from the start, then applies them to geometry: finding midpoints, dividing lines in a ratio and proving that lines are parallel. It also sets up the column vectors used for <a href="transformations.html">translations</a> and the <a href="matrices.html">matrices</a> that act on them.</p>
 
+<h2><span class="num">1.</span>Scalars and Vectors</h2>
+<p>Some quantities need only a number. A temperature of 30°C, a distance of 5 km and a time of 2 hours are <strong>scalars</strong>. Others need a direction as well. “A force of 10 N downwards” and “a wind of 20 km/h from the west” are <strong>vectors</strong>.</p>
+<p>The same idea gives you two pairs of words that sound alike but differ: <strong>distance</strong> (scalar) and <strong>displacement</strong> (vector); <strong>speed</strong> (scalar) and <strong>velocity</strong> (vector). If you walk 300 m east and then 400 m north, the distance you have travelled is 700 m, but your displacement from the start is 500 m in one particular direction (section 7 shows how).</p>
+<p>A vector can be drawn as an <strong>arrow</strong>. The length of the arrow shows the magnitude and the way the arrow points shows the direction. Two vectors are <strong>equal</strong> if they have the same magnitude and the same direction, wherever they are drawn on the page. A vector is a movement, and the same movement can start from any point.</p>
+
+<h2><span class="num">2.</span>Notation</h2>
+<p>There are three common ways to write a vector:</p>
+<ul>
+<li>A <strong>bold lowercase letter</strong> such as <strong>a</strong> in print. By hand, write the letter with a line under it (a with an underline) so it is not mistaken for a number.</li>
+<li>Two capital letters with an arrow above them, such as <span class="vec">AB</span>, meaning “the movement <em>from</em> A <em>to</em> B”. The first letter is the start and the second is the end.</li>
+<li>A <strong>column vector</strong> such as <span class="cv"><span>3</span><span>4</span></span> (section 3).</li>
+</ul>
+<p>The <strong>negative</strong> of a vector, −<strong>a</strong>, has the same length but points the opposite way. Because going from B to A undoes going from A to B, <span class="vec">BA</span> = −<span class="vec">AB</span>. The <strong>zero vector</strong> <strong>0</strong> = <span class="cv"><span>0</span><span>0</span></span> means “no movement”.</p>
+
+<h2><span class="num">3.</span>Column Vectors</h2>
+<p>A <strong>column vector</strong> splits a movement into two parts. The <strong>top number</strong> is the horizontal movement: positive means right, negative means left. The <strong>bottom number</strong> is the vertical movement: positive means up, negative means down. So <span class="cv"><span>4</span><span>3</span></span> means “4 across, 3 up” and <span class="cv"><span>−2</span><span>−5</span></span> means “2 left, 5 down”.</p>
 <div class="diagram-box">
-<svg viewBox="0 0 760 330" role="img" aria-labelledby="vecTitle vecDesc">
-<title id="vecTitle">Vectors learning pathway</title>
-<desc id="vecDesc">A pathway from vector notation through addition, subtraction and scalar multiplication to magnitude and geometric applications.</desc>
-<defs><linearGradient id="vecG" x1="0" x2="1"><stop offset="0" stop-color="#06244a"/><stop offset="1" stop-color="#0b4ea2"/></linearGradient></defs>
-<rect x="0" y="0" width="760" height="330" rx="18" fill="#faf8f4"/>
-<path d="M90 165 H670" stroke="#d4a017" stroke-width="5"/>
-<g font-family="Arial, sans-serif" text-anchor="middle">
-<g><circle cx="90" cy="165" r="55" fill="url(#vecG)"/><text x="90" y="160" fill="white" font-size="14" font-weight="700">NOTATION &amp;</text><text x="90" y="178" fill="white" font-size="14" font-weight="700">COLUMN FORM</text><text x="90" y="197" fill="#d4a017" font-size="12">magnitude + direction</text></g>
-<g><circle cx="235" cy="165" r="55" fill="white" stroke="#d4a017" stroke-width="3"/><text x="235" y="158" fill="#06244a" font-size="14" font-weight="700">ADD,</text><text x="235" y="176" fill="#06244a" font-size="14" font-weight="700">SUBTRACT,</text><text x="235" y="195" fill="#4a4a4a" font-size="12">scale</text></g>
-<g><circle cx="380" cy="165" r="55" fill="white" stroke="#d4a017" stroke-width="3"/><text x="380" y="158" fill="#06244a" font-size="13" font-weight="700">POSITION</text><text x="380" y="176" fill="#06244a" font-size="13" font-weight="700">VECTORS</text><text x="380" y="195" fill="#4a4a4a" font-size="12">AB = b − a</text></g>
-<g><circle cx="525" cy="165" r="55" fill="white" stroke="#d4a017" stroke-width="3"/><text x="525" y="160" fill="#06244a" font-size="14" font-weight="700">MAGNITUDE</text><text x="525" y="181" fill="#4a4a4a" font-size="13">Pythagoras</text></g>
-<g><circle cx="670" cy="165" r="55" fill="url(#vecG)"/><text x="670" y="158" fill="white" font-size="14" font-weight="700">GEOMETRIC</text><text x="670" y="176" fill="white" font-size="14" font-weight="700">PROOFS</text><text x="670" y="195" fill="#d4a017" font-size="12">midpoints, parallel lines</text></g>
-<text x="380" y="45" fill="#06244a" font-size="21" font-weight="700">FROM ARROWS ON A PAGE TO GEOMETRIC PROOF</text>
-<text x="380" y="292" fill="#767676" font-size="13">Every geometric vector proof is built from the basic arithmetic rules covered first.</text>
-</g>
-</svg>
-<div class="diagram-caption">Figure 1. Vector arithmetic (addition, subtraction, scaling) is the foundation for every later geometric application. Diagram created specifically for EDUSAMBAM.</div>
+<svg viewBox="0 0 360 268" role="img" aria-labelledby="vc1t vc1d" xmlns="http://www.w3.org/2000/svg" font-family="Source Sans 3, Arial, sans-serif">
+<title id="vc1t">A vector as a column vector</title>
+<desc id="vc1d">A vector from the point 1, 1 to the point 5, 4 moves 4 across and 3 up, so it is the column vector 4 over 3. Its length is 5.</desc>
+<line x1="20" y1="24" x2="20" y2="224" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="60" y1="24" x2="60" y2="224" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="100" y1="24" x2="100" y2="224" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="140" y1="24" x2="140" y2="224" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="180" y1="24" x2="180" y2="224" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="220" y1="24" x2="220" y2="224" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="260" y1="24" x2="260" y2="224" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="300" y1="24" x2="300" y2="224" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="340" y1="24" x2="340" y2="224" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="20" y1="224" x2="340" y2="224" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="20" y1="184" x2="340" y2="184" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="20" y1="144" x2="340" y2="144" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="20" y1="104" x2="340" y2="104" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="20" y1="64" x2="340" y2="64" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="20" y1="24" x2="340" y2="24" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="20" y1="224" x2="340" y2="224" stroke="#06244a" stroke-width="1.6"/>
+<line x1="20" y1="24" x2="20" y2="224" stroke="#06244a" stroke-width="1.6"/>
+<text x="60" y="237" text-anchor="middle" font-size="10" fill="#4A4A4A">1</text>
+<text x="100" y="237" text-anchor="middle" font-size="10" fill="#4A4A4A">2</text>
+<text x="140" y="237" text-anchor="middle" font-size="10" fill="#4A4A4A">3</text>
+<text x="180" y="237" text-anchor="middle" font-size="10" fill="#4A4A4A">4</text>
+<text x="220" y="237" text-anchor="middle" font-size="10" fill="#4A4A4A">5</text>
+<text x="260" y="237" text-anchor="middle" font-size="10" fill="#4A4A4A">6</text>
+<text x="300" y="237" text-anchor="middle" font-size="10" fill="#4A4A4A">7</text>
+<text x="340" y="237" text-anchor="middle" font-size="10" fill="#4A4A4A">8</text>
+<text x="15" y="187.5" text-anchor="end" font-size="10" fill="#4A4A4A">1</text>
+<text x="15" y="147.5" text-anchor="end" font-size="10" fill="#4A4A4A">2</text>
+<text x="15" y="107.5" text-anchor="end" font-size="10" fill="#4A4A4A">3</text>
+<text x="15" y="67.5" text-anchor="end" font-size="10" fill="#4A4A4A">4</text>
+<text x="15" y="27.5" text-anchor="end" font-size="10" fill="#4A4A4A">5</text><line class="vc-d vc-d1" pathLength="1" x1="60" y1="184" x2="220" y2="184" stroke="#B8963E" stroke-width="3.4" stroke-dasharray="1"/><line class="vc-d vc-d2" pathLength="1" x1="220" y1="184" x2="220" y2="64" stroke="#B8963E" stroke-width="3.4"/><line class="vc-d vc-d3" pathLength="1" x1="60.0" y1="184.0" x2="211.2" y2="70.6" stroke="#8B0000" stroke-width="3.6" stroke-linecap="round"/><polygon class="vc-h vc-h3" points="220.0,64.0 213.2,76.6 206.0,67.0" fill="#8B0000"/><text x="140" y="204" font-size="13" font-weight="700" fill="#8a6d1f" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">4 across</text><text x="228" y="128.0" font-size="13" font-weight="700" fill="#8a6d1f" text-anchor="start" paint-order="stroke" stroke="#fff" stroke-width="3">3 up</text><text x="128.0" y="108.0" font-size="16" font-weight="700" fill="#8B0000" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">a</text><text x="180" y="250" font-size="12" font-weight="700" fill="#06244a" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">a = (4 across, 3 up),  length |a| = √(4² + 3²) = 5</text></svg>
+
+<div class="diagram-caption">Figure 1. The vector from (1, 1) to (5, 4) is <span class="cv"><span>4</span><span>3</span></span>. The two gold parts draw first, then the red vector.</div>
+</div>
+<div class="fixit-challenge">
+<div class="fixit-wrong">“The vector <span class="cv"><span>3</span><span>−2</span></span> means 3 up and 2 to the left”</div>
+<p>This swaps the order of the components.</p>
+<button class="fixit-toggle-btn" onclick="toggleFix('fix1')">Show the Fix</button>
+<div class="fixit-explain" id="fix1">
+<p><strong>The fix:</strong> the top number always describes the horizontal movement. So <span class="cv"><span>3</span><span>−2</span></span> means 3 to the <em>right</em> and 2 <em>down</em>. Say “across first, then up (or down)” every time. This is the same order as the coordinates (x, y), and it matches the column vectors used for translations.</p>
+</div>
 </div>
 
-<h2><span class="num">1.</span>What Is a Vector?</h2>
-<p>A vector represents a movement or displacement: it has a specific <strong>length</strong> (how far) and a specific <strong>direction</strong> (which way). Two vectors are considered <strong>equal</strong> if they have the same magnitude and direction, even if drawn starting at different points on a page.</p>
-
-<h2><span class="num">2.</span>Vector Notation</h2>
-<p>Vectors are written in several equivalent ways: as a bold lowercase letter (<strong>a</strong>), an arrow over two capital letters showing start and end points (→AB, from A to B), or as a <strong>column vector</strong>.</p>
-
-<h2><span class="num">3.</span>Representing Vectors as Column Vectors</h2>
-<p>A column vector shows the horizontal and vertical movement separately, written as a pair of numbers stacked vertically, e.g. (3 over 4) means "3 units across, 4 units up." A negative number means movement in the opposite direction (left or down).</p>
+<h2><span class="num">4.</span>Adding Vectors</h2>
+<p>To add two vectors, add the top numbers and add the bottom numbers. The picture is the <strong>nose-to-tail</strong> rule: draw the second vector starting at the end (the “nose”) of the first. The sum is the single vector from the very start to the very end. It is also called the <strong>resultant</strong>.</p>
 <div class="diagram-box">
-<svg viewBox="0 0 420 280" role="img" aria-labelledby="colVecTitle colVecDesc">
-<title id="colVecTitle">A vector as a column vector</title>
-<desc id="colVecDesc">An arrow moving 4 units right and 3 units up, shown as a column vector.</desc>
-<rect x="0" y="0" width="420" height="280" rx="18" fill="#faf8f4"/>
-<line x1="70" y1="230" x2="70" y2="60" stroke="#4a4a4a" stroke-width="1.5"/>
-<line x1="70" y1="230" x2="350" y2="230" stroke="#4a4a4a" stroke-width="1.5"/>
-<line x1="80" y1="220" x2="260" y2="90" stroke="#8B0000" stroke-width="3"/>
-<line x1="80" y1="220" x2="260" y2="220" stroke="#B8963E" stroke-width="2" stroke-dasharray="4,3"/>
-<line x1="260" y1="220" x2="260" y2="90" stroke="#B8963E" stroke-width="2" stroke-dasharray="4,3"/>
-<text x="165" y="240" fill="#B8963E" font-size="13" font-family="Arial, sans-serif" text-anchor="middle">4 across</text>
-<text x="290" y="160" fill="#B8963E" font-size="13" font-family="Arial, sans-serif">3 up</text>
-<text x="270" y="90" fill="#06244a" font-size="16" font-family="Georgia, serif">(4 , 3) written as a column</text>
-</svg>
-<div class="diagram-caption">Figure 2. A vector moving 4 across and 3 up is written as the column vector (4 over 3).</div>
+<svg viewBox="0 0 360 272" role="img" aria-labelledby="vc2t vc2d" xmlns="http://www.w3.org/2000/svg" font-family="Source Sans 3, Arial, sans-serif">
+<title id="vc2t">Adding vectors nose to tail</title>
+<desc id="vc2d">Vector a is 3 across and 1 up. Vector b starts where a ends and is 2 across and 3 up. The sum a plus b goes from the start of a to the end of b, 5 across and 4 up.</desc>
+<line x1="30" y1="12" x2="30" y2="232" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="74" y1="12" x2="74" y2="232" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="118" y1="12" x2="118" y2="232" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="162" y1="12" x2="162" y2="232" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="206" y1="12" x2="206" y2="232" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="250" y1="12" x2="250" y2="232" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="294" y1="12" x2="294" y2="232" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="30" y1="232" x2="294" y2="232" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="30" y1="188" x2="294" y2="188" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="30" y1="144" x2="294" y2="144" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="30" y1="100" x2="294" y2="100" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="30" y1="56" x2="294" y2="56" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="30" y1="12" x2="294" y2="12" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="30" y1="232" x2="294" y2="232" stroke="#06244a" stroke-width="1.6"/>
+<line x1="30" y1="12" x2="30" y2="232" stroke="#06244a" stroke-width="1.6"/>
+<text x="74" y="245" text-anchor="middle" font-size="10" fill="#4A4A4A">1</text>
+<text x="118" y="245" text-anchor="middle" font-size="10" fill="#4A4A4A">2</text>
+<text x="162" y="245" text-anchor="middle" font-size="10" fill="#4A4A4A">3</text>
+<text x="206" y="245" text-anchor="middle" font-size="10" fill="#4A4A4A">4</text>
+<text x="250" y="245" text-anchor="middle" font-size="10" fill="#4A4A4A">5</text>
+<text x="294" y="245" text-anchor="middle" font-size="10" fill="#4A4A4A">6</text>
+<text x="25" y="191.5" text-anchor="end" font-size="10" fill="#4A4A4A">1</text>
+<text x="25" y="147.5" text-anchor="end" font-size="10" fill="#4A4A4A">2</text>
+<text x="25" y="103.5" text-anchor="end" font-size="10" fill="#4A4A4A">3</text>
+<text x="25" y="59.5" text-anchor="end" font-size="10" fill="#4A4A4A">4</text>
+<text x="25" y="15.5" text-anchor="end" font-size="10" fill="#4A4A4A">5</text><line class="vc-d vc-d1" pathLength="1" x1="30.0" y1="232.0" x2="151.6" y2="191.5" stroke="#06244a" stroke-width="3.6" stroke-linecap="round"/><polygon class="vc-h vc-h1" points="162.0,188.0 151.6,197.8 147.8,186.4" fill="#06244a"/><line class="vc-d vc-d2" pathLength="1" x1="162.0" y1="188.0" x2="243.9" y2="65.2" stroke="#B8963E" stroke-width="3.6" stroke-linecap="round"/><polygon class="vc-h vc-h2" points="250.0,56.0 247.8,70.1 237.8,63.5" fill="#B8963E"/><line class="vc-d vc-d3" pathLength="1" x1="30.0" y1="232.0" x2="241.4" y2="62.9" stroke="#8B0000" stroke-width="3.6" stroke-linecap="round"/><polygon class="vc-h vc-h3" points="250.0,56.0 243.6,68.8 236.1,59.4" fill="#8B0000"/><text x="100.0" y="230.0" font-size="16" font-weight="700" fill="#06244a" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">a</text><text x="224.4" y="126.0" font-size="16" font-weight="700" fill="#8a6d1f" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">b</text><text x="125.2" y="104.4" font-size="15" font-weight="700" fill="#8B0000" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">a + b</text><text x="180" y="258" font-size="13" font-weight="700" fill="#06244a" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">a + b = (3 + 2, 1 + 3) = (5, 4)</text></svg>
+
+<div class="diagram-caption">Figure 2. Nose-to-tail addition. b starts where a ends, and a + b joins the start of a to the end of b.</div>
+</div>
+<div class="example-box"><div class="ex-label">Example 1 · Adding</div>
+<p>a = <span class="cv"><span>2</span><span>5</span></span>, b = <span class="cv"><span>4</span><span>−1</span></span>. Then a + b = <span class="cv"><span>2 + 4</span><span>5 + (−1)</span></span> = <strong><span class="cv"><span>6</span><span>4</span></span></strong>.</p>
+</div>
+<p>Vector addition is <strong>commutative</strong>: a + b = b + a (going along a then b arrives at the same place as b then a, the two sides of a parallelogram). It is also associative, and adding the zero vector changes nothing. Adding a vector and its negative gives zero: a + (−a) = 0.</p>
+
+<h2><span class="num">5.</span>Subtracting Vectors</h2>
+<p>Subtracting a vector means adding its negative: a − b = a + (−b). With column vectors, subtract the top numbers and the bottom numbers.</p>
+<div class="example-box"><div class="ex-label">Example 2 · Subtracting</div>
+<p>a = <span class="cv"><span>7</span><span>2</span></span>, b = <span class="cv"><span>3</span><span>6</span></span>. Then a − b = <span class="cv"><span>7 − 3</span><span>2 − 6</span></span> = <strong><span class="cv"><span>4</span><span>−4</span></span></strong>. Check by adding back: b + (a − b) = <span class="cv"><span>3 + 4</span><span>6 + (−4)</span></span> = <span class="cv"><span>7</span><span>2</span></span> = a ✓.</p>
+</div>
+<p>As with ordinary numbers, a − b and b − a are different: they are negatives of each other. Here b − a = <span class="cv"><span>−4</span><span>4</span></span>.</p>
+
+<h2><span class="num">6.</span>Multiplying a Vector by a Number</h2>
+<p>Multiplying a vector by a scalar k multiplies <em>every component</em> by k. The result is <strong>parallel</strong> to the original. If k is greater than 1 the vector gets longer, if k is between 0 and 1 it gets shorter, and if k is negative the direction is reversed.</p>
+<div class="example-box"><div class="ex-label">Example 3 · Scaling and combining</div>
+<p>(a) a = <span class="cv"><span>3</span><span>−2</span></span>. Then 4a = <strong><span class="cv"><span>12</span><span>−8</span></span></strong> and −2a = <strong><span class="cv"><span>−6</span><span>4</span></span></strong> (the direction is reversed).</p>
+<p>(b) ½ <span class="cv"><span>6</span><span>−4</span></span> = <strong><span class="cv"><span>3</span><span>−2</span></span></strong>, which is half as long and points the same way.</p>
+<p>(c) a = <span class="cv"><span>1</span><span>2</span></span>, b = <span class="cv"><span>−2</span><span>3</span></span>. Find 3a + 2b. 3a = <span class="cv"><span>3</span><span>6</span></span> and 2b = <span class="cv"><span>−4</span><span>6</span></span>, so 3a + 2b = <strong><span class="cv"><span>−1</span><span>12</span></span></strong>.</p>
+</div>
+<div class="example-box"><div class="ex-label">Example 4 · Finding the multiples</div>
+<p>a = <span class="cv"><span>2</span><span>1</span></span>, b = <span class="cv"><span>1</span><span>3</span></span> and c = <span class="cv"><span>8</span><span>9</span></span>. Find numbers m and n such that ma + nb = c.</p>
+<p>The top numbers give 2m + n = 8. The bottom numbers give m + 3n = 9. From the first equation n = 8 − 2m. Substituting into the second: m + 3(8 − 2m) = 9, so m + 24 − 6m = 9, so −5m = −15 and m = 3. Then n = 8 − 6 = 2. Check: 3<span class="cv"><span>2</span><span>1</span></span> + 2<span class="cv"><span>1</span><span>3</span></span> = <span class="cv"><span>6</span><span>3</span></span> + <span class="cv"><span>2</span><span>6</span></span> = <span class="cv"><span>8</span><span>9</span></span> ✓.</p>
 </div>
 
-<h2><span class="num">4.</span>Vector Addition</h2>
-<p>To add two column vectors, add their corresponding top and bottom components separately. Geometrically, this is the "nose-to-tail" method: draw the second vector starting where the first one ends; the sum is the single vector from the very start to the very end.</p>
-<div class="example-box"><div class="ex-label">Example 1 · Adding column vectors</div>
-<p>a = (2 over 5), b = (4 over −1). Find a + b.</p>
-<p>a + b = (2+4 over 5+(−1)) = <strong>(6 over 4)</strong>.</p>
+<!-- VECTOR EXPLORER INTERACTIVE -->
+<div class="drill-section">
+<div class="section-eyebrow">Try It Yourself</div>
+<h2>Vector Explorer</h2>
+<p class="drill-intro">Set the vectors a (navy) and b (gold) with the sliders, then tap an operation. The thick arrows show the nose-to-tail path and the red arrow is the result r.</p>
+<div class="tg-sliders"><label for="vcSA1">a across: <strong id="vcSA1v">2</strong></label><input id="vcSA1" type="range" min="-3" max="3" step="1" value="2"/><label for="vcSA2">a up: <strong id="vcSA2v">1</strong></label><input id="vcSA2" type="range" min="-3" max="3" step="1" value="1"/><label for="vcSB1">b across: <strong id="vcSB1v">1</strong></label><input id="vcSB1" type="range" min="-3" max="3" step="1" value="1"/><label for="vcSB2">b up: <strong id="vcSB2v">3</strong></label><input id="vcSB2" type="range" min="-3" max="3" step="1" value="3"/></div>
+<div class="ns-chip-row" id="vcChipRow"></div>
+<div class="tf-ex-wrap">
+<svg viewBox="0 0 360 360" role="img" aria-label="Grid showing vectors a and b and the result of an operation" xmlns="http://www.w3.org/2000/svg" font-family="Source Sans 3, Arial, sans-serif"><line x1="20" y1="20" x2="20" y2="340" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="36" y1="20" x2="36" y2="340" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="52" y1="20" x2="52" y2="340" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="68" y1="20" x2="68" y2="340" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="84" y1="20" x2="84" y2="340" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="100" y1="20" x2="100" y2="340" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="116" y1="20" x2="116" y2="340" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="132" y1="20" x2="132" y2="340" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="148" y1="20" x2="148" y2="340" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="164" y1="20" x2="164" y2="340" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="180" y1="20" x2="180" y2="340" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="196" y1="20" x2="196" y2="340" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="212" y1="20" x2="212" y2="340" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="228" y1="20" x2="228" y2="340" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="244" y1="20" x2="244" y2="340" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="260" y1="20" x2="260" y2="340" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="276" y1="20" x2="276" y2="340" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="292" y1="20" x2="292" y2="340" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="308" y1="20" x2="308" y2="340" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="324" y1="20" x2="324" y2="340" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="340" y1="20" x2="340" y2="340" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="20" y1="340" x2="340" y2="340" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="20" y1="324" x2="340" y2="324" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="20" y1="308" x2="340" y2="308" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="20" y1="292" x2="340" y2="292" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="20" y1="276" x2="340" y2="276" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="20" y1="260" x2="340" y2="260" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="20" y1="244" x2="340" y2="244" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="20" y1="228" x2="340" y2="228" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="20" y1="212" x2="340" y2="212" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="20" y1="196" x2="340" y2="196" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="20" y1="180" x2="340" y2="180" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="20" y1="164" x2="340" y2="164" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="20" y1="148" x2="340" y2="148" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="20" y1="132" x2="340" y2="132" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="20" y1="116" x2="340" y2="116" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="20" y1="100" x2="340" y2="100" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="20" y1="84" x2="340" y2="84" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="20" y1="68" x2="340" y2="68" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="20" y1="52" x2="340" y2="52" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="20" y1="36" x2="340" y2="36" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="20" y1="20" x2="340" y2="20" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="20" y1="180" x2="340" y2="180" stroke="#06244a" stroke-width="1.6"/>
+<line x1="180" y1="20" x2="180" y2="340" stroke="#06244a" stroke-width="1.6"/>
+<text x="20" y="193" text-anchor="middle" font-size="10" fill="#4A4A4A">−10</text>
+<text x="52" y="193" text-anchor="middle" font-size="10" fill="#4A4A4A">−8</text>
+<text x="84" y="193" text-anchor="middle" font-size="10" fill="#4A4A4A">−6</text>
+<text x="116" y="193" text-anchor="middle" font-size="10" fill="#4A4A4A">−4</text>
+<text x="148" y="193" text-anchor="middle" font-size="10" fill="#4A4A4A">−2</text>
+<text x="212" y="193" text-anchor="middle" font-size="10" fill="#4A4A4A">2</text>
+<text x="244" y="193" text-anchor="middle" font-size="10" fill="#4A4A4A">4</text>
+<text x="276" y="193" text-anchor="middle" font-size="10" fill="#4A4A4A">6</text>
+<text x="308" y="193" text-anchor="middle" font-size="10" fill="#4A4A4A">8</text>
+<text x="340" y="193" text-anchor="middle" font-size="10" fill="#4A4A4A">10</text>
+<text x="175" y="343.5" text-anchor="end" font-size="10" fill="#4A4A4A">−10</text>
+<text x="175" y="311.5" text-anchor="end" font-size="10" fill="#4A4A4A">−8</text>
+<text x="175" y="279.5" text-anchor="end" font-size="10" fill="#4A4A4A">−6</text>
+<text x="175" y="247.5" text-anchor="end" font-size="10" fill="#4A4A4A">−4</text>
+<text x="175" y="215.5" text-anchor="end" font-size="10" fill="#4A4A4A">−2</text>
+<text x="175" y="151.5" text-anchor="end" font-size="10" fill="#4A4A4A">2</text>
+<text x="175" y="119.5" text-anchor="end" font-size="10" fill="#4A4A4A">4</text>
+<text x="175" y="87.5" text-anchor="end" font-size="10" fill="#4A4A4A">6</text>
+<text x="175" y="55.5" text-anchor="end" font-size="10" fill="#4A4A4A">8</text>
+<text x="175" y="23.5" text-anchor="end" font-size="10" fill="#4A4A4A">10</text><g id="vcLayer"></g></svg>
+</div>
+<div class="pv-info-panel"><div class="pv-info-result" id="vcExOut"></div></div>
 </div>
 
-<h2><span class="num">5.</span>Vector Subtraction</h2>
-<p>Subtracting a vector is the same as adding its negative (reversing its direction). To subtract column vectors, subtract the corresponding components.</p>
-<div class="example-box"><div class="ex-label">Example 2 · Subtracting column vectors</div>
-<p>a = (7 over 2), b = (3 over 6). Find a − b.</p>
-<p>a − b = (7−3 over 2−6) = <strong>(4 over −4)</strong>.</p>
+<h2><span class="num">7.</span>Magnitude (Length) of a Vector</h2>
+<p>The <strong>magnitude</strong> of a vector, written |<strong>a</strong>| or |<span class="vec">AB</span>|, is its length. For <span class="cv"><span>x</span><span>y</span></span> the two components are the legs of a right-angled triangle (Figure 1), so Pythagoras’ theorem gives:</p>
+<p style="text-align:center"><strong>|<span class="cv"><span>x</span><span>y</span></span>| = √(x² + y²)</strong></p>
+<div class="example-box"><div class="ex-label">Example 5 · Magnitudes</div>
+<p>(a) |<span class="cv"><span>5</span><span>12</span></span>| = √(25 + 144) = √169 = <strong>13</strong>.</p>
+<p>(b) |<span class="cv"><span>−6</span><span>8</span></span>| = √(36 + 64) = √100 = <strong>10</strong>. (The negative sign disappears when you square.)</p>
+<p>(c) |<span class="cv"><span>2</span><span>−3</span></span>| = √(4 + 9) = √13 = <strong>3.61</strong> (2 d.p.). Leave it as √13 if an exact answer is asked for.</p>
+<p>(d) The walker who goes 300 m east then 400 m north has displacement <span class="cv"><span>300</span><span>400</span></span>, with magnitude √(300² + 400²) = <strong>500 m</strong>.</p>
+</div>
+<p>A <strong>unit vector</strong> has magnitude 1. To make a unit vector in the direction of <span class="cv"><span>3</span><span>4</span></span>, divide by its magnitude 5: <span class="cv"><span>3/5</span><span>4/5</span></span> = <span class="cv"><span>0.6</span><span>0.8</span></span>, and indeed √(0.36 + 0.64) = 1.</p>
+<div class="fixit-challenge">
+<div class="fixit-wrong">“|a + b| = |a| + |b|”</div>
+<p>Magnitudes do not add like this, except when the vectors point the same way.</p>
+<button class="fixit-toggle-btn" onclick="toggleFix('fix2')">Show the Fix</button>
+<div class="fixit-explain" id="fix2">
+<p><strong>The fix:</strong> take a = <span class="cv"><span>3</span><span>0</span></span> and b = <span class="cv"><span>0</span><span>4</span></span>. Then |a| + |b| = 3 + 4 = 7, but a + b = <span class="cv"><span>3</span><span>4</span></span> and |a + b| = 5. The straight route is shorter than going along two sides, so |a + b| ≤ |a| + |b|. Always add the vectors first, then find the magnitude of the answer.</p>
+</div>
 </div>
 
-<h2><span class="num">6.</span>Scalar Multiplication of Vectors</h2>
-<p>Multiplying a vector by a number (a <strong>scalar</strong>) scales its length without changing its direction (unless the scalar is negative, which reverses the direction). Each component of the column vector is multiplied by the scalar.</p>
-<div class="example-box"><div class="ex-label">Example 3 · Scalar multiplication</div>
-<p>a = (3 over −2). Find 4a and −2a.</p>
-<p>4a = <strong>(12 over −8)</strong>. −2a = <strong>(−6 over 4)</strong> — note the reversed direction.</p>
+<h2><span class="num">8.</span>Position Vectors and the Vector Between Two Points</h2>
+<p>A <strong>position vector</strong> shows where a point is, as the movement from a fixed origin O. The position vector of A is <span class="vec">OA</span>, usually written <strong>a</strong>. For the point A(2, 4), <strong>a</strong> = <span class="cv"><span>2</span><span>4</span></span>: the coordinates of the point are the components of its position vector.</p>
+<p>To get from A to B, you can go back from A to the origin (−<strong>a</strong>) and then forward to B (<strong>b</strong>). So</p>
+<p style="text-align:center"><strong><span class="vec">AB</span> = b − a</strong> (end minus start)</p>
+<div class="diagram-box">
+<svg viewBox="0 0 360 272" role="img" aria-labelledby="vc3t vc3d" xmlns="http://www.w3.org/2000/svg" font-family="Source Sans 3, Arial, sans-serif">
+<title id="vc3t">The vector between two points</title>
+<desc id="vc3d">Point A has position vector a equal to 2, 4. Point B has position vector b equal to 6, 2. The vector from A to B is b minus a, which is 4 across and 2 down.</desc>
+<line x1="24" y1="26" x2="24" y2="226" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="64" y1="26" x2="64" y2="226" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="104" y1="26" x2="104" y2="226" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="144" y1="26" x2="144" y2="226" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="184" y1="26" x2="184" y2="226" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="224" y1="26" x2="224" y2="226" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="264" y1="26" x2="264" y2="226" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="304" y1="26" x2="304" y2="226" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="24" y1="226" x2="304" y2="226" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="24" y1="186" x2="304" y2="186" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="24" y1="146" x2="304" y2="146" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="24" y1="106" x2="304" y2="106" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="24" y1="66" x2="304" y2="66" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="24" y1="26" x2="304" y2="26" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="24" y1="226" x2="304" y2="226" stroke="#06244a" stroke-width="1.6"/>
+<line x1="24" y1="26" x2="24" y2="226" stroke="#06244a" stroke-width="1.6"/>
+<text x="64" y="239" text-anchor="middle" font-size="10" fill="#4A4A4A">1</text>
+<text x="104" y="239" text-anchor="middle" font-size="10" fill="#4A4A4A">2</text>
+<text x="144" y="239" text-anchor="middle" font-size="10" fill="#4A4A4A">3</text>
+<text x="184" y="239" text-anchor="middle" font-size="10" fill="#4A4A4A">4</text>
+<text x="224" y="239" text-anchor="middle" font-size="10" fill="#4A4A4A">5</text>
+<text x="264" y="239" text-anchor="middle" font-size="10" fill="#4A4A4A">6</text>
+<text x="304" y="239" text-anchor="middle" font-size="10" fill="#4A4A4A">7</text>
+<text x="19" y="189.5" text-anchor="end" font-size="10" fill="#4A4A4A">1</text>
+<text x="19" y="149.5" text-anchor="end" font-size="10" fill="#4A4A4A">2</text>
+<text x="19" y="109.5" text-anchor="end" font-size="10" fill="#4A4A4A">3</text>
+<text x="19" y="69.5" text-anchor="end" font-size="10" fill="#4A4A4A">4</text>
+<text x="19" y="29.5" text-anchor="end" font-size="10" fill="#4A4A4A">5</text><line class="vc-d vc-d1" pathLength="1" x1="24.0" y1="226.0" x2="99.1" y2="75.8" stroke="#06244a" stroke-width="3.6" stroke-linecap="round"/><polygon class="vc-h vc-h1" points="104.0,66.0 103.6,80.3 92.8,74.9" fill="#06244a"/><line class="vc-d vc-d2" pathLength="1" x1="24.0" y1="226.0" x2="253.6" y2="149.5" stroke="#B8963E" stroke-width="3.6" stroke-linecap="round"/><polygon class="vc-h vc-h2" points="264.0,146.0 253.6,155.8 249.8,144.4" fill="#B8963E"/><line class="vc-d vc-d3" pathLength="1" x1="104.0" y1="66.0" x2="254.2" y2="141.1" stroke="#8B0000" stroke-width="3.6" stroke-linecap="round"/><polygon class="vc-h vc-h3" points="264.0,146.0 249.7,145.6 255.1,134.8" fill="#8B0000"/><circle cx="104" cy="66" r="5" fill="#06244a"/><circle cx="264" cy="146" r="5" fill="#06244a"/><circle cx="24" cy="226" r="5" fill="#06244a"/><text x="90" y="58" font-size="14" font-weight="700" fill="#06244a" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">A</text><text x="276" y="138" font-size="14" font-weight="700" fill="#06244a" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">B</text><text x="12" y="242" font-size="14" font-weight="700" fill="#06244a" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">O</text><text x="48.0" y="130.0" font-size="16" font-weight="700" fill="#06244a" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">a</text><text x="160.0" y="216.0" font-size="16" font-weight="700" fill="#8a6d1f" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">b</text><text x="196.0" y="90.0" font-size="14" font-weight="700" fill="#8B0000" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">AB = b − a</text><text x="180" y="258" font-size="13" font-weight="700" fill="#06244a" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">AB = b − a = (6 − 2, 2 − 4) = (4, −2)</text></svg>
+
+<div class="diagram-caption">Figure 3. a and b both start at O. The red vector from A to B is b − a.</div>
+</div>
+<div class="example-box"><div class="ex-label">Example 6 · Vector between points</div>
+<p>A has position vector a = <span class="cv"><span>2</span><span>3</span></span> and B has position vector b = <span class="cv"><span>8</span><span>1</span></span>. Then <span class="vec">AB</span> = b − a = <span class="cv"><span>8 − 2</span><span>1 − 3</span></span> = <strong><span class="cv"><span>6</span><span>−2</span></span></strong>. Its length is |<span class="vec">AB</span>| = √(36 + 4) = √40 = 2√10 ≈ <strong>6.32</strong>.</p>
+</div>
+<div class="fixit-challenge">
+<div class="fixit-wrong">“<span class="vec">AB</span> = a − b”</div>
+<p>This gives the vector from B to A, which points the wrong way.</p>
+<button class="fixit-toggle-btn" onclick="toggleFix('fix3')">Show the Fix</button>
+<div class="fixit-explain" id="fix3">
+<p><strong>The fix:</strong> the vector <span class="vec">AB</span> always <em>ends</em> at the second-named point, so it is “end minus start”: b − a. In Example 6, a − b = <span class="cv"><span>−6</span><span>2</span></span>, which is <span class="vec">BA</span>. Test: start at A(2, 3) and add your answer. You should land on B(8, 1): (2 + 6, 3 − 2) = (8, 1) ✓.</p>
+</div>
 </div>
 
-<h2><span class="num">7.</span>Position Vectors</h2>
-<p>A <strong>position vector</strong> describes the location of a point relative to a fixed origin, O. The position vector of point A is written →OA, often shortened to just <strong>a</strong>.</p>
-
-<h2><span class="num">8.</span>Finding the Vector Between Two Points</h2>
-<p>If the position vectors of two points A and B are known (a and b), the vector from A to B is found by subtraction: →AB = b − a. This is one of the most frequently used vector formulas in geometry problems.</p>
-<div class="example-box"><div class="ex-label">Example 4 · Vector between two points</div>
-<p>A has position vector a = (2 over 3), and B has position vector b = (8 over 1). Find →AB.</p>
-<p>→AB = b − a = (8−2 over 1−3) = <strong>(6 over −2)</strong>.</p>
+<h2><span class="num">9.</span>Parallel Vectors and Points on a Line</h2>
+<p>Two vectors are <strong>parallel</strong> if one is a scalar multiple of the other. Parallel vectors point in the same direction (positive multiple) or in exactly opposite directions (negative multiple). Their magnitudes are in the ratio of the scalar.</p>
+<div class="example-box"><div class="ex-label">Example 7 · Testing for parallel</div>
+<p>(a) u = <span class="cv"><span>4</span><span>6</span></span> and v = <span class="cv"><span>6</span><span>9</span></span>. Since 4 × 1.5 = 6 and 6 × 1.5 = 9, v = 1.5u, so they are <strong>parallel</strong>.</p>
+<p>(b) <span class="cv"><span>2</span><span>3</span></span> and <span class="cv"><span>3</span><span>4</span></span>. The multipliers 3 ÷ 2 = 1.5 and 4 ÷ 3 = 1.33… are not equal, so they are <strong>not parallel</strong>.</p>
+<p>(c) <span class="cv"><span>2</span><span>3</span></span> and <span class="cv"><span>−4</span><span>−6</span></span>. Here −4 = −2 × 2 and −6 = −2 × 3, so they are parallel and point in <strong>opposite</strong> directions.</p>
+</div>
+<p><strong>Collinear points.</strong> Three points are on one straight line if the vectors joining them are parallel and the vectors share a point. Parallel alone is not enough, since parallel lines never meet.</p>
+<div class="example-box"><div class="ex-label">Example 8 · Are A, B, C in a line?</div>
+<p>A(1, 2), B(3, 5), C(7, 11). <span class="vec">AB</span> = <span class="cv"><span>2</span><span>3</span></span> and <span class="vec">BC</span> = <span class="cv"><span>4</span><span>6</span></span> = 2 × <span class="vec">AB</span>. The vectors are parallel and both contain the point B, so A, B and C lie on a <strong>straight line</strong>, and BC is twice as long as AB.</p>
+</div>
+<div class="fixit-challenge">
+<div class="fixit-wrong">“<span class="cv"><span>2</span><span>3</span></span> and <span class="cv"><span>3</span><span>4</span></span> are parallel because they both go up and to the right”</div>
+<p>Similar-looking is not the same as parallel.</p>
+<button class="fixit-toggle-btn" onclick="toggleFix('fix4')">Show the Fix</button>
+<div class="fixit-explain" id="fix4">
+<p><strong>The fix:</strong> divide the matching components. If the same number turns the top of the first vector into the top of the second <em>and</em> the bottom into the bottom, they are parallel. Here 3 ÷ 2 = 1.5 but 4 ÷ 3 = 1.33, so no single scalar works. (Their slopes are 3/2 and 4/3, which are different.)</p>
+</div>
 </div>
 
-<h2><span class="num">9.</span>Magnitude of a Vector</h2>
-<p>The <strong>magnitude</strong> (length) of a column vector (x over y) is found using Pythagoras' theorem: |v| = √(x² + y²).</p>
-<div class="example-box"><div class="ex-label">Example 5 · Finding a magnitude</div>
-<p>Find the magnitude of v = (5 over 12).</p>
-<p>|v| = √(5² + 12²) = √(25 + 144) = √169 = <strong>13</strong>.</p>
+<h2><span class="num">10.</span>Midpoints and Dividing a Line in a Ratio</h2>
+<p>The position vector of the <strong>midpoint</strong> M of AB is the average of the two end points: <strong>m</strong> = ½(<strong>a</strong> + <strong>b</strong>). Reason: M is half-way along <span class="vec">AB</span>, so <strong>m</strong> = <strong>a</strong> + ½(<strong>b</strong> − <strong>a</strong>) = ½<strong>a</strong> + ½<strong>b</strong>.</p>
+<p>The same idea works for any ratio. If P is on AB with AP : PB = m : n, then AP is m/(m + n) of the way along <span class="vec">AB</span>, so</p>
+<p style="text-align:center"><strong>p = a + (m/(m + n))(b − a) = (n·a + m·b) ÷ (m + n)</strong></p>
+<div class="example-box"><div class="ex-label">Example 9 · Midpoints</div>
+<p>(a) A has position vector <span class="cv"><span>2</span><span>4</span></span> and B has position vector <span class="cv"><span>10</span><span>8</span></span>. The midpoint is ½<span class="cv"><span>12</span><span>12</span></span> = <strong><span class="cv"><span>6</span><span>6</span></span></strong>.</p>
+<p>(b) A(−3, 5) and B(7, −1). The midpoint is ½<span class="cv"><span>4</span><span>4</span></span> = <strong>(2, 2)</strong>.</p>
+</div>
+<div class="example-box"><div class="ex-label">Example 10 · A ratio</div>
+<p>A(2, 1), B(14, 7). Find P on AB with AP : PB = 1 : 2.</p>
+<p><span class="vec">AB</span> = <span class="cv"><span>12</span><span>6</span></span>. AP is 1/3 of AB, which is <span class="cv"><span>4</span><span>2</span></span>. So p = <span class="cv"><span>2</span><span>1</span></span> + <span class="cv"><span>4</span><span>2</span></span> = <strong><span class="cv"><span>6</span><span>3</span></span></strong>. Check with the formula: (2a + 1b)/3 = (<span class="cv"><span>4</span><span>2</span></span> + <span class="cv"><span>14</span><span>7</span></span>)/3 = <span class="cv"><span>18</span><span>9</span></span>/3 = <span class="cv"><span>6</span><span>3</span></span> ✓.</p>
+<p>For AP : PB = 3 : 1, AP is 3/4 of AB: p = <span class="cv"><span>2</span><span>1</span></span> + ¾<span class="cv"><span>12</span><span>6</span></span> = <span class="cv"><span>2</span><span>1</span></span> + <span class="cv"><span>9</span><span>4.5</span></span> = <strong><span class="cv"><span>11</span><span>5.5</span></span></strong>.</p>
 </div>
 
-<h2><span class="num">10.</span>Parallel Vectors</h2>
-<p>Two vectors are <strong>parallel</strong> if one is a scalar multiple of the other (e.g. b = 3a). Parallel vectors point in the same direction (or exactly opposite directions if the scalar is negative), and this property is often used to prove that three points lie on a straight line.</p>
-<div class="example-box"><div class="ex-label">Example 6 · Checking parallel vectors</div>
-<p>Are u = (4 over 6) and v = (6 over 9) parallel?</p>
-<p>v = 1.5u, since 4 × 1.5 = 6 and 6 × 1.5 = 9. Since v is a scalar multiple of u, the vectors <strong>are parallel</strong>.</p>
+<h2><span class="num">11.</span>Vector Geometry and Proof</h2>
+<p>Vector proofs have a standard method:</p>
+<ol>
+<li><strong>Choose</strong> two basic vectors (often two sides of the shape, such as <strong>a</strong> and <strong>c</strong>).</li>
+<li><strong>Write each line</strong> you need in terms of them, by finding a route along known vectors (going backwards along a vector gives its negative).</li>
+<li><strong>Simplify</strong>, and compare. One vector is a multiple of another? Then the lines are parallel, and the multiple gives the ratio of lengths.</li>
+<li><strong>State the geometric conclusion</strong> in words.</li>
+</ol>
+<div class="example-box"><div class="ex-label">Example 11 · A parallelogram</div>
+<p>OABC is a parallelogram with <span class="vec">OA</span> = a and <span class="vec">OC</span> = c. M is the midpoint of AB and N is the midpoint of OC. Show that MN is parallel to OA.</p>
+<p>Since OABC is a parallelogram, <span class="vec">AB</span> = <span class="vec">OC</span> = c, so <span class="vec">OB</span> = a + c. M is the midpoint of AB, so <span class="vec">OM</span> = a + ½c. N is the midpoint of OC, so <span class="vec">ON</span> = ½c.</p>
+<p><span class="vec">MN</span> = <span class="vec">ON</span> − <span class="vec">OM</span> = ½c − (a + ½c) = <strong>−a</strong>.</p>
+<p>MN is a multiple (−1) of a, so MN is parallel to OA and the same length (pointing the opposite way).</p>
+</div>
+<div class="example-box"><div class="ex-label">Example 12 · The midpoint theorem</div>
+<p>In triangle OAB, <span class="vec">OA</span> = a and <span class="vec">OB</span> = b. M is the midpoint of OA and N is the midpoint of OB. Show that MN is parallel to AB and half its length.</p>
+<p><span class="vec">OM</span> = ½a and <span class="vec">ON</span> = ½b, so <span class="vec">MN</span> = ½b − ½a = ½(b − a) = <strong>½<span class="vec">AB</span></strong>. So MN is parallel to AB, and its length is half of AB.</p>
+</div>
+<div class="diagram-box">
+<svg viewBox="0 0 360 286" role="img" aria-labelledby="vc4t vc4d" xmlns="http://www.w3.org/2000/svg" font-family="Source Sans 3, Arial, sans-serif">
+<title id="vc4t">The midpoint theorem with vectors</title>
+<desc id="vc4d">In triangle OAB, M is the midpoint of OA and N is the midpoint of OB. The vector MN equals half of b minus a, so MN is parallel to AB and half its length.</desc>
+<polygon points="40,206 310,206 150,48" fill="#06244a" fill-opacity="0.06" stroke="none"/><line x1="40" y1="206" x2="310" y2="206" stroke="#06244a" stroke-width="3"/><line x1="40" y1="206" x2="150" y2="48" stroke="#B8963E" stroke-width="3"/><line x1="310" y1="206" x2="150" y2="48" stroke="#4A4A4A" stroke-width="3"/><line class="vc-mn" x1="175.0" y1="206" x2="95.0" y2="127.0" stroke="#8B0000" stroke-width="4.4" stroke-linecap="round"/><circle cx="40.0" cy="206.0" r="5" fill="#06244a"/><circle cx="310.0" cy="206.0" r="5" fill="#06244a"/><circle cx="150.0" cy="48.0" r="5" fill="#06244a"/><circle cx="175.0" cy="206.0" r="5" fill="#06244a"/><circle cx="95.0" cy="127.0" r="5" fill="#06244a"/><text x="26" y="222" font-size="14" font-weight="700" fill="#06244a" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">O</text><text x="324" y="222" font-size="14" font-weight="700" fill="#06244a" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">A</text><text x="150" y="36" font-size="14" font-weight="700" fill="#06244a" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">B</text><text x="179.0" y="226" font-size="14" font-weight="700" fill="#8B0000" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">M</text><text x="79.0" y="123.0" font-size="14" font-weight="700" fill="#8B0000" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">N</text><text x="108" y="226" font-size="16" font-weight="700" fill="#06244a" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">a</text><text x="78" y="118" font-size="16" font-weight="700" fill="#8a6d1f" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">b</text><text x="250" y="118" font-size="14" font-weight="700" fill="#4A4A4A" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">b − a</text><text x="180" y="254" font-size="12" font-weight="600" fill="#4A4A4A" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">M and N are the midpoints of OA and OB.</text><text x="180" y="274" font-size="13" font-weight="700" fill="#8B0000" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">MN = ½b − ½a = ½(b − a) = ½AB</text></svg>
+
+<div class="diagram-caption">Figure 4. The red segment MN joins two midpoints. Vectors show it is half of AB and parallel to it.</div>
+</div>
+<div class="example-box"><div class="ex-label">Example 13 · Ratio in a triangle</div>
+<p>In triangle OAB, <span class="vec">OA</span> = a and <span class="vec">OB</span> = b. P is on AB with AP : PB = 2 : 1. Find <span class="vec">OP</span>.</p>
+<p><span class="vec">AB</span> = b − a, and AP is 2/3 of AB, so <span class="vec">OP</span> = a + ⅔(b − a) = a + ⅔b − ⅔a = <strong>⅓a + ⅔b</strong>. This matches the ratio formula: (1·a + 2·b) ÷ 3.</p>
 </div>
 
-<h2><span class="num">11.</span>Vector Geometry: Midpoints and Ratios on a Line</h2>
-<p>The position vector of the <strong>midpoint</strong> M of a line segment AB is the average of the two endpoint position vectors: m = ½(a + b). More generally, a point dividing AB in a given ratio can be found using a weighted combination of a and b.</p>
-<div class="example-box"><div class="ex-label">Example 7 · Finding a midpoint</div>
-<p>A has position vector (2 over 4), and B has position vector (10 over 8). Find the position vector of the midpoint M of AB.</p>
-<p>m = ½[(2 over 4) + (10 over 8)] = ½(12 over 12) = <strong>(6 over 6)</strong>.</p>
-</div>
+<h2><span class="num">12.</span>Vectors in Real Life</h2>
+<ul>
+<li><strong>Navigation and wind.</strong> A boat heads north across a river at 4 m/s while the river flows east at 3 m/s. Its velocity over the ground is <span class="cv"><span>3</span><span>4</span></span> m/s, so its speed is √(3² + 4²) = <strong>5 m/s</strong>, and it is carried downstream as it crosses.</li>
+<li><strong>Forces.</strong> Forces are vectors. Two forces of <span class="cv"><span>3</span><span>4</span></span> N and <span class="cv"><span>−3</span><span>−4</span></span> N add to the zero vector, so the object does not move: the forces are balanced.</li>
+<li><strong>Games and animation.</strong> A character on a screen is moved by adding a velocity vector to its position at every frame. Changing direction means changing the vector.</li>
+<li><strong>Displacement vs distance.</strong> A runner who completes a lap of a track finishes with zero displacement, though she has travelled 400 m.</li>
+<li><strong>Transformations.</strong> A translation is a column vector, and a reflection or rotation can be written as a matrix acting on position vectors. See <a href="transformations.html">Transformations</a> and <a href="matrices.html">Matrices</a>.</li>
+</ul>
 
-<h2><span class="num">12.</span>Combining Vectors in Geometric Proofs</h2>
-<p>Vector proofs typically express every relevant line segment in terms of just two starting vectors (often the sides of a triangle), then use vector addition, subtraction and the parallel-vector test to prove a required geometric fact, such as showing two lines are parallel or that a point is the midpoint of a segment.</p>
-<div class="example-box"><div class="ex-label">Example 8 · A vector proof</div>
-<p>OABC is a parallelogram with →OA = a and →OC = c. M is the midpoint of AB. Show that →OM is parallel to a diagonal-related direction by expressing it in terms of a and c.</p>
-<p>Since OABC is a parallelogram, →CB = →OA = a, so B has position vector c + a. M is the midpoint of AB, so m = ½(a + (c + a)) = ½(2a + c) = <strong>a + ½c</strong>. This expresses M's position fully in terms of the two starting vectors, ready for further comparison in a full proof.</p>
+<!-- VECTOR CALCULATOR -->
+<div class="drill-section">
+<div class="section-eyebrow">Check Your Work</div>
+<h2>Vector Calculator</h2>
+<p class="drill-intro">Type the components of two vectors and a scalar. The tool shows the sum, the difference, the scalar multiple, the magnitudes, the vector between the points, the midpoint, and whether the vectors are parallel.</p>
+<div class="tg-form"><label for="vcCA1">a: across (top number)</label><input id="vcCA1" type="number" inputmode="decimal" step="any" value="2"/><label for="vcCA2">a: up (bottom number)</label><input id="vcCA2" type="number" inputmode="decimal" step="any" value="3"/><label for="vcCB1">b: across (top number)</label><input id="vcCB1" type="number" inputmode="decimal" step="any" value="8"/><label for="vcCB2">b: up (bottom number)</label><input id="vcCB2" type="number" inputmode="decimal" step="any" value="1"/><label for="vcCK">Scalar k</label><input id="vcCK" type="number" inputmode="decimal" step="any" value="3"/></div>
+<button class="drill-btn" type="button" onclick="vcCalc()">Calculate</button>
+<div class="pv-info-panel"><div class="pv-info-result" id="vcCOut" style="display:none;"></div></div>
 </div>
 
 <h2><span class="num">13.</span>Common Mistakes</h2>
-<p>Common errors include: adding or subtracting column vectors component-wise incorrectly (mixing up the top and bottom rows); forgetting that →AB = b − a, not a − b (the direction matters — it always ends at the second-named point); assuming two vectors are parallel just because they look similar, without checking the scalar multiple relationship precisely; and forgetting to take the square root when calculating magnitude.</p>
+<ul>
+<li><strong>Reading the components the wrong way round.</strong> Top = across (x), bottom = up (y).</li>
+<li><strong><span class="vec">AB</span> = a − b.</strong> It is b − a: end minus start.</li>
+<li><strong>Adding magnitudes</strong> instead of adding the vectors first.</li>
+<li><strong>Forgetting the square root</strong> when finding a magnitude, or squaring a negative component wrongly (use brackets: (−5)² = 25).</li>
+<li><strong>Calling vectors parallel because they “look similar”.</strong> Check for a single scalar multiple.</li>
+<li><strong>Concluding collinear from parallel alone.</strong> The vectors must also share a point.</li>
+<li><strong>Sign errors with negatives</strong> when subtracting: a − b with b = <span class="cv"><span>3</span><span>−2</span></span> means subtracting −2, which adds 2.</li>
+<li><strong>Forgetting to simplify</strong> in a proof, so the multiple is never seen.</li>
+</ul>
 
-<h2><span class="num">14.</span>Putting It Together</h2>
-<div class="table-wrap"><table class="pos-table">
-<tr><th>Operation</th><th>Rule</th></tr>
-<tr><td>Addition</td><td>Add corresponding components</td></tr>
-<tr><td>Subtraction</td><td>Subtract corresponding components</td></tr>
-<tr><td>Scalar multiplication</td><td>Multiply every component by the scalar</td></tr>
-<tr><td>Vector from A to B</td><td>→AB = b − a</td></tr>
-<tr><td>Magnitude of (x, y)</td><td>√(x² + y²)</td></tr>
-<tr><td>Midpoint of AB</td><td>½(a + b)</td></tr>
-<tr><td>Parallel vectors</td><td>One is a scalar multiple of the other</td></tr>
-</table></div>
+<!-- PRACTICE ARENA -->
+<div class="drill-section">
+<div class="section-eyebrow">Practice Arena</div>
+<h2>Vector Check</h2>
+<p class="drill-intro">Tap the correct answer for each question. A column vector such as (3 over −2) means 3 across and 2 down. Your best score is saved on this device.</p>
+<div class="nl-drill-progress" id="vcProgress">Question 1 of 8  ·  Best score: <span id="vcBestScore">0</span> / 8</div>
+<div class="pv-drill-question" id="vcDrillQuestion"></div>
+<div class="pv-drill-choices" id="vcDrillChoices"></div>
+<div class="drill-feedback" id="vcDrillFeedback"></div>
+<div class="nl-drill-actions">
+<button class="drill-btn" id="vcNextBtn" onclick="nextVcQuestion()" style="display:none;">Next Question</button>
+<button class="drill-btn" id="vcNewSetBtn" onclick="newVcSet()" style="display:none;">Play Again</button>
+</div>
+</div>
 
-<h2><span class="num">15.</span>Sources and Further Reading</h2>
-<p>This article is original EDUSAMBAM educational writing. It is designed as a broad vectors resource covering notation, arithmetic and geometric applications for confident problem-solving. Exact examination requirements can vary between examination boards and syllabuses, so students should also compare their work with the specification and past-paper requirements of their own board.</p>
-<p><strong>Recommended study approach:</strong> master column vector addition, subtraction and scalar multiplication first, then practise expressing unknown position vectors in terms of two given vectors before attempting full geometric proofs.</p>
+<h2><span class="num">14.</span>Try It Yourself</h2>
+<ol>
+<li>Find <span class="cv"><span>4</span><span>−3</span></span> + <span class="cv"><span>−1</span><span>5</span></span>.</li>
+<li>Find the magnitude of <span class="cv"><span>9</span><span>12</span></span>.</li>
+<li>A(1, 1) and B(7, 9). Find <span class="vec">AB</span> and its length.</li>
+</ol>
+<details class="sn-answer">
+<summary>Show answers</summary>
+<p><strong>1.</strong> <span class="cv"><span>4 + (−1)</span><span>−3 + 5</span></span> = <strong><span class="cv"><span>3</span><span>2</span></span></strong>.</p>
+<p><strong>2.</strong> √(81 + 144) = √225 = <strong>15</strong>.</p>
+<p><strong>3.</strong> <span class="vec">AB</span> = <span class="cv"><span>7 − 1</span><span>9 − 1</span></span> = <strong><span class="cv"><span>6</span><span>8</span></span></strong>, and its length is √(36 + 64) = <strong>10</strong>.</p>
+</details>
+
+<h2><span class="num">15.</span>Exam-Style Questions</h2>
+<ol>
+<li>[3 marks] a = <span class="cv"><span>3</span><span>−4</span></span> and b = <span class="cv"><span>−1</span><span>2</span></span>. Find (a) 2a + b and (b) |a|.</li>
+<li>[3 marks] A is (−2, 3) and B is (4, −1). Find <span class="vec">AB</span> and its magnitude, giving your answer in surd form and as a decimal to 2 d.p.</li>
+<li>[3 marks] p = <span class="cv"><span>6</span><span>9</span></span> and q = <span class="cv"><span>−4</span><span>−6</span></span>. Show that p and q are parallel. Are they in the same direction?</li>
+<li>[3 marks] a = <span class="cv"><span>2</span><span>1</span></span>, b = <span class="cv"><span>1</span><span>3</span></span> and c = <span class="cv"><span>8</span><span>9</span></span>. Find the numbers m and n such that ma + nb = c.</li>
+<li>[3 marks] A(1, 2), B(3, 5) and C(7, 11). Show that A, B and C are collinear.</li>
+<li>[4 marks] OABC is a parallelogram with <span class="vec">OA</span> = a and <span class="vec">OC</span> = c. M is the midpoint of AB and N is the midpoint of BC. Find <span class="vec">MN</span> in terms of a and c, and state what it shows about MN and AC.</li>
+<li>[4 marks] In triangle OAB, <span class="vec">OA</span> = a and <span class="vec">OB</span> = b. P is the point on AB such that AP : PB = 2 : 1. Express <span class="vec">OP</span> in terms of a and b.</li>
+</ol>
+<details class="sn-answer">
+<summary>Show answers</summary>
+<p><strong>1.</strong> (a) 2a = <span class="cv"><span>6</span><span>−8</span></span>, so 2a + b = <strong><span class="cv"><span>5</span><span>−6</span></span></strong>. (b) |a| = √(9 + 16) = <strong>5</strong>.</p>
+<p><strong>2.</strong> <span class="vec">AB</span> = <span class="cv"><span>4 − (−2)</span><span>−1 − 3</span></span> = <strong><span class="cv"><span>6</span><span>−4</span></span></strong>. Magnitude = √(36 + 16) = √52 = 2√13 ≈ <strong>7.21</strong>.</p>
+<p><strong>3.</strong> p = −1.5q, since −1.5 × (−4) = 6 and −1.5 × (−6) = 9. So p and q are parallel, and because the multiple is negative they point in <strong>opposite</strong> directions.</p>
+<p><strong>4.</strong> 2m + n = 8 and m + 3n = 9. From the first, n = 8 − 2m. Then m + 24 − 6m = 9, so m = 3 and n = 2. Answer: <strong>m = 3, n = 2</strong>.</p>
+<p><strong>5.</strong> <span class="vec">AB</span> = <span class="cv"><span>2</span><span>3</span></span> and <span class="vec">BC</span> = <span class="cv"><span>4</span><span>6</span></span> = 2<span class="vec">AB</span>. The vectors are parallel and share the point B, so the three points are collinear.</p>
+<p><strong>6.</strong> <span class="vec">OB</span> = a + c. M = midpoint of AB, so <span class="vec">OM</span> = a + ½c. N is the midpoint of BC: <span class="vec">ON</span> = c + ½a. <span class="vec">MN</span> = c + ½a − a − ½c = <strong>½c − ½a = ½(c − a)</strong>. Since <span class="vec">AC</span> = c − a, <span class="vec">MN</span> = ½<span class="vec">AC</span>: MN is <strong>parallel to AC and half its length</strong>.</p>
+<p><strong>7.</strong> <span class="vec">AB</span> = b − a, and AP is two-thirds of AB. <span class="vec">OP</span> = a + ⅔(b − a) = <strong>⅓a + ⅔b</strong>.</p>
+</details>
+
+<h2><span class="num">16.</span>Key Points</h2>
+<ul>
+<li>A vector has magnitude and direction. Equal vectors have the same magnitude and direction, wherever they are drawn.</li>
+<li>Column vector <span class="cv"><span>x</span><span>y</span></span>: x across (right is positive), y up (up is positive).</li>
+<li>Add or subtract top with top and bottom with bottom. Multiply by a scalar by scaling both components. The result of scaling is parallel to the original.</li>
+<li>|<span class="cv"><span>x</span><span>y</span></span>| = √(x² + y²). In general |a + b| ≠ |a| + |b|.</li>
+<li><span class="vec">AB</span> = b − a (end minus start). <span class="vec">BA</span> = −<span class="vec">AB</span>.</li>
+<li>Midpoint: ½(a + b). AP : PB = m : n gives p = (n·a + m·b) ÷ (m + n).</li>
+<li>Parallel vectors are scalar multiples of each other. Collinear points need parallel vectors that share a point.</li>
+<li>For proofs: choose two basic vectors, write every line in terms of them, simplify, and state the conclusion in words.</li>
+</ul>
+
+<h2><span class="num">17.</span>For Teachers and Parents</h2>
+<p>Begin with a treasure-map activity on squared paper: each instruction is a column vector, and a route is a chain of them added nose to tail. Let learners predict the final position before drawing it, and then check by adding components. Draw vectors in two colours so that learners can see <span class="vec">AB</span> = b − a as a path through the origin. For proofs, give learners a sentence frame: “<span class="vec">MN</span> = … = … so MN is parallel to … and … as long.” The step that pupils most often skip is the final sentence in words, which carries the marks. Real contexts such as boats crossing rivers, forces on a rope and moving characters on a screen show why a direction needs a number in each direction.</p>
+
+<h2><span class="num">18.</span>Related Pages and Further Reading</h2>
+<ul>
+<li><a href="transformations.html">Transformations: Translation, Reflection, Rotation &amp; Enlargement</a> (translations use column vectors)</li>
+<li><a href="matrices.html">Matrices</a> (acting on vectors)</li>
+<li><a href="right-angled-trigonometry.html">Right-Angled Trigonometry</a> (direction of a vector)</li>
+<li><a href="ratio-and-proportion.html">Ratio &amp; Proportion</a> (dividing a line in a ratio)</li>
+<li><a href="congruence-and-similarity.html">Congruence &amp; Similarity</a></li>
+<li><a href="practice-test-vectors-transformations.html">Practice Test: Vectors &amp; Transformations</a></li>
+</ul>
+<p>This article is original EDUSAMBAM writing for students up to O-Level and similar courses. Exact examination requirements differ between boards, so compare your practice with the specification and past papers of your own board.</p>
 
 <!-- QUIZ SECTION -->
 <div class="quiz-section">
@@ -1290,6 +1731,261 @@ footer.footer {
   })();
 </script>
 
+<script id="edusambam-vc-script">
+(function(){
+  function $(id){return document.getElementById(id);}
+  window.toggleFix=function(id){var e=$(id);if(e)e.classList.toggle('visible');};
+  var NAVY='#06244a',RED='#8B0000',GOLD='#B8963E',U=16,OX=180,OY=180;
+  function fmt(n){var v=Math.round(n*100)/100;return String(v).replace('-','\u2212');}
+  function cf(c){return c===-1?'\u2212':(c===0.5?'\u00bd':fmt(c));}
+  function col(v){return '('+fmt(v[0])+' over '+fmt(v[1])+')';}
+  function mag(v){return Math.sqrt(v[0]*v[0]+v[1]*v[1]);}
+  function surd(v){var s=v[0]*v[0]+v[1]*v[1],r=Math.sqrt(s);if(Math.abs(r-Math.round(r))<1e-9)return String(Math.round(r));if(Math.abs(s-Math.round(s))<1e-9)return '\u221a'+Math.round(s)+' \u2248 '+fmt(r);return fmt(r);}
+  function X(x){return OX+x*U;} function Y(y){return OY-y*U;}
+  function arrow(p,q,c,w,dash){
+    var dx=q[0]-p[0],dy=q[1]-p[1],L=Math.sqrt(dx*dx+dy*dy);
+    if(L<0.05)return '<circle cx="'+X(p[0])+'" cy="'+Y(p[1])+'" r="3.5" fill="'+c+'"/>';
+    var ux=dx/L,uy=-dy/L,ex=X(q[0]),ey=Y(q[1]),hl=Math.min(11,L*U*0.5),hw=5,bx=ex-ux*hl,by=ey-uy*hl;
+    return '<line x1="'+X(p[0])+'" y1="'+Y(p[1])+'" x2="'+(bx+ux*2).toFixed(1)+'" y2="'+(by+uy*2).toFixed(1)+'" stroke="'+c+'" stroke-width="'+w+'" stroke-linecap="round"'+(dash?' stroke-dasharray="5 4"':'')+'/><polygon points="'+ex.toFixed(1)+','+ey.toFixed(1)+' '+(bx-uy*hw).toFixed(1)+','+(by+ux*hw).toFixed(1)+' '+(bx+uy*hw).toFixed(1)+','+(by-ux*hw).toFixed(1)+'" fill="'+c+'"/>';
+  }
+  function lab(x,y,t,c){return '<text x="'+x.toFixed(1)+'" y="'+y.toFixed(1)+'" font-size="13" font-weight="700" fill="'+c+'" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">'+t+'</text>';}
+  var OPS=[[1,1,'a + b'],[1,-1,'a \u2212 b'],[2,1,'2a + b'],[1,-2,'a \u2212 2b'],[3,0,'3a'],[0,-1,'\u2212b'],[0.5,0.5,'\u00bd(a + b)']];
+  var cur=0;
+  function val(id){return Number($(id).value);}
+  function draw(){
+    var a=[val('vcSA1'),val('vcSA2')],b=[val('vcSB1'),val('vcSB2')],op=OPS[cur],p=op[0],q=op[1];
+    $('vcSA1v').textContent=a[0];$('vcSA2v').textContent=a[1];$('vcSB1v').textContent=b[0];$('vcSB2v').textContent=b[1];
+    var pa=[p*a[0],p*a[1]],qb=[q*b[0],q*b[1]],r=[pa[0]+qb[0],pa[1]+qb[1]],h='';
+    h+=arrow([0,0],a,NAVY,1.6,true)+arrow([0,0],b,GOLD,1.6,true);
+    if(p!==0)h+=arrow([0,0],pa,NAVY,3.6);
+    if(q!==0)h+=arrow(pa,r,GOLD,3.6);
+    h+=arrow([0,0],r,RED,4);
+    h+=lab(X(a[0])+(a[0]>=0?10:-10),Y(a[1])-6,'a',NAVY)+lab(X(b[0])+(b[0]>=0?10:-10),Y(b[1])+14,'b',GOLD)+lab(X(r[0])+(r[0]>=0?14:-14),Y(r[1])+(r[1]>=0?-8:16),'r',RED);
+    $('vcLayer').innerHTML=h;
+    var t='<strong>'+op[2]+'</strong><br>a = '+col(a)+', b = '+col(b)+'<br>';
+    if(p!==1&&p!==0)t+=cf(p)+'a = '+col(pa)+'<br>';
+    if(q!==1&&q!==0)t+=cf(q)+'b = '+col(qb)+'<br>';
+    t+='<br>Result r = '+op[2]+' = '+col(r)+'<br>Magnitude |r| = '+surd(r);
+    if(cur===6)t+='<br>If a and b are position vectors, r is the position vector of the <strong>midpoint</strong> of the line joining the two points.';
+    if(cur===1)t+='<br>If a and b are position vectors, a \u2212 b is the vector from B to A. The vector from A to B is b \u2212 a = '+col([b[0]-a[0],b[1]-a[1]])+'.';
+    $('vcExOut').innerHTML=t;
+  }
+  function initEx(){
+    var row=$('vcChipRow'); if(!row)return; row.innerHTML='';
+    OPS.forEach(function(o,i){
+      var b=document.createElement('button');b.type='button';b.className='ns-chip';b.textContent=o[2];
+      b.addEventListener('click',function(){cur=i;var r=row.children;for(var j=0;j<r.length;j++)r[j].classList.toggle('active',j===i);draw();});
+      row.appendChild(b);
+    });
+    ['vcSA1','vcSA2','vcSB1','vcSB2'].forEach(function(id){$(id).addEventListener('input',draw);});
+    row.children[0].classList.add('active');draw();
+  }
+  function num(id){var v=String($(id).value).trim();if(v===''||isNaN(Number(v)))return null;return Number(v);}
+  window.vcCalc=function(){
+    var a=[num('vcCA1'),num('vcCA2')],b=[num('vcCB1'),num('vcCB2')],k=num('vcCK'),out=$('vcCOut');out.style.display='';
+    if(a[0]===null||a[1]===null||b[0]===null||b[1]===null||k===null){out.innerHTML='Please type a number in every box.';return;}
+    var s=[a[0]+b[0],a[1]+b[1]],d=[a[0]-b[0],a[1]-b[1]],ka=[k*a[0],k*a[1]],ab=[b[0]-a[0],b[1]-a[1]],m=[(a[0]+b[0])/2,(a[1]+b[1])/2];
+    var cross=a[0]*b[1]-a[1]*b[0],par;
+    if((a[0]===0&&a[1]===0)||(b[0]===0&&b[1]===0))par='One of the vectors is the zero vector, which counts as parallel to every vector.';
+    else if(Math.abs(cross)<1e-9){var ratio=a[0]!==0?b[0]/a[0]:b[1]/a[1];par='<strong>Parallel.</strong> b = '+fmt(ratio)+' \u00d7 a'+(ratio<0?' (opposite directions).':' (same direction).');}
+    else par='<strong>Not parallel.</strong> No single number turns a into b.';
+    out.innerHTML='a + b = '+col(s)+'<br>a \u2212 b = '+col(d)+'<br>'+fmt(k)+' \u00d7 a = '+col(ka)+'<br><br>|a| = '+surd(a)+'<br>|b| = '+surd(b)+'<br>|a + b| = '+surd(s)+'<br><br>Treating a and b as position vectors of A and B:<br>Vector AB = b \u2212 a = '+col(ab)+', length '+surd(ab)+'<br>Midpoint of AB = '+col(m)+'<br><br>'+par;
+  };
+  var BANK=[
+{
+"q": "a = (3 over \u22122) and b = (1 over 5). Find a + b.",
+"c": [
+"(4 over 3)",
+"(2 over \u22127)",
+"(\u22122 over 7)",
+"(4 over \u221210)"
+],
+"e": "Add the top numbers and the bottom numbers: 3 + 1 = 4 and \u22122 + 5 = 3."
+},
+{
+"q": "a = (6 over 4) and b = (2 over 7). Find a \u2212 b.",
+"c": [
+"(4 over \u22123)",
+"(\u22124 over 3)",
+"(8 over 11)",
+"(4 over 3)"
+],
+"e": "Subtract b from a, top and bottom: 6 \u2212 2 = 4 and 4 \u2212 7 = \u22123."
+},
+{
+"q": "v = (2 over \u22125). Find 3v.",
+"c": [
+"(6 over \u221215)",
+"(6 over \u22125)",
+"(\u22126 over 15)",
+"(6 over 15)"
+],
+"e": "Multiply every component by 3: 3 \u00d7 2 = 6 and 3 \u00d7 (\u22125) = \u221215."
+},
+{
+"q": "A has position vector (1 over 2) and B has position vector (7 over 6). Find the vector AB.",
+"c": [
+"(6 over 4)",
+"(\u22126 over \u22124)",
+"(8 over 8)",
+"(4 over 3)"
+],
+"e": "AB = b \u2212 a = end minus start: 7 \u2212 1 = 6 and 6 \u2212 2 = 4."
+},
+{
+"q": "Find the magnitude of the vector (8 over 15).",
+"c": [
+"17",
+"23",
+"7",
+"120"
+],
+"e": "\u221a(8\u00b2 + 15\u00b2) = \u221a(64 + 225) = \u221a289 = 17."
+},
+{
+"q": "Find the magnitude of the vector (\u22125 over 12).",
+"c": [
+"13",
+"7",
+"17",
+"169"
+],
+"e": "\u221a((\u22125)\u00b2 + 12\u00b2) = \u221a(25 + 144) = \u221a169 = 13. The negative sign disappears when you square."
+},
+{
+"q": "A has position vector (4 over 2) and B has position vector (10 over 8). Find the position vector of the midpoint of AB.",
+"c": [
+"(7 over 5)",
+"(14 over 10)",
+"(3 over 3)",
+"(6 over 6)"
+],
+"e": "The midpoint is half of a + b: \u00bd(14 and 10) = (7 and 5)."
+},
+{
+"q": "Which vector is parallel to (2 over 3)?",
+"c": [
+"(6 over 9)",
+"(3 over 2)",
+"(4 over 5)",
+"(6 over 8)"
+],
+"e": "(6 over 9) = 3 \u00d7 (2 over 3). Parallel vectors are scalar multiples of each other."
+},
+{
+"q": "a = (3 over \u22124). Find \u22122a.",
+"c": [
+"(\u22126 over 8)",
+"(6 over \u22128)",
+"(\u22126 over \u22128)",
+"(\u22121 over 2)"
+],
+"e": "Multiply each component by \u22122: \u22122 \u00d7 3 = \u22126 and \u22122 \u00d7 (\u22124) = 8. The direction is reversed."
+},
+{
+"q": "OABC is a parallelogram with OA = a and OC = c. What is the position vector of B?",
+"c": [
+"a + c",
+"a \u2212 c",
+"c \u2212 a",
+"\u00bd(a + c)"
+],
+"e": "B is reached by going along OA and then along AB, and AB = OC = c. So OB = a + c."
+},
+{
+"q": "If a and b are the position vectors of A and B, then the vector AB is:",
+"c": [
+"b \u2212 a",
+"a \u2212 b",
+"a + b",
+"\u00bd(a + b)"
+],
+"e": "AB = end minus start = b \u2212 a. Go from A back to O (\u2212a) and then on to B (b)."
+},
+{
+"q": "Two vectors are equal if they have:",
+"c": [
+"the same magnitude and the same direction",
+"the same starting point",
+"the same magnitude only",
+"the same direction only"
+],
+"e": "Position on the page does not matter. Only magnitude and direction do."
+},
+{
+"q": "A boat heads north at 4 m/s on a river that flows east at 3 m/s. What is the boat\u2019s speed over the ground?",
+"c": [
+"5 m/s",
+"7 m/s",
+"1 m/s",
+"12 m/s"
+],
+"e": "The velocity is (3 over 4), and its magnitude is \u221a(3\u00b2 + 4\u00b2) = 5 m/s."
+},
+{
+"q": "A walker goes 300 m east and then 400 m north. How far is she from her start in a straight line?",
+"c": [
+"500 m",
+"700 m",
+"100 m",
+"350 m"
+],
+"e": "The displacement is (300 over 400), with magnitude \u221a(300\u00b2 + 400\u00b2) = 500 m. She has walked 700 m in total, but that is not her displacement."
+},
+{
+"q": "a = (3 over 0) and b = (0 over 4). What is |a + b|?",
+"c": [
+"5",
+"7",
+"1",
+"12"
+],
+"e": "a + b = (3 over 4), so |a + b| = 5. Note that |a| + |b| = 7 is not the same."
+},
+{
+"q": "A has position vector (2 over 1) and B has position vector (14 over 7). The point P is on AB with AP : PB = 1 : 2. Find the position vector of P.",
+"c": [
+"(6 over 3)",
+"(10 over 5)",
+"(8 over 4)",
+"(4 over 2)"
+],
+"e": "AP is one third of AB, so p = a + \u2153(b \u2212 a) = (2 and 1) + (4 and 2) = (6 and 3)."
+}
+];
+  window.VC_BANK=BANK;
+  var N=8,set=[],idx=0,score=0,best=0,answered=false,KEY='edusambam_vectors_best';
+  try{var bv=parseInt(window.localStorage.getItem(KEY),10);if(!isNaN(bv))best=bv;}catch(e){}
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  function progress(){$('vcProgress').innerHTML='Question '+Math.min(idx+1,N)+' of '+N+' &nbsp;\u00b7&nbsp; Best score: <span id="vcBestScore">'+best+'</span> / '+N;}
+  function showQ(){
+    answered=false; var it=set[idx]; $('vcDrillQuestion').textContent=it.q;
+    var box=$('vcDrillChoices'); box.innerHTML='';
+    shuffle(it.c).forEach(function(txt){
+      var b=document.createElement('button'); b.type='button'; b.className='pv-choice-btn'; b.textContent=txt;
+      b.addEventListener('click',function(){choose(b,txt);}); box.appendChild(b);
+    });
+    $('vcDrillFeedback').textContent=''; $('vcNextBtn').style.display='none'; $('vcNewSetBtn').style.display='none'; progress();
+  }
+  function choose(btn,txt){
+    if(answered)return; answered=true; var it=set[idx], ok=txt===it.c[0];
+    var all=$('vcDrillChoices').querySelectorAll('.pv-choice-btn');
+    for(var i=0;i<all.length;i++){all[i].disabled=true;if(all[i].textContent===it.c[0])all[i].classList.add('correct');}
+    if(ok)score++;else btn.classList.add('incorrect');
+    $('vcDrillFeedback').textContent=(ok?'Correct! ':'Not quite. The answer is '+it.c[0]+'. ')+it.e;
+    if(idx<N-1){$('vcNextBtn').style.display='';}
+    else{
+      if(score>best){best=score;try{window.localStorage.setItem(KEY,String(best));}catch(e){}}
+      progress(); $('vcDrillFeedback').textContent+=' You scored '+score+' out of '+N+'.'; $('vcNewSetBtn').style.display='';
+    }
+  }
+  window.nextVcQuestion=function(){if(idx<N-1){idx++;showQ();}};
+  window.newVcSet=function(){set=shuffle(BANK).slice(0,N);idx=0;score=0;showQ();};
+  function init(){initEx();if($('vcDrillQuestion'))window.newVcSet();}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+
+</script>
 <script id="edusambam-reader-script">
 (function(){
  const box=document.querySelector('.edusambam-reader'); if(!box)return;
@@ -1351,10 +2047,10 @@ footer.footer {
     const b=document.querySelector('.edusambam-menu-btn');
     if(b){
       const isOpen=!!document.querySelector('.edusambam-mobile-menu')?.classList.contains('open');
+      b.classList.toggle('is-open',isOpen);
       b.setAttribute('aria-expanded', String(isOpen));
-      b.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-      b.setAttribute('title', isOpen ? 'Close menu' : 'Menu');
-      b.textContent = isOpen ? '×' : '☰';
+      b.setAttribute('aria-label',isOpen?'Close menu':'Open menu');
+      b.setAttribute('title',isOpen?'Close menu':'Menu');
     }
   }
   function setup(){
@@ -1367,12 +2063,19 @@ footer.footer {
     if(mb && menu){
       mb.addEventListener('click',()=>{
         const open=menu.classList.toggle('open'); closeAll(open?menu:null);
+        mb.classList.toggle('is-open',open);
         mb.setAttribute('aria-expanded',String(open));
-        mb.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-        mb.setAttribute('title', open ? 'Close menu' : 'Menu');
-        mb.textContent = open ? '×' : '☰';
+        mb.setAttribute('aria-label',open?'Close menu':'Open menu');
+        mb.setAttribute('title',open?'Close menu':'Menu');
         if(open) panel?.classList.remove('open');
       });
+      menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+        menu.classList.remove('open');
+        mb.classList.remove('is-open');
+        mb.setAttribute('aria-expanded','false');
+        mb.setAttribute('aria-label','Open menu');
+        mb.setAttribute('title','Menu');
+      }));
     }
     if(sb && panel){
       sb.addEventListener('click',()=>{
@@ -1381,9 +2084,32 @@ footer.footer {
       });
     }
     if(input && results){
+      const norm=s=>(' '+String(s||'').toLowerCase().replace(/&/g,' and ').replace(/[^a-z0-9]+/g,' ')+' ');
+      const stop={and:1,the:1,of:1,a:1,an:1,to:1,in:1,is:1,for:1};
       const render=()=>{
         const q=input.value.trim().toLowerCase();
-        const hits=q?pages.filter(x=>(x.title+' '+x.url).toLowerCase().includes(q)).slice(0,20):[];
+        let words=norm(q).trim().split(' ').filter(Boolean);
+        const sig=words.filter(w=>!stop[w]); if(sig.length) words=sig;
+        let hits=[];
+        if(q&&words.length){
+          const forms=w=>{const f=[w]; if(w.length>3&&w.endsWith('s')) f.push(w.slice(0,-1)); if(w.length>4&&w.endsWith('es')) f.push(w.slice(0,-2)); if(w.length>5&&w.endsWith('ing')) f.push(w.slice(0,-3)); if(w.length>4&&w.endsWith('ed')) f.push(w.slice(0,-2)); return f;};
+          const scored=[];
+          pages.forEach(x=>{
+            const t=norm(x.title), m=norm(String(x.url||'').replace(/[-_.]/g,' ')+' '+(x.s||'')+' '+(x.k||''));
+            let sc=0, ok=true;
+            for(const w of words){
+              const f=forms(w);
+              if(f.some(v=>t.includes(' '+v))) sc+=3;
+              else if(f.some(v=>m.includes(' '+v))) sc+=1;
+              else { ok=false; break; }
+            }
+            if(ok) scored.push([sc,x]);
+          });
+          scored.sort((a,b)=>b[0]-a[0]);
+          hits=scored.map(z=>z[1]);
+          if(!hits.length) hits=pages.filter(x=>(x.title+' '+x.url).toLowerCase().includes(q));
+          hits=hits.slice(0,30);
+        }
         results.innerHTML=hits.map(x=>'<a href="'+x.url.replace(/"/g,'&quot;')+'">'+
           x.title.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</a>').join('') ||
           (q?'<div style="padding:10px;color:#64748b">No matching pages found.</div>':'');
@@ -1400,32 +2126,30 @@ footer.footer {
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',setup); else setup();
 })();
 </script>
-<footer class="edusambam-unified-footer" aria-label="EDUSAMBAM site footer">
+<footer aria-label="EDUSAMBAM site footer" class="edusambam-unified-footer">
 <div class="footer-top">
 <div class="footer-brand">
 <div class="edusambam-footer-brand-row">
-<a class="edusambam-footer-logo-link" href="index.html" aria-label="EDUSAMBAM home">
+<a aria-label="EDUSAMBAM home" class="edusambam-footer-logo-link" href="index.html">
 <img alt="EDUSAMBAM" class="edusambam-brand-mark edusambam-footer-logo" src="logo-icon-full-white.png" style="width:auto;height:64px;max-width:240px;object-fit:contain;background:none;border-radius:0;"/>
 </a>
 </div>
 <p class="edusambam-footer-statement">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</p>
-<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a></div>
+<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a><a aria-label="EDUSAMBAM on YouTube" href="https://youtube.com/@edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></div>
 </div>
-<div class="footer-col"><h4>Learning</h4><ul><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li></ul></div>
+<div class="footer-col"><h4>Learning Areas</h4><ul><li><a href="index.html#subject-english">English Language</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ ARENA</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li><li><a href="index.html#spelling-bee-arena">SPELLING BEE ARENA</a></li><li><a href="index.html#english-vocabulary-amp-word-skills">Vocabulary Building</a></li></ul></div>
 <div class="footer-col"><h4>Practice &amp; Assessment</h4><ul>
 <li><a href="index.html#interactive-activities">Interactive Activities</a></li>
-<li><a href="assessment-arena.html">ASSESSMENT ARENA</a></li>
-<li><a href="assessment-arena.html">What Is Assessment?</a></li>
-<li><a href="index.html#about">Learn Your Way</a></li>
-<li><a href="index.html#resources">Resources &amp; Downloads</a></li>
+<li><a href="assessment-arena.html">Assessment Arena</a></li>
+<li><a href="index.html#resources">Downloadable Resources</a></li>
 </ul></div>
 <div class="footer-col"><h4>About EDUSAMBAM</h4><ul>
-<li><a href="index.html#about-edusambam">What EDUSAMBAM Is</a></li>
 <li><a href="index.html#mission">Our Mission</a></li>
 <li><a href="index.html#team">The Team</a></li>
 <li><a href="contact.html">Contact Us</a></li>
 <li><a href="mailto:feedback.edusambam@gmail.com?subject=EDUSAMBAM%20Feedback">Give Feedback</a></li>
 <li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+<li><a href="about.html">About EDUSAMBAM</a></li>
 <li><a href="privacy-policy.html">Privacy Policy</a></li>
 </ul></div>
 </div>
@@ -1433,7 +2157,7 @@ footer.footer {
 <li><a href="#top">Back to Top</a></li>
 <li><a href="index.html#mission">Mission</a></li>
 <li><a href="index.html#team">Team</a></li>
-<li><a href="index.html#resources">Resources</a></li>
+<li><a href="index.html#resources">Downloadable Resources</a></li>
 </ul></div>
 </footer></body>
 </html>

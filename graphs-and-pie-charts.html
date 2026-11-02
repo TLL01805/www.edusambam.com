@@ -12,9 +12,22 @@ gtag('config', 'G-Y35DW0V4HQ');
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Graphs &amp; Pie Charts — EDUSAMBAM</title>
+<title>Graphs &amp; Pie Charts: Reading, Drawing and Tools</title>
 <link href="https://edusambam.com/graphs-and-pie-charts.html" rel="canonical"/>
-<meta content="A comprehensive guide to bar, line and pie charts — scales, axes, comparisons, percentages, angles and reading real data." name="description"/>
+<meta content="Learn to read and draw bar graphs, line graphs and pie charts, convert angles and percentages, and spot misleading graphs, with 24 checked examples." name="description"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<meta content="Graphs &amp; Pie Charts: Reading, Drawing and Tools" property="og:title"/>
+<meta content="Learn to read and draw bar graphs, line graphs and pie charts, convert angles and percentages, and spot misleading graphs, with 24 checked examples." property="og:description"/>
+<meta content="https://edusambam.com/graphs-and-pie-charts.html" property="og:url"/>
+<meta content="article" property="og:type"/>
+<meta content="EDUSAMBAM" property="og:site_name"/>
+<meta content="en_GB" property="og:locale"/>
+<meta content="2026-11-02" property="article:modified_time"/>
+<meta content="Mathematics" property="article:section"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Graphs &amp; Pie Charts: Reading, Drawing and Tools" name="twitter:title"/>
+<meta content="Learn to read and draw bar graphs, line graphs and pie charts, convert angles and percentages, and spot misleading graphs, with 24 checked examples." name="twitter:description"/>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Graphs & Pie Charts: Reading, Drawing & Interpreting Data", "description": "Learn to read and draw bar graphs, line graphs and pie charts, convert angles and percentages, and spot misleading graphs, with 24 checked examples.", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://edusambam.com/graphs-and-pie-charts.html"}, "inLanguage": "en", "articleSection": "Mathematics", "dateModified": "2026-11-02", "author": {"@type": "Organization", "name": "EDUSAMBAM Editorial Team", "url": "https://edusambam.com/"}, "publisher": {"@type": "Organization", "name": "EDUSAMBAM", "url": "https://edusambam.com/"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://edusambam.com/"}, {"@type": "ListItem", "position": 2, "name": "Mathematics", "item": "https://edusambam.com/index.html#subject-maths"}, {"@type": "ListItem", "position": 3, "name": "Graphs & Pie Charts: Reading, Drawing & Interpreting Data", "item": "https://edusambam.com/graphs-and-pie-charts.html"}]}]</script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
@@ -978,13 +991,141 @@ footer.footer {
 }
 </style><style id="edusambam-footer-social-css">.edusambam-footer-social{margin-top:14px}.edusambam-footer-social a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);color:rgba(255,255,255,.85);transition:background .15s,color .15s}.edusambam-footer-social a:hover{background:rgba(255,255,255,.22);color:#fff}</style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2230995786427221"
      crossorigin="anonymous"></script>
+<style id="edusambam-math-extra">
+details.sn-answer{background:var(--cream);border:1px solid var(--border);border-left:4px solid var(--navy);border-radius:var(--radius);padding:.9rem 1.2rem;margin:0 0 1.8rem}
+details.sn-answer summary{cursor:pointer;font-weight:600;color:var(--navy)}
+details.sn-answer p{margin:.6rem 0 0}
+.edusambam-footer-social a+a{margin-left:10px}
+.fun-fact-box{
+    background: linear-gradient(135deg, rgba(212,175,55,0.12), rgba(212,175,55,0.04));
+    border: 1.5px dashed var(--gold);
+    border-radius: var(--radius);
+    padding: 1.3rem 1.5rem;
+    margin: 1.8rem 0;
+    position: relative;
+  }
+.fun-fact-label{
+    font-weight: 700;
+    color: var(--red);
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+.fun-fact-box p{ margin: 0; }
+.fixit-challenge{
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-left: 5px solid var(--red);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.4rem;
+    margin: 1.2rem 0;
+  }
+.fixit-wrong{
+    font-family: 'EB Garamond', serif;
+    font-size: 1.15rem;
+    color: var(--red);
+    text-decoration: line-through;
+    margin-bottom: 0.4rem;
+  }
+.fixit-toggle-btn{
+    background: none;
+    border: 1.5px solid var(--red);
+    color: var(--red);
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.4rem 0.9rem;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 0.3rem;
+  }
+.fixit-explain{ display: none; margin-top: 0.7rem; padding-top: 0.7rem; border-top: 1px dashed rgba(0,0,0,0.15); }
+.fixit-explain.visible{ display: block; }
+.drill-section{
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 2rem 1.7rem;
+    margin-top: 3rem;
+  }
+.drill-section .section-eyebrow{ color: var(--gold); }
+.drill-section h2{ border: none; margin: 0 0 0.4rem; padding: 0; color: white; }
+.drill-intro{ color: rgba(255,255,255,0.65); font-size: 0.95rem; margin-bottom: 1.5rem; }
+.drill-btn{
+    background: var(--red);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 0.55rem 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+.drill-btn:hover{ background: var(--red-mid); }
+.drill-feedback{ margin-top: 1.2rem; color: white; font-size: 0.95rem; min-height: 1.4rem; }
+.nl-drill-progress{ color: var(--gold); text-align: center; font-size: 0.85rem; margin-bottom: 0.6rem; letter-spacing: 0.03em; }
+.nl-drill-actions{ display: flex; justify-content: center; gap: 0.8rem; margin-top: 1rem; flex-wrap: wrap; }
+.pv-info-panel{
+    background: var(--gold-lt);
+    border: 1px solid rgba(184,150,62,0.35);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.4rem;
+    margin-top: 1rem;
+    min-height: 34px;
+  }
+.pv-info-placeholder{ color: var(--slate); font-style: italic; margin: 0; }
+.pv-info-result{ margin: 0; font-size: 1rem; }
+.pv-info-result strong{ color: var(--red); }
+.pv-drill-question{ color: white; font-size: 1.1rem; font-weight: 600; text-align: center; margin-bottom: 1.3rem; }
+.pv-drill-choices{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.8rem; margin-bottom: 1rem; }
+@media (max-width: 600px){.pv-drill-choices{ grid-template-columns: 1fr; }}
+.pv-choice-btn{
+    background: rgba(255,255,255,0.08);
+    border: 1.5px solid rgba(255,255,255,0.25);
+    color: white;
+    padding: 0.8rem 1rem;
+    border-radius: var(--radius);
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.95rem;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.15s;
+  }
+.pv-choice-btn:hover{ background: rgba(212,175,55,0.18); border-color: var(--gold); }
+.pv-choice-btn.correct{ background: rgba(76,175,80,0.35); border-color: #4CAF50; }
+.pv-choice-btn.incorrect{ background: rgba(229,115,115,0.35); border-color: #E57373; }
+.pv-choice-btn:disabled{ cursor: default; }
+.ns-chip-row{ display: flex; gap: 0.6rem; flex-wrap: wrap; justify-content: center; margin: 1.3rem 0; }
+.ns-chip{
+    background: #fff; border: 2px solid var(--border); border-radius: 30px;
+    padding: 0.5rem 1.1rem; font-size: 1.05rem; font-weight: 700;
+    font-family: 'Source Sans 3', sans-serif; color: var(--navy);
+    cursor: pointer; transition: all 0.15s;
+  }
+.ns-chip:hover{ border-color: var(--gold); background: rgba(212,175,55,0.1); }
+.ns-chip.active{ background: var(--red); color: #fff; border-color: var(--red); }
+.example-box,.fixit-explain,.pv-info-result{overflow-x:auto}
+.tg-form{display:grid;gap:.35rem;margin:.6rem 0 .9rem}.tg-form label{font-weight:600;color:var(--navy)}
+.tg-form input,.tg-form select{width:100%;box-sizing:border-box;font-size:1.05rem;padding:.5rem;border:1px solid var(--border);border-radius:8px;background:#fff;color:var(--navy)}
+.gp-pulse{animation:gp-p 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes gp-p{0%,100%{transform:scale(1)}50%{transform:scale(1.35)}}
+.gp-flow{animation:gp-f 1.6s ease-in-out infinite}
+@keyframes gp-f{0%,100%{opacity:1}50%{opacity:.4}}
+.gp-glow{animation:gp-g 3s ease-in-out infinite}
+@keyframes gp-g{0%,100%{opacity:1}50%{opacity:.65}}
+@media (prefers-reduced-motion:reduce){.gp-pulse,.gp-flow,.gp-glow{animation:none}}
+</style>
 </head>
 <body id="top">
 <!-- TOP BAR -->
 <div class="top-bar">
 <p>Established 2026  ·  Free Educational Resources for All</p>
 <ul class="top-bar-links">
-<li><a href="contact.html">Contact</a></li><li><a href="index.html#about-edusambam">About</a></li><li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+<li><a href="contact.html">Contact</a></li><li><a href="about.html">About</a></li><li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
 </ul>
 </div>
 <!-- NAV -->
@@ -996,13 +1137,13 @@ footer.footer {
 <span class="edusambam-brand-subtitle">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</span>
 </span>
 </a>
-<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li></ul>
+<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Language</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ</a></li><li><a href="index.html#resources">Resources</a></li></ul>
 <button aria-label="Search" class="edusambam-search-btn" title="Search" type="button">⌕</button>
 <button aria-expanded="false" aria-label="Open menu" class="edusambam-menu-btn" title="Menu" type="button">☰</button>
 </div>
 </nav>
 <div aria-label="Mobile navigation" class="edusambam-mobile-menu">
-<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="index.html#subject-assessment">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="index.html#about-edusambam">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
+<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Language</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ ARENA</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li><li><a href="index.html#spelling-bee-arena">SPELLING BEE ARENA</a></li><li><a href="index.html#english-vocabulary-amp-word-skills">Vocabulary Building</a></li><li><a href="index.html#resources">Downloadable Resources</a></li><li class="edusambam-menu-extra"><a href="index.html#subject-assessment">Assessment Arena</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="about.html">About EDUSAMBAM</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
 </div>
 <div aria-label="Site search" class="edusambam-search-panel">
 <div class="edusambam-search-wrap">
@@ -1012,456 +1153,455 @@ footer.footer {
 </div>
 <!-- ARTICLE HERO -->
 <div class="article-hero">
-<div class="breadcrumb"><a href="index.html#gateway">Gateway</a> &nbsp;/&nbsp; <a href="index.html#subject-maths">Maths</a> &nbsp;/&nbsp; Graphs &amp; Pie Charts</div>
+<div class="breadcrumb"><a href="index.html#gateway">Gateway</a> &nbsp;/&nbsp; <a href="index.html#subject-maths">Maths</a> &nbsp;/&nbsp; Graphs & Pie Charts</div>
 <div class="article-hero-tag">Mathematics · Data Representation</div>
-<h1>Graphs &amp; Pie Charts: Reading, Drawing &amp; Interpreting Data</h1>
-<p class="sub">A comprehensive guide to bar graphs, vertical and horizontal graphs, line graphs and pie charts, including scales, axes, comparisons, percentages, angles, reverse calculations, real-life examples and accurate interpretation.</p>
+<h1>Graphs & Pie Charts: Reading, Drawing & Interpreting Data</h1>
+<p class="sub">Learn to read scales, bar graphs, pictograms and line graphs, draw and interpret pie charts, convert between values, fractions, percentages and angles, and recognise graphs that mislead.</p>
 <div class="article-hero-meta">
-<span>EDUSAMBAM Editorial Team</span><span>|</span><span>30 min read</span><span>|</span><span>Mathematics</span>
+<span>EDUSAMBAM Editorial Team</span><span>|</span><span>25 min read</span><span>|</span><span>Last updated: November 2026</span><span>|</span><span>Mathematics</span>
 </div>
-</div>
-<div aria-label="EDUSAMBAM article reader" class="edusambam-reader"><strong>🔊 LISTEN TO THIS ARTICLE</strong><div class="reader-slogan">SAVE YOUR EYES • IMPROVE YOUR LISTENING</div><div class="reader-help">Listen to the article instead of relying only on continuous screen reading.</div><div class="reader-controls"><button data-reader="play" type="button">▶ Play</button><button data-reader="pause" type="button">⏸ Pause</button><button data-reader="resume" type="button">▶ Resume</button><button data-reader="stop" type="button">■ Stop</button><select aria-label="Reading speed"><option value="1">1×</option><option value="0.8">0.8×</option><option value="1.2">1.2×</option></select></div><div aria-hidden="true" class="reader-progress"><span></span></div><small class="reader-status">Ready to read the article.</small></div>
+</div><div aria-label="EDUSAMBAM article reader" class="edusambam-reader"><strong>🔊 LISTEN TO THIS ARTICLE</strong><div class="reader-slogan">SAVE YOUR EYES • IMPROVE YOUR LISTENING</div><div class="reader-help">Listen to the article instead of relying only on continuous screen reading.</div><div class="reader-controls"><button data-reader="play" type="button">▶ Play</button><button data-reader="pause" type="button">⏸ Pause</button><button data-reader="resume" type="button">▶ Resume</button><button data-reader="stop" type="button">■ Stop</button><select aria-label="Reading speed"><option value="1">1×</option><option value="0.8">0.8×</option><option value="1.2">1.2×</option></select></div><div aria-hidden="true" class="reader-progress"><span></span></div><small class="reader-status">Ready to read the article.</small></div>
 
 <!-- ARTICLE BODY -->
 <div class="article-wrap">
-<p class="lead">Graphs turn numerical information into a visual form that is easier to compare, describe and interpret. A good graph does more than display numbers: it shows relationships, patterns, differences, trends and proportions. Bar graphs are especially useful for comparing categories, line graphs are useful for showing change, and pie charts are useful for showing how parts make up a whole. The key is to read the scale, labels, units and structure carefully before drawing conclusions.</p>
+<p class="lead">A graph turns a table of numbers into a picture that is easier to compare, describe and understand. A good graph shows differences, patterns, trends and proportions at a glance, but only if you read it carefully. <strong>Bar graphs</strong> compare separate categories, <strong>line graphs</strong> show how something changes, and <strong>pie charts</strong> show how the parts of a whole are shared. This guide teaches you to read scales, read and draw each type of graph, work out percentages and angles in both directions, spot graphs that mislead, and choose the right graph for the job. It has 24 worked examples checked by computer, five diagrams, three tools, a practice drill, exam questions with answers, and a 20-question quiz.</p>
 
-<div class="diagram-box">
-<svg viewBox="0 0 760 430" role="img" aria-labelledby="gTitle gDesc">
-<title id="gTitle">Types of graphs and pie charts</title>
-<desc id="gDesc">A visual overview showing a vertical bar graph, a horizontal bar graph, a line graph and a pie chart.</desc>
-<rect x="0" y="0" width="760" height="430" rx="18" fill="#faf8f4"/>
-<g font-family="Arial, sans-serif">
-<text x="380" y="32" fill="#06244a" font-size="22" font-weight="700" text-anchor="middle">GRAPHS &amp; PIE CHARTS</text>
-<text x="380" y="55" fill="#767676" font-size="12" text-anchor="middle">Choose the visual form that best matches the data.</text>
-
-<!-- vertical bar -->
-<g transform="translate(35,78)">
-<rect x="0" y="0" width="330" height="150" rx="12" fill="white" stroke="#d4a017" stroke-width="2"/>
-<text x="165" y="22" fill="#06244a" font-size="15" font-weight="700" text-anchor="middle">VERTICAL BAR GRAPH</text>
-<line x1="42" y1="125" x2="305" y2="125" stroke="#06244a" stroke-width="2"/>
-<line x1="42" y1="40" x2="42" y2="125" stroke="#06244a" stroke-width="2"/>
-<rect x="70" y="75" width="35" height="50" fill="#d4a017"/>
-<rect x="135" y="55" width="35" height="70" fill="#d4a017"/>
-<rect x="200" y="90" width="35" height="35" fill="#d4a017"/>
-<rect x="265" y="65" width="35" height="60" fill="#d4a017"/>
-<text x="87" y="142" font-size="9" text-anchor="middle">A</text><text x="152" y="142" font-size="9" text-anchor="middle">B</text><text x="217" y="142" font-size="9" text-anchor="middle">C</text><text x="282" y="142" font-size="9" text-anchor="middle">D</text>
-</g>
-
-<!-- horizontal bar -->
-<g transform="translate(395,78)">
-<rect x="0" y="0" width="330" height="150" rx="12" fill="#06244a"/>
-<text x="165" y="22" fill="white" font-size="15" font-weight="700" text-anchor="middle">HORIZONTAL BAR GRAPH</text>
-<line x1="92" y1="40" x2="92" y2="128" stroke="white" stroke-width="2"/>
-<line x1="92" y1="128" x2="305" y2="128" stroke="white" stroke-width="2"/>
-<rect x="92" y="52" width="155" height="16" fill="#d4a017"/>
-<rect x="92" y="76" width="105" height="16" fill="#d4a017"/>
-<rect x="92" y="100" width="190" height="16" fill="#d4a017"/>
-<text x="82" y="64" fill="white" font-size="9" text-anchor="end">A</text><text x="82" y="88" fill="white" font-size="9" text-anchor="end">B</text><text x="82" y="112" fill="white" font-size="9" text-anchor="end">C</text>
-</g>
-
-<!-- line -->
-<g transform="translate(35,245)">
-<rect x="0" y="0" width="330" height="150" rx="12" fill="#06244a"/>
-<text x="165" y="22" fill="white" font-size="15" font-weight="700" text-anchor="middle">LINE GRAPH</text>
-<line x1="45" y1="125" x2="305" y2="125" stroke="white" stroke-width="2"/>
-<line x1="45" y1="40" x2="45" y2="125" stroke="white" stroke-width="2"/>
-<polyline points="65,110 115,82 165,94 215,57 265,70 295,48" fill="none" stroke="#d4a017" stroke-width="3"/>
-<g fill="#d4a017"><circle cx="65" cy="110" r="4"/><circle cx="115" cy="82" r="4"/><circle cx="165" cy="94" r="4"/><circle cx="215" cy="57" r="4"/><circle cx="265" cy="70" r="4"/><circle cx="295" cy="48" r="4"/></g>
-</g>
-
-<!-- pie -->
-<g transform="translate(395,245)">
-<rect x="0" y="0" width="330" height="150" rx="12" fill="white" stroke="#d4a017" stroke-width="2"/>
-<text x="165" y="22" fill="#06244a" font-size="15" font-weight="700" text-anchor="middle">PIE CHART</text>
-<circle cx="165" cy="88" r="48" fill="none" stroke="#06244a" stroke-width="2"/>
-<path d="M165 88 L165 40 A48 48 0 0 1 211 100 Z" fill="#d4a017"/>
-<path d="M165 88 L211 100 A48 48 0 0 1 125 113 Z" fill="#b7b7b7"/>
-<path d="M165 88 L125 113 A48 48 0 0 1 165 40 Z" fill="#06244a"/>
-<text x="228" y="73" fill="#06244a" font-size="10">Part</text><text x="218" y="125" fill="#06244a" font-size="10">Part</text><text x="112" y="75" fill="#06244a" font-size="10">Part</text>
-</g>
-</g>
-</svg>
-<div class="diagram-caption">Figure 1. Common visual forms for representing numerical data. Diagram created specifically for EDUSAMBAM.</div>
-</div>
-
-<h2><span class="num">1.</span>What Is a Graph?</h2>
-<p>A <strong>graph</strong> is a visual representation of data. Instead of listing every number in a table, a graph allows the reader to see quantities, comparisons and patterns quickly.</p>
-<p>Graphs are used in business, science, education, sport, weather reports, economics, surveys and everyday decision-making. The correct graph depends on the nature of the information.</p>
+<h2><span class="num">1.</span>What Is a Graph, and Which Type Should I Use?</h2>
+<p>A <strong>graph</strong> (or chart) is a visual way of showing data. The right type depends on what you want to show.</p>
 <div class="table-wrap"><table class="pos-table">
-<tr><th>Graph type</th><th>Best suited to</th><th>Typical question</th></tr>
-<tr><td>Vertical bar graph</td><td>Comparing separate categories</td><td>Which category has the greatest value?</td></tr>
-<tr><td>Horizontal bar graph</td><td>Comparing categories, especially with long labels</td><td>How much larger is A than B?</td></tr>
-<tr><td>Line graph</td><td>Showing change or a trend, often over time</td><td>When did the value increase most?</td></tr>
-<tr><td>Pie chart</td><td>Showing parts of one whole</td><td>What fraction or percentage belongs to a category?</td></tr>
+<tr><th>Graph type</th><th>Best for</th><th>Typical question</th></tr>
+<tr><td>Pictogram</td><td>Simple counts, using symbols</td><td>How many symbols does each category have?</td></tr>
+<tr><td>Vertical bar graph</td><td>Comparing separate categories</td><td>Which category is largest?</td></tr>
+<tr><td>Horizontal bar graph</td><td>Comparing categories with long names</td><td>How much larger is A than B?</td></tr>
+<tr><td>Line graph</td><td>Change over an ordered sequence, often time</td><td>When did the value rise most?</td></tr>
+<tr><td>Pie chart</td><td>Parts of one whole</td><td>What fraction or percentage belongs to each part?</td></tr>
 </table></div>
 
 <h2><span class="num">2.</span>The Parts of a Good Graph</h2>
-<p>A graph should be easy to understand without guesswork. Important features include:</p>
 <ul>
-<li><strong>Title:</strong> tells the reader what the graph represents.</li>
-<li><strong>Axes:</strong> show the variables being represented on many graphs.</li>
-<li><strong>Labels:</strong> identify categories, quantities or units.</li>
-<li><strong>Scale:</strong> tells how numerical values increase along an axis.</li>
-<li><strong>Data marks:</strong> bars, points, lines or sectors represent the data.</li>
-<li><strong>Legend/key:</strong> explains symbols or multiple data series when needed.</li>
-<li><strong>Units:</strong> such as kilograms, dollars, kilometres or people.</li>
+<li><strong>Title:</strong> says what the graph shows.</li>
+<li><strong>Axes and labels:</strong> say what each axis measures, with units.</li>
+<li><strong>Scale:</strong> shows how values increase along an axis. It must use equal steps.</li>
+<li><strong>Data marks:</strong> bars, points, lines or sectors.</li>
+<li><strong>Key or legend:</strong> explains symbols or colours, and is essential for a pictogram.</li>
 </ul>
-<p>A graph without a clear scale or labels may look attractive but still communicate information poorly.</p>
+<p>A graph with no clear scale or labels may look attractive but tells the reader very little.</p>
 
-<h2><span class="num">3.</span>Vertical Bar Graphs</h2>
-<p>In a <strong>vertical bar graph</strong>, categories are usually placed along the horizontal axis and values are measured upward on the vertical axis. Each category is represented by a separate bar.</p>
-<p>The height of a bar corresponds to its value. Bars should normally have equal widths and equal spaces between them. The numerical scale must be consistent.</p>
-<div class="table-wrap"><table class="pos-table">
-<tr><th>Fruit</th><th>Number sold</th></tr>
-<tr><td>Apples</td><td>30</td></tr>
-<tr><td>Bananas</td><td>45</td></tr>
-<tr><td>Oranges</td><td>25</td></tr>
-<tr><td>Mangoes</td><td>50</td></tr>
-</table></div>
-<div class="example-box"><div class="ex-label">Example 1 · Reading a vertical bar graph</div>
-<p>If the vertical scale is marked in intervals of 10 and the Mangoes bar reaches 50, then 50 mangoes were sold. Bananas were 45, so mango sales exceeded banana sales by <strong>5</strong>.</p>
+<h2><span class="num">3.</span>Reading a Scale</h2>
+<p>Never assume that one gridline means one unit. Read the numbers on the axis first, then work out what each small division is worth.</p>
+<div class="example-box"><div class="ex-label">Example 1 · Equal steps</div>
+<p>An axis is labelled 0, 20, 40, 60 and 80 at equally spaced marks. Each major step is 20 units, so a bar that reaches the third mark above zero has value <strong>60</strong>.</p>
+</div>
+<div class="example-box"><div class="ex-label">Example 2 · Small divisions</div>
+<p>The labelled marks are 0, 10, 20 with 5 equal small intervals between each pair of labels. Each small interval is 10 ÷ 5 = 2 units. A point 3 small marks above 10 has value 10 + 3 × 2 = <strong>16</strong>.</p>
+</div>
+<p>Some graphs do not start at zero. That is allowed, but the reader must notice it (see Section 15).</p>
+
+<h2><span class="num">4.</span>Bar Graphs</h2>
+<p>In a <strong>vertical bar graph</strong>, categories are along the horizontal axis and the height of each bar shows its value. Bars have equal widths and equal gaps, because only the height carries information.</p>
+<div class="diagram-box">
+<svg viewBox="0 0 360 272" role="img" aria-labelledby="gp1t gp1d" xmlns="http://www.w3.org/2000/svg" font-family="Source Sans 3, Arial, sans-serif">
+<title id="gp1t">Vertical bar graph of fruit sold in one day</title>
+<desc id="gp1d">A bar graph with four bars. Apples 30, bananas 45, oranges 25 and mangoes 50. The vertical scale goes from 0 to 60 in steps of 10. Mangoes sold 5 more than bananas.</desc>
+<text x="190" y="16" font-size="13" font-weight="700" fill="#06244a" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">Fruit sold in one day</text><line x1="48.0" y1="226.0" x2="340.0" y2="226.0" stroke="#d9d2bf" stroke-width="1" stroke-linecap="round"/><text x="42" y="230.0" font-size="11" font-weight="600" fill="#4A4A4A" text-anchor="end" paint-order="stroke" stroke="#fff" stroke-width="3">0</text><line x1="48.0" y1="193.0" x2="340.0" y2="193.0" stroke="#d9d2bf" stroke-width="1" stroke-linecap="round"/><text x="42" y="197.0" font-size="11" font-weight="600" fill="#4A4A4A" text-anchor="end" paint-order="stroke" stroke="#fff" stroke-width="3">10</text><line x1="48.0" y1="160.0" x2="340.0" y2="160.0" stroke="#d9d2bf" stroke-width="1" stroke-linecap="round"/><text x="42" y="164.0" font-size="11" font-weight="600" fill="#4A4A4A" text-anchor="end" paint-order="stroke" stroke="#fff" stroke-width="3">20</text><line x1="48.0" y1="127.0" x2="340.0" y2="127.0" stroke="#d9d2bf" stroke-width="1" stroke-linecap="round"/><text x="42" y="131.0" font-size="11" font-weight="600" fill="#4A4A4A" text-anchor="end" paint-order="stroke" stroke="#fff" stroke-width="3">30</text><line x1="48.0" y1="94.0" x2="340.0" y2="94.0" stroke="#d9d2bf" stroke-width="1" stroke-linecap="round"/><text x="42" y="98.0" font-size="11" font-weight="600" fill="#4A4A4A" text-anchor="end" paint-order="stroke" stroke="#fff" stroke-width="3">40</text><line x1="48.0" y1="61.0" x2="340.0" y2="61.0" stroke="#d9d2bf" stroke-width="1" stroke-linecap="round"/><text x="42" y="65.0" font-size="11" font-weight="600" fill="#4A4A4A" text-anchor="end" paint-order="stroke" stroke="#fff" stroke-width="3">50</text><line x1="48.0" y1="28.0" x2="340.0" y2="28.0" stroke="#d9d2bf" stroke-width="1" stroke-linecap="round"/><text x="42" y="32.0" font-size="11" font-weight="600" fill="#4A4A4A" text-anchor="end" paint-order="stroke" stroke="#fff" stroke-width="3">60</text><rect x="62" y="127.0" width="46" height="99.0" fill="#2b6cb0" fill-opacity="0.8" stroke="#06244a" stroke-width="1.5"/><text x="85" y="121.0" font-size="12.5" font-weight="700" fill="#06244a" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">30</text><text x="85" y="242" font-size="11.5" font-weight="600" fill="#4A4A4A" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">Apples</text><rect x="134" y="77.5" width="46" height="148.5" fill="#2b6cb0" fill-opacity="0.8" stroke="#06244a" stroke-width="1.5"/><text x="157" y="71.5" font-size="12.5" font-weight="700" fill="#06244a" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">45</text><text x="157" y="242" font-size="11.5" font-weight="600" fill="#4A4A4A" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">Bananas</text><rect x="206" y="143.5" width="46" height="82.5" fill="#2b6cb0" fill-opacity="0.8" stroke="#06244a" stroke-width="1.5"/><text x="229" y="137.5" font-size="12.5" font-weight="700" fill="#06244a" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">25</text><text x="229" y="242" font-size="11.5" font-weight="600" fill="#4A4A4A" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">Oranges</text><rect x="278" y="61.0" width="46" height="165.0" fill="#B8963E" fill-opacity="0.9" stroke="#06244a" stroke-width="1.5" class="gp-glow"/><text x="301" y="55.0" font-size="12.5" font-weight="700" fill="#7a5c14" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">50</text><text x="301" y="242" font-size="11.5" font-weight="600" fill="#4A4A4A" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">Mangoes</text><line x1="180.0" y1="77.5" x2="324.0" y2="77.5" stroke="#8B0000" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="5 4"/><text x="328" y="73.2" font-size="12.5" font-weight="700" fill="#8B0000" text-anchor="start" paint-order="stroke" stroke="#fff" stroke-width="3">+5</text><line x1="48.0" y1="226.0" x2="340.0" y2="226.0" stroke="#06244a" stroke-width="2" stroke-linecap="round"/><line x1="48.0" y1="226.0" x2="48.0" y2="21.4" stroke="#06244a" stroke-width="2" stroke-linecap="round"/><text x="190" y="262" font-size="11.5" font-weight="600" fill="#4A4A4A" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">Fruit (number sold on the vertical axis)</text></svg>
+
+<div class="diagram-caption">Figure 1. A vertical bar graph. Mangoes (50) sold 5 more than bananas (45).</div>
+</div>
+<div class="example-box"><div class="ex-label">Example 3 · Reading a bar graph</div>
+<p>From Figure 1, Apples 30, Bananas 45, Oranges 25 and Mangoes 50. Mangoes minus bananas = 50 − 45 = <strong>5</strong>. The total sold = 30 + 45 + 25 + 50 = <strong>150</strong>. The mean per fruit = 150 ÷ 4 = <strong>37.5</strong>. Mangoes are 50 ÷ 150 = <strong>one third</strong> of all fruit sold.</p>
+</div>
+<p>A <strong>horizontal bar graph</strong> is the same graph turned on its side. It is useful when the category names are long.</p>
+<div class="example-box"><div class="ex-label">Example 4 · Horizontal bars</div>
+<p>Four towns have populations 12 000, 18 000, 15 000 and 21 000. The longest bar is 21 000. The difference between the largest and smallest is 21 000 − 12 000 = <strong>9 000</strong>. The total is <strong>66 000</strong> and the mean is <strong>16 500</strong>.</p>
+</div>
+<p>A <strong>dual (or compound) bar graph</strong> shows two groups side by side so they can be compared, for example boys and girls in each class.</p>
+<div class="example-box"><div class="ex-label">Example 5 · A dual bar graph</div>
+<p>Three classes have these numbers of boys and girls: class 6A has 14 boys and 16 girls, class 6B has 18 boys and 12 girls, class 6C has 15 boys and 15 girls. Every class has 14 + 16 = 18 + 12 = 15 + 15 = <strong>30</strong> pupils. Class 6B is the only class with more boys than girls, by 18 − 12 = <strong>6</strong>. Across all three classes there are 47 boys and 43 girls.</p>
 </div>
 
-<h2><span class="num">4.</span>Horizontal Bar Graphs</h2>
-<p>A <strong>horizontal bar graph</strong> contains bars extending from left to right. Categories are usually listed vertically, while numerical values are shown along the horizontal scale.</p>
-<p>The information is mathematically the same as in a vertical bar graph; only the orientation changes. Horizontal bars are particularly useful when category names are long.</p>
-<div class="example-box"><div class="ex-label">Example 2 · Comparing categories</div>
-<p>Suppose a horizontal bar graph shows four towns with populations of 12 000, 18 000, 15 000 and 21 000. The longest bar represents 21 000. The difference between the largest and smallest populations is <strong>21 000 − 12 000 = 9 000</strong>.</p>
+<h2><span class="num">5.</span>Pictograms</h2>
+<p>A <strong>pictogram</strong> uses a symbol to stand for a number of items. The <strong>key</strong> tells you the value of one symbol, and a part-symbol stands for a part of that value.</p>
+<div class="example-box"><div class="ex-label">Example 6 · Reading a pictogram</div>
+<p>The key says that one book symbol = 4 books. Monday has 5 symbols, so 5 × 4 = <strong>20 books</strong>. Tuesday has 3½ symbols, so 3.5 × 4 = <strong>14 books</strong>. A half symbol stands for 4 ÷ 2 = 2 books.</p>
 </div>
-
-<h2><span class="num">5.</span>Reading a Graph Scale</h2>
-<p>The <strong>scale</strong> is one of the most important parts of a graph. Never assume that one gridline means one unit. Read the numbered values first.</p>
-<div class="example-box"><div class="ex-label">Example 3 · Finding an unlabeled value</div>
-<p>An axis is labeled 0, 20, 40, 60 and 80 at equally spaced major marks. Each major interval represents 20 units. If a bar reaches the third major mark above zero, its value is <strong>60</strong>.</p>
-</div>
-<p>A scale may increase by 1, 2, 5, 10, 20, 50, 100 or another suitable amount. Some graphs use a scale that does not begin at zero; such graphs must be interpreted particularly carefully.</p>
 
 <h2><span class="num">6.</span>Line Graphs</h2>
-<p>A <strong>line graph</strong> displays data points and connects them with line segments. It is especially useful when the horizontal variable has a natural order, such as time, distance or temperature.</p>
-<p>The points should be plotted accurately according to both axes. The direction of the line helps reveal increases, decreases and periods of stability.</p>
-<div class="table-wrap"><table class="pos-table">
-<tr><th>Day</th><th>Temperature (°C)</th></tr>
-<tr><td>Monday</td><td>22</td></tr>
-<tr><td>Tuesday</td><td>25</td></tr>
-<tr><td>Wednesday</td><td>24</td></tr>
-<tr><td>Thursday</td><td>28</td></tr>
-<tr><td>Friday</td><td>27</td></tr>
-</table></div>
-<div class="example-box"><div class="ex-label">Example 4 · Interpreting a line graph</div>
-<p>From Monday to Tuesday the temperature increased by 3°C. From Tuesday to Wednesday it decreased by 1°C. From Wednesday to Thursday it increased by 4°C. The greatest increase occurred between <strong>Wednesday and Thursday</strong>.</p>
+<p>A <strong>line graph</strong> joins plotted points with straight lines. It is used when the horizontal variable has a natural order, such as time. Rising lines show increases, falling lines show decreases and a flat line shows no change.</p>
+<div class="diagram-box">
+<svg viewBox="0 0 360 280" role="img" aria-labelledby="gp2t gp2d" xmlns="http://www.w3.org/2000/svg" font-family="Source Sans 3, Arial, sans-serif">
+<title id="gp2t">Line graph of daily temperature from Monday to Friday</title>
+<desc id="gp2d">A line graph of temperature in degrees Celsius. Monday 22, Tuesday 25, Wednesday 24, Thursday 28, Friday 27. The greatest rise is from Wednesday to Thursday, 4 degrees.</desc>
+<text x="190" y="16" font-size="13" font-weight="700" fill="#06244a" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">Daily temperature (°C)</text><line x1="50.0" y1="212.0" x2="345.0" y2="212.0" stroke="#d9d2bf" stroke-width="1" stroke-linecap="round"/><text x="44" y="216" font-size="11" font-weight="600" fill="#4A4A4A" text-anchor="end" paint-order="stroke" stroke="#fff" stroke-width="3">20</text><line x1="50.0" y1="182.0" x2="345.0" y2="182.0" stroke="#d9d2bf" stroke-width="1" stroke-linecap="round"/><text x="44" y="186" font-size="11" font-weight="600" fill="#4A4A4A" text-anchor="end" paint-order="stroke" stroke="#fff" stroke-width="3">22</text><line x1="50.0" y1="152.0" x2="345.0" y2="152.0" stroke="#d9d2bf" stroke-width="1" stroke-linecap="round"/><text x="44" y="156" font-size="11" font-weight="600" fill="#4A4A4A" text-anchor="end" paint-order="stroke" stroke="#fff" stroke-width="3">24</text><line x1="50.0" y1="122.0" x2="345.0" y2="122.0" stroke="#d9d2bf" stroke-width="1" stroke-linecap="round"/><text x="44" y="126" font-size="11" font-weight="600" fill="#4A4A4A" text-anchor="end" paint-order="stroke" stroke="#fff" stroke-width="3">26</text><line x1="50.0" y1="92.0" x2="345.0" y2="92.0" stroke="#d9d2bf" stroke-width="1" stroke-linecap="round"/><text x="44" y="96" font-size="11" font-weight="600" fill="#4A4A4A" text-anchor="end" paint-order="stroke" stroke="#fff" stroke-width="3">28</text><line x1="50.0" y1="62.0" x2="345.0" y2="62.0" stroke="#d9d2bf" stroke-width="1" stroke-linecap="round"/><text x="44" y="66" font-size="11" font-weight="600" fill="#4A4A4A" text-anchor="end" paint-order="stroke" stroke="#fff" stroke-width="3">30</text><line x1="50.0" y1="212.0" x2="345.0" y2="212.0" stroke="#06244a" stroke-width="2" stroke-linecap="round"/><line x1="50.0" y1="212.0" x2="50.0" y2="54.5" stroke="#06244a" stroke-width="2" stroke-linecap="round"/><line x1="82.0" y1="182.0" x2="142.0" y2="137.0" stroke="#2b6cb0" stroke-width="3" stroke-linecap="round"/><line x1="142.0" y1="137.0" x2="202.0" y2="152.0" stroke="#2b6cb0" stroke-width="3" stroke-linecap="round"/><line x1="202.0" y1="152.0" x2="262.0" y2="92.0" stroke="#B8963E" stroke-width="5" stroke-linecap="round"/><line x1="262.0" y1="92.0" x2="322.0" y2="107.0" stroke="#2b6cb0" stroke-width="3" stroke-linecap="round"/><circle cx="82.0" cy="182.0" r="5" fill="#06244a"/><text x="82" y="201" font-size="11.5" font-weight="700" fill="#06244a" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">22</text><text x="82" y="228" font-size="11.5" font-weight="600" fill="#4A4A4A" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">Mon</text><circle cx="142.0" cy="137.0" r="5" fill="#06244a"/><text x="142" y="156" font-size="11.5" font-weight="700" fill="#06244a" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">25</text><text x="142" y="228" font-size="11.5" font-weight="600" fill="#4A4A4A" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">Tue</text><circle cx="202.0" cy="152.0" r="5" fill="#06244a"/><text x="202" y="171" font-size="11.5" font-weight="700" fill="#06244a" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">24</text><text x="202" y="228" font-size="11.5" font-weight="600" fill="#4A4A4A" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">Wed</text><circle cx="262.0" cy="92.0" r="5" fill="#06244a"/><text x="262" y="111" font-size="11.5" font-weight="700" fill="#06244a" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">28</text><text x="262" y="228" font-size="11.5" font-weight="600" fill="#4A4A4A" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">Thu</text><circle cx="322.0" cy="107.0" r="5" fill="#06244a"/><text x="322" y="126" font-size="11.5" font-weight="700" fill="#06244a" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">27</text><text x="322" y="228" font-size="11.5" font-weight="600" fill="#4A4A4A" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">Fri</text><text x="112.0" y="147.5" font-size="12" font-weight="700" fill="#2b6cb0" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">+3</text><text x="172.0" y="132.5" font-size="12" font-weight="700" fill="#8B0000" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">−1</text><text x="232.0" y="110.0" font-size="12" font-weight="700" fill="#2b6cb0" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">+4</text><text x="292.0" y="87.5" font-size="12" font-weight="700" fill="#8B0000" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">−1</text><text x="190" y="246" font-size="12" font-weight="700" fill="#7a5c14" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">Greatest rise: Wednesday to Thursday (+4°C)</text><text x="190" y="266" font-size="11" font-weight="600" fill="#4A4A4A" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">The vertical axis starts at 20°C, not 0</text></svg>
+
+<div class="diagram-caption">Figure 2. A line graph of temperature. The numbers above the line are the changes from one day to the next.</div>
+</div>
+<div class="example-box"><div class="ex-label">Example 7 · Interpreting a line graph</div>
+<p>From Figure 2: Monday to Tuesday +3°C, Tuesday to Wednesday −1°C, Wednesday to Thursday +4°C, Thursday to Friday −1°C. The greatest increase is <strong>Wednesday to Thursday</strong>. The mean temperature is (22 + 25 + 24 + 28 + 27) ÷ 5 = 126 ÷ 5 = <strong>25.2°C</strong>.</p>
+</div>
+<p>On a line graph, the <strong>steepness</strong> of a segment shows how fast the quantity changes, and the average rate of change is (change in vertical value) ÷ (change in horizontal value).</p>
+<div class="example-box"><div class="ex-label">Example 8 · A tank graph</div>
+<p>A graph shows the water in a tank: 0 litres at 0 minutes, 60 litres at 5 minutes, still 60 litres at 8 minutes, and 20 litres at 12 minutes. Filling rate = 60 ÷ 5 = <strong>12 litres per minute</strong>. From 5 to 8 minutes the line is flat, so nothing changes for <strong>3 minutes</strong>. Emptying rate = (60 − 20) ÷ (12 − 8) = 40 ÷ 4 = <strong>10 litres per minute</strong>.</p>
+</div>
+<p>Do not join points with a line when the categories have no order, such as the names of fruits. Use a bar graph instead.</p>
+
+<h2><span class="num">7.</span>Comparing Values on a Graph</h2>
+<p>Graphs make comparison easy, but state the comparison exactly. Use the <strong>difference</strong> (larger − smaller), the <strong>total</strong>, a <strong>ratio</strong>, or a <strong>percentage change</strong>:</p>
+<div class="formula-box"><strong>Percentage change = (new value − old value) ÷ old value × 100%</strong></div>
+<div class="example-box"><div class="ex-label">Example 9 · Percentage change</div>
+<p>Sales rise from 200 to 250 units. Change = 50. Percentage increase = 50 ÷ 200 × 100 = <strong>25%</strong>.</p>
+<p>Sales then fall back from 250 to 200. The change is again 50, but now the old value is 250, so we divide by 250: 50 ÷ 250 × 100 = <strong>20%</strong>. A rise of 25% is not undone by a fall of 25%. Another example: a fall from 80 to 60 is 20 ÷ 80 × 100 = <strong>25% decrease</strong>.</p>
 </div>
 
-<h2><span class="num">7.</span>Increasing, Decreasing and Constant Trends</h2>
-<p>On a line graph, an upward movement from left to right generally indicates an <strong>increase</strong>, while a downward movement indicates a <strong>decrease</strong>. A horizontal segment indicates no change between the two plotted points.</p>
-<p>The steepness of a line can indicate how rapidly a quantity changes, provided the axes and scales are understood. A steep line is not automatically a large numerical change if the vertical scale is unusual.</p>
-<div class="real-world-box"><div class="rw-label">Real-Life Example</div><p>A graph of water stored in a tank might rise as water is added, remain level while the amount stays unchanged, and fall when water is used. The graph gives a visual story of what happened.</p></div>
-
-<h2><span class="num">8.</span>Finding Values from Line Graphs</h2>
-<p>To find a value, first identify the required position on the horizontal axis. Move vertically to the plotted point and then across to the numerical scale. Always check the scale before reading the answer.</p>
-<div class="example-box"><div class="ex-label">Example 5 · Reading an exact point</div>
-<p>A line graph records rainfall. The point above Thursday lies at 18 mm on the vertical scale. Therefore Thursday's rainfall was <strong>18 mm</strong>.</p>
-</div>
-<p>If a point lies between labeled scale marks, use the smaller divisions to determine its value. If the graph does not provide enough divisions to determine the exact value, report only what the graph actually supports rather than inventing precision.</p>
-
-<h2><span class="num">9.</span>Comparing Values on Graphs</h2>
-<p>Graphs make comparison quick, but the comparison should be stated precisely. Useful operations include:</p>
-<ul>
-<li><strong>Difference:</strong> subtract the smaller value from the larger value.</li>
-<li><strong>Total:</strong> add the relevant values.</li>
-<li><strong>Ratio:</strong> compare two values by division.</li>
-<li><strong>Percentage increase/decrease:</strong> compare the change with the original value.</li>
-<li><strong>Maximum/minimum:</strong> identify the greatest or smallest value.</li>
-</ul>
-<div class="example-box"><div class="ex-label">Example 6 · Percentage increase</div>
-<p>A graph shows sales increasing from 200 units to 250 units.</p>
-<p>Increase = 250 − 200 = 50.</p>
-<p>Percentage increase = (50 ÷ 200) × 100 = <strong>25%</strong>.</p>
-</div>
-
-<h2><span class="num">10.</span>Drawing a Bar Graph Correctly</h2>
+<h2><span class="num">8.</span>Drawing Bar and Line Graphs</h2>
 <ol>
-<li>Organise the data in a table first.</li>
-<li>Decide which variable belongs on each axis.</li>
-<li>Choose a suitable scale that covers all values.</li>
-<li>Label both axes and include units where necessary.</li>
-<li>Give the graph a clear title.</li>
-<li>Draw bars with equal width.</li>
-<li>Keep equal gaps between separate categories.</li>
-<li>Make every bar reach the correct numerical value.</li>
-<li>Check the finished graph against the original data.</li>
+<li>Put the data in a table first.</li>
+<li>Decide what goes on each axis. For a line graph, the ordered variable (such as time) goes on the horizontal axis.</li>
+<li>Choose a scale with equal steps that covers the largest value, and start at 0 unless there is a good reason not to.</li>
+<li>Label both axes with units, and give the graph a title.</li>
+<li>For a bar graph, draw bars of equal width with equal gaps. For a line graph, plot each point accurately and join them in order.</li>
+<li>Check each bar or point against the table.</li>
 </ol>
-<p>A graph should represent the data accurately rather than merely looking balanced or attractive.</p>
 
-<h2><span class="num">11.</span>Drawing a Line Graph Correctly</h2>
-<ol>
-<li>Identify the independent variable and place it on the horizontal axis when appropriate.</li>
-<li>Place the measured quantity on the vertical axis.</li>
-<li>Choose suitable, evenly spaced scales.</li>
-<li>Plot each coordinate carefully.</li>
-<li>Label the axes and units.</li>
-<li>Add a descriptive title.</li>
-<li>Connect the points in the correct order when a line graph is appropriate.</li>
-</ol>
-<p>Do not join unrelated categories merely because they appear next to one another. A line graph is most meaningful when the horizontal variable has a logical order.</p>
-
-<h2><span class="num">12.</span>What Is a Pie Chart?</h2>
-<p>A <strong>pie chart</strong> is a circle divided into sectors. The complete circle represents the <strong>whole</strong>, while each sector represents a <strong>part</strong> of that whole.</p>
-<p>Because a full circle contains <strong>360°</strong>, the angle of a sector tells us what fraction of the whole it represents.</p>
+<h2><span class="num">9.</span>Pie Charts</h2>
+<p>A <strong>pie chart</strong> is a circle divided into <strong>sectors</strong>. The whole circle is the whole group (100%, or 360°) and each sector is one part.</p>
+<div class="formula-box"><strong>Sector angle = (value ÷ total) × 360°</strong></div>
 <div class="table-wrap"><table class="pos-table">
-<tr><th>Part of whole</th><th>Percentage</th><th>Angle</th></tr>
+<tr><th>Fraction</th><th>Percentage</th><th>Angle</th></tr>
 <tr><td>1/2</td><td>50%</td><td>180°</td></tr>
 <tr><td>1/4</td><td>25%</td><td>90°</td></tr>
 <tr><td>1/5</td><td>20%</td><td>72°</td></tr>
 <tr><td>1/10</td><td>10%</td><td>36°</td></tr>
 <tr><td>1/20</td><td>5%</td><td>18°</td></tr>
 </table></div>
-
-<h2><span class="num">13.</span>The Fundamental Pie-Chart Formula</h2>
-<p>The central relationship is:</p>
-<div class="formula-box"><strong>Sector angle = (category value ÷ total value) × 360°</strong></div>
-<p>Because percentage is a fraction out of 100, the same relationship can be written as:</p>
-<div class="formula-box"><strong>Sector angle = percentage × 3.6°</strong></div>
-<p>These formulas are equivalent. For example, 25% of a circle is 25 × 3.6° = <strong>90°</strong>.</p>
-
-<h2><span class="num">14.</span>Finding the Angle from a Given Value</h2>
-<div class="example-box"><div class="ex-label">Example 7 · Value → angle</div>
-<p>A survey contains 200 responses. 50 respondents choose option A. Find the angle for option A.</p>
-<p>Angle = (50 ÷ 200) × 360°</p>
-<p>= 1/4 × 360° = <strong>90°</strong>.</p>
+<p>Because 360 ÷ 100 = 3.6, <strong>angle = percentage × 3.6°</strong> and <strong>percentage = angle ÷ 3.6</strong>.</p>
+<div class="example-box"><div class="ex-label">Example 10 · From value to angle</div>
+<p>(a) In a survey of 200 people, 50 choose A. Angle = 50 ÷ 200 × 360° = <strong>90°</strong>.</p>
+<p>(b) In a group of 80 items, 12 are in category B. Angle = 12 ÷ 80 × 360° = <strong>54°</strong>.</p>
 </div>
-<div class="example-box"><div class="ex-label">Example 8 · Another value → angle</div>
-<p>A group contains 80 items, and 12 belong to category B.</p>
-<p>Angle = (12 ÷ 80) × 360° = <strong>54°</strong>.</p>
-</div>
-
-<h2><span class="num">15.</span>Finding the Value from a Pie-Chart Angle</h2>
-<p>This is one of the most useful reverse calculations. If the total is known and the sector angle is given:</p>
-<div class="formula-box"><strong>Category value = (sector angle ÷ 360°) × total</strong></div>
-<div class="example-box"><div class="ex-label">Example 9 · Angle → value</div>
-<p>A pie chart represents 600 people. A sector has an angle of 72°.</p>
-<p>Value = (72 ÷ 360) × 600</p>
-<p>= 1/5 × 600 = <strong>120 people</strong>.</p>
-</div>
-<div class="example-box"><div class="ex-label">Example 10 · Angle → value with a different total</div>
-<p>A pie chart represents 900 books. A sector measures 40°.</p>
-<p>Value = (40 ÷ 360) × 900 = <strong>100 books</strong>.</p>
-</div>
-
-<h2><span class="num">16.</span>Finding a Percentage from a Pie-Chart Angle</h2>
-<p>The percentage represented by a sector is:</p>
-<div class="formula-box"><strong>Percentage = (sector angle ÷ 360°) × 100%</strong></div>
-<p>Since 100 ÷ 360 = 5 ÷ 18, the percentage can also be found directly from the angle.</p>
-<div class="example-box"><div class="ex-label">Example 11 · Angle → percentage</div>
-<p>A sector is 54°.</p>
-<p>Percentage = (54 ÷ 360) × 100 = <strong>15%</strong>.</p>
-</div>
-
-<h2><span class="num">17.</span>Finding the Angle from a Percentage</h2>
-<div class="formula-box"><strong>Angle = (percentage ÷ 100) × 360° = percentage × 3.6°</strong></div>
-<div class="example-box"><div class="ex-label">Example 12 · Percentage → angle</div>
-<p>A category represents 35% of a survey.</p>
-<p>Angle = 35 × 3.6° = <strong>126°</strong>.</p>
-</div>
-<p>The sector angle must be between 0° and 360°. If several sectors are calculated from percentages, their angles must add to 360°.</p>
-
-<h2><span class="num">18.</span>Finding a Percentage from a Value</h2>
-<p>If the value and total are known, first find the fraction of the whole and then multiply by 100.</p>
-<div class="formula-box"><strong>Percentage = (category value ÷ total value) × 100%</strong></div>
-<div class="example-box"><div class="ex-label">Example 13 · Value → percentage</div>
-<p>There are 45 red balls in a box of 180 balls.</p>
-<p>Percentage = (45 ÷ 180) × 100 = <strong>25%</strong>.</p>
-<p>The corresponding pie-chart angle would therefore be 25 × 3.6° = <strong>90°</strong>.</p>
-</div>
-
-<h2><span class="num">19.</span>Finding an Unknown Value from a Pie Chart</h2>
-<p>Sometimes the total is known, the angle is known, and the category value is unknown. Use the reverse formula.</p>
-<div class="example-box"><div class="ex-label">Example 14 · Unknown category value</div>
-<p>A pie chart represents 1500 survey responses. One sector has an angle of 48°.</p>
-<p>Value = (48 ÷ 360) × 1500 = <strong>200 responses</strong>.</p>
-</div>
-<p>If a sector's percentage is given instead, use:</p>
-<div class="formula-box"><strong>Value = (percentage ÷ 100) × total</strong></div>
-
-<h2><span class="num">20.</span>Finding a Missing Sector Angle</h2>
-<p>Because all sectors together make one complete circle, their angles must total <strong>360°</strong>.</p>
-<div class="example-box"><div class="ex-label">Example 15 · Missing angle</div>
-<p>Three sectors have angles 80°, 120° and 65°. Find the fourth angle.</p>
-<p>Known total = 80 + 120 + 65 = 265°.</p>
-<p>Missing angle = 360° − 265° = <strong>95°</strong>.</p>
-</div>
-
-<h2><span class="num">21.</span>Finding a Missing Percentage</h2>
-<p>All percentages in a complete pie chart must add to <strong>100%</strong>.</p>
-<div class="example-box"><div class="ex-label">Example 16 · Missing percentage</div>
-<p>Four categories represent 18%, 27%, 35% and an unknown percentage.</p>
-<p>Known total = 18 + 27 + 35 = 80%.</p>
-<p>Missing percentage = 100% − 80% = <strong>20%</strong>.</p>
-<p>The missing sector would have angle 20 × 3.6° = <strong>72°</strong>.</p>
-</div>
-
-<h2><span class="num">22.</span>Using a Pie Chart to Find One Value When Another Is Known</h2>
-<p>Sometimes the total is not stated directly, but one sector's value and angle are known. You can use the known sector to determine the whole.</p>
-<div class="formula-box"><strong>Total = known value × 360° ÷ known angle</strong></div>
-<div class="example-box"><div class="ex-label">Example 17 · Recovering the total</div>
-<p>A 72° sector represents 90 people. Since 72° is one fifth of 360°, the total is 90 × 5 = <strong>450 people</strong>.</p>
-</div>
-<p>This method is especially useful in reverse pie-chart problems.</p>
-
-<h2><span class="num">23.</span>Pie Charts and Fractions</h2>
-<p>A sector can be interpreted as a fraction of the whole:</p>
-<div class="formula-box"><strong>Fraction = sector angle ÷ 360°</strong></div>
-<div class="example-box"><div class="ex-label">Example 18 · Angle → fraction</div>
-<p>A sector is 108°.</p>
-<p>Fraction = 108/360 = <strong>3/10</strong>.</p>
-<p>Percentage = 3/10 × 100% = <strong>30%</strong>.</p>
-</div>
-<p>Thus one sector can be represented in three equivalent ways: <strong>fraction, percentage and angle</strong>.</p>
-
-<h2><span class="num">24.</span>Drawing a Pie Chart</h2>
+<h3>Drawing a pie chart</h3>
 <ol>
-<li>Find the total of all category values.</li>
-<li>Calculate each category's fraction or percentage of the total.</li>
-<li>Calculate each sector angle using <strong>(value ÷ total) × 360°</strong>.</li>
-<li>Check that all calculated angles add to 360°.</li>
-<li>Draw a circle using a suitable compass or digital tool.</li>
-<li>Use a protractor to measure each sector accurately.</li>
-<li>Label sectors clearly or provide a legend.</li>
-<li>Add a title explaining what the whole circle represents.</li>
+<li>Find the total.</li>
+<li>Find each angle using value ÷ total × 360°.</li>
+<li>Check that the angles add to 360°.</li>
+<li>Draw a circle, draw one radius, and use a protractor to measure each angle in turn, going round the circle.</li>
+<li>Label each sector (with its name, or with a key) and give the chart a title that says what the whole circle represents.</li>
 </ol>
-<div class="example-box"><div class="ex-label">Example 19 · Constructing a simple pie chart</div>
-<p>A survey records 40 people choosing A, 30 choosing B and 30 choosing C. Total = 100.</p>
-<p>A = 40% → <strong>144°</strong>.</p>
-<p>B = 30% → <strong>108°</strong>.</p>
-<p>C = 30% → <strong>108°</strong>.</p>
-<p>Check: 144 + 108 + 108 = <strong>360°</strong>.</p>
+<div class="diagram-box">
+<svg viewBox="0 0 360 272" role="img" aria-labelledby="gp3t gp3d" xmlns="http://www.w3.org/2000/svg" font-family="Source Sans 3, Arial, sans-serif">
+<title id="gp3t">Pie chart of favourite sport for 200 pupils</title>
+<desc id="gp3d">A pie chart with four sectors. Cricket 90 pupils, 162 degrees. Football 50 pupils, 90 degrees. Hockey 30 pupils, 54 degrees. Other 30 pupils, 54 degrees. The angles add to 360 degrees.</desc>
+<path d="M100,112 L100.00,26.00 A86,86 0 0 1 126.58,193.79 Z" fill="#2b6cb0" fill-opacity="0.88" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/><text x="152.7" y="107.7" font-size="13" font-weight="700" text-anchor="middle" fill="#fff" stroke="#1b2a49" stroke-width="0.6" paint-order="stroke">162°</text><path d="M100,112 L126.58,193.79 A86,86 0 0 1 18.21,138.58 Z" fill="#B8963E" fill-opacity="0.88" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/><text x="75.8" y="163.5" font-size="13" font-weight="700" text-anchor="middle" fill="#fff" stroke="#1b2a49" stroke-width="0.6" paint-order="stroke">90°</text><path d="M100,112 L18.21,138.58 A86,86 0 0 1 30.42,61.45 Z" fill="#8B0000" fill-opacity="0.88" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/><text x="47.3" y="107.7" font-size="13" font-weight="700" text-anchor="middle" fill="#fff" stroke="#1b2a49" stroke-width="0.6" paint-order="stroke">54°</text><path d="M100,112 L30.42,61.45 A86,86 0 0 1 100.00,26.00 Z" fill="#6b7b93" fill-opacity="0.88" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/><text x="75.8" y="68.5" font-size="13" font-weight="700" text-anchor="middle" fill="#fff" stroke="#1b2a49" stroke-width="0.6" paint-order="stroke">54°</text><rect x="212" y="50" width="14" height="14" rx="6" fill="#2b6cb0" stroke="#06244a" stroke-width="1.2"/><text x="234" y="62" font-size="13" font-weight="700" fill="#06244a" text-anchor="start" paint-order="stroke" stroke="#fff" stroke-width="3">Cricket</text><text x="234" y="78" font-size="11.5" font-weight="600" fill="#4A4A4A" text-anchor="start" paint-order="stroke" stroke="#fff" stroke-width="3">90 pupils (45%)</text><rect x="212" y="88" width="14" height="14" rx="6" fill="#B8963E" stroke="#06244a" stroke-width="1.2"/><text x="234" y="100" font-size="13" font-weight="700" fill="#06244a" text-anchor="start" paint-order="stroke" stroke="#fff" stroke-width="3">Football</text><text x="234" y="116" font-size="11.5" font-weight="600" fill="#4A4A4A" text-anchor="start" paint-order="stroke" stroke="#fff" stroke-width="3">50 pupils (25%)</text><rect x="212" y="126" width="14" height="14" rx="6" fill="#8B0000" stroke="#06244a" stroke-width="1.2"/><text x="234" y="138" font-size="13" font-weight="700" fill="#06244a" text-anchor="start" paint-order="stroke" stroke="#fff" stroke-width="3">Hockey</text><text x="234" y="154" font-size="11.5" font-weight="600" fill="#4A4A4A" text-anchor="start" paint-order="stroke" stroke="#fff" stroke-width="3">30 pupils (15%)</text><rect x="212" y="164" width="14" height="14" rx="6" fill="#6b7b93" stroke="#06244a" stroke-width="1.2"/><text x="234" y="176" font-size="13" font-weight="700" fill="#06244a" text-anchor="start" paint-order="stroke" stroke="#fff" stroke-width="3">Other</text><text x="234" y="192" font-size="11.5" font-weight="600" fill="#4A4A4A" text-anchor="start" paint-order="stroke" stroke="#fff" stroke-width="3">30 pupils (15%)</text><text x="180" y="226" font-size="12.5" font-weight="700" fill="#06244a" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">Angle = value ÷ 200 × 360°</text><text x="180" y="246" font-size="12.5" font-weight="700" fill="#8B0000" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">162° + 90° + 54° + 54° = 360°</text><text x="180" y="264" font-size="11.5" font-weight="600" fill="#4A4A4A" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">The whole circle is all 200 pupils</text></svg>
+
+<div class="diagram-caption">Figure 3. Favourite sport of 200 pupils. Each angle equals the value ÷ 200 × 360°.</div>
+</div>
+<div class="example-box"><div class="ex-label">Example 11 · Constructing the chart in Figure 3</div>
+<p>Cricket 90, Football 50, Hockey 30, Other 30. Total = 200. Cricket: 90 ÷ 200 × 360 = <strong>162°</strong> (45%). Football: 50 ÷ 200 × 360 = <strong>90°</strong> (25%). Hockey: <strong>54°</strong> (15%). Other: <strong>54°</strong> (15%). Check: 162 + 90 + 54 + 54 = 360°.</p>
+</div>
+<div class="fixit-challenge">
+<div class="fixit-wrong">“In a pie chart, 40% of the people chose tea, so the tea sector is 40°.”</div>
+<p>How many degrees are in the whole circle?</p>
+<button class="fixit-toggle-btn" onclick="toggleFix('fix1')">Show the Fix</button>
+<div class="fixit-explain" id="fix1">
+<p><strong>The fix:</strong> a whole pie chart is 360°, not 100°. So 40% of 360° = 40 × 3.6° = <strong>144°</strong>.</p>
+</div>
 </div>
 
-<h2><span class="num">25.</span>Choosing the Right Graph</h2>
-<p>Different graphs answer different kinds of questions.</p>
-<div class="table-wrap"><table class="pos-table">
-<tr><th>Situation</th><th>Good choice</th><th>Reason</th></tr>
-<tr><td>Compare the number of books in different genres</td><td>Bar graph</td><td>Separate categories</td></tr>
-<tr><td>Show daily temperature across a week</td><td>Line graph</td><td>Change over an ordered sequence</td></tr>
-<tr><td>Show how a budget is divided</td><td>Pie chart</td><td>Parts of one whole</td></tr>
-<tr><td>Compare many categories with long names</td><td>Horizontal bar graph</td><td>Labels are easier to read</td></tr>
-<tr><td>Show monthly rainfall over a year</td><td>Line graph</td><td>Shows change over time</td></tr>
-</table></div>
+<h2><span class="num">10.</span>Working Backwards from a Pie Chart</h2>
+<p>The same relationship can be rearranged, so you can move between value, fraction, percentage and angle in either direction.</p>
+<div class="diagram-box">
+<svg viewBox="0 0 360 216" role="img" aria-labelledby="gp5t gp5d" xmlns="http://www.w3.org/2000/svg" font-family="Source Sans 3, Arial, sans-serif">
+<title id="gp5t">Moving between value, fraction, percentage and angle</title>
+<desc id="gp5d">Four boxes in a row: 140 out of 800, the fraction 7 over 40, 17.5 percent and 63 degrees, joined by arrows labelled divide by total, times 100 and times 3.6.</desc>
+<text x="45" y="48" font-size="12" font-weight="700" fill="#4A4A4A" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">value</text><rect x="10" y="58" width="70" height="40" rx="6" fill="#fff" stroke="#06244a" stroke-width="2"/><text x="45" y="84" font-size="14" font-weight="700" fill="#06244a" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">140 of 800</text><text x="137" y="48" font-size="12" font-weight="700" fill="#4A4A4A" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">fraction</text><rect x="102" y="58" width="70" height="40" rx="6" fill="#fff" stroke="#06244a" stroke-width="2"/><text x="137" y="84" font-size="14" font-weight="700" fill="#06244a" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">7/40</text><text x="229" y="48" font-size="12" font-weight="700" fill="#4A4A4A" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">percentage</text><rect x="194" y="58" width="70" height="40" rx="6" fill="#fff" stroke="#06244a" stroke-width="2"/><text x="229" y="84" font-size="14" font-weight="700" fill="#06244a" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">17.5%</text><text x="321" y="48" font-size="12" font-weight="700" fill="#4A4A4A" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">angle</text><rect class="gp-glow" x="286" y="58" width="70" height="40" rx="6" fill="#fdf3e0" stroke="#B8963E" stroke-width="3"/><text x="321" y="84" font-size="14" font-weight="700" fill="#7a5c14" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">63°</text><line class="gp-flow" x1="82" y1="78" x2="95.0" y2="78.0" stroke="#8B0000" stroke-width="2.2" stroke-linecap="round"/><polygon points="100.0,78.0 92.8,81.5 92.8,74.5" fill="#8B0000"/><text x="91.0" y="118" font-size="11" font-weight="700" fill="#8B0000" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">÷ 800</text><line class="gp-flow" x1="174" y1="78" x2="187.0" y2="78.0" stroke="#8B0000" stroke-width="2.2" stroke-linecap="round"/><polygon points="192.0,78.0 184.8,81.5 184.8,74.5" fill="#8B0000"/><text x="183.0" y="118" font-size="11" font-weight="700" fill="#8B0000" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">× 100</text><line class="gp-flow" x1="266" y1="78" x2="279.0" y2="78.0" stroke="#8B0000" stroke-width="2.2" stroke-linecap="round"/><polygon points="284.0,78.0 276.8,81.5 276.8,74.5" fill="#8B0000"/><text x="275.0" y="118" font-size="11" font-weight="700" fill="#8B0000" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">× 3.6</text><text x="180" y="150" font-size="12.5" font-weight="700" fill="#06244a" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">angle = value ÷ total × 360°</text><text x="180" y="170" font-size="12.5" font-weight="700" fill="#06244a" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">value = angle ÷ 360° × total</text><text x="180" y="190" font-size="12.5" font-weight="700" fill="#06244a" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">percentage = angle ÷ 360° × 100</text><text x="180" y="208" font-size="11.5" font-weight="600" fill="#4A4A4A" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">angle = percentage × 3.6°</text></svg>
 
-<h2><span class="num">26.</span>Graphs Can Mislead</h2>
-<p>A graph can be mathematically based on correct data but still create a misleading impression if it is badly designed.</p>
-<ul>
-<li><strong>Unequal intervals:</strong> axis marks must represent consistent numerical steps.</li>
-<li><strong>Unclear scale:</strong> readers should not have to guess the values.</li>
-<li><strong>Truncated axis:</strong> starting above zero can make small differences look much larger.</li>
-<li><strong>3D effects:</strong> visual depth can distort apparent sizes.</li>
-<li><strong>Missing units:</strong> a number without a unit may be ambiguous.</li>
-<li><strong>Exaggerated bar widths:</strong> width should not imply an additional numerical quantity unless it has meaning.</li>
-<li><strong>Cherry-picked time periods:</strong> showing only selected dates may hide a wider trend.</li>
-<li><strong>Inappropriate graph type:</strong> a pie chart is not suitable for data that do not form meaningful parts of one whole.</li>
-</ul>
-
-<h2><span class="num">27.</span>Reading Graphs Critically</h2>
-<p>Do not stop at “which bar is tallest?” Ask what the graph actually measures and whether the comparison is fair.</p>
-<ol>
-<li>Read the title.</li>
-<li>Identify what each axis or sector represents.</li>
-<li>Check the units.</li>
-<li>Read the scale.</li>
-<li>Locate the required data.</li>
-<li>Calculate differences, totals or percentages if necessary.</li>
-<li>Look for trends or unusual values.</li>
-<li>Check whether the graph gives enough information for the conclusion.</li>
-</ol>
-<div class="real-world-box"><div class="rw-label">Real-Life Example</div><p>A sales graph might show that one month was higher than another. A careful reader should also ask whether both months contain the same number of days, whether the units are identical, and whether the scale has been changed.</p></div>
-
-<h2><span class="num">28.</span>Combining Graph Reading with Arithmetic</h2>
-<p>Many graph questions are not solved by simply reading one value. The graph provides the data, and arithmetic provides the answer.</p>
-<div class="example-box"><div class="ex-label">Example 20 · Total from a bar graph</div>
-<p>A graph shows four weekly totals: 120, 150, 135 and 175 units.</p>
-<p>Total = 120 + 150 + 135 + 175 = <strong>580 units</strong>.</p>
+<div class="diagram-caption">Figure 4. One category described four ways: 140 responses out of 800 is the fraction 7/40, which is 17.5%, which is 63°.</div>
 </div>
-<div class="example-box"><div class="ex-label">Example 21 · Difference from a line graph</div>
-<p>A line graph shows 84 units at one point and 57 units at another.</p>
-<p>Difference = 84 − 57 = <strong>27 units</strong>.</p>
-</div>
-
-<h2><span class="num">29.</span>Advanced Pie-Chart Reasoning</h2>
-<p>Pie charts can involve several linked calculations. A strong method is to move systematically between <strong>value → fraction → percentage → angle</strong>.</p>
-<div class="example-box"><div class="ex-label">Example 22 · A complete chain</div>
-<p>A survey has 800 responses. Category X contains 140 responses.</p>
-<p>Fraction = 140/800 = 7/40.</p>
-<p>Percentage = 7/40 × 100 = <strong>17.5%</strong>.</p>
-<p>Angle = 140/800 × 360 = <strong>63°</strong>.</p>
-<p>So the same category can be described as <strong>140 responses, 7/40, 17.5%, or 63°</strong>.</p>
-</div>
-<div class="example-box"><div class="ex-label">Example 23 · Finding a missing category</div>
-<p>A pie chart represents 720 items. Three sectors contain 180, 144 and 216 items. The remaining category is:</p>
-<p>180 + 144 + 216 = 540.</p>
-<p>720 − 540 = <strong>180 items</strong>.</p>
-<p>Its angle is (180 ÷ 720) × 360 = <strong>90°</strong>.</p>
-</div>
-
-<h2><span class="num">30.</span>Quick Reference Formulas</h2>
 <div class="table-wrap"><table class="pos-table">
 <tr><th>Task</th><th>Formula</th></tr>
-<tr><td>Percentage from value</td><td>(value ÷ total) × 100%</td></tr>
-<tr><td>Pie angle from value</td><td>(value ÷ total) × 360°</td></tr>
-<tr><td>Pie angle from percentage</td><td>percentage × 3.6°</td></tr>
-<tr><td>Value from pie angle</td><td>(angle ÷ 360°) × total</td></tr>
-<tr><td>Percentage from pie angle</td><td>(angle ÷ 360°) × 100%</td></tr>
-<tr><td>Value from percentage</td><td>(percentage ÷ 100) × total</td></tr>
-<tr><td>Total from known value and angle</td><td>value × 360° ÷ angle</td></tr>
-<tr><td>Missing pie angle</td><td>360° − sum of known angles</td></tr>
-<tr><td>Missing percentage</td><td>100% − sum of known percentages</td></tr>
-<tr><td>Difference</td><td>larger value − smaller value</td></tr>
+<tr><td>Angle from a value</td><td>(value ÷ total) × 360°</td></tr>
+<tr><td>Angle from a percentage</td><td>percentage × 3.6°</td></tr>
+<tr><td>Value from an angle</td><td>(angle ÷ 360°) × total</td></tr>
+<tr><td>Percentage from an angle</td><td>(angle ÷ 360°) × 100%</td></tr>
+<tr><td>Fraction from an angle</td><td>angle ÷ 360°</td></tr>
+<tr><td>Total from a known value and angle</td><td>value × 360° ÷ angle</td></tr>
+<tr><td>Missing angle</td><td>360° − sum of the known angles</td></tr>
+<tr><td>Missing percentage</td><td>100% − sum of the known percentages</td></tr>
 </table></div>
-
-<h2><span class="num">31.</span>Common Mistakes to Avoid</h2>
-<ul>
-<li>Reading the wrong axis.</li>
-<li>Ignoring the scale between labeled values.</li>
-<li>Confusing a graph's category label with its numerical value.</li>
-<li>Forgetting units.</li>
-<li>Using 100% as the angle of a pie sector instead of 360°.</li>
-<li>Using 100° for 100% instead of 360°.</li>
-<li>Forgetting that all pie-chart angles total 360°.</li>
-<li>Forgetting that all pie-chart percentages total 100%.</li>
-<li>Rounding angles too early and causing the final total to differ from 360°.</li>
-<li>Assuming a line graph always means time is involved.</li>
-<li>Using a pie chart when categories do not represent parts of one meaningful whole.</li>
-<li>Comparing apparent bar sizes without checking the numerical scale.</li>
-</ul>
-
-<h2><span class="num">32.</span>A Reliable Method for Graph Questions</h2>
-<ol>
-<li><strong>Read the title.</strong></li>
-<li><strong>Identify the variables and units.</strong></li>
-<li><strong>Check the scale carefully.</strong></li>
-<li><strong>Locate the required category, point or sector.</strong></li>
-<li><strong>Write down the value before calculating.</strong></li>
-<li><strong>Use the correct arithmetic or formula.</strong></li>
-<li><strong>Keep exact values as long as possible.</strong></li>
-<li><strong>Check the answer against the graph.</strong></li>
-<li><strong>State the answer with its unit where appropriate.</strong></li>
-</ol>
-<div class="example-box"><div class="ex-label">Example 24 · Full problem-solving approach</div>
-<p>A pie chart represents 1200 customers. A sector measures 81°. Find the number of customers represented.</p>
-<p>Step 1: Whole circle = 360°.</p>
-<p>Step 2: Fraction represented = 81 ÷ 360 = 0.225.</p>
-<p>Step 3: Customers = 0.225 × 1200 = <strong>270 customers</strong>.</p>
-<p>Check: 270 is 22.5% of 1200, and 22.5% of 360° is 81°. The result is consistent.</p>
+<div class="example-box"><div class="ex-label">Example 12 · From an angle to a value</div>
+<p>(a) A pie chart represents 600 people and a sector is 72°. Value = 72 ÷ 360 × 600 = <strong>120 people</strong>.</p>
+<p>(b) A pie chart represents 900 books and a sector is 40°. Value = 40 ÷ 360 × 900 = <strong>100 books</strong>.</p>
+</div>
+<div class="fixit-challenge">
+<div class="fixit-wrong">“The pie chart shows 600 people. The sector is 72°, so 72 people chose that option.”</div>
+<p>Is the angle the same as the number of people?</p>
+<button class="fixit-toggle-btn" onclick="toggleFix('fix2')">Show the Fix</button>
+<div class="fixit-explain" id="fix2">
+<p><strong>The fix:</strong> an angle is a share of 360°, not a count. The share is 72 ÷ 360 = 1/5, and 1/5 of 600 is <strong>120 people</strong>.</p>
+</div>
+</div>
+<div class="example-box"><div class="ex-label">Example 13 · Angles, percentages and fractions</div>
+<p>(a) A 54° sector is 54 ÷ 360 × 100 = <strong>15%</strong>.</p>
+<p>(b) A 35% sector has angle 35 × 3.6° = <strong>126°</strong>.</p>
+<p>(c) A 108° sector is 108 ÷ 360 = <strong>3/10</strong> of the circle, which is 30%.</p>
+</div>
+<div class="example-box"><div class="ex-label">Example 14 · Finding the total</div>
+<p>A 72° sector represents 90 people. Since 72° is one fifth of 360°, the whole chart is 5 × 90 = <strong>450 people</strong>. By formula, 90 × 360 ÷ 72 = 450.</p>
+</div>
+<div class="example-box"><div class="ex-label">Example 15 · Missing angle and missing percentage</div>
+<p>(a) Three sectors are 80°, 120° and 65°. The fourth is 360 − (80 + 120 + 65) = 360 − 265 = <strong>95°</strong>.</p>
+<p>(b) Three sectors are 18%, 27% and 35%. The fourth is 100 − 80 = <strong>20%</strong>, with angle 20 × 3.6° = <strong>72°</strong>.</p>
+</div>
+<div class="example-box"><div class="ex-label">Example 16 · A value from an angle</div>
+<p>A pie chart represents 1500 survey responses and one sector is 48°. Value = 48 ÷ 360 × 1500 = <strong>200 responses</strong>.</p>
+</div>
+<div class="example-box"><div class="ex-label">Example 17 · The complete chain</div>
+<p>A survey has 800 responses, and 140 are in category X. Fraction = 140 ÷ 800 = <strong>7/40</strong>. Percentage = 7/40 × 100 = <strong>17.5%</strong>. Angle = 140 ÷ 800 × 360° = <strong>63°</strong>.</p>
+</div>
+<div class="example-box"><div class="ex-label">Example 18 · A missing category</div>
+<p>A pie chart represents 720 items. Three sectors have 180, 144 and 216 items. The total of these is 540, so the fourth category has 720 − 540 = <strong>180 items</strong>. Its angle is 180 ÷ 720 × 360° = <strong>90°</strong>.</p>
 </div>
 
-<h2><span class="num">33.</span>Final Summary</h2>
-<p>Graphs provide a visual language for data. <strong>Vertical and horizontal bar graphs</strong> are excellent for comparing separate categories. <strong>Line graphs</strong> reveal changes and trends across an ordered sequence. <strong>Pie charts</strong> show how categories divide a complete whole.</p>
-<p>Accurate graph reading depends on the title, labels, units and scale. A reader should never estimate a value without first understanding the axis or sector markings. Calculations such as differences, totals, ratios and percentage changes often turn a simple graph-reading task into a deeper data-analysis problem.</p>
-<p>For pie charts, the most important fact is that a full circle is <strong>360°</strong> and represents <strong>100%</strong>. Therefore:</p>
-<div class="formula-box"><strong>Angle = (value ÷ total) × 360°</strong><br/><strong>Value = (angle ÷ 360°) × total</strong><br/><strong>Percentage = (angle ÷ 360°) × 100%</strong><br/><strong>Angle = percentage × 3.6°</strong></div>
-<p>Once these relationships are understood, it becomes possible to move confidently between values, fractions, percentages and angles, interpret graphs critically, and use visual data to solve real-world problems.</p>
+<h2><span class="num">11.</span>Comparing Two Pie Charts</h2>
+<p>A pie chart shows <strong>shares</strong>, not amounts. The size of the circle does not tell you how big the group is unless the total is stated. Two pie charts can only be compared by number if you know both totals.</p>
+<div class="example-box"><div class="ex-label">Example 19 · Share against number</div>
+<p>School X has 400 students and a pie chart shows that 25% walk to school. School Y has 1200 students and 15% walk. School X: 0.25 × 400 = 100 walkers. School Y: 0.15 × 1200 = <strong>180 walkers</strong>. Even though X has the larger percentage, Y has more students who walk.</p>
+</div>
+<div class="fixit-challenge">
+<div class="fixit-wrong">“The sector for walking is 25% in chart X and 15% in chart Y, so more students walk in school X.”</div>
+<p>What is missing from this comparison?</p>
+<button class="fixit-toggle-btn" onclick="toggleFix('fix3')">Show the Fix</button>
+<div class="fixit-explain" id="fix3">
+<p><strong>The fix:</strong> the totals. 25% of 400 is 100, but 15% of 1200 is 180. A larger percentage does not mean a larger number when the groups have different sizes.</p>
+</div>
+</div>
 
-<h2><span class="num">34.</span>Sources and Further Reading</h2>
-<p>This article is original EDUSAMBAM educational writing. It presents standard methods for representing, reading, calculating and interpreting data using bar graphs, line graphs and pie charts, with worked examples and practical applications.</p>
+<h2><span class="num">12.</span>Rounding Angles</h2>
+<p>When angles are rounded to the nearest degree, they may not add up to exactly 360°. Work out the angles to a few decimal places, round them, and then check the total.</p>
+<div class="example-box"><div class="ex-label">Example 20 · Rounding</div>
+<p>A group of 7 people has 1 person in category P, 2 in Q and 4 in R. The exact angles are 51.43°, 102.86° and 205.71°. Rounded to the nearest degree they are 51°, 103° and 206°, which add to 360°. ✓</p>
+<p>If instead 7 equal categories each had one person, each angle would be 360 ÷ 7 ≈ 51.43°, and 7 × 51° = 357°. In that case you adjust one or two sectors by a degree so that the angles total 360°, or you draw the chart with the more accurate angles.</p>
+</div>
+
+<h2><span class="num">13.</span>Other Graphs You Will Meet</h2>
+<ul>
+<li><strong>Histogram:</strong> a bar-like graph for grouped continuous data. Our article on <a href="mean-median-mode.html">mean, median and mode</a> shows a grouped frequency graph and a cumulative frequency graph.</li>
+<li><strong>Scatter graph:</strong> plots pairs of values as points to see whether two quantities are related, for example height and arm span.</li>
+<li><strong>Stem-and-leaf diagram:</strong> lists the data in order, using the leading digits as stems and the last digits as leaves.</li>
+<li><strong>Frequency polygon:</strong> joins the midpoints of the tops of the bars of a histogram.</li>
+</ul>
+<p>More on gathering and organising data is in <a href="basic-data-statistics.html">Basic Data &amp; Statistics</a>.</p>
+
+<h2><span class="num">14.</span>Choosing the Right Graph</h2>
+<div class="table-wrap"><table class="pos-table">
+<tr><th>Situation</th><th>Good choice</th><th>Reason</th></tr>
+<tr><td>Number of books in different genres</td><td>Bar graph</td><td>Separate categories</td></tr>
+<tr><td>Temperature every day for a week</td><td>Line graph</td><td>Change over an ordered sequence</td></tr>
+<tr><td>How a budget is divided</td><td>Pie chart</td><td>Parts of one whole</td></tr>
+<tr><td>Many categories with long names</td><td>Horizontal bar graph</td><td>Labels are easier to read</td></tr>
+<tr><td>Monthly rainfall through the year</td><td>Line graph (or bar graph)</td><td>Shows change over time</td></tr>
+<tr><td>Comparing boys and girls in several classes</td><td>Dual bar graph</td><td>Two groups side by side</td></tr>
+</table></div>
+
+<h2><span class="num">15.</span>Graphs That Mislead</h2>
+<p>A graph can use correct numbers and still give a wrong impression. Watch for these:</p>
+<ul>
+<li><strong>A truncated axis:</strong> starting a bar graph above zero exaggerates differences.</li>
+<li><strong>Uneven scales:</strong> axis marks that do not step by equal amounts.</li>
+<li><strong>3D effects:</strong> depth makes bars or sectors look larger or smaller.</li>
+<li><strong>Missing units or labels.</strong></li>
+<li><strong>Bars of different widths,</strong> or symbols that grow in both height and width.</li>
+<li><strong>Selected time periods:</strong> showing only the dates that suit one story.</li>
+<li><strong>A pie chart for data that are not parts of one whole.</strong></li>
+</ul>
+<div class="diagram-box">
+<svg viewBox="0 0 360 292" role="img" aria-labelledby="gp4t gp4d" xmlns="http://www.w3.org/2000/svg" font-family="Source Sans 3, Arial, sans-serif">
+<title id="gp4t">The same data drawn with two different vertical axes</title>
+<desc id="gp4d">Two bar graphs of the same data, A equals 52 and B equals 55. On the left the axis starts at 0 and the bars look similar. On the right the axis starts at 50 and bar B looks about two and a half times as tall as bar A.</desc>
+<text x="90" y="22" font-size="12.5" font-weight="700" fill="#06244a" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">Axis starts at 0</text><line x1="36.0" y1="206.0" x2="150.0" y2="206.0" stroke="#d9d2bf" stroke-width="1" stroke-linecap="round"/><text x="30" y="210.0" font-size="10.5" font-weight="600" fill="#4A4A4A" text-anchor="end" paint-order="stroke" stroke="#fff" stroke-width="3">0</text><line x1="36.0" y1="158.0" x2="150.0" y2="158.0" stroke="#d9d2bf" stroke-width="1" stroke-linecap="round"/><text x="30" y="162.0" font-size="10.5" font-weight="600" fill="#4A4A4A" text-anchor="end" paint-order="stroke" stroke="#fff" stroke-width="3">20</text><line x1="36.0" y1="110.0" x2="150.0" y2="110.0" stroke="#d9d2bf" stroke-width="1" stroke-linecap="round"/><text x="30" y="114.0" font-size="10.5" font-weight="600" fill="#4A4A4A" text-anchor="end" paint-order="stroke" stroke="#fff" stroke-width="3">40</text><line x1="36.0" y1="62.0" x2="150.0" y2="62.0" stroke="#d9d2bf" stroke-width="1" stroke-linecap="round"/><text x="30" y="66.0" font-size="10.5" font-weight="600" fill="#4A4A4A" text-anchor="end" paint-order="stroke" stroke="#fff" stroke-width="3">60</text><rect x="52" y="81.2" width="34" height="124.8" fill="#2b6cb0" fill-opacity="0.8" stroke="#06244a" stroke-width="1.5"/><text x="69" y="76.2" font-size="12" font-weight="700" fill="#06244a" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">52</text><text x="69" y="222" font-size="12" font-weight="700" fill="#4A4A4A" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">A</text><rect x="100" y="74.0" width="34" height="132.0" fill="#2b6cb0" fill-opacity="0.8" stroke="#06244a" stroke-width="1.5"/><text x="117" y="69.0" font-size="12" font-weight="700" fill="#06244a" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">55</text><text x="117" y="222" font-size="12" font-weight="700" fill="#4A4A4A" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">B</text><line x1="36.0" y1="206.0" x2="150.0" y2="206.0" stroke="#06244a" stroke-width="2" stroke-linecap="round"/><line x1="36.0" y1="206.0" x2="36.0" y2="57.2" stroke="#06244a" stroke-width="2" stroke-linecap="round"/><text x="268" y="22" font-size="12.5" font-weight="700" fill="#8B0000" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">Axis starts at 50</text><line x1="214.0" y1="206.0" x2="330.0" y2="206.0" stroke="#d9d2bf" stroke-width="1" stroke-linecap="round"/><text x="208" y="210" font-size="10.5" font-weight="600" fill="#4A4A4A" text-anchor="end" paint-order="stroke" stroke="#fff" stroke-width="3">50</text><line x1="214.0" y1="162.0" x2="330.0" y2="162.0" stroke="#d9d2bf" stroke-width="1" stroke-linecap="round"/><text x="208" y="166" font-size="10.5" font-weight="600" fill="#4A4A4A" text-anchor="end" paint-order="stroke" stroke="#fff" stroke-width="3">52</text><line x1="214.0" y1="118.0" x2="330.0" y2="118.0" stroke="#d9d2bf" stroke-width="1" stroke-linecap="round"/><text x="208" y="122" font-size="10.5" font-weight="600" fill="#4A4A4A" text-anchor="end" paint-order="stroke" stroke="#fff" stroke-width="3">54</text><line x1="214.0" y1="74.0" x2="330.0" y2="74.0" stroke="#d9d2bf" stroke-width="1" stroke-linecap="round"/><text x="208" y="78" font-size="10.5" font-weight="600" fill="#4A4A4A" text-anchor="end" paint-order="stroke" stroke="#fff" stroke-width="3">56</text><rect x="230" y="162" width="34" height="44" fill="#8B0000" fill-opacity="0.75" stroke="#06244a" stroke-width="1.5"/><text x="247" y="157" font-size="12" font-weight="700" fill="#06244a" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">52</text><text x="247" y="222" font-size="12" font-weight="700" fill="#4A4A4A" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">A</text><rect x="278" y="96" width="34" height="110" fill="#8B0000" fill-opacity="0.75" stroke="#06244a" stroke-width="1.5"/><text x="295" y="91" font-size="12" font-weight="700" fill="#06244a" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">55</text><text x="295" y="222" font-size="12" font-weight="700" fill="#4A4A4A" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">B</text><line x1="214.0" y1="206.0" x2="330.0" y2="206.0" stroke="#06244a" stroke-width="2" stroke-linecap="round"/><line x1="214.0" y1="206.0" x2="214.0" y2="65.2" stroke="#06244a" stroke-width="2" stroke-linecap="round"/><text x="180" y="244" font-size="12.5" font-weight="700" fill="#06244a" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">Same data: A = 52 and B = 55</text><text x="180" y="262" font-size="12" font-weight="700" fill="#8B0000" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">B is only about 5.8% larger than A</text><text x="180" y="280" font-size="12" font-weight="600" fill="#4A4A4A" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">but looks 2.5 times as tall on the right</text></svg>
+
+<div class="diagram-caption">Figure 5. Both graphs show A = 52 and B = 55. The right-hand axis starts at 50, so B looks much taller.</div>
+</div>
+<div class="example-box"><div class="ex-label">Example 21 · A truncated axis</div>
+<p>B is 55 and A is 52. B is larger by 3, which is 3 ÷ 52 × 100 ≈ <strong>5.8%</strong>. On the left graph, with the axis from 0, the bars look nearly equal. On the right, the axis starts at 50, so the bars are only 2 and 5 units high, and B looks 5 ÷ 2 = <strong>2.5 times</strong> as tall as A. The data have not changed, but the impression has.</p>
+</div>
+<div class="fixit-challenge">
+<div class="fixit-wrong">“On the right graph, bar B is more than twice as tall as bar A, so B is more than twice A.”</div>
+<p>What should you check before comparing bar heights?</p>
+<button class="fixit-toggle-btn" onclick="toggleFix('fix4')">Show the Fix</button>
+<div class="fixit-explain" id="fix4">
+<p><strong>The fix:</strong> check where the axis starts. Bar heights are only proportional to the values when the axis begins at 0. Read the numbers: B = 55 and A = 52, so B is only about 5.8% larger.</p>
+</div>
+</div>
+
+<h2><span class="num">16.</span>Reading Graphs Critically</h2>
+<ol>
+<li>Read the title and the axis labels.</li>
+<li>Check the units and the scale, including where the axis starts.</li>
+<li>Locate the required bar, point or sector and write down its value before calculating.</li>
+<li>Use arithmetic (differences, totals, percentages) to answer the question.</li>
+<li>Look for trends and unusual values, and ask whether the graph gives enough information for the conclusion.</li>
+</ol>
+<div class="real-world-box"><div class="rw-label">Real-Life Example</div><p>A shop graph shows that sales were higher in March than in February. A careful reader asks whether both months have the same number of days, whether the units are the same and whether the scale was changed. A rise in sales may simply reflect a longer month.</p></div>
+<div class="example-box"><div class="ex-label">Example 22 · Graphs and arithmetic</div>
+<p>(a) A bar graph shows four weekly totals of 120, 150, 135 and 175 units. The total is <strong>580 units</strong> and the weekly mean is 580 ÷ 4 = <strong>145 units</strong>.</p>
+<p>(b) A line graph shows 84 units at one time and 57 units at another. The difference is 84 − 57 = <strong>27 units</strong>.</p>
+</div>
+
+<!-- PIE CHART BUILDER -->
+<div class="drill-section">
+<div class="section-eyebrow">Try It Yourself</div>
+<h2>Pie Chart Builder</h2>
+<p class="drill-intro">Type one category per line as <strong>name, value</strong>. The tool finds the total, the fraction, the percentage and the angle for each category, and draws the pie chart. Try the sports survey from Figure 3, then your own data.</p>
+<div class="tg-form">
+<label for="gpPieIn">Categories (name, value)</label><textarea id="gpPieIn" rows="5" style="width:100%;box-sizing:border-box;font-size:1.05rem;padding:.5rem;border:1px solid var(--border);border-radius:8px;">Cricket, 90
+Football, 50
+Hockey, 30
+Other, 30</textarea>
+</div>
+<button class="drill-btn" type="button" onclick="gpPie()">Build the pie chart</button>
+<div class="pv-info-panel"><div class="pv-info-result" id="gpPieOut" style="display:none;"></div></div>
+</div>
+
+<!-- CONVERTER AND PERCENTAGE CHANGE -->
+<div class="drill-section">
+<div class="section-eyebrow">Check Your Work</div>
+<h2>Pie Chart Converter</h2>
+<p class="drill-intro">Move between values, fractions, percentages and angles in either direction. Choose what you know, type the numbers and see the working.</p>
+<div class="tg-form">
+<label for="gpMode">What do you know?</label>
+<select id="gpMode" onchange="gpModeChange()"><option value="v2a" selected>A value and the total (find the angle)</option><option value="a2v">An angle and the total (find the value)</option><option value="p2a">A percentage (find the angle)</option><option value="tot">A value and its angle (find the total)</option></select>
+<label for="gpC1" id="gpLb1">Value of the category</label><input id="gpC1" type="number" inputmode="decimal" step="any" value="140"/>
+<label for="gpC2" id="gpLb2">Total of all categories</label><input id="gpC2" type="number" inputmode="decimal" step="any" value="800"/>
+</div>
+<button class="drill-btn" type="button" onclick="gpConv()">Convert</button>
+<div class="pv-info-panel"><div class="pv-info-result" id="gpConvOut" style="display:none;"></div></div>
+<h2 style="margin-top:1.6rem">Percentage Change Calculator</h2>
+<p class="drill-intro">Find the percentage increase or decrease between an old and a new value, as read from a graph. Notice that the change needed to return to the old value is a different percentage.</p>
+<div class="tg-form">
+<label for="gpOld">Old value</label><input id="gpOld" type="number" inputmode="decimal" step="any" value="200"/>
+<label for="gpNew">New value</label><input id="gpNew" type="number" inputmode="decimal" step="any" value="250"/>
+</div>
+<button class="drill-btn" type="button" onclick="gpChg()">Find the percentage change</button>
+<div class="pv-info-panel"><div class="pv-info-result" id="gpChgOut" style="display:none;"></div></div>
+</div>
+
+<h2><span class="num">17.</span>Common Mistakes</h2>
+<ul>
+<li><strong>Reading the wrong axis,</strong> or ignoring the scale between labelled values.</li>
+<li><strong>Using 100° for 100%.</strong> A whole pie chart is 360°.</li>
+<li><strong>Treating an angle as a count.</strong> The angle is a share of 360°.</li>
+<li><strong>Forgetting that the angles add to 360° and the percentages to 100%.</strong></li>
+<li><strong>Comparing percentages from charts with different totals</strong> as if they were numbers.</li>
+<li><strong>Dividing by the new value</strong> instead of the original value when finding a percentage change.</li>
+<li><strong>Rounding angles too early,</strong> so that the total is not 360°.</li>
+<li><strong>Joining points with a line</strong> when the categories have no order.</li>
+<li><strong>Forgetting units or the key,</strong> especially in a pictogram.</li>
+<li><strong>Trusting bar heights</strong> without checking whether the axis starts at zero.</li>
+</ul>
+
+<h2><span class="num">18.</span>A Reliable Method</h2>
+<ol>
+<li>Read the title, the labels, the units and the scale.</li>
+<li>Find the bar, point or sector you need and write down its value.</li>
+<li>Choose the formula, such as a difference, a percentage change or an angle formula.</li>
+<li>Calculate, keeping exact values until the last step.</li>
+<li>Check your answer against the graph, and state it with its unit.</li>
+</ol>
+<div class="example-box"><div class="ex-label">Example 23 · A full pie chart problem</div>
+<p>A pie chart represents 1200 customers. A sector measures 81°. Find the number of customers it represents.</p>
+<p>The whole circle is 360°, so the fraction is 81 ÷ 360 = 0.225. Customers = 0.225 × 1200 = <strong>270</strong>. Check: 270 is 22.5% of 1200, and 22.5% of 360° is 22.5 × 3.6° = 81°. ✓</p>
+</div>
+<div class="example-box"><div class="ex-label">Example 24 · A short report</div>
+<p>From Figure 3 you can write: “Cricket is the favourite sport of 90 of the 200 pupils, which is 45%. It is more popular than football and hockey together, which have 80 pupils (40%).” A good answer states the numbers and compares them.</p>
+</div>
+
+<!-- PRACTICE ARENA -->
+<div class="drill-section">
+<div class="section-eyebrow">Practice Arena</div>
+<h2>Graphs and Pie Chart Drill</h2>
+<p class="drill-intro">Tap the correct answer for each question. Your best score is saved on this device.</p>
+<div class="nl-drill-progress" id="gpProgress">Question 1 of 8  ·  Best score: <span id="gpBestScore">0</span> / 8</div>
+<div class="pv-drill-question" id="gpDrillQuestion"></div>
+<div class="pv-drill-choices" id="gpDrillChoices"></div>
+<div class="drill-feedback" id="gpDrillFeedback"></div>
+<div class="nl-drill-actions">
+<button class="drill-btn" id="gpNextBtn" onclick="nextGpQuestion()" style="display:none;">Next Question</button>
+<button class="drill-btn" id="gpNewSetBtn" onclick="newGpSet()" style="display:none;">Play Again</button>
+</div>
+</div>
+
+<h2><span class="num">19.</span>Try It Yourself</h2>
+<ol>
+<li>In a survey of 100 people, 30 choose X, 50 choose Y and 20 choose Z. Find the pie-chart angles.</li>
+<li>A pie chart represents 800 people. One sector is 126°. How many people is that?</li>
+<li>A price rises from 60 to 75. Find the percentage increase.</li>
+</ol>
+<details class="sn-answer">
+<summary>Show answers</summary>
+<p><strong>1.</strong> X: 30 ÷ 100 × 360 = <strong>108°</strong>. Y: <strong>180°</strong>. Z: <strong>72°</strong>. Check: 108 + 180 + 72 = 360°.</p>
+<p><strong>2.</strong> 126 ÷ 360 × 800 = 0.35 × 800 = <strong>280 people</strong>.</p>
+<p><strong>3.</strong> The increase is 15, so 15 ÷ 60 × 100 = <strong>25%</strong>.</p>
+</details>
+
+<h2><span class="num">20.</span>Exam-Style Questions</h2>
+<ol>
+<li>[4 marks] A bar graph shows the number of books sold: Monday 24, Tuesday 30, Wednesday 18, Thursday 36, Friday 42. (a) Which day had the most sales? (b) Find the total. (c) What percentage of the total was sold on Friday?</li>
+<li>[3 marks] A line graph shows the temperature at 6 am, 9 am, 12 noon, 3 pm and 6 pm as 14°C, 17°C, 23°C, 26°C and 21°C. (a) Between which two times was the rise greatest, and by how much? (b) By how much did it fall between 3 pm and 6 pm? (c) By how much did it rise from 6 am to 3 pm?</li>
+<li>[4 marks] A pie chart shows the favourite subject of 400 students. Maths is 90°, Science is 72°, English is 108° and Other is the rest. (a) Find the angle for Other. (b) Find the number of students for each subject.</li>
+<li>[4 marks] 120 pupils travel to school by bus (45), on foot (30), by bicycle (20) and by car (25). Find the angle for each sector in a pie chart, and check that they total 360°.</li>
+<li>[4 marks] A pie chart represents 480 people. (a) One sector is 33°. How many people does it represent? (b) Another sector represents 140 people. Find its angle.</li>
+<li>[3 marks] Class A has 30 pupils and 40% like football. Class B has 20 pupils and 55% like football. Which class has more pupils who like football, and by how many?</li>
+<li>[3 marks] A company’s sales were 80 in January, 100 in February and 75 in March. Find (a) the percentage increase from January to February and (b) the percentage decrease from February to March.</li>
+</ol>
+<details class="sn-answer">
+<summary>Show answers</summary>
+<p><strong>1.</strong> (a) <strong>Friday</strong> (42). (b) 24 + 30 + 18 + 36 + 42 = <strong>150 books</strong>. (c) 42 ÷ 150 × 100 = <strong>28%</strong>.</p>
+<p><strong>2.</strong> The changes are +3, +6, +3, −5. (a) The greatest rise is between <strong>9 am and 12 noon</strong>, by <strong>6°C</strong>. (b) It fell by <strong>5°C</strong>. (c) 26 − 14 = <strong>12°C</strong>.</p>
+<p><strong>3.</strong> (a) 360 − (90 + 72 + 108) = <strong>90°</strong>. (b) Maths 90 ÷ 360 × 400 = <strong>100</strong>. Science 72 ÷ 360 × 400 = <strong>80</strong>. English 108 ÷ 360 × 400 = <strong>120</strong>. Other 90 ÷ 360 × 400 = <strong>100</strong>. Check: 100 + 80 + 120 + 100 = 400.</p>
+<p><strong>4.</strong> Bus: 45 ÷ 120 × 360 = <strong>135°</strong>. On foot: 30 ÷ 120 × 360 = <strong>90°</strong>. Bicycle: 20 ÷ 120 × 360 = <strong>60°</strong>. Car: 25 ÷ 120 × 360 = <strong>75°</strong>. Check: 135 + 90 + 60 + 75 = 360°.</p>
+<p><strong>5.</strong> (a) 33 ÷ 360 × 480 = <strong>44 people</strong>. (b) 140 ÷ 480 × 360 = <strong>105°</strong>.</p>
+<p><strong>6.</strong> Class A: 0.40 × 30 = 12. Class B: 0.55 × 20 = 11. <strong>Class A</strong> has more, by <strong>1 pupil</strong>, even though its percentage is lower.</p>
+<p><strong>7.</strong> (a) (100 − 80) ÷ 80 × 100 = <strong>25% increase</strong>. (b) (100 − 75) ÷ 100 × 100 = <strong>25% decrease</strong>. Overall, from 80 to 75 is a decrease of 6.25%, so the two changes do not cancel.</p>
+</details>
+
+<h2><span class="num">21.</span>Quick Reference</h2>
+<div class="table-wrap"><table class="pos-table">
+<tr><th>Task</th><th>Formula or rule</th></tr>
+<tr><td>Percentage of a total</td><td>value ÷ total × 100%</td></tr>
+<tr><td>Pie angle from a value</td><td>value ÷ total × 360°</td></tr>
+<tr><td>Pie angle from a percentage</td><td>percentage × 3.6°</td></tr>
+<tr><td>Value from a pie angle</td><td>angle ÷ 360° × total</td></tr>
+<tr><td>Percentage from a pie angle</td><td>angle ÷ 360° × 100%</td></tr>
+<tr><td>Total from a value and its angle</td><td>value × 360° ÷ angle</td></tr>
+<tr><td>Percentage change</td><td>(new − old) ÷ old × 100%</td></tr>
+<tr><td>Average rate of change on a line graph</td><td>change in vertical ÷ change in horizontal</td></tr>
+<tr><td>Pictogram value</td><td>number of symbols × value of one symbol</td></tr>
+</table></div>
+
+<h2><span class="num">22.</span>Key Points</h2>
+<ul>
+<li>Read the title, labels, units and scale before you read any value.</li>
+<li>Bar graphs compare categories, line graphs show change over an ordered sequence, and pie charts show parts of one whole.</li>
+<li>A whole pie chart is 100% and 360°. Angle = value ÷ total × 360° and angle = percentage × 3.6°.</li>
+<li>You can work backwards from an angle to a value, a percentage or the total.</li>
+<li>A pie chart shows shares, not amounts. Compare pie charts by number only when you know both totals.</li>
+<li>Percentage change is the change divided by the <em>original</em> value.</li>
+<li>A graph that does not start at zero, or has uneven scales, can mislead.</li>
+<li>Always check that angles total 360° and percentages total 100%.</li>
+</ul>
+
+<h2><span class="num">23.</span>For Teachers and Parents</h2>
+<p>Start with data the learners collect themselves, such as favourite fruit, how they travel to school or the daily temperature, and ask them to choose which graph suits it. Draw the same data as a bar graph and a pie chart, and ask what each shows best. For pie charts, a paper circle folded into halves, quarters and eighths helps learners see that angles are shares of 360°. Show the two “same data, different axis” graphs from this page and ask learners what is misleading before explaining. The Pie Chart Builder, Pie Chart Converter and Percentage Change Calculator on this page let learners check their own working, but ask them to explain each step in words. Encourage them to write one sentence that states what a graph shows, using numbers.</p>
+
+<h2><span class="num">24.</span>Related Pages and Further Reading</h2>
+<ul>
+<li><a href="basic-data-statistics.html">Basic Data &amp; Statistics</a></li>
+<li><a href="mean-median-mode.html">Mean, Median &amp; Mode</a></li>
+<li><a href="percentages.html">Percentages</a></li>
+<li><a href="graphing-functions.html">Graphing Functions</a></li>
+<li><a href="practice-test-algebra-o-level-graphs-pie-charts.html">Practice Test: Algebra, O-Level Graphs &amp; Pie Charts</a></li>
+</ul>
+<p>This article is original EDUSAMBAM writing. Examination requirements differ between boards, so compare your practice with the specification of your own board.</p>
 
 <!-- QUIZ SECTION -->
 <div class="quiz-section">
@@ -1577,6 +1717,289 @@ footer.footer {
   })();
 </script>
 
+<script id="edusambam-gp-script">
+(function(){
+  function $(id){return document.getElementById(id);}
+  window.toggleFix=function(id){var e=$(id);if(e)e.classList.toggle('visible');};
+  var MN='\u2212';
+  function n2(x){x=Math.round(x*1e9)/1e9;if(x===0)x=0;return String(x).replace('-',MN);}
+  function eqd(x){var r=Math.round(x*1e4)/1e4;return (Math.abs(r-x)<1e-9?'= ':'\u2248 ')+n2(r);}
+  function val(x){var r=Math.round(x*1e4)/1e4;return (Math.abs(r-x)<1e-9?'':'\u2248 ')+n2(r);}
+  function r2(x){return n2(Math.round(x*100)/100);}
+  function read(id){var s=String($(id).value).trim();if(s==='')return NaN;var n=Number(s);return isFinite(n)?n:NaN;}
+  function gcd(a,b){a=Math.abs(a);b=Math.abs(b);while(b){var t=b;b=a%b;a=t;}return a;}
+  function isInt(x){return Math.abs(x-Math.round(x))<1e-9;}
+  function frac(a,b){if(isInt(a)&&isInt(b)&&b>0){a=Math.round(a);b=Math.round(b);var g=gcd(a,b)||1,p=a/g,q=b/g;return q===1?String(p):p+'/'+q;}return null;}
+  function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  var PAL=['#2b6cb0','#d69e2e','#c53030','#6b7b93','#2f855a','#805ad5','#dd6b20','#319795'];
+  /* ---------- pie chart builder ---------- */
+  window.gpPie=function(){
+    var out=$('gpPieOut'),L=String($('gpPieIn').value).split(/\n|;/).map(function(s){return s.trim();}).filter(function(s){return s!=='';}),rows=[],i;out.style.display='';
+    if(!L.length){out.textContent='Type at least one category on each line, for example: Cricket, 90';return;}
+    if(L.length>12){out.textContent='Please use 12 categories or fewer.';return;}
+    for(i=0;i<L.length;i++){
+      var m=L[i].match(/^(.*\S)\s*[,:\t]\s*(-?\d+(?:\.\d+)?)$/)||L[i].match(/^(.*\S)\s+(-?\d+(?:\.\d+)?)$/);
+      if(!m){out.textContent='Line '+(i+1)+' is not in the form: name, value (for example Football, 50).';return;}
+      var v=Number(m[2]);if(v<0){out.textContent='A value cannot be negative (line '+(i+1)+').';return;}
+      rows.push({n:m[1],v:v});
+    }
+    var T=0;rows.forEach(function(r){T+=r.v;});
+    if(T<=0){out.textContent='The total must be above 0.';return;}
+    var allInt=rows.every(function(r){return isInt(r.v);});
+    var h='Total = <strong>'+n2(T)+'</strong><br>',svg='',a0=0,k=0,nz=rows.filter(function(r){return r.v>0;});
+    rows.forEach(function(r,j){
+      var ang=r.v/T*360,pc=r.v/T*100,f=allInt?frac(r.v,T):null;
+      h+='<span style="color:'+PAL[j%PAL.length]+'">\u25a0</span> <strong>'+esc(r.n)+'</strong>: '+n2(r.v)+' \u2192 '+(f?'fraction '+f+' \u2192 ':'')+r2(pc)+'% \u2192 <strong>'+r2(ang)+'\u00b0</strong><br>';
+    });
+    if(nz.length===1){svg='<circle cx="100" cy="100" r="90" fill="'+PAL[rows.indexOf(nz[0])%PAL.length]+'" stroke="#fff" stroke-width="2"/>';}
+    else rows.forEach(function(r,j){
+      if(r.v<=0)return;var ang=r.v/T*360,a1=a0+ang;
+      var x0=100+90*Math.cos((a0-90)*Math.PI/180),y0=100+90*Math.sin((a0-90)*Math.PI/180),x1=100+90*Math.cos((a1-90)*Math.PI/180),y1=100+90*Math.sin((a1-90)*Math.PI/180);
+      svg+='<path d="M100,100 L'+x0.toFixed(2)+','+y0.toFixed(2)+' A90,90 0 '+(ang>180?1:0)+' 1 '+x1.toFixed(2)+','+y1.toFixed(2)+' Z" fill="'+PAL[j%PAL.length]+'" stroke="#fff" stroke-width="2"/>';
+      a0=a1;
+    });
+    h+='Check: the exact angles add to <strong>360\u00b0</strong>. If you round them, the total can differ by a degree or so, so adjust a sector if needed.';
+    out.innerHTML='<svg viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Pie chart of your data" style="display:block;margin:0 auto 10px;max-width:100%;">'+svg+'</svg>'+h;
+  };
+  /* ---------- reverse converter ---------- */
+  var MODES={
+    v2a:['Value of the category','Total of all categories'],
+    a2v:['Sector angle (degrees)','Total of all categories'],
+    p2a:['Percentage of the whole','Total of all categories (optional)'],
+    tot:['Value of one category','Angle of its sector (degrees)']
+  };
+  window.gpModeChange=function(){var d=MODES[$('gpMode').value]||MODES.v2a;$('gpLb1').textContent=d[0];$('gpLb2').textContent=d[1];};
+  window.gpConv=function(){
+    var out=$('gpConvOut'),m=$('gpMode').value,a=read('gpC1'),b=read('gpC2'),h='';out.style.display='';
+    if(!MODES[m]){out.textContent='Choose what you want to find.';return;}
+    if(isNaN(a)){out.textContent='Type a number in the first box.';return;}
+    if(m==='v2a'){
+      if(isNaN(b)||b<=0){out.textContent='The total must be a number above 0.';return;}
+      if(a<0||a>b){out.textContent='The value must be between 0 and the total.';return;}
+      var f=frac(a,b);
+      h='Fraction of the whole = '+n2(a)+' \u00f7 '+n2(b)+(f?' = <strong>'+f+'</strong>':' <strong>'+eqd(a/b)+'</strong>')+'<br>Percentage <strong>'+eqd(a/b*100)+'%</strong><br>Angle = '+n2(a)+' \u00f7 '+n2(b)+' \u00d7 360\u00b0 <strong>'+eqd(a/b*360)+'\u00b0</strong>';
+    }else if(m==='a2v'){
+      if(a<=0||a>360){out.textContent='The angle must be above 0 and at most 360 degrees.';return;}
+      if(isNaN(b)||b<=0){out.textContent='The total must be a number above 0.';return;}
+      var f2=frac(a,360);
+      h='Fraction of the circle = '+n2(a)+' \u00f7 360'+(f2?' = <strong>'+f2+'</strong>':'')+'<br>Percentage = '+n2(a)+' \u00f7 3.6 <strong>'+eqd(a/3.6)+'%</strong><br>Value = '+n2(a)+' \u00f7 360 \u00d7 '+n2(b)+' <strong>'+eqd(a/360*b)+'</strong>';
+    }else if(m==='p2a'){
+      if(a<=0||a>100){out.textContent='The percentage must be above 0 and at most 100.';return;}
+      h='Angle = '+n2(a)+' \u00d7 3.6\u00b0 <strong>'+eqd(a*3.6)+'\u00b0</strong><br>Fraction of the whole = '+(frac(a,100)?'<strong>'+frac(a,100)+'</strong>':'<strong>'+val(a/100)+'</strong>');
+      if(!isNaN(b)){if(b<=0){out.textContent='The total must be a number above 0 (or leave it blank).';return;}h+='<br>Value = '+n2(a)+' \u00f7 100 \u00d7 '+n2(b)+' <strong>'+eqd(a/100*b)+'</strong>';}
+    }else{
+      if(a<=0){out.textContent='The value must be above 0.';return;}
+      if(isNaN(b)||b<=0||b>360){out.textContent='The angle must be above 0 and at most 360 degrees.';return;}
+      h='Total = value \u00d7 360\u00b0 \u00f7 angle = '+n2(a)+' \u00d7 360 \u00f7 '+n2(b)+' <strong>'+eqd(a*360/b)+'</strong><br>This sector is '+n2(b)+' \u00f7 360'+(frac(b,360)?' = '+frac(b,360):'')+' of the circle, which is <strong>'+val(b/3.6)+'%</strong>.';
+    }
+    out.innerHTML=h;
+  };
+  /* ---------- percentage change ---------- */
+  window.gpChg=function(){
+    var out=$('gpChgOut'),o=read('gpOld'),n=read('gpNew');out.style.display='';
+    if(isNaN(o)||isNaN(n)){out.textContent='Type both the old value and the new value.';return;}
+    if(o<=0||n<0){out.textContent='The old value must be above 0 and the new value cannot be negative.';return;}
+    var d=n-o,p=d/o*100,h;
+    if(d===0){out.textContent='There is no change: the new value equals the old value.';return;}
+    h='Change = '+n2(n)+' '+MN+' '+n2(o)+' = <strong>'+n2(d)+'</strong><br>Percentage '+(d>0?'increase':'decrease')+' = '+n2(Math.abs(d))+' \u00f7 '+n2(o)+' \u00d7 100 <strong>'+eqd(Math.abs(p))+'%</strong> (divide by the old value)';
+    if(n>0)h+='<br>To get back from '+n2(n)+' to '+n2(o)+' you need a '+(d>0?'decrease':'increase')+' of <strong>'+val(Math.abs(d)/n*100)+'%</strong>, because the starting value is now different.';
+    out.innerHTML=h;
+  };
+  var BANK=[
+{
+"q": "A category is 20% of a pie chart. What is its angle?",
+"c": [
+"72\u00b0",
+"20\u00b0",
+"36\u00b0",
+"200\u00b0"
+],
+"e": "Angle = percentage \u00d7 3.6\u00b0 = 20 \u00d7 3.6\u00b0 = 72\u00b0."
+},
+{
+"q": "A sector of 90\u00b0 represents what percentage of the whole?",
+"c": [
+"25%",
+"90%",
+"10%",
+"50%"
+],
+"e": "(90 \u00f7 360) \u00d7 100 = 25%."
+},
+{
+"q": "30 of 120 people choose option A. What is the angle of A\u2019s sector?",
+"c": [
+"90\u00b0",
+"30\u00b0",
+"45\u00b0",
+"25\u00b0"
+],
+"e": "(30 \u00f7 120) \u00d7 360\u00b0 = \u00bc \u00d7 360\u00b0 = 90\u00b0."
+},
+{
+"q": "A pie chart represents 800 people. One sector is 45\u00b0. How many people is that?",
+"c": [
+"100",
+"45",
+"90",
+"200"
+],
+"e": "(45 \u00f7 360) \u00d7 800 = \u215b \u00d7 800 = 100 people."
+},
+{
+"q": "Three sectors measure 100\u00b0, 120\u00b0 and 80\u00b0. What is the fourth sector?",
+"c": [
+"60\u00b0",
+"40\u00b0",
+"80\u00b0",
+"100\u00b0"
+],
+"e": "The angles total 360\u00b0. 100 + 120 + 80 = 300, so the fourth is 360 \u2212 300 = 60\u00b0."
+},
+{
+"q": "Three sectors are 30%, 25% and 15%. What is the fourth sector?",
+"c": [
+"30%",
+"20%",
+"70%",
+"40%"
+],
+"e": "The percentages total 100%. 30 + 25 + 15 = 70, so the fourth is 100 \u2212 70 = 30%."
+},
+{
+"q": "A bar graph scale is marked every 10 units. A bar ends halfway between 30 and 40. What is its value?",
+"c": [
+"35",
+"30",
+"40",
+"25"
+],
+"e": "Halfway between 30 and 40 is 35."
+},
+{
+"q": "Sales rise from 40 to 50. What is the percentage increase?",
+"c": [
+"25%",
+"10%",
+"20%",
+"50%"
+],
+"e": "Increase = 10. Percentage increase = 10 \u00f7 40 \u00d7 100 = 25%. We divide by the original value."
+},
+{
+"q": "Which graph is best for showing how a monthly budget is divided into parts?",
+"c": [
+"Pie chart",
+"Line graph",
+"Scatter graph",
+"Number line"
+],
+"e": "A pie chart shows how parts make up one whole."
+},
+{
+"q": "A 72\u00b0 sector represents 90 people. How many people are in the whole pie chart?",
+"c": [
+"450",
+"360",
+"180",
+"1800"
+],
+"e": "72\u00b0 is one fifth of 360\u00b0, so the total is 5 \u00d7 90 = 450 people."
+},
+{
+"q": "In a pictogram, one symbol stands for 6 pupils. What does 3\u00bd symbols stand for?",
+"c": [
+"21 pupils",
+"3.5 pupils",
+"18 pupils",
+"24 pupils"
+],
+"e": "3.5 \u00d7 6 = 21 pupils. A half symbol stands for 3 pupils."
+},
+{
+"q": "A line graph rises from 12 to 20 between 2 pm and 4 pm. What is the average rate of change?",
+"c": [
+"4 per hour",
+"8 per hour",
+"2 per hour",
+"16 per hour"
+],
+"e": "The change is 20 \u2212 12 = 8 in 2 hours, so the rate is 8 \u00f7 2 = 4 per hour."
+},
+{
+"q": "Bars A = 52 and B = 55 are drawn on an axis that starts at 50. What is misleading?",
+"c": [
+"B looks far taller than it really is",
+"A is hidden",
+"The units are wrong",
+"Nothing is misleading"
+],
+"e": "Because the axis starts at 50, the bars have heights 2 and 5, so B looks 2.5 times as tall. In fact B is only about 5.8% larger."
+},
+{
+"q": "School X has 400 students and 25% walk. School Y has 1200 students and 15% walk. Which school has more students who walk?",
+"c": [
+"School Y (180 against 100)",
+"School X (25% is larger)",
+"Both have the same number",
+"It cannot be found"
+],
+"e": "25% of 400 = 100 and 15% of 1200 = 180. A pie chart shows shares, not totals."
+},
+{
+"q": "A sector measures 150\u00b0. What fraction of the circle is it?",
+"c": [
+"5/12",
+"3/5",
+"1/3",
+"150/100"
+],
+"e": "150 \u00f7 360 = 5/12."
+},
+{
+"q": "A survey of 7 people is shown on a pie chart. Four chose option A. What is the angle for A, to the nearest degree?",
+"c": [
+"206\u00b0",
+"205\u00b0",
+"160\u00b0",
+"103\u00b0"
+],
+"e": "(4 \u00f7 7) \u00d7 360\u00b0 = 205.71\u00b0, which is 206\u00b0 to the nearest degree."
+}
+];
+  window.GP_BANK=BANK;
+  var N=8,set=[],idx=0,score=0,best=0,answered=false,KEY='edusambam_graphs_pie_best';
+  try{var bv=parseInt(window.localStorage.getItem(KEY),10);if(!isNaN(bv))best=bv;}catch(e){}
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  function progress(){$('gpProgress').innerHTML='Question '+Math.min(idx+1,N)+' of '+N+' &nbsp;\u00b7&nbsp; Best score: <span id="gpBestScore">'+best+'</span> / '+N;}
+  function showQ(){
+    answered=false;var it=set[idx];$('gpDrillQuestion').textContent=it.q;
+    var box=$('gpDrillChoices');box.innerHTML='';
+    shuffle(it.c).forEach(function(txt){
+      var b=document.createElement('button');b.type='button';b.className='pv-choice-btn';b.textContent=txt;
+      b.addEventListener('click',function(){choose(b,txt);});box.appendChild(b);
+    });
+    $('gpDrillFeedback').textContent='';$('gpNextBtn').style.display='none';$('gpNewSetBtn').style.display='none';progress();
+  }
+  function choose(btn,txt){
+    if(answered)return;answered=true;var it=set[idx],ok=txt===it.c[0];
+    var all=$('gpDrillChoices').querySelectorAll('.pv-choice-btn');
+    for(var i=0;i<all.length;i++){all[i].disabled=true;if(all[i].textContent===it.c[0])all[i].classList.add('correct');}
+    if(ok)score++;else btn.classList.add('incorrect');
+    $('gpDrillFeedback').textContent=(ok?'Correct! ':'Not quite. The answer is '+it.c[0]+'. ')+it.e;
+    if(idx<N-1){$('gpNextBtn').style.display='';}
+    else{
+      if(score>best){best=score;try{window.localStorage.setItem(KEY,String(best));}catch(e){}}
+      progress();$('gpDrillFeedback').textContent+=' You scored '+score+' out of '+N+'.';$('gpNewSetBtn').style.display='';
+    }
+  }
+  window.nextGpQuestion=function(){if(idx<N-1){idx++;showQ();}};
+  window.newGpSet=function(){set=shuffle(BANK).slice(0,N);idx=0;score=0;showQ();};
+  function init(){if($('gpDrillQuestion'))window.newGpSet();}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+
+</script>
 <script id="edusambam-reader-script">
 (function(){
  const box=document.querySelector('.edusambam-reader'); if(!box)return;
@@ -1638,10 +2061,10 @@ footer.footer {
     const b=document.querySelector('.edusambam-menu-btn');
     if(b){
       const isOpen=!!document.querySelector('.edusambam-mobile-menu')?.classList.contains('open');
+      b.classList.toggle('is-open',isOpen);
       b.setAttribute('aria-expanded', String(isOpen));
-      b.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-      b.setAttribute('title', isOpen ? 'Close menu' : 'Menu');
-      b.textContent = isOpen ? '×' : '☰';
+      b.setAttribute('aria-label',isOpen?'Close menu':'Open menu');
+      b.setAttribute('title',isOpen?'Close menu':'Menu');
     }
   }
   function setup(){
@@ -1654,12 +2077,19 @@ footer.footer {
     if(mb && menu){
       mb.addEventListener('click',()=>{
         const open=menu.classList.toggle('open'); closeAll(open?menu:null);
+        mb.classList.toggle('is-open',open);
         mb.setAttribute('aria-expanded',String(open));
-        mb.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-        mb.setAttribute('title', open ? 'Close menu' : 'Menu');
-        mb.textContent = open ? '×' : '☰';
+        mb.setAttribute('aria-label',open?'Close menu':'Open menu');
+        mb.setAttribute('title',open?'Close menu':'Menu');
         if(open) panel?.classList.remove('open');
       });
+      menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+        menu.classList.remove('open');
+        mb.classList.remove('is-open');
+        mb.setAttribute('aria-expanded','false');
+        mb.setAttribute('aria-label','Open menu');
+        mb.setAttribute('title','Menu');
+      }));
     }
     if(sb && panel){
       sb.addEventListener('click',()=>{
@@ -1668,9 +2098,32 @@ footer.footer {
       });
     }
     if(input && results){
+      const norm=s=>(' '+String(s||'').toLowerCase().replace(/&/g,' and ').replace(/[^a-z0-9]+/g,' ')+' ');
+      const stop={and:1,the:1,of:1,a:1,an:1,to:1,in:1,is:1,for:1};
       const render=()=>{
         const q=input.value.trim().toLowerCase();
-        const hits=q?pages.filter(x=>(x.title+' '+x.url).toLowerCase().includes(q)).slice(0,20):[];
+        let words=norm(q).trim().split(' ').filter(Boolean);
+        const sig=words.filter(w=>!stop[w]); if(sig.length) words=sig;
+        let hits=[];
+        if(q&&words.length){
+          const forms=w=>{const f=[w]; if(w.length>3&&w.endsWith('s')) f.push(w.slice(0,-1)); if(w.length>4&&w.endsWith('es')) f.push(w.slice(0,-2)); if(w.length>5&&w.endsWith('ing')) f.push(w.slice(0,-3)); if(w.length>4&&w.endsWith('ed')) f.push(w.slice(0,-2)); return f;};
+          const scored=[];
+          pages.forEach(x=>{
+            const t=norm(x.title), m=norm(String(x.url||'').replace(/[-_.]/g,' ')+' '+(x.s||'')+' '+(x.k||''));
+            let sc=0, ok=true;
+            for(const w of words){
+              const f=forms(w);
+              if(f.some(v=>t.includes(' '+v))) sc+=3;
+              else if(f.some(v=>m.includes(' '+v))) sc+=1;
+              else { ok=false; break; }
+            }
+            if(ok) scored.push([sc,x]);
+          });
+          scored.sort((a,b)=>b[0]-a[0]);
+          hits=scored.map(z=>z[1]);
+          if(!hits.length) hits=pages.filter(x=>(x.title+' '+x.url).toLowerCase().includes(q));
+          hits=hits.slice(0,30);
+        }
         results.innerHTML=hits.map(x=>'<a href="'+x.url.replace(/"/g,'&quot;')+'">'+
           x.title.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</a>').join('') ||
           (q?'<div style="padding:10px;color:#64748b">No matching pages found.</div>':'');
@@ -1687,32 +2140,30 @@ footer.footer {
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',setup); else setup();
 })();
 </script>
-<footer class="edusambam-unified-footer" aria-label="EDUSAMBAM site footer">
+<footer aria-label="EDUSAMBAM site footer" class="edusambam-unified-footer">
 <div class="footer-top">
 <div class="footer-brand">
 <div class="edusambam-footer-brand-row">
-<a class="edusambam-footer-logo-link" href="index.html" aria-label="EDUSAMBAM home">
+<a aria-label="EDUSAMBAM home" class="edusambam-footer-logo-link" href="index.html">
 <img alt="EDUSAMBAM" class="edusambam-brand-mark edusambam-footer-logo" src="logo-icon-full-white.png" style="width:auto;height:64px;max-width:240px;object-fit:contain;background:none;border-radius:0;"/>
 </a>
 </div>
 <p class="edusambam-footer-statement">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</p>
-<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a></div>
+<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a><a aria-label="EDUSAMBAM on YouTube" href="https://youtube.com/@edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></div>
 </div>
-<div class="footer-col"><h4>Learning</h4><ul><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li></ul></div>
+<div class="footer-col"><h4>Learning Areas</h4><ul><li><a href="index.html#subject-english">English Language</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ ARENA</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li><li><a href="index.html#spelling-bee-arena">SPELLING BEE ARENA</a></li><li><a href="index.html#english-vocabulary-amp-word-skills">Vocabulary Building</a></li></ul></div>
 <div class="footer-col"><h4>Practice &amp; Assessment</h4><ul>
 <li><a href="index.html#interactive-activities">Interactive Activities</a></li>
-<li><a href="assessment-arena.html">ASSESSMENT ARENA</a></li>
-<li><a href="assessment-arena.html">What Is Assessment?</a></li>
-<li><a href="index.html#about">Learn Your Way</a></li>
-<li><a href="index.html#resources">Resources &amp; Downloads</a></li>
+<li><a href="assessment-arena.html">Assessment Arena</a></li>
+<li><a href="index.html#resources">Downloadable Resources</a></li>
 </ul></div>
 <div class="footer-col"><h4>About EDUSAMBAM</h4><ul>
-<li><a href="index.html#about-edusambam">What EDUSAMBAM Is</a></li>
 <li><a href="index.html#mission">Our Mission</a></li>
 <li><a href="index.html#team">The Team</a></li>
 <li><a href="contact.html">Contact Us</a></li>
 <li><a href="mailto:feedback.edusambam@gmail.com?subject=EDUSAMBAM%20Feedback">Give Feedback</a></li>
 <li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+<li><a href="about.html">About EDUSAMBAM</a></li>
 <li><a href="privacy-policy.html">Privacy Policy</a></li>
 </ul></div>
 </div>
@@ -1720,7 +2171,7 @@ footer.footer {
 <li><a href="#top">Back to Top</a></li>
 <li><a href="index.html#mission">Mission</a></li>
 <li><a href="index.html#team">Team</a></li>
-<li><a href="index.html#resources">Resources</a></li>
+<li><a href="index.html#resources">Downloadable Resources</a></li>
 </ul></div>
 </footer></body>
 </html>

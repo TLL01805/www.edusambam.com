@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<!-- Google Analytics 4 — EDUSAMBAM -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Y35DW0V4HQ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-Y35DW0V4HQ');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Spelling Bee Test: A Level (Year 1 and Year 2) — EDUSAMBAM</title>
+<link href="https://edusambam.com/spelling-bee-a-level.html" rel="canonical"/>
+<meta content="Free online spelling bee test for A Level (Year 1 and 2) with 100 words. Listen, spell with the keys or your voice, and get your score." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --red:       #8B0000;
+    --red-mid:   #A50000;
+    --red-lt:    #F9F0F0;
+    --navy:      #06244a;
+    --navy-mid:  #1C3151;
+    --gold:      #B8963E;
+    --gold-lt:   #F5EDD6;
+    --cream:     #FAF8F4;
+    --white:     #FFFFFF;
+    --ink:       #1A1A1A;
+    --slate:     #4A4A4A;
+    --muted:     #767676;
+    --border:    #D8D0C8;
+    --border-lt: #EDE8E0;
+    --radius:    4px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--ink);
+    background: var(--white);
+    line-height: 1.7;
+    overflow-x: hidden;
+
+    border: 3px solid #d4a017;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+  /* ── TOP BAR ── */
+  .top-bar {
+    background: var(--navy);
+    padding: 0.45rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .top-bar p {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.03em;
+  }
+  .top-bar-links { display: flex; gap: 1.5rem; list-style: none; }
+  .top-bar-links a {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+  .top-bar-links a:hover { color: white; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 200;
+    background: rgba(255,255,255,.97);
+    border-bottom: 3px solid var(--gold);
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    box-shadow: 0 2px 12px rgba(8,47,99,0.08);
+  }
+  .nav-brand { display: flex; flex-direction: column; line-height: 1; text-decoration: none; }
+  .nav-brand-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: 0.01em;
+  }
+  .nav-brand-name span { color: var(--red); }
+  .nav-brand-sub {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: rgba(13,27,42,0.6);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 0.25rem;
+  }
+  .nav-links { display: flex; gap: 0; list-style: none; }
+  .nav-links a {
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(13,27,42,0.75);
+    padding: 0 1.1rem;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--b, #0b4ea2); }
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+  }
+
+  /* ── ARTICLE HERO ── */
+  .article-hero {
+    background: linear-gradient(135deg,#06244a,#0b4ea2);
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+  }
+  .breadcrumb {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 1.1rem;
+    letter-spacing: 0.02em;
+  }
+  .breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--gold); }
+  .article-hero-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(184,150,62,0.4);
+    padding: 0.35rem 0.9rem;
+    border-radius: 30px;
+    margin-bottom: 1.25rem;
+  }
+  .article-hero h1 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 2.4rem;
+    color: white;
+    max-width: 760px;
+    margin: 0 auto 1rem;
+    line-height: 1.25;
+  }
+  .article-hero p.sub {
+    color: rgba(255,255,255,0.6);
+    max-width: 620px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.02rem;
+  }
+  .article-hero-meta {
+    display: flex; justify-content: center; gap: 0.9rem;
+    font-size: 0.8rem; color: rgba(255,255,255,0.45);
+    flex-wrap: wrap;
+  }
+
+  /* ── ARTICLE BODY ── */
+  .article-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+  .article-wrap h2 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 1.65rem;
+    color: var(--navy);
+    margin: 2.6rem 0 1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--border-lt);
+  }
+  .article-wrap h2 span.num {
+    color: var(--red);
+    margin-right: 0.5rem;
+    font-style: italic;
+  }
+  .article-wrap p { color: var(--slate); margin-bottom: 1rem; font-size: 1.02rem; }
+  .article-wrap ul { margin: 0 0 1.2rem 1.4rem; color: var(--slate); }
+  .article-wrap li { margin-bottom: 0.5rem; }
+  .article-wrap strong { color: var(--ink); }
+  .lead {
+    font-size: 1.15rem;
+    color: var(--ink);
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    border-left: 3px solid var(--gold);
+    padding-left: 1.2rem;
+    margin: 1.5rem 0 2rem;
+  }
+  .example-box {
+    background: var(--gold-lt);
+    border: 1px solid rgba(184,150,62,0.35);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 1.3rem 1.5rem;
+    margin: 1.3rem 0 1.8rem;
+  }
+  .example-box .ex-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.5rem;
+  }
+  .example-box p { color: var(--ink); margin-bottom: 0.4rem; font-size: 0.98rem; }
+  .example-box p:last-child { margin-bottom: 0; }
+
+  .real-world-box {
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 1.6rem 1.7rem;
+    margin: 2.4rem 0;
+  }
+  .real-world-box .rw-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.7rem;
+  }
+  .real-world-box p { color: rgba(255,255,255,0.8); margin-bottom: 0; font-size: 1rem; }
+
+  .table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+  table.pos-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+  table.pos-table th {
+    background: var(--navy);
+    color: white;
+    text-align: left;
+    padding: 0.7rem 0.9rem;
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+  }
+  table.pos-table td {
+    padding: 0.7rem 0.9rem;
+    border-bottom: 1px solid var(--border-lt);
+    color: var(--slate);
+  }
+  table.pos-table tr:nth-child(even) td { background: var(--cream); }
+
+  /* ── QUIZ ── */
+  .quiz-section {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem 1.7rem 1.5rem;
+    margin-top: 3rem;
+  }
+  .quiz-section .section-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.4rem;
+  }
+  .quiz-section h2 {
+    border: none; margin: 0 0 0.4rem; padding: 0;
+  }
+  .quiz-intro { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.6rem; }
+
+  /* SCORED QUIZ (click-to-highlight + real scoring) */
+  .squiz-progress {
+    background: var(--cream);
+    border-radius: 30px;
+    height: 8px;
+    overflow: hidden;
+    margin-bottom: 0.4rem;
+  }
+  .squiz-progress-fill {
+    background: var(--gold);
+    height: 100%;
+    width: 0%;
+    transition: width 0.25s ease;
+  }
+  .squiz-progress-label {
+    font-size: 0.78rem;
+    color: var(--muted);
+    text-align: right;
+    margin-bottom: 1.3rem;
+  }
+  .squiz-item {
+    background: var(--white);
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .squiz-q {
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+  }
+  .squiz-q .qnum { color: var(--red); margin-right: 0.4rem; }
+  .squiz-option {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .squiz-option:hover { border-color: var(--gold); }
+  .squiz-option input[type="radio"] { accent-color: var(--red); width: 16px; height: 16px; flex-shrink: 0; }
+  .squiz-option label { cursor: pointer; font-size: 0.94rem; color: var(--slate); flex: 1; }
+  .squiz-option.selected { border-color: var(--red); background: rgba(139,0,0,0.04); }
+  .squiz-option.correct-answer { border-color: #2e7d32; background: rgba(46,125,50,0.08); }
+  .squiz-option.wrong-answer { border-color: var(--red); background: rgba(139,0,0,0.08); }
+  .squiz-submit-btn {
+    display: block;
+    width: 100%;
+    background: var(--red);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.98rem;
+    font-weight: 600;
+    padding: 0.9rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    margin-top: 0.6rem;
+    transition: background 0.2s;
+  }
+  .squiz-submit-btn:hover { background: var(--red-mid); }
+  .squiz-submit-btn:disabled { background: var(--border); cursor: not-allowed; }
+  .squiz-results {
+    display: none;
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 2rem 1.6rem;
+    text-align: center;
+    margin-bottom: 1.8rem;
+  }
+  .squiz-results.visible { display: block; }
+  .squiz-results .squiz-score-big {
+    font-family: 'EB Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .squiz-results .squiz-score-label { color: rgba(255,255,255,0.7); font-size: 0.98rem; margin-bottom: 1rem; }
+  .squiz-results .squiz-score-tier {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    border-radius: 30px;
+    background: rgba(184,150,62,0.15);
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+  }
+  .squiz-retake-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 0.65rem 1.4rem;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  .squiz-retake-btn:hover { background: rgba(255,255,255,0.1); }
+
+  .article-footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-lt);
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .article-footer-nav a {
+    text-decoration: none;
+    color: var(--red);
+    font-weight: 600;
+    font-size: 0.92rem;
+  }
+  .article-footer-nav a:hover { text-decoration: underline; }
+
+  @media (max-width: 700px) {
+    .article-hero h1 { font-size: 1.7rem; }
+    .article-wrap { padding: 2rem 1.25rem 3rem; }
+  }
+  @media (max-width: 680px) {
+    .top-bar { display: none; }
+    nav {
+      padding: 0 1rem;
+      height: 68px;
+      border-bottom-width: 2px;
+    }
+    .nav-links { display: none; }
+    .nav-brand-name {
+      font-size: 1.35rem;
+      white-space: nowrap;
+    }
+    .nav-brand-sub {
+      font-size: 0.62rem;
+      letter-spacing: 0.07em;
+    }
+    .footer-top { grid-template-columns: 1fr; gap: 2rem; padding: 2rem 1.25rem; }
+    footer { padding: 2rem 1.25rem 0; }
+  }
+
+  /* ── FOOTER (copied from site) ── */
+  footer { background: var(--navy); padding: 3.5rem 3rem 0; }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 2.5rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .footer-brand-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+  }
+  .footer-brand-name span { color: var(--red); }
+  .footer-desc { color: rgba(255,255,255,0.45); font-size: 0.9rem; margin-top: 0.8rem; max-width: 320px; }
+  .footer-col h4 {
+    font-family: 'EB Garamond', serif;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 0.7rem; }
+  .footer-col a {
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.2s;
+  }
+  .footer-col a:hover { color: var(--gold); }
+  .footer-bottom {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer-bottom p { color: rgba(255,255,255,0.35); font-size: 0.8rem; }
+  .footer-bottom-links { display: flex; gap: 1.3rem; list-style: none; }
+  .footer-bottom-links a { color: rgba(255,255,255,0.35); text-decoration: none; font-size: 0.8rem; }
+  .footer-bottom-links a:hover { color: rgba(255,255,255,0.6); }
+  @media (max-width: 900px) {
+    .footer-top { grid-template-columns: 1fr 1fr; }
+    footer { padding: 2rem 1.25rem 0; }
+  }
+</style>
+<style id="edusambam-reader-style">
+.mark{width:48px;height:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px;border-radius:14px;background:#eef6ff;box-shadow:0 2px 7px rgba(8,47,99,.10);flex:0 0 48px}.mark i{display:block;border-radius:50%;background:#0b4ea2;min-width:0;min-height:0}.mark i:nth-child(5){background:#d4a017}.edusambam-reader{max-width:980px;margin:1.2rem auto 0;padding:1rem 1.1rem;border:1px solid #d7e4ef;border-radius:14px;background:linear-gradient(135deg,#f7fbff,#fff);box-shadow:0 6px 18px rgba(11,45,92,.08)}.edusambam-reader strong{display:block;color:#0b55a5;font-size:.9rem;letter-spacing:.04em}.edusambam-reader .reader-slogan{color:#b27e08;font-weight:900;margin-top:.25rem;font-size:.82rem}.edusambam-reader .reader-help{color:#607086;font-size:.8rem;margin:.3rem 0 .7rem}.edusambam-reader .reader-controls{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}.edusambam-reader button,.edusambam-reader select{border:1px solid #c9d9e8;background:#fff;color:#153b6e;border-radius:8px;padding:.48rem .65rem;font-weight:800;cursor:pointer}.edusambam-reader button:first-child{background:#0b55a5;color:#fff;border-color:#0b55a5}.edusambam-reader .reader-status{display:block;color:#607086;font-size:.75rem;margin-top:.55rem}.edusambam-reader .reader-progress{height:4px;background:#e4edf6;border-radius:99px;margin-top:.6rem;overflow:hidden}.edusambam-reader .reader-progress span{display:block;width:0;height:100%;background:#e1ad1c;transition:width .2s linear}@media(max-width:600px){.edusambam-reader{margin-left:0;margin-right:0}.edusambam-reader .reader-controls button,.edusambam-reader .reader-controls select{flex:1;min-width:75px}}
+</style><style id="edusambam-edge-fix">.article-wrap,.article-hero,.nav-brand{min-width:0;overflow:visible}.article-wrap h1,.article-wrap h2,.article-wrap h3,.article-hero h1,.article-hero .sub{overflow-wrap:anywhere;word-break:normal}.article-wrap{padding-left:max(1.25rem,3vw);padding-right:max(1.25rem,3vw)}@media(max-width:600px){.article-wrap{padding-left:1rem;padding-right:1rem}.article-hero{padding-left:1rem;padding-right:1rem}.nav-brand{overflow:visible!important}.nav-brand-name,.nav-brand-sub{overflow-wrap:anywhere}}</style><style id="edusambam-frame-final">html{box-sizing:border-box;max-width:100%;overflow-x:hidden}*,*:before,*:after{box-sizing:inherit}body{max-width:100%;min-width:0;overflow-x:hidden;border:3px solid #d4a017;box-sizing:border-box}img,svg,video,iframe{max-width:100%;height:auto}h1,h2,h3,h4,p,a,span,small,b,strong{overflow-wrap:anywhere}section,header,footer,main,nav{max-width:100%;box-sizing:border-box}@media(max-width:600px){body{border-width:3px}h1,h2,h3{margin-left:0!important;margin-right:0!important}}</style><style id="edusambam-unified-nav-css">
+/* EDUSAMBAM unified navigation */
+.edusambam-nav{
+  position:sticky;top:0;z-index:10000;
+  min-height:72px;box-sizing:border-box;
+  display:flex;align-items:center;
+  padding:10px 20px;
+  background:#fff;border-bottom:1px solid #e5e7eb;
+  font-family:inherit;
+}
+.edusambam-nav-inner{
+  width:100%;max-width:1400px;margin:0 auto;
+  display:flex;align-items:center;gap:18px;min-width:0;
+}
+.edusambam-brand{
+  display:flex;align-items:center;gap:10px;min-width:0;
+  text-decoration:none;color:#0b3b66;flex:0 1 auto;
+}
+.edusambam-brand-copy{display:flex;flex-direction:column;line-height:1;min-width:0;overflow:hidden}
+.edusambam-brand-name{
+  font-family:"EB Garamond",Georgia,serif;
+  font-size:1.6rem;font-weight:600;letter-spacing:.01em;
+  color:#0b3b66;white-space:nowrap;
+}
+.edusambam-brand-subtitle{
+  margin-top:4px;
+  font-size:.62rem;font-weight:600;letter-spacing:.08em;
+  color:#64748b;white-space:nowrap;
+}
+.edusambam-nav-links{
+  display:flex;align-items:center;gap:14px;margin-left:auto;
+  list-style:none;padding:0;margin-top:0;margin-bottom:0;
+}
+.edusambam-nav-links a{
+  color:#334155;text-decoration:none;font-size:.9rem;
+  padding:8px 5px;border-radius:7px;white-space:nowrap;
+}
+.edusambam-nav-links a:hover,.edusambam-nav-links a:focus-visible{
+  color:#0b3b66;background:#f3f6f9;outline:none;
+}
+.edusambam-search-btn,.edusambam-menu-btn{
+  appearance:none;border:1px solid #d8dee6;background:#fff;
+  color:#0b3b66;border-radius:9px;min-width:40px;height:40px;
+  display:inline-flex;align-items:center;justify-content:center;
+  cursor:pointer;font-size:1.15rem;flex:0 0 auto;
+}
+.edusambam-search-btn:hover,.edusambam-menu-btn:hover,
+.edusambam-search-btn:focus-visible,.edusambam-menu-btn:focus-visible{
+  background:#f3f6f9;border-color:#b9c6d4;outline:2px solid rgba(214,162,58,.35);
+  outline-offset:2px;
+}
+.edusambam-menu-btn{display:none;font-size:1.2rem}
+.edusambam-mobile-menu{
+  display:none;position:fixed;top:72px;left:0;right:0;
+  z-index:9999;background:#fff;border-bottom:1px solid #e5e7eb;
+  box-shadow:0 8px 24px rgba(15,23,42,.12);
+  max-height:calc(100vh - 72px);overflow:auto;
+}
+.edusambam-mobile-menu.open{display:block}
+.edusambam-mobile-menu ul{list-style:none;margin:0;padding:10px 16px 16px}
+.edusambam-mobile-menu a{
+  display:block;padding:12px 10px;color:#0b3b66;text-decoration:none;
+  border-radius:8px;font-size:.98rem;
+}
+.edusambam-mobile-menu a:hover,.edusambam-mobile-menu a:focus-visible{
+  background:#f3f6f9;outline:none;
+}
+.edusambam-search-panel{
+  display:none;position:fixed;top:72px;left:0;right:0;z-index:9998;
+  background:#fff;border-bottom:1px solid #e5e7eb;
+  box-shadow:0 8px 24px rgba(15,23,42,.10);padding:12px 16px;
+}
+.edusambam-search-panel.open{display:block}
+.edusambam-search-wrap{max-width:900px;margin:0 auto;position:relative}
+.edusambam-search-input{
+  width:100%;box-sizing:border-box;padding:12px 14px;
+  border:1px solid #cbd5e1;border-radius:9px;font-size:1rem;
+}
+.edusambam-search-results{margin-top:8px;max-height:50vh;overflow:auto}
+.edusambam-search-results a{
+  display:block;padding:9px 10px;border-radius:7px;color:#0b3b66;text-decoration:none;
+}
+.edusambam-search-results a:hover{background:#f3f6f9}
+@media (max-width:1100px){
+  .edusambam-nav-links{gap:8px}
+  .edusambam-nav-links a{font-size:.84rem;padding-inline:3px}
+}
+@media (max-width:1100px){
+  .edusambam-nav{min-height:68px;padding:8px 14px}
+  .edusambam-brand-mark{width:44px;height:44px;flex-basis:44px}
+  .edusambam-brand-mark span{width:12px;height:12px}
+  .edusambam-brand-mark .c3,.edusambam-brand-mark .c6{left:16px}
+  .edusambam-brand-name{font-size:1.42rem}
+  .edusambam-brand-subtitle{font-size:.52rem;letter-spacing:.06em}
+  .edusambam-nav-links{display:none}
+  .edusambam-menu-btn{display:inline-flex}
+  .edusambam-search-btn{margin-left:auto}
+  .edusambam-mobile-menu{top:68px;max-height:calc(100vh - 68px)}
+  .edusambam-search-panel{top:68px}
+}
+@media (max-width:480px){
+  .edusambam-nav-inner{gap:8px}
+  .edusambam-brand{gap:7px}
+  .edusambam-brand-mark{width:40px;height:40px;flex-basis:40px}
+  .edusambam-brand-mark span{width:11px;height:11px}
+  .edusambam-brand-mark .c3,.edusambam-brand-mark .c6{left:14.5px}
+  .edusambam-brand-name{font-size:1.28rem}
+  .edusambam-brand-subtitle{font-size:.46rem;letter-spacing:.045em}
+  .edusambam-search-btn,.edusambam-menu-btn{min-width:38px;height:38px}
+}
+</style><style id="edusambam-logo-visibility-fix">
+/* EDUSAMBAM logo visibility fix */
+.edusambam-brand-mark{
+  position:relative !important;
+  display:inline-block !important;
+  width:48px !important;
+  height:48px !important;
+  min-width:48px !important;
+  flex:0 0 48px !important;
+  overflow:visible !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+.edusambam-brand-mark > span{
+  position:absolute !important;
+  display:block !important;
+  width:13px !important;
+  height:13px !important;
+  min-width:13px !important;
+  min-height:13px !important;
+  padding:0 !important;
+  margin:0 !important;
+  border:0 !important;
+  border-radius:50% !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  box-sizing:border-box !important;
+}
+.edusambam-brand-mark > .c1{left:0 !important;top:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c2{right:0 !important;top:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c3{left:17.5px !important;top:8px !important;background:#d6a23a !important;}
+.edusambam-brand-mark > .c4{left:0 !important;bottom:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c5{right:0 !important;bottom:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c6{left:17.5px !important;bottom:8px !important;background:#d6a23a !important;}
+
+@media (max-width:1100px){
+  .edusambam-brand-mark{
+    width:44px !important;height:44px !important;min-width:44px !important;flex-basis:44px !important;
+  }
+  .edusambam-brand-mark > span{
+    width:12px !important;height:12px !important;min-width:12px !important;min-height:12px !important;
+  }
+  .edusambam-brand-mark > .c3,.edusambam-brand-mark > .c6{left:16px !important;}
+}
+@media (max-width:480px){
+  .edusambam-brand-mark{
+    width:40px !important;height:40px !important;min-width:40px !important;flex-basis:40px !important;
+  }
+  .edusambam-brand-mark > span{
+    width:11px !important;height:11px !important;min-width:11px !important;min-height:11px !important;
+  }
+  .edusambam-brand-mark > .c3,.edusambam-brand-mark > .c6{left:14.5px !important;}
+}
+</style>
+<link href="favicon.webp" rel="icon" type="image/webp"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<style id="edusambam-menu-extra-css">
+.edusambam-mobile-menu .edusambam-menu-extra:first-of-type{
+  margin-top:8px;padding-top:8px;border-top:1px solid #e5e7eb;
+}
+.edusambam-mobile-menu .edusambam-menu-extra a{
+  font-weight:600;
+}
+</style>
+<style id="edusambam-article-footer-theme">
+.edusambam-article-footer{
+  background:linear-gradient(135deg,#06244a,#0b4ea2)!important;
+}
+</style>
+<style id="edusambam-unified-footer-fix">
+/* EDUSAMBAM unified footer: same visual language and neutral brand statement across all pages. */
+.edusambam-unified-footer,
+.edusambam-article-footer,
+footer.footer {
+  background: linear-gradient(135deg, #06244a, #0b4ea2) !important;
+  color: #fff !important;
+  border-top: 3px solid #d4a017 !important;
+  box-sizing: border-box;
+}
+.edusambam-footer-statement{margin:.25rem 0 0 !important;color:rgba(255,255,255,.88) !important;font-size:.78rem !important;letter-spacing:.08em !important;text-transform:uppercase !important}
+.edusambam-unified-footer .footer-brand-name,.edusambam-article-footer .footer-brand-name{color:#fff !important}
+</style>
+<style id="edusambam-final-unified-footer">
+/* Final unified footer — same structure, visual language, and approved nav logo on every page. */
+.edusambam-unified-footer{
+  width:100% !important;
+  margin:0 !important;
+  padding:44px 0 0 !important;
+  background:linear-gradient(135deg,#06244a,#0b4ea2) !important;
+  color:#d6e4f2 !important;
+  border-top:4px solid #d4a017 !important;
+  box-sizing:border-box !important;
+  overflow:hidden !important;
+}
+.edusambam-unified-footer .footer-top{
+  width:min(1180px,92%) !important;
+  max-width:1180px !important;
+  margin:0 auto !important;
+  padding:0 0 34px !important;
+  display:grid !important;
+  grid-template-columns:1.5fr repeat(3,1fr) !important;
+  gap:34px !important;
+  box-sizing:border-box !important;
+}
+.edusambam-unified-footer .footer-brand{min-width:0 !important;}
+.edusambam-footer-brand-row{margin:0 0 10px !important;}
+.edusambam-footer-logo-link{
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:12px !important;
+  min-width:0 !important;
+  color:#fff !important;
+  text-decoration:none !important;
+}
+.edusambam-footer-logo{
+  width:48px !important;
+  height:48px !important;
+  min-width:48px !important;
+  flex:0 0 48px !important;
+}
+.edusambam-footer-logo > span{width:13px !important;height:13px !important;min-width:13px !important;min-height:13px !important;}
+.edusambam-footer-logo > .c3,.edusambam-footer-logo > .c6{left:17.5px !important;}
+.edusambam-footer-brand-name{
+  color:#fff !important;
+  font-family:"EB Garamond",Georgia,serif !important;
+  font-size:1.65rem !important;
+  font-weight:600 !important;
+  letter-spacing:.01em !important;
+  line-height:1 !important;
+  white-space:nowrap !important;
+}
+.edusambam-unified-footer .edusambam-footer-statement{
+  margin:0 !important;
+  max-width:360px !important;
+  color:rgba(255,255,255,.88) !important;
+  font-size:.78rem !important;
+  line-height:1.7 !important;
+  letter-spacing:.08em !important;
+  text-transform:uppercase !important;
+}
+.edusambam-unified-footer .footer-col{min-width:0 !important;}
+.edusambam-unified-footer .footer-col h4{
+  margin:0 0 12px !important;
+  color:#fff !important;
+  font-family:"EB Garamond",Georgia,serif !important;
+  font-size:1rem !important;
+  font-weight:600 !important;
+  line-height:1.25 !important;
+}
+.edusambam-unified-footer .footer-col ul{
+  list-style:none !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+.edusambam-unified-footer .footer-col li{margin:0 0 8px !important;padding:0 !important;}
+.edusambam-unified-footer .footer-col a{
+  color:rgba(255,255,255,.68) !important;
+  text-decoration:none !important;
+  font-size:.84rem !important;
+  line-height:1.5 !important;
+  overflow-wrap:anywhere !important;
+}
+.edusambam-unified-footer .footer-col a:hover,
+.edusambam-unified-footer .footer-col a:focus-visible{color:#fff !important;}
+.edusambam-unified-footer .footer-bottom{
+  width:min(1180px,92%) !important;
+  max-width:1180px !important;
+  margin:0 auto !important;
+  padding:18px 0 22px !important;
+  border-top:1px solid rgba(255,255,255,.12) !important;
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:center !important;
+  gap:20px !important;
+  box-sizing:border-box !important;
+}
+.edusambam-unified-footer .footer-bottom p{
+  margin:0 !important;
+  color:rgba(255,255,255,.55) !important;
+  font-size:.8rem !important;
+  line-height:1.5 !important;
+}
+.edusambam-unified-footer .footer-bottom-links{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:18px !important;
+  list-style:none !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+.edusambam-unified-footer .footer-bottom-links a{
+  color:rgba(255,255,255,.55) !important;
+  font-size:.78rem !important;
+  line-height:1.5 !important;
+  text-decoration:none !important;
+}
+.edusambam-unified-footer .footer-bottom-links a:hover,
+.edusambam-unified-footer .footer-bottom-links a:focus-visible{color:#fff !important;}
+@media(max-width:900px){
+  .edusambam-unified-footer{padding-top:32px !important;}
+  .edusambam-unified-footer .footer-top{grid-template-columns:1fr 1fr !important;gap:28px 22px !important;}
+  .edusambam-unified-footer .footer-brand{grid-column:1/-1 !important;}
+}
+@media(max-width:600px){
+  .edusambam-unified-footer{padding-top:30px !important;}
+  .edusambam-unified-footer .footer-top{width:calc(100% - 28px) !important;grid-template-columns:1fr 1fr !important;gap:26px 20px !important;padding-bottom:28px !important;}
+  .edusambam-unified-footer .footer-bottom{width:calc(100% - 28px) !important;display:block !important;padding:16px 0 20px !important;}
+  .edusambam-unified-footer .footer-bottom-links{margin-top:10px !important;gap:16px !important;}
+  .edusambam-footer-logo{width:44px !important;height:44px !important;min-width:44px !important;flex-basis:44px !important;}
+  .edusambam-footer-logo > span{width:12px !important;height:12px !important;min-width:12px !important;min-height:12px !important;}
+  .edusambam-footer-logo > .c3,.edusambam-footer-logo > .c6{left:16px !important;}
+  .edusambam-footer-brand-name{font-size:1.48rem !important;}
+}
+@media(max-width:430px){
+  .edusambam-unified-footer .footer-top{grid-template-columns:1fr !important;gap:22px !important;}
+  .edusambam-unified-footer .footer-brand{grid-column:auto !important;}
+}
+</style>
+<style id="edusambam-footer-final-alignment">
+/* Final EDUSAMBAM footer consistency pass: identical royal-blue footer and left alignment on every page. */
+.edusambam-unified-footer {
+  background: linear-gradient(135deg,#06244a,#0b4ea2) !important;
+  color:#d6e4f2 !important;
+  text-align:left !important;
+  width:100% !important;
+  box-sizing:border-box !important;
+}
+.edusambam-unified-footer,
+.edusambam-unified-footer *,
+.edusambam-unified-footer h1,
+.edusambam-unified-footer h2,
+.edusambam-unified-footer h3,
+.edusambam-unified-footer h4,
+.edusambam-unified-footer p,
+.edusambam-unified-footer ul,
+.edusambam-unified-footer li,
+.edusambam-unified-footer a,
+.edusambam-unified-footer span {
+  text-align:left !important;
+}
+.edusambam-unified-footer .footer-top,
+.edusambam-unified-footer .footer-brand,
+.edusambam-unified-footer .footer-col,
+.edusambam-unified-footer .footer-bottom {
+  margin-left:0 !important;
+}
+.edusambam-unified-footer .footer-top {
+  margin-right:auto !important;
+}
+.edusambam-unified-footer .edusambam-footer-brand-row {
+  text-align:left !important;
+}
+.edusambam-unified-footer .edusambam-footer-logo-link {
+  justify-content:flex-start !important;
+  text-align:left !important;
+}
+.edusambam-unified-footer .footer-bottom {
+  justify-content:flex-start !important;
+  align-items:flex-start !important;
+  flex-direction:column !important;
+}
+.edusambam-unified-footer .footer-bottom-links {
+  justify-content:flex-start !important;
+  align-items:flex-start !important;
+}
+@media (max-width:600px) {
+  .edusambam-unified-footer .footer-top,
+  .edusambam-unified-footer .footer-bottom {
+    margin-left:0 !important;
+    margin-right:auto !important;
+  }
+}
+</style><style id="edusambam-footer-social-css">.edusambam-footer-social{margin-top:14px}.edusambam-footer-social a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);color:rgba(255,255,255,.85);transition:background .15s,color .15s}.edusambam-footer-social a:hover{background:rgba(255,255,255,.22);color:#fff}</style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2230995786427221"
+     crossorigin="anonymous"></script>
+<meta content="2026-11-01" property="article:modified_time"/>
+<meta name="robots" content="index,follow,max-image-preview:large"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="EDUSAMBAM"/>
+<meta property="og:title" content="Spelling Bee Test: A Level (Year 1 and Year 2)"/>
+<meta property="og:description" content="Free online spelling bee test for A Level (Year 1 and 2) with 100 words. Listen, spell with the keys or your voice, and get your score."/>
+<meta property="og:url" content="https://edusambam.com/spelling-bee-a-level.html"/>
+<meta property="og:image" content="https://edusambam.com/logo-icon-full.png"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Spelling Bee Test: A Level (Year 1 and Year 2)"/>
+<meta name="twitter:description" content="Free online spelling bee test for A Level (Year 1 and 2) with 100 words. Listen, spell with the keys or your voice, and get your score."/>
+<meta property="article:section" content="Spelling Bee Arena"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Spelling Bee Test: A Level (Year 1 and Year 2)", "description": "Free online spelling bee test for A Level (Year 1 and 2) with 100 words. Listen, spell with the keys or your voice, and get your score.", "inLanguage": "en", "mainEntityOfPage": "https://edusambam.com/spelling-bee-a-level.html", "url": "https://edusambam.com/spelling-bee-a-level.html", "dateModified": "2026-11-01", "articleSection": "Spelling Bee Arena", "author": {"@type": "Organization", "name": "EDUSAMBAM Editorial Team", "url": "https://edusambam.com/"}, "publisher": {"@type": "Organization", "name": "EDUSAMBAM", "url": "https://edusambam.com/", "logo": {"@type": "ImageObject", "url": "https://edusambam.com/logo-icon-full.png"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Gateway", "item": "https://edusambam.com/index.html#gateway"}, {"@type": "ListItem", "position": 2, "name": "Spelling Bee Arena", "item": "https://edusambam.com/index.html#spelling-bee-arena"}, {"@type": "ListItem", "position": 3, "name": "Spelling Bee Test: A Level (Year 1 and Year 2)", "item": "https://edusambam.com/spelling-bee-a-level.html"}]}]}</script>
+</head>
+<body id="top">
+<!-- TOP BAR -->
+<div class="top-bar">
+<p>Established 2026  ·  Free Educational Resources for All</p>
+<ul class="top-bar-links">
+<li><a href="contact.html">Contact</a></li><li><a href="about.html">About</a></li><li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+</ul>
+</div>
+<!-- NAV -->
+<nav aria-label="Primary navigation" class="edusambam-nav">
+<div class="edusambam-nav-inner">
+<a aria-label="EDUSAMBAM home" class="edusambam-brand" href="index.html">
+<img alt="EDUSAMBAM" class="edusambam-brand-mark" src="logo-icon-full.png" style="width:auto;height:56px;max-width:220px;object-fit:contain;background:none;border-radius:0;flex-basis:auto;"/>
+<span class="edusambam-brand-copy">
+<span class="edusambam-brand-subtitle">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</span>
+</span>
+</a>
+<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Language</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ</a></li><li><a href="index.html#resources">Resources</a></li></ul>
+<button aria-label="Search" class="edusambam-search-btn" title="Search" type="button">⌕</button>
+<button aria-expanded="false" aria-label="Open menu" class="edusambam-menu-btn" title="Menu" type="button">☰</button>
+</div>
+</nav>
+<div aria-label="Mobile navigation" class="edusambam-mobile-menu">
+<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Language</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ ARENA</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li><li><a href="index.html#spelling-bee-arena">SPELLING BEE ARENA</a></li><li><a href="index.html#english-vocabulary-amp-word-skills">Vocabulary Building</a></li><li><a href="index.html#resources">Downloadable Resources</a></li><li class="edusambam-menu-extra"><a href="index.html#subject-assessment">Assessment Arena</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="about.html">About EDUSAMBAM</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
+</div>
+<div aria-label="Site search" class="edusambam-search-panel">
+<div class="edusambam-search-wrap">
+<input aria-label="Search EDUSAMBAM" class="edusambam-search-input" placeholder="Search EDUSAMBAM…" type="search"/>
+<div class="edusambam-search-results"></div>
+</div>
+</div>
+<style>
+.sb-box{background:var(--cream);border:1px solid var(--border);border-radius:var(--radius);padding:1.3rem 1.2rem;margin:1.5rem 0}
+.sb-meta{display:flex;justify-content:space-between;font-weight:600;color:var(--navy);margin-bottom:.4rem}
+.sb-bar{height:10px;background:var(--border-lt);border-radius:99px;overflow:hidden}
+.sb-bar i{display:block;height:100%;width:0;background:#2F6F4E;transition:width .3s}
+.sb-say{width:104px;height:104px;border-radius:50%;border:3px solid var(--navy);background:var(--gold);font-size:2.8rem;line-height:1;display:block;margin:1rem auto;cursor:pointer;padding:0}
+.sb-say:hover{background:var(--gold-lt)}
+.sb-row{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin:.7rem 0}
+.sb-btn{font:inherit;font-weight:600;border:2px solid var(--navy);border-radius:var(--radius);background:#fff;color:var(--navy);padding:.65rem 1rem;cursor:pointer}
+.sb-btn:hover{background:var(--gold-lt)}
+.sb-btn.main{background:var(--navy);color:#fff}
+.sb-btn.main:hover{background:var(--navy-mid)}
+.sb-in{width:100%;font:inherit;font-size:1.5rem;text-align:center;letter-spacing:2px;padding:.7rem;border:2px solid var(--navy);border-radius:var(--radius);background:#fff;color:var(--ink);margin-top:.3rem}
+.sb-lab{display:block;font-size:.9rem;color:var(--muted);text-align:center}
+.sb-note{font-size:.88rem;color:var(--muted);text-align:center;margin:.4rem 0}
+#sbKb{margin-top:.8rem;user-select:none;-webkit-user-select:none}
+.sb-kr{display:flex;gap:4px;justify-content:center;margin-bottom:6px}
+.sb-key{flex:1;max-width:46px;min-width:0;padding:.85rem 0;font:inherit;font-weight:600;text-transform:uppercase;background:#fff;border:2px solid var(--navy);border-radius:var(--radius);color:var(--navy);cursor:pointer;touch-action:manipulation}
+.sb-key:hover{background:var(--gold-lt)}
+.sb-key.wide{flex:2.2;max-width:none;font-size:.8rem;text-transform:none;white-space:nowrap;overflow:hidden;background:var(--gold-lt)}
+.sb-pct{font-family:'EB Garamond',serif;font-size:3.4rem;font-weight:600;color:var(--navy);text-align:center;line-height:1.2}
+.sb-msg{text-align:center;font-weight:600;color:var(--navy);margin:.3rem 0}
+.sb-rev{overflow-x:auto;margin-top:1rem}
+.sb-tbl{width:100%;border-collapse:collapse;font-size:.92rem;background:#fff}
+.sb-tbl th,.sb-tbl td{padding:.5rem .6rem;text-align:left;border-bottom:1px solid var(--border-lt)}
+.sb-tbl th{background:var(--navy);color:#fff}
+.sb-good{color:#2F6F4E;font-weight:700}.sb-wrong{color:var(--red);font-weight:700}
+.sb-box[hidden]{display:none}
+</style>
+<div class="article-hero">
+<div class="breadcrumb"><a href="index.html#gateway">Gateway</a>  /  <a href="index.html#spelling-bee-arena">Spelling Bee Arena</a>  /  A Level (Year 1 and Year 2)</div>
+<div class="article-hero-tag">Spelling Bee Arena · A Level (Year 1 and Year 2)</div>
+<h1>Spelling Bee Test: A Level (Year 1 and Year 2)</h1>
+<p class="sub">Hear each word, spell it with the keys or your voice, and see your score at once. 100 words, auto-checked.</p>
+<div class="article-hero-meta">
+<span>EDUSAMBAM Editorial Team</span>
+<span>|</span>
+<span>100 words</span> <span>|</span> <span>Last updated: November 2026</span>
+<span>|</span>
+<span>Spelling</span>
+</div>
+</div>
+<!-- ARTICLE BODY -->
+<div class="article-wrap">
+<p class="lead">This test is for A Level students in the first and second year. It has 100 advanced words used in essays, literature and academic writing.</p>
+<p>Listen to each word, spell it, and get your score at once. Your result shows every word with your spelling next to the correct spelling, so you know exactly what to practise.</p>
+
+<h2><span class="num">1.</span>How This Test Works</h2>
+<ul>
+<li><strong>Listen.</strong> Tap the round speaker button to hear the word. The word is never shown on the screen.</li>
+<li><strong>Use hints.</strong> Tap Definition, Sentence or Origin to hear more, as judges give in a real spelling bee. Hints are spoken only.</li>
+<li><strong>Spell.</strong> Use the letter keys on the screen, or tap the microphone and say the letters one by one. The choice is yours.</li>
+<li><strong>Check.</strong> Tap the check button to go to the next word. Your answers are marked automatically at the end.</li>
+</ul>
+
+<h2><span class="num">2.</span>Take the Test</h2>
+<div class="sb-box" id="sbStart">
+<p>There are 100 words in this test, and the order changes each time. Turn up your volume before you begin.</p>
+<p class="sb-note" id="sbNoVoice" hidden>Your browser cannot read words aloud. Please open this page in Chrome, Edge or Safari.</p>
+<div class="sb-row"><button class="sb-btn main" id="sbBegin" type="button">Start the test</button></div>
+</div>
+<div class="sb-box" id="sbQuiz" hidden>
+<div class="sb-meta"><span id="sbCount"></span><span id="sbScore"></span></div>
+<div class="squiz-progress"><div class="squiz-progress-fill" id="sbFill"></div></div>
+<div class="squiz-progress-label" id="sbProgLabel">0 of 100 answered</div>
+<button class="sb-say" id="sbSay" type="button" aria-label="Hear the word">&#128266;</button>
+<div class="sb-row">
+<button class="sb-btn" id="sbSlow" type="button">Say slowly</button>
+<button class="sb-btn" id="sbDef" type="button">Definition</button>
+<button class="sb-btn" id="sbSen" type="button">Sentence</button>
+<button class="sb-btn" id="sbOrg" type="button">Origin</button>
+</div>
+<label class="sb-lab" for="sbAns">Spell the word using the keys below</label>
+<input class="sb-in" id="sbAns" type="text" readonly inputmode="none" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" maxlength="30" aria-live="polite">
+<div class="sb-row"><button class="sb-btn" id="sbMic" type="button">&#127908; Speak the letters</button></div>
+<p class="sb-note" id="sbMicMsg" role="status"></p>
+<div id="sbKb"></div>
+<div class="sb-row"><button class="sb-btn main" id="sbNext" type="button">Check and go on</button></div>
+</div>
+<div class="sb-box" id="sbResult" hidden>
+<div class="squiz-results visible">
+<div class="squiz-score-big" id="sbScoreBig">0/100</div>
+<div class="squiz-score-label" id="sbScoreLabel">You scored 0%</div>
+<div class="squiz-score-tier" id="sbTier">Keep practicing</div>
+<p class="squiz-score-label" id="sbMarks"></p>
+<div><button class="squiz-retake-btn" id="sbAgain" type="button">Retake Test</button></div>
+</div>
+<div class="sb-rev"><table class="sb-tbl">
+<thead><tr><th>#</th><th>Your spelling</th><th>Correct spelling</th><th>Result</th></tr></thead>
+<tbody id="sbRows"></tbody>
+</table></div>
+</div>
+
+<h2><span class="num">3.</span>Practice Tips</h2>
+<ul>
+<li>Read the sentence hint carefully. For hard words, think about the Greek or Latin roots, then check the spelling in the result table.</li>
+<li>Write every missed word three times, then say its letters aloud without looking.</li>
+<li>Retake the test later. The words come in a new order each time.</li>
+</ul>
+<p>The microphone option needs an internet connection and works best in Chrome on Android phones and computers. If it does not work on your device, use the letter keys.</p>
+<div class="article-footer-nav"><a href="spelling-bee-o-level.html">← Previous: O Level (Grades 8 to 10)</a><a href="index.html#gateway">Gateway</a></div>
+</div>
+<script>
+(function(){
+var W=[["acquiesce","To accept something reluctantly without protest.","The committee had to acquiesce to the new rules.","Latin"],["ubiquitous","Seeming to be present everywhere at the same time.","Smartphones have become ubiquitous in modern life.","Latin"],["ephemeral","Lasting for a very short time.","The beauty of a sunset is ephemeral.","Greek"],["ambivalent","Having mixed or opposite feelings about something.","She felt ambivalent about moving abroad.","Latin"],["paradigm","A typical example or a model of how something works.","The discovery caused a paradigm shift in physics.","Greek"],["quintessential","Being the most perfect example of a quality or type.","Tea and rain are quintessential parts of English weather.","Latin"],["idiosyncrasy","A habit or feature peculiar to one person.","His love of green ink is a harmless idiosyncrasy.","Greek"],["meticulous","Showing great attention to detail; very careful.","The scientist kept meticulous records of every test.","Latin"],["serendipity","Finding something good by chance.","Meeting my old teacher at the station was pure serendipity.","English"],["surreptitious","Done secretly, so that others do not notice.","He took a surreptitious glance at his watch.","Latin"],["ostentatious","Designed to impress others with wealth or importance.","The ostentatious mansion had gold gates.","Latin"],["magnanimous","Generous and forgiving, especially toward a rival.","The champion was magnanimous in victory.","Latin"],["clandestine","Kept secret, often because it is not allowed.","The spies held a clandestine meeting.","Latin"],["euphemism","A mild word used in place of one that sounds harsh.","Passed away is a euphemism for died.","Greek"],["juxtaposition","Placing two things side by side to show a contrast.","The poem uses the juxtaposition of light and dark.","Latin"],["dichotomy","A division into two sharply different parts or ideas.","There is a dichotomy between what he says and what he does.","Greek"],["epitome","A perfect example of a quality.","She is the epitome of kindness.","Greek"],["metaphor","A figure of speech that describes one thing as another.","Life is a journey is a common metaphor.","Greek"],["philanthropist","A person who gives money and time to help others.","The philanthropist built a school for poor children.","Greek"],["anachronism","Something placed in the wrong period of history.","A clock in a Roman play would be an anachronism.","Greek"],["bourgeoisie","The middle class of society, especially in a historical sense.","The novel describes the rise of the bourgeoisie.","French"],["camaraderie","Friendship and trust among people who spend time together.","The team enjoyed a strong sense of camaraderie.","French"],["connoisseur","An expert judge in matters of art, food or taste.","He is a connoisseur of fine tea.","French"],["rendezvous","A meeting at an agreed time and place.","We arranged a rendezvous at the library.","French"],["repertoire","All the pieces that a performer knows and can perform.","The pianist has a wide repertoire.","French"],["recalcitrant","Stubbornly refusing to obey or follow rules.","The recalcitrant mule would not move.","Latin"],["obsequious","Too eager to please or obey someone important.","The obsequious waiter bowed at every request.","Latin"],["pragmatic","Dealing with things in a practical, sensible way.","She took a pragmatic approach to the problem.","Greek"],["ineffable","Too great or deep to be put into words.","They felt an ineffable joy at the news.","Latin"],["reciprocal","Given or felt by each side toward the other.","The two countries signed a reciprocal agreement.","Latin"],["pejorative","Expressing disapproval or a low opinion.","Calling someone lazy is a pejorative remark.","Latin"],["lackadaisical","Careless and lacking enthusiasm or effort.","His lackadaisical attitude cost him the job.","English"],["schism","A split between groups, especially in a church or party.","A bitter dispute caused a schism in the party.","Greek"],["oxymoron","A phrase that joins two opposite ideas.","Deafening silence is an oxymoron.","Greek"],["cacophony","A harsh mixture of loud, unpleasant sounds.","A cacophony of horns filled the street.","Greek"],["acrimonious","Bitter and angry in tone or manner.","The meeting ended in an acrimonious argument.","Latin"],["equivocal","Open to more than one meaning; deliberately unclear.","The politician gave an equivocal reply.","Latin"],["inexorable","Impossible to stop or prevent.","The inexorable rise of the sea threatened the island.","Latin"],["spontaneous","Done naturally, without planning.","The crowd broke into spontaneous applause.","Latin"],["existential","Relating to human existence and the meaning of life.","The poem explores existential questions.","Latin"],["deleterious","Causing harm or damage.","Smoking has a deleterious effect on health.","Greek"],["gregarious","Fond of company; sociable.","A gregarious child, she made friends quickly.","Latin"],["hegemony","Leadership or dominant influence of one state or group over others.","The empire held hegemony over the region.","Greek"],["ameliorate","To make something bad become better.","New laws aim to ameliorate working conditions.","Latin"],["sycophant","A person who flatters important people to gain advantage.","The king was surrounded by sycophants.","Greek"],["vicarious","Felt through imagining another person's experience.","She enjoyed a vicarious thrill reading his travel stories.","Latin"],["vernacular","The ordinary language spoken by the people of a region.","The book was written in the vernacular.","Latin"],["eccentric","Unusual or odd in behaviour, often in an amusing way.","The eccentric professor wore mismatched socks.","Greek"],["autonomy","The freedom to govern or make decisions for oneself.","The region demanded greater autonomy.","Greek"],["mnemonic","A device, such as a rhyme, that helps you remember something.","She used a mnemonic to recall the planets.","Greek"],["abstruse","Difficult to understand.","The professor's lecture was abstruse.","Latin"],["aesthetic","Concerned with beauty and art.","The architect cared about the aesthetic of the building.","Greek"],["altruism","Unselfish concern for the welfare of others.","Her altruism led her to volunteer at the hospital.","French"],["anomaly","Something that differs from what is normal.","The warm day in January was an anomaly.","Greek"],["apathy","Lack of interest or concern.","Voter apathy led to a low turnout.","Greek"],["assiduous","Showing steady and careful effort.","He was an assiduous student who never missed class.","Latin"],["benevolent","Kind and generous toward others.","The benevolent king fed the poor.","Latin"],["bellicose","Eager to fight or start a quarrel.","The bellicose leader threatened his neighbours.","Latin"],["capricious","Changing mood or behaviour suddenly and without reason.","The capricious weather ruined our picnic.","Italian"],["charisma","A special charm that attracts and inspires people.","The speaker's charisma won over the crowd.","Greek"],["cogent","Clear, logical and convincing.","She made a cogent argument for change.","Latin"],["conflagration","A large and destructive fire.","The conflagration destroyed the old warehouse.","Latin"],["copious","Plentiful; in large amounts.","He took copious notes during the lecture.","Latin"],["corroborate","To support a statement with evidence.","A witness came forward to corroborate her story.","Latin"],["culpable","Deserving blame.","The driver was held culpable for the accident.","Latin"],["debacle","A complete and embarrassing failure.","The final match was a debacle for our team.","French"],["denouement","The final part of a story where everything is explained.","The novel's denouement surprised every reader.","French"],["didactic","Intended to teach, often with a moral lesson.","The fable is didactic in tone.","Greek"],["dogmatic","Insisting that your own beliefs are right.","He was too dogmatic to hear other views.","Greek"],["eloquent","Able to speak or write clearly and persuasively.","The eloquent speaker moved the audience.","Latin"],["empirical","Based on observation and experiment, not just theory.","The study offered empirical evidence.","Greek"],["enigma","A person or thing that is mysterious and hard to understand.","The old man remained an enigma to the villagers.","Greek"],["erudite","Having or showing great knowledge from study.","The erudite scholar read in five languages.","Latin"],["esoteric","Understood only by a small group with special knowledge.","The club discussed esoteric poetry.","Greek"],["facetious","Joking at an inappropriate time.","Her facetious remark annoyed the teacher.","Latin"],["fastidious","Very careful about details; hard to please.","He is fastidious about keeping his desk tidy.","Latin"],["fallacy","A mistaken belief or faulty argument.","It is a fallacy that money brings happiness.","Latin"],["garrulous","Talking a great deal, especially about unimportant things.","The garrulous neighbour chatted for an hour.","Latin"],["iconoclast","A person who attacks traditional beliefs or customs.","The artist was an iconoclast who broke every rule.","Greek"],["impeccable","Perfect; without fault.","Her manners were impeccable.","Latin"],["impetuous","Acting quickly without thinking.","His impetuous decision caused problems.","Latin"],["incongruous","Out of place; not fitting with surroundings.","A modern phone looked incongruous in the old museum.","Latin"],["indolent","Lazy; avoiding effort.","The indolent student never finished his homework.","Latin"],["insidious","Slowly causing harm in a hidden way.","Pollution is an insidious threat to health.","Latin"],["laconic","Using very few words.","His laconic reply was just one word.","Greek"],["loquacious","Tending to talk a lot.","The loquacious guest dominated the dinner.","Latin"],["melancholy","A deep, lasting sadness.","A feeling of melancholy filled the autumn evening.","Greek"],["nefarious","Wicked or criminal.","The villain made a nefarious plan.","Latin"],["nostalgia","A longing for the happy past.","He felt nostalgia for his school days.","Greek"],["obfuscate","To make something unclear or confusing.","The report tried to obfuscate the facts.","Latin"],["paradox","A statement that seems contradictory but may be true.","It is a paradox that silence can be loud.","Greek"],["pernicious","Very harmful in a gradual way.","Rumors can have a pernicious effect on trust.","Latin"],["perfunctory","Done quickly without care or interest.","He gave the room a perfunctory glance.","Latin"],["pretentious","Trying to seem more important or clever than one is.","The pretentious menu used needlessly fancy words.","French"],["quixotic","Idealistic in an unrealistic way.","They began a quixotic search for a perfect city.","Spanish"],["soliloquy","A speech in which a character speaks thoughts aloud alone.","Hamlet's soliloquy is famous.","Latin"],["stoic","Enduring pain or hardship without complaint.","The stoic soldier did not complain.","Greek"],["tenacious","Holding firmly to a goal; determined.","The tenacious climber reached the summit.","Latin"],["vindicate","To clear someone of blame; to prove right.","New evidence will vindicate the accused.","Latin"],["zeitgeist","The spirit or mood of a particular period.","The film captured the zeitgeist of the 1960s.","German"]];
+var $=function(i){return document.getElementById(i)};
+var order,idx,answers,voice=null;
+var ok=("speechSynthesis" in window);
+if(!ok){$("sbNoVoice").hidden=false}
+function pickVoice(){if(!ok)return;var v=speechSynthesis.getVoices();voice=v.filter(function(x){return /^en[-_](US|GB|AU|IN)/i.test(x.lang)})[0]||v.filter(function(x){return /^en/i.test(x.lang)})[0]||null}
+if(ok){pickVoice();speechSynthesis.onvoiceschanged=pickVoice}
+function speak(t,r){if(!ok)return;speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(t);u.lang="en-US";u.rate=r||0.85;if(voice)u.voice=voice;speechSynthesis.speak(u)}
+function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
+function cur(){return order[idx]}
+function norm(s){return s.trim().toLowerCase()}
+function show(id){["sbStart","sbQuiz","sbResult"].forEach(function(s){$(s).hidden=(s!==id)})}
+function begin(){order=shuffle(W);idx=0;answers=[];show("sbQuiz");render()}
+function render(){
+  $("sbCount").textContent="Word "+(idx+1)+" of "+order.length;
+  $("sbScore").textContent="Answered: "+answers.length;
+  $("sbFill").style.width=(answers.length/order.length*100)+"%";
+  $("sbProgLabel").textContent=answers.length+" of "+order.length+" answered";
+  $("sbAns").value="";
+  $("sbNext").textContent=(idx===order.length-1)?"Check and finish":"Check and go on";
+  setTimeout(function(){speak(cur()[0])},300);
+}
+function next(){
+  stopMic();
+  var v=$("sbAns").value;
+  if(!norm(v))return;
+  answers.push(v);
+  if(idx<order.length-1){idx++;render()}else{finish()}
+}
+function finish(){
+  if(ok)speechSynthesis.cancel();
+  var n=0,t=order.length;
+  order.forEach(function(w,i){if(norm(answers[i])===w[0])n++});
+  var p=Math.round(n/t*100);
+  $("sbFill").style.width="100%";
+  $("sbProgLabel").textContent=t+" of "+t+" answered";
+  $("sbScoreBig").textContent=n+"/"+t;
+  $("sbScoreLabel").textContent="You scored "+p+"%";
+  $("sbMarks").textContent="Marks obtained: "+n+" out of "+t+" (1 mark for each correct spelling)";
+  $("sbTier").textContent=p===100?"Perfect score!":p>=80?"Excellent work":p>=60?"Good effort":p>=40?"Getting there":"Keep practicing";
+  var tb=$("sbRows");tb.textContent="";
+  order.forEach(function(w,i){
+    var good=norm(answers[i])===w[0];
+    var tr=document.createElement("tr");
+    [i+1,answers[i],w[0]].forEach(function(c){var td=document.createElement("td");td.textContent=c;tr.appendChild(td)});
+    var m=document.createElement("td");m.textContent=good?"Correct":"Wrong";m.className=good?"sb-good":"sb-wrong";tr.appendChild(m);
+    tb.appendChild(tr);
+  });
+  show("sbResult");$("sbResult").scrollIntoView({behavior:"smooth",block:"start"});
+}
+function typeKey(c){var a=$("sbAns");if(a.value.length<30)a.value+=c}
+function backKey(){var a=$("sbAns");a.value=a.value.slice(0,-1)}
+var kb=$("sbKb");
+["qwertyuiop","asdfghjkl","zxcvbnm"].forEach(function(r,i){
+  var d=document.createElement("div");d.className="sb-kr";
+  r.split("").forEach(function(c){var b=document.createElement("button");b.type="button";b.className="sb-key";b.textContent=c;b.onclick=function(){typeKey(c)};d.appendChild(b)});
+  if(i===2){var x=document.createElement("button");x.type="button";x.className="sb-key wide";x.textContent="Delete";x.onclick=backKey;d.appendChild(x)}
+  kb.appendChild(d);
+});
+document.addEventListener("keydown",function(e){
+  if($("sbQuiz").hidden||e.ctrlKey||e.metaKey||e.altKey)return;
+  var tg=e.target.tagName;
+  if(tg==="BUTTON"||tg==="INPUT"&&e.target.type==="search")return;
+  if(e.target.closest&&e.target.closest(".edusambam-search-panel"))return;
+  if(/^[a-zA-Z]$/.test(e.key)){typeKey(e.key.toLowerCase())}
+  else if(e.key==="Backspace"){e.preventDefault();backKey()}
+  else if(e.key==="Enter"){e.preventDefault();next()}
+});
+$("sbBegin").onclick=begin;
+$("sbAgain").onclick=begin;
+$("sbSay").onclick=function(){speak(cur()[0])};
+$("sbSlow").onclick=function(){speak(cur()[0],0.5)};
+$("sbDef").onclick=function(){speak("Definition: "+cur()[1])};
+$("sbSen").onclick=function(){speak("Sentence: "+cur()[2])};
+$("sbOrg").onclick=function(){speak("Language of origin: "+cur()[3])};
+$("sbNext").onclick=next;
+var rec=null,listening=false;
+var SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+var LET={bee:"b",be:"b",see:"c",sea:"c",dee:"d",gee:"g",jay:"j",kay:"k",ay:"a",eh:"a",are:"r",you:"u",why:"y",oh:"o",owe:"o",pee:"p",tea:"t",tee:"t",queue:"q",cue:"q",ex:"x",eye:"i",aye:"i",es:"s",ess:"s",el:"l",em:"m",en:"n",zee:"z",zed:"z",aitch:"h",ef:"f",eff:"f",ell:"l",vee:"v"};
+function toLetters(t){
+  t=t.toLowerCase().replace(/double\s*(u|you)/g," w ").replace(/[^a-z\s]/g," ");
+  var out="",bad=0;
+  t.split(/\s+/).forEach(function(s){if(!s)return;if(s.length===1){out+=s}else if(LET[s]){out+=LET[s]}else{bad++}});
+  return {letters:out,bad:bad};
+}
+function stopMic(){
+  if(rec&&listening){try{rec.abort()}catch(e){}}
+  listening=false;$("sbMic").textContent="\uD83C\uDFA4 Speak the letters";
+}
+if(!SR){$("sbMic").hidden=true}else{
+  $("sbMic").onclick=function(){
+    if(listening){stopMic();$("sbMicMsg").textContent="";return}
+    if(ok)speechSynthesis.cancel();
+    rec=new SR();rec.lang="en-US";rec.continuous=false;rec.interimResults=false;
+    rec.onstart=function(){listening=true;$("sbMic").textContent="\u23F9 Stop listening";$("sbMicMsg").textContent="Listening... say the letters one by one."};
+    rec.onresult=function(e){
+      var r=toLetters(e.results[0][0].transcript);
+      for(var i=0;i<r.letters.length;i++)typeKey(r.letters[i]);
+      $("sbMicMsg").textContent=r.bad?"Some sounds were not understood. Check the letters, then use Delete or the keys to fix them.":"Check the letters in the box.";
+    };
+    rec.onerror=function(e){
+      var m="The microphone did not work. Please use the keys.";
+      if(e.error==="not-allowed"||e.error==="service-not-allowed")m="Microphone is blocked. Allow it in the browser settings, or use the keys.";
+      else if(e.error==="no-speech")m="No voice heard. Tap the microphone and try again.";
+      else if(e.error==="network")m="The microphone needs an internet connection.";
+      $("sbMicMsg").textContent=m;
+    };
+    rec.onend=function(){listening=false;$("sbMic").textContent="\uD83C\uDFA4 Speak the letters"};
+    try{rec.start()}catch(err){$("sbMicMsg").textContent="Please try again."}
+  };
+}
+})();
+</script>
+<script id="edusambam-unified-nav-js">
+(function(){
+  let pages=[];fetch('nav-search-index.json').then(r=>r.json()).then(d=>{pages=d;});
+  function closeAll(except){
+    document.querySelectorAll('.edusambam-mobile-menu,.edusambam-search-panel').forEach(el=>{
+      if(el!==except) el.classList.remove('open');
+    });
+    const b=document.querySelector('.edusambam-menu-btn');
+    if(b) b.setAttribute('aria-expanded', String(document.querySelector('.edusambam-mobile-menu')?.classList.contains('open')||false));
+  }
+  function setup(){
+    const menu=document.querySelector('.edusambam-mobile-menu');
+    const mb=document.querySelector('.edusambam-menu-btn');
+    const sb=document.querySelector('.edusambam-search-btn');
+    const panel=document.querySelector('.edusambam-search-panel');
+    const input=document.querySelector('.edusambam-search-input');
+    const results=document.querySelector('.edusambam-search-results');
+    if(mb && menu){
+      mb.addEventListener('click',()=>{
+        const open=menu.classList.toggle('open'); closeAll(open?menu:null);
+        mb.setAttribute('aria-expanded',String(open));
+        if(open) panel?.classList.remove('open');
+      });
+    }
+    if(sb && panel){
+      sb.addEventListener('click',()=>{
+        const open=panel.classList.toggle('open'); closeAll(open?panel:null);
+        if(open) setTimeout(()=>input?.focus(),30);
+      });
+    }
+    if(input && results){
+      const norm=s=>(' '+String(s||'').toLowerCase().replace(/&/g,' and ').replace(/[^a-z0-9]+/g,' ')+' ');
+      const stop={and:1,the:1,of:1,a:1,an:1,to:1,in:1,is:1,for:1};
+      const render=()=>{
+        const q=input.value.trim().toLowerCase();
+        let words=norm(q).trim().split(' ').filter(Boolean);
+        const sig=words.filter(w=>!stop[w]); if(sig.length) words=sig;
+        let hits=[];
+        if(q&&words.length){
+          const forms=w=>{const f=[w]; if(w.length>3&&w.endsWith('s')) f.push(w.slice(0,-1)); if(w.length>4&&w.endsWith('es')) f.push(w.slice(0,-2)); if(w.length>5&&w.endsWith('ing')) f.push(w.slice(0,-3)); if(w.length>4&&w.endsWith('ed')) f.push(w.slice(0,-2)); return f;};
+          const scored=[];
+          pages.forEach(x=>{
+            const t=norm(x.title), m=norm(String(x.url||'').replace(/[-_.]/g,' ')+' '+(x.s||'')+' '+(x.k||''));
+            let sc=0, ok=true;
+            for(const w of words){
+              const f=forms(w);
+              if(f.some(v=>t.includes(' '+v))) sc+=3;
+              else if(f.some(v=>m.includes(' '+v))) sc+=1;
+              else { ok=false; break; }
+            }
+            if(ok) scored.push([sc,x]);
+          });
+          scored.sort((a,b)=>b[0]-a[0]);
+          hits=scored.map(z=>z[1]);
+          if(!hits.length) hits=pages.filter(x=>(x.title+' '+x.url).toLowerCase().includes(q));
+          hits=hits.slice(0,30);
+        }
+        results.innerHTML=hits.map(x=>'<a href="'+x.url.replace(/"/g,'&quot;')+'">'+
+          x.title.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</a>').join('') ||
+          (q?'<div style="padding:10px;color:#64748b">No matching pages found.</div>':'');
+      };
+      input.addEventListener('input',render);
+    }
+    document.addEventListener('keydown',e=>{
+      if(e.key==='Escape') closeAll(null);
+    });
+    document.addEventListener('click',e=>{
+      if(!e.target.closest('.edusambam-nav') && !e.target.closest('.edusambam-mobile-menu') && !e.target.closest('.edusambam-search-panel')) closeAll(null);
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',setup); else setup();
+})();
+</script>
+<footer aria-label="EDUSAMBAM site footer" class="edusambam-unified-footer">
+<div class="footer-top">
+<div class="footer-brand">
+<div class="edusambam-footer-brand-row">
+<a aria-label="EDUSAMBAM home" class="edusambam-footer-logo-link" href="index.html">
+<img alt="EDUSAMBAM" class="edusambam-brand-mark edusambam-footer-logo" src="logo-icon-full-white.png" style="width:auto;height:64px;max-width:240px;object-fit:contain;background:none;border-radius:0;"/>
+</a>
+</div>
+<p class="edusambam-footer-statement">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</p>
+<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a><a aria-label="EDUSAMBAM on YouTube" href="https://youtube.com/@edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></div>
+</div>
+<div class="footer-col"><h4>Learning Areas</h4><ul><li><a href="index.html#subject-english">English Language</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ ARENA</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li><li><a href="index.html#spelling-bee-arena">SPELLING BEE ARENA</a></li><li><a href="index.html#english-vocabulary-amp-word-skills">Vocabulary Building</a></li></ul></div>
+<div class="footer-col"><h4>Practice &amp; Assessment</h4><ul>
+<li><a href="index.html#interactive-activities">Interactive Activities</a></li>
+<li><a href="assessment-arena.html">Assessment Arena</a></li>
+<li><a href="index.html#resources">Downloadable Resources</a></li>
+</ul></div>
+<div class="footer-col"><h4>About EDUSAMBAM</h4><ul>
+<li><a href="index.html#mission">Our Mission</a></li>
+<li><a href="index.html#team">The Team</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="mailto:feedback.edusambam@gmail.com?subject=EDUSAMBAM%20Feedback">Give Feedback</a></li>
+<li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+<li><a href="about.html">About EDUSAMBAM</a></li>
+<li><a href="privacy-policy.html">Privacy Policy</a></li>
+</ul></div>
+</div>
+<div class="footer-bottom"><p>© 2026 EDUSAMBAM · Learning resources, practice and assessment.</p><ul class="footer-bottom-links">
+<li><a href="#top">Back to Top</a></li>
+<li><a href="index.html#mission">Mission</a></li>
+<li><a href="index.html#team">Team</a></li>
+<li><a href="index.html#resources">Downloadable Resources</a></li>
+</ul></div>
+</footer></body>
+</html>

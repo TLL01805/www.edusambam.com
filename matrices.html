@@ -12,38 +12,23 @@ gtag('config', 'G-Y35DW0V4HQ');
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Matrices: Operations, Determinants &amp; Transformations — EDUSAMBAM</title>
+<title>Matrices: Operations, Determinants &amp; Inverses — EDUSAMBAM</title>
 <link href="https://edusambam.com/matrices.html" rel="canonical"/>
-<meta content="A complete guide to matrix arithmetic, determinants, inverses, solving simultaneous equations with matrices, and using matrices for reflection and rotation." name="description"/>
+<meta content="Learn 2×2 matrices: add, multiply, find determinants and inverses, solve simultaneous equations and describe transformations, with examples and a quiz." name="description"/>
 <meta content="matrices, matrix multiplication, determinant, inverse matrix, matrix simultaneous equations, transformation matrix, O Level maths matrices" name="keywords"/>
 <meta content="EDUSAMBAM Editorial Team" name="author"/>
 <meta content="index, follow" name="robots"/>
 <meta property="og:type" content="article"/>
 <meta property="og:site_name" content="EDUSAMBAM"/>
-<meta property="og:title" content="Matrices: Operations, Determinants &amp; Transformations"/>
-<meta property="og:description" content="A complete guide to matrix arithmetic, determinants, inverses, solving simultaneous equations with matrices, and using matrices for reflection and rotation."/>
+<meta property="og:title" content="Matrices: Operations, Determinants &amp; Inverses"/>
+<meta property="og:description" content="Learn 2×2 matrices: add, multiply, find determinants and inverses, solve simultaneous equations and describe transformations, with examples and a quiz."/>
 <meta property="og:url" content="https://edusambam.com/matrices.html"/>
+<meta property="og:image" content="https://edusambam.com/logo-icon-full.png"/>
 <meta property="article:section" content="Mathematics"/>
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Matrices: Operations, Determinants &amp; Transformations"/>
-<meta name="twitter:description" content="A complete guide to matrix arithmetic, determinants, inverses, solving simultaneous equations with matrices, and using matrices for reflection and rotation."/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LearningResource",
-  "headline": "Matrices: Operations, Determinants & Transformations",
-  "description": "A complete guide to matrix arithmetic, determinants, inverses, solving simultaneous equations with matrices, and using matrices for reflection and rotation.",
-  "url": "https://edusambam.com/matrices.html",
-  "learningResourceType": "Article",
-  "educationalLevel": "O Level / IGCSE",
-  "about": "Mathematics - Matrices",
-  "publisher": {
-    "@type": "Organization",
-    "name": "EDUSAMBAM",
-    "url": "https://edusambam.com"
-  }
-}
-</script>
+<meta name="twitter:title" content="Matrices: Operations, Determinants &amp; Inverses"/>
+<meta name="twitter:description" content="Learn 2×2 matrices: add, multiply, find determinants and inverses, solve simultaneous equations and describe transformations, with examples and a quiz."/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "headline": "Matrices: Operations, Determinants & Transformations", "description": "A complete guide to matrix arithmetic, determinants, inverses, solving simultaneous equations with matrices, and using matrices for reflection and rotation.", "url": "https://edusambam.com/matrices.html", "learningResourceType": "Article", "educationalLevel": "O Level / IGCSE", "about": "Mathematics - Matrices", "publisher": {"@type": "Organization", "name": "EDUSAMBAM", "url": "https://edusambam.com"}}</script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
@@ -1007,13 +992,156 @@ footer.footer {
 }
 </style><style id="edusambam-footer-social-css">.edusambam-footer-social{margin-top:14px}.edusambam-footer-social a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);color:rgba(255,255,255,.85);transition:background .15s,color .15s}.edusambam-footer-social a:hover{background:rgba(255,255,255,.22);color:#fff}</style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2230995786427221"
      crossorigin="anonymous"></script>
+<style id="edusambam-math-extra">
+details.sn-answer{background:var(--cream);border:1px solid var(--border);border-left:4px solid var(--navy);border-radius:var(--radius);padding:.9rem 1.2rem;margin:0 0 1.8rem}
+details.sn-answer summary{cursor:pointer;font-weight:600;color:var(--navy)}
+details.sn-answer p{margin:.6rem 0 0}
+.edusambam-footer-social a+a{margin-left:10px}
+.fun-fact-box{
+    background: linear-gradient(135deg, rgba(212,175,55,0.12), rgba(212,175,55,0.04));
+    border: 1.5px dashed var(--gold);
+    border-radius: var(--radius);
+    padding: 1.3rem 1.5rem;
+    margin: 1.8rem 0;
+    position: relative;
+  }
+.fun-fact-label{
+    font-weight: 700;
+    color: var(--red);
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+.fun-fact-box p{ margin: 0; }
+.fixit-challenge{
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-left: 5px solid var(--red);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.4rem;
+    margin: 1.2rem 0;
+  }
+.fixit-wrong{
+    font-family: 'EB Garamond', serif;
+    font-size: 1.15rem;
+    color: var(--red);
+    text-decoration: line-through;
+    margin-bottom: 0.4rem;
+  }
+.fixit-toggle-btn{
+    background: none;
+    border: 1.5px solid var(--red);
+    color: var(--red);
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.4rem 0.9rem;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 0.3rem;
+  }
+.fixit-explain{ display: none; margin-top: 0.7rem; padding-top: 0.7rem; border-top: 1px dashed rgba(0,0,0,0.15); }
+.fixit-explain.visible{ display: block; }
+.drill-section{
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 2rem 1.7rem;
+    margin-top: 3rem;
+  }
+.drill-section .section-eyebrow{ color: var(--gold); }
+.drill-section h2{ border: none; margin: 0 0 0.4rem; padding: 0; color: white; }
+.drill-intro{ color: rgba(255,255,255,0.65); font-size: 0.95rem; margin-bottom: 1.5rem; }
+.drill-btn{
+    background: var(--red);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 0.55rem 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+.drill-btn:hover{ background: var(--red-mid); }
+.drill-feedback{ margin-top: 1.2rem; color: white; font-size: 0.95rem; min-height: 1.4rem; }
+.nl-drill-progress{ color: var(--gold); text-align: center; font-size: 0.85rem; margin-bottom: 0.6rem; letter-spacing: 0.03em; }
+.nl-drill-actions{ display: flex; justify-content: center; gap: 0.8rem; margin-top: 1rem; flex-wrap: wrap; }
+.pv-info-panel{
+    background: var(--gold-lt);
+    border: 1px solid rgba(184,150,62,0.35);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.4rem;
+    margin-top: 1rem;
+    min-height: 34px;
+  }
+.pv-info-placeholder{ color: var(--slate); font-style: italic; margin: 0; }
+.pv-info-result{ margin: 0; font-size: 1rem; }
+.pv-info-result strong{ color: var(--red); }
+.pv-drill-question{ color: white; font-size: 1.1rem; font-weight: 600; text-align: center; margin-bottom: 1.3rem; }
+.pv-drill-choices{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.8rem; margin-bottom: 1rem; }
+@media (max-width: 600px){.pv-drill-choices{ grid-template-columns: 1fr; }}
+.pv-choice-btn{
+    background: rgba(255,255,255,0.08);
+    border: 1.5px solid rgba(255,255,255,0.25);
+    color: white;
+    padding: 0.8rem 1rem;
+    border-radius: var(--radius);
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.95rem;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.15s;
+  }
+.pv-choice-btn:hover{ background: rgba(212,175,55,0.18); border-color: var(--gold); }
+.pv-choice-btn.correct{ background: rgba(76,175,80,0.35); border-color: #4CAF50; }
+.pv-choice-btn.incorrect{ background: rgba(229,115,115,0.35); border-color: #E57373; }
+.pv-choice-btn:disabled{ cursor: default; }
+.ns-chip-row{ display: flex; gap: 0.6rem; flex-wrap: wrap; justify-content: center; margin: 1.3rem 0; }
+.ns-chip{
+    background: #fff; border: 2px solid var(--border); border-radius: 30px;
+    padding: 0.5rem 1.1rem; font-size: 1.05rem; font-weight: 700;
+    font-family: 'Source Sans 3', sans-serif; color: var(--navy);
+    cursor: pointer; transition: all 0.15s;
+  }
+.ns-chip:hover{ border-color: var(--gold); background: rgba(212,175,55,0.1); }
+.ns-chip.active{ background: var(--red); color: #fff; border-color: var(--red); }
+.cv{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;line-height:1.15;border-left:2px solid currentColor;border-right:2px solid currentColor;border-radius:6px;padding:0 .4rem;margin:0 .15rem;font-weight:600}
+.cv span{display:block}
+.mx{display:inline-grid;grid-template-columns:repeat(var(--c,2),auto);gap:.12rem .75rem;vertical-align:middle;text-align:center;padding:.05rem .55rem;margin:0 .15rem;border-left:2px solid currentColor;border-right:2px solid currentColor;border-radius:8px;line-height:1.25;font-weight:600}
+.mx span{display:block}
+.example-box,.fixit-explain,.pv-info-result{overflow-x:auto}
+.tf-ex-wrap{text-align:center;margin:.5rem 0 1rem}.tf-ex-wrap svg{max-width:100%;height:auto;background:#fff;border:1px solid var(--border);border-radius:var(--radius)}
+.mx-calc{display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap;margin:1rem 0}
+.mx-in-wrap{text-align:center}.mx-in-label{font-weight:700;color:var(--navy);margin-bottom:.3rem}
+.mx-in{display:grid;grid-template-columns:repeat(2,3.6rem);gap:.4rem}
+.mx-in input{width:100%;box-sizing:border-box;font-size:1.05rem;padding:.45rem .3rem;text-align:center;border:1px solid var(--border);border-radius:8px;background:#fff;color:var(--navy)}
+.mx-pulse{animation:mx-p 2.6s ease-in-out infinite}
+@keyframes mx-p{0%,100%{opacity:1}50%{opacity:.35}}
+.mx-rowa{animation:mx-a 6s ease-in-out infinite}
+.mx-colb{animation:mx-b 6s ease-in-out infinite}
+.mx-res{animation:mx-c 6s ease-in-out infinite}
+@keyframes mx-a{0%{opacity:0}10%,100%{opacity:1}}
+@keyframes mx-b{0%,25%{opacity:0}35%,100%{opacity:1}}
+@keyframes mx-c{0%,55%{opacity:0}65%,95%{opacity:1}100%{opacity:0}}
+.mx-morph{animation:mx-m 8s ease-in-out infinite}
+@keyframes mx-m{0%,10%{transform:matrix(1,0,0,1,0,0)}60%,90%{transform:matrix(3,0,1,2,0,0)}100%{transform:matrix(1,0,0,1,0,0)}}
+.mx-morph2{animation:mx-m2 8s ease-in-out infinite}
+@keyframes mx-m2{0%,10%{transform:matrix(1,0,0,1,0,0)}60%,90%{transform:matrix(2,1,-1,1,0,0)}100%{transform:matrix(1,0,0,1,0,0)}}
+.mx-imgfade{animation:mx-i .7s ease-out}
+@keyframes mx-i{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.mx-pulse,.mx-rowa,.mx-colb,.mx-res,.mx-morph,.mx-morph2,.mx-imgfade{animation:none}.mx-rowa,.mx-colb,.mx-res{opacity:1}}
+</style>
 </head>
 <body id="top">
 <!-- TOP BAR -->
 <div class="top-bar">
 <p>Established 2026  ·  Free Educational Resources for All</p>
 <ul class="top-bar-links">
-<li><a href="contact.html">Contact</a></li><li><a href="index.html#about-edusambam">About</a></li><li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+<li><a href="contact.html">Contact</a></li><li><a href="about.html">About</a></li><li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
 </ul>
 </div>
 <!-- NAV -->
@@ -1025,13 +1153,13 @@ footer.footer {
 <span class="edusambam-brand-subtitle">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</span>
 </span>
 </a>
-<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li></ul>
+<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Language</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ</a></li><li><a href="index.html#resources">Resources</a></li></ul>
 <button aria-label="Search" class="edusambam-search-btn" title="Search" type="button">⌕</button>
 <button aria-expanded="false" aria-label="Open menu" class="edusambam-menu-btn" title="Menu" type="button">☰</button>
 </div>
 </nav>
 <div aria-label="Mobile navigation" class="edusambam-mobile-menu">
-<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="index.html#subject-assessment">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="index.html#about-edusambam">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
+<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Language</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ ARENA</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li><li><a href="index.html#spelling-bee-arena">SPELLING BEE ARENA</a></li><li><a href="index.html#english-vocabulary-amp-word-skills">Vocabulary Building</a></li><li><a href="index.html#resources">Downloadable Resources</a></li><li class="edusambam-menu-extra"><a href="index.html#subject-assessment">Assessment Arena</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="about.html">About EDUSAMBAM</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
 </div>
 <div aria-label="Site search" class="edusambam-search-panel">
 <div class="edusambam-search-wrap">
@@ -1041,134 +1169,451 @@ footer.footer {
 </div>
 <!-- ARTICLE HERO -->
 <div class="article-hero">
-<div class="breadcrumb"><a href="index.html#gateway">Gateway</a> &nbsp;/&nbsp; <a href="index.html#subject-maths">Maths</a> &nbsp;/&nbsp; Matrices: Operations, Determinants &amp; Transformations</div>
+<div class="breadcrumb"><a href="index.html#gateway">Gateway</a> &nbsp;/&nbsp; <a href="index.html#subject-maths">Maths</a> &nbsp;/&nbsp; Matrices</div>
 <div class="article-hero-tag">Mathematics · Sets &amp; Matrices</div>
 <h1>Matrices: Operations, Determinants &amp; Transformations</h1>
-<p class="sub">A complete guide to matrix arithmetic, determinants, inverses, solving simultaneous equations, and transformation matrices for reflection and rotation.</p>
+<p class="sub">From adding tables of numbers to solving equations and describing reflections and rotations, learn the whole 2 × 2 matrix toolkit with worked examples and checks.</p>
 <div class="article-hero-meta">
-<span>EDUSAMBAM Editorial Team</span><span>|</span><span>22 min read</span><span>|</span><span>Mathematics</span>
+<span>EDUSAMBAM Editorial Team</span><span>|</span><span>27 min read</span><span>|</span><span>Last updated: November 2026</span><span>|</span><span>Mathematics</span>
 </div>
 </div><div aria-label="EDUSAMBAM article reader" class="edusambam-reader"><strong>🔊 LISTEN TO THIS ARTICLE</strong><div class="reader-slogan">SAVE YOUR EYES • IMPROVE YOUR LISTENING</div><div class="reader-help">Listen to the article instead of relying only on continuous screen reading.</div><div class="reader-controls"><button data-reader="play" type="button">▶ Play</button><button data-reader="pause" type="button">⏸ Pause</button><button data-reader="resume" type="button">▶ Resume</button><button data-reader="stop" type="button">■ Stop</button><select aria-label="Reading speed"><option value="1">1×</option><option value="0.8">0.8×</option><option value="1.2">1.2×</option></select></div><div aria-hidden="true" class="reader-progress"><span></span></div><small class="reader-status">Ready to read the article.</small></div>
 <!-- ARTICLE BODY -->
 <div class="article-wrap">
-<p class="lead">A <strong>matrix</strong> is a rectangular grid of numbers, arranged in rows and columns, used to organise data and perform calculations efficiently. Matrices have their own arithmetic — addition, subtraction, multiplication, and special quantities like the determinant and inverse — and one of their most striking applications is representing the geometric transformations covered earlier in this subcategory as a single multiplication. This guide builds matrix arithmetic from the ground up and connects it directly to reflection and rotation.</p>
-
-<div class="diagram-box">
-<svg viewBox="0 0 760 330" role="img" aria-labelledby="matTitle matDesc">
-<title id="matTitle">Matrices learning pathway</title>
-<desc id="matDesc">A pathway from matrix notation through arithmetic operations to determinants, inverses, and transformation matrices.</desc>
-<defs><linearGradient id="matG" x1="0" x2="1"><stop offset="0" stop-color="#06244a"/><stop offset="1" stop-color="#0b4ea2"/></linearGradient></defs>
-<rect x="0" y="0" width="760" height="330" rx="18" fill="#faf8f4"/>
-<path d="M90 165 H670" stroke="#d4a017" stroke-width="5"/>
-<g font-family="Arial, sans-serif" text-anchor="middle">
-<g><circle cx="90" cy="165" r="55" fill="url(#matG)"/><text x="90" y="160" fill="white" font-size="14" font-weight="700">NOTATION &amp;</text><text x="90" y="178" fill="white" font-size="14" font-weight="700">ORDER</text><text x="90" y="197" fill="#d4a017" font-size="12">rows × columns</text></g>
-<g><circle cx="235" cy="165" r="55" fill="white" stroke="#d4a017" stroke-width="3"/><text x="235" y="158" fill="#06244a" font-size="13" font-weight="700">ADD, SCALE,</text><text x="235" y="176" fill="#06244a" font-size="13" font-weight="700">MULTIPLY</text><text x="235" y="195" fill="#4a4a4a" font-size="12">matrix arithmetic</text></g>
-<g><circle cx="380" cy="165" r="55" fill="white" stroke="#d4a017" stroke-width="3"/><text x="380" y="158" fill="#06244a" font-size="13" font-weight="700">DETERMINANT</text><text x="380" y="176" fill="#06244a" font-size="13" font-weight="700">&amp; INVERSE</text><text x="380" y="195" fill="#4a4a4a" font-size="12">2×2 matrices</text></g>
-<g><circle cx="525" cy="165" r="55" fill="white" stroke="#d4a017" stroke-width="3"/><text x="525" y="158" fill="#06244a" font-size="13" font-weight="700">SIMULTANEOUS</text><text x="525" y="176" fill="#06244a" font-size="13" font-weight="700">EQUATIONS</text><text x="525" y="195" fill="#4a4a4a" font-size="12">matrix method</text></g>
-<g><circle cx="670" cy="165" r="55" fill="url(#matG)"/><text x="670" y="158" fill="white" font-size="13" font-weight="700">TRANSFORMATION</text><text x="670" y="176" fill="white" font-size="13" font-weight="700">MATRICES</text><text x="670" y="195" fill="#d4a017" font-size="12">reflection, rotation</text></g>
-<text x="380" y="45" fill="#06244a" font-size="21" font-weight="700">FROM GRIDS OF NUMBERS TO GEOMETRIC TRANSFORMATIONS</text>
-<text x="380" y="292" fill="#767676" font-size="13">Matrix multiplication is the single operation that connects every later application.</text>
-</g>
-</svg>
-<div class="diagram-caption">Figure 1. Matrix arithmetic underpins determinants, inverses, solving equations, and describing transformations. Diagram created specifically for EDUSAMBAM.</div>
-</div>
+<p class="lead">Every shop keeps a table of what it sells: items down the side, days across the top, numbers in the boxes. A <strong>matrix</strong> is exactly that, a rectangular grid of numbers in rows and columns, with its own rules for adding, multiplying and “dividing”. Those rules let you combine whole tables at once, solve simultaneous equations in a single line, and describe a reflection or a rotation with four numbers. This guide builds matrix arithmetic from the start and ends with the link to <a href="transformations.html">Transformations</a>, where matrices become really powerful.</p>
 
 <h2><span class="num">1.</span>What Is a Matrix?</h2>
-<p>A matrix is written as a grid of numbers inside brackets, e.g. (1 2 over 3 4). Each number is called an <strong>element</strong>, and its position is described by its row and column.</p>
-
-<h2><span class="num">2.</span>Matrix Notation and Order</h2>
-<p>The <strong>order</strong> of a matrix is given as (number of rows) × (number of columns). A matrix with 2 rows and 3 columns has order 2 × 3. This course focuses mainly on <strong>2 × 2</strong> matrices, the most common size in O Level work.</p>
-
-<h2><span class="num">3.</span>Matrix Addition and Subtraction</h2>
-<p>Matrices can only be added or subtracted if they have the <strong>same order</strong>. Corresponding elements (same row and column position) are added or subtracted directly.</p>
-<div class="example-box"><div class="ex-label">Example 1 · Adding matrices</div>
-<p>A = (1 2 over 3 4), B = (5 0 over −1 2). Find A + B.</p>
-<p>A + B = (1+5  2+0 over 3+(−1)  4+2) = <strong>(6 2 over 2 6)</strong>.</p>
-</div>
-
-<h2><span class="num">4.</span>Scalar Multiplication of a Matrix</h2>
-<p>Multiplying a matrix by a scalar (a plain number) multiplies <strong>every</strong> element by that number.</p>
-<div class="example-box"><div class="ex-label">Example 2 · Scalar multiplication</div>
-<p>A = (2 −3 over 1 4). Find 3A.</p>
-<p>3A = <strong>(6 −9 over 3 12)</strong>.</p>
-</div>
-
-<h2><span class="num">5.</span>Matrix Multiplication</h2>
-<p>Matrix multiplication is <strong>not</strong> done element-by-element. To multiply two matrices, each element of the result is found by taking a row from the first matrix and a column from the second, multiplying corresponding entries, and adding the products ("row times column").</p>
-<div class="example-box"><div class="ex-label">Example 3 · Multiplying 2×2 matrices</div>
-<p>A = (1 2 over 3 4), B = (5 6 over 7 8). Find AB.</p>
-<p>Top-left: (1×5)+(2×7) = 19. Top-right: (1×6)+(2×8) = 22. Bottom-left: (3×5)+(4×7) = 43. Bottom-right: (3×6)+(4×8) = 50.</p>
-<p>AB = <strong>(19 22 over 43 50)</strong>.</p>
-</div>
-<div class="real-world-box"><div class="rw-label">Think Like a Mathematician</div><p>Matrix multiplication is generally not commutative: AB usually does not equal BA. Always keep the order exactly as given in a problem.</p></div>
-
-<h2><span class="num">6.</span>The Identity Matrix</h2>
-<p>The <strong>identity matrix</strong>, I = (1 0 over 0 1), behaves like the number 1 in ordinary multiplication: multiplying any matrix by I (in either order) leaves it unchanged.</p>
-
-<h2><span class="num">7.</span>The Determinant of a 2×2 Matrix</h2>
+<p>A matrix is a rectangular array of numbers written inside brackets. Each number is called an <strong>element</strong> (or entry). A <strong>row</strong> runs across and a <strong>column</strong> runs down. We name a matrix with a capital letter, such as A, B or M.</p>
+<p>For example, a shop sells pens and notebooks. On Monday it sells 12 pens and 8 notebooks. On Tuesday it sells 5 pens and 9 notebooks. The sales table is the matrix <span class="mx" style="--c:2"><span>12</span><span>8</span><span>5</span><span>9</span></span>, where row 1 is Monday, row 2 is Tuesday, column 1 is pens and column 2 is notebooks.</p>
 <div class="diagram-box">
-<svg viewBox="0 0 760 120" role="img" aria-label="Determinant formula for a 2 by 2 matrix">
-<rect x="20" y="15" width="720" height="90" rx="15" fill="#fff" stroke="#d4a017" stroke-width="2"/>
-<text x="380" y="68" text-anchor="middle" font-family="Georgia,serif" font-size="26" fill="#06244a">det(A) = ad − bc, for A = (a b over c d)</text>
+<svg viewBox="0 0 360 225" role="img" aria-labelledby="mx1t mx1d" xmlns="http://www.w3.org/2000/svg" font-family="Source Sans 3, Arial, sans-serif">
+<title id="mx1t">Parts of a 2 by 3 matrix</title>
+<desc id="mx1d">A matrix with two rows and three columns containing 1, 2, 3 in the top row and 4, 5, 6 in the bottom row. The element 6 is in row 2, column 3. The order is 2 by 3.</desc>
+<path d="M103,62 H95 V178 H103" fill="none" stroke="#06244a" stroke-width="2.4"/><path d="M277,62 H285 V178 H277" fill="none" stroke="#06244a" stroke-width="2.4"/><rect class="mx-pulse" x="218" y="134" width="46" height="32" rx="7" fill="#B8963E" fill-opacity="0.45" stroke="#B8963E" stroke-width="2"/><text x="130" y="48" font-size="11" font-weight="600" fill="#4A4A4A" text-anchor="middle">column 1</text><text x="130" y="108" font-size="22" font-weight="700" fill="#06244a" text-anchor="middle">1</text><text x="130" y="158" font-size="22" font-weight="700" fill="#06244a" text-anchor="middle">4</text><text x="190" y="48" font-size="11" font-weight="600" fill="#4A4A4A" text-anchor="middle">column 2</text><text x="190" y="108" font-size="22" font-weight="700" fill="#06244a" text-anchor="middle">2</text><text x="190" y="158" font-size="22" font-weight="700" fill="#06244a" text-anchor="middle">5</text><text x="244" y="48" font-size="11" font-weight="600" fill="#4A4A4A" text-anchor="middle">column 3</text><text x="244" y="108" font-size="22" font-weight="700" fill="#06244a" text-anchor="middle">3</text><text x="244" y="158" font-size="22" font-weight="700" fill="#06244a" text-anchor="middle">6</text><text x="18" y="108" font-size="11" font-weight="600" fill="#4A4A4A" text-anchor="start">row 1</text><text x="18" y="158" font-size="11" font-weight="600" fill="#4A4A4A" text-anchor="start">row 2</text><text x="180" y="198" font-size="13" font-weight="700" fill="#8B0000" text-anchor="middle">Order: 2 × 3  (2 rows, 3 columns)</text><text x="180" y="216" font-size="12" font-weight="600" fill="#4A4A4A" text-anchor="middle">The gold element 6 is in row 2, column 3.</text></svg>
+
+<div class="diagram-caption">Figure 1. A matrix with 2 rows and 3 columns. The gold element, 6, is in row 2, column 3.</div>
+</div>
+
+<h2><span class="num">2.</span>Order and Special Matrices</h2>
+<p>The <strong>order</strong> of a matrix is its number of rows followed by its number of columns, written rows × columns. The matrix in Figure 1 has order 2 × 3. Say “2 by 3” and always put rows first.</p>
+<ul>
+<li>A <strong>square matrix</strong> has the same number of rows and columns (2 × 2, 3 × 3). Most O-Level questions use 2 × 2 matrices.</li>
+<li>A <strong>column vector</strong> has one column, such as <span class="cv"><span>3</span><span>4</span></span> (order 2 × 1). A <strong>row vector</strong> has one row, such as <span class="mx" style="--c:2"><span>3</span><span>4</span></span> (order 1 × 2).</li>
+<li>The <strong>zero matrix</strong> has every element 0. Adding it changes nothing.</li>
+<li>The <strong>identity matrix</strong> I = <span class="mx" style="--c:2"><span>1</span><span>0</span><span>0</span><span>1</span></span> has 1s on the main diagonal (top-left to bottom-right) and 0s elsewhere. It is explained in section 6.</li>
+</ul>
+<p>Two matrices are <strong>equal</strong> only if they have the same order and every pair of matching elements is equal.</p>
+
+<h2><span class="num">3.</span>Adding and Subtracting Matrices</h2>
+<p>You can add or subtract two matrices only when they have the <strong>same order</strong>. Add or subtract the elements that sit in the same position.</p>
+<div class="example-box"><div class="ex-label">Example 1 · Adding and subtracting</div>
+<p>Let A = <span class="mx" style="--c:2"><span>1</span><span>2</span><span>3</span><span>4</span></span> and B = <span class="mx" style="--c:2"><span>5</span><span>0</span><span>−1</span><span>2</span></span>.</p>
+<p>A + B = <span class="mx" style="--c:2"><span>1+5</span><span>2+0</span><span>3+(−1)</span><span>4+2</span></span> = <strong><span class="mx" style="--c:2"><span>6</span><span>2</span><span>2</span><span>6</span></span></strong>.</p>
+<p>A − B = <span class="mx" style="--c:2"><span>1−5</span><span>2−0</span><span>3−(−1)</span><span>4−2</span></span> = <strong><span class="mx" style="--c:2"><span>−4</span><span>2</span><span>4</span><span>2</span></span></strong>. Take care with the double negative in the bottom-left: 3 − (−1) = 4.</p>
+</div>
+<div class="example-box"><div class="ex-label">Example 2 · Combining two tables</div>
+<p>Branch X sells <span class="mx" style="--c:2"><span>12</span><span>8</span><span>5</span><span>9</span></span> (rows are Monday and Tuesday, columns are pens and notebooks) and Branch Y sells <span class="mx" style="--c:2"><span>7</span><span>6</span><span>10</span><span>4</span></span>. The two branches together sell <span class="mx" style="--c:2"><span>12</span><span>8</span><span>5</span><span>9</span></span> + <span class="mx" style="--c:2"><span>7</span><span>6</span><span>10</span><span>4</span></span> = <strong><span class="mx" style="--c:2"><span>19</span><span>14</span><span>15</span><span>13</span></span></strong>. On Tuesday, for example, the branches sold 15 pens between them.</p>
+</div>
+<p>Addition is <strong>commutative</strong> (A + B = B + A) and <strong>associative</strong>, just like ordinary addition. Subtraction is not commutative: A − B and B − A are different.</p>
+
+<h2><span class="num">4.</span>Multiplying a Matrix by a Number</h2>
+<p>Multiplying a matrix by a plain number (a <strong>scalar</strong>) multiplies <em>every</em> element by that number.</p>
+<div class="example-box"><div class="ex-label">Example 3 · Scalar multiplication</div>
+<p>(a) 3 <span class="mx" style="--c:2"><span>2</span><span>−3</span><span>1</span><span>4</span></span> = <strong><span class="mx" style="--c:2"><span>6</span><span>−9</span><span>3</span><span>12</span></span></strong>.</p>
+<p>(b) ½ <span class="mx" style="--c:2"><span>6</span><span>−4</span><span>10</span><span>8</span></span> = <strong><span class="mx" style="--c:2"><span>3</span><span>−2</span><span>5</span><span>4</span></span></strong>.</p>
+<p>(c) If A = <span class="mx" style="--c:2"><span>3</span><span>1</span><span>0</span><span>2</span></span> and B = <span class="mx" style="--c:2"><span>1</span><span>4</span><span>2</span><span>−1</span></span>, find 2A − B. First 2A = <span class="mx" style="--c:2"><span>6</span><span>2</span><span>0</span><span>4</span></span>. Then 2A − B = <span class="mx" style="--c:2"><span>6−1</span><span>2−4</span><span>0−2</span><span>4−(−1)</span></span> = <strong><span class="mx" style="--c:2"><span>5</span><span>−2</span><span>−2</span><span>5</span></span></strong>.</p>
+</div>
+
+<h2><span class="num">5.</span>Multiplying Two Matrices</h2>
+<p>Matrix multiplication is <strong>not</strong> done element by element. Each element of the answer comes from one <strong>row</strong> of the first matrix and one <strong>column</strong> of the second: multiply the matching pairs and add the products.</p>
+<div class="diagram-box">
+<svg viewBox="0 0 360 200" role="img" aria-labelledby="mx2t mx2d" xmlns="http://www.w3.org/2000/svg" font-family="Source Sans 3, Arial, sans-serif">
+<title id="mx2t">Row times column multiplication</title>
+<desc id="mx2d">Matrix A with rows 1 2 and 3 4 times matrix B with rows 5 6 and 7 8 gives matrix AB with rows 19 22 and 43 50. Row 1 of A and column 2 of B make the top right element, 1 times 6 plus 2 times 8 equals 22.</desc>
+<path d="M20,26 H12 V100 H20" fill="none" stroke="#06244a" stroke-width="2.4"/><path d="M76,26 H84 V100 H76" fill="none" stroke="#06244a" stroke-width="2.4"/><path d="M120,26 H112 V100 H120" fill="none" stroke="#06244a" stroke-width="2.4"/><path d="M176,26 H184 V100 H176" fill="none" stroke="#06244a" stroke-width="2.4"/><path d="M220,26 H212 V100 H220" fill="none" stroke="#06244a" stroke-width="2.4"/><path d="M292,26 H300 V100 H292" fill="none" stroke="#06244a" stroke-width="2.4"/><rect class="mx-rowa" x="18" y="34" width="62" height="26" rx="6" fill="#B8963E" fill-opacity="0.5"/><rect class="mx-colb" x="148" y="30" width="30" height="66" rx="6" fill="#8B0000" fill-opacity="0.28"/><rect class="mx-res" x="262" y="34" width="34" height="26" rx="6" fill="#06244a" fill-opacity="0.3"/><text x="34" y="53" font-size="17" font-weight="700" fill="#06244a" text-anchor="middle">1</text><text x="64" y="53" font-size="17" font-weight="700" fill="#06244a" text-anchor="middle">2</text><text x="34" y="87" font-size="17" font-weight="700" fill="#06244a" text-anchor="middle">3</text><text x="64" y="87" font-size="17" font-weight="700" fill="#06244a" text-anchor="middle">4</text><text x="134" y="53" font-size="17" font-weight="700" fill="#06244a" text-anchor="middle">5</text><text x="164" y="53" font-size="17" font-weight="700" fill="#06244a" text-anchor="middle">6</text><text x="134" y="87" font-size="17" font-weight="700" fill="#06244a" text-anchor="middle">7</text><text x="164" y="87" font-size="17" font-weight="700" fill="#06244a" text-anchor="middle">8</text><text x="238" y="53" font-size="17" font-weight="700" fill="#06244a" text-anchor="middle">19</text><text x="279" y="53" font-size="17" font-weight="700" fill="#06244a" text-anchor="middle">22</text><text x="238" y="87" font-size="17" font-weight="700" fill="#06244a" text-anchor="middle">43</text><text x="279" y="87" font-size="17" font-weight="700" fill="#06244a" text-anchor="middle">50</text><text x="98" y="70" font-size="20" font-weight="700" fill="#8B0000" text-anchor="middle">×</text><text x="198" y="70" font-size="20" font-weight="700" fill="#8B0000" text-anchor="middle">=</text><text x="48" y="20" font-size="13" font-weight="700" fill="#4A4A4A" text-anchor="middle">A</text><text x="148" y="20" font-size="13" font-weight="700" fill="#4A4A4A" text-anchor="middle">B</text><text x="256" y="20" font-size="13" font-weight="700" fill="#4A4A4A" text-anchor="middle">AB</text><text x="180" y="132" font-size="14" font-weight="700" fill="#8B0000" text-anchor="middle">(1 × 6) + (2 × 8) = 6 + 16 = 22</text><text x="180" y="154" font-size="12" font-weight="600" fill="#4A4A4A" text-anchor="middle">Row 1 of A with column 2 of B gives</text><text x="180" y="172" font-size="12" font-weight="600" fill="#4A4A4A" text-anchor="middle">row 1, column 2 of AB.</text></svg>
+
+<div class="diagram-caption">Figure 2. The gold row of A and the red column of B combine to make the blue element in row 1, column 2 of AB.</div>
+</div>
+<p><strong>When is multiplication possible?</strong> The number of <em>columns</em> of the first matrix must equal the number of <em>rows</em> of the second. If A has order m × n and B has order n × p, then AB exists and has order m × p. The two inside numbers must match, and the two outside numbers give the order of the answer.</p>
+<div class="example-box"><div class="ex-label">Example 4 · Two 2 × 2 matrices</div>
+<p>Let A = <span class="mx" style="--c:2"><span>1</span><span>2</span><span>3</span><span>4</span></span> and B = <span class="mx" style="--c:2"><span>5</span><span>6</span><span>7</span><span>8</span></span>. Find AB and BA.</p>
+<p>AB: top-left (1 × 5) + (2 × 7) = 19; top-right (1 × 6) + (2 × 8) = 22; bottom-left (3 × 5) + (4 × 7) = 43; bottom-right (3 × 6) + (4 × 8) = 50. So AB = <strong><span class="mx" style="--c:2"><span>19</span><span>22</span><span>43</span><span>50</span></span></strong>.</p>
+<p>BA: top-left (5 × 1) + (6 × 3) = 23; top-right (5 × 2) + (6 × 4) = 34; bottom-left (7 × 1) + (8 × 3) = 31; bottom-right (7 × 2) + (8 × 4) = 46. So BA = <strong><span class="mx" style="--c:2"><span>23</span><span>34</span><span>31</span><span>46</span></span></strong>.</p>
+<p>AB and BA are different. In general <strong>AB ≠ BA</strong>, so the order of multiplication must never be swapped.</p>
+</div>
+<div class="example-box"><div class="ex-label">Example 5 · A matrix times a column vector</div>
+<p>Find <span class="mx" style="--c:2"><span>3</span><span>−1</span><span>2</span><span>4</span></span> <span class="cv"><span>5</span><span>2</span></span>. The matrix is 2 × 2 and the vector is 2 × 1, so the answer is 2 × 1.</p>
+<p>Top: (3 × 5) + (−1 × 2) = 15 − 2 = 13. Bottom: (2 × 5) + (4 × 2) = 10 + 8 = 18. The answer is <strong><span class="cv"><span>13</span><span>18</span></span></strong>.</p>
+</div>
+<div class="example-box"><div class="ex-label">Example 6 · Shopping bills</div>
+<p>Two shops charge different prices (in Rs) for a notebook and a pen: Shop 1 charges Rs 30 and Rs 45, Shop 2 charges Rs 28 and Rs 50. Zara buys 4 notebooks and 3 pens. The bills are <span class="mx" style="--c:2"><span>30</span><span>45</span><span>28</span><span>50</span></span> <span class="cv"><span>4</span><span>3</span></span>: Shop 1 is (30 × 4) + (45 × 3) = 120 + 135 = Rs 255 and Shop 2 is (28 × 4) + (50 × 3) = 112 + 150 = Rs 262. The answer matrix is <strong><span class="cv"><span>255</span><span>262</span></span></strong>, so Shop 1 is cheaper by Rs 7.</p>
+</div>
+<div class="example-box"><div class="ex-label">Example 7 · Powers and a non-square product</div>
+<p>(a) If A = <span class="mx" style="--c:2"><span>1</span><span>1</span><span>1</span><span>0</span></span>, then A² means A × A = <span class="mx" style="--c:2"><span>1+1</span><span>1+0</span><span>1+0</span><span>1+0</span></span> = <strong><span class="mx" style="--c:2"><span>2</span><span>1</span><span>1</span><span>1</span></span></strong>.</p>
+<p>(b) Let P = <span class="mx" style="--c:3"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span></span> (order 2 × 3) and Q = <span class="mx" style="--c:2"><span>1</span><span>0</span><span>0</span><span>1</span><span>2</span><span>1</span></span> (order 3 × 2). The inside numbers match (3 and 3), so PQ exists with order 2 × 2. Top-left: 1 × 1 + 2 × 0 + 3 × 2 = 7. Top-right: 1 × 0 + 2 × 1 + 3 × 1 = 5. Bottom-left: 4 × 1 + 5 × 0 + 6 × 2 = 16. Bottom-right: 4 × 0 + 5 × 1 + 6 × 1 = 11. So PQ = <strong><span class="mx" style="--c:2"><span>7</span><span>5</span><span>16</span><span>11</span></span></strong>.</p>
+</div>
+<div class="fixit-challenge">
+<div class="fixit-wrong">“<span class="mx" style="--c:2"><span>1</span><span>2</span><span>3</span><span>4</span></span> × <span class="mx" style="--c:2"><span>5</span><span>6</span><span>7</span><span>8</span></span> = <span class="mx" style="--c:2"><span>5</span><span>12</span><span>21</span><span>32</span></span>”</div>
+<p>This multiplies each element by the element in the same position.</p>
+<button class="fixit-toggle-btn" onclick="toggleFix('fix1')">Show the Fix</button>
+<div class="fixit-explain" id="fix1">
+<p><strong>The fix:</strong> that “same position” method is not matrix multiplication. Use row times column. The top-left element is the first row of A, (1, 2), against the first column of B, (5, 7): (1 × 5) + (2 × 7) = 19, not 5. The correct product is <span class="mx" style="--c:2"><span>19</span><span>22</span><span>43</span><span>50</span></span>. Say “across the first, down the second” as you work.</p>
+</div>
+</div>
+
+<h2><span class="num">6.</span>The Identity and Zero Matrices</h2>
+<p>The <strong>identity matrix</strong> I = <span class="mx" style="--c:2"><span>1</span><span>0</span><span>0</span><span>1</span></span> plays the role of the number 1: for any 2 × 2 matrix A, <strong>AI = IA = A</strong>. For example <span class="mx" style="--c:2"><span>4</span><span>3</span><span>2</span><span>5</span></span> <span class="mx" style="--c:2"><span>1</span><span>0</span><span>0</span><span>1</span></span> = <span class="mx" style="--c:2"><span>4×1+3×0</span><span>4×0+3×1</span><span>2×1+5×0</span><span>2×0+5×1</span></span> = <span class="mx" style="--c:2"><span>4</span><span>3</span><span>2</span><span>5</span></span>. The identity matrix is the only matrix for which this works for every A. The identity leaves every point where it is, so it represents “do nothing”.</p>
+<p>The <strong>zero matrix</strong> O = <span class="mx" style="--c:2"><span>0</span><span>0</span><span>0</span><span>0</span></span> plays the role of the number 0: A + O = A and AO = O.</p>
+
+<h2><span class="num">7.</span>The Determinant of a 2 × 2 Matrix</h2>
+<p>For the matrix A = <span class="mx" style="--c:2"><span>a</span><span>b</span><span>c</span><span>d</span></span>, the <strong>determinant</strong> is <strong>det A = ad − bc</strong>. Multiply the main diagonal, multiply the other diagonal, and subtract.</p>
+<div class="example-box"><div class="ex-label">Example 8 · Finding determinants</div>
+<p>(a) det <span class="mx" style="--c:2"><span>4</span><span>3</span><span>2</span><span>5</span></span> = (4 × 5) − (3 × 2) = 20 − 6 = <strong>14</strong>.</p>
+<p>(b) det <span class="mx" style="--c:2"><span>3</span><span>2</span><span>1</span><span>4</span></span> = 12 − 2 = <strong>10</strong>.</p>
+<p>(c) det <span class="mx" style="--c:2"><span>2</span><span>4</span><span>1</span><span>2</span></span> = 4 − 4 = <strong>0</strong>. A matrix with determinant 0 is called <strong>singular</strong>.</p>
+</div>
+<div class="example-box"><div class="ex-label">Example 9 · When is a matrix singular?</div>
+<p>(a) For what value of k is <span class="mx" style="--c:2"><span>k</span><span>6</span><span>2</span><span>3</span></span> singular? Set the determinant to zero: 3k − 12 = 0, so <strong>k = 4</strong>.</p>
+<p>(b) Find x if <span class="mx" style="--c:2"><span>x+1</span><span>3</span><span>2</span><span>x</span></span> is singular. Determinant: x(x + 1) − 6 = 0, so x² + x − 6 = 0, which factorises as (x − 2)(x + 3) = 0. So <strong>x = 2 or x = −3</strong>. Check x = 2: <span class="mx" style="--c:2"><span>3</span><span>3</span><span>2</span><span>2</span></span> has determinant 6 − 6 = 0 ✓.</p>
+</div>
+<h3>What the determinant means</h3>
+<p>The determinant is not just a number to calculate. When a matrix transforms a shape, <strong>the area of the image is the area of the object multiplied by |det|</strong> (the size of the determinant, ignoring the sign). A negative determinant means the shape has also been flipped over, as in a reflection.</p>
+<div class="diagram-box">
+<svg viewBox="0 0 360 232" role="img" aria-labelledby="mx3t mx3d" xmlns="http://www.w3.org/2000/svg" font-family="Source Sans 3, Arial, sans-serif">
+<title id="mx3t">A matrix changes area by its determinant</title>
+<desc id="mx3d">The unit square with area 1 is mapped by the matrix 3 1 over 0 2 to a parallelogram with corners 0 0, 3 0, 4 2 and 1 2. Its base is 3 and its height is 2, so its area is 6, which equals the determinant 3 times 2 minus 1 times 0.</desc>
+<line x1="40" y1="46" x2="40" y2="196" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="90" y1="46" x2="90" y2="196" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="140" y1="46" x2="140" y2="196" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="190" y1="46" x2="190" y2="196" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="240" y1="46" x2="240" y2="196" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="290" y1="46" x2="290" y2="196" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="40" y1="196" x2="290" y2="196" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="40" y1="146" x2="290" y2="146" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="40" y1="96" x2="290" y2="96" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="40" y1="46" x2="290" y2="46" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="40" y1="196" x2="290" y2="196" stroke="#06244a" stroke-width="1.6"/>
+<line x1="40" y1="46" x2="40" y2="196" stroke="#06244a" stroke-width="1.6"/>
+<text x="90" y="209" text-anchor="middle" font-size="10" fill="#4A4A4A">1</text>
+<text x="140" y="209" text-anchor="middle" font-size="10" fill="#4A4A4A">2</text>
+<text x="190" y="209" text-anchor="middle" font-size="10" fill="#4A4A4A">3</text>
+<text x="240" y="209" text-anchor="middle" font-size="10" fill="#4A4A4A">4</text>
+<text x="290" y="209" text-anchor="middle" font-size="10" fill="#4A4A4A">5</text>
+<text x="35" y="149.5" text-anchor="end" font-size="10" fill="#4A4A4A">1</text>
+<text x="35" y="99.5" text-anchor="end" font-size="10" fill="#4A4A4A">2</text>
+<text x="35" y="49.5" text-anchor="end" font-size="10" fill="#4A4A4A">3</text><polygon points="40,196 190,196 240,96 90,96" fill="#8B0000" fill-opacity="0.22" stroke="#8B0000" stroke-width="2"/><polygon points="40,196 90,196 90,146 40,146" fill="#06244a" fill-opacity="0.55" stroke="#06244a" stroke-width="2"/><g transform="translate(40,196) scale(50,-50)"><g class="mx-morph" style="transform-origin:0 0"><polygon points="0,0 1,0 1,1 0,1" fill="#B8963E" fill-opacity="0.5" stroke="#B8963E" stroke-width="2" vector-effect="non-scaling-stroke"/></g></g><text x="24" y="18" font-size="12" paint-order="stroke" stroke="#fff" stroke-width="3" font-weight="700" fill="#06244a" text-anchor="start">Blue: unit square, area 1</text><text x="24" y="34" font-size="12" paint-order="stroke" stroke="#fff" stroke-width="3" font-weight="700" fill="#8B0000" text-anchor="start">Red: image, area 3 × 2 = 6 = determinant</text></svg>
+
+<div class="diagram-caption">Figure 3. The matrix <span class="mx" style="--c:2"><span>3</span><span>1</span><span>0</span><span>2</span></span> turns the unit square into a parallelogram with base 3 and height 2. The area becomes 6, which is the determinant 3 × 2 − 1 × 0.</div>
+</div>
+<div class="example-box"><div class="ex-label">Example 10 · Using the determinant for area</div>
+<p>A shape of area 7 cm² is transformed by <span class="mx" style="--c:2"><span>4</span><span>1</span><span>2</span><span>3</span></span>. The determinant is 12 − 2 = 10, so the new area is 7 × 10 = <strong>70 cm²</strong>.</p>
+<p>The enlargement matrix <span class="mx" style="--c:2"><span>3</span><span>0</span><span>0</span><span>3</span></span> has determinant 9. This matches the rule from <a href="transformations.html">Transformations</a> that an enlargement with scale factor 3 multiplies areas by 3² = 9. A singular matrix (determinant 0) squashes every shape flat, so its area becomes 0, and that is why it cannot be undone.</p>
+</div>
+
+<h2><span class="num">8.</span>The Inverse of a 2 × 2 Matrix</h2>
+<p>There is no “division” of matrices, but the <strong>inverse</strong> plays the same role as a reciprocal. The inverse of A, written A⁻¹, is the matrix that satisfies <strong>AA⁻¹ = A⁻¹A = I</strong>. For A = <span class="mx" style="--c:2"><span>a</span><span>b</span><span>c</span><span>d</span></span>:</p>
+<p style="text-align:center"><strong>A⁻¹ = (1 ÷ det A) × <span class="mx" style="--c:2"><span>d</span><span>−b</span><span>−c</span><span>a</span></span></strong></p>
+<p>In words: swap a and d, change the signs of b and c, then divide everything by the determinant. If det A = 0 there is no inverse.</p>
+<div class="example-box"><div class="ex-label">Example 11 · Finding inverses</div>
+<p>(a) A = <span class="mx" style="--c:2"><span>4</span><span>3</span><span>2</span><span>5</span></span> has det A = 14. So A⁻¹ = (1/14) <span class="mx" style="--c:2"><span>5</span><span>−3</span><span>−2</span><span>4</span></span> = <strong><span class="mx" style="--c:2"><span>5/14</span><span>−3/14</span><span>−2/14</span><span>4/14</span></span></strong> (the bottom-left and bottom-right can be simplified to −1/7 and 2/7).</p>
+<p><strong>Check:</strong> A A⁻¹ = (1/14) <span class="mx" style="--c:2"><span>4</span><span>3</span><span>2</span><span>5</span></span> <span class="mx" style="--c:2"><span>5</span><span>−3</span><span>−2</span><span>4</span></span> = (1/14) <span class="mx" style="--c:2"><span>20−6</span><span>−12+12</span><span>10−10</span><span>−6+20</span></span> = (1/14) <span class="mx" style="--c:2"><span>14</span><span>0</span><span>0</span><span>14</span></span> = I ✓.</p>
+<p>(b) <span class="mx" style="--c:2"><span>2</span><span>1</span><span>5</span><span>3</span></span> has det = 6 − 5 = 1, so the inverse is <span class="mx" style="--c:2"><span>3</span><span>−1</span><span>−5</span><span>2</span></span> with no fractions.</p>
+<p>(c) <span class="mx" style="--c:2"><span>2</span><span>4</span><span>3</span><span>5</span></span> has det = 10 − 12 = −2, so the inverse is (1/−2) <span class="mx" style="--c:2"><span>5</span><span>−4</span><span>−3</span><span>2</span></span> = <strong><span class="mx" style="--c:2"><span>−5/2</span><span>2</span><span>3/2</span><span>−1</span></span></strong>. Dividing by a negative determinant changes every sign, so check the signs carefully.</p>
+</div>
+<div class="fixit-challenge">
+<div class="fixit-wrong">“The inverse of <span class="mx" style="--c:2"><span>4</span><span>3</span><span>2</span><span>5</span></span> is <span class="mx" style="--c:2"><span>5</span><span>3</span><span>2</span><span>4</span></span>”</div>
+<p>The numbers a and d were swapped, but the signs of b and c were not changed and nothing was divided.</p>
+<button class="fixit-toggle-btn" onclick="toggleFix('fix2')">Show the Fix</button>
+<div class="fixit-explain" id="fix2">
+<p><strong>The fix:</strong> the inverse has three jobs: swap a and d, <em>change the signs</em> of b and c, and <em>divide by the determinant</em>. Here that gives (1/14) <span class="mx" style="--c:2"><span>5</span><span>−3</span><span>−2</span><span>4</span></span>. A fast test is to multiply back. A wrong answer such as <span class="mx" style="--c:2"><span>5</span><span>3</span><span>2</span><span>4</span></span> gives <span class="mx" style="--c:2"><span>26</span><span>24</span><span>20</span><span>26</span></span>, which is not a multiple of the identity. Always check that A × A⁻¹ = I when you have time.</p>
+</div>
+</div>
+
+<h2><span class="num">9.</span>Solving Simultaneous Equations with Matrices</h2>
+<p>Two linear equations can be written as one matrix equation AX = B, where A holds the coefficients, X is the column of unknowns and B is the column of right-hand sides. Multiply both sides on the <em>left</em> by A⁻¹ to get <strong>X = A⁻¹B</strong>.</p>
+<div class="example-box"><div class="ex-label">Example 12 · A first solution</div>
+<p>Solve 2x + y = 8 and x + 3y = 9.</p>
+<p><strong>Step 1.</strong> Write <span class="mx" style="--c:2"><span>2</span><span>1</span><span>1</span><span>3</span></span> <span class="cv"><span>x</span><span>y</span></span> = <span class="cv"><span>8</span><span>9</span></span>.</p>
+<p><strong>Step 2.</strong> det = 6 − 1 = 5, so the inverse is (1/5) <span class="mx" style="--c:2"><span>3</span><span>−1</span><span>−1</span><span>2</span></span>.</p>
+<p><strong>Step 3.</strong> <span class="cv"><span>x</span><span>y</span></span> = (1/5) <span class="mx" style="--c:2"><span>3</span><span>−1</span><span>−1</span><span>2</span></span> <span class="cv"><span>8</span><span>9</span></span> = (1/5) <span class="cv"><span>24−9</span><span>−8+18</span></span> = (1/5) <span class="cv"><span>15</span><span>10</span></span> = <span class="cv"><span>3</span><span>2</span></span>.</p>
+<p>So <strong>x = 3, y = 2</strong>. Check: 2(3) + 2 = 8 ✓ and 3 + 3(2) = 9 ✓.</p>
+</div>
+<div class="example-box"><div class="ex-label">Example 13 · A word problem</div>
+<p>3 pens and 2 notebooks cost Rs 130. 5 pens and 4 notebooks cost Rs 240. Find the price of each.</p>
+<p>Let p be the price of a pen and n the price of a notebook: <span class="mx" style="--c:2"><span>3</span><span>2</span><span>5</span><span>4</span></span> <span class="cv"><span>p</span><span>n</span></span> = <span class="cv"><span>130</span><span>240</span></span>. The determinant is 12 − 10 = 2, so the inverse is (1/2) <span class="mx" style="--c:2"><span>4</span><span>−2</span><span>−5</span><span>3</span></span>.</p>
+<p><span class="cv"><span>p</span><span>n</span></span> = (1/2) <span class="cv"><span>4×130 − 2×240</span><span>−5×130 + 3×240</span></span> = (1/2) <span class="cv"><span>520−480</span><span>−650+720</span></span> = (1/2) <span class="cv"><span>40</span><span>70</span></span> = <span class="cv"><span>20</span><span>35</span></span>.</p>
+<p>A pen costs <strong>Rs 20</strong> and a notebook costs <strong>Rs 35</strong>. Check: 3(20) + 2(35) = 130 ✓ and 5(20) + 4(35) = 240 ✓.</p>
+</div>
+<div class="example-box"><div class="ex-label">Example 14 · Negative answers, and when it fails</div>
+<p>(a) Solve 5x + 2y = 1 and 3x + y = 1. The determinant is 5 − 6 = −1, so the inverse is (1/−1) <span class="mx" style="--c:2"><span>1</span><span>−2</span><span>−3</span><span>5</span></span> = <span class="mx" style="--c:2"><span>−1</span><span>2</span><span>3</span><span>−5</span></span>. Then <span class="cv"><span>x</span><span>y</span></span> = <span class="mx" style="--c:2"><span>−1</span><span>2</span><span>3</span><span>−5</span></span> <span class="cv"><span>1</span><span>1</span></span> = <span class="cv"><span>−1+2</span><span>3−5</span></span> = <span class="cv"><span>1</span><span>−2</span></span>. So <strong>x = 1, y = −2</strong>. Check: 5 − 4 = 1 ✓ and 3 − 2 = 1 ✓.</p>
+<p>(b) Try x + 2y = 3 and 2x + 4y = 7. The determinant is 4 − 4 = 0, so there is no inverse. The lines are parallel (the second left-hand side is exactly double the first, but 7 is not double 3), so there is <strong>no solution</strong>. A zero determinant warns you that the equations either have no solution or infinitely many.</p>
+</div>
+
+<h2><span class="num">10.</span>Matrices as Transformations</h2>
+<p>A 2 × 2 matrix acts on a point (x, y) written as a column vector. The result is the image point: <span class="mx" style="--c:2"><span>a</span><span>b</span><span>c</span><span>d</span></span> <span class="cv"><span>x</span><span>y</span></span> = <span class="cv"><span>ax + by</span><span>cx + dy</span></span>. Here is the key idea that makes it easy to find any transformation matrix:</p>
+<div class="real-world-box"><div class="rw-label">The Column Rule</div><p>The <strong>first column</strong> of the matrix is where the point (1, 0) goes. The <strong>second column</strong> is where the point (0, 1) goes.</p></div>
+<p>Check it: <span class="mx" style="--c:2"><span>a</span><span>b</span><span>c</span><span>d</span></span> <span class="cv"><span>1</span><span>0</span></span> = <span class="cv"><span>a</span><span>c</span></span>, the first column, and <span class="mx" style="--c:2"><span>a</span><span>b</span><span>c</span><span>d</span></span> <span class="cv"><span>0</span><span>1</span></span> = <span class="cv"><span>b</span><span>d</span></span>, the second column.</p>
+<div class="diagram-box">
+<svg viewBox="0 0 360 244" role="img" aria-labelledby="mx4t mx4d" xmlns="http://www.w3.org/2000/svg" font-family="Source Sans 3, Arial, sans-serif">
+<title id="mx4t">The columns of a matrix are the images of the unit vectors</title>
+<desc id="mx4d">The matrix 2 -1 over 1 1 sends the point 1 0 to 2 1 and the point 0 1 to -1 1. These are its first and second columns. The unit square becomes a parallelogram.</desc>
+<line x1="46" y1="20" x2="46" y2="228" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="98" y1="20" x2="98" y2="228" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="150" y1="20" x2="150" y2="228" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="202" y1="20" x2="202" y2="228" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="254" y1="20" x2="254" y2="228" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="306" y1="20" x2="306" y2="228" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="46" y1="228" x2="306" y2="228" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="46" y1="176" x2="306" y2="176" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="46" y1="124" x2="306" y2="124" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="46" y1="72" x2="306" y2="72" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="46" y1="20" x2="306" y2="20" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="46" y1="176" x2="306" y2="176" stroke="#06244a" stroke-width="1.6"/>
+<line x1="150" y1="20" x2="150" y2="228" stroke="#06244a" stroke-width="1.6"/>
+<text paint-order="stroke" stroke="#fff" stroke-width="3" x="46" y="189" text-anchor="middle" font-size="10" fill="#4A4A4A">−2</text>
+<text paint-order="stroke" stroke="#fff" stroke-width="3" x="98" y="189" text-anchor="middle" font-size="10" fill="#4A4A4A">−1</text>
+<text paint-order="stroke" stroke="#fff" stroke-width="3" x="202" y="189" text-anchor="middle" font-size="10" fill="#4A4A4A">1</text>
+<text paint-order="stroke" stroke="#fff" stroke-width="3" x="254" y="189" text-anchor="middle" font-size="10" fill="#4A4A4A">2</text>
+<text paint-order="stroke" stroke="#fff" stroke-width="3" x="306" y="189" text-anchor="middle" font-size="10" fill="#4A4A4A">3</text>
+<text paint-order="stroke" stroke="#fff" stroke-width="3" x="145" y="231.5" text-anchor="end" font-size="10" fill="#4A4A4A">−1</text>
+<text paint-order="stroke" stroke="#fff" stroke-width="3" x="145" y="127.5" text-anchor="end" font-size="10" fill="#4A4A4A">1</text>
+<text paint-order="stroke" stroke="#fff" stroke-width="3" x="145" y="75.5" text-anchor="end" font-size="10" fill="#4A4A4A">2</text>
+<text paint-order="stroke" stroke="#fff" stroke-width="3" x="145" y="23.5" text-anchor="end" font-size="10" fill="#4A4A4A">3</text><polygon points="150,176 254,124 202,72 98,124" fill="#8B0000" fill-opacity="0.16" stroke="#8B0000" stroke-width="1.5" stroke-dasharray="5 4"/><g transform="translate(150,176) scale(52,-52)"><g class="mx-morph2" style="transform-origin:0 0"><polygon points="0,0 1,0 1,1 0,1" fill="#B8963E" fill-opacity="0.45" stroke="#B8963E" stroke-width="2" vector-effect="non-scaling-stroke"/></g></g><line x1="150" y1="176" x2="202" y2="176" stroke="#06244a" stroke-width="3"/><circle cx="202" cy="176" r="4.5" fill="#06244a"/><line x1="150" y1="176" x2="150" y2="124" stroke="#06244a" stroke-width="3"/><circle cx="150" cy="124" r="4.5" fill="#06244a"/><line x1="150" y1="176" x2="254" y2="124" stroke="#8B0000" stroke-width="3"/><circle cx="254" cy="124" r="4.5" fill="#8B0000"/><line x1="150" y1="176" x2="98" y2="124" stroke="#8B0000" stroke-width="3"/><circle cx="98" cy="124" r="4.5" fill="#8B0000"/><text paint-order="stroke" stroke="#fff" stroke-width="3" x="206" y="192" font-size="11" font-weight="700" fill="#06244a" text-anchor="start">(1, 0)</text><text paint-order="stroke" stroke="#fff" stroke-width="3" x="158" y="116" font-size="11" font-weight="700" fill="#06244a" text-anchor="start">(0, 1)</text><text paint-order="stroke" stroke="#fff" stroke-width="3" x="258" y="128" font-size="12" font-weight="700" fill="#8B0000" text-anchor="start">(2, 1)</text><text paint-order="stroke" stroke="#fff" stroke-width="3" x="94" y="116" font-size="12" font-weight="700" fill="#8B0000" text-anchor="end">(−1, 1)</text></svg>
+
+<div class="diagram-caption">Figure 4. The matrix <span class="mx" style="--c:2"><span>2</span><span>−1</span><span>1</span><span>1</span></span> sends (1, 0) to (2, 1) and (0, 1) to (−1, 1). These two image points are its two columns. The gold unit square turns into the dashed parallelogram.</div>
+</div>
+<p>Use the column rule to write down each matrix in the table. For example, a reflection in the x-axis leaves (1, 0) where it is and sends (0, 1) to (0, −1), so its columns are <span class="cv"><span>1</span><span>0</span></span> and <span class="cv"><span>0</span><span>−1</span></span>.</p>
+<div class="table-wrap"><table class="pos-table">
+<tr><th>Transformation (centre or mirror through O)</th><th>(1, 0) goes to</th><th>(0, 1) goes to</th><th>Matrix</th></tr>
+<tr><td>Reflection in the x-axis</td><td>(1, 0)</td><td>(0, −1)</td><td><span class="mx" style="--c:2"><span>1</span><span>0</span><span>0</span><span>−1</span></span></td></tr>
+<tr><td>Reflection in the y-axis</td><td>(−1, 0)</td><td>(0, 1)</td><td><span class="mx" style="--c:2"><span>−1</span><span>0</span><span>0</span><span>1</span></span></td></tr>
+<tr><td>Reflection in y = x</td><td>(0, 1)</td><td>(1, 0)</td><td><span class="mx" style="--c:2"><span>0</span><span>1</span><span>1</span><span>0</span></span></td></tr>
+<tr><td>Reflection in y = −x</td><td>(0, −1)</td><td>(−1, 0)</td><td><span class="mx" style="--c:2"><span>0</span><span>−1</span><span>−1</span><span>0</span></span></td></tr>
+<tr><td>Rotation 90° anticlockwise</td><td>(0, 1)</td><td>(−1, 0)</td><td><span class="mx" style="--c:2"><span>0</span><span>−1</span><span>1</span><span>0</span></span></td></tr>
+<tr><td>Rotation 90° clockwise</td><td>(0, −1)</td><td>(1, 0)</td><td><span class="mx" style="--c:2"><span>0</span><span>1</span><span>−1</span><span>0</span></span></td></tr>
+<tr><td>Rotation 180°</td><td>(−1, 0)</td><td>(0, −1)</td><td><span class="mx" style="--c:2"><span>−1</span><span>0</span><span>0</span><span>−1</span></span></td></tr>
+<tr><td>Enlargement, scale factor k</td><td>(k, 0)</td><td>(0, k)</td><td><span class="mx" style="--c:2"><span>k</span><span>0</span><span>0</span><span>k</span></span></td></tr>
+</table></div>
+<div class="example-box"><div class="ex-label">Example 15 · Applying a matrix</div>
+<p>(a) Rotate (2, 3) by 90° anticlockwise about the origin: <span class="mx" style="--c:2"><span>0</span><span>−1</span><span>1</span><span>0</span></span> <span class="cv"><span>2</span><span>3</span></span> = <span class="cv"><span>0×2 + (−1)×3</span><span>1×2 + 0×3</span></span> = <strong><span class="cv"><span>−3</span><span>2</span></span></strong>. This matches the rule (x, y) → (−y, x).</p>
+<p>(b) Reflect (5, 2) in the line y = x: <span class="mx" style="--c:2"><span>0</span><span>1</span><span>1</span><span>0</span></span> <span class="cv"><span>5</span><span>2</span></span> = <span class="cv"><span>2</span><span>5</span></span>. The coordinates swap.</p>
+<p>(c) <strong>A whole shape at once.</strong> Put the three corners of the triangle (1, 1), (4, 1), (1, 3) as the columns of one 2 × 3 matrix. Then <span class="mx" style="--c:2"><span>0</span><span>−1</span><span>1</span><span>0</span></span> <span class="mx" style="--c:3"><span>1</span><span>4</span><span>1</span><span>1</span><span>1</span><span>3</span></span> = <span class="mx" style="--c:3"><span>−1</span><span>−1</span><span>−3</span><span>1</span><span>4</span><span>1</span></span>. The image corners are (−1, 1), (−1, 4) and (−3, 1), as the explorer below confirms.</p>
+</div>
+<div class="example-box"><div class="ex-label">Example 16 · Finding a matrix from images</div>
+<p>A transformation sends (1, 0) to (0, −1) and (0, 1) to (−1, 0). By the column rule the matrix is <span class="mx" style="--c:2"><span>0</span><span>−1</span><span>−1</span><span>0</span></span>. Its effect on (3, 2) is <span class="mx" style="--c:2"><span>0</span><span>−1</span><span>−1</span><span>0</span></span> <span class="cv"><span>3</span><span>2</span></span> = <span class="cv"><span>−2</span><span>−3</span></span>. This is the rule (x, y) → (−y, −x), so the transformation is the <strong>reflection in the line y = −x</strong>.</p>
+</div>
+<p><strong>Limits.</strong> A 2 × 2 matrix always keeps the origin fixed, because <span class="mx" style="--c:2"><span>a</span><span>b</span><span>c</span><span>d</span></span> <span class="cv"><span>0</span><span>0</span></span> = <span class="cv"><span>0</span><span>0</span></span>. So 2 × 2 matrices describe rotations and enlargements only about the origin, and reflections only in lines through the origin. A translation cannot be done with a 2 × 2 matrix, because it moves the origin.</p>
+
+<h2><span class="num">11.</span>Reading a Transformation from a Matrix</h2>
+<p>To identify a transformation from its matrix, read the columns as images of (1, 0) and (0, 1), then look at the determinant.</p>
+<div class="example-box"><div class="ex-label">Example 17 · Identify the transformation</div>
+<p>(a) <span class="mx" style="--c:2"><span>2</span><span>0</span><span>0</span><span>2</span></span>: the point (1, 0) goes to (2, 0) and (0, 1) to (0, 2). This is an <strong>enlargement, scale factor 2, centre the origin</strong>. The determinant is 4, which matches the area factor 2² = 4.</p>
+<p>(b) <span class="mx" style="--c:2"><span>0</span><span>1</span><span>−1</span><span>0</span></span>: (1, 0) goes to (0, −1) and (0, 1) goes to (1, 0). This is a <strong>rotation of 90° clockwise about the origin</strong>. The determinant is 0 × 0 − (1 × −1) = 1, so the area is unchanged and the shape is not flipped.</p>
+<p>(c) <span class="mx" style="--c:2"><span>1</span><span>0</span><span>0</span><span>−1</span></span>: the determinant is −1. The area is unchanged but the shape is flipped, so it is a <strong>reflection</strong>, in the x-axis. A rotation always has determinant +1, and a reflection always has determinant −1.</p>
+</div>
+
+<h2><span class="num">12.</span>Combining Transformations and Inverses</h2>
+<p>Doing transformation P and then transformation Q means multiplying the point by P first and the result by Q. So the single matrix for “P then Q” is <strong>QP</strong>, with the second transformation written on the <em>left</em>. This is the opposite of the order you read it in.</p>
+<div class="example-box"><div class="ex-label">Example 18 · Two reflections</div>
+<p>Let X = <span class="mx" style="--c:2"><span>1</span><span>0</span><span>0</span><span>−1</span></span> (reflection in the x-axis) and Y = <span class="mx" style="--c:2"><span>−1</span><span>0</span><span>0</span><span>1</span></span> (reflection in the y-axis). “X then Y” has matrix YX = <span class="mx" style="--c:2"><span>−1×1+0×0</span><span>−1×0+0×(−1)</span><span>0×1+1×0</span><span>0×0+1×(−1)</span></span> = <strong><span class="mx" style="--c:2"><span>−1</span><span>0</span><span>0</span><span>−1</span></span></strong>, a rotation of 180° about the origin. This agrees with the combination rule from Transformations: two reflections in perpendicular lines make a half-turn.</p>
+</div>
+<div class="example-box"><div class="ex-label">Example 19 · The order matters</div>
+<p>Let R = <span class="mx" style="--c:2"><span>0</span><span>−1</span><span>1</span><span>0</span></span> (rotation 90° anticlockwise) and X = <span class="mx" style="--c:2"><span>1</span><span>0</span><span>0</span><span>−1</span></span> (reflection in the x-axis).</p>
+<p><strong>R then X</strong> is XR = <span class="mx" style="--c:2"><span>1×0+0×1</span><span>1×(−1)+0×0</span><span>0×0+(−1)×1</span><span>0×(−1)+(−1)×0</span></span> = <span class="mx" style="--c:2"><span>0</span><span>−1</span><span>−1</span><span>0</span></span>, the reflection in y = −x. It sends (2, 1) to (−1, −2).</p>
+<p><strong>X then R</strong> is RX = <span class="mx" style="--c:2"><span>0×1+(−1)×0</span><span>0×0+(−1)×(−1)</span><span>1×1+0×0</span><span>1×0+0×(−1)</span></span> = <span class="mx" style="--c:2"><span>0</span><span>1</span><span>1</span><span>0</span></span>, the reflection in y = x. It sends (2, 1) to (1, 2).</p>
+<p>The two results are different transformations, so XR ≠ RX. The values (−1, −2) and (1, 2) are the same results as in Example 21 of the Transformations article.</p>
+</div>
+<div class="example-box"><div class="ex-label">Example 20 · The inverse undoes a transformation</div>
+<p>R = <span class="mx" style="--c:2"><span>0</span><span>−1</span><span>1</span><span>0</span></span> has determinant 0 − (−1)(1) = 1. Its inverse is (1/1) <span class="mx" style="--c:2"><span>0</span><span>1</span><span>−1</span><span>0</span></span>, which is the matrix for a rotation of 90° <em>clockwise</em>. That makes sense: turning anticlockwise and then clockwise by the same angle puts everything back. In general the inverse of a transformation matrix is the matrix of the transformation that reverses it.</p>
+</div>
+<div class="fixit-challenge">
+<div class="fixit-wrong">“To apply P first and then Q, multiply PQ”</div>
+<p>This reads naturally left to right, but the matrices act on the point from the left.</p>
+<button class="fixit-toggle-btn" onclick="toggleFix('fix3')">Show the Fix</button>
+<div class="fixit-explain" id="fix3">
+<p><strong>The fix:</strong> the point is a column vector on the <em>right</em>. P touches it first, so P is next to the point, and Q goes on the left: Q(P v) = (QP) v. So “P then Q” is QP. In Example 19, “R then X” was XR = <span class="mx" style="--c:2"><span>0</span><span>−1</span><span>−1</span><span>0</span></span>. Test with (2, 1): R gives (−1, 2), then X gives (−1, −2), and <span class="mx" style="--c:2"><span>0</span><span>−1</span><span>−1</span><span>0</span></span> <span class="cv"><span>2</span><span>1</span></span> = <span class="cv"><span>−1</span><span>−2</span></span> ✓. The order PQ would have given the other transformation.</p>
+</div>
+</div>
+
+<!-- MATRIX TRANSFORMATION EXPLORER INTERACTIVE -->
+<div class="drill-section">
+<div class="section-eyebrow">Try It Yourself</div>
+<h2>Matrix Explorer</h2>
+<p class="drill-intro">The blue triangle PQR has corners P(1, 1), Q(4, 1) and R(1, 3) and area 3. Tap a matrix to see the red image, the determinant and the new area.</p>
+<div class="ns-chip-row" id="mxChipRow"></div>
+<div class="tf-ex-wrap">
+<svg id="mxExplorerSvg" viewBox="0 0 360 300" role="img" aria-label="Interactive coordinate grid showing a triangle and its image under a matrix" xmlns="http://www.w3.org/2000/svg" font-family="Source Sans 3, Arial, sans-serif">
+<line x1="0" y1="10" x2="0" y2="290" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="20" y1="10" x2="20" y2="290" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="40" y1="10" x2="40" y2="290" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="60" y1="10" x2="60" y2="290" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="80" y1="10" x2="80" y2="290" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="100" y1="10" x2="100" y2="290" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="120" y1="10" x2="120" y2="290" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="140" y1="10" x2="140" y2="290" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="160" y1="10" x2="160" y2="290" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="180" y1="10" x2="180" y2="290" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="200" y1="10" x2="200" y2="290" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="220" y1="10" x2="220" y2="290" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="240" y1="10" x2="240" y2="290" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="260" y1="10" x2="260" y2="290" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="280" y1="10" x2="280" y2="290" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="300" y1="10" x2="300" y2="290" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="320" y1="10" x2="320" y2="290" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="340" y1="10" x2="340" y2="290" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="360" y1="10" x2="360" y2="290" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="0" y1="290" x2="360" y2="290" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="0" y1="270" x2="360" y2="270" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="0" y1="250" x2="360" y2="250" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="0" y1="230" x2="360" y2="230" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="0" y1="210" x2="360" y2="210" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="0" y1="190" x2="360" y2="190" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="0" y1="170" x2="360" y2="170" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="0" y1="150" x2="360" y2="150" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="0" y1="130" x2="360" y2="130" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="0" y1="110" x2="360" y2="110" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="0" y1="90" x2="360" y2="90" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="0" y1="70" x2="360" y2="70" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="0" y1="50" x2="360" y2="50" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="0" y1="30" x2="360" y2="30" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="0" y1="10" x2="360" y2="10" stroke="#d9d2bf" stroke-width="0.8"/>
+<line x1="0" y1="150" x2="360" y2="150" stroke="#06244a" stroke-width="1.6"/>
+<line x1="180" y1="10" x2="180" y2="290" stroke="#06244a" stroke-width="1.6"/>
+<text x="0" y="163" text-anchor="middle" font-size="10" fill="#4A4A4A">−9</text>
+<text x="40" y="163" text-anchor="middle" font-size="10" fill="#4A4A4A">−7</text>
+<text x="80" y="163" text-anchor="middle" font-size="10" fill="#4A4A4A">−5</text>
+<text x="120" y="163" text-anchor="middle" font-size="10" fill="#4A4A4A">−3</text>
+<text x="160" y="163" text-anchor="middle" font-size="10" fill="#4A4A4A">−1</text>
+<text x="200" y="163" text-anchor="middle" font-size="10" fill="#4A4A4A">1</text>
+<text x="240" y="163" text-anchor="middle" font-size="10" fill="#4A4A4A">3</text>
+<text x="280" y="163" text-anchor="middle" font-size="10" fill="#4A4A4A">5</text>
+<text x="320" y="163" text-anchor="middle" font-size="10" fill="#4A4A4A">7</text>
+<text x="360" y="163" text-anchor="middle" font-size="10" fill="#4A4A4A">9</text>
+<text x="175" y="293.5" text-anchor="end" font-size="10" fill="#4A4A4A">−7</text>
+<text x="175" y="253.5" text-anchor="end" font-size="10" fill="#4A4A4A">−5</text>
+<text x="175" y="213.5" text-anchor="end" font-size="10" fill="#4A4A4A">−3</text>
+<text x="175" y="173.5" text-anchor="end" font-size="10" fill="#4A4A4A">−1</text>
+<text x="175" y="133.5" text-anchor="end" font-size="10" fill="#4A4A4A">1</text>
+<text x="175" y="93.5" text-anchor="end" font-size="10" fill="#4A4A4A">3</text>
+<text x="175" y="53.5" text-anchor="end" font-size="10" fill="#4A4A4A">5</text>
+<text x="175" y="13.5" text-anchor="end" font-size="10" fill="#4A4A4A">7</text>
+<g id="mxLayer"></g>
 </svg>
-<div class="diagram-caption">The determinant of a 2×2 matrix is found by cross-multiplying and subtracting.</div>
 </div>
-<div class="example-box"><div class="ex-label">Example 4 · Finding a determinant</div>
-<p>A = (4 3 over 2 5). Find det(A).</p>
-<p>det(A) = (4×5) − (3×2) = 20 − 6 = <strong>14</strong>.</p>
+<div class="pv-info-panel">
+<p class="pv-info-placeholder" id="mxInfoPlaceholder">Tap a matrix above to see what it does to the triangle.</p>
+<div class="pv-info-result" id="mxInfoResult" style="display:none;"></div>
 </div>
-
-<h2><span class="num">8.</span>The Inverse of a 2×2 Matrix</h2>
-<p>The <strong>inverse</strong> of matrix A, written A⁻¹, satisfies AA⁻¹ = I. For a 2×2 matrix A = (a b over c d), the inverse is found by swapping a and d, negating b and c, and dividing every element by the determinant: A⁻¹ = 1/det(A) × (d −b over −c a). A matrix only has an inverse if its determinant is <strong>not zero</strong> (a matrix with determinant 0 is called <strong>singular</strong>).</p>
-<div class="example-box"><div class="ex-label">Example 5 · Finding an inverse</div>
-<p>A = (4 3 over 2 5), with det(A) = 14 (from Example 4). Find A⁻¹.</p>
-<p>A⁻¹ = 1/14 × (5 −3 over −2 4) = <strong>(5/14 −3/14 over −2/14 4/14)</strong>.</p>
 </div>
 
-<h2><span class="num">9.</span>Solving Simultaneous Equations Using Matrices</h2>
-<p>A pair of simultaneous equations can be written as a single matrix equation, AX = B, and solved using the inverse: X = A⁻¹B.</p>
-<div class="example-box"><div class="ex-label">Example 6 · Matrix method for simultaneous equations</div>
-<p>Solve: 2x + y = 8, x + 3y = 9, using matrices.</p>
-<p>In matrix form: (2 1 over 1 3)(x over y) = (8 over 9). det = (2×3)−(1×1) = 5.</p>
-<p>Inverse = 1/5 × (3 −1 over −1 2). So (x over y) = 1/5 × (3 −1 over −1 2)(8 over 9) = 1/5 × (24−9 over −8+18) = 1/5 × (15 over 10) = <strong>(3 over 2)</strong>. So x = 3, y = 2.</p>
+<!-- MATRIX CALCULATOR -->
+<div class="drill-section">
+<div class="section-eyebrow">Check Your Work</div>
+<h2>Matrix Calculator</h2>
+<p class="drill-intro">Type whole numbers into the 2 × 2 matrices A and B, then tap an operation. The result is shown with a little working so you can compare it with your own.</p>
+<div class="mx-calc"><div class="mx-in-wrap"><div class="mx-in-label">A</div><div class="mx-in"><input id="mxA1" type="number" inputmode="numeric" step="1" value="1" aria-label="A row 1 column 1"/><input id="mxA2" type="number" inputmode="numeric" step="1" value="2" aria-label="A row 1 column 2"/><input id="mxA3" type="number" inputmode="numeric" step="1" value="3" aria-label="A row 2 column 1"/><input id="mxA4" type="number" inputmode="numeric" step="1" value="4" aria-label="A row 2 column 2"/></div></div><div class="mx-in-wrap"><div class="mx-in-label">B</div><div class="mx-in"><input id="mxB1" type="number" inputmode="numeric" step="1" value="5" aria-label="B row 1 column 1"/><input id="mxB2" type="number" inputmode="numeric" step="1" value="6" aria-label="B row 1 column 2"/><input id="mxB3" type="number" inputmode="numeric" step="1" value="7" aria-label="B row 2 column 1"/><input id="mxB4" type="number" inputmode="numeric" step="1" value="8" aria-label="B row 2 column 2"/></div></div></div>
+<div class="ns-chip-row" id="mxCalcRow"></div>
+<div class="pv-info-panel">
+<p class="pv-info-placeholder" id="mxCalcHint">Tap an operation above to see the answer.</p>
+<div class="pv-info-result" id="mxCalcOut" style="display:none;"></div>
+</div>
 </div>
 
-<h2><span class="num">10.</span>Using Matrices for Transformations</h2>
-<p>A 2×2 matrix can represent a geometric transformation: multiplying the matrix by a point's column vector (x over y) gives the image point's coordinates. This connects directly to the four transformations covered earlier in this subcategory.</p>
-
-<h2><span class="num">11.</span>Matrices for Reflection and Rotation</h2>
-<div class="table-wrap"><table class="pos-table">
-<tr><th>Transformation</th><th>Matrix</th></tr>
-<tr><td>Reflection in the x-axis</td><td>(1 0 over 0 −1)</td></tr>
-<tr><td>Reflection in the y-axis</td><td>(−1 0 over 0 1)</td></tr>
-<tr><td>Reflection in y = x</td><td>(0 1 over 1 0)</td></tr>
-<tr><td>Rotation 90° anticlockwise about the origin</td><td>(0 −1 over 1 0)</td></tr>
-<tr><td>Rotation 180° about the origin</td><td>(−1 0 over 0 −1)</td></tr>
-</table></div>
-<div class="example-box"><div class="ex-label">Example 7 · Applying a transformation matrix</div>
-<p>Use the reflection-in-y=x matrix to reflect point (5, 2).</p>
-<p>(0 1 over 1 0)(5 over 2) = ((0×5)+(1×2) over (1×5)+(0×2)) = <strong>(2 over 5)</strong> — matching the "swap coordinates" rule from the Transformations article.</p>
+<h2><span class="num">13.</span>Matrices in Real Life</h2>
+<ul>
+<li><strong>Tables of data.</strong> Shops, schools and factories use tables of stock, marks and costs. Adding matrices combines two tables, and multiplying a price matrix by a quantity column gives total bills (Example 6).</li>
+<li><strong>Computer graphics.</strong> Moving, turning and resizing an image on a screen is calculated with matrices, because one matrix can do the work for every pixel or corner of a shape (as in Example 15c).</li>
+<li><strong>Solving many equations at once.</strong> Engineers and scientists write large systems of equations as AX = B. Computers solve them with matrix methods, and the 2 × 2 method in this article is the smallest case of the same idea.</li>
+<li><strong>Games and animation.</strong> Characters are rotated and enlarged with transformation matrices, and the inverse matrix reverses a move.</li>
+</ul>
+<div class="example-box"><div class="ex-label">Example 21 · Marks and weights</div>
+<p>A student has three marks, 80, 70 and 90, in tests weighted 20%, 30% and 50%. The weighted score is the row-times-column product <span class="mx" style="--c:3"><span>80</span><span>70</span><span>90</span></span> <span class="cv"><span>0.2</span><span>0.3</span><span>0.5</span></span> = 80 × 0.2 + 70 × 0.3 + 90 × 0.5 = 16 + 21 + 45 = <strong>82</strong>. Weighted averages are matrix products in disguise.</p>
 </div>
 
-<h2><span class="num">12.</span>Combining Transformation Matrices</h2>
-<p>Applying two transformations in sequence corresponds to <strong>multiplying their matrices together</strong> — but the order matters, since matrix multiplication is not commutative. To apply transformation P first, then Q, the combined matrix is QP (Q multiplied on the left of P), since the point vector is multiplied on the right.</p>
+<h2><span class="num">14.</span>Common Mistakes</h2>
+<ul>
+<li><strong>Multiplying element by element.</strong> Use row times column.</li>
+<li><strong>Assuming AB = BA.</strong> It is usually false. Keep the order given.</li>
+<li><strong>Adding matrices of different orders.</strong> They must have the same order. For multiplication, the columns of the first must equal the rows of the second.</li>
+<li><strong>Sign mistakes in the determinant.</strong> It is ad − bc, not ad + bc, and take care when b or c is negative: (−3) × 2 = −6, so subtracting it adds 6.</li>
+<li><strong>Forgetting to divide by the determinant</strong> or not changing the signs of b and c when finding an inverse.</li>
+<li><strong>Using the inverse on the wrong side.</strong> To solve AX = B use X = A⁻¹B, with A⁻¹ on the left.</li>
+<li><strong>Combining transformations in the wrong order.</strong> “P then Q” is QP.</li>
+<li><strong>Trying to use a 2 × 2 matrix for a translation</strong>, or for a rotation about a point that is not the origin.</li>
+</ul>
 
-<h2><span class="num">13.</span>Common Mistakes</h2>
-<p>Common errors include: adding or multiplying matrices of incompatible orders; trying to multiply matrices element-by-element instead of using the row-times-column method; forgetting that matrix multiplication order matters (AB ≠ BA in general); and forgetting to divide by the determinant when finding an inverse.</p>
+<!-- PRACTICE ARENA -->
+<div class="drill-section">
+<div class="section-eyebrow">Practice Arena</div>
+<h2>Matrix Check</h2>
+<p class="drill-intro">Tap the correct answer for each question. A matrix such as [1 2; 3 4] has first row 1 2 and second row 3 4. Your best score is saved on this device.</p>
+<div class="nl-drill-progress" id="mxProgress">Question 1 of 8  ·  Best score: <span id="mxBestScore">0</span> / 8</div>
+<div class="pv-drill-question" id="mxDrillQuestion"></div>
+<div class="pv-drill-choices" id="mxDrillChoices"></div>
+<div class="drill-feedback" id="mxDrillFeedback"></div>
+<div class="nl-drill-actions">
+<button class="drill-btn" id="mxNextBtn" onclick="nextMxQuestion()" style="display:none;">Next Question</button>
+<button class="drill-btn" id="mxNewSetBtn" onclick="newMxSet()" style="display:none;">Play Again</button>
+</div>
+</div>
 
-<h2><span class="num">14.</span>Putting It Together</h2>
-<div class="table-wrap"><table class="pos-table">
-<tr><th>Operation</th><th>Rule</th></tr>
-<tr><td>Addition/subtraction</td><td>Requires the same order; combine corresponding elements</td></tr>
-<tr><td>Scalar multiplication</td><td>Multiply every element</td></tr>
-<tr><td>Matrix multiplication</td><td>Row times column, order matters</td></tr>
-<tr><td>Determinant (2×2)</td><td>ad − bc</td></tr>
-<tr><td>Inverse (2×2)</td><td>1/det(A) × (d −b over −c a)</td></tr>
-</table></div>
+<h2><span class="num">15.</span>Try It Yourself</h2>
+<ol>
+<li>Find <span class="mx" style="--c:2"><span>1</span><span>3</span><span>2</span><span>−1</span></span> + <span class="mx" style="--c:2"><span>4</span><span>−2</span><span>0</span><span>5</span></span>.</li>
+<li>Find <span class="mx" style="--c:2"><span>2</span><span>3</span><span>1</span><span>4</span></span> <span class="cv"><span>1</span><span>2</span></span>.</li>
+<li>For A = <span class="mx" style="--c:2"><span>3</span><span>1</span><span>5</span><span>2</span></span>, find det A and A⁻¹.</li>
+</ol>
+<details class="sn-answer">
+<summary>Show answers</summary>
+<p><strong>1.</strong> <span class="mx" style="--c:2"><span>1+4</span><span>3+(−2)</span><span>2+0</span><span>−1+5</span></span> = <strong><span class="mx" style="--c:2"><span>5</span><span>1</span><span>2</span><span>4</span></span></strong>.</p>
+<p><strong>2.</strong> Top: 2×1 + 3×2 = 8. Bottom: 1×1 + 4×2 = 9. The answer is <strong><span class="cv"><span>8</span><span>9</span></span></strong>.</p>
+<p><strong>3.</strong> det A = (3 × 2) − (1 × 5) = 1. So A⁻¹ = (1/1) <span class="mx" style="--c:2"><span>2</span><span>−1</span><span>−5</span><span>3</span></span> = <strong><span class="mx" style="--c:2"><span>2</span><span>−1</span><span>−5</span><span>3</span></span></strong>. Check: <span class="mx" style="--c:2"><span>3</span><span>1</span><span>5</span><span>2</span></span> <span class="mx" style="--c:2"><span>2</span><span>−1</span><span>−5</span><span>3</span></span> = <span class="mx" style="--c:2"><span>6−5</span><span>−3+3</span><span>10−10</span><span>−5+6</span></span> = <span class="mx" style="--c:2"><span>1</span><span>0</span><span>0</span><span>1</span></span> ✓.</p>
+</details>
 
-<h2><span class="num">15.</span>Sources and Further Reading</h2>
-<p>This article is original EDUSAMBAM educational writing. It is designed as a broad matrices resource covering arithmetic, determinants, inverses and transformation applications for confident problem-solving. Exact examination requirements can vary between examination boards and syllabuses, so students should also compare their work with the specification and past-paper requirements of their own board.</p>
-<p><strong>Recommended study approach:</strong> practise matrix addition, scalar multiplication and row-times-column multiplication until automatic, then learn the determinant and inverse formulas before applying them to simultaneous equations and transformation matrices.</p>
+<h2><span class="num">16.</span>Exam-Style Questions</h2>
+<ol>
+<li>[3 marks] A = <span class="mx" style="--c:2"><span>2</span><span>−1</span><span>3</span><span>4</span></span> and B = <span class="mx" style="--c:2"><span>1</span><span>0</span><span>−2</span><span>5</span></span>. Find (a) A + B and (b) 2A − B.</li>
+<li>[3 marks] Find AB where A = <span class="mx" style="--c:2"><span>2</span><span>1</span><span>0</span><span>3</span></span> and B = <span class="mx" style="--c:2"><span>4</span><span>−1</span><span>2</span><span>5</span></span>.</li>
+<li>[3 marks] Find the determinant and the inverse of <span class="mx" style="--c:2"><span>5</span><span>2</span><span>7</span><span>3</span></span>.</li>
+<li>[4 marks] Use matrices to solve 3x + 2y = 7 and x + y = 3.</li>
+<li>[3 marks] Find the value of k for which <span class="mx" style="--c:2"><span>k</span><span>6</span><span>2</span><span>3</span></span> has no inverse.</li>
+<li>[4 marks] A transformation M sends (1, 0) to (0, −1) and (0, 1) to (−1, 0). (a) Write down the matrix M. (b) Find the image of (3, 2). (c) Describe the transformation fully.</li>
+<li>[5 marks] P = <span class="mx" style="--c:2"><span>0</span><span>−1</span><span>1</span><span>0</span></span> is a rotation of 90° anticlockwise about the origin, and Q = <span class="mx" style="--c:2"><span>1</span><span>0</span><span>0</span><span>−1</span></span> is a reflection in the x-axis. (a) Find the single matrix for P followed by Q. (b) Describe the single transformation it represents.</li>
+</ol>
+<details class="sn-answer">
+<summary>Show answers</summary>
+<p><strong>1.</strong> (a) A + B = <span class="mx" style="--c:2"><span>3</span><span>−1</span><span>1</span><span>9</span></span>. (b) 2A = <span class="mx" style="--c:2"><span>4</span><span>−2</span><span>6</span><span>8</span></span>, so 2A − B = <strong><span class="mx" style="--c:2"><span>3</span><span>−2</span><span>8</span><span>3</span></span></strong>.</p>
+<p><strong>2.</strong> Top-left 2×4 + 1×2 = 10; top-right 2×(−1) + 1×5 = 3; bottom-left 0×4 + 3×2 = 6; bottom-right 0×(−1) + 3×5 = 15. AB = <strong><span class="mx" style="--c:2"><span>10</span><span>3</span><span>6</span><span>15</span></span></strong>.</p>
+<p><strong>3.</strong> det = 15 − 14 = <strong>1</strong>. Inverse = <strong><span class="mx" style="--c:2"><span>3</span><span>−2</span><span>−7</span><span>5</span></span></strong>.</p>
+<p><strong>4.</strong> <span class="mx" style="--c:2"><span>3</span><span>2</span><span>1</span><span>1</span></span> <span class="cv"><span>x</span><span>y</span></span> = <span class="cv"><span>7</span><span>3</span></span>. det = 3 − 2 = 1, inverse <span class="mx" style="--c:2"><span>1</span><span>−2</span><span>−1</span><span>3</span></span>. <span class="cv"><span>x</span><span>y</span></span> = <span class="cv"><span>7 − 6</span><span>−7 + 9</span></span> = <span class="cv"><span>1</span><span>2</span></span>. So <strong>x = 1, y = 2</strong>. Check: 3 + 4 = 7 ✓ and 1 + 2 = 3 ✓.</p>
+<p><strong>5.</strong> No inverse means determinant 0: 3k − 12 = 0, so <strong>k = 4</strong>.</p>
+<p><strong>6.</strong> (a) The columns are the images: M = <strong><span class="mx" style="--c:2"><span>0</span><span>−1</span><span>−1</span><span>0</span></span></strong>. (b) M <span class="cv"><span>3</span><span>2</span></span> = <span class="cv"><span>−2</span><span>−3</span></span>, so the image is <strong>(−2, −3)</strong>. (c) The rule is (x, y) → (−y, −x) and the determinant is −1, so it is a <strong>reflection in the line y = −x</strong>.</p>
+<p><strong>7.</strong> (a) “P then Q” is QP = <span class="mx" style="--c:2"><span>1</span><span>0</span><span>0</span><span>−1</span></span> <span class="mx" style="--c:2"><span>0</span><span>−1</span><span>1</span><span>0</span></span> = <span class="mx" style="--c:2"><span>0</span><span>−1</span><span>−1</span><span>0</span></span>. (b) Its determinant is −1 and it sends (1, 0) to (0, −1), so it is the <strong>reflection in the line y = −x</strong>.</p>
+</details>
+
+<h2><span class="num">17.</span>Key Points</h2>
+<ul>
+<li>A matrix is a grid of numbers. Its order is rows × columns.</li>
+<li>Add or subtract only matrices of the same order, element by element. A scalar multiplies every element.</li>
+<li>Matrix multiplication is row times column. It needs (columns of the first) = (rows of the second), and AB ≠ BA in general.</li>
+<li>For A = <span class="mx" style="--c:2"><span>a</span><span>b</span><span>c</span><span>d</span></span>: det A = ad − bc, and A⁻¹ = (1/det A) <span class="mx" style="--c:2"><span>d</span><span>−b</span><span>−c</span><span>a</span></span>. If det A = 0 there is no inverse.</li>
+<li>AX = B is solved by X = A⁻¹B.</li>
+<li>Columns of a transformation matrix are the images of (1, 0) and (0, 1). The area scale factor is |det|.</li>
+<li>“P then Q” is the matrix QP. The inverse matrix reverses the transformation.</li>
+</ul>
+
+<h2><span class="num">18.</span>For Teachers and Parents</h2>
+<p>Start with tables the learner already knows (a bus timetable, prices from two shops) before introducing the brackets. When teaching multiplication, have learners cover all but one row and one column with two pieces of card, so they see which numbers pair up. For transformation matrices, the column rule is far easier to remember than a table of matrices: ask “where does (1, 0) go, and where does (0, 1) go?” and let the learner write the two answers as columns. Insist on a quick check (multiply A by A⁻¹, or substitute into the original equations), because sign errors are the commonest loss of marks.</p>
+
+<h2><span class="num">19.</span>Related Pages and Further Reading</h2>
+<ul>
+<li><a href="transformations.html">Transformations: Translation, Reflection, Rotation &amp; Enlargement</a></li>
+<li><a href="vectors-notation-arithmetic.html">Vectors: Notation, Arithmetic &amp; Magnitude</a> (column vectors)</li>
+<li><a href="algebraic-equations.html">Algebraic Equations</a> (the usual method for simultaneous equations)</li>
+<li><a href="sets-venn-diagrams.html">Sets: Notation, Venn Diagrams &amp; Set Operations</a></li>
+<li><a href="practice-test-sets-matrices.html">Practice Test: Sets &amp; Matrices</a></li>
+<li><a href="practice-test-vectors-transformations.html">Practice Test: Vectors &amp; Transformations</a></li>
+</ul>
+<p>This article is original EDUSAMBAM writing for students up to O-Level and similar courses. Exact syllabus content differs between examination boards, so compare your practice with the specification and past papers of your own board.</p>
 
 <!-- QUIZ SECTION -->
 <div class="quiz-section">
@@ -1284,6 +1729,157 @@ footer.footer {
   })();
 </script>
 
+<script id="edusambam-mx-script">
+(function(){
+  function $(id){return document.getElementById(id);}
+  window.toggleFix=function(id){var e=$(id);if(e)e.classList.toggle('visible');};
+  var U=20,OX=180,OY=150,NAVY='#06244a',RED='#8B0000',GOLD='#B8963E';
+  var T=[[1,1],[4,1],[1,3]],NM=['P','Q','R'];
+  function sx(x){return OX+x*U;} function sy(y){return OY-y*U;}
+  function fmt(n){var s=String(Math.round(n*100)/100);return s.replace('-','\u2212');}
+  function mxHTML(rows){
+    var c=rows[0].length,h='<span class="mx" style="--c:'+c+'">';
+    rows.forEach(function(r){r.forEach(function(v){h+='<span>'+v+'</span>';});});
+    return h+'</span>';
+  }
+  function img(m,p){return [m[0]*p[0]+m[1]*p[1],m[2]*p[0]+m[3]*p[1]];}
+  var OPS=[
+   {l:'Identity',m:[1,0,0,1],d:'The <strong>identity matrix</strong>. Every point stays where it is: it means \u201cdo nothing\u201d.'},
+   {l:'Reflect x-axis',m:[1,0,0,-1],d:'<strong>Reflection in the x-axis</strong>. (1, 0) stays and (0, 1) goes to (0, \u22121). The rule is (x, y) \u2192 (x, \u2212y).'},
+   {l:'Reflect y-axis',m:[-1,0,0,1],d:'<strong>Reflection in the y-axis</strong>. (1, 0) goes to (\u22121, 0) and (0, 1) stays. The rule is (x, y) \u2192 (\u2212x, y).'},
+   {l:'Reflect y = x',m:[0,1,1,0],d:'<strong>Reflection in the line y = x</strong>. The coordinates swap: (x, y) \u2192 (y, x).'},
+   {l:'Reflect y = \u2212x',m:[0,-1,-1,0],d:'<strong>Reflection in the line y = \u2212x</strong>. (x, y) \u2192 (\u2212y, \u2212x).'},
+   {l:'Rotate 90\u00b0 anticlockwise',m:[0,-1,1,0],d:'<strong>Rotation of 90\u00b0 anticlockwise about the origin</strong>. (1, 0) goes to (0, 1) and (0, 1) goes to (\u22121, 0). The rule is (x, y) \u2192 (\u2212y, x).'},
+   {l:'Rotate 90\u00b0 clockwise',m:[0,1,-1,0],d:'<strong>Rotation of 90\u00b0 clockwise about the origin</strong>. (x, y) \u2192 (y, \u2212x). It is the inverse of the anticlockwise quarter-turn.'},
+   {l:'Rotate 180\u00b0',m:[-1,0,0,-1],d:'<strong>Rotation of 180\u00b0 about the origin</strong>. (x, y) \u2192 (\u2212x, \u2212y).'},
+   {l:'Enlarge \u00d72',m:[2,0,0,2],d:'<strong>Enlargement, scale factor 2, centre the origin</strong>. Every coordinate is doubled.'},
+   {l:'Enlarge \u00d7\u00bd',m:[0.5,0,0,0.5],d:'<strong>Enlargement, scale factor \u00bd, centre the origin</strong>. Every coordinate is halved, so the triangle shrinks.'},
+   {l:'Stretch (bonus)',m:[2,0,0,1],d:'A <strong>stretch</strong> that doubles every x and keeps y. It is not on every O-Level course, but it shows that the determinant (2) is the area factor.'},
+   {l:'Shear (bonus)',m:[1,1,0,1],d:'A <strong>shear</strong>: (x, y) \u2192 (x + y, y). Points slide sideways by an amount that depends on their height. The area does not change (determinant 1).'},
+   {l:'Singular matrix',m:[1,1,1,1],d:'A <strong>singular matrix</strong>. Every point is sent onto the line y = x, so the whole triangle is squashed flat. It has no inverse.'}
+  ];
+  window.MX_OPS=OPS;
+  function poly(pts,fill,stroke,op){
+    return '<polygon points="'+pts.map(function(p){return sx(p[0])+','+sy(p[1]);}).join(' ')+'" fill="'+fill+'" fill-opacity="'+op+'" stroke="'+stroke+'" stroke-width="2" stroke-linejoin="round"/>';
+  }
+  function label(p,t,col,dx,dy){return '<text x="'+(sx(p[0])+dx)+'" y="'+(sy(p[1])+dy)+'" font-size="12" font-weight="700" fill="'+col+'" paint-order="stroke" stroke="#fff" stroke-width="3">'+t+'</text>';}
+  function showOp(i){
+    var row=$('mxChipRow').children;
+    for(var j=0;j<row.length;j++)row[j].classList.toggle('active',j===i);
+    var op=OPS[i],m=op.m,im=T.map(function(p){return img(m,p);}),h='';
+    h+='<g class="mx-imgfade">'+poly(im,RED,RED,0.35)+'</g>'+poly(T,NAVY,NAVY,0.55);
+    T.forEach(function(p,j){h+=label(p,NM[j],NAVY,4,-5);});
+    im.forEach(function(q,j){h+=label(q,NM[j]+'\u2032',RED,4,-5);});
+    var L=$('mxLayer'); if(L)L.innerHTML=h;
+    var det=m[0]*m[3]-m[1]*m[2],area=3*Math.abs(det);
+    var t=op.d+'<br><br>Matrix: '+mxHTML([[fmt(m[0]),fmt(m[1])],[fmt(m[2]),fmt(m[3])]])+'<br>Determinant = ('+fmt(m[0])+' \u00d7 '+fmt(m[3])+') \u2212 ('+fmt(m[1])+' \u00d7 '+fmt(m[2])+') = <strong>'+fmt(det)+'</strong>.<br>';
+    t+='The area of triangle PQR is 3, so the image has area 3 \u00d7 '+fmt(Math.abs(det))+' = <strong>'+fmt(area)+'</strong>.';
+    if(det<0)t+=' The negative determinant means the shape is also flipped over.';
+    if(det===0)t+=' A determinant of 0 means the image has no area: it is a line.';
+    t+='<br><br>'+T.map(function(p,j){return NM[j]+'('+p[0]+', '+p[1]+') \u2192 '+NM[j]+'\u2032('+fmt(im[j][0])+', '+fmt(im[j][1])+')';}).join('<br>');
+    $('mxInfoPlaceholder').style.display='none';
+    var r=$('mxInfoResult'); r.innerHTML=t; r.style.display='';
+  }
+  function initChips(){
+    var row=$('mxChipRow'); if(!row)return; row.innerHTML='';
+    OPS.forEach(function(c,i){
+      var b=document.createElement('button'); b.type='button'; b.className='ns-chip'; b.textContent=c.l;
+      b.addEventListener('click',function(){showOp(i);}); row.appendChild(b);
+    });
+  }
+  /* ---- calculator ---- */
+  function gcd(a,b){a=Math.abs(a);b=Math.abs(b);while(b){var t=a%b;a=b;b=t;}return a;}
+  function frac(n,d){ if(d<0){n=-n;d=-d;} var g=gcd(n,d)||1; n/=g; d/=g; return d===1?fmt(n):fmt(n)+'/'+d; }
+  function readM(p){
+    var o=[];
+    for(var i=1;i<=4;i++){
+      var e=$('mx'+p+i),v=e?String(e.value).trim():'';
+      if(v===''||isNaN(Number(v))||Math.floor(Number(v))!==Number(v))return null;
+      o.push(Number(v));
+    }
+    return o;
+  }
+  function two(a){return [[fmt(a[0]),fmt(a[1])],[fmt(a[2]),fmt(a[3])]];}
+  function mul(a,b){return [a[0]*b[0]+a[1]*b[2],a[0]*b[1]+a[1]*b[3],a[2]*b[0]+a[3]*b[2],a[2]*b[1]+a[3]*b[3]];}
+  function det(a){return a[0]*a[3]-a[1]*a[2];}
+  function inv(a,nm){
+    var d=det(a);
+    var s='det '+nm+' = ('+fmt(a[0])+' \u00d7 '+fmt(a[3])+') \u2212 ('+fmt(a[1])+' \u00d7 '+fmt(a[2])+') = '+fmt(d)+'.<br>';
+    if(d===0)return s+'The determinant is 0, so '+nm+' is singular and has <strong>no inverse</strong>.';
+    var e=[a[3],-a[1],-a[2],a[0]].map(function(x){return frac(x,d);});
+    return s+nm+'\u207b\u00b9 = (1/'+fmt(d)+') '+mxHTML(two([a[3],-a[1],-a[2],a[0]]))+' = '+mxHTML([[e[0],e[1]],[e[2],e[3]]]);
+  }
+  window.mxCalc=function(op){
+    var A=readM('A'),B=readM('B'),out=$('mxCalcOut'),hint=$('mxCalcHint'),t;
+    hint.style.display='none'; out.style.display='';
+    if(!A||!B){out.innerHTML='Please type a whole number in every box (for example 3 or \u22122).';return;}
+    var a=mxHTML(two(A)),b=mxHTML(two(B));
+    if(op==='add')t='A + B = '+a+' + '+b+' = '+mxHTML(two(A.map(function(x,i){return x+B[i];})));
+    else if(op==='sub')t='A \u2212 B = '+a+' \u2212 '+b+' = '+mxHTML(two(A.map(function(x,i){return x-B[i];})));
+    else if(op==='ab')t='AB = '+a+' '+b+' = '+mxHTML(two(mul(A,B)))+'<br>Top-left: ('+fmt(A[0])+' \u00d7 '+fmt(B[0])+') + ('+fmt(A[1])+' \u00d7 '+fmt(B[2])+') = '+fmt(mul(A,B)[0])+'.';
+    else if(op==='ba')t='BA = '+b+' '+a+' = '+mxHTML(two(mul(B,A)))+'<br>Top-left: ('+fmt(B[0])+' \u00d7 '+fmt(A[0])+') + ('+fmt(B[1])+' \u00d7 '+fmt(A[2])+') = '+fmt(mul(B,A)[0])+'.';
+    else if(op==='deta')t='det A = ('+fmt(A[0])+' \u00d7 '+fmt(A[3])+') \u2212 ('+fmt(A[1])+' \u00d7 '+fmt(A[2])+') = <strong>'+fmt(det(A))+'</strong>.';
+    else if(op==='inva')t=inv(A,'A');
+    else t=inv(B,'B');
+    out.innerHTML=t;
+  };
+  function initCalc(){
+    var row=$('mxCalcRow'); if(!row)return; row.innerHTML='';
+    [['A + B','add'],['A \u2212 B','sub'],['AB','ab'],['BA','ba'],['det A','deta'],['A\u207b\u00b9','inva'],['B\u207b\u00b9','invb']].forEach(function(c){
+      var b=document.createElement('button'); b.type='button'; b.className='ns-chip'; b.textContent=c[0];
+      b.addEventListener('click',function(){window.mxCalc(c[1]);}); row.appendChild(b);
+    });
+  }
+  /* ---- drill ---- */
+  var BANK=[
+   {q:'Find A + B where A = [1 2; 3 4] and B = [0 5; 2 1].',c:['[1 7; 5 5]','[1 10; 6 4]','[0 10; 6 4]','[1 7; 5 4]'],e:'Add matching elements: 1+0, 2+5, 3+2, 4+1 gives [1 7; 5 5].'},
+   {q:'What is the order of a matrix with 3 rows and 2 columns?',c:['3 \u00d7 2','2 \u00d7 3','5','6'],e:'Order is rows \u00d7 columns, so it is 3 \u00d7 2.'},
+   {q:'Find 3A where A = [2 \u22121; 0 4].',c:['[6 \u22123; 0 12]','[5 2; 3 7]','[6 \u22121; 0 4]','[2 \u22123; 0 12]'],e:'Multiply every element by 3.'},
+   {q:'Find the determinant of [6 4; 2 3].',c:['10','26','14','18'],e:'(6 \u00d7 3) \u2212 (4 \u00d7 2) = 18 \u2212 8 = 10.'},
+   {q:'A = [1 2; 3 4] and B = [5 6; 7 8]. What is the top-right element of AB?',c:['22','19','43','50'],e:'Row 1 of A with column 2 of B: (1 \u00d7 6) + (2 \u00d7 8) = 22.'},
+   {q:'Which of these matrices has no inverse?',c:['[2 4; 1 2]','[2 1; 1 1]','[1 0; 0 1]','[3 1; 5 2]'],e:'det [2 4; 1 2] = 4 \u2212 4 = 0, so it is singular. The others have determinant 1.'},
+   {q:'Find the inverse of [3 1; 5 2].',c:['[2 \u22121; \u22125 3]','[2 1; 5 3]','[\u22122 1; 5 \u22123]','[3 \u22121; \u22125 2]'],e:'det = 6 \u2212 5 = 1. Swap the diagonal and change the signs of the others: [2 \u22121; \u22125 3].'},
+   {q:'Solve 3x + 2y = 7 and x + y = 3 using matrices. What is x?',c:['1','2','3','\u22121'],e:'The determinant is 1 and X = [1 \u22122; \u22121 3] \u00d7 [7; 3] = [1; 2], so x = 1 and y = 2.'},
+   {q:'The matrix [0 1; 1 0] represents:',c:['A reflection in y = x','A reflection in the x-axis','A rotation of 90\u00b0 anticlockwise','An enlargement'],e:'It swaps the coordinates, and its determinant is \u22121, so it is a reflection in y = x.'},
+   {q:'The matrix [0 \u22121; 1 0] represents:',c:['A rotation of 90\u00b0 anticlockwise about O','A rotation of 90\u00b0 clockwise about O','A reflection in y = x','A reflection in the y-axis'],e:'(1, 0) goes to (0, 1) and (0, 1) goes to (\u22121, 0), a quarter-turn anticlockwise.'},
+   {q:'The matrix [\u22121 0; 0 \u22121] represents:',c:['A rotation of 180\u00b0 about O','A reflection in the x-axis','The identity','An enlargement with scale factor 2'],e:'Both coordinates change sign: (x, y) \u2192 (\u2212x, \u2212y), a half-turn.'},
+   {q:'The matrix [3 0; 0 3] has determinant 9. What does this tell you?',c:['Areas are multiplied by 9','Lengths are multiplied by 9','Areas are multiplied by 3','Areas stay the same'],e:'The determinant is the area scale factor. Lengths are multiplied by 3, so areas by 3\u00b2 = 9.'},
+   {q:'Transformation P is applied first, then Q. The matrix of the combined transformation is:',c:['QP','PQ','P + Q','P \u2212 Q'],e:'The point is on the right, so the matrix applied second goes on the left: QP.'},
+   {q:'Apply [0 \u22121; 1 0] to the point (2, 3).',c:['(\u22123, 2)','(3, \u22122)','(2, \u22123)','(\u22122, 3)'],e:'(0 \u00d7 2) + (\u22121 \u00d7 3) = \u22123 and (1 \u00d7 2) + (0 \u00d7 3) = 2.'},
+   {q:'Which statement is true for matrices in general?',c:['AB is not always equal to BA','AB is always equal to BA','A + B is not always equal to B + A','The determinant of the identity matrix is 0'],e:'Matrix multiplication is not commutative, but addition is, and det I = 1.'}
+  ];
+  var N=8,set=[],idx=0,score=0,best=0,answered=false,KEY='edusambam_matrix_best';
+  try{var bv=parseInt(window.localStorage.getItem(KEY),10);if(!isNaN(bv))best=bv;}catch(e){}
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  function progress(){$('mxProgress').innerHTML='Question '+Math.min(idx+1,N)+' of '+N+' &nbsp;\u00b7&nbsp; Best score: <span id="mxBestScore">'+best+'</span> / '+N;}
+  function showQ(){
+    answered=false; var it=set[idx]; $('mxDrillQuestion').textContent=it.q;
+    var box=$('mxDrillChoices'); box.innerHTML='';
+    shuffle(it.c).forEach(function(txt){
+      var b=document.createElement('button'); b.type='button'; b.className='pv-choice-btn'; b.textContent=txt;
+      b.addEventListener('click',function(){choose(b,txt);}); box.appendChild(b);
+    });
+    $('mxDrillFeedback').textContent=''; $('mxNextBtn').style.display='none'; $('mxNewSetBtn').style.display='none'; progress();
+  }
+  function choose(btn,txt){
+    if(answered)return; answered=true; var it=set[idx], ok=txt===it.c[0];
+    var all=$('mxDrillChoices').querySelectorAll('.pv-choice-btn');
+    for(var i=0;i<all.length;i++){all[i].disabled=true;if(all[i].textContent===it.c[0])all[i].classList.add('correct');}
+    if(ok)score++;else btn.classList.add('incorrect');
+    $('mxDrillFeedback').textContent=(ok?'Correct! ':'Not quite. The answer is '+it.c[0]+'. ')+it.e;
+    if(idx<N-1){$('mxNextBtn').style.display='';}
+    else{
+      if(score>best){best=score;try{window.localStorage.setItem(KEY,String(best));}catch(e){}}
+      progress(); $('mxDrillFeedback').textContent+=' You scored '+score+' out of '+N+'.'; $('mxNewSetBtn').style.display='';
+    }
+  }
+  window.nextMxQuestion=function(){if(idx<N-1){idx++;showQ();}};
+  window.newMxSet=function(){set=shuffle(BANK).slice(0,N);idx=0;score=0;showQ();};
+  function init(){initChips();initCalc();if($('mxDrillQuestion'))window.newMxSet();}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+
+</script>
 <script id="edusambam-reader-script">
 (function(){
  const box=document.querySelector('.edusambam-reader'); if(!box)return;
@@ -1345,10 +1941,10 @@ footer.footer {
     const b=document.querySelector('.edusambam-menu-btn');
     if(b){
       const isOpen=!!document.querySelector('.edusambam-mobile-menu')?.classList.contains('open');
+      b.classList.toggle('is-open',isOpen);
       b.setAttribute('aria-expanded', String(isOpen));
-      b.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-      b.setAttribute('title', isOpen ? 'Close menu' : 'Menu');
-      b.textContent = isOpen ? '×' : '☰';
+      b.setAttribute('aria-label',isOpen?'Close menu':'Open menu');
+      b.setAttribute('title',isOpen?'Close menu':'Menu');
     }
   }
   function setup(){
@@ -1361,12 +1957,19 @@ footer.footer {
     if(mb && menu){
       mb.addEventListener('click',()=>{
         const open=menu.classList.toggle('open'); closeAll(open?menu:null);
+        mb.classList.toggle('is-open',open);
         mb.setAttribute('aria-expanded',String(open));
-        mb.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-        mb.setAttribute('title', open ? 'Close menu' : 'Menu');
-        mb.textContent = open ? '×' : '☰';
+        mb.setAttribute('aria-label',open?'Close menu':'Open menu');
+        mb.setAttribute('title',open?'Close menu':'Menu');
         if(open) panel?.classList.remove('open');
       });
+      menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+        menu.classList.remove('open');
+        mb.classList.remove('is-open');
+        mb.setAttribute('aria-expanded','false');
+        mb.setAttribute('aria-label','Open menu');
+        mb.setAttribute('title','Menu');
+      }));
     }
     if(sb && panel){
       sb.addEventListener('click',()=>{
@@ -1375,9 +1978,32 @@ footer.footer {
       });
     }
     if(input && results){
+      const norm=s=>(' '+String(s||'').toLowerCase().replace(/&/g,' and ').replace(/[^a-z0-9]+/g,' ')+' ');
+      const stop={and:1,the:1,of:1,a:1,an:1,to:1,in:1,is:1,for:1};
       const render=()=>{
         const q=input.value.trim().toLowerCase();
-        const hits=q?pages.filter(x=>(x.title+' '+x.url).toLowerCase().includes(q)).slice(0,20):[];
+        let words=norm(q).trim().split(' ').filter(Boolean);
+        const sig=words.filter(w=>!stop[w]); if(sig.length) words=sig;
+        let hits=[];
+        if(q&&words.length){
+          const forms=w=>{const f=[w]; if(w.length>3&&w.endsWith('s')) f.push(w.slice(0,-1)); if(w.length>4&&w.endsWith('es')) f.push(w.slice(0,-2)); if(w.length>5&&w.endsWith('ing')) f.push(w.slice(0,-3)); if(w.length>4&&w.endsWith('ed')) f.push(w.slice(0,-2)); return f;};
+          const scored=[];
+          pages.forEach(x=>{
+            const t=norm(x.title), m=norm(String(x.url||'').replace(/[-_.]/g,' ')+' '+(x.s||'')+' '+(x.k||''));
+            let sc=0, ok=true;
+            for(const w of words){
+              const f=forms(w);
+              if(f.some(v=>t.includes(' '+v))) sc+=3;
+              else if(f.some(v=>m.includes(' '+v))) sc+=1;
+              else { ok=false; break; }
+            }
+            if(ok) scored.push([sc,x]);
+          });
+          scored.sort((a,b)=>b[0]-a[0]);
+          hits=scored.map(z=>z[1]);
+          if(!hits.length) hits=pages.filter(x=>(x.title+' '+x.url).toLowerCase().includes(q));
+          hits=hits.slice(0,30);
+        }
         results.innerHTML=hits.map(x=>'<a href="'+x.url.replace(/"/g,'&quot;')+'">'+
           x.title.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</a>').join('') ||
           (q?'<div style="padding:10px;color:#64748b">No matching pages found.</div>':'');
@@ -1394,32 +2020,30 @@ footer.footer {
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',setup); else setup();
 })();
 </script>
-<footer class="edusambam-unified-footer" aria-label="EDUSAMBAM site footer">
+<footer aria-label="EDUSAMBAM site footer" class="edusambam-unified-footer">
 <div class="footer-top">
 <div class="footer-brand">
 <div class="edusambam-footer-brand-row">
-<a class="edusambam-footer-logo-link" href="index.html" aria-label="EDUSAMBAM home">
+<a aria-label="EDUSAMBAM home" class="edusambam-footer-logo-link" href="index.html">
 <img alt="EDUSAMBAM" class="edusambam-brand-mark edusambam-footer-logo" src="logo-icon-full-white.png" style="width:auto;height:64px;max-width:240px;object-fit:contain;background:none;border-radius:0;"/>
 </a>
 </div>
 <p class="edusambam-footer-statement">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</p>
-<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a></div>
+<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a><a aria-label="EDUSAMBAM on YouTube" href="https://youtube.com/@edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></div>
 </div>
-<div class="footer-col"><h4>Learning</h4><ul><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li></ul></div>
+<div class="footer-col"><h4>Learning Areas</h4><ul><li><a href="index.html#subject-english">English Language</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ ARENA</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li><li><a href="index.html#spelling-bee-arena">SPELLING BEE ARENA</a></li><li><a href="index.html#english-vocabulary-amp-word-skills">Vocabulary Building</a></li></ul></div>
 <div class="footer-col"><h4>Practice &amp; Assessment</h4><ul>
 <li><a href="index.html#interactive-activities">Interactive Activities</a></li>
-<li><a href="assessment-arena.html">ASSESSMENT ARENA</a></li>
-<li><a href="assessment-arena.html">What Is Assessment?</a></li>
-<li><a href="index.html#about">Learn Your Way</a></li>
-<li><a href="index.html#resources">Resources &amp; Downloads</a></li>
+<li><a href="assessment-arena.html">Assessment Arena</a></li>
+<li><a href="index.html#resources">Downloadable Resources</a></li>
 </ul></div>
 <div class="footer-col"><h4>About EDUSAMBAM</h4><ul>
-<li><a href="index.html#about-edusambam">What EDUSAMBAM Is</a></li>
 <li><a href="index.html#mission">Our Mission</a></li>
 <li><a href="index.html#team">The Team</a></li>
 <li><a href="contact.html">Contact Us</a></li>
 <li><a href="mailto:feedback.edusambam@gmail.com?subject=EDUSAMBAM%20Feedback">Give Feedback</a></li>
 <li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+<li><a href="about.html">About EDUSAMBAM</a></li>
 <li><a href="privacy-policy.html">Privacy Policy</a></li>
 </ul></div>
 </div>
@@ -1427,7 +2051,7 @@ footer.footer {
 <li><a href="#top">Back to Top</a></li>
 <li><a href="index.html#mission">Mission</a></li>
 <li><a href="index.html#team">Team</a></li>
-<li><a href="index.html#resources">Resources</a></li>
+<li><a href="index.html#resources">Downloadable Resources</a></li>
 </ul></div>
 </footer></body>
 </html>

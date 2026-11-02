@@ -12,262 +12,483 @@ gtag('config', 'G-Y35DW0V4HQ');
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>The Grammar Trap: 10 Mistakes That Make Smart People Look Careless — EDUSAMBAM</title>
+<title>The Grammar Trap: 10 Common Mistakes — EDUSAMBAM</title>
 <link href="https://edusambam.com/grammar-article.html" rel="canonical"/>
 <meta content="Uoor94jnl-fRNqRmIJ8EGZsBqQayKdHRLwDVtN9aGUU" name="google-site-verification"/>
-<meta content="10 common grammar mistakes explained clearly — with memory tricks, examples and fixes. From apostrophes to passive voice." name="description"/>
+<meta content="Ten common grammar traps with a quick test for each: sound-alike words, apostrophes, I and me, fewer and less, dangling modifiers and more." name="description"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
 <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --red:     #8B0000;
-      --navy:    #06244a;
-      --gold:    #B8963E;
-      --cream:   #FAF8F4;
-      --white:   #FFFFFF;
-      --ink:     #1A1A1A;
-      --slate:   #4A4A4A;
-      --muted:   #767676;
-      --border:  #D8D0C8;
-    }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Source Sans 3', sans-serif;
-      font-size: 16px;
-      color: var(--ink);
-      background: var(--white);
-      line-height: 1.7;
-      overflow-x: hidden;
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --red:       #8B0000;
+    --red-mid:   #A50000;
+    --red-lt:    #F9F0F0;
+    --navy:      #06244a;
+    --navy-mid:  #1C3151;
+    --gold:      #B8963E;
+    --gold-lt:   #F5EDD6;
+    --cream:     #FAF8F4;
+    --white:     #FFFFFF;
+    --ink:       #1A1A1A;
+    --slate:     #4A4A4A;
+    --muted:     #767676;
+    --border:    #D8D0C8;
+    --border-lt: #EDE8E0;
+    --radius:    4px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--ink);
+    background: var(--white);
+    line-height: 1.7;
+    overflow-x: hidden;
 
     border: 3px solid #d4a017;
     min-height: 100vh;
     box-sizing: border-box;
 }
 
-    /* ── NAV ── */
+  /* ── TOP BAR ── */
+  .top-bar {
+    background: var(--navy);
+    padding: 0.45rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .top-bar p {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.03em;
+  }
+  .top-bar-links { display: flex; gap: 1.5rem; list-style: none; }
+  .top-bar-links a {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+  .top-bar-links a:hover { color: white; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 200;
+    background: rgba(255,255,255,.97);
+    border-bottom: 3px solid var(--gold);
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    box-shadow: 0 2px 12px rgba(8,47,99,0.08);
+  }
+  .nav-brand { display: flex; flex-direction: column; line-height: 1; text-decoration: none; }
+  .nav-brand-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: 0.01em;
+  }
+  .nav-brand-name span { color: var(--red); }
+  .nav-brand-sub {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: rgba(13,27,42,0.6);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 0.25rem;
+  }
+  .nav-links { display: flex; gap: 0; list-style: none; }
+  .nav-links a {
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(13,27,42,0.75);
+    padding: 0 1.1rem;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--b, #0b4ea2); }
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+  }
+
+  /* ── ARTICLE HERO ── */
+  .article-hero {
+    background: linear-gradient(135deg,#06244a,#0b4ea2);
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+  }
+  .breadcrumb {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 1.1rem;
+    letter-spacing: 0.02em;
+  }
+  .breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--gold); }
+  .article-hero-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(184,150,62,0.4);
+    padding: 0.35rem 0.9rem;
+    border-radius: 30px;
+    margin-bottom: 1.25rem;
+  }
+  .article-hero h1 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 2.4rem;
+    color: white;
+    max-width: 760px;
+    margin: 0 auto 1rem;
+    line-height: 1.25;
+  }
+  .article-hero p.sub {
+    color: rgba(255,255,255,0.6);
+    max-width: 620px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.02rem;
+  }
+  .article-hero-meta {
+    display: flex; justify-content: center; gap: 0.9rem;
+    font-size: 0.8rem; color: rgba(255,255,255,0.45);
+    flex-wrap: wrap;
+  }
+
+  /* ── ARTICLE BODY ── */
+  .article-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+  .article-wrap h2 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 1.65rem;
+    color: var(--navy);
+    margin: 2.6rem 0 1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--border-lt);
+  }
+  .article-wrap h2 span.num {
+    color: var(--red);
+    margin-right: 0.5rem;
+    font-style: italic;
+  }
+  .article-wrap p { color: var(--slate); margin-bottom: 1rem; font-size: 1.02rem; }
+  .article-wrap ul { margin: 0 0 1.2rem 1.4rem; color: var(--slate); }
+  .article-wrap li { margin-bottom: 0.5rem; }
+  .article-wrap strong { color: var(--ink); }
+  .lead {
+    font-size: 1.15rem;
+    color: var(--ink);
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    border-left: 3px solid var(--gold);
+    padding-left: 1.2rem;
+    margin: 1.5rem 0 2rem;
+  }
+  .example-box {
+    background: var(--gold-lt);
+    border: 1px solid rgba(184,150,62,0.35);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 1.3rem 1.5rem;
+    margin: 1.3rem 0 1.8rem;
+  }
+  .example-box .ex-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.5rem;
+  }
+  .example-box p { color: var(--ink); margin-bottom: 0.4rem; font-size: 0.98rem; }
+  .example-box p:last-child { margin-bottom: 0; }
+
+  .real-world-box {
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 1.6rem 1.7rem;
+    margin: 2.4rem 0;
+  }
+  .real-world-box .rw-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.7rem;
+  }
+  .real-world-box p { color: rgba(255,255,255,0.8); margin-bottom: 0; font-size: 1rem; }
+
+  .table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+  table.pos-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+  table.pos-table th {
+    background: var(--navy);
+    color: white;
+    text-align: left;
+    padding: 0.7rem 0.9rem;
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+  }
+  table.pos-table td {
+    padding: 0.7rem 0.9rem;
+    border-bottom: 1px solid var(--border-lt);
+    color: var(--slate);
+  }
+  table.pos-table tr:nth-child(even) td { background: var(--cream); }
+
+  /* ── QUIZ ── */
+  .quiz-section {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem 1.7rem 1.5rem;
+    margin-top: 3rem;
+  }
+  .quiz-section .section-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.4rem;
+  }
+  .quiz-section h2 {
+    border: none; margin: 0 0 0.4rem; padding: 0;
+  }
+  .quiz-intro { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.6rem; }
+
+  /* SCORED QUIZ (click-to-highlight + real scoring) */
+  .squiz-progress {
+    background: var(--cream);
+    border-radius: 30px;
+    height: 8px;
+    overflow: hidden;
+    margin-bottom: 0.4rem;
+  }
+  .squiz-progress-fill {
+    background: var(--gold);
+    height: 100%;
+    width: 0%;
+    transition: width 0.25s ease;
+  }
+  .squiz-progress-label {
+    font-size: 0.78rem;
+    color: var(--muted);
+    text-align: right;
+    margin-bottom: 1.3rem;
+  }
+  .squiz-item {
+    background: var(--white);
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .squiz-q {
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+  }
+  .squiz-q .qnum { color: var(--red); margin-right: 0.4rem; }
+  .squiz-option {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .squiz-option:hover { border-color: var(--gold); }
+  .squiz-option input[type="radio"] { accent-color: var(--red); width: 16px; height: 16px; flex-shrink: 0; }
+  .squiz-option label { cursor: pointer; font-size: 0.94rem; color: var(--slate); flex: 1; }
+  .squiz-option.selected { border-color: var(--red); background: rgba(139,0,0,0.04); }
+  .squiz-option.correct-answer { border-color: #2e7d32; background: rgba(46,125,50,0.08); }
+  .squiz-option.wrong-answer { border-color: var(--red); background: rgba(139,0,0,0.08); }
+  .squiz-submit-btn {
+    display: block;
+    width: 100%;
+    background: var(--red);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.98rem;
+    font-weight: 600;
+    padding: 0.9rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    margin-top: 0.6rem;
+    transition: background 0.2s;
+  }
+  .squiz-submit-btn:hover { background: var(--red-mid); }
+  .squiz-submit-btn:disabled { background: var(--border); cursor: not-allowed; }
+  .squiz-results {
+    display: none;
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 2rem 1.6rem;
+    text-align: center;
+    margin-bottom: 1.8rem;
+  }
+  .squiz-results.visible { display: block; }
+  .squiz-results .squiz-score-big {
+    font-family: 'EB Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .squiz-results .squiz-score-label { color: rgba(255,255,255,0.7); font-size: 0.98rem; margin-bottom: 1rem; }
+  .squiz-results .squiz-score-tier {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    border-radius: 30px;
+    background: rgba(184,150,62,0.15);
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+  }
+  .squiz-retake-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 0.65rem 1.4rem;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  .squiz-retake-btn:hover { background: rgba(255,255,255,0.1); }
+
+  .article-footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-lt);
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .article-footer-nav a {
+    text-decoration: none;
+    color: var(--red);
+    font-weight: 600;
+    font-size: 0.92rem;
+  }
+  .article-footer-nav a:hover { text-decoration: underline; }
+
+  @media (max-width: 700px) {
+    .article-hero h1 { font-size: 1.7rem; }
+    .article-wrap { padding: 2rem 1.25rem 3rem; }
+  }
+  @media (max-width: 680px) {
+    .top-bar { display: none; }
     nav {
-      position: sticky; top: 0; z-index: 200;
-      background: var(--navy);
-      border-bottom: 3px solid var(--red);
-      padding: 0 3rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 72px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+      padding: 0 1rem;
+      height: 68px;
+      border-bottom-width: 2px;
     }
-    .nav-brand { display: flex; flex-direction: column; line-height: 1; text-decoration: none; }
-    .nav-brand-name { font-family: 'EB Garamond', serif; font-size: 1.65rem; font-weight: 600; color: white; }
-    .nav-brand-name span { color: var(--red); }
-    .nav-brand-sub { font-size: 0.68rem; font-weight: 500; color: rgba(255,255,255,0.5); letter-spacing: 0.12em; text-transform: uppercase; margin-top: 0.1rem; }
-    .nav-links { display: flex; gap: 0; list-style: none; }
-    .nav-links a { text-decoration: none; font-size: 0.85rem; font-weight: 500; color: rgba(255,255,255,0.75); padding: 0 1.1rem; height: 72px; display: flex; align-items: center; border-bottom: 3px solid transparent; margin-bottom: -3px; letter-spacing: 0.04em; transition: color 0.2s, border-color 0.2s; }
-    .nav-links a:hover { color: white; border-bottom-color: var(--red); }
-    .nav-cta { background: var(--red); color: white; border: none; padding: 0.55rem 1.4rem; font-family: 'Source Sans 3', sans-serif; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; text-decoration: none; transition: background 0.2s; }
-    .nav-cta:hover { background: #A50000; }
-
-    /* ── BREADCRUMB ── */
-    .breadcrumb {
-      background: var(--cream);
-      padding: 0.75rem 3rem;
-      border-bottom: 1px solid var(--border);
-      font-size: 0.78rem;
-      color: var(--muted);
+    .nav-links { display: none; }
+    .nav-brand-name {
+      font-size: 1.35rem;
+      white-space: nowrap;
     }
-    .breadcrumb a { color: var(--red); text-decoration: none; }
-    .breadcrumb a:hover { text-decoration: underline; }
-    .breadcrumb span { margin: 0 0.4rem; }
-
-    /* ── ARTICLE HEADER ── */
-    .article-header {
-      background: var(--navy);
-      padding: 4rem 3rem 3.5rem;
+    .nav-brand-sub {
+      font-size: 0.62rem;
+      letter-spacing: 0.07em;
     }
-    .article-header-inner { max-width: 780px; margin: 0 auto; }
-    .article-subject {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      font-size: 0.72rem; font-weight: 600;
-      letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1.25rem;
-    }
-    .article-subject::before { content: ''; display: inline-block; width: 20px; height: 1px; background: var(--gold); }
-    .article-header h1 {
-      font-family: 'EB Garamond', serif;
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      font-weight: 500;
-      color: white;
-      line-height: 1.2;
-      margin-bottom: 1.5rem;
-    }
-    .article-meta-bar {
-      display: flex; align-items: center; gap: 1.5rem;
-      flex-wrap: wrap;
-      padding-top: 1.25rem;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      font-size: 0.78rem;
-      color: rgba(255,255,255,0.5);
-      letter-spacing: 0.03em;
-    }
-    .article-meta-bar span { display: flex; align-items: center; gap: 0.35rem; }
+    .footer-top { grid-template-columns: 1fr; gap: 2rem; padding: 2rem 1.25rem; }
+    footer { padding: 2rem 1.25rem 0; }
+  }
 
-    /* ── ARTICLE BODY ── */
-    .article-wrapper {
-      max-width: 780px;
-      margin: 0 auto;
-      padding: 3.5rem 2rem;
-    }
+  /* ── FOOTER (copied from site) ── */
+  footer { background: var(--navy); padding: 3.5rem 3rem 0; }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 2.5rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .footer-brand-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+  }
+  .footer-brand-name span { color: var(--red); }
+  .footer-desc { color: rgba(255,255,255,0.45); font-size: 0.9rem; margin-top: 0.8rem; max-width: 320px; }
+  .footer-col h4 {
+    font-family: 'EB Garamond', serif;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 0.7rem; }
+  .footer-col a {
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.2s;
+  }
+  .footer-col a:hover { color: var(--gold); }
+  .footer-bottom {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer-bottom p { color: rgba(255,255,255,0.35); font-size: 0.8rem; }
+  .footer-bottom-links { display: flex; gap: 1.3rem; list-style: none; }
+  .footer-bottom-links a { color: rgba(255,255,255,0.35); text-decoration: none; font-size: 0.8rem; }
+  .footer-bottom-links a:hover { color: rgba(255,255,255,0.6); }
+  @media (max-width: 900px) {
+    .footer-top { grid-template-columns: 1fr 1fr; }
+    footer { padding: 2rem 1.25rem 0; }
+  }
 
-    /* intro paragraph */
-    .article-intro {
-      font-size: 1.1rem;
-      color: var(--slate);
-      font-weight: 300;
-      line-height: 1.85;
-      padding-bottom: 2rem;
-      border-bottom: 2px solid var(--border);
-      margin-bottom: 3rem;
-    }
-
-    /* mistake blocks */
-    .mistake-block {
-      margin-bottom: 3rem;
-      padding-bottom: 3rem;
-      border-bottom: 1px solid var(--border);
-    }
-    .mistake-block:last-of-type { border-bottom: none; }
-
-    .mistake-number {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--red);
-      display: flex; align-items: center; gap: 0.5rem;
-      margin-bottom: 0.5rem;
-    }
-    .mistake-number::after { content: ''; flex: 1; max-width: 30px; height: 1px; background: var(--red); }
-
-    .mistake-title {
-      font-family: 'EB Garamond', serif;
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: var(--navy);
-      margin-bottom: 1.25rem;
-      line-height: 1.25;
-    }
-
-    .article-wrapper p { margin-bottom: 1rem; color: var(--slate); font-weight: 400; }
-    .article-wrapper strong { color: var(--ink); font-weight: 600; }
-    .article-wrapper em { font-style: italic; }
-
-    /* label boxes */
-    .label-box {
-      background: var(--cream);
-      border-left: 3px solid var(--red);
-      padding: 1rem 1.25rem;
-      margin: 1.25rem 0;
-      font-size: 0.9rem;
-    }
-    .label-box strong { display: block; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); margin-bottom: 0.4rem; }
-
-    /* example lines */
-    .example-line {
-      display: flex; align-items: flex-start; gap: 0.75rem;
-      margin: 0.6rem 0;
-      font-size: 0.9rem;
-      color: var(--slate);
-      font-style: italic;
-    }
-    .ex-tick { color: #16A34A; font-style: normal; font-weight: 700; flex-shrink: 0; }
-    .ex-cross { color: var(--red); font-style: normal; font-weight: 700; flex-shrink: 0; }
-
-    /* bullet list */
-    .article-wrapper ul { margin: 1rem 0 1rem 1.5rem; }
-    .article-wrapper ul li { margin-bottom: 0.5rem; color: var(--slate); }
-    .article-wrapper ol { margin: 1rem 0 1rem 1.5rem; }
-    .article-wrapper ol li { margin-bottom: 0.5rem; color: var(--slate); }
-
-    /* memory trick box */
-    .memory-box {
-      background: #EEF2FF;
-      border: 1px solid #C7D2FE;
-      border-radius: 4px;
-      padding: 1.25rem 1.5rem;
-      margin: 1.25rem 0;
-    }
-    .memory-box-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #4338CA; margin-bottom: 0.5rem; }
-    .memory-box p { color: #3730A3; font-weight: 500; margin: 0; }
-
-    /* table */
-    .article-table { width: 100%; border-collapse: collapse; margin: 1.25rem 0; font-size: 0.9rem; }
-    .article-table th { background: var(--navy); color: white; padding: 0.65rem 1rem; text-align: left; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; }
-    .article-table td { padding: 0.65rem 1rem; border-bottom: 1px solid var(--border); color: var(--slate); }
-    .article-table tr:nth-child(even) td { background: var(--cream); }
-    .weak { color: var(--muted); }
-    .strong-word { color: var(--navy); font-weight: 600; }
-
-    /* final word */
-    .final-word {
-      background: var(--navy);
-      color: white;
-      padding: 2.5rem;
-      margin-top: 3rem;
-    }
-    .final-word h2 { font-family: 'EB Garamond', serif; font-size: 1.4rem; font-weight: 500; color: white; margin-bottom: 1rem; }
-    .final-word p { color: rgba(255,255,255,0.7); font-weight: 300; margin-bottom: 0.75rem; }
-    .final-word p:last-child { margin-bottom: 0; color: var(--gold); font-style: italic; }
-
-    /* share / tags */
-    .article-footer-bar {
-      margin-top: 2.5rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--border);
-      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
-    }
-    .article-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
-    .tag { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.25rem 0.65rem; border: 1px solid var(--border); color: var(--muted); text-decoration: none; }
-    .tag:hover { border-color: var(--red); color: var(--red); }
-    .back-link { font-size: 0.82rem; font-weight: 600; color: var(--red); text-decoration: none; letter-spacing: 0.04em; }
-    .back-link:hover { text-decoration: underline; }
-
-    /* related articles */
-    .related { background: var(--cream); padding: 4rem 2rem; border-top: 1px solid var(--border); }
-    .related-inner { max-width: 780px; margin: 0 auto; }
-    .related-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--red); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
-    .related-label::after { content: ''; flex: 1; max-width: 30px; height: 1px; background: var(--red); }
-    .related h2 { font-family: 'EB Garamond', serif; font-size: 1.4rem; font-weight: 500; color: var(--navy); margin-bottom: 1.5rem; }
-    .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
-    .related-card { background: white; padding: 1.5rem; transition: background 0.2s; cursor: pointer; }
-    .related-card:hover { background: #F9F0F0; }
-    .related-tag { font-size: 0.67rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); margin-bottom: 0.6rem; display: block; }
-    .related-title { font-family: 'EB Garamond', serif; font-size: 1rem; font-weight: 600; color: var(--navy); line-height: 1.3; }
-
-    /* footer */
-    footer { background: var(--navy); padding: 2rem 3rem; }
-    .footer-bottom { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-    .footer-bottom p { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
-    .footer-brand-sm { font-family: 'EB Garamond', serif; font-size: 1.1rem; color: white; text-decoration: none; }
-    .footer-brand-sm span { color: var(--red); }
-
-    /* responsive */
-    @media (max-width: 680px) {
-      nav { padding: 0 1rem; height: 68px; }
-      .nav-links { display: none; }
-      .nav-brand-name { font-size: 1.35rem; white-space: nowrap; }
-      .nav-brand-sub { font-size: 0.62rem; }
-      .article-header h1 { font-size: 1.5rem; line-height:1.25; }
-      .breadcrumb { padding: 0.65rem 1.25rem; }
-      .article-header { padding: 2.5rem 1.25rem; }
-      .article-wrapper { padding: 2rem 1.25rem; }
-      .related { padding: 2.5rem 1.25rem; }
-      .related-grid { grid-template-columns: 1fr; }
-      footer { padding: 1.5rem 1.25rem; }
-      .final-word { padding: 1.75rem 1.25rem; }
-    }
-  </style>
+</style>
 <style id="edusambam-reader-style">
 .mark{width:48px;height:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px;border-radius:14px;background:#eef6ff;box-shadow:0 2px 7px rgba(8,47,99,.10);flex:0 0 48px}.mark i{display:block;border-radius:50%;background:#0b4ea2;min-width:0;min-height:0}.mark i:nth-child(5){background:#d4a017}.edusambam-reader{max-width:980px;margin:1.2rem auto 0;padding:1rem 1.1rem;border:1px solid #d7e4ef;border-radius:14px;background:linear-gradient(135deg,#f7fbff,#fff);box-shadow:0 6px 18px rgba(11,45,92,.08)}.edusambam-reader strong{display:block;color:#0b55a5;font-size:.9rem;letter-spacing:.04em}.edusambam-reader .reader-slogan{color:#b27e08;font-weight:900;margin-top:.25rem;font-size:.82rem}.edusambam-reader .reader-help{color:#607086;font-size:.8rem;margin:.3rem 0 .7rem}.edusambam-reader .reader-controls{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}.edusambam-reader button,.edusambam-reader select{border:1px solid #c9d9e8;background:#fff;color:#153b6e;border-radius:8px;padding:.48rem .65rem;font-weight:800;cursor:pointer}.edusambam-reader button:first-child{background:#0b55a5;color:#fff;border-color:#0b55a5}.edusambam-reader .reader-status{display:block;color:#607086;font-size:.75rem;margin-top:.55rem}.edusambam-reader .reader-progress{height:4px;background:#e4edf6;border-radius:99px;margin-top:.6rem;overflow:hidden}.edusambam-reader .reader-progress span{display:block;width:0;height:100%;background:#e1ad1c;transition:width .2s linear}@media(max-width:600px){.edusambam-reader{margin-left:0;margin-right:0}.edusambam-reader .reader-controls button,.edusambam-reader .reader-controls select{flex:1;min-width:75px}}
 </style><style id="edusambam-edge-fix">.article-wrap,.article-hero,.nav-brand{min-width:0;overflow:visible}.article-wrap h1,.article-wrap h2,.article-wrap h3,.article-hero h1,.article-hero .sub{overflow-wrap:anywhere;word-break:normal}.article-wrap{padding-left:max(1.25rem,3vw);padding-right:max(1.25rem,3vw)}@media(max-width:600px){.article-wrap{padding-left:1rem;padding-right:1rem}.article-hero{padding-left:1rem;padding-right:1rem}.nav-brand{overflow:visible!important}.nav-brand-name,.nav-brand-sub{overflow-wrap:anywhere}}</style><style id="edusambam-frame-final">html{box-sizing:border-box;max-width:100%;overflow-x:hidden}*,*:before,*:after{box-sizing:inherit}body{max-width:100%;min-width:0;overflow-x:hidden;border:3px solid #d4a017;box-sizing:border-box}img,svg,video,iframe{max-width:100%;height:auto}h1,h2,h3,h4,p,a,span,small,b,strong{overflow-wrap:anywhere}section,header,footer,main,nav{max-width:100%;box-sizing:border-box}@media(max-width:600px){body{border-width:3px}h1,h2,h3{margin-left:0!important;margin-right:0!important}}</style><style id="edusambam-unified-nav-css">
@@ -444,6 +665,11 @@ gtag('config', 'G-Y35DW0V4HQ');
 }
 .edusambam-mobile-menu .edusambam-menu-extra a{
   font-weight:600;
+}
+</style>
+<style id="edusambam-article-footer-theme">
+.edusambam-article-footer{
+  background:linear-gradient(135deg,#06244a,#0b4ea2)!important;
 }
 </style>
 <style id="edusambam-unified-footer-fix">
@@ -651,8 +877,37 @@ footer.footer {
 }
 </style><style id="edusambam-footer-social-css">.edusambam-footer-social{margin-top:14px}.edusambam-footer-social a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);color:rgba(255,255,255,.85);transition:background .15s,color .15s}.edusambam-footer-social a:hover{background:rgba(255,255,255,.22);color:#fff}</style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2230995786427221"
      crossorigin="anonymous"></script>
+<meta content="2026-10-31" property="article:modified_time"/>
+<meta name="robots" content="index,follow,max-image-preview:large"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="EDUSAMBAM"/>
+<meta property="og:title" content="The Grammar Trap: 10 Common Mistakes"/>
+<meta property="og:description" content="Ten common grammar traps with a quick test for each: sound-alike words, apostrophes, I and me, fewer and less, dangling modifiers and more."/>
+<meta property="og:url" content="https://edusambam.com/grammar-article.html"/>
+<meta property="og:image" content="https://edusambam.com/logo-icon-full.png"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="The Grammar Trap: 10 Common Mistakes"/>
+<meta name="twitter:description" content="Ten common grammar traps with a quick test for each: sound-alike words, apostrophes, I and me, fewer and less, dangling modifiers and more."/>
+<meta property="article:section" content="English Language"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "The Grammar Trap: 10 Common Mistakes", "description": "Ten common grammar traps with a quick test for each: sound-alike words, apostrophes, I and me, fewer and less, dangling modifiers and more.", "inLanguage": "en", "mainEntityOfPage": "https://edusambam.com/grammar-article.html", "url": "https://edusambam.com/grammar-article.html", "dateModified": "2026-11-01", "articleSection": "English Language", "author": {"@type": "Organization", "name": "EDUSAMBAM Editorial Team", "url": "https://edusambam.com/"}, "publisher": {"@type": "Organization", "name": "EDUSAMBAM", "url": "https://edusambam.com/", "logo": {"@type": "ImageObject", "url": "https://edusambam.com/logo-icon-full.png"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Gateway", "item": "https://edusambam.com/index.html#gateway"}, {"@type": "ListItem", "position": 2, "name": "English Language", "item": "https://edusambam.com/index.html#subject-english"}, {"@type": "ListItem", "position": 3, "name": "The Grammar Trap: 10 Common Mistakes", "item": "https://edusambam.com/grammar-article.html"}]}]}</script>
+<meta content="2026-10-30" property="article:modified_time"/>
+<style>
+  .further-box { background: var(--cream); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem 1.5rem; margin: 1.5rem 0; }
+  .further-box .fr-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--red); margin-bottom: 0.4rem; }
+  .further-box ul { list-style: none; margin: 0.5rem 0 0; padding: 0; }
+  .further-box li { margin: 0.6rem 0; }
+  .further-box a { color: var(--navy); font-weight: 600; }
+  .further-box .src-note { display: block; font-size: 0.82rem; color: var(--muted); }
+</style>
 </head>
 <body id="top">
+<!-- TOP BAR -->
+<div class="top-bar">
+<p>Established 2026  ·  Free Educational Resources for All</p>
+<ul class="top-bar-links">
+<li><a href="contact.html">Contact</a></li><li><a href="about.html">About</a></li><li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+</ul>
+</div>
 <!-- NAV -->
 <nav aria-label="Primary navigation" class="edusambam-nav">
 <div class="edusambam-nav-inner">
@@ -662,13 +917,13 @@ footer.footer {
 <span class="edusambam-brand-subtitle">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</span>
 </span>
 </a>
-<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li></ul>
+<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Language</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ</a></li><li><a href="index.html#resources">Resources</a></li></ul>
 <button aria-label="Search" class="edusambam-search-btn" title="Search" type="button">⌕</button>
 <button aria-expanded="false" aria-label="Open menu" class="edusambam-menu-btn" title="Menu" type="button">☰</button>
 </div>
 </nav>
 <div aria-label="Mobile navigation" class="edusambam-mobile-menu">
-<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#resources">Resources</a></li><li class="edusambam-menu-extra"><a href="assessment-arena.html">Assessment</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="index.html#about-edusambam">About</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
+<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Language</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ ARENA</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li><li><a href="index.html#spelling-bee-arena">SPELLING BEE ARENA</a></li><li><a href="index.html#english-vocabulary-amp-word-skills">Vocabulary Building</a></li><li><a href="index.html#resources">Downloadable Resources</a></li><li class="edusambam-menu-extra"><a href="index.html#subject-assessment">Assessment Arena</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="about.html">About EDUSAMBAM</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
 </div>
 <div aria-label="Site search" class="edusambam-search-panel">
 <div class="edusambam-search-wrap">
@@ -676,260 +931,467 @@ footer.footer {
 <div class="edusambam-search-results"></div>
 </div>
 </div>
-<!-- BREADCRUMB -->
-<div class="breadcrumb">
-<a href="index.html#gateway">Gateway</a>
-<span>›</span>
-<a href="index.html#subject-english">English Language</a>
-<span>›</span>
-<a href="index.html#subject-english">Grammar</a>
-<span>›</span>
-  The Grammar Trap
-</div>
-<!-- ARTICLE HEADER -->
-<div class="article-header">
-<div class="article-header-inner">
-<div class="article-subject">English Language · Grammar</div>
+<style>
+
+  .gt-card{background:var(--cream);border:1px solid var(--border);border-radius:var(--radius);padding:1.3rem 1.1rem;margin:1.5rem 0}
+  .gt-title{font-family:'EB Garamond',serif;font-weight:600;color:var(--navy);font-size:1.1rem;text-align:center;margin-bottom:.3rem}
+  .gt-sub{text-align:center;color:var(--muted);font-size:.85rem;margin-bottom:.7rem}
+  .gt-calc{background:var(--cream);border:1px solid var(--border);border-left:4px solid #2F6F4E;border-radius:var(--radius);padding:1.3rem 1.5rem;margin:1.5rem 0}
+  .gt-calc h3{font-family:'EB Garamond',serif;color:var(--navy);margin:0 0 .6rem}
+  .gt-s{display:flex;gap:.7rem;align-items:flex-start;margin:.45rem 0}
+  .gt-s b{flex:0 0 1.7rem;height:1.7rem;border-radius:50%;background:#2F6F4E;color:#fff;display:grid;place-items:center;font-size:.85rem}
+  .gt-s span{flex:1}
+  .gt-myths{display:grid;gap:.9rem;margin:1.3rem 0}
+  .gt-myth{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;animation:gtIn .6s ease both}
+  .gt-myth:nth-child(2){animation-delay:.12s}.gt-myth:nth-child(3){animation-delay:.24s}.gt-myth:nth-child(4){animation-delay:.36s}
+  .gt-myth .m{background:#FBEAEA;color:#8B0000;padding:.6rem 1rem;font-weight:600}
+  .gt-myth .f{background:#EAF4EE;color:#1E4D36;padding:.6rem 1rem}
+  .gt-myth b{text-transform:uppercase;font-size:.72rem;letter-spacing:.08em;margin-right:.4rem}
+  .gt-key{background:var(--navy);border-radius:var(--radius);padding:1.5rem 1.7rem;margin:2rem 0}
+  .gt-key .kp{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
+  .gt-key ul{margin:0;padding-left:1.2rem;color:rgba(255,255,255,.88)}.gt-key li{margin:.35rem 0}
+  .gt-tp{background:var(--gold-lt);border:1px solid rgba(184,150,62,.45);border-radius:var(--radius);padding:1.2rem 1.5rem;margin:1.5rem 0}
+  .gt-tp .tl{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#7a5f1c}
+  .gt-tp p{margin:.4rem 0 0}
+  @keyframes gtIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+  .gt-brow{display:flex;align-items:center;gap:.6rem;margin:.6rem 0}
+  .gt-bl{flex:0 0 7.5rem;font-size:.85rem;font-weight:600;color:var(--navy)}
+  .gt-bt{flex:1;background:#EDE8E0;border-radius:99px;height:22px;overflow:hidden}
+  .gt-bf{height:100%;border-radius:99px;transform-origin:left;animation:gtGrow0 1s ease both}.gt-bv{flex:0 0 3.2rem;font-size:.8rem;font-weight:700;color:var(--navy)}
+  .gt-ladder{display:grid;gap:.7rem}
+  .gt-lv{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:.7rem .9rem;animation:gtIn .7s ease both}
+  .gt-lb{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#7a5f1c}
+  .gt-ls{font-family:'EB Garamond',serif;font-size:1.02rem;color:var(--navy);margin:.2rem 0}
+  .gt-ln{font-size:.82rem;color:var(--muted)}
+  .gt-lv:nth-child(1){border-left:4px solid #8B0000}.gt-lv:nth-child(2){border-left:4px solid #B8863E}.gt-lv:nth-child(3){border-left:4px solid #6B8F4E}.gt-lv:nth-child(4){border-left:4px solid #2F6F4E}
+  @keyframes gtGrow0{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+  @media (prefers-reduced-motion:reduce){.gt-bf,.gt-lv,.gt-myth{animation:none}}
+
+  .further-box { background: var(--cream); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem 1.5rem; margin: 1.5rem 0; }
+  .further-box .fr-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--red); margin-bottom: 0.4rem; }
+  .further-box ul { list-style: none; margin: 0.5rem 0 0; padding: 0; }
+  .further-box li { margin: 0.6rem 0; }
+  .further-box a { color: var(--navy); font-weight: 600; }
+  .further-box .src-note { display: block; font-size: 0.82rem; color: var(--muted); }
+  .gt-svg { width: 100%; height: auto; display: block; }
+  .gt-cap { font-size: 0.86rem !important; color: var(--muted) !important; text-align: center; margin: 0.5rem 0 0 !important; }
+  .gt-pop, .gt-grow { transform-box: fill-box; }
+  .gt-pop { transform-origin: center; }
+  .gt-grow { transform-origin: left center; }
+  @media (prefers-reduced-motion: no-preference) {
+    .gt-pop { animation: gtPop 0.6s ease both; }
+    .gt-grow { animation: gtGrow 1s ease both; }
+  }
+  @keyframes gtPop { from { opacity: 0; transform: scale(0.6); } to { opacity: 1; transform: scale(1); } }
+  @keyframes gtGrow { from { opacity: 0.3; transform: scaleX(0.1); } to { opacity: 1; transform: scaleX(1); } }
+  .gt-scene { background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--navy); border-radius: var(--radius); padding: 0.9rem 1.1rem; margin: 1rem 0 1.4rem; font-size: 0.97rem; line-height: 1.65; color: var(--slate); }
+  .gt-scene p { margin: 0 0 0.5rem !important; }
+  .gt-gl { display: grid; gap: 0.6rem; margin: 1rem 0 1.6rem; }
+  .gt-gl div { background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--gold); border-radius: var(--radius); padding: 0.65rem 0.9rem; font-size: 0.97rem; color: var(--slate); }
+  .gt-gl b { color: var(--navy); }
+  .gt-ck { background: var(--cream); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.1rem 1.3rem; margin: 1.4rem 0; }
+  .gt-ck label { display: flex; gap: 0.6rem; align-items: flex-start; margin: 0.45rem 0; cursor: pointer; font-size: 0.97rem; color: var(--slate); }
+  .gt-ck input { margin-top: 0.3rem; width: 1.1rem; height: 1.1rem; flex: 0 0 auto; accent-color: #2F6F4E; }
+  .gt-ck input:checked + span { text-decoration: line-through; color: var(--muted); }
+  .gt-ck .note { font-size: 0.82rem; color: var(--muted); margin: 0.8rem 0 0; font-style: italic; }
+  .gt-small td, .gt-small th { font-size: 0.9rem; }
+  .gt-para { background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--gold); border-radius: var(--radius); padding: 0.9rem 1.2rem; margin: 1rem 0 1.4rem; font-size: 1rem; line-height: 1.7; color: var(--slate); }
+  .gt-para .tag { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; padding: 0.05rem 0.4rem; border-radius: 4px; margin-right: 0.3rem; color: #fff; vertical-align: middle; }
+  .gt-para .t1 { background: var(--navy); } .gt-para .t2 { background: #7a5f1c; } .gt-para .t3 { background: #2F6F4E; } .gt-para .t4 { background: #8B0000; }
+  .gt-card2 { background: #fff; border: 2px solid var(--navy); border-radius: 12px; }
+  .gt-hl { color: #8B0000; font-weight: 700; }
+
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+</style>
+<div class="article-hero">
+<div class="breadcrumb"><a href="index.html#gateway">Gateway</a>  /  <a href="index.html#subject-english">English Language</a>  /  Grammar  /  The Grammar Trap</div>
+<div class="article-hero-tag">Grammar · Common Mistakes</div>
 <h1>The Grammar Trap: 10 Mistakes That Make Smart People Look Careless</h1>
-<div class="article-meta-bar">
-<span>📋 EDUSAMBAM Editorial Team</span>
-<span>⏱ 9 min read</span>
-<span>📅 2026</span>
+<p class="sub">Ten small slips that readers notice at once, each with a quick test you can use in five seconds, plus a few "rules" that are really myths.</p>
+<div class="article-hero-meta">
+<span>EDUSAMBAM Editorial Team</span>
+<span>|</span>
+<span>17 min read</span> <span>|</span> <span>Last updated: November 2026</span>
+<span>|</span>
+<span>Grammar</span>
 </div>
+</div><div aria-label="EDUSAMBAM article reader" class="edusambam-reader"><strong>🔊 LISTEN TO THIS ARTICLE</strong><div class="reader-slogan">SAVE YOUR EYES • IMPROVE YOUR LISTENING</div><div class="reader-help">Listen to the article instead of relying only on continuous screen reading.</div><div class="reader-controls"><button data-reader="play" type="button">▶ Play</button><button data-reader="pause" type="button">⏸ Pause</button><button data-reader="resume" type="button">▶ Resume</button><button data-reader="stop" type="button">■ Stop</button><select aria-label="Reading speed"><option value="1">1×</option><option value="0.8">0.8×</option><option value="1.2">1.2×</option></select></div><div aria-hidden="true" class="reader-progress"><span></span></div><small class="reader-status">Ready to read the article.</small></div>
+<div class="article-wrap">
+<p class="lead">Grammar is not about being perfect, and it is not about obeying a rulebook written centuries ago. It is about clarity: making sure the thought in your head lands precisely in someone else's mind.</p>
+<p>Some mistakes are so common, and so deeply rooted in everyday speech and typing, that millions of educated people make them without noticing. These are not the mistakes of careless people. They are the mistakes of people who were never shown a quick test that works. This guide explains ten of the most common, with a test for each, an honest note on which are true errors and which are matters of style, and the exceptions that most "top ten" lists leave out. It includes two worked examples, a checklist, common myths and ten practice questions.</p>
+<p>For a wider reference, see <a href="common-errors.html">Common Errors in English</a>. This article also connects with <a href="punctuation-rules.html">Punctuation Rules</a>, <a href="sentence-structure.html">Sentence Structure</a> and <a href="self-editing-process.html">Editing Your Own Work</a>. Spelling and style follow British English.</p>
+
+<h2><span class="num">1.</span>Error, Convention or Style? Sort Before You Fix</h2>
+<p>Not every item on a list of "grammar mistakes" is the same kind of problem. Sorting them saves you from "correcting" things that are not wrong and from ignoring things that are.</p>
+<div class="gt-card"><div class="gt-title">Three kinds of grammar problem</div><div class="gt-sub">The ten mistakes in this guide, sorted.</div>
+<svg class="gt-svg" viewBox="0 0 480 330" role="img" aria-labelledby="gt1t gt1d" xmlns="http://www.w3.org/2000/svg"><title id="gt1t">Error, convention and style</title><desc id="gt1d">Three cards. Clear errors: your and you're, their there they're, its and it's, me and I, dangling modifiers, run-on sentences. Conventions that formal writing expects: fewer and less, affect and effect. Style advice: very, and the passive voice.</desc>
+<g class="gt-pop" style="animation-delay:0.1s"><rect x="14" y="8" width="452" height="112" rx="10" fill="#fff" stroke="#8B0000" stroke-width="2.5"/><text x="30" y="34" font-size="14" font-weight="700" fill="#8B0000">CLEAR ERRORS: fix them</text><text x="30" y="60" font-size="14" fill="#1A1A1A">1 your / you're   2 their / there / they're   3 its / it's</text><text x="30" y="82" font-size="14" fill="#1A1A1A">4 "Me and John went"   6 dangling modifiers</text><text x="30" y="104" font-size="14" fill="#1A1A1A">9 run-ons and comma splices</text></g>
+<g class="gt-pop" style="animation-delay:0.7s"><rect x="14" y="130" width="452" height="90" rx="10" fill="#F5EDD6" stroke="#B8963E" stroke-width="2.5"/><text x="30" y="156" font-size="14" font-weight="700" fill="#7a5f1c">CONVENTIONS: formal writing expects them</text><text x="30" y="182" font-size="14" fill="#1A1A1A">5 fewer / less (with exceptions)</text><text x="30" y="204" font-size="14" fill="#1A1A1A">8 affect / effect (usually verb / noun)</text></g>
+<g class="gt-pop" style="animation-delay:1.3s"><rect x="14" y="230" width="452" height="92" rx="10" fill="#EAF4EE" stroke="#2F6F4E" stroke-width="2.5"/><text x="30" y="256" font-size="14" font-weight="700" fill="#2F6F4E">STYLE ADVICE: a choice, not a rule</text><text x="30" y="282" font-size="14" fill="#1A1A1A">7 overusing "very"</text><text x="30" y="304" font-size="14" fill="#1A1A1A">10 the passive voice, where active is clearer</text></g>
+</svg><p class="gt-cap">Diagram 1. Mistake 3 (apostrophes) is a mixture: some uses are errors and some are style choices.</p></div>
+
+<h2><span class="num">2.</span>Mistake 1: "Your" and "You're"</h2>
+<p><strong>The rule.</strong> <em>Your</em> shows possession (<em>your book</em>). <em>You're</em> is a contraction of <em>you are</em>.</p>
+<p><strong>Why it happens.</strong> The two words sound identical, and a spell-checker will not flag either one, because both are real words. A quick typist's fingers choose the sound, not the meaning.</p>
+<div class="example-box"><div class="ex-label">The swap test</div><p>Replace the word with "you are". If the sentence still makes sense, write <em>you're</em>.</p><p>✅ You're going to love this. → You are going to love this. (makes sense)<br/>❌ Your going to love this. → Your are going to love this. (nonsense)</p></div>
+
+<h2><span class="num">3.</span>Mistake 2: "Their", "There" and "They're"</h2>
+<p>Three words, one sound, three meanings.</p>
+<div class="table-wrap"><table class="pos-table gt-small">
+<tr><th>Word</th><th>Meaning</th><th>Memory key</th></tr>
+<tr><td>there</td><td>a place, or "there is / there are"</td><td>It contains <em>here</em>: both are about place.</td></tr>
+<tr><td>their</td><td>belonging to them</td><td>It contains <em>heir</em>: someone who inherits.</td></tr>
+<tr><td>they're</td><td>they are</td><td>The apostrophe replaces the missing a.</td></tr>
+</table></div>
+<div class="example-box"><div class="ex-label">Examples</div><p>✅ The answer is over <strong>there</strong>.<br/>✅ <strong>Their</strong> house is beautiful.<br/>✅ <strong>They're</strong> coming tomorrow.</p></div>
+<div class="gt-card"><div class="gt-title">The swap tests in one place</div><div class="gt-sub">Try the long form. If it fits, use the contraction.</div>
+<svg class="gt-svg" viewBox="0 0 480 290" role="img" aria-labelledby="gt2t gt2d" xmlns="http://www.w3.org/2000/svg"><title id="gt2t">Swap tests for common sound-alike words</title><desc id="gt2d">Four rows. Your or you're: try you are. Their, there or they're: try they are. Its or it's: try it is or it has. Whose or who's: try who is or who has.</desc>
+<g class="gt-pop" style="animation-delay:0.1s"><rect x="14" y="8" width="452" height="60" rx="10" fill="#fff" stroke="#06244a" stroke-width="2.5"/><text x="30" y="34" font-size="15" font-weight="700" fill="#06244a">your / you're</text><text x="30" y="56" font-size="14" fill="#1A1A1A">try "you are"</text><rect x="330" y="20" width="124" height="36" rx="18" fill="#F5EDD6" stroke="#B8963E" stroke-width="2"/><text x="392" y="43" text-anchor="middle" font-size="13" font-weight="700" fill="#06244a">fits → you're</text></g>
+<g class="gt-pop" style="animation-delay:0.6s"><rect x="14" y="76" width="452" height="60" rx="10" fill="#fff" stroke="#06244a" stroke-width="2.5"/><text x="30" y="102" font-size="15" font-weight="700" fill="#06244a">their / there / they're</text><text x="30" y="124" font-size="14" fill="#1A1A1A">try "they are"</text><rect x="326" y="88" width="128" height="36" rx="18" fill="#F5EDD6" stroke="#B8963E" stroke-width="2"/><text x="390" y="111" text-anchor="middle" font-size="13" font-weight="700" fill="#06244a">fits → they're</text></g>
+<g class="gt-pop" style="animation-delay:1.1s"><rect x="14" y="144" width="452" height="60" rx="10" fill="#fff" stroke="#06244a" stroke-width="2.5"/><text x="30" y="170" font-size="15" font-weight="700" fill="#06244a">its / it's</text><text x="30" y="192" font-size="14" fill="#1A1A1A">try "it is" or "it has"</text><rect x="340" y="156" width="114" height="36" rx="18" fill="#F5EDD6" stroke="#B8963E" stroke-width="2"/><text x="397" y="179" text-anchor="middle" font-size="13" font-weight="700" fill="#06244a">fits → it's</text></g>
+<g class="gt-pop" style="animation-delay:1.6s"><rect x="14" y="212" width="452" height="60" rx="10" fill="#fff" stroke="#06244a" stroke-width="2.5"/><text x="30" y="238" font-size="15" font-weight="700" fill="#06244a">whose / who's</text><text x="30" y="260" font-size="14" fill="#1A1A1A">try "who is" or "who has"</text><rect x="330" y="224" width="124" height="36" rx="18" fill="#F5EDD6" stroke="#B8963E" stroke-width="2"/><text x="392" y="247" text-anchor="middle" font-size="13" font-weight="700" fill="#06244a">fits → who's</text></g>
+</svg><p class="gt-cap">Diagram 2. If the long form does not fit, use the other word (your, their or there, its, whose).</p></div>
+
+<h2><span class="num">4.</span>Mistake 3: The Apostrophe Catastrophe</h2>
+<p>Apostrophes cause more arguments than almost any other mark, mostly because they are put where they do not belong. Two uses are always standard.</p>
+<ol>
+<li><strong>Missing letters (contractions):</strong> can't (cannot), it's (it is), I've (I have).</li>
+<li><strong>Possession:</strong> the teacher's book (one teacher), the teachers' room (several), London's history, the children's toys.</li>
+</ol>
+<p>The most common error is the <strong>greengrocer's apostrophe</strong>, used to make an ordinary plural: ❌ <em>Apple's for sale</em>, ✅ <em>Apples for sale</em>. An apostrophe never makes an ordinary word plural.</p>
+<h3>The third use: plurals of letters, numbers and abbreviations</h3>
+<p>This is where style guides differ, so it is a convention to check and not a simple rule.</p>
+<ul>
+<li><strong>Lowercase single letters:</strong> use an apostrophe: <em>Mind your p's and q's.</em></li>
+<li><strong>Capital letters:</strong> style guides have moved. The AP Stylebook recommends the apostrophe (<em>all A's</em>). Older editions of the Chicago Manual of Style omitted it (<em>all As</em>), but its 18th edition (2024) brought the apostrophe back for capital letters. When the plural could be misread (<em>As</em> and <em>as</em>), keep the apostrophe or reword.</li>
+<li><strong>Decades and numbers:</strong> most major style manuals omit it: <em>the 1990s</em>.</li>
+<li><strong>Abbreviations:</strong> avoid it: <em>two PhDs</em>, <em>three CDs</em>. Using one (<em>PhD's</em>) is not wrong, but is considered inelegant and unnecessary in formal writing.</li>
+</ul>
+<div class="example-box"><div class="ex-label">Its and it's</div><p>✅ <strong>It's</strong> a beautiful morning. (it is)<br/>✅ The cat licked <strong>its</strong> paw. (belonging to it)</p><p>If in doubt, say "it is". If that fits, use the apostrophe.</p></div>
+
+<h2><span class="num">5.</span>Mistake 4: "Me and John" Instead of "John and I"</h2>
+<p>"Me and John went to the market." You have heard it, and you may have said it. It feels natural because in speech we often put ourselves first. The problem is <strong>case</strong>: <em>I</em> is the subject form, <em>me</em> the object form.</p>
+<div class="example-box"><div class="ex-label">The remove-the-other-person test</div><p>Take out the other person and read it aloud. "Me went to the market" sounds wrong; "I went" sounds right. So: <em>John and I went to the market.</em></p></div>
+<ul>
+<li><strong>As an object, use me:</strong> <em>She gave the tickets to John and me.</em> (She gave the tickets to me.)</li>
+<li><strong>After a preposition, use me:</strong> <em>between you and me</em>, not "between you and I".</li>
+<li><strong>Order is politeness, not grammar.</strong> Naming yourself last (<em>John and I</em>) is polite convention. "I and John" is grammatical but sounds self-centred.</li>
+<li><strong>Do not over-correct.</strong> Using <em>I</em> everywhere because it "sounds educated" (<em>She invited John and I</em>) is its own error, called hypercorrection. Also, <em>myself</em> is not a fancier <em>me</em>: write <em>please contact Sara or me</em>.</li>
+</ul>
+
+<h2><span class="num">6.</span>Mistake 5: "Less" Where You Mean "Fewer"</h2>
+<p>"10 items or less" appears on supermarket signs everywhere, and the traditional rule says it should be "10 items or fewer".</p>
+<div class="table-wrap"><table class="pos-table gt-small">
+<tr><th>Use</th><th>For</th><th>Examples</th></tr>
+<tr><td>fewer</td><td>things you can count one by one</td><td>fewer students, fewer mistakes, fewer chairs</td></tr>
+<tr><td>less</td><td>things you cannot count</td><td>less water, less time, less patience</td></tr>
+</table></div>
+<p><strong>The test:</strong> put a number in front. "Three students" works, so use <em>fewer students</em>. "Three patience" does not, so use <em>less patience</em>.</p>
+<p><strong>The exceptions that most lists forget.</strong> Time, money, distance and weight take <em>less than</em> because we treat the amount as one thing: <em>It cost less than five pounds. He lives less than ten miles away.</em> Dictionary writers also note that <em>less</em> is common in speech even with countable nouns, so it is more a convention of careful writing than an absolute rule. In exams and formal writing, follow the traditional rule.</p>
+
+<h2><span class="num">7.</span>Mistake 6: The Dangling Modifier</h2>
+<p>A <strong>dangling modifier</strong> is a describing phrase attached to the wrong subject. The result can be absurd.</p>
+<div class="gt-card"><div class="gt-title">Ask: who is doing the action?</div><div class="gt-sub">The opening phrase must describe the subject that follows it.</div>
+<svg class="gt-svg" viewBox="0 0 480 300" role="img" aria-labelledby="gt3t gt3d" xmlns="http://www.w3.org/2000/svg"><title id="gt3t">Fixing a dangling modifier</title><desc id="gt3d">Wrong: Walking down the street, the trees were beautiful. The trees were not walking. Fixed: Walking down the street, I noticed the trees were beautiful. Wrong: Having eaten the whole cake, the plate was empty. Fixed: Having eaten the whole cake, she left an empty plate.</desc>
+<g class="gt-pop" style="animation-delay:0.1s"><rect x="14" y="8" width="452" height="64" rx="10" fill="#fff" stroke="#8B0000" stroke-width="2.5"/><text x="30" y="32" font-size="13" font-weight="700" fill="#8B0000">❌ WRONG</text><text x="30" y="56" font-size="14" fill="#1A1A1A">Walking down the street, the trees were beautiful.</text></g>
+<g class="gt-pop" style="animation-delay:0.6s"><rect x="14" y="80" width="452" height="64" rx="10" fill="#EAF4EE" stroke="#2F6F4E" stroke-width="2.5"/><text x="30" y="104" font-size="13" font-weight="700" fill="#2F6F4E">✅ FIXED: name the walker</text><text x="30" y="128" font-size="14" fill="#1A1A1A">Walking down the street, I noticed the trees were beautiful.</text></g>
+<g class="gt-pop" style="animation-delay:1.1s"><rect x="14" y="156" width="452" height="64" rx="10" fill="#fff" stroke="#8B0000" stroke-width="2.5"/><text x="30" y="180" font-size="13" font-weight="700" fill="#8B0000">❌ WRONG</text><text x="30" y="204" font-size="14" fill="#1A1A1A">Having eaten the whole cake, the plate was empty.</text></g>
+<g class="gt-pop" style="animation-delay:1.6s"><rect x="14" y="228" width="452" height="64" rx="10" fill="#EAF4EE" stroke="#2F6F4E" stroke-width="2.5"/><text x="30" y="252" font-size="13" font-weight="700" fill="#2F6F4E">✅ FIXED: name the eater</text><text x="30" y="276" font-size="14" fill="#1A1A1A">Having eaten the whole cake, she left an empty plate.</text></g>
+</svg><p class="gt-cap">Diagram 3. The modifier must sit next to the thing it describes.</p></div>
+<p>Read your sentences aloud. If something sounds unintentionally funny, a dangling modifier is usually the cause. A related slip is the <strong>misplaced modifier</strong>: <em>She almost drove the whole way</em> (she did not quite drive) versus <em>She drove almost the whole way</em>.</p>
+
+<h2><span class="num">8.</span>Mistake 7: Overusing "Very" (Style, Not Error)</h2>
+<p>"Very" is not wrong, and it is useful. The weakness is that <em>very + a plain adjective</em> is often vaguer than one exact word. Compare:</p>
+<div class="table-wrap"><table class="pos-table gt-small">
+<tr><th>Plain</th><th>Often stronger</th></tr>
+<tr><td>very tired</td><td>exhausted</td></tr>
+<tr><td>very happy</td><td>delighted</td></tr>
+<tr><td>very cold</td><td>freezing</td></tr>
+<tr><td>very angry</td><td>furious</td></tr>
+<tr><td>very big</td><td>enormous</td></tr>
+</table></div>
+<p><strong>Use the stronger word only when it is more accurate.</strong> A person who is "very tired" is not always "exhausted". And in simple, clear writing, "very" is perfectly fine. The aim is precision, not a ban.</p>
+
+<h2><span class="num">9.</span>Mistake 8: "Affect" and "Effect"</h2>
+<p><em>Affect</em> is usually a <strong>verb</strong> (to influence); <em>effect</em> is usually a <strong>noun</strong> (a result).</p>
+<div class="example-box"><div class="ex-label">Examples</div><p>✅ The rain <strong>affected</strong> our plans. (verb)<br/>✅ The rain had a strange <strong>effect</strong> on our mood. (noun)</p></div>
+<div class="example-box"><div class="ex-label">Memory trick: RAVEN</div><p><strong>R</strong>emember: <strong>A</strong>ffect is a <strong>V</strong>erb, <strong>E</strong>ffect is a <strong>N</strong>oun.</p></div>
+<p><strong>The exceptions.</strong> <em>Effect</em> can be a formal verb meaning "to bring about": <em>to effect change</em>. <em>Affect</em> is also used as a noun in psychology to mean an outward emotional expression. Both are rare, and your exam will almost certainly expect the usual pattern.</p>
+
+<h2><span class="num">10.</span>Mistake 9: Run-On Sentences and Comma Splices</h2>
+<p>A <strong>run-on sentence</strong> joins two complete sentences with no punctuation. A <strong>comma splice</strong> joins them with only a comma. Either way, the reader has to guess where one idea ends.</p>
+<div class="example-box"><div class="ex-label">Four fixes</div><p>❌ I was tired, I went to bed early.<br/>✅ A full stop: I was tired. I went to bed early.<br/>✅ A semicolon: I was tired; I went to bed early.<br/>✅ A joining word: I was tired, so I went to bed early.<br/>✅ A dependent clause: Because I was tired, I went to bed early.</p></div>
+<p>Short sentences are powerful, so do not be afraid of them. See <a href="sentence-structure.html">Sentence Structure</a> and <a href="punctuation-rules.html">Punctuation Rules</a> for more.</p>
+
+<h2><span class="num">11.</span>Mistake 10: Passive Voice When Active Is Clearer (Style, Not Error)</h2>
+<div class="example-box"><div class="ex-label">Passive and active</div><p>Passive: "The letter was written by Sarah." (weaker, more indirect)<br/>Active: "Sarah wrote the letter." (short, clear, direct)</p></div>
+<p>The passive is <strong>not wrong</strong>. Scientists use it constantly because the process matters more than the person. It is also right when the doer is unknown (<em>The window was broken</em>) or unimportant. The risk is that it can hide who is responsible: <em>Mistakes were made.</em> Prefer the active voice when you want to be clear about who did what.</p>
+<div class="example-box"><div class="ex-label">The zombie test</div><p>Add "by zombies" after the verb. If the sentence still makes sense, it is passive.<br/>"The letter was written… by zombies" → passive.<br/>"Sarah wrote the letter… by zombies" → makes no sense, so it is active.</p></div>
+<p>The test works for most passives. Some passives, such as <em>He was born in 1990</em>, do not take a "by" phrase and need a different check: is the subject receiving the action?</p>
+
+<h2><span class="num">12.</span>What These Mistakes Have in Common</h2>
+<ul>
+<li><strong>Speed.</strong> Most of the sound-alike slips happen when we type or write fast.</li>
+<li><strong>Sounds, not letters.</strong> Our ears cannot separate <em>their</em> from <em>there</em>, so we need a test, not a feeling.</li>
+<li><strong>Half-remembered rules.</strong> We remember "never say me first" and then use <em>I</em> everywhere.</li>
+<li><strong>Spell-check blindness.</strong> Every word in "Your going to love there house" is a real word, so spell-check misses all of the errors.</li>
+</ul>
+<p>The cure is not memorising a rulebook. It is knowing <strong>your own</strong> three or four recurring slips and checking for them on purpose. See <a href="self-editing-process.html">Editing Your Own Work</a>.</p>
+
+<h2><span class="num">13.</span>How to Proofread for These Ten Mistakes</h2>
+<p>Most of these slips are made by people who <em>know</em> the rule. They happen when you write fast. A short proofreading routine catches them.</p>
+<ul>
+<li><strong>Read it aloud.</strong> Your ear catches run-ons and missing words that your eye skips.</li>
+<li><strong>Search for the trouble words.</strong> Use "find" for <em>your, you're, their, there, they're, its, it's, affect, effect, less</em> and check each one with its swap test.</li>
+<li><strong>Look at every sentence opener ending in -ing or -ed.</strong> Ask who is doing the action; that is how you spot a dangling modifier.</li>
+<li><strong>Check long sentences.</strong> If a sentence holds two complete ideas, it may need a full stop or a semicolon.</li>
+<li><strong>Do not trust the spellchecker alone.</strong> It accepts any real word, so "your going" and "their is" often pass without a warning.</li>
+<li><strong>Read it backwards, one sentence at a time.</strong> This breaks the flow of meaning so you see the surface mistakes.</li>
+</ul>
+<p>Then leave the text for a while and read it again. For a longer routine, see <a href="self-editing-process.html">Editing Your Own Work</a>.</p>
+<h2><span class="num">14.</span>Worked Examples</h2>
+<div class="gt-calc"><h3>Example A: Proofreading a paragraph with ten slips</h3>
+<p><em>Your going to be surprised by how their is fewer mistakes in this draft. Me and Sara checked it between you and I, and there were less errors then last time. Walking to the library, the exam stress felt very very big. The report was written quickly and it's effect was positive, we think.</em></p>
+<div class="table-wrap"><table class="pos-table gt-small">
+<tr><th>Slip</th><th>Correction and test</th></tr>
+<tr><td>Your going</td><td>You're going (you are)</td></tr>
+<tr><td>their is</td><td>there are (existence; plural "mistakes")</td></tr>
+<tr><td>Me and Sara checked</td><td>Sara and I checked (remove Sara: "I checked")</td></tr>
+<tr><td>between you and I</td><td>between you and me (after a preposition)</td></tr>
+<tr><td>less errors</td><td>fewer errors (countable)</td></tr>
+<tr><td>then last time</td><td>than last time (comparison)</td></tr>
+<tr><td>Walking to the library, the exam stress felt…</td><td>As I walked to the library, the exam stress felt… (dangling modifier)</td></tr>
+<tr><td>very very big</td><td>enormous (one precise word)</td></tr>
+<tr><td>it's effect</td><td>its effect (possession)</td></tr>
+</table></div>
+<p><strong>Corrected:</strong> <em>You're going to be surprised by how there are fewer mistakes in this draft. Sara and I checked it between you and me, and there were fewer errors than last time. As I walked to the library, the exam stress felt enormous. The report was written quickly, and its effect was positive, we think.</em></p></div>
+
+<div class="gt-calc"><h3>Example B: Applying the tests</h3>
+<div class="gt-s"><b>1</b><span>"The weather ___ our trip." Is it a verb? Yes. <strong>affected</strong>.</span></div>
+<div class="gt-s"><b>2</b><span>"There are ___ chairs than people." Can you count them? Yes. <strong>fewer</strong>.</span></div>
+<div class="gt-s"><b>3</b><span>"___ the best player on the team?" Try "who is": <strong>Who's</strong> the best player.</span></div>
+<div class="gt-s"><b>4</b><span>"The dog wagged ___ tail." Try "it is": "it is tail" fails, so <strong>its</strong>.</span></div>
+<div class="gt-s"><b>5</b><span>"She sent Tom and ___ an invitation." Remove the other person: "She sent me an invitation." So "Tom and <strong>me</strong>".</span></div>
+<p><strong>Try it yourself.</strong> Correct: <em>"Having finished the exam, the bell rang and there happy faces were everywhere."</em></p>
+<p><em>Sample answer: "Having finished the exam, the students heard the bell ring, and happy faces were everywhere." The dangling modifier is fixed by naming who finished the exam. "There happy faces" (a slip for "their" or "there are") is removed.</em></p></div>
+
+<h2><span class="num">15.</span>Your Quick-Check Routine</h2>
+<div class="gt-ck"><label><input type="checkbox"/><span>I tested every your/you're, their/there/they're and its/it's with the swap test.</span></label><label><input type="checkbox"/><span>No apostrophes in ordinary plurals.</span></label><label><input type="checkbox"/><span>I removed the other person to test I and me.</span></label><label><input type="checkbox"/><span>I used fewer for countable things (and checked time and money exceptions).</span></label><label><input type="checkbox"/><span>Every opening phrase describes the subject that follows.</span></label><label><input type="checkbox"/><span>I replaced vague "very + word" only where a precise word is better.</span></label><label><input type="checkbox"/><span>I have no run-ons or comma splices.</span></label><label><input type="checkbox"/><span>I know my own three recurring slips and checked for them.</span></label><p class="note">Your ticks are not saved if you leave or reload the page.</p></div>
+
+<h2><span class="num">16.</span>Common Myths</h2>
+<div class="gt-myths">
+<div class="gt-myth"><div class="m"><b>Myth</b>These mistakes show a person is not intelligent.</div><div class="f"><b>Fact</b>They are common among educated people, mostly because of speed and sound-alike words.</div></div>
+<div class="gt-myth"><div class="m"><b>Myth</b>The passive voice is always wrong.</div><div class="f"><b>Fact</b>It is useful when the doer is unknown or unimportant, and in much scientific writing.</div></div>
+<div class="gt-myth"><div class="m"><b>Myth</b>You must never use the word "very".</div><div class="f"><b>Fact</b>It is not an error. A more exact word is often better, but not always.</div></div>
+<div class="gt-myth"><div class="m"><b>Myth</b>Spell-check will catch these.</div><div class="f"><b>Fact</b>Spell-check finds non-words. It cannot see that a real word is in the wrong place.</div></div>
 </div>
+
+<h2><span class="num">17.</span>Key Terms</h2>
+<div class="gt-gl">
+<div><b>Contraction:</b> a shortened form with an apostrophe, such as <em>you're</em>.</div>
+<div><b>Possessive:</b> a form showing ownership, such as <em>your</em> or <em>the dog's bone</em>.</div>
+<div><b>Subject / object pronoun:</b> <em>I</em> and <em>he</em> / <em>me</em> and <em>him</em>.</div>
+<div><b>Hypercorrection:</b> using a "correct" form where it is not needed, such as <em>between you and I</em>.</div>
+<div><b>Countable noun:</b> a noun you can count one by one.</div>
+<div><b>Dangling modifier:</b> a phrase attached to the wrong subject.</div>
+<div><b>Run-on / comma splice:</b> two sentences joined without proper punctuation.</div>
+<div><b>Active / passive voice:</b> the subject does / receives the action.</div>
+<div><b>Greengrocer's apostrophe:</b> an apostrophe wrongly added to an ordinary plural.</div>
 </div>
-<!-- ARTICLE BODY -->
-<div aria-label="EDUSAMBAM article reader" class="edusambam-reader"><strong>🔊 LISTEN TO THIS ARTICLE</strong><div class="reader-slogan">SAVE YOUR EYES • IMPROVE YOUR LISTENING</div><div class="reader-help">Listen to the article instead of relying only on continuous screen reading.</div><div class="reader-controls"><button data-reader="play" type="button">▶ Play</button><button data-reader="pause" type="button">⏸ Pause</button><button data-reader="resume" type="button">▶ Resume</button><button data-reader="stop" type="button">■ Stop</button><select aria-label="Reading speed"><option value="1">1×</option><option value="0.8">0.8×</option><option value="1.2">1.2×</option></select></div><div aria-hidden="true" class="reader-progress"><span></span></div><small class="reader-status">Ready to read the article.</small></div><div class="article-wrapper">
-<div class="article-intro">
-    Grammar is not about being perfect. It is not about following a rulebook written centuries ago. Grammar is about <strong>clarity</strong> — the art of making sure the thought in your head lands precisely in someone else's mind.
-    <br/><br/>
-    Some mistakes are so common, so deeply rooted in everyday speech and writing, that millions of educated people make them without even noticing. These are not the mistakes of careless people. These are the mistakes of people who were simply never shown a better way.
-    <br/><br/>
-    This article sets that right.
-  </div>
-<!-- MISTAKE 1 -->
-<div class="mistake-block">
-<div class="mistake-number">Mistake 1</div>
-<div class="mistake-title">Confusing "Your" and "You're"</div>
-<div class="label-box"><strong>What most websites say</strong>"Your" shows possession. "You're" means "you are."</div>
-<p><strong>The deeper explanation:</strong> The reason people confuse these is not ignorance — it is speed. When we type quickly, our fingers go on autopilot. The brain processes meaning, not spelling.</p>
-<p>Every time you write <em>you're</em>, say the words <em>"you are"</em> in your head and replace it. If the sentence still makes sense, it is correct.</p>
-<div class="example-line"><span class="ex-tick">✅</span><span><em>You're going to love this.</em> → <em>You are going to love this.</em> Makes sense.</span></div>
-<div class="example-line"><span class="ex-cross">❌</span><span><em>Your going to love this.</em> → <em>Your are going to love this.</em> Sounds wrong immediately.</span></div>
-<p>That tiny mental pause will save you from embarrassment every time.</p>
-</div>
-<!-- MISTAKE 2 -->
-<div class="mistake-block">
-<div class="mistake-number">Mistake 2</div>
-<div class="mistake-title">Writing "Their", "There" and "They're" Wrongly</div>
-<p>Three words. Same sound. Three completely different meanings.</p>
-<div class="memory-box">
-<div class="memory-box-label">Memory Key</div>
-<p><strong>There</strong> contains the word <em>here</em> — both are about place.  ·  <strong>Their</strong> contains <em>heir</em> — both show belonging.  ·  <strong>They're</strong> has an apostrophe — always say "they are" and check.</p>
-</div>
-<div class="example-line"><span class="ex-tick">✅</span><span><em>"The answer is over <strong>there</strong>."</em></span></div>
-<div class="example-line"><span class="ex-tick">✅</span><span><em>"<strong>Their</strong> house is beautiful."</em></span></div>
-<div class="example-line"><span class="ex-tick">✅</span><span><em>"<strong>They're</strong> coming tomorrow."</em></span></div>
-<p>Write these three keys on a sticky note. Within two weeks, you will never confuse them again.</p>
-</div>
-<!-- MISTAKE 3 -->
-<div class="mistake-block">
-<div class="mistake-number">Mistake 3</div>
-<div class="mistake-title">The Apostrophe Catastrophe</div>
-<p>Apostrophes cause more arguments than almost any other punctuation mark. People put them everywhere — especially where they do not belong.</p>
-<div class="label-box"><strong>The Golden Rule — Apostrophes do three jobs</strong>
-      1. They show something is missing: <em>can't</em> (cannot), <em>it's</em> (it is), <em>I've</em> (I have)<br/>
-      2. They show possession: <em>the teacher's book</em>, <em>London's history</em><br/>
-      3. They make special plurals of letters, numbers and abbreviations: <em>A's, 9's, PhD's</em>
-</div>
-<p>This third use is one most grammar books forget to mention — but it matters greatly in academic and professional writing. When writing the plural of a single letter, number or abbreviation, the apostrophe prevents confusion:</p>
-<div class="example-line"><span class="ex-tick">✅</span><span><em>"She got three A's in her exams."</em> — Without the apostrophe, <em>As</em> looks like the word <em>as</em></span></div>
-<div class="example-line"><span class="ex-tick">✅</span><span><em>"He scored two 9's in the test."</em> — <em>9s</em> alone can look odd and unclear</span></div>
-<div class="example-line"><span class="ex-tick">✅</span><span><em>"She holds two PhD's."</em> — The apostrophe shows these are qualifications</span></div>
-<div class="example-line"><span class="ex-tick">✅</span><span><em>"Mind your p's and q's."</em> — A classic expression meaning behave properly</span></div>
-<p>However, modern style guides are divided. Some now accept <em>As, 9s, PhDs</em> without apostrophes. The safest rule: <strong>when leaving out the apostrophe causes confusion, keep it in.</strong></p>
-<p><strong>Apostrophes never — ever — make an ordinary word plural.</strong></p>
-<div class="example-line"><span class="ex-cross">❌</span><span><em>"Apple's for sale"</em></span></div>
-<div class="example-line"><span class="ex-tick">✅</span><span><em>"Apples for sale"</em></span></div>
-<p>The confusion with <em>its</em> and <em>it's</em> deserves special attention:</p>
-<div class="example-line"><span class="ex-tick">✅</span><span><em>It's</em> = it is → <em>"It's a beautiful morning."</em></span></div>
-<div class="example-line"><span class="ex-tick">✅</span><span><em>Its</em> = belonging to it → <em>"The cat licked its paw."</em></span></div>
-<p>If in doubt, say <em>"it is"</em> out loud. If it sounds right, use the apostrophe. If it sounds wrong, leave it out.</p>
-</div>
-<!-- MISTAKE 4 -->
-<div class="mistake-block">
-<div class="mistake-number">Mistake 4</div>
-<div class="mistake-title">Starting a Sentence with "Me" Instead of "I"</div>
-<p><em>"Me and John went to the market."</em> — You have heard this. You may have said it. It feels natural because in conversation, we always mention ourselves first. But grammatically, it is incorrect.</p>
-<div class="memory-box">
-<div class="memory-box-label">The Simple Test</div>
-<p>Remove the other person and read it aloud. <em>"Me went to the market"</em> sounds wrong. <em>"I went to the market"</em> sounds right. So it must be: <em>"John and I went to the market."</em></p>
-</div>
-<p>In correct English, you mention yourself <strong>last</strong> — not first. It is considered both grammatically accurate and polite.</p>
-</div>
-<!-- MISTAKE 5 -->
-<div class="mistake-block">
-<div class="mistake-number">Mistake 5</div>
-<div class="mistake-title">Using "Less" When You Mean "Fewer"</div>
-<p><em>"10 items or less"</em> — this is on supermarket signs everywhere. And every time, it should say <em>"10 items or fewer."</em></p>
-<div class="label-box"><strong>The Rule</strong>
-<strong>Fewer</strong> — for things you can count: fewer students, fewer mistakes, fewer chairs<br/>
-<strong>Less</strong> — for things you cannot count: less water, less time, less patience
-    </div>
-<p>If you can put a number in front of it, use <em>fewer</em>. You can say <em>"three students"</em> — so it is <em>"fewer students."</em> You cannot say <em>"three patience"</em> — so it is <em>"less patience."</em></p>
-</div>
-<!-- MISTAKE 6 -->
-<div class="mistake-block">
-<div class="mistake-number">Mistake 6</div>
-<div class="mistake-title">The Dangling Modifier — The Funniest Grammar Mistake</div>
-<p>A dangling modifier is a describing phrase attached to the wrong subject. The result can be absurd.</p>
-<div class="example-line"><span class="ex-cross">❌</span><span><em>"Walking down the street, the trees were beautiful."</em> — Were the trees walking?</span></div>
-<div class="example-line"><span class="ex-cross">❌</span><span><em>"Having eaten the whole cake, the plate was empty."</em> — Did the plate eat the cake?</span></div>
-<div class="example-line"><span class="ex-tick">✅</span><span><em>"Walking down the street, I noticed the trees were beautiful."</em></span></div>
-<div class="example-line"><span class="ex-tick">✅</span><span><em>"Having eaten the whole cake, she left an empty plate."</em></span></div>
-<p>Read your sentences aloud. If something sounds unintentionally funny, a dangling modifier is usually the culprit.</p>
-</div>
-<!-- MISTAKE 7 -->
-<div class="mistake-block">
-<div class="mistake-number">Mistake 7</div>
-<div class="mistake-title">Overusing the Word "Very"</div>
-<p><em>"Very"</em> is a lazy word. It tells the reader something is more than it seems — but does not show them. In good writing, showing always beats telling.</p>
-<table class="article-table">
-<thead><tr><th>Weak</th><th>Strong</th></tr></thead>
-<tbody>
-<tr><td class="weak">Very tired</td><td class="strong-word">Exhausted</td></tr>
-<tr><td class="weak">Very happy</td><td class="strong-word">Delighted</td></tr>
-<tr><td class="weak">Very cold</td><td class="strong-word">Freezing</td></tr>
-<tr><td class="weak">Very angry</td><td class="strong-word">Furious</td></tr>
-<tr><td class="weak">Very big</td><td class="strong-word">Enormous</td></tr>
-</tbody>
-</table>
-<p>Find the stronger, more precise word. The writing will immediately feel more confident and more intelligent.</p>
-</div>
-<!-- MISTAKE 8 -->
-<div class="mistake-block">
-<div class="mistake-number">Mistake 8</div>
-<div class="mistake-title">Confusing "Affect" and "Effect"</div>
-<div class="label-box"><strong>The Difference</strong>
-<strong>Affect</strong> is almost always a verb (an action): <em>"The rain affected our plans."</em><br/>
-<strong>Effect</strong> is almost always a noun (a thing): <em>"The rain had a strange effect on our mood."</em>
-</div>
-<div class="memory-box">
-<div class="memory-box-label">Memory Trick — RAVEN</div>
-<p><strong>R</strong>emember — <strong>A</strong>ffect is a <strong>V</strong>erb, <strong>E</strong>ffect is a <strong>N</strong>oun. Say it three times. RAVEN. RAVEN. RAVEN.</p>
-</div>
-</div>
-<!-- MISTAKE 9 -->
-<div class="mistake-block">
-<div class="mistake-number">Mistake 9</div>
-<div class="mistake-title">Writing Run-On Sentences</div>
-<p>A run-on sentence happens when two complete sentences are joined with no proper punctuation — just a comma or nothing at all — the result is a breathless, confusing rush of words that exhausts the reader and loses the meaning somewhere along the way.</p>
-<p><em>Did you notice what just happened? That paragraph above was a run-on sentence.</em></p>
-<div class="label-box"><strong>Three Fixes</strong>
-      1. Use a full stop: <em>"I was tired. I went to bed early."</em><br/>
-      2. Use a semicolon: <em>"I was tired; I went to bed early."</em><br/>
-      3. Use a joining word: <em>"I was tired, so I went to bed early."</em>
-</div>
-<p>Short sentences are powerful. Do not be afraid of them.</p>
-</div>
-<!-- MISTAKE 10 -->
-<div class="mistake-block">
-<div class="mistake-number">Mistake 10</div>
-<div class="mistake-title">Passive Voice When Active Voice Is Better</div>
-<div class="example-line"><span class="ex-cross">❌</span><span><em>"The letter was written by Sarah."</em> — Passive voice. Weak and indirect.</span></div>
-<div class="example-line"><span class="ex-tick">✅</span><span><em>"Sarah wrote the letter."</em> — Active voice. Short, clear, direct.</span></div>
-<p>Passive voice is not wrong — scientists use it constantly. But in everyday writing, active voice makes your words come alive.</p>
-<div class="memory-box">
-<div class="memory-box-label">The Zombie Test</div>
-<p>If you can add <em>"by zombies"</em> to the end of your sentence and it makes sense, you have written a passive sentence. <em>"The letter was written... by zombies"</em> ✅ Passive. <em>"Sarah wrote the letter... by zombies"</em> ❌ Active.</p>
-</div>
-</div>
-<!-- FINAL WORD -->
-<div class="final-word">
-<h2>A Final Word</h2>
-<p>Nobody becomes a good writer by memorising rules. Good writers read widely, write often, and care about their words.</p>
-<p>These ten mistakes are not signs of poor intelligence. They are signs of a writer who has not yet been shown a better way. That changes today.</p>
-<p>The next step is yours.</p>
-</div>
-<!-- TAGS & BACK -->
-<div class="article-footer-bar">
-<div class="article-tags">
-<a class="tag" href="#">English Language</a>
-<a class="tag" href="#">Grammar</a>
-<a class="tag" href="#">Writing Skills</a>
-<a class="tag" href="#">Education</a>
-</div>
-<a class="back-link" href="index.html">← Back to EDUSAMBAM</a>
-</div>
-</div>
-<section class="quiz-section" id="scored-quiz">
+
+<h2><span class="num">18.</span>A Final Word</h2>
+<p>Nobody becomes a good writer by memorising rules. Good writers read widely, write often and care about their words. These ten mistakes are not signs of poor intelligence. They are signs of a writer who has not yet been shown a quick test, and now you have ten. Choose the three that you make most, check for them every time, and the others will take care of themselves. Continue with <a href="common-errors.html">Common Errors in English</a> and <a href="punctuation-rules.html">Punctuation Rules</a>.</p>
+<div class="gt-key"><div class="kp">Key points to remember</div><ul>
+<li>Sort problems into errors, conventions and style choices.</li>
+<li>Use swap tests: "you are", "they are", "it is".</li>
+<li>Apostrophes show missing letters or possession, never an ordinary plural.</li>
+<li>Remove the other person to test I and me.</li>
+<li>Fewer for counting, less for amounts, with exceptions for time and money.</li>
+<li>Make sure every opening phrase describes the subject that follows.</li>
+<li>Know your own recurring slips, and check for them deliberately.</li>
+</ul></div>
+<div class="gt-tp"><div class="tl">For teachers and parents</div><p><strong>Activity:</strong> give students a paragraph with ten planted slips (one from each mistake) and ask them to find and fix each using the test, naming the test they used. Then ask each student to list their own three most frequent slips from their last essay.</p><p><strong>Please note:</strong> guidance on apostrophes with plurals of letters and abbreviations differs between style guides, and usage of <em>less</em> and <em>fewer</em> varies in everyday speech. Students should follow the style required by their own syllabus and teacher. The examples are original.</p></div>
+<div class="further-box"><div class="fr-label">Where These Facts Come From</div><ul>
+<li><a href="https://editorsmanual.com/?p=2334" rel="noopener" target="_blank">Editors' Manual: Apostrophes in Plurals</a><span class="src-note">Apostrophe for lowercase letters; capitals differ by style guide; omit for decades; avoid for abbreviations such as PhDs</span></li>
+<li><a href="https://www.grammarbook.com/blog/apostrophes/the-apostrophe-with-numbers-letters-and-abbreviations/" rel="noopener" target="_blank">The Blue Book of Grammar: The Apostrophe with Letters, Numbers and Abbreviations</a><span class="src-note">Plurals of single letters, abbreviations and decades (the 1990s)</span></li>
+<li><a href="https://cmosshoptalk.com/2022/10/11/a-few-exceptions-worth-noting/" rel="noopener" target="_blank">Chicago Manual of Style Shop Talk: A Few Exceptions Worth Noting</a><span class="src-note">Plural apostrophe for capital letters, restored in the 18th edition</span></li>
+<li><a href="https://dictionaryblog.cambridge.org/2014/05/28/less-or-fewer/" rel="noopener" target="_blank">Cambridge Dictionary blog: Less or fewer?</a><span class="src-note">The countable and uncountable rule, "less than" with time and money, and informal use of less</span></li>
+</ul></div>
+<div class="further-box"><div class="fr-label">Further Reading</div><ul>
+<li><a href="https://owl.purdue.edu/" rel="noopener" target="_blank">Purdue OWL</a><span class="src-note">Free guides to grammar, punctuation and proofreading</span></li>
+<li><a href="https://dictionary.cambridge.org/grammar/british-grammar/" rel="noopener" target="_blank">Cambridge Dictionary Grammar</a><span class="src-note">A free British English grammar reference</span></li>
+<li><a href="https://learnenglish.britishcouncil.org/grammar" rel="noopener" target="_blank">British Council LearnEnglish Grammar</a><span class="src-note">Free explanations and practice</span></li>
+</ul></div>
+<!-- QUIZ SECTION -->
+<div class="quiz-section">
 <div class="section-eyebrow">Test Your Understanding</div>
-<h2>Scored Grammar Quiz</h2>
-<p class="quiz-intro">10 questions. Select one answer for each question, then submit to see your score. You can retake the quiz at any time.</p>
+<h2>Practice Questions</h2>
+<p class="quiz-intro">10 questions. Select an answer for each, then submit to see your score instantly.</p>
 <div class="squiz-progress"><div class="squiz-progress-fill" id="squizProgressFill"></div></div>
 <div class="squiz-progress-label" id="squizProgressLabel">0 of 10 answered</div>
+<div class="squiz-results" id="squizResults">
+<div class="squiz-score-big" id="squizScoreBig">0/10</div>
+<div class="squiz-score-label" id="squizScoreLabel">You scored 0%</div>
+<div class="squiz-score-tier" id="squizScoreTier">Keep practicing</div>
+<div><button class="squiz-retake-btn" onclick="retakeQuiz()">Retake Quiz</button></div>
+</div>
 <form id="squizForm">
-<div class="squiz-item" data-correct="1"><div class="squiz-q"><span class="qnum">1.</span>Which sentence is grammatically correct?</div>
-<div class="squiz-option"><input name="sq1" type="radio" value="0"><label>Me and Sara went home.</label></input></div><div class="squiz-option"><input name="sq1" type="radio" value="1"/><label>Sara and I went home.</label></div><div class="squiz-option"><input name="sq1" type="radio" value="2"/><label>Sara and me went home.</label></div></div>
-<div class="squiz-item" data-correct="0"><div class="squiz-q"><span class="qnum">2.</span>Which word is normally used for countable nouns?</div>
-<div class="squiz-option"><input name="sq2" type="radio" value="0"/><label>Fewer</label></div><div class="squiz-option"><input name="sq2" type="radio" value="1"/><label>Less</label></div><div class="squiz-option"><input name="sq2" type="radio" value="2"/><label>Much</label></div></div>
-<div class="squiz-item" data-correct="2"><div class="squiz-q"><span class="qnum">3.</span>Which sentence uses “its” correctly?</div>
-<div class="squiz-option"><input name="sq3" type="radio" value="0"/><label>Its going to rain.</label></div><div class="squiz-option"><input name="sq3" type="radio" value="1"/><label>It’s colour is blue.</label></div><div class="squiz-option"><input name="sq3" type="radio" value="2"/><label>The cat licked its paw.</label></div></div>
-<div class="squiz-item" data-correct="1"><div class="squiz-q"><span class="qnum">4.</span>What is a dangling modifier?</div>
-<div class="squiz-option"><input name="sq4" type="radio" value="0"/><label>A sentence with no punctuation.</label></div><div class="squiz-option"><input name="sq4" type="radio" value="1"/><label>A describing phrase attached to the wrong subject.</label></div><div class="squiz-option"><input name="sq4" type="radio" value="2"/><label>A sentence with two verbs.</label></div></div>
-<div class="squiz-item" data-correct="0"><div class="squiz-q"><span class="qnum">5.</span>Which is the stronger replacement for “very tired”?</div>
-<div class="squiz-option"><input name="sq5" type="radio" value="0"/><label>Exhausted</label></div><div class="squiz-option"><input name="sq5" type="radio" value="1"/><label>A little tired</label></div><div class="squiz-option"><input name="sq5" type="radio" value="2"/><label>Quite tired</label></div></div>
-<div class="squiz-item" data-correct="2"><div class="squiz-q"><span class="qnum">6.</span>Which sentence uses “affect” correctly?</div>
-<div class="squiz-option"><input name="sq6" type="radio" value="0"/><label>The rain had an affect on us.</label></div><div class="squiz-option"><input name="sq6" type="radio" value="1"/><label>That was a strange affect.</label></div><div class="squiz-option"><input name="sq6" type="radio" value="2"/><label>The rain affected our plans.</label></div></div>
-<div class="squiz-item" data-correct="1"><div class="squiz-q"><span class="qnum">7.</span>Which is the correct plural in ordinary writing?</div>
-<div class="squiz-option"><input name="sq7" type="radio" value="0"/><label>Apple’s for sale</label></div><div class="squiz-option"><input name="sq7" type="radio" value="1"/><label>Apples for sale</label></div><div class="squiz-option"><input name="sq7" type="radio" value="2"/><label>Apple's for sale</label></div></div>
-<div class="squiz-item" data-correct="0"><div class="squiz-q"><span class="qnum">8.</span>What is the best way to check “I” versus “me” in a compound subject?</div>
-<div class="squiz-option"><input name="sq8" type="radio" value="0"/><label>Remove the other person and read the sentence.</label></div><div class="squiz-option"><input name="sq8" type="radio" value="1"/><label>Always use me first.</label></div><div class="squiz-option"><input name="sq8" type="radio" value="2"/><label>Always use I last without checking.</label></div></div>
-<div class="squiz-item" data-correct="2"><div class="squiz-q"><span class="qnum">9.</span>Which pair is correct?</div>
-<div class="squiz-option"><input name="sq9" type="radio" value="0"/><label>Less students / fewer water</label></div><div class="squiz-option"><input name="sq9" type="radio" value="1"/><label>Fewer water / less chairs</label></div><div class="squiz-option"><input name="sq9" type="radio" value="2"/><label>Fewer students / less water</label></div></div>
-<div class="squiz-item" data-correct="1"><div class="squiz-q"><span class="qnum">10.</span>What is a useful test for “it’s”?</div>
-<div class="squiz-option"><input name="sq10" type="radio" value="0"/><label>Replace it with “its own”.</label></div><div class="squiz-option"><input name="sq10" type="radio" value="1"/><label>Replace it with “it is” and see whether the sentence still works.</label></div><div class="squiz-option"><input name="sq10" type="radio" value="2"/><label>Always add an apostrophe.</label></div></div>
-<button class="squiz-submit-btn" id="squizSubmitBtn" onclick="submitGrammarQuiz()" type="button">Submit Quiz</button>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">1.</span>Which sentence is correct?</div>
+<div class="squiz-option"><input id="sq1a" name="sq1" type="radio" value="0"/><label for="sq1a">A. Your going to love this.</label></div>
+<div class="squiz-option"><input id="sq1b" name="sq1" type="radio" value="1"/><label for="sq1b">B. Youre going to love this.</label></div>
+<div class="squiz-option"><input id="sq1c" name="sq1" type="radio" value="2"/><label for="sq1c">C. You're going to love this.</label></div>
+<div class="squiz-option"><input id="sq1d" name="sq1" type="radio" value="3"/><label for="sq1d">D. Your' going to love this.</label></div>
+</div>
+<div class="squiz-item" data-correct="0">
+<div class="squiz-q"><span class="qnum">2.</span>Which sentence uses their, there and they're correctly?</div>
+<div class="squiz-option"><input id="sq2a" name="sq2" type="radio" value="0"/><label for="sq2a">A. They're sure their keys are over there.</label></div>
+<div class="squiz-option"><input id="sq2b" name="sq2" type="radio" value="1"/><label for="sq2b">B. Their sure there keys are over they're.</label></div>
+<div class="squiz-option"><input id="sq2c" name="sq2" type="radio" value="2"/><label for="sq2c">C. There sure they're keys are over their.</label></div>
+<div class="squiz-option"><input id="sq2d" name="sq2" type="radio" value="3"/><label for="sq2d">D. They're sure there keys are over their.</label></div>
+</div>
+<div class="squiz-item" data-correct="3">
+<div class="squiz-q"><span class="qnum">3.</span>Which phrase is the standard way to write the decade?</div>
+<div class="squiz-option"><input id="sq3a" name="sq3" type="radio" value="0"/><label for="sq3a">A. the 1990's</label></div>
+<div class="squiz-option"><input id="sq3b" name="sq3" type="radio" value="1"/><label for="sq3b">B. the 1990'</label></div>
+<div class="squiz-option"><input id="sq3c" name="sq3" type="radio" value="2"/><label for="sq3c">C. the '1990s</label></div>
+<div class="squiz-option"><input id="sq3d" name="sq3" type="radio" value="3"/><label for="sq3d">D. the 1990s</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">4.</span>Which sentence is correct?</div>
+<div class="squiz-option"><input id="sq4a" name="sq4" type="radio" value="0"/><label for="sq4a">A. Between you and I, it is late.</label></div>
+<div class="squiz-option"><input id="sq4b" name="sq4" type="radio" value="1"/><label for="sq4b">B. Between you and me, it is late.</label></div>
+<div class="squiz-option"><input id="sq4c" name="sq4" type="radio" value="2"/><label for="sq4c">C. Between I and you, it is late.</label></div>
+<div class="squiz-option"><input id="sq4d" name="sq4" type="radio" value="3"/><label for="sq4d">D. Between myself and you, it is late.</label></div>
+</div>
+<div class="squiz-item" data-correct="3">
+<div class="squiz-q"><span class="qnum">5.</span>Which sentence follows the traditional rule for countable nouns?</div>
+<div class="squiz-option"><input id="sq5a" name="sq5" type="radio" value="0"/><label for="sq5a">A. There are less students in the library than yesterday.</label></div>
+<div class="squiz-option"><input id="sq5b" name="sq5" type="radio" value="1"/><label for="sq5b">B. There are lesser students in the library than yesterday.</label></div>
+<div class="squiz-option"><input id="sq5c" name="sq5" type="radio" value="2"/><label for="sq5c">C. There are least students in the library than yesterday.</label></div>
+<div class="squiz-option"><input id="sq5d" name="sq5" type="radio" value="3"/><label for="sq5d">D. There are fewer students in the library than yesterday.</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">6.</span>Which sentence has a dangling modifier?</div>
+<div class="squiz-option"><input id="sq6a" name="sq6" type="radio" value="0"/><label for="sq6a">A. While I was walking to school, it began to rain.</label></div>
+<div class="squiz-option"><input id="sq6b" name="sq6" type="radio" value="1"/><label for="sq6b">B. Walking to school, I got wet.</label></div>
+<div class="squiz-option"><input id="sq6c" name="sq6" type="radio" value="2"/><label for="sq6c">C. Walking to school, the rain started.</label></div>
+<div class="squiz-option"><input id="sq6d" name="sq6" type="radio" value="3"/><label for="sq6d">D. It rained while I walked to school.</label></div>
+</div>
+<div class="squiz-item" data-correct="0">
+<div class="squiz-q"><span class="qnum">7.</span>Which sentence uses affect/effect in the usual way?</div>
+<div class="squiz-option"><input id="sq7a" name="sq7" type="radio" value="0"/><label for="sq7a">A. The new rule will affect every student.</label></div>
+<div class="squiz-option"><input id="sq7b" name="sq7" type="radio" value="1"/><label for="sq7b">B. The new rule will effect every student's mood.</label></div>
+<div class="squiz-option"><input id="sq7c" name="sq7" type="radio" value="2"/><label for="sq7c">C. The new rule had an affect on every student.</label></div>
+<div class="squiz-option"><input id="sq7d" name="sq7" type="radio" value="3"/><label for="sq7d">D. The new rule's affect was large.</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">8.</span>What does the "zombie test" check?</div>
+<div class="squiz-option"><input id="sq8a" name="sq8" type="radio" value="0"/><label for="sq8a">A. Whether a sentence has a subject</label></div>
+<div class="squiz-option"><input id="sq8b" name="sq8" type="radio" value="1"/><label for="sq8b">B. Whether a sentence is passive (it still makes sense with "by zombies" added)</label></div>
+<div class="squiz-option"><input id="sq8c" name="sq8" type="radio" value="2"/><label for="sq8c">C. Whether a word is a noun</label></div>
+<div class="squiz-option"><input id="sq8d" name="sq8" type="radio" value="3"/><label for="sq8d">D. Whether a sentence is a question</label></div>
+</div>
+<div class="squiz-item" data-correct="3">
+<div class="squiz-q"><span class="qnum">9.</span>Which is a comma splice?</div>
+<div class="squiz-option"><input id="sq9a" name="sq9" type="radio" value="0"/><label for="sq9a">A. I was tired, so I went to bed early.</label></div>
+<div class="squiz-option"><input id="sq9b" name="sq9" type="radio" value="1"/><label for="sq9b">B. I was tired; I went to bed early.</label></div>
+<div class="squiz-option"><input id="sq9c" name="sq9" type="radio" value="2"/><label for="sq9c">C. I was tired. I went to bed early.</label></div>
+<div class="squiz-option"><input id="sq9d" name="sq9" type="radio" value="3"/><label for="sq9d">D. I was tired, I went to bed early.</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">10.</span>What is the best advice about "very tired"?</div>
+<div class="squiz-option"><input id="sq10a" name="sq10" type="radio" value="0"/><label for="sq10a">A. Never use the word very</label></div>
+<div class="squiz-option"><input id="sq10b" name="sq10" type="radio" value="1"/><label for="sq10b">B. Always use very before adjectives</label></div>
+<div class="squiz-option"><input id="sq10c" name="sq10" type="radio" value="2"/><label for="sq10c">C. Replace it with a more precise word such as exhausted when that is what you mean</label></div>
+<div class="squiz-option"><input id="sq10d" name="sq10" type="radio" value="3"/><label for="sq10d">D. Use very twice for emphasis</label></div>
+</div>
+<button class="squiz-submit-btn" disabled="" id="squizSubmitBtn" onclick="submitQuiz()" type="button">Answer all questions to submit</button>
 </form>
-<div class="squiz-results" id="squizResults"><div class="squiz-score-big" id="squizScoreBig">0/10</div><div class="squiz-score-label" id="squizScoreLabel">You scored 0%</div><div class="squiz-score-tier" id="squizScoreTier">Keep practicing</div><div><button class="squiz-retake-btn" onclick="retakeGrammarQuiz()" type="button">Retake Quiz</button></div></div>
-</section>
+</div>
+<div class="article-footer-nav"><a href="index.html#gateway">Gateway</a></div>
+</div>
 <script>
-(function(){
-const form=document.getElementById('squizForm'); if(!form)return;
-const submit=document.getElementById('squizSubmitBtn'), total=10;
-function progress(){const n=form.querySelectorAll('input:checked').length;document.getElementById('squizProgressFill').style.width=(n/total*100)+'%';document.getElementById('squizProgressLabel').textContent=n+' of '+total+' answered';}
-form.addEventListener('change',function(){form.querySelectorAll('.squiz-option').forEach(o=>o.classList.remove('selected'));form.querySelectorAll('input:checked').forEach(i=>i.closest('.squiz-option').classList.add('selected'));progress();});
-window.submitGrammarQuiz=function(){let score=0;form.querySelectorAll('.squiz-item').forEach((q,i)=>{const correct=q.dataset.correct, chosen=form.querySelector('input[name="sq'+(i+1)+'"]:checked');q.querySelectorAll('.squiz-option').forEach((o,j)=>{o.querySelector('input').disabled=true;o.classList.remove('correct-answer','wrong-answer');if(String(j)===correct)o.classList.add('correct-answer');});if(chosen&&chosen.value===correct)score++;else if(chosen)chosen.closest('.squiz-option').classList.add('wrong-answer');});const pct=Math.round(score/total*100);document.getElementById('squizScoreBig').textContent=score+'/'+total;document.getElementById('squizScoreLabel').textContent='You scored '+pct+'%';document.getElementById('squizScoreTier').textContent=pct===100?'Perfect score!':pct>=80?'Excellent work':pct>=60?'Good effort':pct>=40?'Getting there':'Keep practicing';document.getElementById('squizResults').classList.add('visible');submit.style.display='none';document.getElementById('squizResults').scrollIntoView({behavior:'smooth',block:'start'});};
-window.retakeGrammarQuiz=function(){form.reset();form.querySelectorAll('.squiz-option').forEach(o=>{o.classList.remove('selected','correct-answer','wrong-answer');o.querySelector('input').disabled=false;});document.getElementById('squizResults').classList.remove('visible');submit.style.display='block';progress();document.getElementById('squizForm').scrollIntoView({behavior:'smooth',block:'start'});};
-progress();
-})();
+  (function() {
+    const form = document.getElementById('squizForm');
+    const submitBtn = document.getElementById('squizSubmitBtn');
+    const progressFill = document.getElementById('squizProgressFill');
+    const progressLabel = document.getElementById('squizProgressLabel');
+    const totalQuestions = document.querySelectorAll('.squiz-item').length;
+
+    function countAnswered() {
+      let count = 0;
+      for (let i = 1; i <= totalQuestions; i++) {
+        if (form.querySelector(`input[name="sq${i}"]:checked`)) count++;
+      }
+      return count;
+    }
+
+    function updateProgress() {
+      const answered = countAnswered();
+      progressFill.style.width = (answered / totalQuestions * 100) + '%';
+      progressLabel.textContent = answered + ' of ' + totalQuestions + ' answered';
+      submitBtn.disabled = answered < totalQuestions;
+      submitBtn.textContent = answered < totalQuestions ? 'Answer all questions to submit' : 'Submit Quiz';
+      document.querySelectorAll('.squiz-option').forEach(opt => opt.classList.remove('selected'));
+      form.querySelectorAll('input[type="radio"]:checked').forEach(input => {
+        input.closest('.squiz-option').classList.add('selected');
+      });
+    }
+
+    form.addEventListener('change', updateProgress);
+
+    window.submitQuiz = function() {
+      let score = 0;
+      const questions = document.querySelectorAll('.squiz-item');
+      questions.forEach((q, idx) => {
+        const qnum = idx + 1;
+        const correctIdx = q.getAttribute('data-correct');
+        const selected = form.querySelector(`input[name="sq${qnum}"]:checked`);
+        const options = q.querySelectorAll('.squiz-option');
+        options.forEach((opt, optIdx) => {
+          opt.querySelector('input').disabled = true;
+          if (String(optIdx) === correctIdx) opt.classList.add('correct-answer');
+        });
+        if (selected && selected.value === correctIdx) {
+          score++;
+        } else if (selected) {
+          selected.closest('.squiz-option').classList.add('wrong-answer');
+        }
+      });
+
+      const percent = Math.round((score / totalQuestions) * 100);
+      document.getElementById('squizScoreBig').textContent = score + '/' + totalQuestions;
+      document.getElementById('squizScoreLabel').textContent = 'You scored ' + percent + '%';
+
+      let tier = 'Keep practicing';
+      if (percent === 100) tier = 'Perfect score!';
+      else if (percent >= 80) tier = 'Excellent work';
+      else if (percent >= 60) tier = 'Good effort';
+      else if (percent >= 40) tier = 'Getting there';
+      document.getElementById('squizScoreTier').textContent = tier;
+
+      document.getElementById('squizResults').classList.add('visible');
+      submitBtn.style.display = 'none';
+      document.getElementById('squizResults').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    window.retakeQuiz = function() {
+      form.reset();
+      document.querySelectorAll('.squiz-option').forEach(opt => {
+        opt.classList.remove('selected', 'correct-answer', 'wrong-answer');
+        opt.querySelector('input').disabled = false;
+      });
+      document.getElementById('squizResults').classList.remove('visible');
+      submitBtn.style.display = 'block';
+      updateProgress();
+      document.getElementById('squizForm').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    updateProgress();
+  })();
 </script>
-<!-- RELATED ARTICLES -->
-<div class="related">
-<div class="related-inner">
-<div class="related-label">Continue Reading</div>
-<h2>More from English Language</h2>
-<div class="related-grid">
-<div class="related-card">
-<span class="related-tag">Grammar</span>
-<div class="related-title">When to Use a Comma — and When Not To</div>
-</div>
-<div class="related-card">
-<span class="related-tag">Creative Writing</span>
-<div class="related-title">How to Write a Story Opening That Hooks Readers</div>
-</div>
-<div class="related-card">
-<span class="related-tag">Grammar</span>
-<div class="related-title">Active vs Passive Voice: A Practical Guide</div>
-</div>
-<div class="related-card">
-<span class="related-tag">Creative Writing</span>
-<div class="related-title">50 Writing Prompts That Actually Inspire</div>
-</div>
-</div>
-</div>
-</div>
-<!-- FOOTER -->
 
 <script id="edusambam-reader-script">
 (function(){
@@ -1013,9 +1475,32 @@ progress();
       });
     }
     if(input && results){
+      const norm=s=>(' '+String(s||'').toLowerCase().replace(/&/g,' and ').replace(/[^a-z0-9]+/g,' ')+' ');
+      const stop={and:1,the:1,of:1,a:1,an:1,to:1,in:1,is:1,for:1};
       const render=()=>{
         const q=input.value.trim().toLowerCase();
-        const hits=q?pages.filter(x=>(x.title+' '+x.url).toLowerCase().includes(q)).slice(0,20):[];
+        let words=norm(q).trim().split(' ').filter(Boolean);
+        const sig=words.filter(w=>!stop[w]); if(sig.length) words=sig;
+        let hits=[];
+        if(q&&words.length){
+          const forms=w=>{const f=[w]; if(w.length>3&&w.endsWith('s')) f.push(w.slice(0,-1)); if(w.length>4&&w.endsWith('es')) f.push(w.slice(0,-2)); if(w.length>5&&w.endsWith('ing')) f.push(w.slice(0,-3)); if(w.length>4&&w.endsWith('ed')) f.push(w.slice(0,-2)); return f;};
+          const scored=[];
+          pages.forEach(x=>{
+            const t=norm(x.title), m=norm(String(x.url||'').replace(/[-_.]/g,' ')+' '+(x.s||'')+' '+(x.k||''));
+            let sc=0, ok=true;
+            for(const w of words){
+              const f=forms(w);
+              if(f.some(v=>t.includes(' '+v))) sc+=3;
+              else if(f.some(v=>m.includes(' '+v))) sc+=1;
+              else { ok=false; break; }
+            }
+            if(ok) scored.push([sc,x]);
+          });
+          scored.sort((a,b)=>b[0]-a[0]);
+          hits=scored.map(z=>z[1]);
+          if(!hits.length) hits=pages.filter(x=>(x.title+' '+x.url).toLowerCase().includes(q));
+          hits=hits.slice(0,30);
+        }
         results.innerHTML=hits.map(x=>'<a href="'+x.url.replace(/"/g,'&quot;')+'">'+
           x.title.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</a>').join('') ||
           (q?'<div style="padding:10px;color:#64748b">No matching pages found.</div>':'');
@@ -1032,32 +1517,30 @@ progress();
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',setup); else setup();
 })();
 </script>
-<footer class="edusambam-unified-footer" aria-label="EDUSAMBAM site footer">
+<footer aria-label="EDUSAMBAM site footer" class="edusambam-unified-footer">
 <div class="footer-top">
 <div class="footer-brand">
 <div class="edusambam-footer-brand-row">
-<a class="edusambam-footer-logo-link" href="index.html" aria-label="EDUSAMBAM home">
+<a aria-label="EDUSAMBAM home" class="edusambam-footer-logo-link" href="index.html">
 <img alt="EDUSAMBAM" class="edusambam-brand-mark edusambam-footer-logo" src="logo-icon-full-white.png" style="width:auto;height:64px;max-width:240px;object-fit:contain;background:none;border-radius:0;"/>
 </a>
 </div>
 <p class="edusambam-footer-statement">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</p>
-<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a></div>
+<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a><a aria-label="EDUSAMBAM on YouTube" href="https://youtube.com/@edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></div>
 </div>
-<div class="footer-col"><h4>Learning</h4><ul><li><a href="index.html#subject-english">English Generic</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li></ul></div>
+<div class="footer-col"><h4>Learning Areas</h4><ul><li><a href="index.html#subject-english">English Language</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ ARENA</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li><li><a href="index.html#spelling-bee-arena">SPELLING BEE ARENA</a></li><li><a href="index.html#english-vocabulary-amp-word-skills">Vocabulary Building</a></li></ul></div>
 <div class="footer-col"><h4>Practice &amp; Assessment</h4><ul>
 <li><a href="index.html#interactive-activities">Interactive Activities</a></li>
-<li><a href="assessment-arena.html">ASSESSMENT ARENA</a></li>
-<li><a href="assessment-arena.html">What Is Assessment?</a></li>
-<li><a href="index.html#about">Learn Your Way</a></li>
-<li><a href="index.html#resources">Resources &amp; Downloads</a></li>
+<li><a href="assessment-arena.html">Assessment Arena</a></li>
+<li><a href="index.html#resources">Downloadable Resources</a></li>
 </ul></div>
 <div class="footer-col"><h4>About EDUSAMBAM</h4><ul>
-<li><a href="index.html#about-edusambam">What EDUSAMBAM Is</a></li>
 <li><a href="index.html#mission">Our Mission</a></li>
 <li><a href="index.html#team">The Team</a></li>
 <li><a href="contact.html">Contact Us</a></li>
 <li><a href="mailto:feedback.edusambam@gmail.com?subject=EDUSAMBAM%20Feedback">Give Feedback</a></li>
 <li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+<li><a href="about.html">About EDUSAMBAM</a></li>
 <li><a href="privacy-policy.html">Privacy Policy</a></li>
 </ul></div>
 </div>
@@ -1065,7 +1548,7 @@ progress();
 <li><a href="#top">Back to Top</a></li>
 <li><a href="index.html#mission">Mission</a></li>
 <li><a href="index.html#team">Team</a></li>
-<li><a href="index.html#resources">Resources</a></li>
+<li><a href="index.html#resources">Downloadable Resources</a></li>
 </ul></div>
 </footer></body>
 </html>
