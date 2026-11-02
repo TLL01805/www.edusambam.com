@@ -1,0 +1,1842 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<!-- Google Analytics 4 — EDUSAMBAM -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Y35DW0V4HQ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-Y35DW0V4HQ');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Verb Conjugation: The Six Forms of a Verb — EDUSAMBAM</title>
+<link href="https://edusambam.com/verb-conjugation-six-forms.html" rel="canonical"/>
+<meta content="Learn the six forms of a verb: base, S/ES, past, past participle, -ing and infinitive, and why "to write" is never the main verb of a sentence." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --red:       #8B0000;
+    --red-mid:   #A50000;
+    --red-lt:    #F9F0F0;
+    --navy:      #06244a;
+    --navy-mid:  #1C3151;
+    --gold:      #B8963E;
+    --gold-lt:   #F5EDD6;
+    --cream:     #FAF8F4;
+    --white:     #FFFFFF;
+    --ink:       #1A1A1A;
+    --slate:     #4A4A4A;
+    --muted:     #767676;
+    --border:    #D8D0C8;
+    --border-lt: #EDE8E0;
+    --radius:    4px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--ink);
+    background: var(--white);
+    line-height: 1.7;
+    overflow-x: hidden;
+
+    border: 3px solid #d4a017;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+  /* ── TOP BAR ── */
+  .top-bar {
+    background: var(--navy);
+    padding: 0.45rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .top-bar p {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.03em;
+  }
+  .top-bar-links { display: flex; gap: 1.5rem; list-style: none; }
+  .top-bar-links a {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+  .top-bar-links a:hover { color: white; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 200;
+    background: rgba(255,255,255,.97);
+    border-bottom: 3px solid var(--gold);
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    box-shadow: 0 2px 12px rgba(8,47,99,0.08);
+  }
+  .nav-brand { display: flex; flex-direction: column; line-height: 1; text-decoration: none; }
+  .nav-brand-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: 0.01em;
+  }
+  .nav-brand-name span { color: var(--red); }
+  .nav-brand-sub {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: rgba(13,27,42,0.6);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 0.25rem;
+  }
+  .nav-links { display: flex; gap: 0; list-style: none; }
+  .nav-links a {
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(13,27,42,0.75);
+    padding: 0 1.1rem;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--b, #0b4ea2); }
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+  }
+
+  /* ── ARTICLE HERO ── */
+  .article-hero {
+    background: linear-gradient(135deg,#06244a,#0b4ea2);
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+  }
+  .breadcrumb {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 1.1rem;
+    letter-spacing: 0.02em;
+  }
+  .breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--gold); }
+  .article-hero-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(184,150,62,0.4);
+    padding: 0.35rem 0.9rem;
+    border-radius: 30px;
+    margin-bottom: 1.25rem;
+  }
+  .article-hero h1 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 2.4rem;
+    color: white;
+    max-width: 760px;
+    margin: 0 auto 1rem;
+    line-height: 1.25;
+  }
+  .article-hero p.sub {
+    color: rgba(255,255,255,0.6);
+    max-width: 620px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.02rem;
+  }
+  .article-hero-meta {
+    display: flex; justify-content: center; gap: 0.9rem;
+    font-size: 0.8rem; color: rgba(255,255,255,0.45);
+    flex-wrap: wrap;
+  }
+
+  /* ── ARTICLE BODY ── */
+  .article-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+  .article-wrap h2 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 1.65rem;
+    color: var(--navy);
+    margin: 2.6rem 0 1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--border-lt);
+  }
+  .article-wrap h2 span.num {
+    color: var(--red);
+    margin-right: 0.5rem;
+    font-style: italic;
+  }
+  .article-wrap p { color: var(--slate); margin-bottom: 1rem; font-size: 1.02rem; }
+  .article-wrap ul { margin: 0 0 1.2rem 1.4rem; color: var(--slate); }
+  .article-wrap li { margin-bottom: 0.5rem; }
+  .article-wrap strong { color: var(--ink); }
+  .lead {
+    font-size: 1.15rem;
+    color: var(--ink);
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    border-left: 3px solid var(--gold);
+    padding-left: 1.2rem;
+    margin: 1.5rem 0 2rem;
+  }
+  .example-box {
+    background: var(--gold-lt);
+    border: 1px solid rgba(184,150,62,0.35);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 1.3rem 1.5rem;
+    margin: 1.3rem 0 1.8rem;
+  }
+  .example-box .ex-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.5rem;
+  }
+  .example-box p { color: var(--ink); margin-bottom: 0.4rem; font-size: 0.98rem; }
+  .example-box p:last-child { margin-bottom: 0; }
+
+  .real-world-box {
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 1.6rem 1.7rem;
+    margin: 2.4rem 0;
+  }
+  .real-world-box .rw-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.7rem;
+  }
+  .real-world-box p { color: rgba(255,255,255,0.8); margin-bottom: 0; font-size: 1rem; }
+
+  .table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+  table.pos-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+  table.pos-table th {
+    background: var(--navy);
+    color: white;
+    text-align: left;
+    padding: 0.7rem 0.9rem;
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+  }
+  table.pos-table td {
+    padding: 0.7rem 0.9rem;
+    border-bottom: 1px solid var(--border-lt);
+    color: var(--slate);
+  }
+  table.pos-table tr:nth-child(even) td { background: var(--cream); }
+
+  /* ── QUIZ ── */
+  .quiz-section {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem 1.7rem 1.5rem;
+    margin-top: 3rem;
+  }
+  .quiz-section .section-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.4rem;
+  }
+  .quiz-section h2 {
+    border: none; margin: 0 0 0.4rem; padding: 0;
+  }
+  .quiz-intro { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.6rem; }
+
+  /* SCORED QUIZ (click-to-highlight + real scoring) */
+  .squiz-progress {
+    background: var(--cream);
+    border-radius: 30px;
+    height: 8px;
+    overflow: hidden;
+    margin-bottom: 0.4rem;
+  }
+  .squiz-progress-fill {
+    background: var(--gold);
+    height: 100%;
+    width: 0%;
+    transition: width 0.25s ease;
+  }
+  .squiz-progress-label {
+    font-size: 0.78rem;
+    color: var(--muted);
+    text-align: right;
+    margin-bottom: 1.3rem;
+  }
+  .squiz-item {
+    background: var(--white);
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .squiz-q {
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+  }
+  .squiz-q .qnum { color: var(--red); margin-right: 0.4rem; }
+  .squiz-option {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--border-lt);
+    border-radius: var(--radius);
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .squiz-option:hover { border-color: var(--gold); }
+  .squiz-option input[type="radio"] { accent-color: var(--red); width: 16px; height: 16px; flex-shrink: 0; }
+  .squiz-option label { cursor: pointer; font-size: 0.94rem; color: var(--slate); flex: 1; }
+  .squiz-option.selected { border-color: var(--red); background: rgba(139,0,0,0.04); }
+  .squiz-option.correct-answer { border-color: #2e7d32; background: rgba(46,125,50,0.08); }
+  .squiz-option.wrong-answer { border-color: var(--red); background: rgba(139,0,0,0.08); }
+  .squiz-submit-btn {
+    display: block;
+    width: 100%;
+    background: var(--red);
+    color: white;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.98rem;
+    font-weight: 600;
+    padding: 0.9rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    margin-top: 0.6rem;
+    transition: background 0.2s;
+  }
+  .squiz-submit-btn:hover { background: var(--red-mid); }
+  .squiz-submit-btn:disabled { background: var(--border); cursor: not-allowed; }
+  .squiz-results {
+    display: none;
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 2rem 1.6rem;
+    text-align: center;
+    margin-bottom: 1.8rem;
+  }
+  .squiz-results.visible { display: block; }
+  .squiz-results .squiz-score-big {
+    font-family: 'EB Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .squiz-results .squiz-score-label { color: rgba(255,255,255,0.7); font-size: 0.98rem; margin-bottom: 1rem; }
+  .squiz-results .squiz-score-tier {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    border-radius: 30px;
+    background: rgba(184,150,62,0.15);
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+  }
+  .squiz-retake-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 0.65rem 1.4rem;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  .squiz-retake-btn:hover { background: rgba(255,255,255,0.1); }
+
+  .article-footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-lt);
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .article-footer-nav a {
+    text-decoration: none;
+    color: var(--red);
+    font-weight: 600;
+    font-size: 0.92rem;
+  }
+  .article-footer-nav a:hover { text-decoration: underline; }
+
+  @media (max-width: 700px) {
+    .article-hero h1 { font-size: 1.7rem; }
+    .article-wrap { padding: 2rem 1.25rem 3rem; }
+  }
+  @media (max-width: 680px) {
+    .top-bar { display: none; }
+    nav {
+      padding: 0 1rem;
+      height: 68px;
+      border-bottom-width: 2px;
+    }
+    .nav-links { display: none; }
+    .nav-brand-name {
+      font-size: 1.35rem;
+      white-space: nowrap;
+    }
+    .nav-brand-sub {
+      font-size: 0.62rem;
+      letter-spacing: 0.07em;
+    }
+    .footer-top { grid-template-columns: 1fr; gap: 2rem; padding: 2rem 1.25rem; }
+    footer { padding: 2rem 1.25rem 0; }
+  }
+
+  /* ── FOOTER (copied from site) ── */
+  footer { background: var(--navy); padding: 3.5rem 3rem 0; }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 2.5rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .footer-brand-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+  }
+  .footer-brand-name span { color: var(--red); }
+  .footer-desc { color: rgba(255,255,255,0.45); font-size: 0.9rem; margin-top: 0.8rem; max-width: 320px; }
+  .footer-col h4 {
+    font-family: 'EB Garamond', serif;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 0.7rem; }
+  .footer-col a {
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.2s;
+  }
+  .footer-col a:hover { color: var(--gold); }
+  .footer-bottom {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer-bottom p { color: rgba(255,255,255,0.35); font-size: 0.8rem; }
+  .footer-bottom-links { display: flex; gap: 1.3rem; list-style: none; }
+  .footer-bottom-links a { color: rgba(255,255,255,0.35); text-decoration: none; font-size: 0.8rem; }
+  .footer-bottom-links a:hover { color: rgba(255,255,255,0.6); }
+  @media (max-width: 900px) {
+    .footer-top { grid-template-columns: 1fr 1fr; }
+    footer { padding: 2rem 1.25rem 0; }
+  }
+</style>
+<style id="edusambam-reader-style">
+.mark{width:48px;height:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px;border-radius:14px;background:#eef6ff;box-shadow:0 2px 7px rgba(8,47,99,.10);flex:0 0 48px}.mark i{display:block;border-radius:50%;background:#0b4ea2;min-width:0;min-height:0}.mark i:nth-child(5){background:#d4a017}.edusambam-reader{max-width:980px;margin:1.2rem auto 0;padding:1rem 1.1rem;border:1px solid #d7e4ef;border-radius:14px;background:linear-gradient(135deg,#f7fbff,#fff);box-shadow:0 6px 18px rgba(11,45,92,.08)}.edusambam-reader strong{display:block;color:#0b55a5;font-size:.9rem;letter-spacing:.04em}.edusambam-reader .reader-slogan{color:#b27e08;font-weight:900;margin-top:.25rem;font-size:.82rem}.edusambam-reader .reader-help{color:#607086;font-size:.8rem;margin:.3rem 0 .7rem}.edusambam-reader .reader-controls{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}.edusambam-reader button,.edusambam-reader select{border:1px solid #c9d9e8;background:#fff;color:#153b6e;border-radius:8px;padding:.48rem .65rem;font-weight:800;cursor:pointer}.edusambam-reader button:first-child{background:#0b55a5;color:#fff;border-color:#0b55a5}.edusambam-reader .reader-status{display:block;color:#607086;font-size:.75rem;margin-top:.55rem}.edusambam-reader .reader-progress{height:4px;background:#e4edf6;border-radius:99px;margin-top:.6rem;overflow:hidden}.edusambam-reader .reader-progress span{display:block;width:0;height:100%;background:#e1ad1c;transition:width .2s linear}@media(max-width:600px){.edusambam-reader{margin-left:0;margin-right:0}.edusambam-reader .reader-controls button,.edusambam-reader .reader-controls select{flex:1;min-width:75px}}
+</style><style id="edusambam-edge-fix">.article-wrap,.article-hero,.nav-brand{min-width:0;overflow:visible}.article-wrap h1,.article-wrap h2,.article-wrap h3,.article-hero h1,.article-hero .sub{overflow-wrap:anywhere;word-break:normal}.article-wrap{padding-left:max(1.25rem,3vw);padding-right:max(1.25rem,3vw)}@media(max-width:600px){.article-wrap{padding-left:1rem;padding-right:1rem}.article-hero{padding-left:1rem;padding-right:1rem}.nav-brand{overflow:visible!important}.nav-brand-name,.nav-brand-sub{overflow-wrap:anywhere}}</style><style id="edusambam-frame-final">html{box-sizing:border-box;max-width:100%;overflow-x:hidden}*,*:before,*:after{box-sizing:inherit}body{max-width:100%;min-width:0;overflow-x:hidden;border:3px solid #d4a017;box-sizing:border-box}img,svg,video,iframe{max-width:100%;height:auto}h1,h2,h3,h4,p,a,span,small,b,strong{overflow-wrap:anywhere}section,header,footer,main,nav{max-width:100%;box-sizing:border-box}@media(max-width:600px){body{border-width:3px}h1,h2,h3{margin-left:0!important;margin-right:0!important}}</style><style id="edusambam-unified-nav-css">
+/* EDUSAMBAM unified navigation */
+.edusambam-nav{
+  position:sticky;top:0;z-index:10000;
+  min-height:72px;box-sizing:border-box;
+  display:flex;align-items:center;
+  padding:10px 20px;
+  background:#fff;border-bottom:1px solid #e5e7eb;
+  font-family:inherit;
+}
+.edusambam-nav-inner{
+  width:100%;max-width:1400px;margin:0 auto;
+  display:flex;align-items:center;gap:18px;min-width:0;
+}
+.edusambam-brand{
+  display:flex;align-items:center;gap:10px;min-width:0;
+  text-decoration:none;color:#0b3b66;flex:0 1 auto;
+}
+.edusambam-brand-copy{display:flex;flex-direction:column;line-height:1;min-width:0;overflow:hidden}
+.edusambam-brand-name{
+  font-family:"EB Garamond",Georgia,serif;
+  font-size:1.6rem;font-weight:600;letter-spacing:.01em;
+  color:#0b3b66;white-space:nowrap;
+}
+.edusambam-brand-subtitle{
+  margin-top:4px;
+  font-size:.62rem;font-weight:600;letter-spacing:.08em;
+  color:#64748b;white-space:nowrap;
+}
+.edusambam-nav-links{
+  display:flex;align-items:center;gap:14px;margin-left:auto;
+  list-style:none;padding:0;margin-top:0;margin-bottom:0;
+}
+.edusambam-nav-links a{
+  color:#334155;text-decoration:none;font-size:.9rem;
+  padding:8px 5px;border-radius:7px;white-space:nowrap;
+}
+.edusambam-nav-links a:hover,.edusambam-nav-links a:focus-visible{
+  color:#0b3b66;background:#f3f6f9;outline:none;
+}
+.edusambam-search-btn,.edusambam-menu-btn{
+  appearance:none;border:1px solid #d8dee6;background:#fff;
+  color:#0b3b66;border-radius:9px;min-width:40px;height:40px;
+  display:inline-flex;align-items:center;justify-content:center;
+  cursor:pointer;font-size:1.15rem;flex:0 0 auto;
+}
+.edusambam-search-btn:hover,.edusambam-menu-btn:hover,
+.edusambam-search-btn:focus-visible,.edusambam-menu-btn:focus-visible{
+  background:#f3f6f9;border-color:#b9c6d4;outline:2px solid rgba(214,162,58,.35);
+  outline-offset:2px;
+}
+.edusambam-menu-btn{display:none;font-size:1.2rem}
+.edusambam-mobile-menu{
+  display:none;position:fixed;top:72px;left:0;right:0;
+  z-index:9999;background:#fff;border-bottom:1px solid #e5e7eb;
+  box-shadow:0 8px 24px rgba(15,23,42,.12);
+  max-height:calc(100vh - 72px);overflow:auto;
+}
+.edusambam-mobile-menu.open{display:block}
+.edusambam-mobile-menu ul{list-style:none;margin:0;padding:10px 16px 16px}
+.edusambam-mobile-menu a{
+  display:block;padding:12px 10px;color:#0b3b66;text-decoration:none;
+  border-radius:8px;font-size:.98rem;
+}
+.edusambam-mobile-menu a:hover,.edusambam-mobile-menu a:focus-visible{
+  background:#f3f6f9;outline:none;
+}
+.edusambam-search-panel{
+  display:none;position:fixed;top:72px;left:0;right:0;z-index:9998;
+  background:#fff;border-bottom:1px solid #e5e7eb;
+  box-shadow:0 8px 24px rgba(15,23,42,.10);padding:12px 16px;
+}
+.edusambam-search-panel.open{display:block}
+.edusambam-search-wrap{max-width:900px;margin:0 auto;position:relative}
+.edusambam-search-input{
+  width:100%;box-sizing:border-box;padding:12px 14px;
+  border:1px solid #cbd5e1;border-radius:9px;font-size:1rem;
+}
+.edusambam-search-results{margin-top:8px;max-height:50vh;overflow:auto}
+.edusambam-search-results a{
+  display:block;padding:9px 10px;border-radius:7px;color:#0b3b66;text-decoration:none;
+}
+.edusambam-search-results a:hover{background:#f3f6f9}
+@media (max-width:1100px){
+  .edusambam-nav-links{gap:8px}
+  .edusambam-nav-links a{font-size:.84rem;padding-inline:3px}
+}
+@media (max-width:1100px){
+  .edusambam-nav{min-height:68px;padding:8px 14px}
+  .edusambam-brand-mark{width:44px;height:44px;flex-basis:44px}
+  .edusambam-brand-mark span{width:12px;height:12px}
+  .edusambam-brand-mark .c3,.edusambam-brand-mark .c6{left:16px}
+  .edusambam-brand-name{font-size:1.42rem}
+  .edusambam-brand-subtitle{font-size:.52rem;letter-spacing:.06em}
+  .edusambam-nav-links{display:none}
+  .edusambam-menu-btn{display:inline-flex}
+  .edusambam-search-btn{margin-left:auto}
+  .edusambam-mobile-menu{top:68px;max-height:calc(100vh - 68px)}
+  .edusambam-search-panel{top:68px}
+}
+@media (max-width:480px){
+  .edusambam-nav-inner{gap:8px}
+  .edusambam-brand{gap:7px}
+  .edusambam-brand-mark{width:40px;height:40px;flex-basis:40px}
+  .edusambam-brand-mark span{width:11px;height:11px}
+  .edusambam-brand-mark .c3,.edusambam-brand-mark .c6{left:14.5px}
+  .edusambam-brand-name{font-size:1.28rem}
+  .edusambam-brand-subtitle{font-size:.46rem;letter-spacing:.045em}
+  .edusambam-search-btn,.edusambam-menu-btn{min-width:38px;height:38px}
+}
+</style><style id="edusambam-logo-visibility-fix">
+/* EDUSAMBAM logo visibility fix */
+.edusambam-brand-mark{
+  position:relative !important;
+  display:inline-block !important;
+  width:48px !important;
+  height:48px !important;
+  min-width:48px !important;
+  flex:0 0 48px !important;
+  overflow:visible !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+.edusambam-brand-mark > span{
+  position:absolute !important;
+  display:block !important;
+  width:13px !important;
+  height:13px !important;
+  min-width:13px !important;
+  min-height:13px !important;
+  padding:0 !important;
+  margin:0 !important;
+  border:0 !important;
+  border-radius:50% !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  box-sizing:border-box !important;
+}
+.edusambam-brand-mark > .c1{left:0 !important;top:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c2{right:0 !important;top:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c3{left:17.5px !important;top:8px !important;background:#d6a23a !important;}
+.edusambam-brand-mark > .c4{left:0 !important;bottom:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c5{right:0 !important;bottom:0 !important;background:#0b3b66 !important;}
+.edusambam-brand-mark > .c6{left:17.5px !important;bottom:8px !important;background:#d6a23a !important;}
+
+@media (max-width:1100px){
+  .edusambam-brand-mark{
+    width:44px !important;height:44px !important;min-width:44px !important;flex-basis:44px !important;
+  }
+  .edusambam-brand-mark > span{
+    width:12px !important;height:12px !important;min-width:12px !important;min-height:12px !important;
+  }
+  .edusambam-brand-mark > .c3,.edusambam-brand-mark > .c6{left:16px !important;}
+}
+@media (max-width:480px){
+  .edusambam-brand-mark{
+    width:40px !important;height:40px !important;min-width:40px !important;flex-basis:40px !important;
+  }
+  .edusambam-brand-mark > span{
+    width:11px !important;height:11px !important;min-width:11px !important;min-height:11px !important;
+  }
+  .edusambam-brand-mark > .c3,.edusambam-brand-mark > .c6{left:14.5px !important;}
+}
+</style>
+<link href="favicon.webp" rel="icon" type="image/webp"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<style id="edusambam-menu-extra-css">
+.edusambam-mobile-menu .edusambam-menu-extra:first-of-type{
+  margin-top:8px;padding-top:8px;border-top:1px solid #e5e7eb;
+}
+.edusambam-mobile-menu .edusambam-menu-extra a{
+  font-weight:600;
+}
+</style>
+<style id="edusambam-article-footer-theme">
+.edusambam-article-footer{
+  background:linear-gradient(135deg,#06244a,#0b4ea2)!important;
+}
+</style>
+<style id="edusambam-unified-footer-fix">
+/* EDUSAMBAM unified footer: same visual language and neutral brand statement across all pages. */
+.edusambam-unified-footer,
+.edusambam-article-footer,
+footer.footer {
+  background: linear-gradient(135deg, #06244a, #0b4ea2) !important;
+  color: #fff !important;
+  border-top: 3px solid #d4a017 !important;
+  box-sizing: border-box;
+}
+.edusambam-footer-statement{margin:.25rem 0 0 !important;color:rgba(255,255,255,.88) !important;font-size:.78rem !important;letter-spacing:.08em !important;text-transform:uppercase !important}
+.edusambam-unified-footer .footer-brand-name,.edusambam-article-footer .footer-brand-name{color:#fff !important}
+</style>
+<style id="edusambam-final-unified-footer">
+/* Final unified footer — same structure, visual language, and approved nav logo on every page. */
+.edusambam-unified-footer{
+  width:100% !important;
+  margin:0 !important;
+  padding:44px 0 0 !important;
+  background:linear-gradient(135deg,#06244a,#0b4ea2) !important;
+  color:#d6e4f2 !important;
+  border-top:4px solid #d4a017 !important;
+  box-sizing:border-box !important;
+  overflow:hidden !important;
+}
+.edusambam-unified-footer .footer-top{
+  width:min(1180px,92%) !important;
+  max-width:1180px !important;
+  margin:0 auto !important;
+  padding:0 0 34px !important;
+  display:grid !important;
+  grid-template-columns:1.5fr repeat(3,1fr) !important;
+  gap:34px !important;
+  box-sizing:border-box !important;
+}
+.edusambam-unified-footer .footer-brand{min-width:0 !important;}
+.edusambam-footer-brand-row{margin:0 0 10px !important;}
+.edusambam-footer-logo-link{
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:12px !important;
+  min-width:0 !important;
+  color:#fff !important;
+  text-decoration:none !important;
+}
+.edusambam-footer-logo{
+  width:48px !important;
+  height:48px !important;
+  min-width:48px !important;
+  flex:0 0 48px !important;
+}
+.edusambam-footer-logo > span{width:13px !important;height:13px !important;min-width:13px !important;min-height:13px !important;}
+.edusambam-footer-logo > .c3,.edusambam-footer-logo > .c6{left:17.5px !important;}
+.edusambam-footer-brand-name{
+  color:#fff !important;
+  font-family:"EB Garamond",Georgia,serif !important;
+  font-size:1.65rem !important;
+  font-weight:600 !important;
+  letter-spacing:.01em !important;
+  line-height:1 !important;
+  white-space:nowrap !important;
+}
+.edusambam-unified-footer .edusambam-footer-statement{
+  margin:0 !important;
+  max-width:360px !important;
+  color:rgba(255,255,255,.88) !important;
+  font-size:.78rem !important;
+  line-height:1.7 !important;
+  letter-spacing:.08em !important;
+  text-transform:uppercase !important;
+}
+.edusambam-unified-footer .footer-col{min-width:0 !important;}
+.edusambam-unified-footer .footer-col h4{
+  margin:0 0 12px !important;
+  color:#fff !important;
+  font-family:"EB Garamond",Georgia,serif !important;
+  font-size:1rem !important;
+  font-weight:600 !important;
+  line-height:1.25 !important;
+}
+.edusambam-unified-footer .footer-col ul{
+  list-style:none !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+.edusambam-unified-footer .footer-col li{margin:0 0 8px !important;padding:0 !important;}
+.edusambam-unified-footer .footer-col a{
+  color:rgba(255,255,255,.68) !important;
+  text-decoration:none !important;
+  font-size:.84rem !important;
+  line-height:1.5 !important;
+  overflow-wrap:anywhere !important;
+}
+.edusambam-unified-footer .footer-col a:hover,
+.edusambam-unified-footer .footer-col a:focus-visible{color:#fff !important;}
+.edusambam-unified-footer .footer-bottom{
+  width:min(1180px,92%) !important;
+  max-width:1180px !important;
+  margin:0 auto !important;
+  padding:18px 0 22px !important;
+  border-top:1px solid rgba(255,255,255,.12) !important;
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:center !important;
+  gap:20px !important;
+  box-sizing:border-box !important;
+}
+.edusambam-unified-footer .footer-bottom p{
+  margin:0 !important;
+  color:rgba(255,255,255,.55) !important;
+  font-size:.8rem !important;
+  line-height:1.5 !important;
+}
+.edusambam-unified-footer .footer-bottom-links{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:18px !important;
+  list-style:none !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+.edusambam-unified-footer .footer-bottom-links a{
+  color:rgba(255,255,255,.55) !important;
+  font-size:.78rem !important;
+  line-height:1.5 !important;
+  text-decoration:none !important;
+}
+.edusambam-unified-footer .footer-bottom-links a:hover,
+.edusambam-unified-footer .footer-bottom-links a:focus-visible{color:#fff !important;}
+@media(max-width:900px){
+  .edusambam-unified-footer{padding-top:32px !important;}
+  .edusambam-unified-footer .footer-top{grid-template-columns:1fr 1fr !important;gap:28px 22px !important;}
+  .edusambam-unified-footer .footer-brand{grid-column:1/-1 !important;}
+}
+@media(max-width:600px){
+  .edusambam-unified-footer{padding-top:30px !important;}
+  .edusambam-unified-footer .footer-top{width:calc(100% - 28px) !important;grid-template-columns:1fr 1fr !important;gap:26px 20px !important;padding-bottom:28px !important;}
+  .edusambam-unified-footer .footer-bottom{width:calc(100% - 28px) !important;display:block !important;padding:16px 0 20px !important;}
+  .edusambam-unified-footer .footer-bottom-links{margin-top:10px !important;gap:16px !important;}
+  .edusambam-footer-logo{width:44px !important;height:44px !important;min-width:44px !important;flex-basis:44px !important;}
+  .edusambam-footer-logo > span{width:12px !important;height:12px !important;min-width:12px !important;min-height:12px !important;}
+  .edusambam-footer-logo > .c3,.edusambam-footer-logo > .c6{left:16px !important;}
+  .edusambam-footer-brand-name{font-size:1.48rem !important;}
+}
+@media(max-width:430px){
+  .edusambam-unified-footer .footer-top{grid-template-columns:1fr !important;gap:22px !important;}
+  .edusambam-unified-footer .footer-brand{grid-column:auto !important;}
+}
+</style>
+<style id="edusambam-footer-final-alignment">
+/* Final EDUSAMBAM footer consistency pass: identical royal-blue footer and left alignment on every page. */
+.edusambam-unified-footer {
+  background: linear-gradient(135deg,#06244a,#0b4ea2) !important;
+  color:#d6e4f2 !important;
+  text-align:left !important;
+  width:100% !important;
+  box-sizing:border-box !important;
+}
+.edusambam-unified-footer,
+.edusambam-unified-footer *,
+.edusambam-unified-footer h1,
+.edusambam-unified-footer h2,
+.edusambam-unified-footer h3,
+.edusambam-unified-footer h4,
+.edusambam-unified-footer p,
+.edusambam-unified-footer ul,
+.edusambam-unified-footer li,
+.edusambam-unified-footer a,
+.edusambam-unified-footer span {
+  text-align:left !important;
+}
+.edusambam-unified-footer .footer-top,
+.edusambam-unified-footer .footer-brand,
+.edusambam-unified-footer .footer-col,
+.edusambam-unified-footer .footer-bottom {
+  margin-left:0 !important;
+}
+.edusambam-unified-footer .footer-top {
+  margin-right:auto !important;
+}
+.edusambam-unified-footer .edusambam-footer-brand-row {
+  text-align:left !important;
+}
+.edusambam-unified-footer .edusambam-footer-logo-link {
+  justify-content:flex-start !important;
+  text-align:left !important;
+}
+.edusambam-unified-footer .footer-bottom {
+  justify-content:flex-start !important;
+  align-items:flex-start !important;
+  flex-direction:column !important;
+}
+.edusambam-unified-footer .footer-bottom-links {
+  justify-content:flex-start !important;
+  align-items:flex-start !important;
+}
+@media (max-width:600px) {
+  .edusambam-unified-footer .footer-top,
+  .edusambam-unified-footer .footer-bottom {
+    margin-left:0 !important;
+    margin-right:auto !important;
+  }
+}
+</style><style id="edusambam-footer-social-css">.edusambam-footer-social{margin-top:14px}.edusambam-footer-social a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);color:rgba(255,255,255,.85);transition:background .15s,color .15s}.edusambam-footer-social a:hover{background:rgba(255,255,255,.22);color:#fff}</style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2230995786427221"
+     crossorigin="anonymous"></script>
+<meta content="2026-11-02" property="article:modified_time"/>
+<meta name="robots" content="index,follow,max-image-preview:large"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="EDUSAMBAM"/>
+<meta property="og:title" content="Verb Conjugation: The Six Forms of a Verb"/>
+<meta property="og:description" content="Learn the six forms of a verb: base, S/ES, past, past participle, -ing and infinitive, and why "to write" is never the main verb of a sentence."/>
+<meta property="og:url" content="https://edusambam.com/verb-conjugation-six-forms.html"/>
+<meta property="og:image" content="https://edusambam.com/logo-icon-full.png"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Verb Conjugation: The Six Forms of a Verb"/>
+<meta name="twitter:description" content="Learn the six forms of a verb: base, S/ES, past, past participle, -ing and infinitive, and why "to write" is never the main verb of a sentence."/>
+<meta property="article:section" content="English Language"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Verb Conjugation: The Six Forms of a Verb", "description": "Learn the six forms of a verb: base, S/ES, past, past participle, -ing and infinitive, and why "to write" is never the main verb of a sentence.", "inLanguage": "en", "mainEntityOfPage": "https://edusambam.com/verb-conjugation-six-forms.html", "url": "https://edusambam.com/verb-conjugation-six-forms.html", "dateModified": "2026-11-02", "articleSection": "English Language", "author": {"@type": "Organization", "name": "EDUSAMBAM Editorial Team", "url": "https://edusambam.com/"}, "publisher": {"@type": "Organization", "name": "EDUSAMBAM", "url": "https://edusambam.com/", "logo": {"@type": "ImageObject", "url": "https://edusambam.com/logo-icon-full.png"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Gateway", "item": "https://edusambam.com/index.html#gateway"}, {"@type": "ListItem", "position": 2, "name": "English Language", "item": "https://edusambam.com/index.html#subject-english"}, {"@type": "ListItem", "position": 3, "name": "Verb Conjugation: The Six Forms of a Verb", "item": "https://edusambam.com/verb-conjugation-six-forms.html"}]}]}</script>
+</head>
+<body id="top">
+<!-- TOP BAR -->
+<div class="top-bar">
+<p>Established 2026  ·  Free Educational Resources for All</p>
+<ul class="top-bar-links">
+<li><a href="contact.html">Contact</a></li><li><a href="about.html">About</a></li><li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+</ul>
+</div>
+<!-- NAV -->
+<nav aria-label="Primary navigation" class="edusambam-nav">
+<div class="edusambam-nav-inner">
+<a aria-label="EDUSAMBAM home" class="edusambam-brand" href="index.html">
+<img alt="EDUSAMBAM" class="edusambam-brand-mark" src="logo-icon-full.png" style="width:auto;height:56px;max-width:220px;object-fit:contain;background:none;border-radius:0;flex-basis:auto;"/>
+<span class="edusambam-brand-copy">
+<span class="edusambam-brand-subtitle">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</span>
+</span>
+</a>
+<ul class="edusambam-nav-links"><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Language</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ</a></li><li><a href="index.html#resources">Resources</a></li></ul>
+<button aria-label="Search" class="edusambam-search-btn" title="Search" type="button">⌕</button>
+<button aria-expanded="false" aria-label="Open menu" class="edusambam-menu-btn" title="Menu" type="button">☰</button>
+</div>
+</nav>
+<div aria-label="Mobile navigation" class="edusambam-mobile-menu">
+<ul><li><a href="index.html#gateway">Gateway</a></li><li><a href="index.html#subject-english">English Language</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ ARENA</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li><li><a href="index.html#spelling-bee-arena">SPELLING BEE ARENA</a></li><li><a href="index.html#english-vocabulary-amp-word-skills">Vocabulary Building</a></li><li><a href="index.html#resources">Downloadable Resources</a></li><li class="edusambam-menu-extra"><a href="index.html#subject-assessment">Assessment Arena</a></li><li class="edusambam-menu-extra"><a href="index.html#interactive-activities">Interactive Activities</a></li><li class="edusambam-menu-extra"><a href="about.html">About EDUSAMBAM</a></li><li class="edusambam-menu-extra"><a href="index.html#mission">Mission</a></li><li class="edusambam-menu-extra"><a href="index.html#team">Team</a></li><li class="edusambam-menu-extra"><a href="contact.html">Contact</a></li><li class="edusambam-menu-extra"><a href="privacy-policy.html">Privacy Policy</a></li></ul>
+</div>
+<div aria-label="Site search" class="edusambam-search-panel">
+<div class="edusambam-search-wrap">
+<input aria-label="Search EDUSAMBAM" class="edusambam-search-input" placeholder="Search EDUSAMBAM…" type="search"/>
+<div class="edusambam-search-results"></div>
+</div>
+</div>
+<style>
+
+  .ce-card{background:var(--cream);border:1px solid var(--border);border-radius:var(--radius);padding:1.3rem 1.1rem;margin:1.5rem 0}
+  .ce-title{font-family:'EB Garamond',serif;font-weight:600;color:var(--navy);font-size:1.1rem;text-align:center;margin-bottom:.3rem}
+  .ce-sub{text-align:center;color:var(--muted);font-size:.85rem;margin-bottom:.7rem}
+  .ce-calc{background:var(--cream);border:1px solid var(--border);border-left:4px solid #2F6F4E;border-radius:var(--radius);padding:1.3rem 1.5rem;margin:1.5rem 0}
+  .ce-calc h3{font-family:'EB Garamond',serif;color:var(--navy);margin:0 0 .6rem}
+  .ce-s{display:flex;gap:.7rem;align-items:flex-start;margin:.45rem 0}
+  .ce-s b{flex:0 0 1.7rem;height:1.7rem;border-radius:50%;background:#2F6F4E;color:#fff;display:grid;place-items:center;font-size:.85rem}
+  .ce-s span{flex:1}
+  .ce-myths{display:grid;gap:.9rem;margin:1.3rem 0}
+  .ce-myth{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;animation:ceIn .6s ease both}
+  .ce-myth:nth-child(2){animation-delay:.12s}.ce-myth:nth-child(3){animation-delay:.24s}.ce-myth:nth-child(4){animation-delay:.36s}
+  .ce-myth .m{background:#FBEAEA;color:#8B0000;padding:.6rem 1rem;font-weight:600}
+  .ce-myth .f{background:#EAF4EE;color:#1E4D36;padding:.6rem 1rem}
+  .ce-myth b{text-transform:uppercase;font-size:.72rem;letter-spacing:.08em;margin-right:.4rem}
+  .ce-key{background:var(--navy);border-radius:var(--radius);padding:1.5rem 1.7rem;margin:2rem 0}
+  .ce-key .kp{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
+  .ce-key ul{margin:0;padding-left:1.2rem;color:rgba(255,255,255,.88)}.ce-key li{margin:.35rem 0}
+  .ce-tp{background:var(--gold-lt);border:1px solid rgba(184,150,62,.45);border-radius:var(--radius);padding:1.2rem 1.5rem;margin:1.5rem 0}
+  .ce-tp .tl{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#7a5f1c}
+  .ce-tp p{margin:.4rem 0 0}
+  @keyframes ceIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+  .ce-brow{display:flex;align-items:center;gap:.6rem;margin:.6rem 0}
+  .ce-bl{flex:0 0 7.5rem;font-size:.85rem;font-weight:600;color:var(--navy)}
+  .ce-bt{flex:1;background:#EDE8E0;border-radius:99px;height:22px;overflow:hidden}
+  .ce-bf{height:100%;border-radius:99px;transform-origin:left;animation:ceGrow0 1s ease both}.ce-bv{flex:0 0 3.2rem;font-size:.8rem;font-weight:700;color:var(--navy)}
+  .ce-ladder{display:grid;gap:.7rem}
+  .ce-lv{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:.7rem .9rem;animation:ceIn .7s ease both}
+  .ce-lb{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#7a5f1c}
+  .ce-ls{font-family:'EB Garamond',serif;font-size:1.02rem;color:var(--navy);margin:.2rem 0}
+  .ce-ln{font-size:.82rem;color:var(--muted)}
+  .ce-lv:nth-child(1){border-left:4px solid #8B0000}.ce-lv:nth-child(2){border-left:4px solid #B8863E}.ce-lv:nth-child(3){border-left:4px solid #6B8F4E}.ce-lv:nth-child(4){border-left:4px solid #2F6F4E}
+  @keyframes ceGrow0{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+  @media (prefers-reduced-motion:reduce){.ce-bf,.ce-lv,.ce-myth{animation:none}}
+
+  .further-box { background: var(--cream); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem 1.5rem; margin: 1.5rem 0; }
+  .further-box .fr-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--red); margin-bottom: 0.4rem; }
+  .further-box ul { list-style: none; margin: 0.5rem 0 0; padding: 0; }
+  .further-box li { margin: 0.6rem 0; }
+  .further-box a { color: var(--navy); font-weight: 600; }
+  .further-box .src-note { display: block; font-size: 0.82rem; color: var(--muted); }
+  .ce-svg { width: 100%; height: auto; display: block; }
+  .ce-cap { font-size: 0.86rem !important; color: var(--muted) !important; text-align: center; margin: 0.5rem 0 0 !important; }
+  .ce-pop, .ce-grow { transform-box: fill-box; }
+  .ce-pop { transform-origin: center; }
+  .ce-grow { transform-origin: left center; }
+  @media (prefers-reduced-motion: no-preference) {
+    .ce-pop { animation: cePop 0.6s ease both; }
+    .ce-grow { animation: ceGrow 1s ease both; }
+  }
+  @keyframes cePop { from { opacity: 0; transform: scale(0.6); } to { opacity: 1; transform: scale(1); } }
+  @keyframes ceGrow { from { opacity: 0.3; transform: scaleX(0.1); } to { opacity: 1; transform: scaleX(1); } }
+  .ce-scene { background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--navy); border-radius: var(--radius); padding: 0.9rem 1.1rem; margin: 1rem 0 1.4rem; font-size: 0.97rem; line-height: 1.65; color: var(--slate); }
+  .ce-scene p { margin: 0 0 0.5rem !important; }
+  .ce-gl { display: grid; gap: 0.6rem; margin: 1rem 0 1.6rem; }
+  .ce-gl div { background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--gold); border-radius: var(--radius); padding: 0.65rem 0.9rem; font-size: 0.97rem; color: var(--slate); }
+  .ce-gl b { color: var(--navy); }
+  .ce-ck { background: var(--cream); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.1rem 1.3rem; margin: 1.4rem 0; }
+  .ce-ck label { display: flex; gap: 0.6rem; align-items: flex-start; margin: 0.45rem 0; cursor: pointer; font-size: 0.97rem; color: var(--slate); }
+  .ce-ck input { margin-top: 0.3rem; width: 1.1rem; height: 1.1rem; flex: 0 0 auto; accent-color: #2F6F4E; }
+  .ce-ck input:checked + span { text-decoration: line-through; color: var(--muted); }
+  .ce-ck .note { font-size: 0.82rem; color: var(--muted); margin: 0.8rem 0 0; font-style: italic; }
+  .ce-small td, .ce-small th { font-size: 0.9rem; }
+  .ce-para { background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--gold); border-radius: var(--radius); padding: 0.9rem 1.2rem; margin: 1rem 0 1.4rem; font-size: 1rem; line-height: 1.7; color: var(--slate); }
+  .ce-para .tag { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; padding: 0.05rem 0.4rem; border-radius: 4px; margin-right: 0.3rem; color: #fff; vertical-align: middle; }
+  .ce-para .t1 { background: var(--navy); } .ce-para .t2 { background: #7a5f1c; } .ce-para .t3 { background: #2F6F4E; } .ce-para .t4 { background: #8B0000; }
+
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+</style>
+<div class="article-hero">
+<div class="breadcrumb"><a href="index.html#gateway">Gateway</a>  /  <a href="index.html#subject-english">English Language</a>  /  Verb Conjugation</div>
+<div class="article-hero-tag">Grammar Basics · Verbs</div>
+<h1>Verb Conjugation: The Six Forms of a Verb</h1>
+<p class="sub">Write, writes, wrote, written, writing, to write. Learn what each of the six verb forms does, which ones can be the main verb, and how to stop the most common verb mistakes.</p>
+<div class="article-hero-meta">
+<span>EDUSAMBAM Editorial Team</span>
+<span>|</span>
+<span>25 min read</span> <span>|</span> <span>Last updated: November 2026</span>
+<span>|</span>
+<span>Grammar</span>
+</div>
+</div><div aria-label="EDUSAMBAM article reader" class="edusambam-reader"><strong>🔊 LISTEN TO THIS ARTICLE</strong><div class="reader-slogan">SAVE YOUR EYES • IMPROVE YOUR LISTENING</div><div class="reader-help">Listen to the article instead of relying only on continuous screen reading.</div><div class="reader-controls"><button data-reader="play" type="button">▶ Play</button><button data-reader="pause" type="button">⏸ Pause</button><button data-reader="resume" type="button">▶ Resume</button><button data-reader="stop" type="button">■ Stop</button><select aria-label="Reading speed"><option value="1">1×</option><option value="0.8">0.8×</option><option value="1.2">1.2×</option></select></div><div aria-hidden="true" class="reader-progress"><span></span></div><small class="reader-status">Ready to read the article.</small></div>
+<!-- ARTICLE BODY -->
+<div class="article-wrap">
+<p class="lead">A verb is not one word but a family of six forms. <em>Write</em>, <em>writes</em>, <em>wrote</em>, <em>written</em>, <em>writing</em> and <em>to write</em> are all the same verb, and each form has its own job. Once you know which form does which job, most verb mistakes disappear.</p>
+<p>Students are often taught three forms of a verb (base, past, past participle), or four if the -ing form is included. That leaves two big gaps. Learners see <em>to write</em> or <em>to play</em> in a sentence and call it the main verb, and they are unsure when to add <em>s</em> or <em>es</em>. This guide fills both gaps with <strong>six forms</strong>, shows which of them can be a main verb, and gives the spelling and usage rules for each.</p>
+<p>It builds on <a href="parts-of-speech.html">Parts of Speech</a> and <a href="tenses-verb-forms.html">Tenses &amp; Verb Forms</a>. A full A to Z table of over 1,000 verbs with all six forms is in the companion article, The Complete Verb Forms List. Spelling follows British English.</p>
+<h2><span class="num">1.</span>The Big Idea: What Is Conjugation?</h2>
+<p>A verb shows an action (<em>write</em>), a state (<em>seem</em>) or an occurrence (<em>happen</em>). <strong>Conjugation</strong> means changing the form of a verb to show <strong>tense</strong> (time), <strong>person</strong> (I, you, he), <strong>number</strong> (one or many) and <strong>function</strong> (what job the word does in the sentence).</p>
+<div class="example-box"><div class="ex-label">Golden rule</div><p>Not every verb form can be the main verb. Only some forms do the main job. The others are helpers, descriptions or names for the action.</p></div>
+<h2><span class="num">2.</span>The Six Forms at a Glance</h2>
+<div class="ce-card"><div class="ce-title">The six forms of one verb: write</div><div class="ce-sub">Only the top row can be the main verb on its own.</div><svg class="ce-svg" viewBox="0 0 480 290" role="img" aria-labelledby="v1t v1d" xmlns="http://www.w3.org/2000/svg"><title id="v1t">The six forms of the verb write</title><desc id="v1d">Top row, can be the main verb alone: base form write, S form writes, past simple wrote. Bottom row, never the main verb alone: past participle written, present participle writing, infinitive to write.</desc><text x="14" y="20" font-size="13" font-weight="700" fill="#2F6F4E">CAN BE THE MAIN VERB ALONE</text><g class="ce-pop" style="animation-delay:0.1s"><rect x="14" y="30" width="136" height="84" rx="10" fill="#fff" stroke="#2F6F4E" stroke-width="2.5"/><circle cx="36" cy="52" r="12" fill="#2F6F4E"/><text x="36" y="57" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">1</text><text x="54" y="56" font-size="12" fill="#4A4A4A">Base</text><text x="82" y="94" text-anchor="middle" font-size="21" font-weight="700" fill="#1A1A1A">write</text></g><g class="ce-pop" style="animation-delay:0.5s"><rect x="172" y="30" width="136" height="84" rx="10" fill="#fff" stroke="#2F6F4E" stroke-width="2.5"/><circle cx="194" cy="52" r="12" fill="#2F6F4E"/><text x="194" y="57" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">2</text><text x="212" y="56" font-size="12" fill="#4A4A4A">S / ES</text><text x="240" y="94" text-anchor="middle" font-size="21" font-weight="700" fill="#1A1A1A">writes</text></g><g class="ce-pop" style="animation-delay:0.9s"><rect x="330" y="30" width="136" height="84" rx="10" fill="#fff" stroke="#2F6F4E" stroke-width="2.5"/><circle cx="352" cy="52" r="12" fill="#2F6F4E"/><text x="352" y="57" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">3</text><text x="370" y="56" font-size="12" fill="#4A4A4A">Past</text><text x="398" y="94" text-anchor="middle" font-size="21" font-weight="700" fill="#1A1A1A">wrote</text></g><text x="14" y="158" font-size="13" font-weight="700" fill="#8B0000">NEVER THE MAIN VERB ALONE</text><g class="ce-pop" style="animation-delay:1.3s"><rect x="14" y="168" width="136" height="84" rx="10" fill="#fff" stroke="#8B0000" stroke-width="2.5"/><circle cx="36" cy="190" r="12" fill="#8B0000"/><text x="36" y="195" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">4</text><text x="54" y="194" font-size="12" fill="#4A4A4A">Past participle</text><text x="82" y="232" text-anchor="middle" font-size="21" font-weight="700" fill="#1A1A1A">written</text></g><g class="ce-pop" style="animation-delay:1.7s"><rect x="172" y="168" width="136" height="84" rx="10" fill="#fff" stroke="#8B0000" stroke-width="2.5"/><circle cx="194" cy="190" r="12" fill="#8B0000"/><text x="194" y="195" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">5</text><text x="212" y="194" font-size="12" fill="#4A4A4A">-ing form</text><text x="240" y="232" text-anchor="middle" font-size="21" font-weight="700" fill="#1A1A1A">writing</text></g><g class="ce-pop" style="animation-delay:2.1s"><rect x="330" y="168" width="136" height="84" rx="10" fill="#fff" stroke="#8B0000" stroke-width="2.5"/><circle cx="352" cy="190" r="12" fill="#8B0000"/><text x="352" y="195" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">6</text><text x="370" y="194" font-size="12" fill="#4A4A4A">Infinitive</text><text x="398" y="232" text-anchor="middle" font-size="21" font-weight="700" fill="#1A1A1A">to write</text></g></svg><p class="ce-cap">Diagram 1. Forms 4 and 5 need a helper (has written, is writing). Form 6 is never the main verb.</p></div>
+<p>Every verb has these six forms. Regular verbs follow one pattern, irregular verbs do not.</p>
+<div class="table-wrap"><table class="pos-table ce-small">
+<tr><th>Infinitive</th><th>Base form</th><th>S / ES form</th><th>Past simple (V2)</th><th>Past participle (V3)</th><th>Present participle (V4)</th></tr>
+<tr><td><em>to write</em></td><td>write</td><td>writes</td><td>wrote</td><td>written</td><td>writing</td></tr>
+<tr><td><em>to play</em></td><td>play</td><td>plays</td><td>played</td><td>played</td><td>playing</td></tr>
+<tr><td><em>to study</em></td><td>study</td><td>studies</td><td>studied</td><td>studied</td><td>studying</td></tr>
+<tr><td><em>to stop</em></td><td>stop</td><td>stops</td><td>stopped</td><td>stopped</td><td>stopping</td></tr>
+<tr><td><em>to go</em></td><td>go</td><td>goes</td><td>went</td><td>gone</td><td>going</td></tr>
+<tr><td><em>to be</em></td><td>be</td><td>is (am, are)</td><td>was / were</td><td>been</td><td>being</td></tr>
+<tr><td><em>to have</em></td><td>have</td><td>has</td><td>had</td><td>had</td><td>having</td></tr>
+</table></div>
+<p><strong>Memory line:</strong> <em>Base, S, Past, Participle, ING, To.</em> Many schools call the base, past, past participle and -ing forms V1, V2, V3 and V4. The S/ES form and the infinitive are built from V1.</p>
+<h2><span class="num">3.</span>Finite and Non-Finite: Which Form Can Be the Main Verb?</h2>
+<p>This is the key to the confusion. A <strong>finite verb</strong> changes with the subject and the tense, so it can stand alone as the main verb. A <strong>non-finite verb</strong> does not show tense or agree with a subject on its own, so it can never be the main verb by itself.</p>
+<div class="table-wrap"><table class="pos-table ce-small">
+<tr><th>Form</th><th>Finite or non-finite?</th><th>Main verb on its own?</th></tr>
+<tr><td>Base (<em>write</em>)</td><td>Finite in the present: <em>I write</em></td><td>Yes</td></tr>
+<tr><td>S / ES (<em>writes</em>)</td><td>Finite</td><td>Yes</td></tr>
+<tr><td>Past (<em>wrote</em>)</td><td>Finite</td><td>Yes</td></tr>
+<tr><td>Past participle (<em>written</em>)</td><td>Non-finite</td><td>No. It needs a helper: <em>has written</em></td></tr>
+<tr><td>Present participle (<em>writing</em>)</td><td>Non-finite</td><td>No. It needs a helper: <em>is writing</em></td></tr>
+<tr><td>Infinitive (<em>to write</em>)</td><td>Non-finite</td><td>Never</td></tr>
+</table></div>
+<div class="real-world-box"><div class="rw-label">Remember</div><p>When you see <em>to write</em> or <em>to play</em> in a sentence, it is NOT the main verb. It is an infinitive. The main verb is somewhere else in the sentence.</p></div>
+<div class="ce-card"><div class="ce-title">Three steps to find the main verb</div><div class="ce-sub">Example: I want to write a letter.</div><svg class="ce-svg" viewBox="0 0 480 300" role="img" aria-labelledby="v2t v2d" xmlns="http://www.w3.org/2000/svg"><title id="v2t">Three steps to find the main verb</title><desc id="v2d">Step one: cross out to plus verb, lone ing words and lone ed or en words. Step two: change today to yesterday; the word that changes is the finite verb. Step three: add any helpers in front of it.</desc><g class="ce-pop" style="animation-delay:0.1s"><rect x="14" y="10" width="452" height="82" rx="10" fill="#fff" stroke="#06244a" stroke-width="2.5"/><circle cx="44" cy="51" r="16" fill="#06244a"/><text x="44" y="57" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">1</text><text x="72" y="44" font-size="15" fill="#1A1A1A">Cross out to + verb and lone -ing / -ed words</text><text x="72" y="68" font-size="13" fill="#4A4A4A">to write is crossed out: it is an infinitive</text></g><g class="ce-pop" style="animation-delay:0.7s"><rect x="14" y="104" width="452" height="82" rx="10" fill="#fff" stroke="#8B0000" stroke-width="2.5"/><circle cx="44" cy="145" r="16" fill="#8B0000"/><text x="44" y="151" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">2</text><text x="72" y="138" font-size="15" fill="#1A1A1A">Change "today" to "yesterday"</text><text x="72" y="162" font-size="13" fill="#4A4A4A">I want / I wanted: the word that changes is the main verb</text></g><g class="ce-pop" style="animation-delay:1.3s"><rect x="14" y="198" width="452" height="82" rx="10" fill="#fff" stroke="#2F6F4E" stroke-width="2.5"/><circle cx="44" cy="239" r="16" fill="#2F6F4E"/><text x="44" y="245" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">3</text><text x="72" y="232" font-size="15" fill="#1A1A1A">Add any helpers in front of it</text><text x="72" y="256" font-size="13" fill="#4A4A4A">will want, did want, has wanted: helper + main verb</text></g></svg><p class="ce-cap">Diagram 2. The main verb is the finite verb: it changes with time and subject.</p></div>
+<p><strong>Worked examples</strong></p>
+<div class="example-box"><div class="ex-label">Example 1</div><p><em>I want to write a letter.</em> Cross out <em>to write</em>. Change to yesterday: <em>I wanted</em> to write a letter. The finite main verb is <strong>want</strong>.</p></div>
+<div class="example-box"><div class="ex-label">Example 2</div><p><em>She likes to play cricket.</em> Main verb: <strong>likes</strong>. Infinitive: <em>to play</em>.</p></div>
+<div class="example-box"><div class="ex-label">Example 3</div><p><em>To err is human.</em> Here the infinitive is the subject. The main verb is <strong>is</strong>.</p></div>
+<div class="example-box"><div class="ex-label">Example 4</div><p><em>The boys playing outside are my cousins.</em> <em>Playing</em> has no helper, so it is a participle describing <em>boys</em>. The main verb is <strong>are</strong>.</p></div>
+<h2><span class="num">4.</span>Form 1: The Base Form (V1)</h2>
+<p>The base form is the dictionary form with no ending: <em>write, play, go, study</em>. It is used in these places:</p>
+<ol style="margin:0 0 1.2rem 1.4rem;color:var(--slate)">
+<li style="margin-bottom:.5rem"><strong>Present simple with I, you, we, they and plural nouns:</strong> <em>I write. They play. The students study.</em></li>
+<li style="margin-bottom:.5rem"><strong>After modal verbs:</strong> <em>can write, must go, should study, will play.</em></li>
+<li style="margin-bottom:.5rem"><strong>After do, does and did:</strong> <em>Do you play? She does not write. He did not go.</em></li>
+<li style="margin-bottom:.5rem"><strong>Commands (imperatives):</strong> <em>Write your name. Play fairly.</em></li>
+<li style="margin-bottom:.5rem"><strong>Inside the infinitive:</strong> <em>to write, to play.</em></li>
+<li style="margin-bottom:.5rem"><strong>After let, make and help, and with see or hear plus an object:</strong> <em>Let him go. She made me laugh. I saw him cross the road.</em></li>
+</ol>
+<p>After <em>does</em>, <em>did</em> and modal verbs, the verb stays in the base form. Do not add <em>-s</em> or <em>-ed</em> a second time.</p>
+<div class="table-wrap"><table class="pos-table ce-small">
+<tr><th>Wrong</th><th>Right</th></tr>
+<tr><td>She does not likes tea.</td><td>She does not <strong>like</strong> tea.</td></tr>
+<tr><td>He did not went.</td><td>He did not <strong>go</strong>.</td></tr>
+<tr><td>They can plays chess.</td><td>They can <strong>play</strong> chess.</td></tr>
+</table></div>
+<h2><span class="num">5.</span>Form 2: The S / ES Form</h2>
+<p>This form is used <strong>only in the present simple with a third-person singular subject</strong>: he, she, it, a singular noun or a name. <em>He writes. The teacher plays. Ali goes. My sister studies.</em></p>
+<div class="table-wrap"><table class="pos-table ce-small">
+<tr><th>Rule</th><th>Example</th></tr>
+<tr><td>Most verbs: add <strong>-s</strong></td><td>write → writes, play → plays, read → reads</td></tr>
+<tr><td>Verbs ending in <strong>s, ss, sh, ch, x, z</strong>: add <strong>-es</strong></td><td>pass → passes, wash → washes, watch → watches, fix → fixes, buzz → buzzes</td></tr>
+<tr><td>Verbs ending in <strong>o</strong>: add <strong>-es</strong></td><td>go → goes, do → does, echo → echoes</td></tr>
+<tr><td><strong>Consonant + y</strong>: change y to <strong>ies</strong></td><td>study → studies, try → tries, carry → carries</td></tr>
+<tr><td><strong>Vowel + y</strong>: just add <strong>-s</strong></td><td>play → plays, enjoy → enjoys, say → says</td></tr>
+<tr><td><em>have</em> is irregular</td><td>have → <strong>has</strong></td></tr>
+<tr><td><em>be</em> is irregular</td><td>I <strong>am</strong>, he / she / it <strong>is</strong>, you / we / they <strong>are</strong></td></tr>
+</table></div>
+<h3 style="font-family:'EB Garamond',serif;color:var(--navy);font-size:1.25rem;margin:1.6rem 0 .6rem">How the ending sounds</h3>
+<div class="table-wrap"><table class="pos-table ce-small">
+<tr><th>Sound</th><th>After</th><th>Examples</th></tr>
+<tr><td>/s/</td><td>p, t, k, f sounds</td><td>stops, writes, works, laughs</td></tr>
+<tr><td>/z/</td><td>voiced sounds and vowels</td><td>plays, begins, reads, goes</td></tr>
+<tr><td>/ɪz/</td><td>s, z, sh, ch, x, j sounds</td><td>washes, watches, fixes, judges</td></tr>
+</table></div>
+<h3 style="font-family:'EB Garamond',serif;color:var(--navy);font-size:1.25rem;margin:1.6rem 0 .6rem">Clearing the S / ES confusion</h3>
+<p>Students mix up the <strong>plural -s of nouns</strong> and the <strong>-s of verbs</strong>. Use the <strong>"only one S" check</strong> in simple present sentences. If the subject is singular, the <strong>verb</strong> takes the s. If the subject is plural, the <strong>noun</strong> takes the s and the verb does not.</p>
+<div class="table-wrap"><table class="pos-table ce-small">
+<tr><th>Subject</th><th>Sentence</th></tr>
+<tr><td>He / she / it</td><td>She <strong>writes</strong> poems.</td></tr>
+<tr><td>The girl (singular)</td><td>The girl <strong>writes</strong> poems.</td></tr>
+<tr><td>The girls (plural)</td><td>The girls <strong>write</strong> poems.</td></tr>
+<tr><td>I / you / we / they</td><td>They <strong>write</strong> poems.</td></tr>
+</table></div>
+<p><strong>Watch out for exceptions.</strong> Some nouns end in s but are singular: <em>news, mathematics, physics, economics</em>. <em>The news is good. Mathematics is my favourite subject.</em> Some plural nouns do not end in s: <em>people, children, men, women</em>. <em>The children play. The people are waiting.</em> Also remember that the S/ES form belongs to the present simple only. In the past tense there is no -s: <em>She wrote. The boy played.</em></p>
+<h2><span class="num">6.</span>Form 3: The Past Simple (V2, Second Form)</h2>
+<p>The past simple shows a finished action in the past: <em>I wrote a letter yesterday. They played well.</em> It has <strong>one form for all subjects</strong>, except <em>was / were</em>.</p>
+<div class="table-wrap"><table class="pos-table ce-small">
+<tr><th>Rule for regular verbs</th><th>Example</th></tr>
+<tr><td>Most verbs: add <strong>-ed</strong></td><td>play → played, work → worked</td></tr>
+<tr><td>Verbs ending in <strong>e</strong>: add <strong>-d</strong></td><td>like → liked, live → lived</td></tr>
+<tr><td><strong>Consonant + y</strong>: change y to <strong>ied</strong></td><td>study → studied, try → tried</td></tr>
+<tr><td><strong>Vowel + y</strong>: add <strong>-ed</strong></td><td>play → played, enjoy → enjoyed</td></tr>
+<tr><td>Short verbs ending in <strong>one vowel + one consonant</strong>: double the consonant</td><td>stop → stopped, plan → planned, admit → admitted, prefer → preferred</td></tr>
+<tr><td>Last syllable not stressed: do not double</td><td>visit → visited, open → opened, offer → offered</td></tr>
+<tr><td>Verbs ending in <strong>l</strong> (British spelling): double the l</td><td>travel → travelled, cancel → cancelled</td></tr>
+</table></div>
+<h3 style="font-family:'EB Garamond',serif;color:var(--navy);font-size:1.25rem;margin:1.6rem 0 .6rem">How -ed sounds</h3>
+<div class="table-wrap"><table class="pos-table ce-small">
+<tr><th>Sound</th><th>After</th><th>Examples</th></tr>
+<tr><td>/t/</td><td>p, k, f, s, sh, ch sounds</td><td>worked, stopped, washed, laughed</td></tr>
+<tr><td>/d/</td><td>voiced sounds and vowels</td><td>played, opened, called, stayed</td></tr>
+<tr><td>/ɪd/</td><td>t and d</td><td>wanted, needed, visited, decided</td></tr>
+</table></div>
+<p><strong>Questions and negatives.</strong> Use <em>did</em> plus the base form. The past marking moves to <em>did</em>: <em>She wrote a letter. Did she <strong>write</strong> a letter? She did not <strong>write</strong> a letter.</em></p>
+<h2><span class="num">7.</span>Form 4: The Past Participle (V3, Third Form)</h2>
+<p>The past participle is the form used after <strong>have, has, had</strong> and <strong>be</strong>. It is <strong>never the main verb on its own</strong>. For regular verbs it looks exactly like the past simple (<em>played / played</em>). For irregular verbs it may differ: <em>write → wrote → <strong>written</strong></em>, <em>go → went → <strong>gone</strong></em>, <em>see → saw → <strong>seen</strong></em>.</p>
+<div class="table-wrap"><table class="pos-table ce-small">
+<tr><th>Use</th><th>Example</th></tr>
+<tr><td>Perfect tenses (have / has / had + V3)</td><td><em>I have written. She has gone. They had finished.</em></td></tr>
+<tr><td>Passive voice (be + V3)</td><td><em>The letter was written by Sara. English is spoken here.</em></td></tr>
+<tr><td>As an adjective</td><td><em>a broken window, a finished project, a closed door</em></td></tr>
+<tr><td>After a modal + have</td><td><em>should have written, could have gone, must have forgotten</em></td></tr>
+</table></div>
+<div class="table-wrap"><table class="pos-table ce-small">
+<tr><th>Wrong</th><th>Right</th><th>Reason</th></tr>
+<tr><td>She has went home.</td><td>She has <strong>gone</strong> home.</td><td>After <em>has</em>, use V3, not V2.</td></tr>
+<tr><td>I have wrote it.</td><td>I have <strong>written</strong> it.</td><td>V3 of write is <em>written</em>.</td></tr>
+<tr><td>He was ate by the lion.</td><td>He was <strong>eaten</strong> by the lion.</td><td>The passive needs V3.</td></tr>
+<tr><td>They seen the film.</td><td>They <strong>saw</strong> / <strong>have seen</strong> the film.</td><td><em>Seen</em> always needs a helper.</td></tr>
+</table></div>
+<h2><span class="num">8.</span>Irregular Verbs: Learn Them in Groups</h2>
+<p>There are about 200 common irregular verbs, but they fall into patterns. Learn them group by group, and use the Complete Verb Forms List to check any verb.</p>
+<h3 style="font-family:'EB Garamond',serif;color:var(--navy);font-size:1.25rem;margin:1.6rem 0 .6rem">Group A: all three main forms are the same</h3>
+<div class="table-wrap"><table class="pos-table ce-small">
+<tr><th>Infinitive</th><th>Base form</th><th>S / ES form</th><th>Past simple (V2)</th><th>Past participle (V3)</th><th>Present participle (V4)</th></tr>
+<tr><td><em>to cut</em></td><td>cut</td><td>cuts</td><td>cut</td><td>cut</td><td>cutting</td></tr>
+<tr><td><em>to put</em></td><td>put</td><td>puts</td><td>put</td><td>put</td><td>putting</td></tr>
+<tr><td><em>to let</em></td><td>let</td><td>lets</td><td>let</td><td>let</td><td>letting</td></tr>
+<tr><td><em>to hit</em></td><td>hit</td><td>hits</td><td>hit</td><td>hit</td><td>hitting</td></tr>
+<tr><td><em>to read</em></td><td>read</td><td>reads</td><td>read</td><td>read</td><td>reading</td></tr>
+<tr><td><em>to set</em></td><td>set</td><td>sets</td><td>set</td><td>set</td><td>setting</td></tr>
+<tr><td><em>to shut</em></td><td>shut</td><td>shuts</td><td>shut</td><td>shut</td><td>shutting</td></tr>
+<tr><td><em>to cost</em></td><td>cost</td><td>costs</td><td>cost</td><td>cost</td><td>costing</td></tr>
+<tr><td><em>to hurt</em></td><td>hurt</td><td>hurts</td><td>hurt</td><td>hurt</td><td>hurting</td></tr>
+<tr><td><em>to spread</em></td><td>spread</td><td>spreads</td><td>spread</td><td>spread</td><td>spreading</td></tr>
+<tr><td><em>to quit</em></td><td>quit</td><td>quits</td><td>quit</td><td>quit</td><td>quitting</td></tr>
+<tr><td><em>to burst</em></td><td>burst</td><td>bursts</td><td>burst</td><td>burst</td><td>bursting</td></tr>
+</table></div>
+<p><em>Read</em> is spelled the same in all three forms but pronounced /riːd/ in the base form and /red/ in the past and past participle.</p>
+<h3 style="font-family:'EB Garamond',serif;color:var(--navy);font-size:1.25rem;margin:1.6rem 0 .6rem">Group B: past and past participle are the same</h3>
+<div class="table-wrap"><table class="pos-table ce-small">
+<tr><th>Infinitive</th><th>Base form</th><th>S / ES form</th><th>Past simple (V2)</th><th>Past participle (V3)</th><th>Present participle (V4)</th></tr>
+<tr><td><em>to bring</em></td><td>bring</td><td>brings</td><td>brought</td><td>brought</td><td>bringing</td></tr>
+<tr><td><em>to buy</em></td><td>buy</td><td>buys</td><td>bought</td><td>bought</td><td>buying</td></tr>
+<tr><td><em>to catch</em></td><td>catch</td><td>catches</td><td>caught</td><td>caught</td><td>catching</td></tr>
+<tr><td><em>to teach</em></td><td>teach</td><td>teaches</td><td>taught</td><td>taught</td><td>teaching</td></tr>
+<tr><td><em>to think</em></td><td>think</td><td>thinks</td><td>thought</td><td>thought</td><td>thinking</td></tr>
+<tr><td><em>to make</em></td><td>make</td><td>makes</td><td>made</td><td>made</td><td>making</td></tr>
+<tr><td><em>to say</em></td><td>say</td><td>says</td><td>said</td><td>said</td><td>saying</td></tr>
+<tr><td><em>to pay</em></td><td>pay</td><td>pays</td><td>paid</td><td>paid</td><td>paying</td></tr>
+<tr><td><em>to sit</em></td><td>sit</td><td>sits</td><td>sat</td><td>sat</td><td>sitting</td></tr>
+<tr><td><em>to find</em></td><td>find</td><td>finds</td><td>found</td><td>found</td><td>finding</td></tr>
+<tr><td><em>to leave</em></td><td>leave</td><td>leaves</td><td>left</td><td>left</td><td>leaving</td></tr>
+<tr><td><em>to meet</em></td><td>meet</td><td>meets</td><td>met</td><td>met</td><td>meeting</td></tr>
+<tr><td><em>to send</em></td><td>send</td><td>sends</td><td>sent</td><td>sent</td><td>sending</td></tr>
+<tr><td><em>to sleep</em></td><td>sleep</td><td>sleeps</td><td>slept</td><td>slept</td><td>sleeping</td></tr>
+<tr><td><em>to stand</em></td><td>stand</td><td>stands</td><td>stood</td><td>stood</td><td>standing</td></tr>
+<tr><td><em>to win</em></td><td>win</td><td>wins</td><td>won</td><td>won</td><td>winning</td></tr>
+<tr><td><em>to have</em></td><td>have</td><td>has</td><td>had</td><td>had</td><td>having</td></tr>
+<tr><td><em>to build</em></td><td>build</td><td>builds</td><td>built</td><td>built</td><td>building</td></tr>
+<tr><td><em>to feel</em></td><td>feel</td><td>feels</td><td>felt</td><td>felt</td><td>feeling</td></tr>
+<tr><td><em>to keep</em></td><td>keep</td><td>keeps</td><td>kept</td><td>kept</td><td>keeping</td></tr>
+<tr><td><em>to hold</em></td><td>hold</td><td>holds</td><td>held</td><td>held</td><td>holding</td></tr>
+<tr><td><em>to tell</em></td><td>tell</td><td>tells</td><td>told</td><td>told</td><td>telling</td></tr>
+<tr><td><em>to sell</em></td><td>sell</td><td>sells</td><td>sold</td><td>sold</td><td>selling</td></tr>
+</table></div>
+<h3 style="font-family:'EB Garamond',serif;color:var(--navy);font-size:1.25rem;margin:1.6rem 0 .6rem">Group C: all three forms are different</h3>
+<div class="table-wrap"><table class="pos-table ce-small">
+<tr><th>Infinitive</th><th>Base form</th><th>S / ES form</th><th>Past simple (V2)</th><th>Past participle (V3)</th><th>Present participle (V4)</th></tr>
+<tr><td><em>to be</em></td><td>be</td><td>is (am, are)</td><td>was / were</td><td>been</td><td>being</td></tr>
+<tr><td><em>to begin</em></td><td>begin</td><td>begins</td><td>began</td><td>begun</td><td>beginning</td></tr>
+<tr><td><em>to break</em></td><td>break</td><td>breaks</td><td>broke</td><td>broken</td><td>breaking</td></tr>
+<tr><td><em>to choose</em></td><td>choose</td><td>chooses</td><td>chose</td><td>chosen</td><td>choosing</td></tr>
+<tr><td><em>to do</em></td><td>do</td><td>does</td><td>did</td><td>done</td><td>doing</td></tr>
+<tr><td><em>to draw</em></td><td>draw</td><td>draws</td><td>drew</td><td>drawn</td><td>drawing</td></tr>
+<tr><td><em>to drink</em></td><td>drink</td><td>drinks</td><td>drank</td><td>drunk</td><td>drinking</td></tr>
+<tr><td><em>to drive</em></td><td>drive</td><td>drives</td><td>drove</td><td>driven</td><td>driving</td></tr>
+<tr><td><em>to eat</em></td><td>eat</td><td>eats</td><td>ate</td><td>eaten</td><td>eating</td></tr>
+<tr><td><em>to fall</em></td><td>fall</td><td>falls</td><td>fell</td><td>fallen</td><td>falling</td></tr>
+<tr><td><em>to fly</em></td><td>fly</td><td>flies</td><td>flew</td><td>flown</td><td>flying</td></tr>
+<tr><td><em>to give</em></td><td>give</td><td>gives</td><td>gave</td><td>given</td><td>giving</td></tr>
+<tr><td><em>to go</em></td><td>go</td><td>goes</td><td>went</td><td>gone</td><td>going</td></tr>
+<tr><td><em>to grow</em></td><td>grow</td><td>grows</td><td>grew</td><td>grown</td><td>growing</td></tr>
+<tr><td><em>to know</em></td><td>know</td><td>knows</td><td>knew</td><td>known</td><td>knowing</td></tr>
+<tr><td><em>to see</em></td><td>see</td><td>sees</td><td>saw</td><td>seen</td><td>seeing</td></tr>
+<tr><td><em>to sing</em></td><td>sing</td><td>sings</td><td>sang</td><td>sung</td><td>singing</td></tr>
+<tr><td><em>to speak</em></td><td>speak</td><td>speaks</td><td>spoke</td><td>spoken</td><td>speaking</td></tr>
+<tr><td><em>to swim</em></td><td>swim</td><td>swims</td><td>swam</td><td>swum</td><td>swimming</td></tr>
+<tr><td><em>to take</em></td><td>take</td><td>takes</td><td>took</td><td>taken</td><td>taking</td></tr>
+<tr><td><em>to throw</em></td><td>throw</td><td>throws</td><td>threw</td><td>thrown</td><td>throwing</td></tr>
+<tr><td><em>to wear</em></td><td>wear</td><td>wears</td><td>wore</td><td>worn</td><td>wearing</td></tr>
+<tr><td><em>to write</em></td><td>write</td><td>writes</td><td>wrote</td><td>written</td><td>writing</td></tr>
+</table></div>
+<h3 style="font-family:'EB Garamond',serif;color:var(--navy);font-size:1.25rem;margin:1.6rem 0 .6rem">Group D: base form and past participle are the same</h3>
+<div class="table-wrap"><table class="pos-table ce-small">
+<tr><th>Infinitive</th><th>Base form</th><th>S / ES form</th><th>Past simple (V2)</th><th>Past participle (V3)</th><th>Present participle (V4)</th></tr>
+<tr><td><em>to come</em></td><td>come</td><td>comes</td><td>came</td><td>come</td><td>coming</td></tr>
+<tr><td><em>to become</em></td><td>become</td><td>becomes</td><td>became</td><td>become</td><td>becoming</td></tr>
+<tr><td><em>to run</em></td><td>run</td><td>runs</td><td>ran</td><td>run</td><td>running</td></tr>
+</table></div>
+<h2><span class="num">9.</span>Form 5: The Present Participle (V4, the -ing Form)</h2>
+<p>The present participle is the base form plus <strong>-ing</strong>: <em>writing, playing, going, studying</em>.</p>
+<div class="table-wrap"><table class="pos-table ce-small">
+<tr><th>Rule</th><th>Example</th></tr>
+<tr><td>Most verbs: add <strong>-ing</strong></td><td>play → playing, study → studying, go → going</td></tr>
+<tr><td>Ending in silent <strong>e</strong>: drop the e</td><td>write → writing, make → making, come → coming</td></tr>
+<tr><td>Ending in <strong>ee, ye, oe</strong>: keep the e</td><td>see → seeing, be → being, dye → dyeing</td></tr>
+<tr><td>Ending in <strong>ie</strong>: change to <strong>ying</strong></td><td>lie → lying, die → dying, tie → tying</td></tr>
+<tr><td>Short verbs ending in <strong>one vowel + one consonant</strong>: double the consonant</td><td>run → running, stop → stopping, begin → beginning</td></tr>
+<tr><td>Last syllable not stressed: do not double</td><td>visit → visiting, open → opening</td></tr>
+<tr><td>Ending in <strong>w, x, y</strong>: do not double</td><td>snow → snowing, fix → fixing, play → playing</td></tr>
+<tr><td>Ending in <strong>c</strong> (some verbs): add k</td><td>picnic → picnicking, panic → panicking</td></tr>
+</table></div>
+<div class="table-wrap"><table class="pos-table ce-small">
+<tr><th>Use</th><th>Example</th></tr>
+<tr><td>Continuous tenses (be + V4)</td><td><em>She is writing. They were playing. I will be studying.</em></td></tr>
+<tr><td>As an adjective</td><td><em>a running tap, a smiling child, an interesting book</em></td></tr>
+<tr><td>An action happening at the same time</td><td><em>Walking home, he met a friend.</em></td></tr>
+<tr><td>After see, hear, watch, find + object</td><td><em>I saw him crossing the road.</em></td></tr>
+</table></div>
+<div class="example-box"><div class="ex-label">Remember</div><p><em>-ing</em> alone is never the main verb. <em>The boy playing outside</em> is not a sentence. <em>The boy is playing outside</em> is.</p></div>
+<h3 style="font-family:'EB Garamond',serif;color:var(--navy);font-size:1.25rem;margin:1.6rem 0 .6rem">Present participle or gerund?</h3>
+<p>A gerund also ends in <em>-ing</em>, but it works as a <strong>noun</strong>. Test: if you can replace the -ing word with <em>it</em> or <em>something</em>, it is a gerund.</p>
+<div class="table-wrap"><table class="pos-table ce-small">
+<tr><th>Present participle (verb or adjective)</th><th>Gerund (noun)</th></tr>
+<tr><td>She is <strong>writing</strong> a letter.</td><td><strong>Writing</strong> is her passion.</td></tr>
+<tr><td>The girl <strong>sitting</strong> there is my cousin.</td><td>He enjoys <strong>swimming</strong>.</td></tr>
+</table></div>
+<h2><span class="num">10.</span>Form 6: The Infinitive (to + V1)</h2>
+<p>The infinitive is the verb in its "name" form: <em>to write, to play, to go</em>. The word <em>to</em> is called the infinitive marker. The infinitive does not change for subject or tense, so it is <strong>never a main verb</strong>.</p>
+<div class="table-wrap"><table class="pos-table ce-small">
+<tr><th>Sentence</th><th>Main verb</th><th>Infinitive</th></tr>
+<tr><td>I want <strong>to write</strong> a story.</td><td>want</td><td>to write</td></tr>
+<tr><td>She hopes <strong>to play</strong> in the final.</td><td>hopes</td><td>to play</td></tr>
+<tr><td>He decided <strong>to go</strong> home.</td><td>decided</td><td>to go</td></tr>
+<tr><td><strong>To learn</strong> is a pleasure.</td><td>is</td><td>To learn (the subject)</td></tr>
+</table></div>
+<h3 style="font-family:'EB Garamond',serif;color:var(--navy);font-size:1.25rem;margin:1.6rem 0 .6rem">Two kinds of infinitive</h3>
+<ul>
+<li><strong>To-infinitive:</strong> <em>to write, to play.</em></li>
+<li><strong>Bare infinitive</strong> (no <em>to</em>), used after modals and some verbs: <em>I can write. He made me laugh. Let her go.</em></li>
+</ul>
+<h3 style="font-family:'EB Garamond',serif;color:var(--navy);font-size:1.25rem;margin:1.6rem 0 .6rem">Jobs of the infinitive</h3>
+<div class="table-wrap"><table class="pos-table ce-small">
+<tr><th>Job</th><th>Example</th></tr>
+<tr><td>Subject</td><td><strong>To swim</strong> in the sea is fun.</td></tr>
+<tr><td>Object</td><td>I want <strong>to learn</strong> French.</td></tr>
+<tr><td>Purpose (answers <em>why?</em>)</td><td>He went to the market <strong>to buy</strong> vegetables.</td></tr>
+<tr><td>Describing a noun</td><td>She has a lot of work <strong>to do</strong>.</td></tr>
+<tr><td>After adjectives</td><td>The water is safe <strong>to drink</strong>.</td></tr>
+<tr><td>After <em>too</em> and <em>enough</em></td><td>He is old <strong>enough to drive</strong>.</td></tr>
+</table></div>
+<h3 style="font-family:'EB Garamond',serif;color:var(--navy);font-size:1.25rem;margin:1.6rem 0 .6rem">More infinitive forms (advanced)</h3>
+<div class="table-wrap"><table class="pos-table ce-small">
+<tr><th>Form</th><th>Pattern</th><th>Example</th></tr>
+<tr><td>Simple</td><td>to write</td><td>I hope to write a novel.</td></tr>
+<tr><td>Continuous</td><td>to be writing</td><td>She seems to be writing.</td></tr>
+<tr><td>Perfect</td><td>to have written</td><td>He is said to have written ten books.</td></tr>
+<tr><td>Perfect continuous</td><td>to have been writing</td><td>She appears to have been writing all night.</td></tr>
+<tr><td>Passive</td><td>to be written</td><td>The letter needs to be written today.</td></tr>
+<tr><td>Perfect passive</td><td>to have been written</td><td>The book is believed to have been written in 1850.</td></tr>
+</table></div>
+<h3 style="font-family:'EB Garamond',serif;color:var(--navy);font-size:1.25rem;margin:1.6rem 0 .6rem">Which verbs take which form?</h3>
+<div class="table-wrap"><table class="pos-table ce-small">
+<tr><th>Pattern</th><th>Typical verbs</th><th>Example</th></tr>
+<tr><td>Verb + <strong>to-infinitive</strong></td><td>want, decide, hope, plan, promise, refuse, learn, manage, agree, afford</td><td>She <strong>decided to leave</strong>.</td></tr>
+<tr><td>Verb + <strong>-ing</strong></td><td>enjoy, finish, avoid, mind, suggest, keep, practise, admit, consider, deny</td><td>He <strong>enjoys reading</strong>.</td></tr>
+<tr><td>Verb + <strong>bare infinitive</strong></td><td>can, could, may, might, must, shall, should, will, would</td><td>You <strong>must go</strong>.</td></tr>
+<tr><td>Verb + object + <strong>bare infinitive</strong></td><td>see, hear, watch, notice, make, let</td><td>I <strong>saw him leave</strong>.</td></tr>
+<tr><td>Meaning changes</td><td>stop, remember, forget, try, regret</td><td><em>I stopped to smoke</em> (I paused in order to smoke) and <em>I stopped smoking</em> (I quit).</td></tr>
+</table></div>
+<h3 style="font-family:'EB Garamond',serif;color:var(--navy);font-size:1.25rem;margin:1.6rem 0 .6rem">Is "to" always an infinitive marker?</h3>
+<p>No. Sometimes <strong>to is a preposition</strong>, and then a noun or an -ing form follows. <em>I want <strong>to write</strong>.</em> (infinitive) but <em>I look forward <strong>to writing</strong> to you.</em> (preposition) and <em>She is used <strong>to getting up</strong> early.</em> Test: if you can put a noun there (<em>I look forward to the trip</em>), <em>to</em> is a preposition.</p>
+<h2><span class="num">11.</span>Conjugation Across the Tenses</h2>
+<p>Here is how the forms of <strong>write</strong> appear in the twelve tenses.</p>
+<div class="table-wrap"><table class="pos-table ce-small">
+<tr><th>Tense</th><th>Pattern</th><th>He / she</th><th>They</th></tr>
+<tr><td>Present simple</td><td>V1 / V1+s</td><td>He <strong>writes</strong></td><td>They <strong>write</strong></td></tr>
+<tr><td>Present continuous</td><td>am / is / are + V4</td><td>He <strong>is writing</strong></td><td>They <strong>are writing</strong></td></tr>
+<tr><td>Present perfect</td><td>have / has + V3</td><td>He <strong>has written</strong></td><td>They <strong>have written</strong></td></tr>
+<tr><td>Present perfect continuous</td><td>have / has been + V4</td><td>He <strong>has been writing</strong></td><td>They <strong>have been writing</strong></td></tr>
+<tr><td>Past simple</td><td>V2</td><td>He <strong>wrote</strong></td><td>They <strong>wrote</strong></td></tr>
+<tr><td>Past continuous</td><td>was / were + V4</td><td>He <strong>was writing</strong></td><td>They <strong>were writing</strong></td></tr>
+<tr><td>Past perfect</td><td>had + V3</td><td>He <strong>had written</strong></td><td>They <strong>had written</strong></td></tr>
+<tr><td>Past perfect continuous</td><td>had been + V4</td><td>He <strong>had been writing</strong></td><td>They <strong>had been writing</strong></td></tr>
+<tr><td>Future simple</td><td>will + V1</td><td>He <strong>will write</strong></td><td>They <strong>will write</strong></td></tr>
+<tr><td>Future continuous</td><td>will be + V4</td><td>He <strong>will be writing</strong></td><td>They <strong>will be writing</strong></td></tr>
+<tr><td>Future perfect</td><td>will have + V3</td><td>He <strong>will have written</strong></td><td>They <strong>will have written</strong></td></tr>
+<tr><td>Future perfect continuous</td><td>will have been + V4</td><td>He <strong>will have been writing</strong></td><td>They <strong>will have been writing</strong></td></tr>
+</table></div>
+<h3 style="font-family:'EB Garamond',serif;color:var(--navy);font-size:1.25rem;margin:1.6rem 0 .6rem">The passive voice (be + V3)</h3>
+<div class="table-wrap"><table class="pos-table ce-small">
+<tr><th>Tense</th><th>Example</th></tr>
+<tr><td>Present simple</td><td>The letter <strong>is written</strong>.</td></tr>
+<tr><td>Present continuous</td><td>The letter <strong>is being written</strong>.</td></tr>
+<tr><td>Present perfect</td><td>The letter <strong>has been written</strong>.</td></tr>
+<tr><td>Past simple</td><td>The letter <strong>was written</strong>.</td></tr>
+<tr><td>Past continuous</td><td>The letter <strong>was being written</strong>.</td></tr>
+<tr><td>Past perfect</td><td>The letter <strong>had been written</strong>.</td></tr>
+<tr><td>Future simple</td><td>The letter <strong>will be written</strong>.</td></tr>
+<tr><td>With a modal</td><td>The letter <strong>must be written</strong>.</td></tr>
+</table></div>
+<h3 style="font-family:'EB Garamond',serif;color:var(--navy);font-size:1.25rem;margin:1.6rem 0 .6rem">Be, have and do in full</h3>
+<div class="table-wrap"><table class="pos-table ce-small">
+<tr><th>Subject</th><th>be (present)</th><th>be (past)</th><th>have (present)</th><th>have (past)</th><th>do (present)</th><th>do (past)</th></tr>
+<tr><td>I</td><td>am</td><td>was</td><td>have</td><td>had</td><td>do</td><td>did</td></tr>
+<tr><td>you</td><td>are</td><td>were</td><td>have</td><td>had</td><td>do</td><td>did</td></tr>
+<tr><td>he / she / it</td><td>is</td><td>was</td><td>has</td><td>had</td><td>does</td><td>did</td></tr>
+<tr><td>we</td><td>are</td><td>were</td><td>have</td><td>had</td><td>do</td><td>did</td></tr>
+<tr><td>they</td><td>are</td><td>were</td><td>have</td><td>had</td><td>do</td><td>did</td></tr>
+</table></div>
+<div class="table-wrap"><table class="pos-table ce-small">
+<tr><th>Infinitive</th><th>Base form</th><th>S / ES form</th><th>Past simple (V2)</th><th>Past participle (V3)</th><th>Present participle (V4)</th></tr>
+<tr><td><em>to be</em></td><td>be</td><td>is (am, are)</td><td>was / were</td><td>been</td><td>being</td></tr>
+<tr><td><em>to have</em></td><td>have</td><td>has</td><td>had</td><td>had</td><td>having</td></tr>
+<tr><td><em>to do</em></td><td>do</td><td>does</td><td>did</td><td>done</td><td>doing</td></tr>
+</table></div>
+<h2><span class="num">12.</span>Auxiliary and Main Verbs</h2>
+<div class="table-wrap"><table class="pos-table ce-small">
+<tr><th>Type</th><th>Verbs</th><th>Job</th></tr>
+<tr><td>Main (lexical) verb</td><td>write, play, study, run</td><td>Carries the meaning</td></tr>
+<tr><td>Primary auxiliary</td><td>be, have, do</td><td>Helps build tenses, questions and negatives</td></tr>
+<tr><td>Modal auxiliary</td><td>can, could, may, might, must, shall, should, will, would, ought to</td><td>Shows ability, permission, possibility or obligation</td></tr>
+</table></div>
+<p><em>Be, have</em> and <em>do</em> can also be main verbs. <em>She <strong>has</strong> a car.</em> (main verb: possession) but <em>She <strong>has</strong> finished.</em> (auxiliary). A verb phrase can have one main verb and up to three helpers: <em>She <strong>will have been writing</strong> since morning.</em> The main verb is <em>writing</em>; <em>will, have, been</em> are helpers.</p>
+<h2><span class="num">13.</span>Advanced Extras</h2>
+<h3 style="font-family:'EB Garamond',serif;color:var(--navy);font-size:1.25rem;margin:1.6rem 0 .6rem">The subjunctive mood</h3>
+<p>The subjunctive uses the <strong>base form for all persons</strong> (no -s), and <em>were</em> for all persons in unreal situations. <em>I suggest that he <strong>write</strong> the report.</em> (not <em>writes</em>) <em>It is essential that she <strong>be</strong> present.</em> (not <em>is</em>) <em>If I <strong>were</strong> you, I would apologise.</em> (formal usage; <em>was</em> is common in speech)</p>
+<h3 style="font-family:'EB Garamond',serif;color:var(--navy);font-size:1.25rem;margin:1.6rem 0 .6rem">Modal perfect forms</h3>
+<div class="table-wrap"><table class="pos-table ce-small">
+<tr><th>Pattern</th><th>Meaning</th><th>Example</th></tr>
+<tr><td>must have + V3</td><td>strong deduction about the past</td><td>He <strong>must have forgotten</strong>.</td></tr>
+<tr><td>should have + V3</td><td>criticism or regret</td><td>You <strong>should have written</strong>.</td></tr>
+<tr><td>could have + V3</td><td>past possibility</td><td>She <strong>could have won</strong>.</td></tr>
+<tr><td>might have + V3</td><td>uncertain past possibility</td><td>They <strong>might have left</strong>.</td></tr>
+<tr><td>needn't have + V3</td><td>the action was unnecessary</td><td>I <strong>needn't have gone</strong>.</td></tr>
+</table></div>
+<h3 style="font-family:'EB Garamond',serif;color:var(--navy);font-size:1.25rem;margin:1.6rem 0 .6rem">Participle clauses</h3>
+<ul>
+<li><em>Walking home, he saw an accident.</em> (present participle clause; both parts must have the same subject)</li>
+<li><em>Written in 1950, the novel is still popular.</em> (past participle clause)</li>
+<li><em>Having finished the exam, she went out.</em> (perfect participle, showing the earlier action)</li>
+</ul>
+<p><strong>Dangling participle (error):</strong> <em>Walking home, the rain started.</em> The rain was not walking. Correct: <em>Walking home, <strong>I</strong> felt the rain start.</em></p>
+<h3 style="font-family:'EB Garamond',serif;color:var(--navy);font-size:1.25rem;margin:1.6rem 0 .6rem">Non-finite clauses</h3>
+<p>A non-finite verb heads a clause that has no tense or subject of its own: <em>To succeed, you must work hard.</em> (infinitive clause) <em>Having no money, he walked.</em> (participle clause) <em>Swimming is good exercise.</em> (gerund clause as subject).</p>
+<h3 style="font-family:'EB Garamond',serif;color:var(--navy);font-size:1.25rem;margin:1.6rem 0 .6rem">Phrasal verbs conjugate normally</h3>
+<p>The verb part changes and the particle stays the same: <em>look up, looks up, looked up, looked up, looking up, to look up.</em></p>
+<h2><span class="num">14.</span>Key Terms</h2>
+<div class="ce-gl">
+<div><b>Conjugation:</b> changing the form of a verb for tense, person and number.</div>
+<div><b>Base form:</b> the verb in its plain dictionary form.</div>
+<div><b>Infinitive:</b> to + the base form; the verb's "name".</div>
+<div><b>Finite verb:</b> a verb that shows tense and agrees with its subject.</div>
+<div><b>Non-finite verb:</b> an infinitive, participle or gerund; it has no tense or agreement of its own.</div>
+<div><b>Participle:</b> a verb form used with helpers or as an adjective (-ing or -ed / -en).</div>
+<div><b>Gerund:</b> an -ing form working as a noun.</div>
+<div><b>Auxiliary verb:</b> a helping verb such as be, have or do.</div>
+<div><b>Modal verb:</b> an auxiliary showing ability, possibility, permission or obligation.</div>
+<div><b>Regular verb:</b> a verb that forms its past and past participle by adding -ed.</div>
+<div><b>Irregular verb:</b> a verb that does not follow the -ed rule.</div>
+<div><b>Third-person singular:</b> he, she, it or a singular noun.</div>
+<div><b>Voice:</b> active (the subject does the action) or passive (the subject receives it).</div>
+<div><b>Mood:</b> the attitude of the verb: indicative, imperative or subjunctive.</div>
+<div><b>Subject-verb agreement:</b> the verb matches its subject in number and person.</div>
+</div>
+<h2><span class="num">15.</span>Common Mistakes</h2>
+<div class="table-wrap"><table class="pos-table ce-small">
+<tr><th>Wrong</th><th>Right</th><th>Rule</th></tr>
+<tr><td>He go to school daily.</td><td>He <strong>goes</strong> to school daily.</td><td>A third-person singular subject needs -s / -es.</td></tr>
+<tr><td>She don't like tea.</td><td>She <strong>doesn't like</strong> tea.</td><td>does + base form</td></tr>
+<tr><td>He doesn't likes tea.</td><td>He doesn't <strong>like</strong> tea.</td><td>No -s after <em>does</em>.</td></tr>
+<tr><td>Did you went there?</td><td>Did you <strong>go</strong> there?</td><td>did + base form</td></tr>
+<tr><td>I have went.</td><td>I have <strong>gone</strong>.</td><td>have + V3</td></tr>
+<tr><td>I am go to school.</td><td>I <strong>go</strong> / am <strong>going</strong> to school.</td><td>be + -ing, never be + base form</td></tr>
+<tr><td>You must to go.</td><td>You must <strong>go</strong>.</td><td>Bare infinitive after modals.</td></tr>
+<tr><td>He can speaks English.</td><td>He can <strong>speak</strong> English.</td><td>modal + base form</td></tr>
+<tr><td>She enjoys to read.</td><td>She enjoys <strong>reading</strong>.</td><td>enjoy + -ing</td></tr>
+<tr><td>I want going home.</td><td>I want <strong>to go</strong> home.</td><td>want + to-infinitive</td></tr>
+<tr><td>The boy play football.</td><td>The boy <strong>plays</strong> football.</td><td>Singular subject: the verb takes -s.</td></tr>
+<tr><td>The boys plays football.</td><td>The boys <strong>play</strong> football.</td><td>Plural subject: no -s on the verb.</td></tr>
+<tr><td>He is knowing the answer.</td><td>He <strong>knows</strong> the answer.</td><td>State verbs are not normally used in continuous tenses.</td></tr>
+<tr><td>I look forward to meet you.</td><td>I look forward to <strong>meeting</strong> you.</td><td><em>to</em> is a preposition here.</td></tr>
+<tr><td>The news are bad.</td><td>The news <strong>is</strong> bad.</td><td><em>News</em> is singular.</td></tr>
+</table></div>
+<p><strong>State verbs</strong> such as know, believe, like, love, want, need, own, seem and understand are not normally used in continuous tenses.</p>
+<h2><span class="num">16.</span>Quick Revision Chart</h2>
+<div class="table-wrap"><table class="pos-table ce-small">
+<tr><th>Question</th><th>Answer</th></tr>
+<tr><td>Which forms can be the main verb alone?</td><td>Base, S/ES and past</td></tr>
+<tr><td>Which forms need a helper?</td><td>Past participle (V3) and -ing (V4)</td></tr>
+<tr><td>Which form is never the main verb?</td><td>The infinitive (to + base)</td></tr>
+<tr><td>What follows do, does, did?</td><td>The base form</td></tr>
+<tr><td>What follows a modal?</td><td>The base form</td></tr>
+<tr><td>What follows have, has, had?</td><td>The past participle (V3)</td></tr>
+<tr><td>What follows am, is, are, was, were?</td><td>The -ing form (continuous) or V3 (passive)</td></tr>
+<tr><td>When is the S/ES form used?</td><td>Present simple, with he / she / it or a singular noun</td></tr>
+<tr><td>What follows enjoy, finish, avoid?</td><td>The -ing form</td></tr>
+<tr><td>What follows want, decide, hope?</td><td>The to-infinitive</td></tr>
+</table></div>
+<h2><span class="num">17.</span>Why This Matters</h2>
+<p>Verb errors are among the most visible mistakes in writing, and most of them come from using the right verb in the wrong form. Once you know that only the base, S/ES and past forms can be the main verb, that the past participle and -ing form need helpers, and that the infinitive is never the main verb, sentence analysis becomes much easier. Continue with <a href="tenses-verb-forms.html">Tenses &amp; Verb Forms</a>, then use The Complete Verb Forms List whenever you need to check a form.</p>
+<div class="ce-key"><div class="kp">Key points to remember</div><ul>
+<li>A verb has six forms: infinitive, base, S/ES, past, past participle and -ing.</li>
+<li>Only the base, S/ES and past forms can be the main verb on their own.</li>
+<li>To + verb is an infinitive. It is never the main verb.</li>
+<li>After do, does, did and modal verbs, always use the base form.</li>
+<li>After have, has and had, use the past participle (V3).</li>
+<li>The S/ES form is used only in the present simple with he, she, it or a singular noun.</li>
+<li>Use the "only one S" check: singular subject, verb takes -s; plural subject, noun takes -s.</li>
+<li>Check irregular verbs in the Complete Verb Forms List.</li>
+</ul></div>
+<div class="ce-tp"><div class="tl">For teachers and parents</div><p><strong>Activity:</strong> write ten sentences on the board, each containing an infinitive. Ask students to cross out the infinitive and underline the finite main verb. Then ask them to turn each verb into all six forms.</p><p><strong>Please note:</strong> this guide uses British spelling (<em>travelled</em>, <em>practise</em>). American English spells some forms differently, so students should follow the spelling system their school uses.</p></div>
+<div class="further-box"><div class="fr-label">Further Reading</div><ul>
+<li><a href="https://dictionary.cambridge.org/grammar/british-grammar/" rel="noopener" target="_blank">Cambridge Dictionary: British Grammar</a><span class="src-note">Explanations of verb forms, tenses and non-finite clauses</span></li>
+<li><a href="https://owl.purdue.edu/" rel="noopener" target="_blank">Purdue OWL</a><span class="src-note">Free guides to verbs, tenses and grammar</span></li>
+<li><a href="https://learnenglish.britishcouncil.org/" rel="noopener" target="_blank">British Council LearnEnglish</a><span class="src-note">Grammar explanations and practice</span></li>
+</ul></div>
+<!-- QUIZ SECTION -->
+<div class="quiz-section">
+<div class="section-eyebrow">Test Your Understanding</div>
+<h2>Practice Questions</h2>
+<p class="quiz-intro">20 questions. Select an answer for each, then submit to see your score instantly.</p>
+<div class="squiz-progress"><div class="squiz-progress-fill" id="squizProgressFill"></div></div>
+<div class="squiz-progress-label" id="squizProgressLabel">0 of 20 answered</div>
+<div class="squiz-results" id="squizResults">
+<div class="squiz-score-big" id="squizScoreBig">0/20</div>
+<div class="squiz-score-label" id="squizScoreLabel">You scored 0%</div>
+<div class="squiz-score-tier" id="squizScoreTier">Keep practicing</div>
+<div><button class="squiz-retake-btn" onclick="retakeQuiz()">Retake Quiz</button></div>
+</div>
+<form id="squizForm">
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">1.</span>She ___ to school every day.</div>
+<div class="squiz-option"><input id="sq1a" name="sq1" type="radio" value="0"/><label for="sq1a">A. go</label></div>
+<div class="squiz-option"><input id="sq1b" name="sq1" type="radio" value="1"/><label for="sq1b">B. going</label></div>
+<div class="squiz-option"><input id="sq1c" name="sq1" type="radio" value="2"/><label for="sq1c">C. goes</label></div>
+<div class="squiz-option"><input id="sq1d" name="sq1" type="radio" value="3"/><label for="sq1d">D. gone</label></div>
+</div>
+<div class="squiz-item" data-correct="0">
+<div class="squiz-q"><span class="qnum">2.</span>They ___ football yesterday.</div>
+<div class="squiz-option"><input id="sq2a" name="sq2" type="radio" value="0"/><label for="sq2a">A. played</label></div>
+<div class="squiz-option"><input id="sq2b" name="sq2" type="radio" value="1"/><label for="sq2b">B. play</label></div>
+<div class="squiz-option"><input id="sq2c" name="sq2" type="radio" value="2"/><label for="sq2c">C. plays</label></div>
+<div class="squiz-option"><input id="sq2d" name="sq2" type="radio" value="3"/><label for="sq2d">D. playing</label></div>
+</div>
+<div class="squiz-item" data-correct="3">
+<div class="squiz-q"><span class="qnum">3.</span>He has ___ three letters.</div>
+<div class="squiz-option"><input id="sq3a" name="sq3" type="radio" value="0"/><label for="sq3a">A. wrote</label></div>
+<div class="squiz-option"><input id="sq3b" name="sq3" type="radio" value="1"/><label for="sq3b">B. write</label></div>
+<div class="squiz-option"><input id="sq3c" name="sq3" type="radio" value="2"/><label for="sq3c">C. writing</label></div>
+<div class="squiz-option"><input id="sq3d" name="sq3" type="radio" value="3"/><label for="sq3d">D. written</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">4.</span>The children are ___ in the garden.</div>
+<div class="squiz-option"><input id="sq4a" name="sq4" type="radio" value="0"/><label for="sq4a">A. play</label></div>
+<div class="squiz-option"><input id="sq4b" name="sq4" type="radio" value="1"/><label for="sq4b">B. playing</label></div>
+<div class="squiz-option"><input id="sq4c" name="sq4" type="radio" value="2"/><label for="sq4c">C. played</label></div>
+<div class="squiz-option"><input id="sq4d" name="sq4" type="radio" value="3"/><label for="sq4d">D. plays</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">5.</span>I want ___ a new language.</div>
+<div class="squiz-option"><input id="sq5a" name="sq5" type="radio" value="0"/><label for="sq5a">A. learn</label></div>
+<div class="squiz-option"><input id="sq5b" name="sq5" type="radio" value="1"/><label for="sq5b">B. to learn</label></div>
+<div class="squiz-option"><input id="sq5c" name="sq5" type="radio" value="2"/><label for="sq5c">C. learning</label></div>
+<div class="squiz-option"><input id="sq5d" name="sq5" type="radio" value="3"/><label for="sq5d">D. learned</label></div>
+</div>
+<div class="squiz-item" data-correct="3">
+<div class="squiz-q"><span class="qnum">6.</span>She can ___ very well.</div>
+<div class="squiz-option"><input id="sq6a" name="sq6" type="radio" value="0"/><label for="sq6a">A. swims</label></div>
+<div class="squiz-option"><input id="sq6b" name="sq6" type="radio" value="1"/><label for="sq6b">B. swimming</label></div>
+<div class="squiz-option"><input id="sq6c" name="sq6" type="radio" value="2"/><label for="sq6c">C. to swim</label></div>
+<div class="squiz-option"><input id="sq6d" name="sq6" type="radio" value="3"/><label for="sq6d">D. swim</label></div>
+</div>
+<div class="squiz-item" data-correct="0">
+<div class="squiz-q"><span class="qnum">7.</span>Which form can NEVER be the main verb of a sentence?</div>
+<div class="squiz-option"><input id="sq7a" name="sq7" type="radio" value="0"/><label for="sq7a">A. to write</label></div>
+<div class="squiz-option"><input id="sq7b" name="sq7" type="radio" value="1"/><label for="sq7b">B. wrote</label></div>
+<div class="squiz-option"><input id="sq7c" name="sq7" type="radio" value="2"/><label for="sq7c">C. writes</label></div>
+<div class="squiz-option"><input id="sq7d" name="sq7" type="radio" value="3"/><label for="sq7d">D. write</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">8.</span>In "She decided to leave early", the main verb is:</div>
+<div class="squiz-option"><input id="sq8a" name="sq8" type="radio" value="0"/><label for="sq8a">A. to leave</label></div>
+<div class="squiz-option"><input id="sq8b" name="sq8" type="radio" value="1"/><label for="sq8b">B. early</label></div>
+<div class="squiz-option"><input id="sq8c" name="sq8" type="radio" value="2"/><label for="sq8c">C. decided</label></div>
+<div class="squiz-option"><input id="sq8d" name="sq8" type="radio" value="3"/><label for="sq8d">D. she</label></div>
+</div>
+<div class="squiz-item" data-correct="3">
+<div class="squiz-q"><span class="qnum">9.</span>Which sentence is correct?</div>
+<div class="squiz-option"><input id="sq9a" name="sq9" type="radio" value="0"/><label for="sq9a">A. He doesn't likes tea.</label></div>
+<div class="squiz-option"><input id="sq9b" name="sq9" type="radio" value="1"/><label for="sq9b">B. He don't like tea.</label></div>
+<div class="squiz-option"><input id="sq9c" name="sq9" type="radio" value="2"/><label for="sq9c">C. He not like tea.</label></div>
+<div class="squiz-option"><input id="sq9d" name="sq9" type="radio" value="3"/><label for="sq9d">D. He doesn't like tea.</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">10.</span>What is the S/ES form of "study"?</div>
+<div class="squiz-option"><input id="sq10a" name="sq10" type="radio" value="0"/><label for="sq10a">A. studys</label></div>
+<div class="squiz-option"><input id="sq10b" name="sq10" type="radio" value="1"/><label for="sq10b">B. studies</label></div>
+<div class="squiz-option"><input id="sq10c" name="sq10" type="radio" value="2"/><label for="sq10c">C. studyes</label></div>
+<div class="squiz-option"><input id="sq10d" name="sq10" type="radio" value="3"/><label for="sq10d">D. studyies</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">11.</span>What is the past participle of "go"?</div>
+<div class="squiz-option"><input id="sq11a" name="sq11" type="radio" value="0"/><label for="sq11a">A. went</label></div>
+<div class="squiz-option"><input id="sq11b" name="sq11" type="radio" value="1"/><label for="sq11b">B. goes</label></div>
+<div class="squiz-option"><input id="sq11c" name="sq11" type="radio" value="2"/><label for="sq11c">C. gone</label></div>
+<div class="squiz-option"><input id="sq11d" name="sq11" type="radio" value="3"/><label for="sq11d">D. going</label></div>
+</div>
+<div class="squiz-item" data-correct="0">
+<div class="squiz-q"><span class="qnum">12.</span>Which sentence is correct?</div>
+<div class="squiz-option"><input id="sq12a" name="sq12" type="radio" value="0"/><label for="sq12a">A. She has gone home.</label></div>
+<div class="squiz-option"><input id="sq12b" name="sq12" type="radio" value="1"/><label for="sq12b">B. She has went home.</label></div>
+<div class="squiz-option"><input id="sq12c" name="sq12" type="radio" value="2"/><label for="sq12c">C. She have gone home.</label></div>
+<div class="squiz-option"><input id="sq12d" name="sq12" type="radio" value="3"/><label for="sq12d">D. She has go home.</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">13.</span>He enjoys ___ novels.</div>
+<div class="squiz-option"><input id="sq13a" name="sq13" type="radio" value="0"/><label for="sq13a">A. to read</label></div>
+<div class="squiz-option"><input id="sq13b" name="sq13" type="radio" value="1"/><label for="sq13b">B. reading</label></div>
+<div class="squiz-option"><input id="sq13c" name="sq13" type="radio" value="2"/><label for="sq13c">C. read</label></div>
+<div class="squiz-option"><input id="sq13d" name="sq13" type="radio" value="3"/><label for="sq13d">D. reads</label></div>
+</div>
+<div class="squiz-item" data-correct="3">
+<div class="squiz-q"><span class="qnum">14.</span>I look forward to ___ you.</div>
+<div class="squiz-option"><input id="sq14a" name="sq14" type="radio" value="0"/><label for="sq14a">A. meet</label></div>
+<div class="squiz-option"><input id="sq14b" name="sq14" type="radio" value="1"/><label for="sq14b">B. met</label></div>
+<div class="squiz-option"><input id="sq14c" name="sq14" type="radio" value="2"/><label for="sq14c">C. to meet</label></div>
+<div class="squiz-option"><input id="sq14d" name="sq14" type="radio" value="3"/><label for="sq14d">D. meeting</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">15.</span>What is the -ing form of "run"?</div>
+<div class="squiz-option"><input id="sq15a" name="sq15" type="radio" value="0"/><label for="sq15a">A. runing</label></div>
+<div class="squiz-option"><input id="sq15b" name="sq15" type="radio" value="1"/><label for="sq15b">B. runeing</label></div>
+<div class="squiz-option"><input id="sq15c" name="sq15" type="radio" value="2"/><label for="sq15c">C. running</label></div>
+<div class="squiz-option"><input id="sq15d" name="sq15" type="radio" value="3"/><label for="sq15d">D. runnning</label></div>
+</div>
+<div class="squiz-item" data-correct="0">
+<div class="squiz-q"><span class="qnum">16.</span>Which verb form follows a modal such as "must"?</div>
+<div class="squiz-option"><input id="sq16a" name="sq16" type="radio" value="0"/><label for="sq16a">A. the base form</label></div>
+<div class="squiz-option"><input id="sq16b" name="sq16" type="radio" value="1"/><label for="sq16b">B. the S/ES form</label></div>
+<div class="squiz-option"><input id="sq16c" name="sq16" type="radio" value="2"/><label for="sq16c">C. the past form</label></div>
+<div class="squiz-option"><input id="sq16d" name="sq16" type="radio" value="3"/><label for="sq16d">D. the -ing form</label></div>
+</div>
+<div class="squiz-item" data-correct="3">
+<div class="squiz-q"><span class="qnum">17.</span>In "The boys play cricket", which word has the plural -s?</div>
+<div class="squiz-option"><input id="sq17a" name="sq17" type="radio" value="0"/><label for="sq17a">A. play</label></div>
+<div class="squiz-option"><input id="sq17b" name="sq17" type="radio" value="1"/><label for="sq17b">B. cricket</label></div>
+<div class="squiz-option"><input id="sq17c" name="sq17" type="radio" value="2"/><label for="sq17c">C. the</label></div>
+<div class="squiz-option"><input id="sq17d" name="sq17" type="radio" value="3"/><label for="sq17d">D. boys</label></div>
+</div>
+<div class="squiz-item" data-correct="1">
+<div class="squiz-q"><span class="qnum">18.</span>What is the past simple of "stop"?</div>
+<div class="squiz-option"><input id="sq18a" name="sq18" type="radio" value="0"/><label for="sq18a">A. stoped</label></div>
+<div class="squiz-option"><input id="sq18b" name="sq18" type="radio" value="1"/><label for="sq18b">B. stopped</label></div>
+<div class="squiz-option"><input id="sq18c" name="sq18" type="radio" value="2"/><label for="sq18c">C. stopt</label></div>
+<div class="squiz-option"><input id="sq18d" name="sq18" type="radio" value="3"/><label for="sq18d">D. stoping</label></div>
+</div>
+<div class="squiz-item" data-correct="0">
+<div class="squiz-q"><span class="qnum">19.</span>Complete the formal sentence: "If I ___ you, I would apologise."</div>
+<div class="squiz-option"><input id="sq19a" name="sq19" type="radio" value="0"/><label for="sq19a">A. were</label></div>
+<div class="squiz-option"><input id="sq19b" name="sq19" type="radio" value="1"/><label for="sq19b">B. am</label></div>
+<div class="squiz-option"><input id="sq19c" name="sq19" type="radio" value="2"/><label for="sq19c">C. was</label></div>
+<div class="squiz-option"><input id="sq19d" name="sq19" type="radio" value="3"/><label for="sq19d">D. be</label></div>
+</div>
+<div class="squiz-item" data-correct="2">
+<div class="squiz-q"><span class="qnum">20.</span>In which sentence is "walking" a gerund (used as a noun)?</div>
+<div class="squiz-option"><input id="sq20a" name="sq20" type="radio" value="0"/><label for="sq20a">A. Walking home, he met a friend.</label></div>
+<div class="squiz-option"><input id="sq20b" name="sq20" type="radio" value="1"/><label for="sq20b">B. She is walking home.</label></div>
+<div class="squiz-option"><input id="sq20c" name="sq20" type="radio" value="2"/><label for="sq20c">C. Walking is good exercise.</label></div>
+<div class="squiz-option"><input id="sq20d" name="sq20" type="radio" value="3"/><label for="sq20d">D. The boy walking home is my cousin.</label></div>
+</div>
+<button class="squiz-submit-btn" disabled="" id="squizSubmitBtn" onclick="submitQuiz()" type="button">Answer all questions to submit</button>
+</form>
+</div>
+<div class="article-footer-nav"><a href="tenses-verb-forms.html">← Previous: Tenses &amp; Verb Forms</a></div>
+</div>
+
+<script>
+  (function() {
+    const form = document.getElementById('squizForm');
+    const submitBtn = document.getElementById('squizSubmitBtn');
+    const progressFill = document.getElementById('squizProgressFill');
+    const progressLabel = document.getElementById('squizProgressLabel');
+    const totalQuestions = document.querySelectorAll('.squiz-item').length;
+
+    function countAnswered() {
+      let count = 0;
+      for (let i = 1; i <= totalQuestions; i++) {
+        if (form.querySelector(`input[name="sq${i}"]:checked`)) count++;
+      }
+      return count;
+    }
+
+    function updateProgress() {
+      const answered = countAnswered();
+      progressFill.style.width = (answered / totalQuestions * 100) + '%';
+      progressLabel.textContent = answered + ' of ' + totalQuestions + ' answered';
+      submitBtn.disabled = answered < totalQuestions;
+      submitBtn.textContent = answered < totalQuestions ? 'Answer all questions to submit' : 'Submit Quiz';
+      document.querySelectorAll('.squiz-option').forEach(opt => opt.classList.remove('selected'));
+      form.querySelectorAll('input[type="radio"]:checked').forEach(input => {
+        input.closest('.squiz-option').classList.add('selected');
+      });
+    }
+
+    form.addEventListener('change', updateProgress);
+
+    window.submitQuiz = function() {
+      let score = 0;
+      const questions = document.querySelectorAll('.squiz-item');
+      questions.forEach((q, idx) => {
+        const qnum = idx + 1;
+        const correctIdx = q.getAttribute('data-correct');
+        const selected = form.querySelector(`input[name="sq${qnum}"]:checked`);
+        const options = q.querySelectorAll('.squiz-option');
+        options.forEach((opt, optIdx) => {
+          opt.querySelector('input').disabled = true;
+          if (String(optIdx) === correctIdx) opt.classList.add('correct-answer');
+        });
+        if (selected && selected.value === correctIdx) {
+          score++;
+        } else if (selected) {
+          selected.closest('.squiz-option').classList.add('wrong-answer');
+        }
+      });
+
+      const percent = Math.round((score / totalQuestions) * 100);
+      document.getElementById('squizScoreBig').textContent = score + '/' + totalQuestions;
+      document.getElementById('squizScoreLabel').textContent = 'You scored ' + percent + '%';
+
+      let tier = 'Keep practicing';
+      if (percent === 100) tier = 'Perfect score!';
+      else if (percent >= 80) tier = 'Excellent work';
+      else if (percent >= 60) tier = 'Good effort';
+      else if (percent >= 40) tier = 'Getting there';
+      document.getElementById('squizScoreTier').textContent = tier;
+
+      document.getElementById('squizResults').classList.add('visible');
+      submitBtn.style.display = 'none';
+      document.getElementById('squizResults').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    window.retakeQuiz = function() {
+      form.reset();
+      document.querySelectorAll('.squiz-option').forEach(opt => {
+        opt.classList.remove('selected', 'correct-answer', 'wrong-answer');
+        opt.querySelector('input').disabled = false;
+      });
+      document.getElementById('squizResults').classList.remove('visible');
+      submitBtn.style.display = 'block';
+      updateProgress();
+      document.getElementById('squizForm').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    updateProgress();
+  })();
+</script>
+
+<script id="edusambam-reader-script">
+(function(){
+ const box=document.querySelector('.edusambam-reader'); if(!box)return;
+ const root=document.querySelector('.article-wrap, .article-wrapper');
+ if(!root)return;
+ const bodySource=root.querySelector('.article-content, .article-body, .content-body') || root;
+ const status=box.querySelector('.reader-status'), progress=box.querySelector('.reader-progress span'), rate=box.querySelector('select');
+ let utterance=null, chunks=[], index=0, total=0, paused=false, stopped=false;
+ function text(){
+   const clone=bodySource.cloneNode(true);
+   clone.querySelectorAll('.quiz-section,.drill-section,.squiz-section,.squiz-item,.activity-section,.assessment-section,.article-footer-nav,form,button,input,select,textarea,script,style,.edusambam-reader,.breadcrumb,.article-hero-meta,.article-hero-tag,nav,header,footer').forEach(el=>el.remove());
+   return clone.textContent.replace(/\s+/g,' ').trim();
+ }
+ function splitText(t){const out=[];const max=1200;for(let i=0;i<t.length;i+=max)out.push(t.slice(i,i+max));return out;}
+ function updateProgress(){progress.style.width=(total?Math.min(100,Math.round((index/total)*100)):0)+'%';}
+ function speakNext(){
+   if(stopped||index>=total){if(index>=total&&!stopped){status.textContent='Reading finished.';progress.style.width='100%';}return;}
+   utterance=new SpeechSynthesisUtterance(chunks[index]);
+   utterance.rate=Number(rate.value)||1;
+   utterance.onend=function(){if(stopped)return;index++;updateProgress();speakNext();};
+   utterance.onerror=function(){if(!stopped)status.textContent='The reader stopped unexpectedly. Tap Resume to continue.';};
+   status.textContent='Reading article…';
+   speechSynthesis.speak(utterance);
+ }
+ function play(){
+   if(!('speechSynthesis' in window)){status.textContent='Audio reading is not supported by this browser.';return;}
+   speechSynthesis.cancel();
+   chunks=splitText(text());index=0;total=chunks.length;paused=false;stopped=false;updateProgress();speakNext();
+ }
+ function pause(){
+   if(!('speechSynthesis' in window))return;
+   if(speechSynthesis.speaking){speechSynthesis.pause();paused=true;status.textContent='Reader paused.';}
+ }
+ function resume(){
+   if(!('speechSynthesis' in window))return;
+   stopped=false;
+   if(speechSynthesis.paused){speechSynthesis.resume();paused=false;status.textContent='Reader resumed.';return;}
+   if(!speechSynthesis.speaking && chunks.length && index<total){paused=false;status.textContent='Reader resumed.';speakNext();return;}
+   if(!chunks.length){status.textContent='Nothing to resume. Tap Play to start.';return;}
+   status.textContent='Reader is already playing.';
+ }
+ function stop(){
+   speechSynthesis.cancel();chunks=[];index=0;total=0;paused=false;stopped=true;progress.style.width='0';status.textContent='Reader stopped.';
+ }
+ box.querySelector('[data-reader="play"]').addEventListener('click',play);
+ box.querySelector('[data-reader="pause"]').addEventListener('click',pause);
+ box.querySelector('[data-reader="resume"]').addEventListener('click',resume);
+ box.querySelector('[data-reader="stop"]').addEventListener('click',stop);
+ window.addEventListener('beforeunload',()=>{stopped=true;speechSynthesis.cancel();});
+})();
+</script>
+<script id="edusambam-unified-nav-js">
+(function(){
+  let pages=[];fetch('nav-search-index.json').then(r=>r.json()).then(d=>{pages=d;});
+  function closeAll(except){
+    document.querySelectorAll('.edusambam-mobile-menu,.edusambam-search-panel').forEach(el=>{
+      if(el!==except) el.classList.remove('open');
+    });
+    const b=document.querySelector('.edusambam-menu-btn');
+    if(b){
+      const isOpen=!!document.querySelector('.edusambam-mobile-menu')?.classList.contains('open');
+      b.classList.toggle('is-open',isOpen);
+      b.setAttribute('aria-expanded', String(isOpen));
+      b.setAttribute('aria-label',isOpen?'Close menu':'Open menu');
+      b.setAttribute('title',isOpen?'Close menu':'Menu');
+    }
+  }
+  function setup(){
+    const menu=document.querySelector('.edusambam-mobile-menu');
+    const mb=document.querySelector('.edusambam-menu-btn');
+    const sb=document.querySelector('.edusambam-search-btn');
+    const panel=document.querySelector('.edusambam-search-panel');
+    const input=document.querySelector('.edusambam-search-input');
+    const results=document.querySelector('.edusambam-search-results');
+    if(mb && menu){
+      mb.addEventListener('click',()=>{
+        const open=menu.classList.toggle('open'); closeAll(open?menu:null);
+        mb.classList.toggle('is-open',open);
+        mb.setAttribute('aria-expanded',String(open));
+        mb.setAttribute('aria-label',open?'Close menu':'Open menu');
+        mb.setAttribute('title',open?'Close menu':'Menu');
+        if(open) panel?.classList.remove('open');
+      });
+      menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+        menu.classList.remove('open');
+        mb.classList.remove('is-open');
+        mb.setAttribute('aria-expanded','false');
+        mb.setAttribute('aria-label','Open menu');
+        mb.setAttribute('title','Menu');
+      }));
+    }
+    if(sb && panel){
+      sb.addEventListener('click',()=>{
+        const open=panel.classList.toggle('open'); closeAll(open?panel:null);
+        if(open) setTimeout(()=>input?.focus(),30);
+      });
+    }
+    if(input && results){
+      const norm=s=>(' '+String(s||'').toLowerCase().replace(/&/g,' and ').replace(/[^a-z0-9]+/g,' ')+' ');
+      const stop={and:1,the:1,of:1,a:1,an:1,to:1,in:1,is:1,for:1};
+      const render=()=>{
+        const q=input.value.trim().toLowerCase();
+        let words=norm(q).trim().split(' ').filter(Boolean);
+        const sig=words.filter(w=>!stop[w]); if(sig.length) words=sig;
+        let hits=[];
+        if(q&&words.length){
+          const forms=w=>{const f=[w]; if(w.length>3&&w.endsWith('s')) f.push(w.slice(0,-1)); if(w.length>4&&w.endsWith('es')) f.push(w.slice(0,-2)); if(w.length>5&&w.endsWith('ing')) f.push(w.slice(0,-3)); if(w.length>4&&w.endsWith('ed')) f.push(w.slice(0,-2)); return f;};
+          const scored=[];
+          pages.forEach(x=>{
+            const t=norm(x.title), m=norm(String(x.url||'').replace(/[-_.]/g,' ')+' '+(x.s||'')+' '+(x.k||''));
+            let sc=0, ok=true;
+            for(const w of words){
+              const f=forms(w);
+              if(f.some(v=>t.includes(' '+v))) sc+=3;
+              else if(f.some(v=>m.includes(' '+v))) sc+=1;
+              else { ok=false; break; }
+            }
+            if(ok) scored.push([sc,x]);
+          });
+          scored.sort((a,b)=>b[0]-a[0]);
+          hits=scored.map(z=>z[1]);
+          if(!hits.length) hits=pages.filter(x=>(x.title+' '+x.url).toLowerCase().includes(q));
+          hits=hits.slice(0,30);
+        }
+        results.innerHTML=hits.map(x=>'<a href="'+x.url.replace(/"/g,'&quot;')+'">'+
+          x.title.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</a>').join('') ||
+          (q?'<div style="padding:10px;color:#64748b">No matching pages found.</div>':'');
+      };
+      input.addEventListener('input',render);
+    }
+    document.addEventListener('keydown',e=>{
+      if(e.key==='Escape') closeAll(null);
+    });
+    document.addEventListener('click',e=>{
+      if(!e.target.closest('.edusambam-nav') && !e.target.closest('.edusambam-mobile-menu') && !e.target.closest('.edusambam-search-panel')) closeAll(null);
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',setup); else setup();
+})();
+</script>
+<footer aria-label="EDUSAMBAM site footer" class="edusambam-unified-footer">
+<div class="footer-top">
+<div class="footer-brand">
+<div class="edusambam-footer-brand-row">
+<a aria-label="EDUSAMBAM home" class="edusambam-footer-logo-link" href="index.html">
+<img alt="EDUSAMBAM" class="edusambam-brand-mark edusambam-footer-logo" src="logo-icon-full-white.png" style="width:auto;height:64px;max-width:240px;object-fit:contain;background:none;border-radius:0;"/>
+</a>
+</div>
+<p class="edusambam-footer-statement">AN EDUCATIONAL RESOURCE AND ASSESSMENT PLATFORM</p>
+<div class="edusambam-footer-social"><a aria-label="EDUSAMBAM on Facebook" href="https://www.facebook.com/edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a><a aria-label="EDUSAMBAM on YouTube" href="https://youtube.com/@edusambam" rel="noopener noreferrer" target="_blank"><svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></div>
+</div>
+<div class="footer-col"><h4>Learning Areas</h4><ul><li><a href="index.html#subject-english">English Language</a></li><li><a href="index.html#english-o-level">O' Levels English</a></li><li><a href="index.html#ielts-arena">IELTS Practice</a></li><li><a href="index.html#subject-gk">GK</a></li><li><a href="index.html#subject-physics">Physics</a></li><li><a href="index.html#subject-maths">Maths</a></li><li><a href="index.html#subject-chemistry">Chemistry</a></li><li><a href="index.html#subject-biology">Biology</a></li><li><a href="index.html#subject-computer">Computer</a></li><li><a href="index.html#subject-ai">AI</a></li><li><a href="index.html#subject-optometry">Optometry</a></li><li><a href="index.html#subject-nutrition">Nutrition</a></li><li><a href="index.html#subject-eq-iq">IQ &amp; EQ ARENA</a></li><li><a href="index.html#subject-career-study-skills">Career &amp; Study Skills</a></li><li><a href="index.html#spelling-bee-arena">SPELLING BEE ARENA</a></li><li><a href="index.html#english-vocabulary-amp-word-skills">Vocabulary Building</a></li></ul></div>
+<div class="footer-col"><h4>Practice &amp; Assessment</h4><ul>
+<li><a href="index.html#interactive-activities">Interactive Activities</a></li>
+<li><a href="assessment-arena.html">Assessment Arena</a></li>
+<li><a href="index.html#resources">Downloadable Resources</a></li>
+</ul></div>
+<div class="footer-col"><h4>About EDUSAMBAM</h4><ul>
+<li><a href="index.html#mission">Our Mission</a></li>
+<li><a href="index.html#team">The Team</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="mailto:feedback.edusambam@gmail.com?subject=EDUSAMBAM%20Feedback">Give Feedback</a></li>
+<li><a href="mailto:info.edusambam@gmail.com?subject=Article%20Submission">Write for Us</a></li>
+<li><a href="about.html">About EDUSAMBAM</a></li>
+<li><a href="privacy-policy.html">Privacy Policy</a></li>
+</ul></div>
+</div>
+<div class="footer-bottom"><p>© 2026 EDUSAMBAM · Learning resources, practice and assessment.</p><ul class="footer-bottom-links">
+<li><a href="#top">Back to Top</a></li>
+<li><a href="index.html#mission">Mission</a></li>
+<li><a href="index.html#team">Team</a></li>
+<li><a href="index.html#resources">Downloadable Resources</a></li>
+</ul></div>
+</footer></body>
+</html>
